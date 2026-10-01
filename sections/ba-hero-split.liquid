@@ -1,0 +1,121 @@
+{%- liquid
+  assign scheme = section.settings.color
+  assign image_blocks = section.blocks | where: 'type', 'image'
+-%}
+<section class="ba-hero-split ba-{{ scheme }}" {% if section.settings.anchor != blank %}id="{{ section.settings.anchor | handleize }}"{% endif %}>
+  <div class="ba-container ba-hero-split__inner">
+    <div class="ba-hero-split__content">
+      {%- if section.settings.label != blank -%}
+        <p class="ba-label">{{ section.settings.label }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h1 class="ba-display-xl ba-hero-split__heading">{{ section.settings.heading }}</h1>
+      {%- endif -%}
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'text' -%}
+            <div class="ba-rte ba-body-lg ba-measure ba-hero-split__text" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+          {%- when 'notice' -%}
+            <div class="ba-hero-split__notice ba-measure" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}<p class="ba-label">{{ block.settings.heading }}</p>{%- endif -%}
+              <div class="ba-rte ba-body-sm">{{ block.settings.text }}</div>
+            </div>
+          {%- when 'buttons' -%}
+            <div class="ba-actions" {{ block.shopify_attributes }}>
+              {%- if block.settings.primary_label != blank -%}
+                <a class="ba-btn ba-btn-primary" href="{{ block.settings.primary_link | default: settings.ba_book_url }}">{{ block.settings.primary_label }}</a>
+              {%- endif -%}
+              {%- if block.settings.secondary_label != blank -%}
+                <a class="ba-btn ba-btn-{{ block.settings.secondary_style }}" href="{{ block.settings.secondary_link | default: '#' }}">{{ block.settings.secondary_label }}</a>
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if image_blocks.size > 0 -%}
+      <div class="ba-hero-split__media">
+        {%- for block in image_blocks -%}
+          <div class="ba-hero-split__image" style="aspect-ratio: {{ block.settings.ratio }};" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 1200 | image_tag: alt: block.settings.alt, sizes: '(min-width: 990px) 40vw, 100vw', loading: 'eager' }}
+            {%- elsif block.settings.theme_image != blank -%}
+              <img src="{{ block.settings.theme_image | asset_url }}" alt="{{ block.settings.alt | escape }}" width="1600" height="900">
+            {%- else -%}
+              {{ 'hero-apparel-1' | placeholder_svg_tag }}
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .ba-hero-split__inner { padding-block: clamp(56px, 8vw, 112px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center; }
+  .ba-hero-split__content { flex: 1.2 1 460px; display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+  .ba-hero-split__heading { font-size: clamp(48px, 7vw, 88px); line-height: .92; max-width: 12ch; }
+  .ba-band .ba-hero-split__text { opacity: .78; }
+  .ba-hero-split__notice { display: flex; flex-direction: column; gap: 8px; border: 1px solid var(--line-strong); padding: 16px 20px; }
+  .ba-band .ba-hero-split__notice .ba-label { opacity: 1; }
+  .ba-band .ba-hero-split__notice .ba-rte { opacity: .85; }
+  .ba-hero-split__media { flex: 1 1 380px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .ba-hero-split__image { background: #222326; overflow: hidden; }
+  .ba-hero-split__image img, .ba-hero-split__image svg { width: 100%; height: 100%; object-fit: cover; display: block; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "BA split hero",
+  "class": "ba-section-wrap",
+  "settings": [
+    { "type": "select", "id": "color", "label": "Background", "options": [
+      { "value": "band", "label": "Black band" },
+      { "value": "canvas", "label": "Off-white" },
+      { "value": "sunk", "label": "Sunk" }
+    ], "default": "band" },
+    { "type": "text", "id": "label", "label": "Label", "default": "Free haircut · Filmed for YouTube" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Apply for a free haircut" },
+    { "type": "text", "id": "anchor", "label": "Section link ID", "info": "Optional, e.g. 'services' lets you link to /#services." }
+  ],
+  "blocks": [
+    { "type": "text", "name": "Paragraph", "settings": [
+      { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Tell people what this page is about.</p>" }
+    ] },
+    { "type": "notice", "name": "Notice box", "settings": [
+      { "type": "text", "id": "heading", "label": "Heading", "default": "Good to know" },
+      { "type": "richtext", "id": "text", "label": "Text", "default": "<p>A short note in a box.</p>" }
+    ] },
+    { "type": "buttons", "name": "Buttons", "limit": 2, "settings": [
+      { "type": "text", "id": "primary_label", "label": "Main button label", "default": "Book now" },
+      { "type": "url", "id": "primary_link", "label": "Main button link", "info": "Empty uses the main booking link." },
+      { "type": "text", "id": "secondary_label", "label": "Second button label" },
+      { "type": "url", "id": "secondary_link", "label": "Second button link" },
+      { "type": "select", "id": "secondary_style", "label": "Second button style", "options": [
+        { "value": "text", "label": "Text link" },
+        { "value": "secondary", "label": "Outline" }
+      ], "default": "text" }
+    ] },
+    { "type": "image", "name": "Image", "limit": 4, "settings": [
+      { "type": "image_picker", "id": "image", "label": "Image" },
+      { "type": "text", "id": "theme_image", "label": "Built-in theme image", "info": "Used when no image is chosen. Leave as is." },
+      { "type": "text", "id": "alt", "label": "Image description (alt text)" },
+      { "type": "select", "id": "ratio", "label": "Shape", "options": [
+        { "value": "16/9", "label": "Wide (16:9)" },
+        { "value": "4/3", "label": "Landscape (4:3)" },
+        { "value": "1/1", "label": "Square" },
+        { "value": "4/5", "label": "Portrait (4:5)" }
+      ], "default": "16/9" }
+    ] }
+  ],
+  "presets": [{
+    "name": "BA split hero",
+    "blocks": [
+      { "type": "text" },
+      { "type": "buttons" },
+      { "type": "image" }
+    ]
+  }]
+}
+{% endschema %}

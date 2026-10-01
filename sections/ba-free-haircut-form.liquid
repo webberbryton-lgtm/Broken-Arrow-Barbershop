@@ -1,0 +1,174 @@
+{%- liquid
+  assign hair_options = 'Longer or grown out|Thinning or receding|Curly or textured|Cowlicks or difficult growth|Haven’t had a good cut in a while|Ready for a big change|Other' | split: '|'
+  assign adult_options = 'Yes|No' | split: '|'
+  assign freedom_options = 'Do whatever you think works|Some, within limits|I know exactly what I want' | split: '|'
+-%}
+<section class="ba-apply ba-{{ section.settings.color }}" id="{{ section.settings.anchor | default: 'apply' | handleize }}">
+  <div class="ba-container ba-section ba-grid-3">
+    <div class="ba-apply__intro">
+      <p class="ba-label">{{ section.settings.label }}</p>
+      <p class="ba-body-sm ba-muted">Required fields are marked *</p>
+    </div>
+
+    {%- assign form_id = 'BaApplyForm-' | append: section.id -%}
+    {%- form 'contact', id: form_id, class: 'ba-apply__form ba-span-2', novalidate: 'novalidate' -%}
+      {%- if form.posted_successfully? -%}
+        <div class="ba-apply__done" tabindex="-1" data-ba-apply-done>
+          <h2 class="ba-display">{{ section.settings.success_heading }}</h2>
+          <div class="ba-rte ba-body-lg">{{ section.settings.success_text }}</div>
+          <div><a class="ba-btn ba-btn-secondary" href="{{ routes.root_url }}">Back to the home page</a></div>
+        </div>
+      {%- else -%}
+        <input type="hidden" name="contact[Form]" value="{{ section.settings.form_name | escape }}">
+        {%- if form.errors -%}
+          <p class="ba-field-error" role="alert">{{ form.errors | default_errors }}</p>
+        {%- endif -%}
+
+        <div class="ba-field">
+          <label class="ba-field-label" for="BaName-{{ section.id }}">Name<span class="ba-field-req" aria-hidden="true">*</span></label>
+          <input class="ba-field-input" id="BaName-{{ section.id }}" type="text" name="contact[Name]" autocomplete="name" required data-error="Add your name so we know who applied.">
+          <p class="ba-field-error" aria-live="polite"></p>
+        </div>
+        <div class="ba-field">
+          <label class="ba-field-label" for="BaEmail-{{ section.id }}">Email<span class="ba-field-req" aria-hidden="true">*</span></label>
+          <input class="ba-field-input" id="BaEmail-{{ section.id }}" type="email" name="contact[email]" autocomplete="email" required data-error="Add an email so we can contact you if you’re picked.">
+          <p class="ba-field-error" aria-live="polite"></p>
+        </div>
+        <div class="ba-field">
+          <label class="ba-field-label" for="BaPhone-{{ section.id }}">Phone number</label>
+          <input class="ba-field-input" id="BaPhone-{{ section.id }}" type="tel" name="contact[Phone]" autocomplete="tel">
+        </div>
+
+        <fieldset class="ba-field" data-ba-group data-error="You need to be 18 or older to apply." data-must="Yes">
+          <legend class="ba-field-label">Are you 18 or older?<span class="ba-field-req" aria-hidden="true">*</span></legend>
+          <div class="ba-apply__row">
+            {%- for opt in adult_options -%}
+              <label class="ba-check ba-check-radio"><input type="radio" name="contact[18 or older]" value="{{ opt }}" required{% if forloop.first %} checked{% endif %}><span class="ba-check-box" aria-hidden="true"></span><span>{{ opt }}</span></label>
+            {%- endfor -%}
+          </div>
+          <p class="ba-field-error" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="ba-field">
+          <label class="ba-field-label" for="BaCity-{{ section.id }}">Where do you live?<span class="ba-field-req" aria-hidden="true">*</span></label>
+          <p class="ba-field-hint">City and state, so we know you can get to the shop in Orem.</p>
+          <input class="ba-field-input" id="BaCity-{{ section.id }}" type="text" name="contact[Where do you live]" autocomplete="address-level2" required data-error="Add your city so we know you can get to the shop in Orem.">
+          <p class="ba-field-error" aria-live="polite"></p>
+        </div>
+        <div class="ba-field">
+          <label class="ba-field-label" for="BaWant-{{ section.id }}">What do you want from your haircut?<span class="ba-field-req" aria-hidden="true">*</span></label>
+          <p class="ba-field-hint">Tell us how big a change you’re after. Give us as much as you can: the style you want, anything you like or don’t like about your hair now, how much time you spend on it in the morning.</p>
+          <textarea class="ba-field-input" id="BaWant-{{ section.id }}" name="contact[What they want]" rows="5" required data-error="Tell us a little about what you want from your haircut."></textarea>
+          <p class="ba-field-error" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="ba-field">
+          <legend class="ba-field-label">Which of these describe your hair?</legend>
+          <div class="ba-apply__grid">
+            {%- for opt in hair_options -%}
+              <label class="ba-check"><input type="checkbox" name="contact[Hair: {{ opt | escape }}]" value="Yes"><span class="ba-check-box" aria-hidden="true"></span><span>{{ opt }}</span></label>
+            {%- endfor -%}
+          </div>
+        </fieldset>
+
+        <fieldset class="ba-field" data-ba-group data-error="Pick how much freedom you’ll give the barber.">
+          <legend class="ba-field-label">How much creative freedom are you willing to give the barber?<span class="ba-field-req" aria-hidden="true">*</span></legend>
+          {%- for opt in freedom_options -%}
+            <label class="ba-check ba-check-radio"><input type="radio" name="contact[Creative freedom]" value="{{ opt | escape }}" required{% if forloop.index == 2 %} checked{% endif %}><span class="ba-check-box" aria-hidden="true"></span><span>{{ opt }}</span></label>
+          {%- endfor -%}
+          <p class="ba-field-error" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="ba-field">
+          <label class="ba-field-label" for="BaLast-{{ section.id }}">When was your last haircut?<span class="ba-field-req" aria-hidden="true">*</span></label>
+          <p class="ba-field-hint">Add anything we should know about it, like only the sides were cut or you have an undercut.</p>
+          <input class="ba-field-input" id="BaLast-{{ section.id }}" type="text" name="contact[Last haircut]" required data-error="Add roughly when your last haircut was.">
+          <p class="ba-field-error" aria-live="polite"></p>
+        </div>
+        <div class="ba-field">
+          <label class="ba-field-label" for="BaPhoto-{{ section.id }}">Instagram or photo link</label>
+          <p class="ba-field-hint">Optional. A current photo of your hair helps us pick.</p>
+          <input class="ba-field-input" id="BaPhoto-{{ section.id }}" type="text" name="contact[Photo link]">
+        </div>
+
+        <div class="ba-field">
+          <label class="ba-check"><input type="checkbox" name="contact[Wants a big transformation]" value="Yes" required data-error="Tick this to confirm you want a big change. We don’t film clean-up cuts."><span class="ba-check-box" aria-hidden="true"></span><span>I’m looking for a big transformation, or my hair is thinning or receding and I want help with it. Not just a clean-up. *</span></label>
+          <p class="ba-field-error" aria-live="polite"></p>
+        </div>
+        <div class="ba-field">
+          <label class="ba-check"><input type="checkbox" name="contact[Agrees to filming]" value="Yes" required data-error="Tick the filming agreement to apply."><span class="ba-check-box" aria-hidden="true"></span><span>I understand the haircut is free because the appointment will be filmed and photographed, and that the footage and photos may be used on Broken Arrow’s YouTube, social media and website. *</span></label>
+          <p class="ba-field-error" aria-live="polite"></p>
+        </div>
+
+        <div><button type="submit" class="ba-btn ba-btn-primary">{{ section.settings.submit_label }}</button></div>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var root = document.currentScript.parentElement;
+    var form = root.querySelector('.ba-apply__form');
+    var done = root.querySelector('[data-ba-apply-done]');
+    if (done) { done.scrollIntoView({ block: 'center' }); done.focus({ preventScroll: true }); return; }
+    if (!form) return;
+    function errorEl(el) { var f = el.closest('.ba-field'); return f && f.querySelector('.ba-field-error'); }
+    function check(el) {
+      var msg = '';
+      if (el.type === 'checkbox') { if (el.required && !el.checked) msg = el.dataset.error; }
+      else if (el.required && !el.value.trim()) msg = el.dataset.error;
+      else if (el.type === 'email' && el.value && !/^\S+@\S+\.\S+$/.test(el.value)) msg = el.dataset.error;
+      var e = errorEl(el); if (e) e.textContent = msg || '';
+      if (el.type === 'checkbox') { var l = el.closest('.ba-check'); if (l) l.dataset.invalid = msg ? 'true' : 'false'; }
+      else el.setAttribute('aria-invalid', msg ? 'true' : 'false');
+      return !msg;
+    }
+    function checkGroup(g) {
+      var picked = g.querySelector('input:checked');
+      var msg = '';
+      if (!picked) msg = g.dataset.error;
+      else if (g.dataset.must && picked.value !== g.dataset.must) msg = g.dataset.error;
+      g.querySelector('.ba-field-error').textContent = msg;
+      return !msg;
+    }
+    form.addEventListener('submit', function (e) {
+      var ok = true, first = null;
+      form.querySelectorAll('input[data-error], textarea[data-error]').forEach(function (el) { if (!check(el)) { ok = false; first = first || el; } });
+      form.querySelectorAll('[data-ba-group]').forEach(function (g) { if (!checkGroup(g)) { ok = false; first = first || g.querySelector('input'); } });
+      if (!ok) { e.preventDefault(); first.focus(); return; }
+      var btn = form.querySelector('[type="submit"]'); btn.setAttribute('aria-busy', 'true');
+    });
+    form.querySelectorAll('input[data-error], textarea[data-error]').forEach(function (el) {
+      el.addEventListener(el.type === 'checkbox' ? 'change' : 'blur', function () { if (el.getAttribute('aria-invalid') === 'true' || el.closest('.ba-check[data-invalid="true"]')) check(el); });
+    });
+  })();
+</script>
+
+{% stylesheet %}
+  .ba-apply__intro { display: flex; flex-direction: column; gap: 16px; }
+  .ba-apply__form { display: flex; flex-direction: column; gap: 32px; max-width: 680px; border-top: 2px solid var(--ink); padding-top: 32px; }
+  .ba-apply__row { display: flex; gap: 32px; }
+  .ba-apply__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); column-gap: 24px; }
+  .ba-apply__done { display: flex; flex-direction: column; gap: 24px; outline: none; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "BA free haircut form",
+  "settings": [
+    { "type": "select", "id": "color", "label": "Background", "options": [
+      { "value": "sunk", "label": "Sunk" },
+      { "value": "canvas", "label": "Off-white" }
+    ], "default": "sunk" },
+    { "type": "text", "id": "label", "label": "Label", "default": "02 / Apply" },
+    { "type": "text", "id": "anchor", "label": "Section link ID", "default": "apply" },
+    { "type": "text", "id": "form_name", "label": "Form name in the email", "default": "Free haircut application" },
+    { "type": "text", "id": "submit_label", "label": "Button label", "default": "Apply" },
+    { "type": "text", "id": "success_heading", "label": "Thank-you heading", "default": "Thanks for applying." },
+    { "type": "richtext", "id": "success_text", "label": "Thank-you text", "default": "<p>We’ll be in touch if you’re picked for a filming spot. If you don’t hear from us this month, apply again next month.</p>" },
+    { "type": "paragraph", "content": "Applications arrive by email at your store's sender email (Settings → Notifications) and are listed under Customers." }
+  ],
+  "presets": [{ "name": "BA free haircut form" }]
+}
+{% endschema %}

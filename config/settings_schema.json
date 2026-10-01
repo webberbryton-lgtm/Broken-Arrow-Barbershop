@@ -2116,5 +2116,67 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "Broken Arrow",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Booking"
+      },
+      {
+        "type": "url",
+        "id": "ba_book_url",
+        "label": "Main booking link (Square)",
+        "default": "https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services",
+        "info": "Used by every BOOK NOW button unless a section sets its own link."
+      },
+      {
+        "type": "url",
+        "id": "ba_consult_url",
+        "label": "Hair system consultation link",
+        "default": "https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services"
+      },
+      {
+        "type": "header",
+        "content": "Shop details"
+      },
+      {
+        "type": "text",
+        "id": "ba_phone",
+        "label": "Phone",
+        "default": "(801) 709-1280"
+      },
+      {
+        "type": "text",
+        "id": "ba_address_line_1",
+        "label": "Address line 1",
+        "default": "375 E 800 S, Suite 12"
+      },
+      {
+        "type": "text",
+        "id": "ba_address_line_2",
+        "label": "Address line 2",
+        "default": "Orem, UT 84097"
+      },
+      {
+        "type": "url",
+        "id": "ba_directions_url",
+        "label": "Directions link",
+        "default": "https://maps.google.com/?q=375+E+800+S+Suite+12+Orem+UT+84097"
+      },
+      {
+        "type": "richtext",
+        "id": "ba_hours",
+        "label": "Hours",
+        "default": "<p>Tue 10 AM – 6 PM<br>Wed–Fri 10 AM – 7:30 PM<br>Sat 10 AM – 5:30 PM<br>Sun–Mon closed</p>"
+      },
+      {
+        "type": "text",
+        "id": "ba_award",
+        "label": "Award line",
+        "default": "Daily Herald Readers' Choice · Best Barbershop in Utah Valley · 2023, 2024, 2026"
+      }
+    ]
   }
 ]

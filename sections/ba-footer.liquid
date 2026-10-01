@@ -1,0 +1,101 @@
+{%- liquid
+  assign phone_digits = settings.ba_phone | remove: '(' | remove: ')' | remove: ' ' | remove: '-' | remove: '.'
+-%}
+<footer class="ba-footer ba-band">
+  <div class="ba-footer__top ba-container">
+    <div class="ba-footer__brand">
+      {%- if section.settings.logo != blank -%}
+        {{ section.settings.logo | image_url: width: 400 | image_tag: alt: shop.name, width: 200, loading: 'lazy' }}
+      {%- else -%}
+        <img src="{{ 'ba-lockup-offwhite.svg' | asset_url }}" alt="{{ shop.name }}" width="200" height="86" loading="lazy">
+      {%- endif -%}
+    </div>
+    {%- if section.settings.show_visit -%}
+      <div class="ba-footer__col">
+        <p class="ba-label">Visit</p>
+        <p class="ba-body">{{ settings.ba_address_line_1 }}<br>{{ settings.ba_address_line_2 }}</p>
+        <a href="tel:+1{{ phone_digits }}" class="ba-body">{{ settings.ba_phone }}</a>
+        {%- if settings.ba_directions_url != blank -%}
+          <a href="{{ settings.ba_directions_url }}" class="ba-body ba-footer__underline">Get directions</a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- if section.settings.show_hours and settings.ba_hours != blank -%}
+      <div class="ba-footer__col">
+        <p class="ba-label">Hours</p>
+        <div class="ba-body ba-footer__hours">{{ settings.ba_hours }}</div>
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="ba-footer__links ba-container">
+      {%- for block in section.blocks -%}
+        <nav class="ba-footer__col" aria-label="{{ block.settings.heading | escape }}" {{ block.shopify_attributes }}>
+          {%- if block.settings.heading != blank -%}
+            <p class="ba-label">{{ block.settings.heading }}</p>
+          {%- endif -%}
+          {%- if block.settings.menu != blank and block.settings.menu.links.size > 0 -%}
+            {%- for link in block.settings.menu.links -%}
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            {%- endfor -%}
+          {%- else -%}
+            <div class="ba-footer__rte">{{ block.settings.links }}</div>
+          {%- endif -%}
+        </nav>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  <div class="ba-footer__bottom ba-container">
+    {%- if section.settings.show_award and settings.ba_award != blank -%}
+      <p class="ba-label">{{ settings.ba_award }}</p>
+    {%- endif -%}
+    <p class="ba-label">&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</p>
+  </div>
+</footer>
+
+{% stylesheet %}
+  .ba-footer { font-family: var(--font-sans); }
+  .ba-footer a { color: var(--on-band); }
+  .ba-footer__top { padding-top: 64px; padding-bottom: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px 32px; }
+  .ba-footer__brand img { width: 200px; height: auto; display: block; }
+  .ba-footer__col { display: flex; flex-direction: column; gap: 12px; }
+  .ba-footer__underline { text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 4px; }
+  .ba-footer__hours p { margin: 0; font-variant-numeric: tabular-nums; }
+  .ba-footer__links { padding-bottom: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; }
+  .ba-footer__links .ba-footer__col { gap: 10px; }
+  .ba-footer__links a { font-size: 15px; line-height: 24px; text-decoration: none; }
+  .ba-footer__links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .ba-footer__rte { display: flex; flex-direction: column; gap: 10px; }
+  .ba-footer__rte p { margin: 0; font-size: 15px; line-height: 24px; }
+  .ba-footer__bottom { padding-top: 20px; padding-bottom: 32px; border-top: 1px solid var(--line-strong); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  .ba-footer__bottom { border-top-color: var(--line-strong); }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Broken Arrow footer",
+  "class": "ba-footer-section",
+  "enabled_on": { "groups": ["footer"] },
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Custom logo", "info": "Leave empty to use the off-white Broken Arrow Barbershop lockup." },
+    { "type": "checkbox", "id": "show_visit", "label": "Show address and phone", "default": true },
+    { "type": "checkbox", "id": "show_hours", "label": "Show hours", "default": true },
+    { "type": "checkbox", "id": "show_award", "label": "Show award line", "default": true },
+    { "type": "paragraph", "content": "Address, phone, hours and the award line are edited in Theme settings → Broken Arrow." }
+  ],
+  "blocks": [
+    {
+      "type": "link_column",
+      "name": "Link column",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Links" },
+        { "type": "link_list", "id": "menu", "label": "Menu", "info": "When a menu is chosen it replaces the links below." },
+        { "type": "richtext", "id": "links", "label": "Links", "info": "One link per line." }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Broken Arrow footer" }]
+}
+{% endschema %}

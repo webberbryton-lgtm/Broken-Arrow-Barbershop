@@ -1,0 +1,137 @@
+{
+  "sections": {
+    "hero": {
+      "type": "ba-hero-split",
+      "settings": {
+        "color": "band",
+        "label": "Free haircut · Filmed for YouTube",
+        "heading": "Apply for a free haircut",
+        "anchor": ""
+      },
+      "blocks": {
+        "p1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We film transformation haircuts for our YouTube channel. If you’re picked, your cut is free and it goes on the channel.</p>"
+          }
+        },
+        "p2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’re looking for big changes: thinning or receding hair, very long hair going short, or hair that hasn’t had a real cut in a long time. A clean-up of a cut you already like won’t make a video.</p>"
+          }
+        },
+        "notice": {
+          "type": "notice",
+          "settings": {
+            "heading": "Already a client?",
+            "text": "<p>If you’re already a regular client, you probably won’t be selected. We’re looking for people who can create a <strong>big transformation on camera</strong>: long-to-short haircuts, major style changes, overgrown hair, and especially thinning or receding hairlines, including shorter hair that’s thinning.</p><p>If you’re just due for your normal maintenance haircut, please <a href=\"https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services\" title=\"Book with us\">book with us</a> as usual.</p>"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "primary_label": "Apply now",
+            "primary_link": "#apply",
+            "secondary_label": "Watch past cuts",
+            "secondary_link": "https://www.youtube.com/",
+            "secondary_style": "text"
+          }
+        },
+        "img1": {
+          "type": "image",
+          "settings": {
+            "theme_image": "ba-free-cut-before-after-1.jpg",
+            "alt": "Before and after: long overgrown hair and beard cut into a short textured haircut with a fade",
+            "ratio": "16/9"
+          }
+        },
+        "img2": {
+          "type": "image",
+          "settings": {
+            "theme_image": "ba-free-cut-before-after-2.jpg",
+            "alt": "Before and after: long slicked-back hair with a receding hairline cut into a short textured crop with a shaped beard",
+            "ratio": "16/9"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "notice",
+        "buttons",
+        "img1",
+        "img2"
+      ]
+    },
+    "how": {
+      "type": "ba-numbered-list",
+      "settings": {
+        "color": "canvas",
+        "label": "01 / How it works",
+        "heading": "",
+        "anchor": ""
+      },
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "title": "What we pick",
+            "text": "<p>Transformations. Thinning or receding hair, very long to short, grown-out or overdue cuts, and anyone ready for a completely different look. We don’t film maintenance cuts or small clean-ups.</p>"
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>The haircut is free because the appointment is being filmed. It will be filmed and photographed at Broken Arrow Barbershop in Orem, Utah, and used on our YouTube and social media.</p>"
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>This is an application, not a booking. We have a limited number of filming spots each month and can’t take everyone.</p>"
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>We’ll only contact you if you’re picked. If you’re not picked this time, you’re welcome to apply again next month.</p>"
+          }
+        },
+        "i5": {
+          "type": "item",
+          "settings": {
+            "title": "",
+            "text": "<p>Interested in a hair system? <a href=\"/pages/hair-replacement\" title=\"Hair replacement\">Book a free consultation</a> instead.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
+      ]
+    },
+    "apply": {
+      "type": "ba-free-haircut-form",
+      "settings": {
+        "color": "sunk",
+        "label": "02 / Apply",
+        "anchor": "apply",
+        "form_name": "Free haircut application",
+        "submit_label": "Apply",
+        "success_heading": "Thanks for applying."
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "how",
+    "apply"
+  ]
+}

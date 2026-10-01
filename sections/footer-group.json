@@ -11,228 +11,52 @@
   "type": "footer",
   "name": "t:names.footer",
   "sections": {
-    "footer": {
-      "type": "footer",
+    "ba_footer": {
+      "type": "ba-footer",
+      "settings": {
+        "show_visit": true,
+        "show_hours": true,
+        "show_award": true
+      },
       "blocks": {
-        "group_wErUQf": {
-          "type": "group",
+        "barbershop": {
+          "type": "link_column",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_pF6rVi": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h2>Join our email list</h2>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-body--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_HafH7P": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>Get exclusive deals and early access to new products.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "email-signup_HafH7P": {
-              "type": "email-signup",
-              "name": "t:names.email_signup",
-              "settings": {
-                "width": "fill",
-                "custom_width": 100,
-                "heading": "",
-                "heading_preset": "h3",
-                "border_style": "all",
-                "input_style": "custom",
-                "border_width": 1,
-                "border_radius": 100,
-                "input_background_color": "{{ settings.color_palette.color1 }}",
-                "input_border_color": "",
-                "input_type_preset": "paragraph",
-                "style_class": "button-secondary",
-                "custom_button_background": "{{ settings.color_palette.foreground }}",
-                "custom_button_text": "{{ settings.color_palette.background }}",
-                "custom_button_border": "{{ settings.color_palette.background }}",
-                "display_type": "text",
-                "label": "Sign up",
-                "integrated_button": false,
-                "button_type_preset": "paragraph",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_pF6rVi",
-            "text_HafH7P",
-            "email-signup_HafH7P"
-          ]
-        },
-        "menu_footer": {
-          "type": "menu",
-          "settings": {
-            "menu": "footer",
-            "heading": "",
-            "menu_spacing": 12,
-            "show_as_accordion": false,
-            "accordion_icon": "plus",
-            "accordion_dividers": false,
-            "heading_preset": "paragraph",
-            "link_preset": "paragraph",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "heading": "Barbershop",
+            "links": "<p><a href=\"https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services\" title=\"Book now\">Book now</a></p><p><a href=\"/#services\" title=\"Services\">Services</a></p><p><a href=\"/#team\" title=\"The team\">The team</a></p><p><a href=\"/pages/hair-replacement\" title=\"Hair replacement\">Hair replacement</a></p><p><a href=\"/pages/free-haircut\" title=\"Apply for a free haircut\">Apply for a free haircut</a></p><p><a href=\"/blogs/journal\" title=\"Journal\">Journal</a></p>"
           }
         },
-        "menu_main": {
-          "type": "menu",
+        "shop": {
+          "type": "link_column",
           "settings": {
-            "menu": "main-menu",
-            "heading": "",
-            "menu_spacing": 12,
-            "show_as_accordion": false,
-            "accordion_icon": "plus",
-            "accordion_dividers": false,
-            "heading_preset": "paragraph",
-            "link_preset": "paragraph",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "heading": "Shop",
+            "links": "<p><a href=\"/collections/all\" title=\"Shop all\">Shop all</a></p><p><a href=\"/pages/product-quiz\" title=\"Product quiz\">Product quiz</a></p><p><a href=\"/products/matte-clay\" title=\"Matte clay\">Matte clay</a></p><p><a href=\"/pages/wholesale\" title=\"Wholesale\">Wholesale</a></p><p><a href=\"/account\" title=\"Manage subscription\">Manage subscription</a></p>"
+          }
+        },
+        "help": {
+          "type": "link_column",
+          "settings": {
+            "heading": "Help",
+            "links": "<p><a href=\"/pages/contact\" title=\"Contact us\">Contact us</a></p><p><a href=\"/policies/shipping-policy\" title=\"Shipping\">Shipping</a></p><p><a href=\"/policies/refund-policy\" title=\"Returns\">Returns</a></p><p><a href=\"/pages/hair-replacement#questions\" title=\"Hair system FAQ\">Hair system FAQ</a></p>"
+          }
+        },
+        "about": {
+          "type": "link_column",
+          "settings": {
+            "heading": "About",
+            "links": "<p><a href=\"/blogs/journal/our-story\" title=\"Our story\">Our story</a></p><p><a href=\"/pages/careers\" title=\"Careers\">Careers</a></p><p><a href=\"/pages/apprenticeship\" title=\"Apprenticeship\">Apprenticeship</a></p><p><a href=\"https://www.instagram.com/broken.arrow.barbershop/\" title=\"Instagram\">Instagram</a></p><p><a href=\"/policies/privacy-policy\" title=\"Privacy policy\">Privacy policy</a></p><p><a href=\"/policies/terms-of-service\" title=\"Terms of service\">Terms of service</a></p><p><a href=\"/pages/accessibility-statement\" title=\"Accessibility statement\">Accessibility statement</a></p>"
           }
         }
       },
       "block_order": [
-        "group_wErUQf",
-        "menu_footer",
-        "menu_main"
-      ],
-      "name": "t:names.footer",
-      "settings": {
-        "section_width": "page-width",
-        "gap": 40,
-        "background_color": "{{ settings.color_palette.color1 }}",
-        "padding-block-start": 36,
-        "padding-block-end": 36
-      }
-    },
-    "utilities": {
-      "type": "footer-utilities",
-      "blocks": {
-        "copyright": {
-          "type": "footer-copyright",
-          "settings": {
-            "show_powered_by": true,
-            "font_size": "0.75rem",
-            "case": "none"
-          }
-        },
-        "policy_list": {
-          "type": "footer-policy-list",
-          "settings": {
-            "font_size": "0.75rem",
-            "case": "none"
-          }
-        },
-        "social_icons": {
-          "type": "social-links",
-          "settings": {
-            "facebook_url": "https://www.facebook.com",
-            "instagram_url": "https://www.instagram.com",
-            "youtube_url": "https://www.youtube.com",
-            "tiktok_url": "https://www.tiktok.com",
-            "twitter_url": "https://www.twitter.com"
-          }
-        }
-      },
-      "block_order": [
-        "copyright",
-        "policy_list",
-        "social_icons"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "gap": 24,
-        "background_color": "{{ settings.color_palette.color1 }}",
-        "divider_thickness": 1,
-        "padding-block-start": 12,
-        "padding-block-end": 16
-      }
+        "barbershop",
+        "shop",
+        "help",
+        "about"
+      ]
     }
   },
   "order": [
-    "footer",
-    "utilities"
+    "ba_footer"
   ]
 }

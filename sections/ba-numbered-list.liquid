@@ -1,0 +1,63 @@
+<section class="ba-numbered ba-{{ section.settings.color }}" {% if section.settings.anchor != blank %}id="{{ section.settings.anchor | handleize }}"{% endif %}>
+  <div class="ba-container ba-section ba-grid-3">
+    <div class="ba-numbered__intro">
+      {%- if section.settings.label != blank -%}
+        <p class="ba-label">{{ section.settings.label }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="ba-display">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.intro != blank -%}
+        <div class="ba-rte ba-body ba-muted">{{ section.settings.intro }}</div>
+      {%- endif -%}
+    </div>
+    <ol class="ba-numbered__list ba-span-2">
+      {%- for block in section.blocks -%}
+        <li class="ba-numbered__item" {{ block.shopify_attributes }}>
+          <span class="ba-label ba-numbered__n">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+          <div class="ba-numbered__body">
+            {%- if block.settings.title != blank -%}
+              <h3 class="ba-numbered__title">{{ block.settings.title }}</h3>
+            {%- endif -%}
+            <div class="ba-rte ba-body">{{ block.settings.text }}</div>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
+
+{% stylesheet %}
+  .ba-numbered__intro { display: flex; flex-direction: column; gap: 16px; }
+  .ba-numbered__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 2px solid var(--ink); }
+  .ba-band .ba-numbered__list { border-top-color: var(--on-band); }
+  .ba-numbered__item { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .ba-band .ba-numbered__item { border-bottom-color: var(--line-strong); }
+  .ba-numbered__n { padding-top: 4px; }
+  .ba-numbered__body { display: flex; flex-direction: column; gap: 12px; }
+  .ba-numbered__title { font: 800 22px/26px var(--font-display); letter-spacing: -.02em; text-transform: uppercase; margin: 0; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "BA numbered list",
+  "settings": [
+    { "type": "select", "id": "color", "label": "Background", "options": [
+      { "value": "canvas", "label": "Off-white" },
+      { "value": "sunk", "label": "Sunk" },
+      { "value": "band", "label": "Black band" }
+    ], "default": "canvas" },
+    { "type": "text", "id": "label", "label": "Label", "default": "01 / How it works" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "intro", "label": "Intro" },
+    { "type": "text", "id": "anchor", "label": "Section link ID" }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Item", "settings": [
+      { "type": "text", "id": "title", "label": "Title" },
+      { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Describe this step.</p>" }
+    ] }
+  ],
+  "presets": [{ "name": "BA numbered list", "blocks": [{ "type": "item" }, { "type": "item" }, { "type": "item" }] }]
+}
+{% endschema %}

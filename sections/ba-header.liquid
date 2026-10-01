@@ -1,0 +1,183 @@
+{%- liquid
+  assign book_url = section.settings.book_url | default: settings.ba_book_url
+  assign phone_digits = settings.ba_phone | remove: '(' | remove: ')' | remove: ' ' | remove: '-' | remove: '.'
+  assign top_menu = section.settings.menu
+  assign drawer_menu = section.settings.drawer_menu | default: section.settings.menu
+-%}
+
+{%- capture fallback_top -%}
+  {%- comment -%} Shown until a Shopify menu is chosen in the theme editor {%- endcomment -%}
+  Hair replacement|/pages/hair-replacement;Products|/collections/all;Education|/pages/education;Apprenticeship|/pages/apprenticeship
+{%- endcapture -%}
+{%- capture fallback_drawer -%}
+  Services|/#services;The team|/#team;Hair replacement|/pages/hair-replacement;Products|/collections/all;Education|/pages/education;Journal|/blogs/journal;Apprenticeship|/pages/apprenticeship
+{%- endcapture -%}
+
+<div class="ba-header-spacer" aria-hidden="true"></div>
+<header class="ba-header" data-ba-header>
+  {%- if section.settings.strip_text != blank -%}
+    <div class="ba-header__strip">
+      <a class="ba-header__strip-link ba-container" href="{{ section.settings.strip_link | default: routes.all_products_collection_url }}">
+        <span class="ba-header__strip-text">{{ section.settings.strip_text }}</span>
+        {%- if section.settings.strip_cta != blank -%}
+          <span class="ba-header__strip-cta">{{ section.settings.strip_cta }}</span>
+        {%- endif -%}
+      </a>
+    </div>
+  {%- endif -%}
+
+  <div class="ba-header__bar ba-container">
+    <a href="{{ routes.root_url }}" class="ba-header__logo" aria-label="{{ shop.name }} home">
+      {%- if section.settings.logo != blank -%}
+        {{ section.settings.logo | image_url: width: 400 | image_tag: alt: shop.name, width: section.settings.logo_width, loading: 'eager' }}
+      {%- else -%}
+        <img src="{{ 'ba-lockup-black.svg' | asset_url }}" alt="{{ shop.name }}" width="{{ section.settings.logo_width }}" height="{{ section.settings.logo_width | times: 354 | divided_by: 822 }}">
+      {%- endif -%}
+    </a>
+    <div class="ba-header__actions">
+      {%- if section.settings.show_cart -%}
+        <a href="{{ routes.cart_url }}" class="ba-header__text-link">Cart ({{ cart.item_count }})</a>
+      {%- endif -%}
+      <button type="button" class="ba-header__menu-btn" aria-expanded="false" aria-controls="BaDrawer-{{ section.id }}" data-ba-menu-toggle>Menu</button>
+      <a href="{{ book_url }}" class="ba-btn ba-btn-primary ba-header__book">{{ section.settings.book_label }}</a>
+    </div>
+  </div>
+
+  <nav class="ba-header__nav" aria-label="Main">
+    <div class="ba-header__nav-inner ba-container">
+      {%- if top_menu != blank and top_menu.links.size > 0 -%}
+        {%- for link in top_menu.links -%}
+          <a href="{{ link.url }}" class="ba-header__nav-link"{% if link.active or link.current %} aria-current="page"{% endif %}>{{ link.title }}</a>
+        {%- endfor -%}
+      {%- else -%}
+        {%- assign items = fallback_top | strip | split: ';' -%}
+        {%- for item in items -%}
+          {%- assign parts = item | split: '|' -%}
+          <a href="{{ parts[1] }}" class="ba-header__nav-link"{% if request.path == parts[1] %} aria-current="page"{% endif %}>{{ parts[0] }}</a>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </nav>
+
+  <nav class="ba-header__drawer" id="BaDrawer-{{ section.id }}" aria-label="Main" hidden>
+    {%- if drawer_menu != blank and drawer_menu.links.size > 0 -%}
+      {%- for link in drawer_menu.links -%}
+        <a href="{{ link.url }}" class="ba-header__drawer-link">{{ link.title }}</a>
+      {%- endfor -%}
+    {%- else -%}
+      {%- assign items = fallback_drawer | strip | split: ';' -%}
+      {%- for item in items -%}
+        {%- assign parts = item | split: '|' -%}
+        <a href="{{ parts[1] }}" class="ba-header__drawer-link">{{ parts[0] }}</a>
+      {%- endfor -%}
+    {%- endif -%}
+    <div class="ba-header__drawer-info">
+      <p class="ba-label">{{ settings.ba_address_line_1 }} · {{ settings.ba_address_line_2 | split: ' ' | slice: 0, 2 | join: ' ' }}</p>
+      <a href="tel:+1{{ phone_digits }}" class="ba-body">{{ settings.ba_phone }}</a>
+    </div>
+  </nav>
+</header>
+
+{%- if section.settings.show_mobile_bar -%}
+  <div class="ba-mobile-bar-spacer" aria-hidden="true"></div>
+  <div class="ba-mobile-bar">
+    <a href="tel:+1{{ phone_digits }}" class="ba-mobile-bar__call">Call</a>
+    <a href="{{ book_url }}" class="ba-mobile-bar__book">{{ section.settings.book_label }}</a>
+  </div>
+{%- endif -%}
+
+<script>
+  (function () {
+    var root = document.currentScript.parentElement;
+    var header = root.querySelector('[data-ba-header]');
+    var btn = root.querySelector('[data-ba-menu-toggle]');
+    var drawer = root.querySelector('.ba-header__drawer');
+    var spacer = root.querySelector('.ba-header-spacer');
+    if (!header || !btn || !drawer) return;
+    function setOpen(open) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Close' : 'Menu';
+      drawer.hidden = !open;
+    }
+    btn.addEventListener('click', function () { setOpen(drawer.hidden); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !drawer.hidden) { setOpen(false); btn.focus(); } });
+    function size() {
+      var open = !drawer.hidden;
+      if (open) drawer.hidden = true;
+      var h = header.offsetHeight;
+      if (open) drawer.hidden = false;
+      spacer.style.height = h + 'px';
+      document.documentElement.style.setProperty('--header-height', h + 'px');
+      document.documentElement.style.setProperty('--header-group-height', h + 'px');
+    }
+    size();
+    window.addEventListener('resize', size);
+  })();
+</script>
+
+{% stylesheet %}
+  .ba-header-spacer { height: 169px; }
+  .ba-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--canvas); color: var(--ink); border-bottom: 1px solid var(--line); font-family: var(--font-sans); }
+  .ba-header__strip { background: var(--canvas-sunk); border-bottom: 1px solid var(--line); }
+  .ba-header__strip-link { height: 40px; display: flex; align-items: center; justify-content: center; gap: 12px; text-decoration: none; color: var(--ink); white-space: nowrap; overflow: hidden; }
+  .ba-header__strip-link:hover { color: var(--green); }
+  .ba-header__strip-text { font: 500 13px/18px var(--font-sans); }
+  .ba-header__strip-cta { font: 600 12px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; text-decoration: underline; text-decoration-color: var(--green); text-underline-offset: 4px; }
+  .ba-header__bar { height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .ba-header__logo { display: block; flex: none; }
+  .ba-header__logo img { display: block; height: auto; }
+  .ba-header__actions { display: flex; align-items: center; gap: 20px; }
+  .ba-header__menu-btn, .ba-header__text-link { background: none; border: 0; padding: 0; min-height: 44px; display: inline-flex; align-items: center; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .ba-header__menu-btn:hover, .ba-header__text-link:hover { color: var(--green); }
+  .ba-header__book.ba-btn { min-height: 44px; padding: 0 20px; }
+  .ba-header__nav { border-top: 1px solid var(--line); }
+  .ba-header__nav-inner { min-height: 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 32px; }
+  .ba-header__nav-link { font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--ink); text-decoration: none; white-space: nowrap; padding: 14px 0 12px; border-bottom: 2px solid transparent; }
+  .ba-header__nav-link:hover { color: var(--green); }
+  .ba-header__nav-link[aria-current="page"] { border-bottom-color: var(--green); }
+  .ba-header__drawer { border-top: 1px solid var(--line); padding: 16px var(--ba-gutter) 32px; display: flex; flex-direction: column; max-height: calc(100vh - 120px); overflow: auto; }
+  .ba-header__drawer[hidden] { display: none; }
+  .ba-header__drawer-link { font: 800 32px/1 var(--font-display); letter-spacing: -.03em; text-transform: uppercase; color: var(--ink); text-decoration: none; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .ba-header__drawer-link:hover { color: var(--green); }
+  .ba-header__drawer-info { display: flex; flex-direction: column; gap: 8px; margin-top: 24px; }
+  .ba-header__drawer-info a { color: var(--ink); }
+  .ba-mobile-bar, .ba-mobile-bar-spacer { display: none; }
+  @media (max-width: 899px) {
+    .ba-header-spacer { height: 120px; }
+    .ba-header__nav, .ba-header__book { display: none; }
+    .ba-mobile-bar-spacer { display: block; height: 84px; }
+    .ba-mobile-bar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--band); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); gap: 12px; align-items: center; }
+    .ba-mobile-bar a { min-height: 56px; display: flex; align-items: center; justify-content: center; text-decoration: none; font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; }
+    .ba-mobile-bar__call { flex: none; padding: 0 20px; border: 2px solid var(--line-strong); color: var(--on-band); }
+    .ba-mobile-bar__book { flex: 1; background: var(--on-band); color: var(--band); }
+  }
+  @media (max-width: 519px) { .ba-header__strip-text { display: none; } }
+  .shopify-design-mode .ba-header { position: sticky; }
+  .shopify-design-mode .ba-header-spacer { display: none; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Broken Arrow header",
+  "class": "ba-header-section",
+  "enabled_on": { "groups": ["header"] },
+  "settings": [
+    { "type": "header", "content": "Announcement strip" },
+    { "type": "text", "id": "strip_text", "label": "Text", "default": "New from the shop: Broken Arrow Grooming." },
+    { "type": "text", "id": "strip_cta", "label": "Link label", "default": "Shop our products →" },
+    { "type": "url", "id": "strip_link", "label": "Link" },
+    { "type": "header", "content": "Logo" },
+    { "type": "image_picker", "id": "logo", "label": "Custom logo", "info": "Leave empty to use the Broken Arrow Barbershop lockup." },
+    { "type": "range", "id": "logo_width", "label": "Logo width", "min": 120, "max": 260, "step": 4, "unit": "px", "default": 164 },
+    { "type": "header", "content": "Navigation" },
+    { "type": "link_list", "id": "menu", "label": "Top menu", "info": "Shown on desktop. Until a menu is chosen, the design's links are shown." },
+    { "type": "link_list", "id": "drawer_menu", "label": "Full menu (opens from MENU)", "info": "Defaults to the top menu." },
+    { "type": "checkbox", "id": "show_cart", "label": "Show cart link", "default": false, "info": "Turn on when Broken Arrow Grooming starts selling." },
+    { "type": "header", "content": "Booking" },
+    { "type": "text", "id": "book_label", "label": "Button label", "default": "Book now" },
+    { "type": "url", "id": "book_url", "label": "Booking link", "info": "Leave empty to use the main booking link in Theme settings → Broken Arrow." },
+    { "type": "checkbox", "id": "show_mobile_bar", "label": "Show call / book bar on phones", "default": true }
+  ],
+  "presets": [{ "name": "Broken Arrow header" }]
+}
+{% endschema %}

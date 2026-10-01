@@ -24,6 +24,11 @@
     {%- render 'scripts' -%}
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-palette' -%}
+    {%- comment -%} Broken Arrow: brand fonts, tokens and component styles {%- endcomment -%}
+    {%- render 'ba-brand-styles' -%}
+    {%- if settings.favicon == blank -%}
+      <link rel="icon" type="image/png" href="{{ 'ba-mark.png' | asset_url }}">
+    {%- endif -%}
 
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
