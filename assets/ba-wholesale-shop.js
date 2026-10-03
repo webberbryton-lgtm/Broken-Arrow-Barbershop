@@ -40,7 +40,12 @@
       var items = Object.keys(packs).filter(function (k) { return packs[k]; }).map(function (k) { return { id: +k, quantity: packs[k] * PACK }; });
       btn.setAttribute('aria-busy', 'true'); btn.disabled = true;
       fetch('/cart/add.js', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ items: items }) })
-        .then(function (r) { if (!r.ok) throw new Error(); location.href = '/cart'; })
+        .then(function (r) {
+          if (!r.ok) throw new Error();
+          // Apply the wholesale discount code (limited to wholesale-tagged customers in Shopify), then open the cart.
+          var code = sec.getAttribute('data-discount');
+          location.href = code ? '/discount/' + encodeURIComponent(code) + '?redirect=%2Fcart' : '/cart';
+        })
         .catch(function () { btn.removeAttribute('aria-busy'); btn.disabled = false; btn.textContent = 'TRY AGAIN'; });
     }
   });

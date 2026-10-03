@@ -3,7 +3,7 @@
   Markup from the Claude Design page "Wholesale Shop"; access and pricing logic from the design's shopify/wholesale-shop.liquid.
   Only customers tagged "wholesale" see products. Products come from the collection with the handle "wholesale".
   A product can be ordered when it's available and tagged "wholesale-live"; everything else shows "Coming soon".
-  The price shown is for information. The charged price must come from Shopify B2B or a wholesale app (see the design README).
+  Checkout price: the discount code in the section settings (WHOLESALE50, 50% off, wholesale-tagged customers only) is applied automatically.
 {%- endcomment -%}
 {%- liquid
   assign pack = section.settings.pack_size | default: 6
@@ -42,7 +42,7 @@
   </div>
 </section>
 
-<section data-screen-label="Wholesale shop / Products" style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(16px,5vw,64px) clamp(56px,8vw,96px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start" data-ba-wholesale data-pack="{{ pack }}">
+<section data-screen-label="Wholesale shop / Products" style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(16px,5vw,64px) clamp(56px,8vw,96px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start" data-ba-wholesale data-pack="{{ pack }}" data-discount="{{ section.settings.discount_code | escape }}">
   <div style="flex:2.2 1 600px;min-width:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:40px 24px">
     {%- assign list = collections['wholesale'].products -%}
     {%- for product in list -%}
@@ -130,7 +130,8 @@
   "class": "ba-page-section",
   "settings": [
     { "type": "number", "id": "pack_size", "label": "Pack size", "default": 6 },
-    { "type": "number", "id": "discount_percent", "label": "Wholesale % off retail (shown only)", "default": 50, "info": "The charged price must come from Shopify B2B or a wholesale app." },
+    { "type": "number", "id": "discount_percent", "label": "Wholesale % off retail", "default": 50, "info": "The price shown on this page. Keep it the same as the discount code's percentage." },
+    { "type": "text", "id": "discount_code", "label": "Wholesale discount code", "default": "WHOLESALE50", "info": "Applied automatically at checkout. In Discounts it is limited to the Wholesale accounts segment (customers tagged wholesale) and needs at least 6 items." },
     { "type": "header", "content": "Signed-out message" },
     { "type": "text", "id": "locked_label", "label": "Label", "default": "Wholesale · Industry professionals only" },
     { "type": "text", "id": "locked_title", "label": "Heading", "default": "Sign in to see wholesale pricing." },

@@ -104,8 +104,13 @@ $50.40 (compare at $56) and The daily kit $71.40 (compare at $84). Inventory isn
   one-time code, then land on the wholesale shop.
 - **Applications:** an application saves the applicant as a customer tagged `wholesale-pending` and emails the full
   answers to the shop. To approve someone, change the tag to `wholesale` in **Customers**.
-- **Wholesale shop:** products in the `wholesale` collection are listed there. Products tagged `wholesale-live` can be
-  ordered. The pack size and discount are set in the theme editor on the Wholesale Shop section.
+- **Wholesale shop:** all products are in the `wholesale` collection and tagged `wholesale-live`. A product shows on
+  the wholesale shop once it's **Active**. Products are sold only in packs of 6.
+- **Wholesale price:** the discount code `WHOLESALE50` gives 50% off the `wholesale` collection with a minimum of
+  6 items. The wholesale shop applies it automatically at checkout. In **Discounts**, it's limited to the customer
+  segment **Wholesale accounts** (customers tagged `wholesale`), so retail customers can't use it. The pack size and
+  the percentage shown are set on the Wholesale Shop section in the theme editor; keep the percentage in step with
+  the discount.
 
 ## 4. Forms and outside services, kept from the design
 
