@@ -109,9 +109,10 @@ $50.40 (compare at $56) and The daily kit $71.40 (compare at $84). Inventory isn
 
 ## 4. Forms and outside services, kept from the design
 
-- **Forms:** the Free Haircut, Careers, Apprenticeship and Wholesale forms email the shop through formsubmit.co
-  (`assets/ba-send-form.js`, the design's `baSend`). The first submission sends a one-time activation email to the shop
-  inbox; click the link in it once.
+- **Forms:** the Free Haircut, Careers, Apprenticeship and Wholesale forms are emailed through formsubmit.co
+  (`assets/ba-send-form.js`, the design's `baSend`) to formsbrokenarrow@gmail.com. To change the address, go to
+  **Theme settings → Broken Arrow → Form emails**. A new address gets a one-time "Activate Form" email on its first
+  submission; click the link in it once.
 - **Booking:** "Book" buttons link to the Square booking pages from the design.
 - **Availability:** the home and barber pages read live openings from the Cloudflare worker
   `barberavalibility.webberbryton.workers.dev`.

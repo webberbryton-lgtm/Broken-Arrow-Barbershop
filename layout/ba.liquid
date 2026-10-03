@@ -4,7 +4,7 @@
   Horizon's own pages (cart, collections, account, search) keep using layout/theme.liquid.
 {%- endcomment -%}
 <!doctype html>
-<html lang="{{ request.locale.iso_code }}">
+<html lang="{{ request.locale.iso_code }}" data-ba-form-email="{{ settings.ba_form_email | default: 'formsbrokenarrow@gmail.com' | escape }}">
   <head>
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">

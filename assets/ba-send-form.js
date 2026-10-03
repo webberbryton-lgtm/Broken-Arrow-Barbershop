@@ -1,5 +1,6 @@
 (function () {
-  var TO = 'brokenarrowbarbershoporem@gmail.com';
+  // Recipient is set in Theme settings > Broken Arrow > Form emails.
+  var TO = document.documentElement.getAttribute('data-ba-form-email') || 'formsbrokenarrow@gmail.com';
   var PHONE = '(801) 709-1280';
   function notice(subject, data) {
     var old = document.getElementById('ba-send-error');

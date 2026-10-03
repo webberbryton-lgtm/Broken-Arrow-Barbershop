@@ -2139,6 +2139,17 @@
       },
       {
         "type": "header",
+        "content": "Form emails"
+      },
+      {
+        "type": "text",
+        "id": "ba_form_email",
+        "label": "Send website forms to",
+        "default": "formsbrokenarrow@gmail.com",
+        "info": "Free haircut, careers, apprenticeship and wholesale applications are emailed here through formsubmit.co. A new address must be activated once: its first submission sends an Activate Form email to it."
+      },
+      {
+        "type": "header",
         "content": "Shop details"
       },
       {
