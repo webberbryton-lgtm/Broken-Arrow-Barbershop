@@ -11,7 +11,7 @@
   try { product = productEl ? JSON.parse(productEl.textContent) : null; } catch (e) {}
 
   var SETS = [{ full: 28, price: 28 }, { full: 56, price: 50.4 }, { full: 84, price: 71.4 }];
-  var SUB = 0.15, FREQ = ['30 days', '60 days', '90 days'];
+  var SUB = 0.20, FREQ = ['30 days', '60 days', '90 days'];
   var st = { set: 0, sub: false, freq: 1, photo: 0, justAdded: false };
   function money(n) { return '$' + (Math.round(n * 100) % 100 ? n.toFixed(2) : String(Math.round(n))); }
   var $ = function (s) { return page.querySelector(s); };

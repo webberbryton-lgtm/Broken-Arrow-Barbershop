@@ -95,7 +95,7 @@ $50.40 (compare at $56) and The daily kit $71.40 (compare at $84). Inventory isn
 
 - Add the product photos and set it to **Active** when you publish the theme.
 - For "Subscribe and save", install Shopify's free **Shopify Subscriptions** app. Add a plan to this product that
-  delivers every 30, 60 and 90 days, in that order, at 15% off. The theme picks up the first subscription plan group
+  delivers every 30, 60 and 90 days, in that order, at 20% off. The theme picks up the first subscription plan group
   automatically. Until a plan exists, a subscriber is charged the one-time price.
 
 ## 3. Wholesale
