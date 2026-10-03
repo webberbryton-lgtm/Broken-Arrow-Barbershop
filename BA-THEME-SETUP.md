@@ -129,4 +129,3 @@ your old site used, for example `/barbers/bryton` → `/pages/bryton` and `/blog
 - **Header and footer:** the logos, navigation links, booking link, address and phone are edited on the Header and
   Footer sections.
 
-Note: the design's Terms of Service text ends with "[TEXT CUT OFF]". Replace it with your full terms.
