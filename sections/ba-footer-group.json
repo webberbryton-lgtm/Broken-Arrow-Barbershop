@@ -1,0 +1,13 @@
+{
+  "type": "footer",
+  "name": "BA site footer",
+  "sections": {
+    "footer": {
+      "type": "ba-site-footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

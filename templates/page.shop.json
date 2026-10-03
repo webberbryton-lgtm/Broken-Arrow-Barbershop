@@ -1,8 +1,8 @@
 {
-  "layout": "ba",
+  "layout": "ba-store",
   "sections": {
     "main": {
-      "type": "ba-free-haircut",
+      "type": "ba-shop",
       "settings": {}
     }
   },

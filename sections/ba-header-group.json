@@ -1,0 +1,107 @@
+{
+  "type": "header",
+  "name": "BA site header",
+  "sections": {
+    "header": {
+      "type": "ba-site-header",
+      "blocks": {
+        "link_services": {
+          "type": "link",
+          "settings": {
+            "label": "Services",
+            "link": "/pages/services",
+            "key": "services",
+            "show_top": false
+          }
+        },
+        "link_team": {
+          "type": "link",
+          "settings": {
+            "label": "The team",
+            "link": "/pages/team",
+            "key": "team",
+            "show_top": false
+          }
+        },
+        "link_hair": {
+          "type": "link",
+          "settings": {
+            "label": "Hair replacement",
+            "link": "/pages/hair-replacement",
+            "key": "hair",
+            "show_top": true
+          }
+        },
+        "link_shop": {
+          "type": "link",
+          "settings": {
+            "label": "Products",
+            "link": "/pages/shop",
+            "key": "shop",
+            "show_top": true
+          }
+        },
+        "link_education": {
+          "type": "link",
+          "settings": {
+            "label": "Education",
+            "link": "/pages/education",
+            "key": "education",
+            "show_top": true
+          }
+        },
+        "link_journal": {
+          "type": "link",
+          "settings": {
+            "label": "Journal",
+            "link": "/pages/journal",
+            "key": "journal",
+            "show_top": false
+          }
+        },
+        "link_apprenticeship": {
+          "type": "link",
+          "settings": {
+            "label": "Apprenticeship",
+            "link": "/pages/apprenticeship",
+            "key": "apprenticeship",
+            "show_top": true
+          }
+        },
+        "link_faq": {
+          "type": "link",
+          "settings": {
+            "label": "FAQ",
+            "link": "/pages/faq",
+            "key": "faq",
+            "show_top": true
+          }
+        },
+        "link_about": {
+          "type": "link",
+          "settings": {
+            "label": "About us",
+            "link": "/pages/about",
+            "key": "about",
+            "show_top": false
+          }
+        }
+      },
+      "block_order": [
+        "link_services",
+        "link_team",
+        "link_hair",
+        "link_shop",
+        "link_education",
+        "link_journal",
+        "link_apprenticeship",
+        "link_faq",
+        "link_about"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "header"
+  ]
+}

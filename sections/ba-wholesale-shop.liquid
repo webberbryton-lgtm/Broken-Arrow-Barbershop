@@ -1,0 +1,140 @@
+{%- comment -%}
+  Broken Arrow Grooming — Wholesale shop.
+  Markup from the Claude Design page "Wholesale Shop"; access and pricing logic from the design's shopify/wholesale-shop.liquid.
+  Only customers tagged "wholesale" see products. Products come from the collection with the handle "wholesale".
+  A product can be ordered when it's available and tagged "wholesale-live"; everything else shows "Coming soon".
+  The price shown is for information. The charged price must come from Shopify B2B or a wholesale app (see the design README).
+{%- endcomment -%}
+{%- liquid
+  assign pack = section.settings.pack_size | default: 6
+  assign pct = section.settings.discount_percent | default: 50
+  assign wholesale = false
+  if customer and customer.tags contains 'wholesale'
+    assign wholesale = true
+  endif
+-%}
+<style>
+  .ba-ws-signout:hover { border-color: var(--on-band) !important; }
+</style>
+<div class="ba-page" data-ba-page="wholesale-shop" data-ba-active="wholesale">
+{%- unless wholesale -%}
+<section data-screen-label="Wholesale shop / Locked" style="max-width:1280px;margin:0 auto;padding:clamp(72px,10vw,140px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:24px;min-height:60vh">
+  <p class="ba-label">{{ section.settings.locked_label }}</p>
+  <h1 class="ba-display" style="font-size:min(clamp(44px,6vw,80px),11vw);max-width:12ch">{{ section.settings.locked_title }}</h1>
+  <p style="max-width:520px;font-size:17px;line-height:28px;text-wrap:pretty">{{ section.settings.locked_text }}</p>
+  {%- if customer -%}
+    <p style="max-width:520px;font-size:17px;line-height:28px;text-wrap:pretty">You’re signed in as {{ customer.email }}. Your account hasn’t been approved for wholesale yet. We’ll email you when it is.</p>
+  {%- endif -%}
+  <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center">
+    <a class="ba-btn ba-btn-primary" href="/pages/wholesale">SIGN IN</a>
+    <a class="ba-btn ba-btn-text" href="/pages/wholesale#apply">APPLY FOR WHOLESALE</a>
+  </div>
+</section>
+{%- else -%}
+<section data-screen-label="Wholesale shop / Header" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Wholesale account · {{ customer.email }}</p>
+      <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(44px,6vw,84px),11vw);letter-spacing:-.045em;line-height:.92">Wholesale shop</h1>
+      <p style="max-width:520px;font-size:17px;line-height:28px;opacity:.85">Everything is {{ pct }}% off retail and sold in packs of {{ pack }}.</p>
+    </div>
+    <a class="ba-ws-signout" href="{{ routes.account_logout_url }}" style="display:inline-flex;align-items:center;background:none;border:1px solid var(--line-strong);color:var(--on-band);min-height:44px;padding:0 18px;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none">Sign out</a>
+  </div>
+</section>
+
+<section data-screen-label="Wholesale shop / Products" style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(16px,5vw,64px) clamp(56px,8vw,96px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start" data-ba-wholesale data-pack="{{ pack }}">
+  <div style="flex:2.2 1 600px;min-width:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:40px 24px">
+    {%- assign list = collections['wholesale'].products -%}
+    {%- for product in list -%}
+      {%- liquid
+        assign v = product.selected_or_first_available_variant
+        assign unit_cents = v.price | times: pct | divided_by: 100
+        assign pack_cents = unit_cents | times: pack
+        assign orderable = false
+        if product.available and product.tags contains 'wholesale-live'
+          assign orderable = true
+        endif
+        if product.featured_image
+          assign bg = product.featured_image | image_url: width: 800
+        else
+          assign bg = 'ba-clay-card.webp' | asset_url
+        endif
+      -%}
+      <article style="display:flex;flex-direction:column;gap:14px" data-ws-product data-variant="{{ v.id }}" data-name="{{ product.title | escape }}" data-unit="{{ unit_cents }}" data-retail="{{ v.price }}" data-orderable="{{ orderable }}">
+        <div style="position:relative;aspect-ratio:4/5;background-color:var(--canvas-sunk);background-image:url('{{ bg }}');background-size:cover;background-position:center" role="img" aria-label="Broken Arrow Grooming {{ product.title | escape }}">
+          <span class="ba-label" style="position:absolute;top:12px;left:12px;background:var(--band);color:var(--on-band);padding:6px 10px">Pack of {{ pack }}</span>
+          {%- unless orderable -%}<span class="ba-label" style="position:absolute;top:12px;right:12px;background:var(--canvas);padding:6px 10px">Coming soon</span>{%- endunless -%}
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+            <h2 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ product.title }}</h2>
+            <p style="font:600 17px/26px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ pack_cents | money }}</p>
+          </div>
+          <p style="font-size:14px;line-height:22px;color:var(--ink-muted);font-variant-numeric:tabular-nums">{{ unit_cents | money }}/unit · retail {{ v.price | money }}</p>
+        </div>
+        {%- if orderable -%}
+          <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line-strong)">
+            <button type="button" data-ws-dec aria-label="Remove a pack of {{ pack }} {{ product.title | escape }}" style="width:52px;height:52px;background:none;border:0;cursor:pointer;font:600 20px/1 var(--font-sans);color:var(--ink)">−</button>
+            <span data-ws-qty style="font:600 13px/16px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;font-variant-numeric:tabular-nums">Add pack</span>
+            <button type="button" data-ws-inc aria-label="Add a pack of {{ pack }} {{ product.title | escape }}" style="width:52px;height:52px;background:none;border:0;cursor:pointer;font:600 20px/1 var(--font-sans);color:var(--ink)">+</button>
+          </div>
+        {%- else -%}
+          <p style="min-height:54px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted)">Not available to order yet</p>
+        {%- endif -%}
+      </article>
+    {%- else -%}
+      {%- comment -%} No "wholesale" collection yet: show the line-up from the design, all coming soon. {%- endcomment -%}
+      {%- assign items = 'Hair Clay|1.0 fl oz|clay-card|28,Cream|1.0 fl oz|cream-card|28,Sea Salt Spray||salt-card|22,Shampoo|300ml|shampoo-card|28,Conditioner|300ml|conditioner-card|28,Aftershave|120ml|aftershave-card|26,Refuge|30ml extrait de parfum|refuge-card|159' | split: ',' -%}
+      {%- for it in items -%}
+        {%- assign f = it | split: '|' -%}
+        {%- assign img = 'ba-' | append: f[2] | append: '.webp' | asset_url -%}
+        {%- assign retail = f[3] | times: 1 -%}
+        {%- assign unit = retail | times: pct | divided_by: 100.0 -%}
+        <article style="display:flex;flex-direction:column;gap:14px">
+          <div style="position:relative;aspect-ratio:4/5;background-color:var(--canvas-sunk);background-image:url('{{ img }}');background-size:cover;background-position:center" role="img" aria-label="Broken Arrow Grooming {{ f[0] }}">
+            <span class="ba-label" style="position:absolute;top:12px;left:12px;background:var(--band);color:var(--on-band);padding:6px 10px">Pack of {{ pack }}</span>
+            <span class="ba-label" style="position:absolute;top:12px;right:12px;background:var(--canvas);padding:6px 10px">Coming soon</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:12px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+              <h2 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ f[0] }}</h2>
+              <p style="font:600 17px/26px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">${{ unit | times: pack }}</p>
+            </div>
+            <p style="font-size:14px;line-height:22px;color:var(--ink-muted);font-variant-numeric:tabular-nums">{% if f[1] != blank %}{{ f[1] }} · {% endif %}${{ unit }}/unit · retail ${{ retail }}</p>
+          </div>
+          <p style="min-height:54px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted)">Not available to order yet</p>
+        </article>
+      {%- endfor -%}
+    {%- endfor -%}
+  </div>
+
+  <aside style="flex:1 1 300px;position:sticky;top:140px;display:flex;flex-direction:column;gap:18px;background:var(--canvas-sunk);padding:28px">
+    <p class="ba-label">Your order</p>
+    <ul data-ws-lines hidden style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;border-top:1px solid var(--line)"></ul>
+    <p data-ws-empty style="font-size:15px;line-height:24px;color:var(--ink-muted)">Add packs to start an order.</p>
+    <div style="display:flex;justify-content:space-between;gap:12px;font-size:15px;line-height:22px;color:var(--ink-muted)"><span>Units</span><span data-ws-units style="font-variant-numeric:tabular-nums">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:12px;font-size:15px;line-height:22px;color:var(--ink-muted)"><span>Retail value</span><span data-ws-retail style="font-variant-numeric:tabular-nums">{{ 0 | money }}</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:2px solid var(--ink);padding-top:14px"><span class="ba-label">Wholesale total</span><span data-ws-total style="font:800 28px/1 var(--font-display);font-variant-numeric:tabular-nums">{{ 0 | money }}</span></div>
+    <button type="button" class="ba-btn ba-btn-primary" data-ws-checkout disabled>CHECK OUT</button>
+    <p style="font-size:14px;line-height:22px;color:var(--ink-muted)">Shipping and payment terms are confirmed with your wholesale account.</p>
+  </aside>
+</section>
+<script src="{{ 'ba-wholesale-shop.js' | asset_url }}" defer></script>
+{%- endunless -%}
+</div>
+
+{% schema %}
+{
+  "name": "Wholesale shop",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    { "type": "number", "id": "pack_size", "label": "Pack size", "default": 6 },
+    { "type": "number", "id": "discount_percent", "label": "Wholesale % off retail (shown only)", "default": 50, "info": "The charged price must come from Shopify B2B or a wholesale app." },
+    { "type": "header", "content": "Signed-out message" },
+    { "type": "text", "id": "locked_label", "label": "Label", "default": "Wholesale · Industry professionals only" },
+    { "type": "text", "id": "locked_title", "label": "Heading", "default": "Sign in to see wholesale pricing." },
+    { "type": "textarea", "id": "locked_text", "label": "Text", "default": "This page is for approved wholesale accounts. Sign in, or apply with your EIN, barber license or cosmetology license." }
+  ]
+}
+{% endschema %}

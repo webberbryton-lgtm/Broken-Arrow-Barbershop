@@ -1,0 +1,467 @@
+{%- comment -%} Generated from the Claude Design page "Local Guide - Same Barber Every Time". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_wide != blank
+  assign img_shop_wide = section.settings.img_shop_wide | image_url: width: 2400
+else
+  assign img_shop_wide = 'ba-shop-wide.webp' | asset_url
+endif
+if section.settings.img_connor_wide != blank
+  assign img_connor_wide = section.settings.img_connor_wide | image_url: width: 2400
+else
+  assign img_connor_wide = 'ba-connor-wide.webp' | asset_url
+endif
+if section.settings.img_payson_storefront != blank
+  assign img_payson_storefront = section.settings.img_payson_storefront | image_url: width: 2400
+else
+  assign img_payson_storefront = 'ba-payson-storefront.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="small-barbershop-orem-same-barber"] :is(ul, ol) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="small-barbershop-orem-same-barber" data-ba-active="journal">
+<article><header data-screen-label="Guide / Hero" style="position: relative; background: var(--band); min-height: clamp(520px, 76vh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<div aria-label="Inside Broken Arrow Barbershop, a small men’s barbershop in Orem, Utah" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_wide }}"); background-size: cover; background-position: center center; filter: saturate(0.85);'></div>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;"><a href="/pages/journal" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_journal | escape }}</a><span style="opacity: 0.5;">/</span><span style="opacity: 0.78;">{{ section.settings.t_shop_guide | escape }}</span></nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_why_the_same_barber_every_ti | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_4_min_read | escape }}</p>
+</div></header><section data-screen-label="Guide / Intro" style="max-width: 920px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(40px, 6vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_we_aren_t_a_haircut_chain_we | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_one_of_the_things_we_hear_mo | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_that_isn_t_bad_luck_it_s_how | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_short_answer | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_barbershop_is_a | escape }}</p>
+</div>
+</div></section>
+<section data-screen-label="Guide / Section" id="s1" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_why_chains_feel_different | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_big_chains_are_built_for_vol | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_so_you_sit_down_with_someone | escape }}</p>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s2" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_02 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_a_barber_who_knows_you_ | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_there_s_real_value_in_a_barb | escape }}</p>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_your_hair | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_where_the_cowlick_is_how_fas | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_your_last_cut | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_what_you_liked_about_it_what | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_how_you_wear_it | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_whether_you_style_it_every_m | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_you | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_your_job_your_routine_the_ev | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Connor checking a haircut at his chair" loading="lazy" src="{{ img_connor_wide }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_connor_at_his_chair_in_orem | escape }}</figcaption>
+</figure>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s3" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_03 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_every_haircut_builds_on_the_ | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_when_the_same_barber_cuts_yo | escape }}</p>
+<blockquote style="margin: 8px 0px; display: flex; flex-direction: column; gap: 16px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding: 28px 0px;">
+<p class="ba-display" style="font-size: clamp(26px, 3vw, 38px); line-height: 1.05; max-width: 24ch;">{{ section.settings.t_you_shouldn_t_have_to_explai | escape }}</p>
+</blockquote>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s4" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_how_we_run_the_shop | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_three_barbers_booked_appoint | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="The original Broken Arrow storefront in Payson" loading="lazy" src="{{ img_payson_storefront }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_where_it_started_the_first_s | escape }}</figcaption>
+</figure>
+<a href="/pages/team" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_meet_the_barbers | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s5" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_finding_your_barber | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_book_with_whoever_fits_what_ | escape }}</p>
+<a href="/pages/service-quiz" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_not_sure_what_to_book | escape }}</a>
+</div>
+</section><section data-screen-label="Guide / FAQ" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 20px;">
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px);">{{ section.settings.t_questions | escape }}</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Can I book the same barber every time?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_pick_your_barber_on_the_ | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">What if my barber is booked out?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_book_a_little_further_ahead_ | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Is Broken Arrow a chain?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_no_it_s_a_small_locally_owne | escape }}</p>
+</details>
+</div></section></article><section data-screen-label="Guide / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_find_your_barber | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_book_with_one_of_our_three_b | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="/pages/team">{{ section.settings.t_meet_the_team | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Why the same barber every time matters","description":"Big haircut chains have high turnover, so you get a new barber every time. Broken Arrow is a small barbershop in Orem where the same barber gets to know your hair.","datePublished":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/small-barbershop-orem-same-barber","author":{"@type":"Organization","name":"Broken Arrow Barbershop"},"about":{"@type":"BarberShop","name":"Broken Arrow Barbershop","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097"}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I book the same barber every time?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pick your barber on the booking page and book with them again next time."}},{"@type":"Question","name":"What if my barber is booked out?","acceptedAnswer":{"@type":"Answer","text":"Book a little further ahead, or try another barber in the shop. We talk to each other about clients."}},{"@type":"Question","name":"Is Broken Arrow a chain?","acceptedAnswer":{"@type":"Answer","text":"No. It’s a small, locally owned barbershop in Orem."}}]}]}</script>
+{% schema %}
+{
+  "name": "Local Guide - Same Barber",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_wide",
+      "label": "Guide / Hero — photo (shop-wide.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_wide",
+      "label": "Guide / Section — photo (connor-wide.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_storefront",
+      "label": "Guide / Section — photo (payson-storefront.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Guide / Hero — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_shop_guide",
+      "label": "Guide / Hero — Text: Shop guide",
+      "default": "Shop guide"
+    },
+    {
+      "type": "text",
+      "id": "t_why_the_same_barber_every_ti",
+      "label": "Guide / Hero — Heading: Why the same barber every time matters",
+      "default": "Why the same barber every time matters"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_4_min_read",
+      "label": "Guide / Hero — Text: September 26, 2026 · 4 min read",
+      "default": "September 26, 2026 · 4 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Intro"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_aren_t_a_haircut_chain_we",
+      "label": "Guide / Intro — Text: We aren’t a haircut chain. We’re a small",
+      "default": "We aren’t a haircut chain. We’re a small shop in Orem with three barbers, and we like to do things right."
+    },
+    {
+      "type": "textarea",
+      "id": "t_one_of_the_things_we_hear_mo",
+      "label": "Guide / Intro — Text: One of the things we hear most from new ",
+      "default": "One of the things we hear most from new clients is some version of: “Every time I went to that place, I got a new barber.”"
+    },
+    {
+      "type": "text",
+      "id": "t_that_isn_t_bad_luck_it_s_how",
+      "label": "Guide / Intro — Text: That isn’t bad luck. It’s how most big h",
+      "default": "That isn’t bad luck. It’s how most big haircut chains are set up."
+    },
+    {
+      "type": "text",
+      "id": "t_short_answer",
+      "label": "Guide / Intro — Text: Short answer",
+      "default": "Short answer"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_barbershop_is_a",
+      "label": "Guide / Intro — Text: Broken Arrow Barbershop is a small, loca",
+      "default": "Broken Arrow Barbershop is a small, locally owned men’s barbershop at 375 E 800 S, Suite 12, Orem, UT, with three barbers: Bryton, Connor and Elise. You can book the same barber every visit, so they get to know your hair, what you liked about your last cut and what you didn’t."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Section"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Guide / Section — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_why_chains_feel_different",
+      "label": "Guide / Section — Heading: Why chains feel different",
+      "default": "Why chains feel different"
+    },
+    {
+      "type": "textarea",
+      "id": "t_big_chains_are_built_for_vol",
+      "label": "Guide / Section — Text: Big chains are built for volume. Turnove",
+      "default": "Big chains are built for volume. Turnover is high, and for a lot of the people behind the chair, it’s a temporary job on the way to something else."
+    },
+    {
+      "type": "textarea",
+      "id": "t_so_you_sit_down_with_someone",
+      "label": "Guide / Section — Text: So you sit down with someone new, explai",
+      "default": "So you sit down with someone new, explain your hair from scratch, and hope it goes well. Next time, you do it all again."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Guide / Section — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_what_a_barber_who_knows_you_",
+      "label": "Guide / Section — Heading: What a barber who knows you gets right",
+      "default": "What a barber who knows you gets right"
+    },
+    {
+      "type": "text",
+      "id": "t_there_s_real_value_in_a_barb",
+      "label": "Guide / Section — Text: There’s real value in a barber who has c",
+      "default": "There’s real value in a barber who has cut your hair before."
+    },
+    {
+      "type": "text",
+      "id": "t_your_hair",
+      "label": "Guide / Section — Text: Your hair",
+      "default": "Your hair"
+    },
+    {
+      "type": "text",
+      "id": "t_where_the_cowlick_is_how_fas",
+      "label": "Guide / Section — Text: Where the cowlick is, how fast the sides",
+      "default": "Where the cowlick is, how fast the sides grow and how your hair behaves after a week."
+    },
+    {
+      "type": "text",
+      "id": "t_your_last_cut",
+      "label": "Guide / Section — Text: Your last cut",
+      "default": "Your last cut"
+    },
+    {
+      "type": "text",
+      "id": "t_what_you_liked_about_it_what",
+      "label": "Guide / Section — Text: What you liked about it, what you didn’t",
+      "default": "What you liked about it, what you didn’t, and what to change this time."
+    },
+    {
+      "type": "text",
+      "id": "t_how_you_wear_it",
+      "label": "Guide / Section — Text: How you wear it",
+      "default": "How you wear it"
+    },
+    {
+      "type": "text",
+      "id": "t_whether_you_style_it_every_m",
+      "label": "Guide / Section — Text: Whether you style it every morning or ju",
+      "default": "Whether you style it every morning or just push it back and go."
+    },
+    {
+      "type": "text",
+      "id": "t_you",
+      "label": "Guide / Section — Text: You",
+      "default": "You"
+    },
+    {
+      "type": "textarea",
+      "id": "t_your_job_your_routine_the_ev",
+      "label": "Guide / Section — Text: Your job, your routine, the event coming",
+      "default": "Your job, your routine, the event coming up next month. It’s a conversation, not a transaction."
+    },
+    {
+      "type": "text",
+      "id": "t_connor_at_his_chair_in_orem",
+      "label": "Guide / Section — Text: Connor at his chair in Orem.",
+      "default": "Connor at his chair in Orem."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Guide / Section — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_every_haircut_builds_on_the_",
+      "label": "Guide / Section — Heading: Every haircut builds on the last one",
+      "default": "Every haircut builds on the last one"
+    },
+    {
+      "type": "textarea",
+      "id": "t_when_the_same_barber_cuts_yo",
+      "label": "Guide / Section — Text: When the same barber cuts your hair ever",
+      "default": "When the same barber cuts your hair every time, each haircut gets a little better. Small adjustments add up. By the third or fourth visit, you barely need to explain anything."
+    },
+    {
+      "type": "text",
+      "id": "t_you_shouldn_t_have_to_explai",
+      "label": "Guide / Section — Text: You shouldn’t have to explain your hair ",
+      "default": "You shouldn’t have to explain your hair from scratch every visit."
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Guide / Section — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_how_we_run_the_shop",
+      "label": "Guide / Section — Heading: How we run the shop",
+      "default": "How we run the shop"
+    },
+    {
+      "type": "textarea",
+      "id": "t_three_barbers_booked_appoint",
+      "label": "Guide / Section — Text: Three barbers. Booked appointments with ",
+      "default": "Three barbers. Booked appointments with the time to do the job properly. Clients who have followed Bryton from our first shop in Payson, and plenty who drive in from Provo and across Utah County."
+    },
+    {
+      "type": "text",
+      "id": "t_where_it_started_the_first_s",
+      "label": "Guide / Section — Text: Where it started: the first shop in Pays",
+      "default": "Where it started: the first shop in Payson."
+    },
+    {
+      "type": "text",
+      "id": "t_meet_the_barbers",
+      "label": "Guide / Section — Link text: Meet the barbers →",
+      "default": "Meet the barbers →"
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Guide / Section — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_finding_your_barber",
+      "label": "Guide / Section — Heading: Finding your barber",
+      "default": "Finding your barber"
+    },
+    {
+      "type": "textarea",
+      "id": "t_book_with_whoever_fits_what_",
+      "label": "Guide / Section — Text: Book with whoever fits what you want, th",
+      "default": "Book with whoever fits what you want, then stick with them. Bryton specializes in scissor haircuts, receding hairlines and hair systems. Connor and Elise each have their own strengths. If you aren’t sure, book any of us for your first visit and we’ll point you in the right direction."
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_what_to_book",
+      "label": "Guide / Section — Link text: Not sure what to book? →",
+      "default": "Not sure what to book? →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Guide / FAQ — Heading: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "t_yes_pick_your_barber_on_the_",
+      "label": "Guide / FAQ — Text: Yes. Pick your barber on the booking pag",
+      "default": "Yes. Pick your barber on the booking page and book with them again next time."
+    },
+    {
+      "type": "textarea",
+      "id": "t_book_a_little_further_ahead_",
+      "label": "Guide / FAQ — Text: Book a little further ahead, or try anot",
+      "default": "Book a little further ahead, or try another barber in the shop. We talk to each other about clients."
+    },
+    {
+      "type": "text",
+      "id": "t_no_it_s_a_small_locally_owne",
+      "label": "Guide / FAQ — Text: No. It’s a small, locally owned barbersh",
+      "default": "No. It’s a small, locally owned barbershop in Orem."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Guide / CTA — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_find_your_barber",
+      "label": "Guide / CTA — Heading: Find your barber.",
+      "default": "Find your barber."
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_one_of_our_three_b",
+      "label": "Guide / CTA — Text: Book with one of our three barbers and c",
+      "default": "Book with one of our three barbers and come back to the same one next time."
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Guide / CTA — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_the_team",
+      "label": "Guide / CTA — Link text: Meet the team",
+      "default": "Meet the team"
+    }
+  ]
+}
+{% endschema %}

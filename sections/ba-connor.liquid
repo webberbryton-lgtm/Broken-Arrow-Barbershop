@@ -1,0 +1,367 @@
+{%- comment -%} Generated from the Claude Design page "Barber - Connor". {%- endcomment -%}
+{%- liquid
+if section.settings.img_connor_profile != blank
+  assign img_connor_profile = section.settings.img_connor_profile | image_url: width: 2400
+else
+  assign img_connor_profile = 'ba-connor-profile.webp' | asset_url
+endif
+if section.settings.img_connor_wide != blank
+  assign img_connor_wide = section.settings.img_connor_wide | image_url: width: 2400
+else
+  assign img_connor_wide = 'ba-connor-wide.webp' | asset_url
+endif
+if section.settings.img_connor_work_1 != blank
+  assign img_connor_work_1 = section.settings.img_connor_work_1 | image_url: width: 2400
+else
+  assign img_connor_work_1 = 'ba-connor-work-1.webp' | asset_url
+endif
+if section.settings.img_connor_work_2 != blank
+  assign img_connor_work_2 = section.settings.img_connor_work_2 | image_url: width: 2400
+else
+  assign img_connor_work_2 = 'ba-connor-work-2.webp' | asset_url
+endif
+if section.settings.img_connor_clipper != blank
+  assign img_connor_clipper = section.settings.img_connor_clipper | image_url: width: 2400
+else
+  assign img_connor_clipper = 'ba-connor-clipper.webp' | asset_url
+endif
+if section.settings.img_connor_work_4 != blank
+  assign img_connor_work_4 = section.settings.img_connor_work_4 | image_url: width: 2400
+else
+  assign img_connor_work_4 = 'ba-connor-work-4.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="connor"] :is(ul) { margin: 0; }
+.bah-connor-1:hover { color: var(--green) !important; }
+.ba-avail-hero:hover { color: var(--on-band) !important; border-color: var(--on-band) !important; }
+</style>
+<div class="ba-page" data-ba-page="connor" data-ba-active="team" data-ba-book="https://book.squareup.com/appointments/cnl05yngyr8vhx/location/LFBJAQ8MMHY0Z/services" data-ba-book-label="BOOK WITH CONNOR" data-ba-barber="connor">
+<section data-screen-label="Barber / Hero" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 7vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: flex-end;">
+<div style="position: relative; overflow: hidden; flex: 1 1 360px; aspect-ratio: 4 / 5; background: rgb(34, 35, 38); display: flex; align-items: flex-end; padding: 16px;">
+<div aria-label="Connor cutting a client’s hair with shears at Broken Arrow Barbershop" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_connor_profile }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="flex: 1.1 1 440px; display: flex; flex-direction: column; gap: 24px;">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;">
+<a href="/pages/team" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_the_team | escape }}</a><span style="opacity: 0.5;">/</span><span>{{ section.settings.t_connor | escape }}</span>
+</nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(64px, 10vw, 140px), 11vw); letter-spacing: -0.045em; line-height: 0.88;">{{ section.settings.t_connor_2 | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_barber | escape }}</p>
+<p style="max-width: 560px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_connor_is_a_utah_county_loca | escape }}</p>
+<div data-ba-avail-slot="connor" style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px;">
+<div><a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/cnl05yngyr8vhx/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_with_connor | escape }}</a></div>
+</div>
+</div>
+</div></section><section data-screen-label="Barber / YouTube" style="background: var(--green); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 6vw, 80px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px 48px;">
+<div style="flex: 1 1 480px; max-width: 760px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_filmed_for_youtube_applicati | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6vw, 80px); letter-spacing: -0.045em; max-width: 14ch;">{{ section.settings.t_apply_for_a_free_haircut | escape }}</h2>
+<p style="font-size: 18px; line-height: 30px; color: var(--on-band); text-wrap: pretty;">{{ section.settings.t_no_charge_connor_films_trans | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-secondary ba-on-dark" href="/pages/free-haircut">{{ section.settings.t_apply_for_a_free_cut | escape }}</a>
+</div></section><div aria-label="Connor checking a haircut with a comb, the shop’s green wall behind him" data-screen-label="Barber / Wide photo" role="img" style='width: 100%; aspect-ratio: 2 / 1; max-height: 720px; background-color: var(--band); background-image: url("{{ img_connor_wide }}"); background-size: cover; background-position: center center;'></div><section data-screen-label="Barber / Book for" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_01_book_connor_for | escape }}</p>
+<ul style="flex: 2 1 520px; max-width: 760px; list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_01 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_medium_length_cuts_that_stil | escape }}</p>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_02 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_longer_hair_that_needs_shape | escape }}</p>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_03 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_taking_the_time_to_get_the_d | escape }}</p>
+</li>
+</ul></section><section data-screen-label="Barber / Work" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_02_the_work | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px);">{{ section.settings.t_connor_s_cuts | escape }}</h2>
+</div>
+<a class="ba-btn ba-btn-text" href="https://www.instagram.com/broken.arrow.barbershop/">{{ section.settings.t_more_on_instagram | escape }}</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 4px;">
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Connor shaping a longer cut by hand" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_connor_work_1 }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Blow-drying a longer cut with a round brush" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_connor_work_2 }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Connor detailing around the ear with a trimmer" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_connor_clipper }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Towel-drying after a shampoo at the sink" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_connor_work_4 }}"); background-size: cover; background-position: center center;'></div>
+</div>
+</div>
+</div></section><section data-screen-label="Barber / Others" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_the_rest_of_the_team | escape }}</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px;">
+<a class="bah-connor-1" href="/pages/bryton" style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 24px 0px; border-top: 2px solid var(--ink); text-decoration: none; color: var(--ink);">
+<span style="display: flex; flex-direction: column; gap: 6px;"><span style="font: 800 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_bryton | escape }}</span><span class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_owner_licensed_barber_instru | escape }}</span></span>
+<span class="ba-label">{{ section.settings.t_view | escape }}</span>
+</a>
+<a class="bah-connor-1" href="/pages/elise" style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 24px 0px; border-top: 2px solid var(--ink); text-decoration: none; color: var(--ink);">
+<span style="display: flex; flex-direction: column; gap: 6px;"><span style="font: 800 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_elise | escape }}</span><span class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_barber_2 | escape }}</span></span>
+<span class="ba-label">{{ section.settings.t_view_2 | escape }}</span>
+</a>
+</div></section><section data-screen-label="Barber / Book band" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(48px, 7vw, 88px); max-width: 10ch;">{{ section.settings.t_book_with_connor_2 | escape }}</h2>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/cnl05yngyr8vhx/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_with_connor_3 | escape }}</a>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Connor","jobTitle":"Barber","description":"Connor is a Utah County local, born and raised. Most of his work is medium to longer haircuts: keeping the length and giving it shape. He got into barbering because he likes helping people feel good about how they look. He takes his time, gets the details right, and makes sure you’re comfortable in the chair.","knowsAbout":["Medium-length cuts that still look good as they grow out.","Longer hair that needs shape without losing length.","Taking the time to get the details right."],"worksFor":{"@type":"BarberShop","name":"Broken Arrow Barbershop","url":"{{ shop.url }}/","sameAs":["https://www.instagram.com/broken.arrow.barbershop/","https://www.youtube.com/@BrokenArrowBarbershop"],"address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097","addressCountry":"US"}},"potentialAction":{"@type":"ReserveAction","target":"https://book.squareup.com/appointments/cnl05yngyr8vhx/location/LFBJAQ8MMHY0Z/services","name":"Book with Connor"}}</script>
+<script src="{{ 'ba-barber.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Barber - Connor",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_profile",
+      "label": "Barber / Hero — photo (connor-profile.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_wide",
+      "label": "Barber / Wide photo — photo (connor-wide.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_work_1",
+      "label": "Barber / Work — photo (connor-work-1.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_work_2",
+      "label": "Barber / Work — photo (connor-work-2.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_clipper",
+      "label": "Barber / Work — photo (connor-clipper.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_work_4",
+      "label": "Barber / Work — photo (connor-work-4.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_the_team",
+      "label": "Barber / Hero — Link text: The team",
+      "default": "The team"
+    },
+    {
+      "type": "text",
+      "id": "t_connor",
+      "label": "Barber / Hero — Text: Connor",
+      "default": "Connor"
+    },
+    {
+      "type": "text",
+      "id": "t_connor_2",
+      "label": "Barber / Hero — Heading: Connor",
+      "default": "Connor"
+    },
+    {
+      "type": "text",
+      "id": "t_barber",
+      "label": "Barber / Hero — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "textarea",
+      "id": "t_connor_is_a_utah_county_loca",
+      "label": "Barber / Hero — Text: Connor is a Utah County local, born and ",
+      "default": "Connor is a Utah County local, born and raised. Most of his work is medium to longer haircuts: keeping the length and giving it shape. He got into barbering because he likes helping people feel good about how they look. He takes his time, gets the details right, and makes sure you’re comfortable in the chair."
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_connor",
+      "label": "Barber / Hero — Link text: BOOK WITH CONNOR",
+      "default": "BOOK WITH CONNOR"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / YouTube"
+    },
+    {
+      "type": "text",
+      "id": "t_filmed_for_youtube_applicati",
+      "label": "Barber / YouTube — Text: Filmed for YouTube · Applications open",
+      "default": "Filmed for YouTube · Applications open"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_haircut",
+      "label": "Barber / YouTube — Heading: Apply for a free haircut.",
+      "default": "Apply for a free haircut."
+    },
+    {
+      "type": "textarea",
+      "id": "t_no_charge_connor_films_trans",
+      "label": "Barber / YouTube — Text: No charge. Connor films transformations ",
+      "default": "No charge. Connor films transformations for our YouTube channel and is looking for big changes: overgrown hair, long hair going short and cuts that need a fresh start. If you’re picked, the cut is free and it goes on the channel."
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_cut",
+      "label": "Barber / YouTube — Link text: APPLY FOR A FREE CUT",
+      "default": "APPLY FOR A FREE CUT"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Book for"
+    },
+    {
+      "type": "text",
+      "id": "t_01_book_connor_for",
+      "label": "Barber / Book for — Text: 01 / Book Connor for",
+      "default": "01 / Book Connor for"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Barber / Book for — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_medium_length_cuts_that_stil",
+      "label": "Barber / Book for — Text: Medium-length cuts that still look good ",
+      "default": "Medium-length cuts that still look good as they grow out."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Barber / Book for — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_longer_hair_that_needs_shape",
+      "label": "Barber / Book for — Text: Longer hair that needs shape without los",
+      "default": "Longer hair that needs shape without losing length."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Barber / Book for — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_taking_the_time_to_get_the_d",
+      "label": "Barber / Book for — Text: Taking the time to get the details right",
+      "default": "Taking the time to get the details right."
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Work"
+    },
+    {
+      "type": "text",
+      "id": "t_02_the_work",
+      "label": "Barber / Work — Text: 02 / The work",
+      "default": "02 / The work"
+    },
+    {
+      "type": "text",
+      "id": "t_connor_s_cuts",
+      "label": "Barber / Work — Heading: Connor’s cuts",
+      "default": "Connor’s cuts"
+    },
+    {
+      "type": "text",
+      "id": "t_more_on_instagram",
+      "label": "Barber / Work — Link text: MORE ON INSTAGRAM →",
+      "default": "MORE ON INSTAGRAM →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Others"
+    },
+    {
+      "type": "text",
+      "id": "t_the_rest_of_the_team",
+      "label": "Barber / Others — Text: The rest of the team",
+      "default": "The rest of the team"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton",
+      "label": "Barber / Others — Text: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_owner_licensed_barber_instru",
+      "label": "Barber / Others — Text: Owner & licensed barber instructor",
+      "default": "Owner & licensed barber instructor"
+    },
+    {
+      "type": "text",
+      "id": "t_view",
+      "label": "Barber / Others — Text: View →",
+      "default": "View →"
+    },
+    {
+      "type": "text",
+      "id": "t_elise",
+      "label": "Barber / Others — Text: Elise",
+      "default": "Elise"
+    },
+    {
+      "type": "text",
+      "id": "t_barber_2",
+      "label": "Barber / Others — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_view_2",
+      "label": "Barber / Others — Text: View →",
+      "default": "View →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Book band"
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_connor_2",
+      "label": "Barber / Book band — Heading: Book with Connor.",
+      "default": "Book with Connor."
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_connor_3",
+      "label": "Barber / Book band — Link text: BOOK WITH CONNOR",
+      "default": "BOOK WITH CONNOR"
+    }
+  ]
+}
+{% endschema %}

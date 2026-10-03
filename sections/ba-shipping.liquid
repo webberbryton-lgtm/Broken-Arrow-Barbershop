@@ -1,0 +1,147 @@
+{%- comment -%} Generated from the Claude Design page "Shipping". {%- endcomment -%}
+<style>
+.ba-page[data-ba-page="shipping"] :is(ul) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="shipping">
+<section data-screen-label="Info / Header" style="background: var(--canvas-sunk); border-bottom: 1px solid var(--line);">
+<div style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_help | escape }}</p>
+<h1 class="ba-display" style="font-size: min(clamp(44px, 6.4vw, 80px), 11vw); letter-spacing: -0.045em;">{{ section.settings.t_shipping | escape }}</h1>
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_last_updated_september_26_20 | escape }}</p>
+</div></section><article data-screen-label="Info / Body" style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 40px;">
+<p style="font-size: clamp(19px, 1.9vw, 22px); line-height: 1.6; text-wrap: pretty;">{{ section.settings.t_broken_arrow_grooming_ships_ | escape }}</p>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_processing_time | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_orders_ship_within_2_busines | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_where_we_ship | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_currently_ship_within_the | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_local_pickup | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_choose_local_pickup_at_check | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_tracking | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_you_ll_get_an_email_with_tra | escape }}</p>
+</section>
+<div style="display: flex; flex-direction: column; gap: 8px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_contact_us | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;"><a href="tel:+18017091280">{{ section.settings.t_801_709_1280 | escape }}</a> · <a href="mailto:brokenarrowbarbershoporem@gmail.com">{{ section.settings.t_brokenarrowbarbershoporem_gm | escape }}</a></p>
+</div></article>
+</div>
+{% schema %}
+{
+  "name": "Shipping",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text: Info / Header"
+    },
+    {
+      "type": "text",
+      "id": "t_help",
+      "label": "Info / Header — Text: Help",
+      "default": "Help"
+    },
+    {
+      "type": "text",
+      "id": "t_shipping",
+      "label": "Info / Header — Heading: Shipping",
+      "default": "Shipping"
+    },
+    {
+      "type": "text",
+      "id": "t_last_updated_september_26_20",
+      "label": "Info / Header — Text: Last updated September 26, 2026",
+      "default": "Last updated September 26, 2026"
+    },
+    {
+      "type": "header",
+      "content": "Text: Info / Body"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_grooming_ships_",
+      "label": "Info / Body — Text: Broken Arrow Grooming ships from our sho",
+      "default": "Broken Arrow Grooming ships from our shop in Orem, Utah, to addresses in the United States."
+    },
+    {
+      "type": "text",
+      "id": "t_processing_time",
+      "label": "Info / Body — Heading: Processing time",
+      "default": "Processing time"
+    },
+    {
+      "type": "text",
+      "id": "t_orders_ship_within_2_busines",
+      "label": "Info / Body — Text: Orders ship within 2 business days.",
+      "default": "Orders ship within 2 business days."
+    },
+    {
+      "type": "text",
+      "id": "t_where_we_ship",
+      "label": "Info / Body — Heading: Where we ship",
+      "default": "Where we ship"
+    },
+    {
+      "type": "text",
+      "id": "t_we_currently_ship_within_the",
+      "label": "Info / Body — Text: We currently ship within the United Stat",
+      "default": "We currently ship within the United States only."
+    },
+    {
+      "type": "text",
+      "id": "t_local_pickup",
+      "label": "Info / Body — Heading: Local pickup",
+      "default": "Local pickup"
+    },
+    {
+      "type": "textarea",
+      "id": "t_choose_local_pickup_at_check",
+      "label": "Info / Body — Text: Choose local pickup at checkout and pick",
+      "default": "Choose local pickup at checkout and pick your order up free at the shop in Orem during open hours."
+    },
+    {
+      "type": "text",
+      "id": "t_tracking",
+      "label": "Info / Body — Heading: Tracking",
+      "default": "Tracking"
+    },
+    {
+      "type": "text",
+      "id": "t_you_ll_get_an_email_with_tra",
+      "label": "Info / Body — Text: You’ll get an email with tracking inform",
+      "default": "You’ll get an email with tracking information as soon as your order ships."
+    },
+    {
+      "type": "text",
+      "id": "t_contact_us",
+      "label": "Info / Body — Text: Contact us",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Info / Body — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem, UT 84097"
+    },
+    {
+      "type": "text",
+      "id": "t_801_709_1280",
+      "label": "Info / Body — Link text: (801) 709-1280",
+      "default": "(801) 709-1280"
+    },
+    {
+      "type": "text",
+      "id": "t_brokenarrowbarbershoporem_gm",
+      "label": "Info / Body — Link text: brokenarrowbarbershoporem@gmail.com",
+      "default": "brokenarrowbarbershoporem@gmail.com"
+    }
+  ]
+}
+{% endschema %}

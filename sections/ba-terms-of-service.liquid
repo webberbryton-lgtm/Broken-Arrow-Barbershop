@@ -1,0 +1,150 @@
+{%- comment -%} Generated from the Claude Design page "Terms of Service". {%- endcomment -%}
+<style>
+.ba-page[data-ba-page="terms-of-service"] :is(ul) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="terms-of-service">
+<section data-screen-label="Info / Header" style="background: var(--canvas-sunk); border-bottom: 1px solid var(--line);">
+<div style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_legal | escape }}</p>
+<h1 class="ba-display" style="font-size: min(clamp(44px, 6.4vw, 80px), 11vw); letter-spacing: -0.045em;">{{ section.settings.t_terms_of_service | escape }}</h1>
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_last_updated_september_26_20 | escape }}</p>
+</div></section><article data-screen-label="Info / Body" style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 40px;">
+<p style="font-size: clamp(19px, 1.9vw, 22px); line-height: 1.6; text-wrap: pretty;">{{ section.settings.t_these_terms_of_service_terms | escape }}</p>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_1_general_terms | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_you_may_use_our_website_and_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_reserve_the_right_to_refu | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_2_appointments_and_barbering | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_appointments_may_be_booked_t | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_appointment_availability_is_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_clients_should_arrive_on_tim | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_haircuts_beard_services_styl | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_results_vary_depending_on_ha | escape }}</p>
+</section>
+<div style="display: flex; flex-direction: column; gap: 8px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_contact_us | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;"><a href="tel:+18017091280">{{ section.settings.t_801_709_1280 | escape }}</a> · <a href="mailto:brokenarrowbarbershoporem@gmail.com">{{ section.settings.t_brokenarrowbarbershoporem_gm | escape }}</a></p>
+</div></article>
+</div>
+{% schema %}
+{
+  "name": "Terms of Service",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text: Info / Header"
+    },
+    {
+      "type": "text",
+      "id": "t_legal",
+      "label": "Info / Header — Text: Legal",
+      "default": "Legal"
+    },
+    {
+      "type": "text",
+      "id": "t_terms_of_service",
+      "label": "Info / Header — Heading: Terms of service",
+      "default": "Terms of service"
+    },
+    {
+      "type": "text",
+      "id": "t_last_updated_september_26_20",
+      "label": "Info / Header — Text: Last updated September 26, 2026",
+      "default": "Last updated September 26, 2026"
+    },
+    {
+      "type": "header",
+      "content": "Text: Info / Body"
+    },
+    {
+      "type": "textarea",
+      "id": "t_these_terms_of_service_terms",
+      "label": "Info / Body — Text: These Terms of Service (“Terms”) govern ",
+      "default": "These Terms of Service (“Terms”) govern your use of the Broken Arrow Grooming website, your purchase of products, and services provided by Broken Arrow Grooming (“Broken Arrow,” “we,” “us,” or “our”). By accessing our website, purchasing a product, booking an appointment, or using our services, you agree to these Terms."
+    },
+    {
+      "type": "text",
+      "id": "t_1_general_terms",
+      "label": "Info / Body — Heading: 1. General Terms",
+      "default": "1. General Terms"
+    },
+    {
+      "type": "textarea",
+      "id": "t_you_may_use_our_website_and_",
+      "label": "Info / Body — Text: You may use our website and services onl",
+      "default": "You may use our website and services only for lawful purposes. You may not misuse the website, interfere with its operation, attempt unauthorized access, or use our content or services in violation of applicable law."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_reserve_the_right_to_refu",
+      "label": "Info / Body — Text: We reserve the right to refuse or discon",
+      "default": "We reserve the right to refuse or discontinue service when reasonably necessary, including in cases involving fraud, abuse, harassment, safety concerns, or violations of these Terms."
+    },
+    {
+      "type": "text",
+      "id": "t_2_appointments_and_barbering",
+      "label": "Info / Body — Heading: 2. Appointments and Barbering Services",
+      "default": "2. Appointments and Barbering Services"
+    },
+    {
+      "type": "textarea",
+      "id": "t_appointments_may_be_booked_t",
+      "label": "Info / Body — Text: Appointments may be booked through our w",
+      "default": "Appointments may be booked through our website or through a third-party booking provider such as Square."
+    },
+    {
+      "type": "textarea",
+      "id": "t_appointment_availability_is_",
+      "label": "Info / Body — Text: Appointment availability is not guarante",
+      "default": "Appointment availability is not guaranteed. Services, prices, appointment lengths, and barber availability may change."
+    },
+    {
+      "type": "textarea",
+      "id": "t_clients_should_arrive_on_tim",
+      "label": "Info / Body — Text: Clients should arrive on time for their ",
+      "default": "Clients should arrive on time for their scheduled appointment. Clients who arrive more than 15 minutes late may need to reschedule if there is not enough remaining time to properly complete the service without affecting other scheduled clients."
+    },
+    {
+      "type": "textarea",
+      "id": "t_haircuts_beard_services_styl",
+      "label": "Info / Body — Text: Haircuts, beard services, styling, and o",
+      "default": "Haircuts, beard services, styling, and other grooming services are inherently subjective. Reference photographs and consultations can help communicate a desired result, but we cannot guarantee that a service will produce an exact appearance or identical result to a photograph."
+    },
+    {
+      "type": "text",
+      "id": "t_results_vary_depending_on_ha",
+      "label": "Info / Body — Text: Results vary depending on hair type, den",
+      "default": "Results vary depending on hair type, density [TEXT CUT OFF: please send the rest]"
+    },
+    {
+      "type": "text",
+      "id": "t_contact_us",
+      "label": "Info / Body — Text: Contact us",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Info / Body — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem, UT 84097"
+    },
+    {
+      "type": "text",
+      "id": "t_801_709_1280",
+      "label": "Info / Body — Link text: (801) 709-1280",
+      "default": "(801) 709-1280"
+    },
+    {
+      "type": "text",
+      "id": "t_brokenarrowbarbershoporem_gm",
+      "label": "Info / Body — Link text: brokenarrowbarbershoporem@gmail.com",
+      "default": "brokenarrowbarbershoporem@gmail.com"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,268 @@
+{%- comment -%} Generated from the Claude Design page "Careers". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="careers"] :is(ul) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="careers">
+<section data-screen-label="Careers / Hero" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: flex-end;">
+<div style="flex: 1.2 1 460px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_careers_no_current_openings | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(52px, 8vw, 104px), 11vw); letter-spacing: -0.045em; max-width: 10ch;">{{ section.settings.t_cut_hair_with_us | escape }}</h1>
+<p style="max-width: 560px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_we_don_t_have_any_openings_r | escape }}</p>
+<div><a class="ba-btn ba-btn-primary ba-on-dark" href="#apply">{{ section.settings.t_get_in_touch_for_the_future | escape }}</a></div>
+</div>
+<div aria-label="Inside Broken Arrow Barbershop in Orem" role="img" style='flex: 1 1 380px; aspect-ratio: 4 / 5; background-color: rgb(34, 35, 38); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+</div></section><section data-screen-label="Careers / Why" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_01_working_here | escape }}</p>
+<ul style="flex: 2 1 520px; max-width: 760px; list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_01 | escape }}</span>
+<div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_consultation_first | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_every_appointment_starts_wit | escape }}</p></div>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_02 | escape }}</span>
+<div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_room_to_grow | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_learn_from_a_licensed_barber | escape }}</p></div>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_03 | escape }}</span>
+<div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_a_shop_people_come_back_to | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_daily_herald_readers_choice_ | escape }}</p></div>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_04 | escape }}</span>
+<div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_content_that_shows_your_work | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_we_film_cuts_for_our_youtube | escape }}</p></div>
+</li>
+</ul></section><section data-screen-label="Careers / Apply" id="apply" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_02_apply | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 60px); max-width: 10ch;">{{ section.settings.t_tell_us_about_you | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); max-width: 320px; text-wrap: pretty;">{{ section.settings.t_no_openings_right_now_we_ll_ | escape }}</p>
+</div>
+<div style="flex: 2 1 520px; max-width: 760px;">
+<div data-ba-done="" hidden="" style="display:flex;flex-direction:column;gap:12px;background:var(--canvas);padding:28px;border:1px solid var(--line)"><p class="ba-label">{{ section.settings.t_application_received | escape }}</p><p style="font-size:17px;line-height:28px">Thanks, <span data-ba-first="">{{ section.settings.t_there | escape }}</span>. We’ll keep your details on file and reach out by email if a chair opens up.</p></div><form data-ba-form="careers" novalidate="" style="display: flex; flex-direction: column; gap: 24px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 24px;">
+<div class="ba-field"><label class="ba-field-label" for="ba-f1">Your name<span aria-hidden="true" class="ba-field-req">*</span></label><input class="ba-field-input" id="ba-f1" name="name" required="" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f2">Email<span aria-hidden="true" class="ba-field-req">*</span></label><input class="ba-field-input" id="ba-f2" name="email" required="" type="email" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f3">Phone</label><input class="ba-field-input" id="ba-f3" name="phone" type="tel" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f4">Instagram or portfolio link<span aria-hidden="true" class="ba-field-req">*</span></label><p class="ba-field-hint" id="ba-f4-hint">So we can see your cuts.</p><input aria-describedby="ba-f4-hint" class="ba-field-input" id="ba-f4" name="ig" required="" value=""/></div>
+</div>
+<fieldset style="border: 0px; margin: 0px; padding: 0px; display: flex; flex-direction: column;">
+<legend class="ba-field-label" style="margin-bottom: 12px;">Where are you at?<span class="ba-field-req">*</span></legend>
+<label class="ba-check ba-check-radio"><input name="stage" type="radio" value="Licensed barber"/><span aria-hidden="true" class="ba-check-box"></span><span>Licensed barber</span></label>
+<label class="ba-check ba-check-radio"><input name="stage" type="radio" value="Licensed cosmetologist"/><span aria-hidden="true" class="ba-check-box"></span><span>Licensed cosmetologist</span></label>
+<label class="ba-check ba-check-radio"><input name="stage" type="radio" value="In barber school or about to graduate"/><span aria-hidden="true" class="ba-check-box"></span><span>In barber school or about to graduate</span></label>
+</fieldset>
+<div class="ba-field"><label class="ba-field-label" for="ba-f5">Anything else we should know?</label><textarea class="ba-field-input" id="ba-f5" name="note"></textarea></div>
+<div><button class="ba-btn ba-btn-primary" type="submit">SEND MY DETAILS</button></div>
+</form>
+</div>
+</div></section><section data-screen-label="Careers / Apprenticeship" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_apprenticeship_no_current_op | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 5.6vw, 72px);">{{ section.settings.t_train_to_hire_hire_to_train | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_we_train_a_few_apprentices_t | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="/pages/apprenticeship">{{ section.settings.t_about_the_apprenticeship | escape }}</a>
+</div></section>
+</div>
+<script src="{{ 'ba-form-kit.js' | asset_url }}" defer></script>
+<script src="{{ 'ba-careers.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Careers",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Careers / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Careers / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_careers_no_current_openings",
+      "label": "Careers / Hero — Text: Careers · No current openings",
+      "default": "Careers · No current openings"
+    },
+    {
+      "type": "text",
+      "id": "t_cut_hair_with_us",
+      "label": "Careers / Hero — Heading: Cut hair with us.",
+      "default": "Cut hair with us."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_don_t_have_any_openings_r",
+      "label": "Careers / Hero — Text: We don’t have any openings right now. We",
+      "default": "We don’t have any openings right now. We’re still glad to hear from licensed barbers who take the consultation as seriously as the cut. Send us your work and we’ll keep it on file for when a chair opens up."
+    },
+    {
+      "type": "text",
+      "id": "t_get_in_touch_for_the_future",
+      "label": "Careers / Hero — Link text: GET IN TOUCH FOR THE FUTURE",
+      "default": "GET IN TOUCH FOR THE FUTURE"
+    },
+    {
+      "type": "header",
+      "content": "Text: Careers / Why"
+    },
+    {
+      "type": "text",
+      "id": "t_01_working_here",
+      "label": "Careers / Why — Text: 01 / Working here",
+      "default": "01 / Working here"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Careers / Why — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_consultation_first",
+      "label": "Careers / Why — Text: Consultation first",
+      "default": "Consultation first"
+    },
+    {
+      "type": "textarea",
+      "id": "t_every_appointment_starts_wit",
+      "label": "Careers / Why — Text: Every appointment starts with a real con",
+      "default": "Every appointment starts with a real conversation about the client’s hair. We give you the time to do it properly."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Careers / Why — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_room_to_grow",
+      "label": "Careers / Why — Text: Room to grow",
+      "default": "Room to grow"
+    },
+    {
+      "type": "text",
+      "id": "t_learn_from_a_licensed_barber",
+      "label": "Careers / Why — Text: Learn from a licensed barber instructor,",
+      "default": "Learn from a licensed barber instructor, including hair system work if you want it."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Careers / Why — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_a_shop_people_come_back_to",
+      "label": "Careers / Why — Text: A shop people come back to",
+      "default": "A shop people come back to"
+    },
+    {
+      "type": "textarea",
+      "id": "t_daily_herald_readers_choice_",
+      "label": "Careers / Why — Text: Daily Herald Readers’ Choice for Best Ba",
+      "default": "Daily Herald Readers’ Choice for Best Barbershop in Utah Valley, with hundreds of five-star Google reviews."
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Careers / Why — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_content_that_shows_your_work",
+      "label": "Careers / Why — Text: Content that shows your work",
+      "default": "Content that shows your work"
+    },
+    {
+      "type": "text",
+      "id": "t_we_film_cuts_for_our_youtube",
+      "label": "Careers / Why — Text: We film cuts for our YouTube channel and",
+      "default": "We film cuts for our YouTube channel and Instagram, which helps build your book."
+    },
+    {
+      "type": "header",
+      "content": "Text: Careers / Apply"
+    },
+    {
+      "type": "text",
+      "id": "t_02_apply",
+      "label": "Careers / Apply — Text: 02 / Apply",
+      "default": "02 / Apply"
+    },
+    {
+      "type": "text",
+      "id": "t_tell_us_about_you",
+      "label": "Careers / Apply — Heading: Tell us about you",
+      "default": "Tell us about you"
+    },
+    {
+      "type": "text",
+      "id": "t_no_openings_right_now_we_ll_",
+      "label": "Careers / Apply — Text: No openings right now. We’ll reach out i",
+      "default": "No openings right now. We’ll reach out if something comes up that fits."
+    },
+    {
+      "type": "text",
+      "id": "t_application_received",
+      "label": "Careers / Apply — Text: Application received",
+      "default": "Application received"
+    },
+    {
+      "type": "text",
+      "id": "t_there",
+      "label": "Careers / Apply — Text: there",
+      "default": "there"
+    },
+    {
+      "type": "header",
+      "content": "Text: Careers / Apprenticeship"
+    },
+    {
+      "type": "text",
+      "id": "t_apprenticeship_no_current_op",
+      "label": "Careers / Apprenticeship — Text: Apprenticeship · No current openings",
+      "default": "Apprenticeship · No current openings"
+    },
+    {
+      "type": "text",
+      "id": "t_train_to_hire_hire_to_train",
+      "label": "Careers / Apprenticeship — Heading: Train to hire. Hire to train.",
+      "default": "Train to hire. Hire to train."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_train_a_few_apprentices_t",
+      "label": "Careers / Apprenticeship — Text: We train a few apprentices toward their ",
+      "default": "We train a few apprentices toward their Utah barber license, with the goal of joining our team. Apply now and we’ll reach out when a spot opens."
+    },
+    {
+      "type": "text",
+      "id": "t_about_the_apprenticeship",
+      "label": "Careers / Apprenticeship — Link text: ABOUT THE APPRENTICESHIP",
+      "default": "ABOUT THE APPRENTICESHIP"
+    }
+  ]
+}
+{% endschema %}

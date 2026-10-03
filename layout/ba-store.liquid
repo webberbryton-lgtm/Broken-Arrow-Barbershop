@@ -1,0 +1,32 @@
+{%- comment -%}
+  Broken Arrow layout for the pages built from the Claude Design project.
+  It loads the design system CSS instead of Horizon's base styles so each page matches the design exactly.
+  Horizon's own pages (cart, collections, account, search) keep using layout/theme.liquid.
+{%- endcomment -%}
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+    <title>{{ page_title }}{%- unless page_title contains shop.name %} · {{ shop.name }}{% endunless -%}</title>
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+    {%- render 'meta-tags' -%}
+    {{ 'ba-inter-400.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: true }}
+    {{ 'ba-inter-tight-800.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: true }}
+    {{ 'ba-design.css' | asset_url | stylesheet_tag }}
+    {{ content_for_header }}
+    {%- if template.name == 'index' -%}{% render 'schema-barbershop' %}{%- endif -%}
+  </head>
+  <body class="ba-body template-{{ template.name }}{% if template.suffix %} template-{{ template.suffix }}{% endif %}">
+    <a class="ba-visually-hidden" href="#MainContent">Skip to content</a>
+    {% sections 'ba-store-header-group' %}
+    <main id="MainContent" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+    {% sections 'ba-store-footer-group' %}
+    <script src="{{ 'ba-send-form.js' | asset_url }}" defer></script>
+  </body>
+</html>

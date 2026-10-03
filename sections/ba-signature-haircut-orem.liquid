@@ -1,0 +1,578 @@
+{%- comment -%} Generated from the Claude Design page "Local Guide - Signature Haircut". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_hot_towel_wash != blank
+  assign img_hot_towel_wash = section.settings.img_hot_towel_wash | image_url: width: 2400
+else
+  assign img_hot_towel_wash = 'ba-hot-towel-wash.webp' | asset_url
+endif
+if section.settings.img_connor_work_1 != blank
+  assign img_connor_work_1 = section.settings.img_connor_work_1 | image_url: width: 2400
+else
+  assign img_connor_work_1 = 'ba-connor-work-1.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="signature-haircut-orem"] :is(ul, ol) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="signature-haircut-orem" data-ba-active="journal" data-ba-book="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ" data-ba-book-label="BOOK A SIGNATURE HAIRCUT">
+<article><header data-screen-label="Guide / Hero" style="position: relative; background: var(--band); min-height: clamp(520px, 76vh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<div aria-label="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center; filter: saturate(0.85);'></div>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;"><a href="/pages/journal" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_journal | escape }}</a><span style="opacity: 0.5;">/</span><span style="opacity: 0.78;">{{ section.settings.t_haircut_guides | escape }}</span></nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_why_your_haircut_needs_more_ | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_5_min_read | escape }}</p>
+</div></header><section data-screen-label="Guide / Intro" style="max-width: 920px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(40px, 6vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_most_barbershops_are_built_t | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_lot_of_shops_book_you_for_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_then_you_leave_and_a_week_la | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_it_usually_isn_t_your_hair_i | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_short_answer | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_signature_haircut_is_bro | escape }}</p>
+</div>
+</div></section>
+<section data-screen-label="Guide / Section" id="s1" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_15_minutes_gets_you | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_rushed_haircut_skips_the_p | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_it_might_look_fine_when_you_ | escape }}</p>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s2" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_02 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_the_extra_time_is_for | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_signature_haircut_gives_ | escape }}</p>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_a_real_consultation | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_your_goals_what_bugs_you_abo | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_reading_your_hair | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_growth_patterns_cowlicks_den | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_the_wash | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_a_hair_wash_scalp_scrub_with | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_detail_work | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_scissor_work_blending_and_re | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_how_to_wear_it | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_what_product_to_use_how_much | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Connor wrapping a client’s face in a hot towel at the shampoo sink" loading="lazy" src="{{ img_hot_towel_wash }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_the_hot_towel_at_the_wash_in | escape }}</figcaption>
+</figure>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s3" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_03 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_a_haircut_that_grows_out_wel | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_high_quality_haircut_doesn | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_cut_a_cowlick_too_short_and_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_good_haircut_looks_right_o | escape }}</p>
+<blockquote style="margin: 8px 0px; display: flex; flex-direction: column; gap: 16px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding: 28px 0px;">
+<p class="ba-display" style="font-size: clamp(26px, 3vw, 38px); line-height: 1.05; max-width: 24ch;">{{ section.settings.t_a_good_haircut_is_still_a_go | escape }}</p>
+</blockquote>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Connor shaping a longer cut by hand" loading="lazy" src="{{ img_connor_work_1 }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_shaping_a_longer_cut_so_it_g | escape }}</figcaption>
+</figure>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s4" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_my_hair_grows_so_fast | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_hear_this_all_the_time_us | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_book_the_signature_haircut_o | escape }}</p>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s5" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_who_it_s_for | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_your_first_visit_so_your_bar | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_if_you_ve_never_been_happy_w | escape }}</p>
+<a href="/pages/services" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_compare_our_services | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s6" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_06 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_it_usually_costs_about_the_s | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_signature_haircut_is_65_ | escape }}</p>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s7" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_07 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_s_included | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_hair_wash_haircut_neck_sha | escape }}</p>
+<a href="/pages/service-quiz" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_not_sure_which_to_book_take_ | escape }}</a>
+</div>
+</section><section data-screen-label="Guide / FAQ" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 20px;">
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px);">{{ section.settings.t_questions | escape }}</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How long is the Signature Haircut?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_it_s_booked_with_extra_time_ | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Can I book a Classic Haircut for a longer style?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_you_can_book_any_haircut | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Is the wash included?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_with_every_haircut_along | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Who does Signature Haircuts?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_all_of_our_barbers_bryton_sp | escape }}</p>
+</details>
+</div></section></article><section data-screen-label="Guide / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_give_your_haircut_the_time_i | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_book_the_signature_haircut_a | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ">{{ section.settings.t_book_a_signature_haircut | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="/pages/services">{{ section.settings.t_see_all_services | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Why your haircut needs more than 15 minutes","description":"Most barbershops book 30-minute haircuts and rush the cut. The Signature Haircut at Broken Arrow in Orem gives your barber the time to consult, wash and cut your hair properly.","datePublished":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/signature-haircut-orem","author":{"@type":"Organization","name":"Broken Arrow Barbershop"},"about":{"@type":"BarberShop","name":"Broken Arrow Barbershop","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097"}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long is the Signature Haircut?","acceptedAnswer":{"@type":"Answer","text":"It’s booked with extra time so nothing gets rushed. The booking page shows the details."}},{"@type":"Question","name":"Can I book a Classic Haircut for a longer style?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can book any haircut as either. We recommend the Signature for longer styles, new looks and first visits."}},{"@type":"Question","name":"Is the wash included?","acceptedAnswer":{"@type":"Answer","text":"Yes, with every haircut, along with the scalp scrub, menthol scalp treatment and hot towel."}},{"@type":"Question","name":"Who does Signature Haircuts?","acceptedAnswer":{"@type":"Answer","text":"All of our barbers. Bryton specializes in scissor haircuts."}}]}]}</script>
+{% schema %}
+{
+  "name": "Local Guide - Signature H",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Guide / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hot_towel_wash",
+      "label": "Guide / Section — photo (hot-towel-wash.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_work_1",
+      "label": "Guide / Section — photo (connor-work-1.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Guide / Hero — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides",
+      "label": "Guide / Hero — Text: Haircut guides",
+      "default": "Haircut guides"
+    },
+    {
+      "type": "text",
+      "id": "t_why_your_haircut_needs_more_",
+      "label": "Guide / Hero — Heading: Why your haircut needs more than 15 minu",
+      "default": "Why your haircut needs more than 15 minutes"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_5_min_read",
+      "label": "Guide / Hero — Text: September 26, 2026 · 5 min read",
+      "default": "September 26, 2026 · 5 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Intro"
+    },
+    {
+      "type": "textarea",
+      "id": "t_most_barbershops_are_built_t",
+      "label": "Guide / Intro — Text: Most barbershops are built to move peopl",
+      "default": "Most barbershops are built to move people through the chair as fast as possible. The Signature Haircut is built the other way around."
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_lot_of_shops_book_you_for_",
+      "label": "Guide / Intro — Text: A lot of shops book you for a 30-minute ",
+      "default": "A lot of shops book you for a 30-minute haircut. By the time you’ve sat down, talked through what you want and had your hair washed, you might be lucky to get 15 minutes of actual cutting."
+    },
+    {
+      "type": "text",
+      "id": "t_then_you_leave_and_a_week_la",
+      "label": "Guide / Intro — Text: Then you leave, and a week later you’re ",
+      "default": "Then you leave, and a week later you’re wondering why your hair never looks quite right."
+    },
+    {
+      "type": "text",
+      "id": "t_it_usually_isn_t_your_hair_i",
+      "label": "Guide / Intro — Text: It usually isn’t your hair. It’s the tim",
+      "default": "It usually isn’t your hair. It’s the time."
+    },
+    {
+      "type": "text",
+      "id": "t_short_answer",
+      "label": "Guide / Intro — Text: Short answer",
+      "default": "Short answer"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_signature_haircut_is_bro",
+      "label": "Guide / Intro — Text: The Signature Haircut is Broken Arrow’s ",
+      "default": "The Signature Haircut is Broken Arrow’s most personalized haircut: extra time to talk through your goals, a hair wash, scalp scrub and hot towel, a cut tailored to your hair texture, face shape and routine, and guidance on styling it at home. It’s $65 at Broken Arrow Barbershop, 375 E 800 S, Suite 12, Orem."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Section"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Guide / Section — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_what_15_minutes_gets_you",
+      "label": "Guide / Section — Heading: What 15 minutes gets you",
+      "default": "What 15 minutes gets you"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_rushed_haircut_skips_the_p",
+      "label": "Guide / Section — Text: A rushed haircut skips the parts that ma",
+      "default": "A rushed haircut skips the parts that make a cut last. The consultation turns into “same as last time?” The sides get run over with clippers, the top gets a quick trim, and nobody checks how it sits when it’s dry."
+    },
+    {
+      "type": "text",
+      "id": "t_it_might_look_fine_when_you_",
+      "label": "Guide / Section — Text: It might look fine when you leave. It wo",
+      "default": "It might look fine when you leave. It won’t look fine in two weeks."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Guide / Section — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_what_the_extra_time_is_for",
+      "label": "Guide / Section — Heading: What the extra time is for",
+      "default": "What the extra time is for"
+    },
+    {
+      "type": "text",
+      "id": "t_the_signature_haircut_gives_",
+      "label": "Guide / Section — Text: The Signature Haircut gives your barber ",
+      "default": "The Signature Haircut gives your barber the time to do the job properly."
+    },
+    {
+      "type": "text",
+      "id": "t_a_real_consultation",
+      "label": "Guide / Section — Text: A real consultation",
+      "default": "A real consultation"
+    },
+    {
+      "type": "textarea",
+      "id": "t_your_goals_what_bugs_you_abo",
+      "label": "Guide / Section — Text: Your goals, what bugs you about your hai",
+      "default": "Your goals, what bugs you about your hair now, and how you actually style it in the morning."
+    },
+    {
+      "type": "text",
+      "id": "t_reading_your_hair",
+      "label": "Guide / Section — Text: Reading your hair",
+      "default": "Reading your hair"
+    },
+    {
+      "type": "text",
+      "id": "t_growth_patterns_cowlicks_den",
+      "label": "Guide / Section — Text: Growth patterns, cowlicks, density, text",
+      "default": "Growth patterns, cowlicks, density, texture and head shape, before anything gets cut."
+    },
+    {
+      "type": "text",
+      "id": "t_the_wash",
+      "label": "Guide / Section — Text: The wash",
+      "default": "The wash"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_hair_wash_scalp_scrub_with",
+      "label": "Guide / Section — Text: A hair wash, scalp scrub with a scalp br",
+      "default": "A hair wash, scalp scrub with a scalp brush, menthol scalp treatment and hot towel. No extra charge."
+    },
+    {
+      "type": "text",
+      "id": "t_detail_work",
+      "label": "Guide / Section — Text: Detail work",
+      "default": "Detail work"
+    },
+    {
+      "type": "text",
+      "id": "t_scissor_work_blending_and_re",
+      "label": "Guide / Section — Text: Scissor work, blending and refining the ",
+      "default": "Scissor work, blending and refining the shape so it grows out evenly."
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_wear_it",
+      "label": "Guide / Section — Text: How to wear it",
+      "default": "How to wear it"
+    },
+    {
+      "type": "text",
+      "id": "t_what_product_to_use_how_much",
+      "label": "Guide / Section — Text: What product to use, how much, and how t",
+      "default": "What product to use, how much, and how to style it so it looks right after you leave."
+    },
+    {
+      "type": "text",
+      "id": "t_the_hot_towel_at_the_wash_in",
+      "label": "Guide / Section — Text: The hot towel at the wash, included with",
+      "default": "The hot towel at the wash, included with every haircut."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Guide / Section — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_a_haircut_that_grows_out_wel",
+      "label": "Guide / Section — Heading: A haircut that grows out well",
+      "default": "A haircut that grows out well"
+    },
+    {
+      "type": "text",
+      "id": "t_a_high_quality_haircut_doesn",
+      "label": "Guide / Section — Text: A high-quality haircut doesn’t usually g",
+      "default": "A high-quality haircut doesn’t usually grow out badly. A bad one does."
+    },
+    {
+      "type": "textarea",
+      "id": "t_cut_a_cowlick_too_short_and_",
+      "label": "Guide / Section — Text: Cut a cowlick too short and it starts st",
+      "default": "Cut a cowlick too short and it starts sticking up within days. Put a fade too high for your head shape and the sides look puffy as soon as they start growing. That’s not your hair growing fast. That’s a haircut that wasn’t cut for your hair."
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_good_haircut_looks_right_o",
+      "label": "Guide / Section — Text: A good haircut looks right on day one an",
+      "default": "A good haircut looks right on day one and still looks right on day twenty. That comes from taking weight out in the right places, cutting with how your hair grows, and shaping it for your face and the way you’ll wear it."
+    },
+    {
+      "type": "text",
+      "id": "t_a_good_haircut_is_still_a_go",
+      "label": "Guide / Section — Text: A good haircut is still a good haircut t",
+      "default": "A good haircut is still a good haircut three weeks later."
+    },
+    {
+      "type": "text",
+      "id": "t_shaping_a_longer_cut_so_it_g",
+      "label": "Guide / Section — Text: Shaping a longer cut so it grows out eve",
+      "default": "Shaping a longer cut so it grows out evenly."
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Guide / Section — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_my_hair_grows_so_fast",
+      "label": "Guide / Section — Heading: “My hair grows so fast”",
+      "default": "“My hair grows so fast”"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_hear_this_all_the_time_us",
+      "label": "Guide / Section — Text: We hear this all the time. Usually the p",
+      "default": "We hear this all the time. Usually the person saying it has been getting haircuts that don’t suit their hair type or face shape, so the cut falls apart quickly and always seems to need another one."
+    },
+    {
+      "type": "text",
+      "id": "t_book_the_signature_haircut_o",
+      "label": "Guide / Section — Text: Book the Signature Haircut once and watc",
+      "default": "Book the Signature Haircut once and watch how well it grows out."
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Guide / Section — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_who_it_s_for",
+      "label": "Guide / Section — Heading: Who it’s for",
+      "default": "Who it’s for"
+    },
+    {
+      "type": "textarea",
+      "id": "t_your_first_visit_so_your_bar",
+      "label": "Guide / Section — Text: Your first visit, so your barber can lea",
+      "default": "Your first visit, so your barber can learn your hair. A change in style. Mid-length and longer cuts like a flow, warrior cut or modern mullet. Long scissor haircuts. Or any time you want extra time and attention before a big event."
+    },
+    {
+      "type": "text",
+      "id": "t_if_you_ve_never_been_happy_w",
+      "label": "Guide / Section — Text: If you’ve never been happy with a haircu",
+      "default": "If you’ve never been happy with a haircut, start here."
+    },
+    {
+      "type": "text",
+      "id": "t_compare_our_services",
+      "label": "Guide / Section — Link text: Compare our services →",
+      "default": "Compare our services →"
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Guide / Section — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_it_usually_costs_about_the_s",
+      "label": "Guide / Section — Heading: It usually costs about the same",
+      "default": "It usually costs about the same"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_signature_haircut_is_65_",
+      "label": "Guide / Section — Text: The Signature Haircut is $65. Longer cut",
+      "default": "The Signature Haircut is $65. Longer cuts don’t need cutting as often, usually every 6 to 8 weeks, compared with every 2 to 4 weeks for a short cut. Over a year, it tends to cost about the same as a Classic Haircut, or less."
+    },
+    {
+      "type": "text",
+      "id": "t_07",
+      "label": "Guide / Section — Text: 07",
+      "default": "07"
+    },
+    {
+      "type": "text",
+      "id": "t_what_s_included",
+      "label": "Guide / Section — Heading: What’s included",
+      "default": "What’s included"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_hair_wash_haircut_neck_sha",
+      "label": "Guide / Section — Text: A hair wash, haircut, neck shave and hot",
+      "default": "A hair wash, haircut, neck shave and hot towel, plus the extra consultation and detail time."
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_which_to_book_take_",
+      "label": "Guide / Section — Link text: Not sure which to book? Take four quick ",
+      "default": "Not sure which to book? Take four quick questions →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Guide / FAQ — Heading: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "t_it_s_booked_with_extra_time_",
+      "label": "Guide / FAQ — Text: It’s booked with extra time so nothing g",
+      "default": "It’s booked with extra time so nothing gets rushed. The booking page shows the details."
+    },
+    {
+      "type": "textarea",
+      "id": "t_yes_you_can_book_any_haircut",
+      "label": "Guide / FAQ — Text: Yes. You can book any haircut as either.",
+      "default": "Yes. You can book any haircut as either. We recommend the Signature for longer styles, new looks and first visits."
+    },
+    {
+      "type": "textarea",
+      "id": "t_yes_with_every_haircut_along",
+      "label": "Guide / FAQ — Text: Yes, with every haircut, along with the ",
+      "default": "Yes, with every haircut, along with the scalp scrub, menthol scalp treatment and hot towel."
+    },
+    {
+      "type": "text",
+      "id": "t_all_of_our_barbers_bryton_sp",
+      "label": "Guide / FAQ — Text: All of our barbers. Bryton specializes i",
+      "default": "All of our barbers. Bryton specializes in scissor haircuts."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Guide / CTA — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_give_your_haircut_the_time_i",
+      "label": "Guide / CTA — Heading: Give your haircut the time it needs.",
+      "default": "Give your haircut the time it needs."
+    },
+    {
+      "type": "text",
+      "id": "t_book_the_signature_haircut_a",
+      "label": "Guide / CTA — Text: Book the Signature Haircut and tell your",
+      "default": "Book the Signature Haircut and tell your barber what you want. We’ll take it from there."
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_signature_haircut",
+      "label": "Guide / CTA — Link text: BOOK A SIGNATURE HAIRCUT",
+      "default": "BOOK A SIGNATURE HAIRCUT"
+    },
+    {
+      "type": "text",
+      "id": "t_see_all_services",
+      "label": "Guide / CTA — Link text: See all services",
+      "default": "See all services"
+    }
+  ]
+}
+{% endschema %}

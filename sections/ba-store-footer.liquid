@@ -1,0 +1,200 @@
+{%- comment -%} Ported from the Claude Design component "StoreFooter". {%- endcomment -%}
+{%- liquid
+if section.settings.img_lockup_grooming_offwhite != blank
+  assign img_lockup_grooming_offwhite = section.settings.img_lockup_grooming_offwhite | image_url: width: 2400
+else
+  assign img_lockup_grooming_offwhite = 'ba-lockup-grooming-offwhite.svg' | asset_url
+endif
+if section.settings.img_lockup_barbershop_offwhite != blank
+  assign img_lockup_barbershop_offwhite = section.settings.img_lockup_barbershop_offwhite | image_url: width: 2400
+else
+  assign img_lockup_barbershop_offwhite = 'ba-lockup-offwhite.svg' | asset_url
+endif
+-%}
+<style>
+.bah-bastorefoote-4:hover { color: var(--on-band) !important; }
+</style>
+<footer style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px) 32px; display: flex; flex-direction: column; gap: 56px;">
+<div data-m-foot="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 40px 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px; grid-column: span 2; min-width: 0px;">
+<img alt="Broken Arrow Grooming" loading="lazy" src="{{ img_lockup_grooming_offwhite }}" style="width: 200px; height: auto; display: block;"/>
+<p style="margin: 0px; max-width: 380px; font-size: 15px; line-height: 24px; opacity: 0.78;">{{ section.settings.t_grooming_products_from_broke | escape }}</p>
+</div>
+<nav aria-label="Shop" style="display: flex; flex-direction: column; gap: 12px;">
+<p class="ba-label" style="margin: 0px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_shop | escape }}</p>
+<a href="/pages/shop" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_shop_all | escape }}</a>
+<a href="/pages/grooming-about" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_about | escape }}</a>
+<a href="/products/matte-clay" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_matte_clay | escape }}</a>
+<a href="/pages/learn" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_learn | escape }}</a>
+<a href="/pages/product-quiz" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_product_quiz | escape }}</a>
+</nav>
+<nav aria-label="Help" style="display: flex; flex-direction: column; gap: 12px;">
+<p class="ba-label" style="margin: 0px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_help | escape }}</p>
+<a href="/pages/shipping" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_shipping | escape }}</a>
+<a href="/pages/returns" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_returns | escape }}</a>
+<a href="/pages/contact" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_contact_us | escape }}</a>
+<a href="/pages/careers" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_careers | escape }}</a>
+<a href="/pages/wholesale" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_wholesale | escape }}</a>
+<a href="/pages/shipping" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_pick_up_in_orem | escape }}</a>
+<a href="/pages/privacy-policy" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_privacy_policy | escape }}</a>
+<a href="/pages/terms-of-service" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_terms_of_service | escape }}</a>
+<a href="/pages/accessibility" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_accessibility_statement | escape }}</a>
+<a href="tel:+18017091280" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_801_709_1280 | escape }}</a>
+</nav>
+</div>
+<a class="bah-bastorefoote-4" href="{{ routes.root_url }}" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 24px 0px; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); color: var(--on-band); text-decoration: none;">
+<img alt="Broken Arrow Barbershop" loading="lazy" src="{{ img_lockup_barbershop_offwhite }}" style="width: 160px; height: auto; display: block;"/>
+<span class="ba-label" style="color: var(--on-band);">{{ section.settings.t_book_a_haircut_in_orem | escape }}</span>
+</a>
+<p style="margin: 0px; font-size: 13px; line-height: 20px; opacity: 0.78;">{{ section.settings.t_2026_broken_arrow_grooming_3 | escape }}</p>
+</div></footer>
+{% schema %}
+{
+  "name": "BA store footer",
+  "tag": "div",
+  "class": "ba-footer-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_lockup_grooming_offwhite",
+      "label": "Page — photo (lockup-grooming-offwhite.svg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_lockup_barbershop_offwhite",
+      "label": "Page — photo (lockup-barbershop-offwhite.svg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Page"
+    },
+    {
+      "type": "textarea",
+      "id": "t_grooming_products_from_broke",
+      "label": "Page — Text: Grooming products from Broken Arrow Barb",
+      "default": "Grooming products from Broken Arrow Barbershop in Orem, Utah. We only sell what we use on clients."
+    },
+    {
+      "type": "text",
+      "id": "t_shop",
+      "label": "Page — Text: Shop",
+      "default": "Shop"
+    },
+    {
+      "type": "text",
+      "id": "t_shop_all",
+      "label": "Page — Link text: Shop all",
+      "default": "Shop all"
+    },
+    {
+      "type": "text",
+      "id": "t_about",
+      "label": "Page — Link text: About",
+      "default": "About"
+    },
+    {
+      "type": "text",
+      "id": "t_matte_clay",
+      "label": "Page — Link text: Matte clay",
+      "default": "Matte clay"
+    },
+    {
+      "type": "text",
+      "id": "t_learn",
+      "label": "Page — Link text: Learn",
+      "default": "Learn"
+    },
+    {
+      "type": "text",
+      "id": "t_product_quiz",
+      "label": "Page — Link text: Product quiz",
+      "default": "Product quiz"
+    },
+    {
+      "type": "text",
+      "id": "t_help",
+      "label": "Page — Text: Help",
+      "default": "Help"
+    },
+    {
+      "type": "text",
+      "id": "t_shipping",
+      "label": "Page — Link text: Shipping",
+      "default": "Shipping"
+    },
+    {
+      "type": "text",
+      "id": "t_returns",
+      "label": "Page — Link text: Returns",
+      "default": "Returns"
+    },
+    {
+      "type": "text",
+      "id": "t_contact_us",
+      "label": "Page — Link text: Contact us",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "t_careers",
+      "label": "Page — Link text: Careers",
+      "default": "Careers"
+    },
+    {
+      "type": "text",
+      "id": "t_wholesale",
+      "label": "Page — Link text: Wholesale",
+      "default": "Wholesale"
+    },
+    {
+      "type": "text",
+      "id": "t_pick_up_in_orem",
+      "label": "Page — Link text: Pick up in Orem",
+      "default": "Pick up in Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_privacy_policy",
+      "label": "Page — Link text: Privacy policy",
+      "default": "Privacy policy"
+    },
+    {
+      "type": "text",
+      "id": "t_terms_of_service",
+      "label": "Page — Link text: Terms of service",
+      "default": "Terms of service"
+    },
+    {
+      "type": "text",
+      "id": "t_accessibility_statement",
+      "label": "Page — Link text: Accessibility statement",
+      "default": "Accessibility statement"
+    },
+    {
+      "type": "text",
+      "id": "t_801_709_1280",
+      "label": "Page — Link text: (801) 709-1280",
+      "default": "(801) 709-1280"
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_haircut_in_orem",
+      "label": "Page — Text: Book a haircut in Orem →",
+      "default": "Book a haircut in Orem →"
+    },
+    {
+      "type": "text",
+      "id": "t_2026_broken_arrow_grooming_3",
+      "label": "Page — Text: © 2026 Broken Arrow Grooming · 375 E 800",
+      "default": "© 2026 Broken Arrow Grooming · 375 E 800 S, Suite 12, Orem, UT 84097"
+    }
+  ]
+}
+{% endschema %}

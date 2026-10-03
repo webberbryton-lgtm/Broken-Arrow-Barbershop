@@ -1,0 +1,990 @@
+{%- comment -%} Generated from the Claude Design page "Apprenticeship". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_bryton_teaching_2 != blank
+  assign img_bryton_teaching_2 = section.settings.img_bryton_teaching_2 | image_url: width: 2400
+else
+  assign img_bryton_teaching_2 = 'ba-bryton-teaching-2.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="apprenticeship"] :is(ul) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="apprenticeship" data-ba-active="apprenticeship">
+<section data-screen-label="Apprenticeship / Hero" style="position: relative; background: var(--band); color: var(--on-band); overflow: hidden;">
+<div aria-label="Inside Broken Arrow Barbershop" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center; opacity: 0.35;'></div>
+<div style="position: relative; max-width: 1280px; margin: 0px auto; padding: clamp(72px, 10vw, 140px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 28px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_apprenticeship_ | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(56px, 9vw, 128px), 11vw); letter-spacing: -0.045em; line-height: 0.9; max-width: 12ch;">{{ section.settings.t_barber_apprenticeship_progra | escape }}</h1>
+<p class="ba-display" style="color: var(--on-band); font-size: clamp(24px, 3vw, 40px); line-height: 1; opacity: 0.85;">{{ section.settings.t_train_to_hire_hire_to_train | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; max-width: 620px;">{{ section.settings.t_every_barber_in_our_shop_tod | escape }}</p>
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_4_995_program_fee | escape }}</p>
+<p style="max-width: 620px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_we_train_apprentices_inside_ | escape }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="/pages/apprenticeship-application">{{ section.settings.t_apply_for_the_future | escape }}</a>
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_no_current_openings_please_s | escape }}</p>
+</div>
+</div></section><nav aria-label="On this page" style="position: sticky; top: 120px; z-index: 10; background: var(--canvas); border-bottom: 1px solid var(--line);">
+<div style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px); display: flex; gap: 28px; overflow-x: auto;">
+<a href="#why-us" style="flex: 0 0 auto; padding: 16px 0px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-bottom: 2px solid var(--green);">{{ section.settings.t_why_us | escape }}</a>
+<a href="#compare" style="flex: 0 0 auto; padding: 16px 0px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none;">{{ section.settings.t_not_a_school | escape }}</a>
+<a href="#program" style="flex: 0 0 auto; padding: 16px 0px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none;">{{ section.settings.t_the_program | escape }}</a>
+<a href="#who" style="flex: 0 0 auto; padding: 16px 0px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none;">{{ section.settings.t_who_should_apply | escape }}</a>
+<a href="#how-it-works" style="flex: 0 0 auto; padding: 16px 0px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none;">{{ section.settings.t_how_it_works | escape }}</a>
+<a href="#apply" style="flex: 0 0 auto; padding: 16px 0px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none;">{{ section.settings.t_apply | escape }}</a>
+</div></nav><section data-screen-label="Apprenticeship / Why us" id="why-us" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px) 0px; display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px;"><p class="ba-label">{{ section.settings.t_01_why_us | escape }}</p><h2 class="ba-display" style="font-size: clamp(40px, 5.6vw, 72px);">{{ section.settings.t_why_train_at_broken_arrow | escape }}</h2></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 0px 32px; border-top: 2px solid var(--ink);">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_01 | escape }}</p><h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_an_award_winning_shop | escape }}</h3><p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_daily_herald_readers_choice_ | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_02 | escape }}</p><h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_we_hire_who_we_train | escape }}</h3><p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_our_owner_is_a_licensed_barb | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_03 | escape }}</p><h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_a_full_book_to_learn_from | escape }}</h3><p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_hundreds_of_five_star_google | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_04 | escape }}</p><h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_more_than_haircuts | escape }}</h3><p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_exposure_to_hair_systems_con | escape }}</p></div>
+</div></section><section data-screen-label="Apprenticeship / Best of both" id="best-of-both" style="background: var(--band); color: var(--on-band); margin-top: clamp(56px, 8vw, 96px);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: center;">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 20px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_02_school_and_shop | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 5.6vw, 72px); max-width: 12ch;">{{ section.settings.t_the_best_of_school_the_best_ | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_broken_arrow_education_was_b | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_our_apprenticeship_is_led_by | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_you_won_t_just_learn_how_to_ | escape }}</p>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; border-top: 1px solid var(--line-strong); padding-top: 20px; color: var(--on-band);">{{ section.settings.t_real_education_real_clients_ | escape }}</p>
+</div>
+<div aria-label="Bryton, a licensed barber instructor, teaching a class of barbers" role="img" style='flex: 1 1 380px; aspect-ratio: 4 / 5; background-color: rgb(34, 35, 38); background-image: url("{{ img_bryton_teaching_2 }}"); background-size: cover; background-position: center center;'></div>
+</div></section><section data-screen-label="Apprenticeship / Not a school" id="compare" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<p class="ba-label">{{ section.settings.t_03_not_a_school | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5.6vw, 72px);">{{ section.settings.t_we_don_t_take_everyone | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_most_schools_will_enroll_any | escape }}</p>
+</div>
+<div data-m-vs="" style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div style="flex: 1 1 340px; background: var(--canvas-sunk); border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column;">
+<p class="ba-label" style="color: var(--ink-muted); padding-bottom: 16px;">{{ section.settings.t_a_typical_school | escape }}</p>
+<p style="padding: 16px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px; color: var(--ink-muted);">{{ section.settings.t_around_20_000_in_tuition | escape }}</p><p style="padding: 16px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px; color: var(--ink-muted);">{{ section.settings.t_1_000_hours_mostly_in_a_clas | escape }}</p><p style="padding: 16px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px; color: var(--ink-muted);">{{ section.settings.t_enrolls_anyone_who_can_pay | escape }}</p><p style="padding: 16px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px; color: var(--ink-muted);">{{ section.settings.t_graduate_then_find_a_job_on_ | escape }}</p>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted); border-top: 1px solid var(--line); padding-top: 12px; margin-top: auto;">{{ section.settings.t_school_figures_are_typical_f | escape }}</p>
+</div>
+<div style="flex: 1 1 340px; background: var(--band); color: var(--on-band); padding: 28px; display: flex; flex-direction: column;">
+<p class="ba-label" style="color: var(--on-band); padding-bottom: 16px;">{{ section.settings.t_the_broken_arrow_way | escape }}</p>
+<p style="padding: 16px 0px; border-top: 1px solid var(--line-strong); font: 600 17px/26px var(--font-sans);">{{ section.settings.t_4_995_program_fee_2 | escape }}</p><p style="padding: 16px 0px; border-top: 1px solid var(--line-strong); font: 600 17px/26px var(--font-sans);">{{ section.settings.t_chosen_like_a_new_hire_not_s | escape }}</p><p style="padding: 16px 0px; border-top: 1px solid var(--line-strong); font: 600 17px/26px var(--font-sans);">{{ section.settings.t_hours_spent_in_a_working_sho | escape }}</p><p style="padding: 16px 0px; border-top: 1px solid var(--line-strong); font: 600 17px/26px var(--font-sans);">{{ section.settings.t_mentored_one_on_one_by_licen | escape }}</p><p style="padding: 16px 0px; border-top: 1px solid var(--line-strong); font: 600 17px/26px var(--font-sans);">{{ section.settings.t_the_goal_is_a_chair_on_our_t | escape }}</p>
+</div>
+</div></section><section data-screen-label="Apprenticeship / Program" id="program" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 16px;"><p class="ba-label">{{ section.settings.t_04_the_program | escape }}</p><h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px); max-width: 10ch;">{{ section.settings.t_you_learn_in_the_chair | escape }}</h2></div>
+<ul style="flex: 2 1 520px; max-width: 760px; list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_01_2 | escape }}</span><div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_hours_inside_a_working_shop | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_you_train_at_broken_arrow_al | escape }}</p></div></li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_02_2 | escape }}</span><div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_mentorship_from_licensed_edu | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_direct_supervision_and_feedb | escape }}</p></div></li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_03_2 | escape }}</span><div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_the_broken_arrow_standard | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_consultations_fades_scissor_ | escape }}</p></div></li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_04_2 | escape }}</span><div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_a_path_onto_the_team | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_earn_your_utah_license_and_t | escape }}</p></div></li>
+</ul>
+</div></section><section data-screen-label="Apprenticeship / Who should apply" id="who" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<p class="ba-label">{{ section.settings.t_05_who_should_apply | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5.6vw, 72px);">{{ section.settings.t_who_should_apply_2 | escape }}</h2>
+<p style="font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_the_broken_arrow_apprentices | escape }}</p>
+</div>
+<div data-m-vs="" style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; padding: 28px; background: var(--band); color: var(--on-band);">
+<p class="ba-label" style="padding-bottom: 16px; color: var(--on-band);">{{ section.settings.t_you_should_apply_if_you | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line-strong); font-size: 17px; line-height: 26px;">{{ section.settings.t_are_serious_about_building_a | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line-strong); font-size: 17px; line-height: 26px;">{{ section.settings.t_want_hands_on_experience_in_ | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line-strong); font-size: 17px; line-height: 26px;">{{ section.settings.t_are_coachable_and_willing_to | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line-strong); font-size: 17px; line-height: 26px;">{{ section.settings.t_care_about_the_details_and_w | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line-strong); font-size: 17px; line-height: 26px;">{{ section.settings.t_show_up_on_time_work_hard_an | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line-strong); font-size: 17px; line-height: 26px;">{{ section.settings.t_want_to_learn_more_than_just | escape }}</p>
+</div>
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; padding: 28px; background: var(--canvas-sunk); border: 1px solid var(--line);">
+<p class="ba-label" style="padding-bottom: 16px; color: var(--ink-muted);">{{ section.settings.t_you_probably_shouldn_t_apply | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">{{ section.settings.t_are_looking_for_the_easiest_ | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">{{ section.settings.t_regularly_struggle_with_bein | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">{{ section.settings.t_aren_t_comfortable_receiving | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">{{ section.settings.t_expect_clients_or_opportunit | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">{{ section.settings.t_aren_t_willing_to_practice_o | escape }}</p>
+<p style="padding: 14px 0px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">{{ section.settings.t_see_barbering_as_something_y | escape }}</p>
+</div>
+</div>
+<p class="ba-display" style="font-size: clamp(26px, 3vw, 38px); line-height: 1.1; max-width: 24ch; border-top: 2px solid var(--ink); padding-top: 24px;">{{ section.settings.t_we_don_t_expect_apprentices_ | escape }}</p></section><section data-screen-label="Apprenticeship / How it works" id="how-it-works" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<p class="ba-label">{{ section.settings.t_06_how_it_works | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5.6vw, 72px);">{{ section.settings.t_utah_s_new_barbering_permit_ | escape }}</h2>
+<p style="font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_utah_now_offers_a_barbering_ | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: flex-start;">
+<ul style="flex: 1.3 1 440px; list-style: none; padding: 0px; margin: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 20px 0px; border-bottom: 1px solid var(--line);"><p style="font: 800 18px/22px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_what_it_lets_you_do | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_cut_clip_and_trim_with_shear | escape }}</p></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 20px 0px; border-bottom: 1px solid var(--line);"><p style="font: 800 18px/22px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_how_you_qualify | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_130_hours_of_approved_traini | escape }}</p></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 20px 0px; border-bottom: 1px solid var(--line);"><p style="font: 800 18px/22px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_where_you_train | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_inside_broken_arrow_a_workin | escape }}</p></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 20px 0px; border-bottom: 1px solid var(--line);"><p style="font: 800 18px/22px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_where_it_leads | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_a_licensed_start_to_your_car | escape }}</p></li>
+</ul>
+<div style="flex: 1 1 340px; background: var(--band); color: var(--on-band); padding: 28px; display: flex; flex-direction: column;">
+<p class="ba-label" style="color: var(--on-band); padding-bottom: 12px;">{{ section.settings.t_at_a_glance | escape }}</p>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0px; border-top: 1px solid var(--line-strong);"><span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_credential | escape }}</span><span style="font: 600 17px/24px var(--font-sans); text-align: right;">{{ section.settings.t_utah_barbering_permit | escape }}</span></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0px; border-top: 1px solid var(--line-strong);"><span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_training_hours | escape }}</span><span style="font: 600 17px/24px var(--font-sans); text-align: right; color: var(--on-band);">{{ section.settings.t_130_hours | escape }}</span></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0px; border-top: 1px solid var(--line-strong);"><span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_setting | escape }}</span><span style="font: 600 17px/24px var(--font-sans); text-align: right;">{{ section.settings.t_broken_arrow_orem | escape }}</span></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0px; border-top: 1px solid var(--line-strong);"><span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_program_fee | escape }}</span><span style="font: 600 17px/24px var(--font-sans); text-align: right; color: var(--on-band);">{{ section.settings.t_4_995 | escape }}</span></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0px; border-top: 1px solid var(--line-strong);"><span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_on_completion | escape }}</span><span style="font: 600 17px/24px var(--font-sans); text-align: right;">{{ section.settings.t_goal_a_chair_on_our_team | escape }}</span></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0px; border-top: 1px solid var(--line-strong);"><span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_openings | escape }}</span><span style="font: 600 17px/24px var(--font-sans); text-align: right;">{{ section.settings.t_none_right_now_please_still_ | escape }}</span></div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 136px), 1fr)); gap: 0px 24px;">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 20px 0px; border-top: 2px solid var(--ink);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_01_3 | escape }}</p><p style="font: 800 20px/24px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_apply_2 | escape }}</p><p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_fill_out_the_application_it_ | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 20px 0px; border-top: 2px solid var(--ink);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_02_3 | escape }}</p><p style="font: 800 20px/24px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_meet_with_us | escape }}</p><p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_if_you_re_a_fit_we_ll_reach_ | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 20px 0px; border-top: 2px solid var(--ink);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_03_3 | escape }}</p><p style="font: 800 20px/24px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_train | escape }}</p><p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_complete_your_130_hours_insi | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 20px 0px; border-top: 2px solid var(--ink);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_04_3 | escape }}</p><p style="font: 800 20px/24px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_pass_the_exam | escape }}</p><p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_take_the_utah_state_barberin | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 20px 0px; border-top: 2px solid var(--ink);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_05 | escape }}</p><p style="font: 800 20px/24px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_join_the_team | escape }}</p><p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_earn_your_chair_at_broken_ar | escape }}</p></div>
+</div>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted); max-width: 760px;">{{ section.settings.t_chemical_services_such_as_co | escape }}</p></section><section data-screen-label="Apprenticeship / Apply" id="apply" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px 64px;">
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 20px; max-width: 480px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_07_apply | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 5.6vw, 72px);">{{ section.settings.t_apply_like_it_s_a_job_becaus | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_we_don_t_have_any_apprentice | escape }}</p>
+<div data-m-price="" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; border-top: 1px solid var(--line-strong); padding-top: 20px;">
+<span style="font:800 clamp(44px,5vw,64px)/1 var(--font-display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--on-band)">{{ section.settings.t_4_995_2 | escape }}</span>
+<span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_program_fee_vs_around_20_000 | escape }}</span>
+</div>
+<p class="ba-label" style="color: var(--on-band); border: 1px solid var(--line-strong); padding: 12px 16px; align-self: flex-start;">{{ section.settings.t_no_current_openings_please_s_2 | escape }}</p>
+</div>
+<div style="flex: 1 1 320px; max-width: 520px; display: flex; flex-direction: column; gap: 16px; align-self: flex-end; border-top: 2px solid var(--on-band); padding-top: 24px;">
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_no_haircutting_experience_ne | escape }}</p>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="/pages/apprenticeship-application">{{ section.settings.t_start_your_application | escape }}</a>
+</div>
+</div></section>
+</div>
+{% schema %}
+{
+  "name": "Apprenticeship",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Apprenticeship / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_teaching_2",
+      "label": "Apprenticeship / Best of both — photo (bryton-teaching-2.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Apprenticeship / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_apprenticeship_",
+      "label": "Apprenticeship / Hero — Text: Broken Arrow Apprenticeship · Orem, Utah",
+      "default": "Broken Arrow Apprenticeship · Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_barber_apprenticeship_progra",
+      "label": "Apprenticeship / Hero — Heading: Barber Apprenticeship Program in Utah",
+      "default": "Barber Apprenticeship Program in Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_train_to_hire_hire_to_train",
+      "label": "Apprenticeship / Hero — Text: Train to hire. Hire to train.",
+      "default": "Train to hire. Hire to train."
+    },
+    {
+      "type": "text",
+      "id": "t_every_barber_in_our_shop_tod",
+      "label": "Apprenticeship / Hero — Text: Every barber in our shop today was train",
+      "default": "Every barber in our shop today was trained by Bryton at Paul Mitchell The School Provo."
+    },
+    {
+      "type": "text",
+      "id": "t_4_995_program_fee",
+      "label": "Apprenticeship / Hero — Text: $4,995 program fee",
+      "default": "$4,995 program fee"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_train_apprentices_inside_",
+      "label": "Apprenticeship / Hero — Text: We train apprentices inside a working sh",
+      "default": "We train apprentices inside a working shop toward their Utah barber license, with one goal: joining our team. This is a job application, not a school enrollment."
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_the_future",
+      "label": "Apprenticeship / Hero — Link text: APPLY FOR THE FUTURE",
+      "default": "APPLY FOR THE FUTURE"
+    },
+    {
+      "type": "text",
+      "id": "t_no_current_openings_please_s",
+      "label": "Apprenticeship / Hero — Text: No current openings · Please still apply",
+      "default": "No current openings · Please still apply"
+    },
+    {
+      "type": "header",
+      "content": "Text: Page"
+    },
+    {
+      "type": "text",
+      "id": "t_why_us",
+      "label": "Page — Link text: Why us?",
+      "default": "Why us?"
+    },
+    {
+      "type": "text",
+      "id": "t_not_a_school",
+      "label": "Page — Link text: Not a school",
+      "default": "Not a school"
+    },
+    {
+      "type": "text",
+      "id": "t_the_program",
+      "label": "Page — Link text: The program",
+      "default": "The program"
+    },
+    {
+      "type": "text",
+      "id": "t_who_should_apply",
+      "label": "Page — Link text: Who should apply",
+      "default": "Who should apply"
+    },
+    {
+      "type": "text",
+      "id": "t_how_it_works",
+      "label": "Page — Link text: How it works",
+      "default": "How it works"
+    },
+    {
+      "type": "text",
+      "id": "t_apply",
+      "label": "Page — Link text: Apply",
+      "default": "Apply"
+    },
+    {
+      "type": "header",
+      "content": "Text: Apprenticeship / Why us"
+    },
+    {
+      "type": "text",
+      "id": "t_01_why_us",
+      "label": "Apprenticeship / Why us — Text: 01 / Why us?",
+      "default": "01 / Why us?"
+    },
+    {
+      "type": "text",
+      "id": "t_why_train_at_broken_arrow",
+      "label": "Apprenticeship / Why us — Heading: Why train at Broken Arrow",
+      "default": "Why train at Broken Arrow"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Apprenticeship / Why us — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_an_award_winning_shop",
+      "label": "Apprenticeship / Why us — Subheading: An award-winning shop",
+      "default": "An award-winning shop"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_herald_readers_choice_",
+      "label": "Apprenticeship / Why us — Text: Daily Herald Readers’ Choice for Best Ba",
+      "default": "Daily Herald Readers’ Choice for Best Barbershop in Utah Valley, 2023, 2024 and 2026."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Apprenticeship / Why us — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_we_hire_who_we_train",
+      "label": "Apprenticeship / Why us — Subheading: We hire who we train",
+      "default": "We hire who we train"
+    },
+    {
+      "type": "textarea",
+      "id": "t_our_owner_is_a_licensed_barb",
+      "label": "Apprenticeship / Why us — Text: Our owner is a licensed barber instructo",
+      "default": "Our owner is a licensed barber instructor who has taught hundreds of students. Every barber in our shop today was trained by Bryton at Paul Mitchell The School Provo."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Apprenticeship / Why us — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_a_full_book_to_learn_from",
+      "label": "Apprenticeship / Why us — Subheading: A full book to learn from",
+      "default": "A full book to learn from"
+    },
+    {
+      "type": "text",
+      "id": "t_hundreds_of_five_star_google",
+      "label": "Apprenticeship / Why us — Text: Hundreds of five-star Google reviews mea",
+      "default": "Hundreds of five-star Google reviews means real clients in the chair every day."
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Apprenticeship / Why us — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_more_than_haircuts",
+      "label": "Apprenticeship / Why us — Subheading: More than haircuts",
+      "default": "More than haircuts"
+    },
+    {
+      "type": "text",
+      "id": "t_exposure_to_hair_systems_con",
+      "label": "Apprenticeship / Why us — Text: Exposure to hair systems, content creati",
+      "default": "Exposure to hair systems, content creation and building your own book."
+    },
+    {
+      "type": "header",
+      "content": "Text: Apprenticeship / Best of both"
+    },
+    {
+      "type": "text",
+      "id": "t_02_school_and_shop",
+      "label": "Apprenticeship / Best of both — Text: 02 / School and shop",
+      "default": "02 / School and shop"
+    },
+    {
+      "type": "text",
+      "id": "t_the_best_of_school_the_best_",
+      "label": "Apprenticeship / Best of both — Heading: The Best of School. The Best of the Shop",
+      "default": "The Best of School. The Best of the Shop."
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_education_was_b",
+      "label": "Apprenticeship / Best of both — Text: Broken Arrow Education was built to brid",
+      "default": "Broken Arrow Education was built to bridge the gap between traditional barber school and learning inside a working barbershop."
+    },
+    {
+      "type": "textarea",
+      "id": "t_our_apprenticeship_is_led_by",
+      "label": "Apprenticeship / Best of both — Text: Our apprenticeship is led by a licensed ",
+      "default": "Our apprenticeship is led by a licensed barber instructor with experience teaching hundreds of students at Paul Mitchell The School Provo. We take the structure, fundamentals, and education standards of a professional hair school and combine them with the hands-on experience, real clients, and day-to-day realities of a working barbershop."
+    },
+    {
+      "type": "textarea",
+      "id": "t_you_won_t_just_learn_how_to_",
+      "label": "Apprenticeship / Best of both — Text: You won’t just learn how to pass the req",
+      "default": "You won’t just learn how to pass the requirements to become licensed. You’ll learn how to cut hair, consult with clients, build a clientele, create a great client experience, market yourself, and actually build a career behind the chair."
+    },
+    {
+      "type": "textarea",
+      "id": "t_real_education_real_clients_",
+      "label": "Apprenticeship / Best of both — Text: Real education. Real clients. Real barbe",
+      "default": "Real education. Real clients. Real barbershop experience, at a fraction of the cost of traditional school."
+    },
+    {
+      "type": "header",
+      "content": "Text: Apprenticeship / Not a school"
+    },
+    {
+      "type": "text",
+      "id": "t_03_not_a_school",
+      "label": "Apprenticeship / Not a school — Text: 03 / Not a school",
+      "default": "03 / Not a school"
+    },
+    {
+      "type": "text",
+      "id": "t_we_don_t_take_everyone",
+      "label": "Apprenticeship / Not a school — Heading: We don’t take everyone.",
+      "default": "We don’t take everyone."
+    },
+    {
+      "type": "textarea",
+      "id": "t_most_schools_will_enroll_any",
+      "label": "Apprenticeship / Not a school — Text: Most schools will enroll anyone who can ",
+      "default": "Most schools will enroll anyone who can pay. We only take a few people, and we choose them the way we’d choose a barber to hire, because that’s the plan."
+    },
+    {
+      "type": "text",
+      "id": "t_a_typical_school",
+      "label": "Apprenticeship / Not a school — Text: A typical school",
+      "default": "A typical school"
+    },
+    {
+      "type": "text",
+      "id": "t_around_20_000_in_tuition",
+      "label": "Apprenticeship / Not a school — Text: Around $20,000 in tuition",
+      "default": "Around $20,000 in tuition"
+    },
+    {
+      "type": "text",
+      "id": "t_1_000_hours_mostly_in_a_clas",
+      "label": "Apprenticeship / Not a school — Text: 1,000+ hours, mostly in a classroom",
+      "default": "1,000+ hours, mostly in a classroom"
+    },
+    {
+      "type": "text",
+      "id": "t_enrolls_anyone_who_can_pay",
+      "label": "Apprenticeship / Not a school — Text: Enrolls anyone who can pay",
+      "default": "Enrolls anyone who can pay"
+    },
+    {
+      "type": "text",
+      "id": "t_graduate_then_find_a_job_on_",
+      "label": "Apprenticeship / Not a school — Text: Graduate, then find a job on your own",
+      "default": "Graduate, then find a job on your own"
+    },
+    {
+      "type": "text",
+      "id": "t_school_figures_are_typical_f",
+      "label": "Apprenticeship / Not a school — Text: School figures are typical for Utah and ",
+      "default": "School figures are typical for Utah and vary by program."
+    },
+    {
+      "type": "text",
+      "id": "t_the_broken_arrow_way",
+      "label": "Apprenticeship / Not a school — Text: The Broken Arrow way",
+      "default": "The Broken Arrow way"
+    },
+    {
+      "type": "text",
+      "id": "t_4_995_program_fee_2",
+      "label": "Apprenticeship / Not a school — Text: $4,995 program fee",
+      "default": "$4,995 program fee"
+    },
+    {
+      "type": "text",
+      "id": "t_chosen_like_a_new_hire_not_s",
+      "label": "Apprenticeship / Not a school — Text: Chosen like a new hire, not sold a seat",
+      "default": "Chosen like a new hire, not sold a seat"
+    },
+    {
+      "type": "text",
+      "id": "t_hours_spent_in_a_working_sho",
+      "label": "Apprenticeship / Not a school — Text: Hours spent in a working shop with real ",
+      "default": "Hours spent in a working shop with real clients"
+    },
+    {
+      "type": "text",
+      "id": "t_mentored_one_on_one_by_licen",
+      "label": "Apprenticeship / Not a school — Text: Mentored one-on-one by licensed educator",
+      "default": "Mentored one-on-one by licensed educators"
+    },
+    {
+      "type": "text",
+      "id": "t_the_goal_is_a_chair_on_our_t",
+      "label": "Apprenticeship / Not a school — Text: The goal is a chair on our team when you",
+      "default": "The goal is a chair on our team when you’re licensed"
+    },
+    {
+      "type": "header",
+      "content": "Text: Apprenticeship / Program"
+    },
+    {
+      "type": "text",
+      "id": "t_04_the_program",
+      "label": "Apprenticeship / Program — Text: 04 / The program",
+      "default": "04 / The program"
+    },
+    {
+      "type": "text",
+      "id": "t_you_learn_in_the_chair",
+      "label": "Apprenticeship / Program — Heading: You learn in the chair.",
+      "default": "You learn in the chair."
+    },
+    {
+      "type": "text",
+      "id": "t_01_2",
+      "label": "Apprenticeship / Program — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_hours_inside_a_working_shop",
+      "label": "Apprenticeship / Program — Text: Hours inside a working shop",
+      "default": "Hours inside a working shop"
+    },
+    {
+      "type": "text",
+      "id": "t_you_train_at_broken_arrow_al",
+      "label": "Apprenticeship / Program — Text: You train at Broken Arrow alongside our ",
+      "default": "You train at Broken Arrow alongside our barbers, on the floor, not in a lecture hall."
+    },
+    {
+      "type": "text",
+      "id": "t_02_2",
+      "label": "Apprenticeship / Program — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_mentorship_from_licensed_edu",
+      "label": "Apprenticeship / Program — Text: Mentorship from licensed educators",
+      "default": "Mentorship from licensed educators"
+    },
+    {
+      "type": "text",
+      "id": "t_direct_supervision_and_feedb",
+      "label": "Apprenticeship / Program — Text: Direct supervision and feedback from bar",
+      "default": "Direct supervision and feedback from barbers who have taught hundreds of students."
+    },
+    {
+      "type": "text",
+      "id": "t_03_2",
+      "label": "Apprenticeship / Program — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_the_broken_arrow_standard",
+      "label": "Apprenticeship / Program — Text: The Broken Arrow standard",
+      "default": "The Broken Arrow standard"
+    },
+    {
+      "type": "text",
+      "id": "t_consultations_fades_scissor_",
+      "label": "Apprenticeship / Program — Text: Consultations, fades, scissor work and t",
+      "default": "Consultations, fades, scissor work and the details that earn five-star reviews."
+    },
+    {
+      "type": "text",
+      "id": "t_04_2",
+      "label": "Apprenticeship / Program — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_a_path_onto_the_team",
+      "label": "Apprenticeship / Program — Text: A path onto the team",
+      "default": "A path onto the team"
+    },
+    {
+      "type": "text",
+      "id": "t_earn_your_utah_license_and_t",
+      "label": "Apprenticeship / Program — Text: Earn your Utah license and the goal is f",
+      "default": "Earn your Utah license and the goal is for you to keep cutting here."
+    },
+    {
+      "type": "header",
+      "content": "Text: Apprenticeship / Who should apply"
+    },
+    {
+      "type": "text",
+      "id": "t_05_who_should_apply",
+      "label": "Apprenticeship / Who should apply — Text: 05 / Who should apply",
+      "default": "05 / Who should apply"
+    },
+    {
+      "type": "text",
+      "id": "t_who_should_apply_2",
+      "label": "Apprenticeship / Who should apply — Heading: Who Should Apply",
+      "default": "Who Should Apply"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_broken_arrow_apprentices",
+      "label": "Apprenticeship / Who should apply — Text: The Broken Arrow Apprenticeship is for p",
+      "default": "The Broken Arrow Apprenticeship is for people who are serious about becoming exceptional barbers, not just getting through the required hours."
+    },
+    {
+      "type": "text",
+      "id": "t_you_should_apply_if_you",
+      "label": "Apprenticeship / Who should apply — Text: You should apply if you:",
+      "default": "You should apply if you:"
+    },
+    {
+      "type": "text",
+      "id": "t_are_serious_about_building_a",
+      "label": "Apprenticeship / Who should apply — Text: Are serious about building a long-term c",
+      "default": "Are serious about building a long-term career in barbering."
+    },
+    {
+      "type": "text",
+      "id": "t_want_hands_on_experience_in_",
+      "label": "Apprenticeship / Who should apply — Text: Want hands-on experience in a real barbe",
+      "default": "Want hands-on experience in a real barbershop environment."
+    },
+    {
+      "type": "text",
+      "id": "t_are_coachable_and_willing_to",
+      "label": "Apprenticeship / Who should apply — Text: Are coachable and willing to take feedba",
+      "default": "Are coachable and willing to take feedback."
+    },
+    {
+      "type": "text",
+      "id": "t_care_about_the_details_and_w",
+      "label": "Apprenticeship / Who should apply — Text: Care about the details and want to conti",
+      "default": "Care about the details and want to continually improve your work."
+    },
+    {
+      "type": "text",
+      "id": "t_show_up_on_time_work_hard_an",
+      "label": "Apprenticeship / Who should apply — Text: Show up on time, work hard, and take res",
+      "default": "Show up on time, work hard, and take responsibility."
+    },
+    {
+      "type": "textarea",
+      "id": "t_want_to_learn_more_than_just",
+      "label": "Apprenticeship / Who should apply — Text: Want to learn more than just how to cut ",
+      "default": "Want to learn more than just how to cut hair, including consultation, client experience, content, branding, and building a clientele."
+    },
+    {
+      "type": "text",
+      "id": "t_you_probably_shouldn_t_apply",
+      "label": "Apprenticeship / Who should apply — Text: You probably shouldn’t apply if you:",
+      "default": "You probably shouldn’t apply if you:"
+    },
+    {
+      "type": "text",
+      "id": "t_are_looking_for_the_easiest_",
+      "label": "Apprenticeship / Who should apply — Text: Are looking for the easiest or fastest w",
+      "default": "Are looking for the easiest or fastest way to get licensed."
+    },
+    {
+      "type": "text",
+      "id": "t_regularly_struggle_with_bein",
+      "label": "Apprenticeship / Who should apply — Text: Regularly struggle with being on time or",
+      "default": "Regularly struggle with being on time or following through."
+    },
+    {
+      "type": "text",
+      "id": "t_aren_t_comfortable_receiving",
+      "label": "Apprenticeship / Who should apply — Text: Aren’t comfortable receiving direct feed",
+      "default": "Aren’t comfortable receiving direct feedback on your work."
+    },
+    {
+      "type": "text",
+      "id": "t_expect_clients_or_opportunit",
+      "label": "Apprenticeship / Who should apply — Text: Expect clients or opportunities to be ha",
+      "default": "Expect clients or opportunities to be handed to you."
+    },
+    {
+      "type": "text",
+      "id": "t_aren_t_willing_to_practice_o",
+      "label": "Apprenticeship / Who should apply — Text: Aren’t willing to practice outside of th",
+      "default": "Aren’t willing to practice outside of the minimum requirements."
+    },
+    {
+      "type": "text",
+      "id": "t_see_barbering_as_something_y",
+      "label": "Apprenticeship / Who should apply — Text: See barbering as something you’re only c",
+      "default": "See barbering as something you’re only casually interested in trying."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_don_t_expect_apprentices_",
+      "label": "Apprenticeship / Who should apply — Text: We don’t expect apprentices to already b",
+      "default": "We don’t expect apprentices to already be great barbers. We do expect them to be serious about becoming one."
+    },
+    {
+      "type": "header",
+      "content": "Text: Apprenticeship / How it works"
+    },
+    {
+      "type": "text",
+      "id": "t_06_how_it_works",
+      "label": "Apprenticeship / How it works — Text: 06 / How it works",
+      "default": "06 / How it works"
+    },
+    {
+      "type": "text",
+      "id": "t_utah_s_new_barbering_permit_",
+      "label": "Apprenticeship / How it works — Heading: Utah’s new barbering permit, plainly",
+      "default": "Utah’s new barbering permit, plainly"
+    },
+    {
+      "type": "textarea",
+      "id": "t_utah_now_offers_a_barbering_",
+      "label": "Apprenticeship / How it works — Text: Utah now offers a barbering permit that ",
+      "default": "Utah now offers a barbering permit that takes 130 hours of approved training, instead of the 1,000+ hours of a traditional barber school. Here’s what that means."
+    },
+    {
+      "type": "text",
+      "id": "t_what_it_lets_you_do",
+      "label": "Apprenticeship / How it works — Text: What it lets you do",
+      "default": "What it lets you do"
+    },
+    {
+      "type": "textarea",
+      "id": "t_cut_clip_and_trim_with_shear",
+      "label": "Apprenticeship / How it works — Text: Cut, clip and trim with shears and clipp",
+      "default": "Cut, clip and trim with shears and clippers, shampoo and style, and shave facial and neck hair. The classic barbering menu."
+    },
+    {
+      "type": "text",
+      "id": "t_how_you_qualify",
+      "label": "Apprenticeship / How it works — Text: How you qualify",
+      "default": "How you qualify"
+    },
+    {
+      "type": "text",
+      "id": "t_130_hours_of_approved_traini",
+      "label": "Apprenticeship / How it works — Text: 130 hours of approved training, plus a p",
+      "default": "130 hours of approved training, plus a passing score on the state barbering exam."
+    },
+    {
+      "type": "text",
+      "id": "t_where_you_train",
+      "label": "Apprenticeship / How it works — Text: Where you train",
+      "default": "Where you train"
+    },
+    {
+      "type": "text",
+      "id": "t_inside_broken_arrow_a_workin",
+      "label": "Apprenticeship / How it works — Text: Inside Broken Arrow, a working shop in O",
+      "default": "Inside Broken Arrow, a working shop in Orem, under a licensed barber instructor."
+    },
+    {
+      "type": "text",
+      "id": "t_where_it_leads",
+      "label": "Apprenticeship / How it works — Text: Where it leads",
+      "default": "Where it leads"
+    },
+    {
+      "type": "text",
+      "id": "t_a_licensed_start_to_your_car",
+      "label": "Apprenticeship / How it works — Text: A licensed start to your career, and a c",
+      "default": "A licensed start to your career, and a chair on our team if you earn it."
+    },
+    {
+      "type": "text",
+      "id": "t_at_a_glance",
+      "label": "Apprenticeship / How it works — Text: At a glance",
+      "default": "At a glance"
+    },
+    {
+      "type": "text",
+      "id": "t_credential",
+      "label": "Apprenticeship / How it works — Text: Credential",
+      "default": "Credential"
+    },
+    {
+      "type": "text",
+      "id": "t_utah_barbering_permit",
+      "label": "Apprenticeship / How it works — Text: Utah barbering permit",
+      "default": "Utah barbering permit"
+    },
+    {
+      "type": "text",
+      "id": "t_training_hours",
+      "label": "Apprenticeship / How it works — Text: Training hours",
+      "default": "Training hours"
+    },
+    {
+      "type": "text",
+      "id": "t_130_hours",
+      "label": "Apprenticeship / How it works — Text: 130 hours",
+      "default": "130 hours"
+    },
+    {
+      "type": "text",
+      "id": "t_setting",
+      "label": "Apprenticeship / How it works — Text: Setting",
+      "default": "Setting"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_orem",
+      "label": "Apprenticeship / How it works — Text: Broken Arrow, Orem",
+      "default": "Broken Arrow, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_program_fee",
+      "label": "Apprenticeship / How it works — Text: Program fee",
+      "default": "Program fee"
+    },
+    {
+      "type": "text",
+      "id": "t_4_995",
+      "label": "Apprenticeship / How it works — Text: $4,995",
+      "default": "$4,995"
+    },
+    {
+      "type": "text",
+      "id": "t_on_completion",
+      "label": "Apprenticeship / How it works — Text: On completion",
+      "default": "On completion"
+    },
+    {
+      "type": "text",
+      "id": "t_goal_a_chair_on_our_team",
+      "label": "Apprenticeship / How it works — Text: Goal: a chair on our team",
+      "default": "Goal: a chair on our team"
+    },
+    {
+      "type": "text",
+      "id": "t_openings",
+      "label": "Apprenticeship / How it works — Text: Openings",
+      "default": "Openings"
+    },
+    {
+      "type": "text",
+      "id": "t_none_right_now_please_still_",
+      "label": "Apprenticeship / How it works — Text: None right now · Please still apply",
+      "default": "None right now · Please still apply"
+    },
+    {
+      "type": "text",
+      "id": "t_01_3",
+      "label": "Apprenticeship / How it works — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_2",
+      "label": "Apprenticeship / How it works — Text: Apply",
+      "default": "Apply"
+    },
+    {
+      "type": "text",
+      "id": "t_fill_out_the_application_it_",
+      "label": "Apprenticeship / How it works — Text: Fill out the application. It takes a few",
+      "default": "Fill out the application. It takes a few minutes."
+    },
+    {
+      "type": "text",
+      "id": "t_02_3",
+      "label": "Apprenticeship / How it works — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_with_us",
+      "label": "Apprenticeship / How it works — Text: Meet with us",
+      "default": "Meet with us"
+    },
+    {
+      "type": "text",
+      "id": "t_if_you_re_a_fit_we_ll_reach_",
+      "label": "Apprenticeship / How it works — Text: If you’re a fit, we’ll reach out to set ",
+      "default": "If you’re a fit, we’ll reach out to set up a conversation at the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_03_3",
+      "label": "Apprenticeship / How it works — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_train",
+      "label": "Apprenticeship / How it works — Text: Train",
+      "default": "Train"
+    },
+    {
+      "type": "text",
+      "id": "t_complete_your_130_hours_insi",
+      "label": "Apprenticeship / How it works — Text: Complete your 130 hours inside the shop ",
+      "default": "Complete your 130 hours inside the shop with real clients."
+    },
+    {
+      "type": "text",
+      "id": "t_04_3",
+      "label": "Apprenticeship / How it works — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_pass_the_exam",
+      "label": "Apprenticeship / How it works — Text: Pass the exam",
+      "default": "Pass the exam"
+    },
+    {
+      "type": "text",
+      "id": "t_take_the_utah_state_barberin",
+      "label": "Apprenticeship / How it works — Text: Take the Utah state barbering exam.",
+      "default": "Take the Utah state barbering exam."
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Apprenticeship / How it works — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_join_the_team",
+      "label": "Apprenticeship / How it works — Text: Join the team",
+      "default": "Join the team"
+    },
+    {
+      "type": "text",
+      "id": "t_earn_your_chair_at_broken_ar",
+      "label": "Apprenticeship / How it works — Text: Earn your chair at Broken Arrow.",
+      "default": "Earn your chair at Broken Arrow."
+    },
+    {
+      "type": "textarea",
+      "id": "t_chemical_services_such_as_co",
+      "label": "Apprenticeship / How it works — Text: Chemical services such as color and perm",
+      "default": "Chemical services such as color and perms need a separate license. Requirements are set by Utah’s Division of Professional Licensing (DOPL)."
+    },
+    {
+      "type": "header",
+      "content": "Text: Apprenticeship / Apply"
+    },
+    {
+      "type": "text",
+      "id": "t_07_apply",
+      "label": "Apprenticeship / Apply — Text: 07 / Apply",
+      "default": "07 / Apply"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_like_it_s_a_job_becaus",
+      "label": "Apprenticeship / Apply — Heading: Apply like it’s a job. Because it is.",
+      "default": "Apply like it’s a job. Because it is."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_don_t_have_any_apprentice",
+      "label": "Apprenticeship / Apply — Text: We don’t have any apprenticeship opening",
+      "default": "We don’t have any apprenticeship openings right now. Apply and we’ll keep your application on file and reach out when we do."
+    },
+    {
+      "type": "text",
+      "id": "t_4_995_2",
+      "label": "Apprenticeship / Apply — Text: $4,995",
+      "default": "$4,995"
+    },
+    {
+      "type": "text",
+      "id": "t_program_fee_vs_around_20_000",
+      "label": "Apprenticeship / Apply — Text: Program fee · vs. around $20,000 at a ty",
+      "default": "Program fee · vs. around $20,000 at a typical school"
+    },
+    {
+      "type": "text",
+      "id": "t_no_current_openings_please_s_2",
+      "label": "Apprenticeship / Apply — Text: No current openings · Please still apply",
+      "default": "No current openings · Please still apply"
+    },
+    {
+      "type": "text",
+      "id": "t_no_haircutting_experience_ne",
+      "label": "Apprenticeship / Apply — Text: No haircutting experience needed. We hir",
+      "default": "No haircutting experience needed. We hire for character and train for skill."
+    },
+    {
+      "type": "text",
+      "id": "t_start_your_application",
+      "label": "Apprenticeship / Apply — Link text: START YOUR APPLICATION",
+      "default": "START YOUR APPLICATION"
+    }
+  ]
+}
+{% endschema %}

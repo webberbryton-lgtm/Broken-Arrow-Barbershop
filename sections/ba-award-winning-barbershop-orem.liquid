@@ -1,0 +1,553 @@
+{%- comment -%} Generated from the Claude Design page "Local Guide - Award Winning Barbershop". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_award_2024_plaque != blank
+  assign img_award_2024_plaque = section.settings.img_award_2024_plaque | image_url: width: 2400
+else
+  assign img_award_2024_plaque = 'ba-award-2024-plaque.webp' | asset_url
+endif
+if section.settings.img_award_2023_plaque != blank
+  assign img_award_2023_plaque = section.settings.img_award_2023_plaque | image_url: width: 2400
+else
+  assign img_award_2023_plaque = 'ba-award-2023-plaque.webp' | asset_url
+endif
+if section.settings.img_bryton_cut_fade_beard != blank
+  assign img_bryton_cut_fade_beard = section.settings.img_bryton_cut_fade_beard | image_url: width: 2400
+else
+  assign img_bryton_cut_fade_beard = 'ba-bryton-cut-fade-beard.webp' | asset_url
+endif
+if section.settings.img_elise_cut_d != blank
+  assign img_elise_cut_d = section.settings.img_elise_cut_d | image_url: width: 2400
+else
+  assign img_elise_cut_d = 'ba-elise-cut-d.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="award-winning-barbershop-orem"] :is(ul, ol) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="award-winning-barbershop-orem" data-ba-active="journal">
+<article><header data-screen-label="Guide / Hero" style="position: relative; background: var(--band); min-height: clamp(520px, 76vh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<div aria-label="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center; filter: saturate(0.85);'></div>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;"><a href="/pages/journal" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_journal | escape }}</a><span style="opacity: 0.5;">/</span><span style="opacity: 0.78;">{{ section.settings.t_shop_news | escape }}</span></nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_award_winning_barbering_in_o | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_4_min_read | escape }}</p>
+</div></header><section data-screen-label="Guide / Intro" style="max-width: 920px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(40px, 6vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_a_5_star_google_rating_multi | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_explore_our_work_and_find_th | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_short_answer | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_barbershop_in_o | escape }}</p>
+</div>
+</div></section>
+<section data-screen-label="Guide / Section" id="s1" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_our_awards | escape }}</h2>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_best_barbershop_2026 | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_daily_herald_best_of_utah_va | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_best_barbershop_2024 | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_daily_herald_best_of_utah_va_2 | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_best_barbershop_2023 | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_daily_herald_best_of_utah_va_3 | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_5_0_on_google | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_rated_by_our_clients_on_goog | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Daily Herald Readers’ Choice plaque, Best Barbershop, Best of Utah Valley 2024" loading="lazy" src="{{ img_award_2024_plaque }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_the_2024_plaque_at_the_shop | escape }}</figcaption>
+</figure>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Broken+Arrow+Barbershop+375+E+800+S+Orem+UT" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_see_our_google_reviews | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s2" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_02 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_who_gives_the_award | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_daily_herald_is_utah_val | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_it_isn_t_a_judged_award_or_a | escape }}</p>
+<a href="https://issuu.com/dailyheraldofutahvalley/docs/2026_best_of_utah_valley_resource_guide" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_2026_best_of_utah_valley_res | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s3" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_03 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_it_recognizes | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_best_barbershop_category | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Daily Herald Readers’ Choice plaque, Best Barbershop, Best of Utah Valley 2023" loading="lazy" src="{{ img_award_2023_plaque }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_the_2023_plaque | escape }}</figcaption>
+</figure>
+<a href="https://issuu.com/dailyheraldofutahvalley/docs/best_of_utah_valley_2023" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_2023_best_of_utah_valley_res | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s4" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_our_clients_say | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_cut_my_hair_exactly_how_i_wa | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_i_don_t_usually_go_to_barber | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_what_an_amazing_place_hands_ | escape }}</p>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Broken+Arrow+Barbershop+375+E+800+S+Orem+UT" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_read_more_reviews_on_google | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s5" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_the_work_behind_it | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_awards_come_from_haircuts_ea | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Fade and beard by Bryton" loading="lazy" src="{{ img_bryton_cut_fade_beard }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_a_fade_and_beard_by_bryton | escape }}</figcaption>
+</figure>
+<a href="/pages/new-barber-orem-meet-the-team" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_meet_the_team | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s6" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_06 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_find_the_right_barber_for_yo | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_bryton_for_short_and_classic | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Flow cut by Elise" loading="lazy" src="{{ img_elise_cut_d }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_a_flow_cut_by_elise | escape }}</figcaption>
+</figure>
+<a href="/pages/bryton" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_see_bryton_s_work | escape }}</a>
+</div>
+</section><section data-screen-label="Guide / FAQ" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 20px;">
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px);">{{ section.settings.t_questions | escape }}</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Who awarded Broken Arrow Best Barbershop?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_daily_herald_readers_in_the_ | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Which years?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_2023_2024_and_2026 | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Where is the shop?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">375 E 800 S, Suite 12, Orem, UT 84097. <a href="/#visit" style="color: var(--ink);">{{ section.settings.t_how_to_find_us | escape }}</a></p>
+</details>
+</div></section></article><section data-screen-label="Guide / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_see_why_clients_vote_for_us | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_book_your_first_visit_with_o | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="/pages/team">{{ section.settings.t_meet_the_team_2 | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Award-Winning Barbering in Orem, Utah","description":"Broken Arrow Barbershop in Orem was voted Best Barbershop in the Daily Herald Best of Utah Valley Readers’ Choice Awards in 2023, 2024 and 2026, with a 5.0 Google rating.","datePublished":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/award-winning-barbershop-orem","author":{"@type":"Organization","name":"Broken Arrow Barbershop"},"about":{"@type":"BarberShop","name":"Broken Arrow Barbershop","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097"}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who awarded Broken Arrow Best Barbershop?","acceptedAnswer":{"@type":"Answer","text":"Daily Herald readers, in the Best of Utah Valley Readers’ Choice Awards."}},{"@type":"Question","name":"Which years?","acceptedAnswer":{"@type":"Answer","text":"2023, 2024 and 2026."}},{"@type":"Question","name":"Where is the shop?","acceptedAnswer":{"@type":"Answer","text":"375 E 800 S, Suite 12, Orem, UT 84097."}}]}]}</script>
+{% schema %}
+{
+  "name": "Local Guide - Award Winni",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Guide / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_award_2024_plaque",
+      "label": "Guide / Section — photo (award-2024-plaque.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_award_2023_plaque",
+      "label": "Guide / Section — photo (award-2023-plaque.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_cut_fade_beard",
+      "label": "Guide / Section — photo (bryton-cut-fade-beard.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_cut_d",
+      "label": "Guide / Section — photo (elise-cut-d.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Guide / Hero — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_shop_news",
+      "label": "Guide / Hero — Text: Shop news",
+      "default": "Shop news"
+    },
+    {
+      "type": "text",
+      "id": "t_award_winning_barbering_in_o",
+      "label": "Guide / Hero — Heading: Award-Winning Barbering in Orem, Utah",
+      "default": "Award-Winning Barbering in Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_4_min_read",
+      "label": "Guide / Hero — Text: September 26, 2026 · 4 min read",
+      "default": "September 26, 2026 · 4 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Intro"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_5_star_google_rating_multi",
+      "label": "Guide / Intro — Text: A 5-star Google rating, multiple barbers",
+      "default": "A 5-star Google rating, multiple barbershop awards, and haircuts tailored to your hair, face shape, and everyday routine."
+    },
+    {
+      "type": "text",
+      "id": "t_explore_our_work_and_find_th",
+      "label": "Guide / Intro — Text: Explore our work and find the right barb",
+      "default": "Explore our work and find the right barber for you."
+    },
+    {
+      "type": "text",
+      "id": "t_short_answer",
+      "label": "Guide / Intro — Text: Short answer",
+      "default": "Short answer"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_barbershop_in_o",
+      "label": "Guide / Intro — Text: Broken Arrow Barbershop in Orem was vote",
+      "default": "Broken Arrow Barbershop in Orem was voted Best Barbershop in the Daily Herald’s Best of Utah Valley Readers’ Choice Awards in 2023, 2024 and 2026, and has a 5.0 rating on Google."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Section"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Guide / Section — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_our_awards",
+      "label": "Guide / Section — Heading: Our awards",
+      "default": "Our awards"
+    },
+    {
+      "type": "text",
+      "id": "t_best_barbershop_2026",
+      "label": "Guide / Section — Text: Best Barbershop · 2026",
+      "default": "Best Barbershop · 2026"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_herald_best_of_utah_va",
+      "label": "Guide / Section — Text: Daily Herald, Best of Utah Valley Reader",
+      "default": "Daily Herald, Best of Utah Valley Readers’ Choice Awards"
+    },
+    {
+      "type": "text",
+      "id": "t_best_barbershop_2024",
+      "label": "Guide / Section — Text: Best Barbershop · 2024",
+      "default": "Best Barbershop · 2024"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_herald_best_of_utah_va_2",
+      "label": "Guide / Section — Text: Daily Herald, Best of Utah Valley Reader",
+      "default": "Daily Herald, Best of Utah Valley Readers’ Choice Awards"
+    },
+    {
+      "type": "text",
+      "id": "t_best_barbershop_2023",
+      "label": "Guide / Section — Text: Best Barbershop · 2023",
+      "default": "Best Barbershop · 2023"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_herald_best_of_utah_va_3",
+      "label": "Guide / Section — Text: Daily Herald, Best of Utah Valley Reader",
+      "default": "Daily Herald, Best of Utah Valley Readers’ Choice Awards"
+    },
+    {
+      "type": "text",
+      "id": "t_5_0_on_google",
+      "label": "Guide / Section — Text: 5.0 on Google",
+      "default": "5.0 on Google"
+    },
+    {
+      "type": "text",
+      "id": "t_rated_by_our_clients_on_goog",
+      "label": "Guide / Section — Text: Rated by our clients on Google.",
+      "default": "Rated by our clients on Google."
+    },
+    {
+      "type": "text",
+      "id": "t_the_2024_plaque_at_the_shop",
+      "label": "Guide / Section — Text: The 2024 plaque at the shop.",
+      "default": "The 2024 plaque at the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_see_our_google_reviews",
+      "label": "Guide / Section — Link text: See our Google reviews →",
+      "default": "See our Google reviews →"
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Guide / Section — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_who_gives_the_award",
+      "label": "Guide / Section — Heading: Who gives the award",
+      "default": "Who gives the award"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_daily_herald_is_utah_val",
+      "label": "Guide / Section — Text: The Daily Herald is Utah Valley’s daily ",
+      "default": "The Daily Herald is Utah Valley’s daily newspaper, based in Provo. Every spring it runs the Best of Utah Valley Readers’ Choice Awards, where readers nominate and vote for their favorite local businesses across hundreds of categories."
+    },
+    {
+      "type": "text",
+      "id": "t_it_isn_t_a_judged_award_or_a",
+      "label": "Guide / Section — Text: It isn’t a judged award or a paid listin",
+      "default": "It isn’t a judged award or a paid listing. It’s decided by the people who live here."
+    },
+    {
+      "type": "text",
+      "id": "t_2026_best_of_utah_valley_res",
+      "label": "Guide / Section — Link text: 2026 Best of Utah Valley results →",
+      "default": "2026 Best of Utah Valley results →"
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Guide / Section — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_what_it_recognizes",
+      "label": "Guide / Section — Heading: What it recognizes",
+      "default": "What it recognizes"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_best_barbershop_category",
+      "label": "Guide / Section — Text: The Best Barbershop category recognizes ",
+      "default": "The Best Barbershop category recognizes the shop Utah Valley readers would recommend for a haircut. For us, that comes from clients who keep coming back, and who tell their friends."
+    },
+    {
+      "type": "text",
+      "id": "t_the_2023_plaque",
+      "label": "Guide / Section — Text: The 2023 plaque.",
+      "default": "The 2023 plaque."
+    },
+    {
+      "type": "text",
+      "id": "t_2023_best_of_utah_valley_res",
+      "label": "Guide / Section — Link text: 2023 Best of Utah Valley results →",
+      "default": "2023 Best of Utah Valley results →"
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Guide / Section — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_what_our_clients_say",
+      "label": "Guide / Section — Heading: What our clients say",
+      "default": "What our clients say"
+    },
+    {
+      "type": "textarea",
+      "id": "t_cut_my_hair_exactly_how_i_wa",
+      "label": "Guide / Section — Text: “Cut my hair exactly how I wanted. Super",
+      "default": "“Cut my hair exactly how I wanted. Super friendly, and the vibe was stellar. Best haircut I’ve had.” Brigham, Google review"
+    },
+    {
+      "type": "textarea",
+      "id": "t_i_don_t_usually_go_to_barber",
+      "label": "Guide / Section — Text: “I don’t usually go to barbershops so I ",
+      "default": "“I don’t usually go to barbershops so I was a little hesitant, but they made me feel great and did everything I asked them to do.” Jerryck, Google review"
+    },
+    {
+      "type": "text",
+      "id": "t_what_an_amazing_place_hands_",
+      "label": "Guide / Section — Text: “What an amazing place. Hands down, the ",
+      "default": "“What an amazing place. Hands down, the best barber shop in Orem.” Jed, Google review"
+    },
+    {
+      "type": "text",
+      "id": "t_read_more_reviews_on_google",
+      "label": "Guide / Section — Link text: Read more reviews on Google →",
+      "default": "Read more reviews on Google →"
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Guide / Section — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_the_work_behind_it",
+      "label": "Guide / Section — Heading: The work behind it",
+      "default": "The work behind it"
+    },
+    {
+      "type": "textarea",
+      "id": "t_awards_come_from_haircuts_ea",
+      "label": "Guide / Section — Text: Awards come from haircuts. Each barber’s",
+      "default": "Awards come from haircuts. Each barber’s page shows photos of their work, from fades and scissor cuts to longer styles and hair systems."
+    },
+    {
+      "type": "text",
+      "id": "t_a_fade_and_beard_by_bryton",
+      "label": "Guide / Section — Text: A fade and beard by Bryton.",
+      "default": "A fade and beard by Bryton."
+    },
+    {
+      "type": "text",
+      "id": "t_meet_the_team",
+      "label": "Guide / Section — Link text: Meet the team →",
+      "default": "Meet the team →"
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Guide / Section — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_find_the_right_barber_for_yo",
+      "label": "Guide / Section — Heading: Find the right barber for you",
+      "default": "Find the right barber for you"
+    },
+    {
+      "type": "textarea",
+      "id": "t_bryton_for_short_and_classic",
+      "label": "Guide / Section — Text: Bryton for short and classic cuts, sciss",
+      "default": "Bryton for short and classic cuts, scissor haircuts, receding hairlines and hair systems. Connor for medium to longer haircuts. Elise for medium-length styles, curly hair and flow cuts."
+    },
+    {
+      "type": "text",
+      "id": "t_a_flow_cut_by_elise",
+      "label": "Guide / Section — Text: A flow cut by Elise.",
+      "default": "A flow cut by Elise."
+    },
+    {
+      "type": "text",
+      "id": "t_see_bryton_s_work",
+      "label": "Guide / Section — Link text: See Bryton’s work →",
+      "default": "See Bryton’s work →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Guide / FAQ — Heading: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_herald_readers_in_the_",
+      "label": "Guide / FAQ — Text: Daily Herald readers, in the Best of Uta",
+      "default": "Daily Herald readers, in the Best of Utah Valley Readers’ Choice Awards."
+    },
+    {
+      "type": "text",
+      "id": "t_2023_2024_and_2026",
+      "label": "Guide / FAQ — Text: 2023, 2024 and 2026.",
+      "default": "2023, 2024 and 2026."
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_find_us",
+      "label": "Guide / FAQ — Link text: How to find us →",
+      "default": "How to find us →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Guide / CTA — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_see_why_clients_vote_for_us",
+      "label": "Guide / CTA — Heading: See why clients vote for us.",
+      "default": "See why clients vote for us."
+    },
+    {
+      "type": "text",
+      "id": "t_book_your_first_visit_with_o",
+      "label": "Guide / CTA — Text: Book your first visit with one of our ba",
+      "default": "Book your first visit with one of our barbers."
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Guide / CTA — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_the_team_2",
+      "label": "Guide / CTA — Link text: Meet the team",
+      "default": "Meet the team"
+    }
+  ]
+}
+{% endschema %}

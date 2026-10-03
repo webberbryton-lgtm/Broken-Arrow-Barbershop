@@ -1,0 +1,254 @@
+{%- comment -%} Generated from the Claude Design page "Team". {%- endcomment -%}
+{%- liquid
+if section.settings.img_bryton_main != blank
+  assign img_bryton_main = section.settings.img_bryton_main | image_url: width: 2400
+else
+  assign img_bryton_main = 'ba-bryton-main.webp' | asset_url
+endif
+if section.settings.img_connor_team != blank
+  assign img_connor_team = section.settings.img_connor_team | image_url: width: 2400
+else
+  assign img_connor_team = 'ba-connor-team.webp' | asset_url
+endif
+if section.settings.img_elise_profile != blank
+  assign img_elise_profile = section.settings.img_elise_profile | image_url: width: 2400
+else
+  assign img_elise_profile = 'ba-elise-profile.webp' | asset_url
+endif
+-%}
+<div class="ba-page" data-ba-page="team" data-ba-active="team">
+<section data-screen-label="Team / Hero" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: flex-end;">
+<div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_the_team_orem_utah | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(48px, 7vw, 96px), 11vw); letter-spacing: -0.045em; line-height: 0.92;">{{ section.settings.t_three_barbers | escape }}</h1>
+</div>
+<div style="flex: 1 1 320px; max-width: 460px; display: flex; flex-direction: column; gap: 16px;">
+<p style="font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_each_of_us_has_the_kind_of_h | escape }}</p>
+</div>
+</div></section><section data-screen-label="Team / Barbers" style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px);">
+<div data-m-three="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px;">
+<article style="display: flex; flex-direction: column; gap: 16px;">
+<a aria-label="Bryton’s page" href="/pages/bryton" style='position: relative; display: flex; align-items: flex-end; aspect-ratio: 4 / 5; background-color: var(--canvas-sunk); background-image: url("{{ img_bryton_main }}"); background-size: cover; background-position: center center; padding: 16px; text-decoration: none;'>
+</a>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 16px;">
+<h2 style="font: 800 clamp(32px,3.4vw,40px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_bryton | escape }}</h2>
+<p class="ba-label">{{ section.settings.t_owner | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_classic_cuts_big_changes_and | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary" href="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_with_bryton | escape }}</a>
+<a class="ba-btn ba-btn-text" href="/pages/bryton">{{ section.settings.t_see_bryton_s_page | escape }}</a>
+</div>
+</article>
+<article style="display: flex; flex-direction: column; gap: 16px;">
+<a aria-label="Connor’s page" href="/pages/connor" style='position: relative; display: flex; align-items: flex-end; aspect-ratio: 4 / 5; background-color: var(--canvas-sunk); background-image: url("{{ img_connor_team }}"); background-size: cover; background-position: center center; padding: 16px; text-decoration: none;'>
+</a>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 16px;">
+<h2 style="font: 800 clamp(32px,3.4vw,40px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_connor | escape }}</h2>
+<p class="ba-label">{{ section.settings.t_barber | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_medium_to_longer_hair_utah_c | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary" href="https://book.squareup.com/appointments/cnl05yngyr8vhx/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_with_connor | escape }}</a>
+<a class="ba-btn ba-btn-text" href="/pages/connor">{{ section.settings.t_see_connor_s_page | escape }}</a>
+</div>
+</article>
+<article style="display: flex; flex-direction: column; gap: 16px;">
+<a aria-label="Elise’s page" href="/pages/elise" style='position: relative; display: flex; align-items: flex-end; aspect-ratio: 4 / 5; background-color: var(--canvas-sunk); background-image: url("{{ img_elise_profile }}"); background-size: cover; background-position: center center; padding: 16px; text-decoration: none;'>
+</a>
+<div style="display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 16px;">
+<h2 style="font: 800 clamp(32px,3.4vw,40px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_elise | escape }}</h2>
+<p class="ba-label">{{ section.settings.t_barber_2 | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_curly_hair_medium_length_and | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary" href="https://book.squareup.com/appointments/wkoxhle5mmhzak/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_with_elise | escape }}</a>
+<a class="ba-btn ba-btn-text" href="/pages/elise">{{ section.settings.t_see_elise_s_page | escape }}</a>
+</div>
+</article>
+</div></section><section data-screen-label="Team / Not sure" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4.4vw, 56px);">{{ section.settings.t_not_sure_who_to_book | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_book_whoever_has_a_time_that | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">Connor and Elise both trained under Bryton at Paul Mitchell The School Provo before joining the shop. <a href="/pages/broken-arrow-barbershop-story">{{ section.settings.t_read_how_broken_arrow_came_t | escape }}</a></p>
+</div>
+<a class="ba-btn ba-btn-primary" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now | escape }}</a>
+</div></section>
+</div>
+{% schema %}
+{
+  "name": "Team",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_main",
+      "label": "Team / Barbers — photo (bryton-main.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_team",
+      "label": "Team / Barbers — photo (connor-team.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_profile",
+      "label": "Team / Barbers — photo (elise-profile.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Team / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_the_team_orem_utah",
+      "label": "Team / Hero — Text: The team · Orem, Utah",
+      "default": "The team · Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_three_barbers",
+      "label": "Team / Hero — Heading: Three barbers",
+      "default": "Three barbers"
+    },
+    {
+      "type": "textarea",
+      "id": "t_each_of_us_has_the_kind_of_h",
+      "label": "Team / Hero — Text: Each of us has the kind of hair we like ",
+      "default": "Each of us has the kind of hair we like working on most. Pick by who fits your hair, or book whoever has the time that works."
+    },
+    {
+      "type": "header",
+      "content": "Text: Team / Barbers"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton",
+      "label": "Team / Barbers — Heading: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_owner",
+      "label": "Team / Barbers — Text: Owner",
+      "default": "Owner"
+    },
+    {
+      "type": "text",
+      "id": "t_classic_cuts_big_changes_and",
+      "label": "Team / Barbers — Text: Classic cuts, big changes and thinning h",
+      "default": "Classic cuts, big changes and thinning hair."
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_bryton",
+      "label": "Team / Barbers — Link text: BOOK WITH BRYTON",
+      "default": "BOOK WITH BRYTON"
+    },
+    {
+      "type": "text",
+      "id": "t_see_bryton_s_page",
+      "label": "Team / Barbers — Link text: SEE BRYTON’S PAGE",
+      "default": "SEE BRYTON’S PAGE"
+    },
+    {
+      "type": "text",
+      "id": "t_connor",
+      "label": "Team / Barbers — Heading: Connor",
+      "default": "Connor"
+    },
+    {
+      "type": "text",
+      "id": "t_barber",
+      "label": "Team / Barbers — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_medium_to_longer_hair_utah_c",
+      "label": "Team / Barbers — Text: Medium to longer hair. Utah County local",
+      "default": "Medium to longer hair. Utah County local."
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_connor",
+      "label": "Team / Barbers — Link text: BOOK WITH CONNOR",
+      "default": "BOOK WITH CONNOR"
+    },
+    {
+      "type": "text",
+      "id": "t_see_connor_s_page",
+      "label": "Team / Barbers — Link text: SEE CONNOR’S PAGE",
+      "default": "SEE CONNOR’S PAGE"
+    },
+    {
+      "type": "text",
+      "id": "t_elise",
+      "label": "Team / Barbers — Heading: Elise",
+      "default": "Elise"
+    },
+    {
+      "type": "text",
+      "id": "t_barber_2",
+      "label": "Team / Barbers — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_curly_hair_medium_length_and",
+      "label": "Team / Barbers — Text: Curly hair, medium-length and flow cuts.",
+      "default": "Curly hair, medium-length and flow cuts."
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_elise",
+      "label": "Team / Barbers — Link text: BOOK WITH ELISE",
+      "default": "BOOK WITH ELISE"
+    },
+    {
+      "type": "text",
+      "id": "t_see_elise_s_page",
+      "label": "Team / Barbers — Link text: SEE ELISE’S PAGE",
+      "default": "SEE ELISE’S PAGE"
+    },
+    {
+      "type": "header",
+      "content": "Text: Team / Not sure"
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_who_to_book",
+      "label": "Team / Not sure — Heading: Not sure who to book?",
+      "default": "Not sure who to book?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_book_whoever_has_a_time_that",
+      "label": "Team / Not sure — Text: Book whoever has a time that works. Ever",
+      "default": "Book whoever has a time that works. Every barber here can cut your hair and will tell you if someone else suits it better."
+    },
+    {
+      "type": "text",
+      "id": "t_read_how_broken_arrow_came_t",
+      "label": "Team / Not sure — Link text: Read how Broken Arrow came together →",
+      "default": "Read how Broken Arrow came together →"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Team / Not sure — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    }
+  ]
+}
+{% endschema %}

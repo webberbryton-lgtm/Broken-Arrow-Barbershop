@@ -1,0 +1,404 @@
+{%- comment -%} Generated from the Claude Design page "Wholesale". {%- endcomment -%}
+<style>
+.ba-page[data-ba-page="wholesale"] :is(ul, ol) { margin: 0; }
+#BaWholesaleLogin, #BaWholesaleApply { display: block; }
+</style>
+<div class="ba-page" data-ba-page="wholesale" data-ba-active="wholesale">
+<section data-screen-label="Wholesale / Hero" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: flex-end;">
+<div style="flex: 1.2 1 460px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_grooming_wholes | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(48px, 7vw, 92px), 11vw); letter-spacing: -0.045em; line-height: 0.92; max-width: 11ch;">{{ section.settings.t_stock_what_we_use_in_the_cha | escape }}</h1>
+<p style="max-width: 520px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_wholesale_is_for_industry_pr | escape }}</p>
+</div>
+<ul style="flex: 1 1 320px; list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--on-band);">
+<li style="display: grid; grid-template-columns: 48px minmax(0px, 1fr); gap: 12px; padding: 18px 0px; border-bottom: 1px solid var(--line-strong);"><span class="ba-label" style="color: var(--on-band); opacity: 0.78; padding-top: 3px;">{{ section.settings.t_01 | escape }}</span><span style="font-size: 17px; line-height: 26px;">{{ section.settings.t_apply_with_your_ein_or_licen | escape }}</span></li>
+<li style="display: grid; grid-template-columns: 48px minmax(0px, 1fr); gap: 12px; padding: 18px 0px; border-bottom: 1px solid var(--line-strong);"><span class="ba-label" style="color: var(--on-band); opacity: 0.78; padding-top: 3px;">{{ section.settings.t_02 | escape }}</span><span style="font-size: 17px; line-height: 26px;">{{ section.settings.t_we_review_it_and_email_you_w | escape }}</span></li>
+<li style="display: grid; grid-template-columns: 48px minmax(0px, 1fr); gap: 12px; padding: 18px 0px; border-bottom: 1px solid var(--line-strong);"><span class="ba-label" style="color: var(--on-band); opacity: 0.78; padding-top: 3px;">{{ section.settings.t_03 | escape }}</span><span style="font-size: 17px; line-height: 26px;">{{ section.settings.t_sign_in_and_order_in_packs_o | escape }}</span></li>
+</ul>
+</div></section><section data-screen-label="Wholesale / Access" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 56px clamp(40px, 6vw, 96px); align-items: flex-start;">{%- if customer -%}
+  <div style="flex:1 1 340px;min-width:0;max-width:720px;display:flex;flex-direction:column;gap:20px;border-top:2px solid var(--ink);padding-top:28px">
+    <p class="ba-label">Signed in as {{ customer.email }}</p>
+    {%- if customer.tags contains 'wholesale' -%}
+      <h2 class="ba-display" style="font-size:clamp(32px,3.6vw,44px)">Your wholesale account is ready.</h2>
+      <div><a class="ba-btn ba-btn-primary" href="/pages/wholesale-shop">GO TO THE WHOLESALE SHOP</a></div>
+    {%- else -%}
+      <h2 class="ba-display" style="font-size:clamp(32px,3.6vw,44px)">Your application is being reviewed.</h2>
+      <p style="font-size:17px;line-height:28px">We’ll email you when your account is approved.</p>
+    {%- endif -%}
+    <p style="font-size:15px;line-height:24px"><a href="{{ routes.account_logout_url }}">Sign out</a></p>
+  </div>
+{%- else -%}
+<div style="flex: 1 1 340px; min-width: 0px; max-width: 440px; display: flex; flex-direction: column; gap: 28px; border-top: 2px solid var(--ink); padding-top: 28px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<p class="ba-label">{{ section.settings.t_approved_accounts | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(32px, 3.6vw, 44px);">{{ section.settings.t_sign_in | escape }}</h2>
+</div>
+{%- form 'customer_login', return_to: '/pages/wholesale-shop', id: 'BaWholesaleLogin' -%}{{ form.errors | default_errors }}<div data-ba-form-body="BaWholesaleLogin" style="display: flex; flex-direction: column; gap: 24px;">
+<div class="ba-field"><label class="ba-field-label" for="ba-f1">Email</label><input autocomplete="username" class="ba-field-input" id="ba-f1" name="customer[email]" type="email" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f2">Password</label><input autocomplete="current-password" class="ba-field-input" id="ba-f2" name="customer[password]" type="password" value=""/></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+<button class="ba-btn ba-btn-primary" type="submit">{{ section.settings.t_sign_in_2 | escape }}</button>
+<a href="{{ routes.account_login_url }}#recover" style="font-size: 15px; line-height: 24px;">{{ section.settings.t_forgot_your_password | escape }}</a>
+</div>
+</div>{%- endform -%}
+<p style="font-size: 15px; line-height: 24px; border-top: 1px solid var(--line); padding-top: 20px;">Don’t have an account? <a href="#apply">{{ section.settings.t_apply_today | escape }}</a></p>
+</div>
+<div id="apply" style="flex: 1.6 1 480px; min-width: 0px; max-width: 720px; display: flex; flex-direction: column; gap: 28px; border-top: 2px solid var(--ink); padding-top: 28px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<p class="ba-label">{{ section.settings.t_new_to_wholesale | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(32px, 3.6vw, 44px);">{{ section.settings.t_apply_for_a_wholesale_accoun | escape }}</h2>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_required_fields_are_marked | escape }}</p>
+</div>
+<div data-ba-done="" hidden="" style="display:flex;flex-direction:column;gap:16px;background:var(--canvas-sunk);padding:28px"><p class="ba-label">{{ section.settings.t_application_received | escape }}</p><p style="font:800 clamp(24px,2.6vw,32px)/1.1 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Thanks, <span data-ba-first="">{{ section.settings.t_there | escape }}</span>.</p><p style="font-size:17px;line-height:28px;text-wrap:pretty">We’ll check your <span data-ba-cred-name="">{{ section.settings.t_license | escape }}</span> and email <span data-ba-applied-email="">{{ section.settings.t_you | escape }}</span> when your account is approved. You can sign in with the password you just created once it is.</p></div>{%- form 'create_customer', return_to: '/pages/wholesale?applied=1', id: 'BaWholesaleApply' -%}{{ form.errors | default_errors }}<div data-ba-form-body="BaWholesaleApply" style="display: flex; flex-direction: column; gap: 28px;"><input name="customer[tags]" type="hidden" value="wholesale-pending"/><input name="customer[accepts_marketing]" type="hidden" value="false"/><input name="customer[first_name]" type="hidden" value=""/><input name="customer[last_name]" type="hidden" value=""/>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 24px;">
+<div class="ba-field"><label class="ba-field-label" for="ba-f3">Business name<span aria-hidden="true" class="ba-field-req">*</span></label><input class="ba-field-input" id="ba-f3" name="customer[note][Business name]" required="" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f4">Your name<span aria-hidden="true" class="ba-field-req">*</span></label><input class="ba-field-input" id="ba-f4" name="ba_name" required="" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f5">Email<span aria-hidden="true" class="ba-field-req">*</span></label><input class="ba-field-input" id="ba-f5" name="customer[email]" required="" type="email" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f6">Phone<span aria-hidden="true" class="ba-field-req">*</span></label><input class="ba-field-input" id="ba-f6" name="customer[note][Phone]" required="" type="tel" value=""/></div>
+</div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f7">Business address<span aria-hidden="true" class="ba-field-req">*</span></label><p class="ba-field-hint" id="ba-f7-hint">{{ section.settings.t_street_city_state_and_zip | escape }}</p><input aria-describedby="ba-f7-hint" class="ba-field-input" id="ba-f7" name="customer[note][Business address]" required="" value=""/></div>
+<fieldset style="display: flex; flex-direction: column;">
+<legend class="ba-field-label" style="margin-bottom: 12px;">What kind of business is it?<span class="ba-field-req">*</span></legend>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); column-gap: 24px;">
+<label class="ba-check ba-check-radio"><input name="customer[note][Business type]" type="radio" value="Barbershop"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_barbershop | escape }}</span></label>
+<label class="ba-check ba-check-radio"><input name="customer[note][Business type]" type="radio" value="Salon"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_salon | escape }}</span></label>
+<label class="ba-check ba-check-radio"><input name="customer[note][Business type]" type="radio" value="Independent barber or stylist"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_independent_barber_or_stylis | escape }}</span></label>
+<label class="ba-check ba-check-radio"><input name="customer[note][Business type]" type="radio" value="Retail store"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_retail_store | escape }}</span></label>
+</div>
+</fieldset>
+<fieldset data-ba-cred="" style="display: flex; flex-direction: column; gap: 20px; background: var(--canvas-sunk); padding: 24px;">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<legend class="ba-field-label">Professional credential<span class="ba-field-req">*</span></legend>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_wholesale_is_only_for_indust | escape }}</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); column-gap: 24px;">
+<label class="ba-check ba-check-radio"><input data-cred="ein" name="customer[note][Credential type]" type="radio" value="EIN"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_ein | escape }}</span></label>
+<label class="ba-check ba-check-radio"><input checked="" data-cred="barber" name="customer[note][Credential type]" type="radio" value="Barber license"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_barber_license | escape }}</span></label>
+<label class="ba-check ba-check-radio"><input data-cred="cosmo" name="customer[note][Credential type]" type="radio" value="Cosmetology license"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_cosmetology_license | escape }}</span></label>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 24px;">
+<div class="ba-field" data-ba-credfield=""><label class="ba-field-label" for="ba-f8">Barber license number<span aria-hidden="true" class="ba-field-req">*</span></label><p class="ba-field-hint" id="ba-f8-hint">{{ section.settings.t_as_it_appears_on_your_licens | escape }}</p><input aria-describedby="ba-f8-hint" class="ba-field-input" id="ba-f8" name="customer[note][Credential number]" required="" value=""/></div>
+<div class="ba-field" data-ba-statefield=""><label class="ba-field-label" for="ba-f9">Issuing state<span aria-hidden="true" class="ba-field-req">*</span></label><p class="ba-field-hint" id="ba-f9-hint">{{ section.settings.t_the_state_that_issued_your_l | escape }}</p><input aria-describedby="ba-f9-hint" class="ba-field-input" id="ba-f9" name="customer[note][License state]" required="" value=""/></div>
+</div>
+<div class="ba-field" style="display: flex; flex-direction: column; gap: 8px;">
+<label class="ba-field-label" for="cred-file">Upload a copy <span style="font-weight: 400; text-transform: none; letter-spacing: 0px; color: var(--ink-muted);">{{ section.settings.t_optional | escape }}</span></label>
+<p class="ba-field-hint">{{ section.settings.t_a_photo_or_pdf_of_your_licen | escape }}</p>
+<input accept="image/*,.pdf" id="cred-file" style="font: 400 15px/24px var(--font-sans); color: var(--ink); padding: 12px; background: var(--canvas); border: 1px solid var(--line-strong); border-radius: 2px; min-height: 56px;" type="file"/>
+</div>
+</fieldset>
+<fieldset style="display: flex; flex-direction: column;">
+<legend class="ba-field-label" style="margin-bottom: 12px;">Which products are you interested in?</legend>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); column-gap: 24px;">
+<label class="ba-check"><input name="customer[note][Interested in 1]" type="checkbox" value="Hair Clay"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_hair_clay | escape }}</span></label>
+<label class="ba-check"><input name="customer[note][Interested in 2]" type="checkbox" value="Cream"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_cream | escape }}</span></label>
+<label class="ba-check"><input name="customer[note][Interested in 3]" type="checkbox" value="Sea Salt Spray"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_sea_salt_spray | escape }}</span></label>
+<label class="ba-check"><input name="customer[note][Interested in 4]" type="checkbox" value="Shampoo"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_shampoo | escape }}</span></label>
+<label class="ba-check"><input name="customer[note][Interested in 5]" type="checkbox" value="Conditioner"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_conditioner | escape }}</span></label>
+<label class="ba-check"><input name="customer[note][Interested in 6]" type="checkbox" value="Aftershave"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_aftershave | escape }}</span></label>
+<label class="ba-check"><input name="customer[note][Interested in 7]" type="checkbox" value="Refuge"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_refuge | escape }}</span></label>
+</div>
+</fieldset>
+<div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--line); padding-top: 24px;">
+<p class="ba-label">{{ section.settings.t_create_your_sign_in | escape }}</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 24px;">
+<div class="ba-field"><label class="ba-field-label" for="ba-f10">Password<span aria-hidden="true" class="ba-field-req">*</span></label><p class="ba-field-hint" id="ba-f10-hint">{{ section.settings.t_at_least_8_characters | escape }}</p><input aria-describedby="ba-f10-hint" autocomplete="new-password" class="ba-field-input" id="ba-f10" name="customer[password]" required="" type="password" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f11">Confirm password<span aria-hidden="true" class="ba-field-req">*</span></label><input autocomplete="new-password" class="ba-field-input" id="ba-f11" name="ba_confirm" required="" type="password" value=""/></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<label class="ba-check"><input name="customer[note][Agreed to packs of 6]" type="checkbox" value="Yes"/><span aria-hidden="true" class="ba-check-box"></span><span>{{ section.settings.t_i_understand_wholesale_order | escape }}</span></label>
+</div>
+<div><button class="ba-btn ba-btn-primary" type="submit">{{ section.settings.t_submit_application | escape }}</button></div>
+</div>{%- endform -%}
+</div>{%- endif -%}</section>
+</div>
+<script src="{{ 'ba-form-kit.js' | asset_url }}" defer></script>
+<script src="{{ 'ba-wholesale.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Wholesale",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text: Wholesale / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_grooming_wholes",
+      "label": "Wholesale / Hero — Text: Broken Arrow Grooming · Wholesale",
+      "default": "Broken Arrow Grooming · Wholesale"
+    },
+    {
+      "type": "text",
+      "id": "t_stock_what_we_use_in_the_cha",
+      "label": "Wholesale / Hero — Heading: Stock what we use in the chair.",
+      "default": "Stock what we use in the chair."
+    },
+    {
+      "type": "textarea",
+      "id": "t_wholesale_is_for_industry_pr",
+      "label": "Wholesale / Hero — Text: Wholesale is for industry professionals ",
+      "default": "Wholesale is for industry professionals only. Apply with your EIN, barber license or cosmetology license. Once you’re approved, sign in to see pricing and order."
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Wholesale / Hero — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_with_your_ein_or_licen",
+      "label": "Wholesale / Hero — Text: Apply with your EIN or license.",
+      "default": "Apply with your EIN or license."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Wholesale / Hero — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_we_review_it_and_email_you_w",
+      "label": "Wholesale / Hero — Text: We review it and email you when your acc",
+      "default": "We review it and email you when your account is approved."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Wholesale / Hero — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_sign_in_and_order_in_packs_o",
+      "label": "Wholesale / Hero — Text: Sign in and order in packs of 6. Six uni",
+      "default": "Sign in and order in packs of 6. Six units minimum per product."
+    },
+    {
+      "type": "header",
+      "content": "Text: Wholesale / Access"
+    },
+    {
+      "type": "text",
+      "id": "t_approved_accounts",
+      "label": "Wholesale / Access — Text: Approved accounts",
+      "default": "Approved accounts"
+    },
+    {
+      "type": "text",
+      "id": "t_sign_in",
+      "label": "Wholesale / Access — Heading: Sign in",
+      "default": "Sign in"
+    },
+    {
+      "type": "text",
+      "id": "t_sign_in_2",
+      "label": "Wholesale / Access — Text: SIGN IN",
+      "default": "SIGN IN"
+    },
+    {
+      "type": "text",
+      "id": "t_forgot_your_password",
+      "label": "Wholesale / Access — Link text: Forgot your password?",
+      "default": "Forgot your password?"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_today",
+      "label": "Wholesale / Access — Link text: Apply today →",
+      "default": "Apply today →"
+    },
+    {
+      "type": "text",
+      "id": "t_new_to_wholesale",
+      "label": "Wholesale / Access — Text: New to wholesale",
+      "default": "New to wholesale"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_wholesale_accoun",
+      "label": "Wholesale / Access — Heading: Apply for a wholesale account",
+      "default": "Apply for a wholesale account"
+    },
+    {
+      "type": "text",
+      "id": "t_required_fields_are_marked",
+      "label": "Wholesale / Access — Text: Required fields are marked *",
+      "default": "Required fields are marked *"
+    },
+    {
+      "type": "text",
+      "id": "t_application_received",
+      "label": "Wholesale / Access — Text: Application received",
+      "default": "Application received"
+    },
+    {
+      "type": "text",
+      "id": "t_there",
+      "label": "Wholesale / Access — Text: there",
+      "default": "there"
+    },
+    {
+      "type": "text",
+      "id": "t_license",
+      "label": "Wholesale / Access — Text: license",
+      "default": "license"
+    },
+    {
+      "type": "text",
+      "id": "t_you",
+      "label": "Wholesale / Access — Text: you",
+      "default": "you"
+    },
+    {
+      "type": "text",
+      "id": "t_street_city_state_and_zip",
+      "label": "Wholesale / Access — Text: Street, city, state and ZIP.",
+      "default": "Street, city, state and ZIP."
+    },
+    {
+      "type": "text",
+      "id": "t_barbershop",
+      "label": "Wholesale / Access — Text: Barbershop",
+      "default": "Barbershop"
+    },
+    {
+      "type": "text",
+      "id": "t_salon",
+      "label": "Wholesale / Access — Text: Salon",
+      "default": "Salon"
+    },
+    {
+      "type": "text",
+      "id": "t_independent_barber_or_stylis",
+      "label": "Wholesale / Access — Text: Independent barber or stylist",
+      "default": "Independent barber or stylist"
+    },
+    {
+      "type": "text",
+      "id": "t_retail_store",
+      "label": "Wholesale / Access — Text: Retail store",
+      "default": "Retail store"
+    },
+    {
+      "type": "text",
+      "id": "t_wholesale_is_only_for_indust",
+      "label": "Wholesale / Access — Text: Wholesale is only for industry professio",
+      "default": "Wholesale is only for industry professionals. Give us one of these so we can verify you."
+    },
+    {
+      "type": "text",
+      "id": "t_ein",
+      "label": "Wholesale / Access — Text: EIN",
+      "default": "EIN"
+    },
+    {
+      "type": "text",
+      "id": "t_barber_license",
+      "label": "Wholesale / Access — Text: Barber license",
+      "default": "Barber license"
+    },
+    {
+      "type": "text",
+      "id": "t_cosmetology_license",
+      "label": "Wholesale / Access — Text: Cosmetology license",
+      "default": "Cosmetology license"
+    },
+    {
+      "type": "text",
+      "id": "t_as_it_appears_on_your_licens",
+      "label": "Wholesale / Access — Text: As it appears on your license.",
+      "default": "As it appears on your license."
+    },
+    {
+      "type": "text",
+      "id": "t_the_state_that_issued_your_l",
+      "label": "Wholesale / Access — Text: The state that issued your license.",
+      "default": "The state that issued your license."
+    },
+    {
+      "type": "text",
+      "id": "t_optional",
+      "label": "Wholesale / Access — Text: (optional)",
+      "default": "(optional)"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_photo_or_pdf_of_your_licen",
+      "label": "Wholesale / Access — Text: A photo or PDF of your license or EIN le",
+      "default": "A photo or PDF of your license or EIN letter speeds up approval. Reply to the email we send you with the file attached."
+    },
+    {
+      "type": "text",
+      "id": "t_hair_clay",
+      "label": "Wholesale / Access — Text: Hair Clay",
+      "default": "Hair Clay"
+    },
+    {
+      "type": "text",
+      "id": "t_cream",
+      "label": "Wholesale / Access — Text: Cream",
+      "default": "Cream"
+    },
+    {
+      "type": "text",
+      "id": "t_sea_salt_spray",
+      "label": "Wholesale / Access — Text: Sea Salt Spray",
+      "default": "Sea Salt Spray"
+    },
+    {
+      "type": "text",
+      "id": "t_shampoo",
+      "label": "Wholesale / Access — Text: Shampoo",
+      "default": "Shampoo"
+    },
+    {
+      "type": "text",
+      "id": "t_conditioner",
+      "label": "Wholesale / Access — Text: Conditioner",
+      "default": "Conditioner"
+    },
+    {
+      "type": "text",
+      "id": "t_aftershave",
+      "label": "Wholesale / Access — Text: Aftershave",
+      "default": "Aftershave"
+    },
+    {
+      "type": "text",
+      "id": "t_refuge",
+      "label": "Wholesale / Access — Text: Refuge",
+      "default": "Refuge"
+    },
+    {
+      "type": "text",
+      "id": "t_create_your_sign_in",
+      "label": "Wholesale / Access — Text: Create your sign-in",
+      "default": "Create your sign-in"
+    },
+    {
+      "type": "text",
+      "id": "t_at_least_8_characters",
+      "label": "Wholesale / Access — Text: At least 8 characters.",
+      "default": "At least 8 characters."
+    },
+    {
+      "type": "textarea",
+      "id": "t_i_understand_wholesale_order",
+      "label": "Wholesale / Access — Text: I understand wholesale orders are sold i",
+      "default": "I understand wholesale orders are sold in packs of 6, with a minimum of 6 units per product. *"
+    },
+    {
+      "type": "text",
+      "id": "t_submit_application",
+      "label": "Wholesale / Access — Text: SUBMIT APPLICATION",
+      "default": "SUBMIT APPLICATION"
+    }
+  ]
+}
+{% endschema %}

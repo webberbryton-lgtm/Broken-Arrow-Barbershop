@@ -1,0 +1,448 @@
+{%- comment -%} Generated from the Claude Design page "About". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_payson_storefront != blank
+  assign img_payson_storefront = section.settings.img_payson_storefront | image_url: width: 2400
+else
+  assign img_payson_storefront = 'ba-payson-storefront.webp' | asset_url
+endif
+if section.settings.img_payson_lounge != blank
+  assign img_payson_lounge = section.settings.img_payson_lounge | image_url: width: 2400
+else
+  assign img_payson_lounge = 'ba-payson-lounge.webp' | asset_url
+endif
+if section.settings.img_payson_floor != blank
+  assign img_payson_floor = section.settings.img_payson_floor | image_url: width: 2400
+else
+  assign img_payson_floor = 'ba-payson-floor.webp' | asset_url
+endif
+if section.settings.img_payson_cut_pomp != blank
+  assign img_payson_cut_pomp = section.settings.img_payson_cut_pomp | image_url: width: 2400
+else
+  assign img_payson_cut_pomp = 'ba-payson-cut-pomp.webp' | asset_url
+endif
+if section.settings.img_payson_cut_mullet != blank
+  assign img_payson_cut_mullet = section.settings.img_payson_cut_mullet | image_url: width: 2400
+else
+  assign img_payson_cut_mullet = 'ba-payson-cut-mullet.webp' | asset_url
+endif
+if section.settings.img_bryton_teaching != blank
+  assign img_bryton_teaching = section.settings.img_bryton_teaching | image_url: width: 2400
+else
+  assign img_bryton_teaching = 'ba-bryton-teaching.webp' | asset_url
+endif
+if section.settings.img_shop_wide != blank
+  assign img_shop_wide = section.settings.img_shop_wide | image_url: width: 2400
+else
+  assign img_shop_wide = 'ba-shop-wide.webp' | asset_url
+endif
+if section.settings.img_bryton_hair_system != blank
+  assign img_bryton_hair_system = section.settings.img_bryton_hair_system | image_url: width: 2400
+else
+  assign img_bryton_hair_system = 'ba-bryton-hair-system.webp' | asset_url
+endif
+if section.settings.img_cut_textured_flow != blank
+  assign img_cut_textured_flow = section.settings.img_cut_textured_flow | image_url: width: 2400
+else
+  assign img_cut_textured_flow = 'ba-cut-textured-flow.webp' | asset_url
+endif
+if section.settings.img_cut_side_part != blank
+  assign img_cut_side_part = section.settings.img_cut_side_part | image_url: width: 2400
+else
+  assign img_cut_side_part = 'ba-cut-side-part.webp' | asset_url
+endif
+if section.settings.img_cut_curly_taper != blank
+  assign img_cut_curly_taper = section.settings.img_cut_curly_taper | image_url: width: 2400
+else
+  assign img_cut_curly_taper = 'ba-cut-curly-taper.webp' | asset_url
+endif
+-%}
+<div class="ba-page" data-ba-page="about" data-ba-active="about">
+<header data-screen-label="About / Hero" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(64px, 10vw, 140px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 28px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_about_us_payson_to_orem | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(48px, 8vw, 104px), 12vw); letter-spacing: -0.045em; line-height: 0.92; max-width: 12ch;">{{ section.settings.t_a_barbershop_first | escape }}</h1>
+<p style="max-width: 620px; font-size: clamp(18px, 1.8vw, 22px); line-height: 1.6; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_broken_arrow_is_a_small_loca | escape }}</p>
+</div>
+<figure style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 12px;">
+<img alt="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" loading="lazy" src="{{ img_shop_interior }}" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; opacity: 0.78;">{{ section.settings.t_the_orem_shop_today | escape }}</figcaption>
+</figure></header><section data-screen-label="About / Intro" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_who_we_are | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_broken_arrow_was_founded_by_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_today_we_re_three_barbers_in | escape }}</p>
+</div></section><section data-screen-label="About / 01 Payson" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<figure style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<img alt="The original Broken Arrow Barbershop storefront on Main Street in Payson" loading="lazy" src="{{ img_payson_storefront }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_our_first_shop_5_n_main_pays | escape }}</figcaption>
+</figure>
+<div style="flex: 1 1 440px; max-width: 620px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_01_payson | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 14ch;">{{ section.settings.t_where_it_started | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_bryton_opened_broken_arrow_i | escape }}</p>
+</div>
+</div></section><figure data-screen-label="About / Payson photos" style="background: var(--canvas-sunk); margin: 0px;">
+<div style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 4px;">
+<img alt="Waiting area of the Payson shop with guitars and leather chairs" loading="lazy" src="{{ img_payson_lounge }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="The Payson shop floor with a red barber chair" loading="lazy" src="{{ img_payson_floor }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="Skin fade with a slicked-back top and full beard, cut in Payson" loading="lazy" src="{{ img_payson_cut_pomp }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="Textured modern mullet with a taper, cut in Payson" loading="lazy" src="{{ img_payson_cut_mullet }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+</div></figure><section data-screen-label="About / 02 Teaching" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap-reverse; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<div style="flex: 1 1 440px; max-width: 620px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_02_the_team | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 14ch;">{{ section.settings.t_trained_here | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_bryton_taught_hundreds_of_st | escape }}</p>
+<a href="/pages/team" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_meet_the_team | escape }}</a>
+</div>
+<figure style="flex: 1.2 1 460px; display: flex; flex-direction: column; gap: 12px;">
+<img alt="Bryton teaching a class of barber students" loading="lazy" src="{{ img_bryton_teaching }}" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_bryton_teaching_barbers | escape }}</figcaption>
+</figure></section><section data-screen-label="About / 03 Orem" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<figure style="flex: 1.2 1 460px; display: flex; flex-direction: column; gap: 12px;">
+<img alt="Wide view of Broken Arrow Barbershop in Orem" loading="lazy" src="{{ img_shop_wide }}" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; opacity: 0.78;">{{ section.settings.t_375_e_800_s_suite_12_orem | escape }}</figcaption>
+</figure>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_03_orem | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(32px, 4vw, 48px); max-width: 14ch;">{{ section.settings.t_a_new_chapter | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_the_shop_moved_to_a_bigger_s | escape }}</p>
+</div>
+</div></section><section data-screen-label="About / 04 Hair loss" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<figure style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<img alt="Bryton fitting a hair system" loading="lazy" src="{{ img_bryton_hair_system }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_bryton_does_every_hair_syste | escape }}</figcaption>
+</figure>
+<div style="flex: 1 1 440px; max-width: 620px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_04_hair_loss | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 14ch;">{{ section.settings.t_more_than_haircuts | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_help_men_with_thinning_ha | escape }}</p>
+<a href="/pages/hair-replacement" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_hair_replacement | escape }}</a>
+</div></section><figure data-screen-label="About / Work" style="margin: 0px; background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 4px;">
+<img alt="A textured flow haircut" loading="lazy" src="{{ img_cut_textured_flow }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="A side part haircut" loading="lazy" src="{{ img_cut_side_part }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="Curly hair with a taper" loading="lazy" src="{{ img_cut_curly_taper }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+</div></figure><section data-screen-label="About / Story" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px;">
+<p class="ba-label">{{ section.settings.t_the_full_story | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(36px, 5vw, 64px); max-width: 14ch;">{{ section.settings.t_from_payson_to_orem | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_how_a_small_shop_in_payson_b | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-secondary" href="/pages/broken-arrow-barbershop-story">{{ section.settings.t_read_our_story | escape }}</a>
+</div></section><section data-screen-label="About / Book band" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(48px, 7vw, 88px); max-width: 8ch;">{{ section.settings.t_book_a_haircut | escape }}</h2>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now | escape }}</a>
+</div></section>
+</div>
+{% schema %}
+{
+  "name": "About",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "About / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_storefront",
+      "label": "About / 01 Payson — photo (payson-storefront.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_lounge",
+      "label": "About / Payson photos — photo (payson-lounge.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_floor",
+      "label": "About / Payson photos — photo (payson-floor.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_cut_pomp",
+      "label": "About / Payson photos — photo (payson-cut-pomp.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_cut_mullet",
+      "label": "About / Payson photos — photo (payson-cut-mullet.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_teaching",
+      "label": "About / 02 Teaching — photo (bryton-teaching.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_wide",
+      "label": "About / 03 Orem — photo (shop-wide.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_hair_system",
+      "label": "About / 04 Hair loss — photo (bryton-hair-system.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_textured_flow",
+      "label": "About / Work — photo (cut-textured-flow.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_side_part",
+      "label": "About / Work — photo (cut-side-part.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_curly_taper",
+      "label": "About / Work — photo (cut-curly-taper.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: About / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_about_us_payson_to_orem",
+      "label": "About / Hero — Text: About us · Payson to Orem",
+      "default": "About us · Payson to Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_a_barbershop_first",
+      "label": "About / Hero — Heading: A barbershop first.",
+      "default": "A barbershop first."
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_is_a_small_loca",
+      "label": "About / Hero — Text: Broken Arrow is a small, locally owned m",
+      "default": "Broken Arrow is a small, locally owned men’s barbershop in Orem, Utah. We take the time to understand your hair before we cut it."
+    },
+    {
+      "type": "text",
+      "id": "t_the_orem_shop_today",
+      "label": "About / Hero — Text: The Orem shop today.",
+      "default": "The Orem shop today."
+    },
+    {
+      "type": "header",
+      "content": "Text: About / Intro"
+    },
+    {
+      "type": "text",
+      "id": "t_who_we_are",
+      "label": "About / Intro — Text: Who we are",
+      "default": "Who we are"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_was_founded_by_",
+      "label": "About / Intro — Text: Broken Arrow was founded by Bryton Webbe",
+      "default": "Broken Arrow was founded by Bryton Webber, a licensed barber and licensed barber instructor. It started small, in Payson, and grew one client at a time."
+    },
+    {
+      "type": "textarea",
+      "id": "t_today_we_re_three_barbers_in",
+      "label": "About / Intro — Text: Today we’re three barbers in Orem: Bryto",
+      "default": "Today we’re three barbers in Orem: Bryton, Connor and Elise. We cut fades, tapers, scissor cuts and longer styles, and we specialize in haircuts for thinning hair and non-surgical hair replacement."
+    },
+    {
+      "type": "header",
+      "content": "Text: About / 01 Payson"
+    },
+    {
+      "type": "text",
+      "id": "t_our_first_shop_5_n_main_pays",
+      "label": "About / 01 Payson — Text: Our first shop, 5 N. Main, Payson, Utah.",
+      "default": "Our first shop, 5 N. Main, Payson, Utah."
+    },
+    {
+      "type": "text",
+      "id": "t_01_payson",
+      "label": "About / 01 Payson — Text: 01 / Payson",
+      "default": "01 / Payson"
+    },
+    {
+      "type": "text",
+      "id": "t_where_it_started",
+      "label": "About / 01 Payson — Heading: Where it started",
+      "default": "Where it started"
+    },
+    {
+      "type": "textarea",
+      "id": "t_bryton_opened_broken_arrow_i",
+      "label": "About / 01 Payson — Text: Bryton opened Broken Arrow in Payson in ",
+      "default": "Bryton opened Broken Arrow in Payson in 2022. The reputation came slowly: clients who came back, people who told their friends, and more than 240 Google reviews by the time the shop moved."
+    },
+    {
+      "type": "header",
+      "content": "Text: About / 02 Teaching"
+    },
+    {
+      "type": "text",
+      "id": "t_02_the_team",
+      "label": "About / 02 Teaching — Text: 02 / The team",
+      "default": "02 / The team"
+    },
+    {
+      "type": "text",
+      "id": "t_trained_here",
+      "label": "About / 02 Teaching — Heading: Trained here",
+      "default": "Trained here"
+    },
+    {
+      "type": "textarea",
+      "id": "t_bryton_taught_hundreds_of_st",
+      "label": "About / 02 Teaching — Text: Bryton taught hundreds of students at Pa",
+      "default": "Bryton taught hundreds of students at Paul Mitchell The School Provo, including Connor and Elise before they joined the shop. The same habits go into every cut: read the hair, make the call, explain it."
+    },
+    {
+      "type": "text",
+      "id": "t_meet_the_team",
+      "label": "About / 02 Teaching — Link text: Meet the team →",
+      "default": "Meet the team →"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_teaching_barbers",
+      "label": "About / 02 Teaching — Text: Bryton teaching barbers.",
+      "default": "Bryton teaching barbers."
+    },
+    {
+      "type": "header",
+      "content": "Text: About / 03 Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_375_e_800_s_suite_12_orem",
+      "label": "About / 03 Orem — Text: 375 E 800 S, Suite 12, Orem.",
+      "default": "375 E 800 S, Suite 12, Orem."
+    },
+    {
+      "type": "text",
+      "id": "t_03_orem",
+      "label": "About / 03 Orem — Text: 03 / Orem",
+      "default": "03 / Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_a_new_chapter",
+      "label": "About / 03 Orem — Heading: A new chapter",
+      "default": "A new chapter"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_shop_moved_to_a_bigger_s",
+      "label": "About / 03 Orem — Text: The shop moved to a bigger space in Orem",
+      "default": "The shop moved to a bigger space in Orem, and plenty of Payson clients still make the drive. Daily Herald readers have voted us Best Barbershop in Utah Valley in 2023, 2024 and 2026."
+    },
+    {
+      "type": "header",
+      "content": "Text: About / 04 Hair loss"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_does_every_hair_syste",
+      "label": "About / 04 Hair loss — Text: Bryton does every hair system at the sho",
+      "default": "Bryton does every hair system at the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_04_hair_loss",
+      "label": "About / 04 Hair loss — Text: 04 / Hair loss",
+      "default": "04 / Hair loss"
+    },
+    {
+      "type": "text",
+      "id": "t_more_than_haircuts",
+      "label": "About / 04 Hair loss — Heading: More than haircuts",
+      "default": "More than haircuts"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_help_men_with_thinning_ha",
+      "label": "About / 04 Hair loss — Text: We help men with thinning hair and reced",
+      "default": "We help men with thinning hair and receding hairlines, first with the right haircut, and when that isn’t enough, with non-surgical hair systems that are color-matched and cut into your own hair."
+    },
+    {
+      "type": "text",
+      "id": "t_hair_replacement",
+      "label": "About / 04 Hair loss — Link text: Hair replacement →",
+      "default": "Hair replacement →"
+    },
+    {
+      "type": "header",
+      "content": "Text: About / Story"
+    },
+    {
+      "type": "text",
+      "id": "t_the_full_story",
+      "label": "About / Story — Text: The full story",
+      "default": "The full story"
+    },
+    {
+      "type": "text",
+      "id": "t_from_payson_to_orem",
+      "label": "About / Story — Heading: From Payson to Orem",
+      "default": "From Payson to Orem"
+    },
+    {
+      "type": "textarea",
+      "id": "t_how_a_small_shop_in_payson_b",
+      "label": "About / Story — Text: How a small shop in Payson became the Or",
+      "default": "How a small shop in Payson became the Orem shop, and how Bryton, Connor and Elise came together."
+    },
+    {
+      "type": "text",
+      "id": "t_read_our_story",
+      "label": "About / Story — Link text: READ OUR STORY",
+      "default": "READ OUR STORY"
+    },
+    {
+      "type": "header",
+      "content": "Text: About / Book band"
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_haircut",
+      "label": "About / Book band — Heading: Book a haircut.",
+      "default": "Book a haircut."
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "About / Book band — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    }
+  ]
+}
+{% endschema %}

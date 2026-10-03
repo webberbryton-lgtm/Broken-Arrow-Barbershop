@@ -1,0 +1,168 @@
+{%- comment -%} Generated from the Claude Design page "Learn". {%- endcomment -%}
+{%- liquid
+if section.settings.img_clay_card != blank
+  assign img_clay_card = section.settings.img_clay_card | image_url: width: 2400
+else
+  assign img_clay_card = 'ba-clay-card.webp' | asset_url
+endif
+-%}
+<style>
+.bah-learn-0:hover { color: var(--green) !important; }
+</style>
+<div class="ba-page" data-ba-page="learn" data-ba-active="learn">
+<section data-screen-label="Learn / Header" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px) 32px; display: flex; flex-wrap: wrap; gap: 24px 32px; align-items: flex-end;">
+<div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_broken_arrow_grooming_learn | escape }}</p>
+<h1 class="ba-display" style="font-size: min(clamp(52px, 8vw, 104px), 11vw); letter-spacing: -0.045em;">{{ section.settings.t_learn | escape }}</h1>
+<p style="max-width: 600px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_hair_guides_and_product_how_ | escape }}</p>
+</div>
+<div aria-label="Topics" data-ba-filter="pill" data-ba-filter-scope="" role="tablist" style="flex: 1 1 280px; display: flex; flex-wrap: wrap; gap: 8px;">
+<button aria-selected="true" data-ba-tab="all" role="tab" style="min-height: 44px; padding: 0px 16px; border: 1px solid var(--ink); background: var(--ink); color: var(--canvas); cursor: pointer; font: 600 12px/16px var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase;">{{ section.settings.t_all | escape }}</button>
+<button aria-selected="false" data-ba-tab="howto" role="tab" style="min-height: 44px; padding: 0px 16px; border: 1px solid var(--line-strong); background: transparent; color: var(--ink); cursor: pointer; font: 600 12px/16px var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase;">{{ section.settings.t_product_how_tos | escape }}</button>
+</div>
+</div></section><section data-screen-label="Learn / Grid" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px);">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 40px 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<a class="bah-learn-0" data-ba-cat="howto" href="/products/matte-clay#how-to-use" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--ink);">
+<div aria-label="How much matte clay to use" role="img" style="aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: none; background-size: cover; background-position: center center; display: flex; align-items: flex-end; padding: 12px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_photo_fingertip_of_clay_clos | escape }}</p></div>
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_product_how_to_3_min | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: balance;">{{ section.settings.t_how_much_matte_clay_to_use | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_less_than_you_think_a_finger | escape }}</p>
+</a>
+<a class="bah-learn-0" data-ba-cat="howto" href="/products/matte-clay#compare" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--ink);">
+<div aria-label="Clay or cream: which one is for you?" role="img" style='aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_clay_card }}"); background-size: cover; background-position: center center; display: flex; align-items: flex-end; padding: 12px;'></div>
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_product_how_to_3_min_2 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: balance;">{{ section.settings.t_clay_or_cream_which_one_is_f | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_hold_finish_and_hair_length_ | escape }}</p>
+</a>
+</div></section><section data-screen-label="Learn / Quiz band" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_not_sure_what_to_use | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 5.6vw, 72px);">{{ section.settings.t_take_the_product_quiz | escape }}</h2>
+</div>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="/pages/product-quiz">{{ section.settings.t_start_the_quiz | escape }}</a>
+</div></section>
+</div>
+<script src="{{ 'ba-filter.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Learn",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_clay_card",
+      "label": "Learn / Grid — photo (clay-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Learn / Header"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_grooming_learn",
+      "label": "Learn / Header — Text: Broken Arrow Grooming · Learn",
+      "default": "Broken Arrow Grooming · Learn"
+    },
+    {
+      "type": "text",
+      "id": "t_learn",
+      "label": "Learn / Header — Heading: Learn",
+      "default": "Learn"
+    },
+    {
+      "type": "textarea",
+      "id": "t_hair_guides_and_product_how_",
+      "label": "Learn / Header — Text: Hair guides and product how-tos from the",
+      "default": "Hair guides and product how-tos from the barbers who use these products in the chair every day."
+    },
+    {
+      "type": "text",
+      "id": "t_all",
+      "label": "Learn / Header — Text: All",
+      "default": "All"
+    },
+    {
+      "type": "text",
+      "id": "t_product_how_tos",
+      "label": "Learn / Header — Text: Product how-tos",
+      "default": "Product how-tos"
+    },
+    {
+      "type": "header",
+      "content": "Text: Learn / Grid"
+    },
+    {
+      "type": "text",
+      "id": "t_photo_fingertip_of_clay_clos",
+      "label": "Learn / Grid — Text: Photo: fingertip of clay, close-up",
+      "default": "Photo: fingertip of clay, close-up"
+    },
+    {
+      "type": "text",
+      "id": "t_product_how_to_3_min",
+      "label": "Learn / Grid — Text: Product how-to · 3 min",
+      "default": "Product how-to · 3 min"
+    },
+    {
+      "type": "text",
+      "id": "t_how_much_matte_clay_to_use",
+      "label": "Learn / Grid — Subheading: How much matte clay to use",
+      "default": "How much matte clay to use"
+    },
+    {
+      "type": "text",
+      "id": "t_less_than_you_think_a_finger",
+      "label": "Learn / Grid — Text: Less than you think. A fingertip, dry ha",
+      "default": "Less than you think. A fingertip, dry hair, back to front."
+    },
+    {
+      "type": "text",
+      "id": "t_product_how_to_3_min_2",
+      "label": "Learn / Grid — Text: Product how-to · 3 min",
+      "default": "Product how-to · 3 min"
+    },
+    {
+      "type": "text",
+      "id": "t_clay_or_cream_which_one_is_f",
+      "label": "Learn / Grid — Subheading: Clay or cream: which one is for you?",
+      "default": "Clay or cream: which one is for you?"
+    },
+    {
+      "type": "text",
+      "id": "t_hold_finish_and_hair_length_",
+      "label": "Learn / Grid — Text: Hold, finish and hair length, side by si",
+      "default": "Hold, finish and hair length, side by side."
+    },
+    {
+      "type": "header",
+      "content": "Text: Learn / Quiz band"
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_what_to_use",
+      "label": "Learn / Quiz band — Text: Not sure what to use?",
+      "default": "Not sure what to use?"
+    },
+    {
+      "type": "text",
+      "id": "t_take_the_product_quiz",
+      "label": "Learn / Quiz band — Heading: Take the product quiz.",
+      "default": "Take the product quiz."
+    },
+    {
+      "type": "text",
+      "id": "t_start_the_quiz",
+      "label": "Learn / Quiz band — Link text: START THE QUIZ",
+      "default": "START THE QUIZ"
+    }
+  ]
+}
+{% endschema %}

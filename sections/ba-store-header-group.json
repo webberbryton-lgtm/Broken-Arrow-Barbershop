@@ -1,0 +1,80 @@
+{
+  "type": "header",
+  "name": "BA store header",
+  "sections": {
+    "header": {
+      "type": "ba-store-header",
+      "blocks": {
+        "link_all": {
+          "type": "link",
+          "settings": {
+            "label": "Shop all",
+            "link": "/pages/shop",
+            "key": "all"
+          }
+        },
+        "link_grooming": {
+          "type": "link",
+          "settings": {
+            "label": "Grooming",
+            "link": "/pages/shop#shop",
+            "key": "grooming"
+          }
+        },
+        "link_quiz": {
+          "type": "link",
+          "settings": {
+            "label": "Product quiz",
+            "link": "/pages/product-quiz",
+            "key": "quiz"
+          }
+        },
+        "link_learn": {
+          "type": "link",
+          "settings": {
+            "label": "Education",
+            "link": "/pages/learn",
+            "key": "learn"
+          }
+        },
+        "link_wholesale": {
+          "type": "link",
+          "settings": {
+            "label": "Wholesale",
+            "link": "/pages/wholesale",
+            "key": "wholesale"
+          }
+        },
+        "link_about": {
+          "type": "link",
+          "settings": {
+            "label": "About",
+            "link": "/pages/grooming-about",
+            "key": "about"
+          }
+        },
+        "link_barbershop": {
+          "type": "link",
+          "settings": {
+            "label": "The barbershop",
+            "link": "/",
+            "key": "barbershop"
+          }
+        }
+      },
+      "block_order": [
+        "link_all",
+        "link_grooming",
+        "link_quiz",
+        "link_learn",
+        "link_wholesale",
+        "link_about",
+        "link_barbershop"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "header"
+  ]
+}

@@ -1,0 +1,131 @@
+{%- comment -%} Generated from the Claude Design page "Returns". {%- endcomment -%}
+<style>
+.ba-page[data-ba-page="returns"] :is(ul) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="returns">
+<section data-screen-label="Info / Header" style="background: var(--canvas-sunk); border-bottom: 1px solid var(--line);">
+<div style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_help | escape }}</p>
+<h1 class="ba-display" style="font-size: min(clamp(44px, 6.4vw, 80px), 11vw); letter-spacing: -0.045em;">{{ section.settings.t_returns_and_exchanges | escape }}</h1>
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_last_updated_september_26_20 | escape }}</p>
+</div></section><article data-screen-label="Info / Body" style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 40px;">
+<p style="font-size: clamp(19px, 1.9vw, 22px); line-height: 1.6; text-wrap: pretty;">{{ section.settings.t_if_something_isn_t_right_wit | escape }}</p>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_damaged_or_incorrect_items | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_if_your_order_arrives_damage | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_returns | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_unopened_products_can_be_ret | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_how_to_start_a_return | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_email_us_with_your_order_num | escape }}</p>
+</section>
+<div style="display: flex; flex-direction: column; gap: 8px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_contact_us | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;"><a href="tel:+18017091280">{{ section.settings.t_801_709_1280 | escape }}</a> · <a href="mailto:brokenarrowbarbershoporem@gmail.com">{{ section.settings.t_brokenarrowbarbershoporem_gm | escape }}</a></p>
+</div></article>
+</div>
+{% schema %}
+{
+  "name": "Returns",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text: Info / Header"
+    },
+    {
+      "type": "text",
+      "id": "t_help",
+      "label": "Info / Header — Text: Help",
+      "default": "Help"
+    },
+    {
+      "type": "text",
+      "id": "t_returns_and_exchanges",
+      "label": "Info / Header — Heading: Returns and exchanges",
+      "default": "Returns and exchanges"
+    },
+    {
+      "type": "text",
+      "id": "t_last_updated_september_26_20",
+      "label": "Info / Header — Text: Last updated September 26, 2026",
+      "default": "Last updated September 26, 2026"
+    },
+    {
+      "type": "header",
+      "content": "Text: Info / Body"
+    },
+    {
+      "type": "text",
+      "id": "t_if_something_isn_t_right_wit",
+      "label": "Info / Body — Text: If something isn’t right with your order",
+      "default": "If something isn’t right with your order, contact us and we’ll sort it out."
+    },
+    {
+      "type": "text",
+      "id": "t_damaged_or_incorrect_items",
+      "label": "Info / Body — Heading: Damaged or incorrect items",
+      "default": "Damaged or incorrect items"
+    },
+    {
+      "type": "textarea",
+      "id": "t_if_your_order_arrives_damage",
+      "label": "Info / Body — Text: If your order arrives damaged or you rec",
+      "default": "If your order arrives damaged or you received the wrong item, contact us within 14 days with your order number and a photo, and we’ll replace it."
+    },
+    {
+      "type": "text",
+      "id": "t_returns",
+      "label": "Info / Body — Heading: Returns",
+      "default": "Returns"
+    },
+    {
+      "type": "textarea",
+      "id": "t_unopened_products_can_be_ret",
+      "label": "Info / Body — Text: Unopened products can be returned within",
+      "default": "Unopened products can be returned within 30 days of delivery for a refund to your original payment method. For hygiene reasons, opened products can’t be returned unless they arrived damaged."
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_start_a_return",
+      "label": "Info / Body — Heading: How to start a return",
+      "default": "How to start a return"
+    },
+    {
+      "type": "textarea",
+      "id": "t_email_us_with_your_order_num",
+      "label": "Info / Body — Text: Email us with your order number and the ",
+      "default": "Email us with your order number and the item you’d like to return. We’ll reply with next steps."
+    },
+    {
+      "type": "text",
+      "id": "t_contact_us",
+      "label": "Info / Body — Text: Contact us",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Info / Body — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem, UT 84097"
+    },
+    {
+      "type": "text",
+      "id": "t_801_709_1280",
+      "label": "Info / Body — Link text: (801) 709-1280",
+      "default": "(801) 709-1280"
+    },
+    {
+      "type": "text",
+      "id": "t_brokenarrowbarbershoporem_gm",
+      "label": "Info / Body — Link text: brokenarrowbarbershoporem@gmail.com",
+      "default": "brokenarrowbarbershoporem@gmail.com"
+    }
+  ]
+}
+{% endschema %}

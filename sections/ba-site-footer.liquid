@@ -1,0 +1,295 @@
+{%- comment -%} Ported from the Claude Design component "SiteFooter". {%- endcomment -%}
+{%- liquid
+if section.settings.logo != blank
+  assign logo_src = section.settings.logo | image_url: width: 400
+else
+  assign logo_src = 'ba-lockup-offwhite.svg' | asset_url
+endif
+
+-%}
+<style>
+@media (max-width: 719px) { [data-ba-foot-bottom] { padding-bottom: 112px !important; } }
+body:has([data-ba-hide-award]) [data-ba-award] { display: none; }
+</style>
+<footer style="background: var(--band); color: var(--on-band); font-family: var(--font-sans);">
+<div style="max-width: 1280px; margin: 0px auto; padding: 64px clamp(16px, 5vw, 64px) 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 40px 32px; box-sizing: border-box;">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<img alt="Broken Arrow Barbershop" src="{{ logo_src }}" style="width: 200px; display: block;"/>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; min-width: 0px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_visit | escape }}</p>
+<p style="margin: 0px; font-size: 17px; line-height: 28px;">375 E 800 S, Suite 12<br/>Orem, UT 84097</p>
+<a href="tel:+18017091280" style="color: var(--on-band); font-size: 17px; line-height: 28px;">{{ section.settings.t_801_709_1280 | escape }}</a>
+<a href="mailto:brokenarrowbarbershoporem@gmail.com" style="color: var(--on-band); font-size: clamp(13px, 3.6vw, 17px); line-height: 24px; overflow-wrap: anywhere; word-break: break-word; max-width: 100%;">brokenarrowbarbershoporem<wbr>@gmail.com</a>
+<a href="https://maps.google.com/?q=375+E+800+S+Suite+12+Orem+UT+84097" style="color: var(--on-band); font-size: 17px; line-height: 28px; text-decoration-line: underline; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: var(--line-strong); text-underline-offset: 4px;">{{ section.settings.t_get_directions | escape }}</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_hours | escape }}</p>
+<p style="margin: 0px; font-size: 17px; line-height: 28px; font-variant-numeric: tabular-nums;">Tue 10 AM – 6 PM<br/>Wed–Fri 10 AM – 7:30 PM<br/>Sat 10 AM – 5:30 PM<br/>Sun–Mon closed</p>
+</div>
+</div>
+<div style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 32px; box-sizing: border-box;">
+<nav aria-label="Barbershop" style="display: flex; flex-direction: column; gap: 10px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_barbershop | escape }}</p>
+<a href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_book_now | escape }}</a>
+<a href="/pages/services" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_services | escape }}</a>
+<a href="/pages/team" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_the_team | escape }}</a>
+<a href="/pages/hair-replacement" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_hair_replacement | escape }}</a>
+<a href="/pages/free-haircut" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_apply_for_a_free_haircut | escape }}</a>
+<a href="/pages/journal" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_journal | escape }}</a>
+<a href="/pages/faq" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_faq | escape }}</a>
+</nav>
+<nav aria-label="Shop" style="display: flex; flex-direction: column; gap: 10px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_shop | escape }}</p>
+<a href="/pages/shop" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_shop_all | escape }}</a>
+<a href="/pages/product-quiz" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_product_quiz | escape }}</a>
+<a href="/products/matte-clay" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_matte_clay | escape }}</a>
+<a href="/pages/wholesale" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_wholesale | escape }}</a>
+<a href="{{ routes.account_url }}" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_manage_subscription | escape }}</a>
+</nav>
+<nav aria-label="Help" style="display: flex; flex-direction: column; gap: 10px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_help | escape }}</p>
+<a href="/pages/contact" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_contact_us | escape }}</a>
+<a href="/pages/shipping" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_shipping | escape }}</a>
+<a href="/pages/returns" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_returns | escape }}</a>
+<a href="/pages/hair-replacement#questions" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_hair_system_faq | escape }}</a>
+</nav>
+<nav aria-label="About" style="display: flex; flex-direction: column; gap: 10px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_about | escape }}</p>
+<a href="/pages/broken-arrow-barbershop-story" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_our_story | escape }}</a>
+<a href="/pages/careers" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_careers | escape }}</a>
+<a href="/pages/apprenticeship" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_apprenticeship | escape }}</a>
+<a href="https://www.instagram.com/broken.arrow.barbershop/" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_instagram | escape }}</a>
+<a href="https://www.youtube.com/@BrokenArrowBarbershop" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_youtube | escape }}</a>
+<a href="/pages/privacy-policy" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_privacy_policy | escape }}</a>
+<a href="/pages/terms-of-service" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_terms_of_service | escape }}</a>
+<a href="/pages/accessibility" style="color: var(--on-band); font-size: 15px; line-height: 24px; text-decoration: none;">{{ section.settings.t_accessibility_statement | escape }}</a>
+</nav>
+</div>
+<div data-ba-foot-bottom="" style="max-width: 1280px; margin: 0px auto; padding: 20px clamp(16px, 5vw, 64px) 32px; border-top: 1px solid var(--line-strong); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; box-sizing: border-box;">
+<p class="ba-label" data-ba-award="" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_daily_herald_readers_choice_ | escape }}</p>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop | escape }}</p>
+</div></footer>
+{% schema %}
+{
+  "name": "BA site footer",
+  "tag": "div",
+  "class": "ba-footer-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "Leave empty to use the built-in lockup."
+    },
+    {
+      "type": "header",
+      "content": "Text: Page"
+    },
+    {
+      "type": "text",
+      "id": "t_visit",
+      "label": "Page — Text: Visit",
+      "default": "Visit"
+    },
+    {
+      "type": "text",
+      "id": "t_801_709_1280",
+      "label": "Page — Link text: (801) 709-1280",
+      "default": "(801) 709-1280"
+    },
+    {
+      "type": "text",
+      "id": "t_get_directions",
+      "label": "Page — Link text: Get directions",
+      "default": "Get directions"
+    },
+    {
+      "type": "text",
+      "id": "t_hours",
+      "label": "Page — Text: Hours",
+      "default": "Hours"
+    },
+    {
+      "type": "text",
+      "id": "t_barbershop",
+      "label": "Page — Text: Barbershop",
+      "default": "Barbershop"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Page — Link text: Book now",
+      "default": "Book now"
+    },
+    {
+      "type": "text",
+      "id": "t_services",
+      "label": "Page — Link text: Services",
+      "default": "Services"
+    },
+    {
+      "type": "text",
+      "id": "t_the_team",
+      "label": "Page — Link text: The team",
+      "default": "The team"
+    },
+    {
+      "type": "text",
+      "id": "t_hair_replacement",
+      "label": "Page — Link text: Hair replacement",
+      "default": "Hair replacement"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_haircut",
+      "label": "Page — Link text: Apply for a free haircut",
+      "default": "Apply for a free haircut"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Page — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_faq",
+      "label": "Page — Link text: FAQ",
+      "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_shop",
+      "label": "Page — Text: Shop",
+      "default": "Shop"
+    },
+    {
+      "type": "text",
+      "id": "t_shop_all",
+      "label": "Page — Link text: Shop all",
+      "default": "Shop all"
+    },
+    {
+      "type": "text",
+      "id": "t_product_quiz",
+      "label": "Page — Link text: Product quiz",
+      "default": "Product quiz"
+    },
+    {
+      "type": "text",
+      "id": "t_matte_clay",
+      "label": "Page — Link text: Matte clay",
+      "default": "Matte clay"
+    },
+    {
+      "type": "text",
+      "id": "t_wholesale",
+      "label": "Page — Link text: Wholesale",
+      "default": "Wholesale"
+    },
+    {
+      "type": "text",
+      "id": "t_manage_subscription",
+      "label": "Page — Link text: Manage subscription",
+      "default": "Manage subscription"
+    },
+    {
+      "type": "text",
+      "id": "t_help",
+      "label": "Page — Text: Help",
+      "default": "Help"
+    },
+    {
+      "type": "text",
+      "id": "t_contact_us",
+      "label": "Page — Link text: Contact us",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "t_shipping",
+      "label": "Page — Link text: Shipping",
+      "default": "Shipping"
+    },
+    {
+      "type": "text",
+      "id": "t_returns",
+      "label": "Page — Link text: Returns",
+      "default": "Returns"
+    },
+    {
+      "type": "text",
+      "id": "t_hair_system_faq",
+      "label": "Page — Link text: Hair system FAQ",
+      "default": "Hair system FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_about",
+      "label": "Page — Text: About",
+      "default": "About"
+    },
+    {
+      "type": "text",
+      "id": "t_our_story",
+      "label": "Page — Link text: Our story",
+      "default": "Our story"
+    },
+    {
+      "type": "text",
+      "id": "t_careers",
+      "label": "Page — Link text: Careers",
+      "default": "Careers"
+    },
+    {
+      "type": "text",
+      "id": "t_apprenticeship",
+      "label": "Page — Link text: Apprenticeship",
+      "default": "Apprenticeship"
+    },
+    {
+      "type": "text",
+      "id": "t_instagram",
+      "label": "Page — Link text: Instagram",
+      "default": "Instagram"
+    },
+    {
+      "type": "text",
+      "id": "t_youtube",
+      "label": "Page — Link text: YouTube",
+      "default": "YouTube"
+    },
+    {
+      "type": "text",
+      "id": "t_privacy_policy",
+      "label": "Page — Link text: Privacy policy",
+      "default": "Privacy policy"
+    },
+    {
+      "type": "text",
+      "id": "t_terms_of_service",
+      "label": "Page — Link text: Terms of service",
+      "default": "Terms of service"
+    },
+    {
+      "type": "text",
+      "id": "t_accessibility_statement",
+      "label": "Page — Link text: Accessibility statement",
+      "default": "Accessibility statement"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_herald_readers_choice_",
+      "label": "Page — Text: Daily Herald Readers' Choice · Best Barb",
+      "default": "Daily Herald Readers' Choice · Best Barbershop in Utah Valley · 2023, 2024, 2026"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop",
+      "label": "Page — Text: © Broken Arrow Barbershop",
+      "default": "© Broken Arrow Barbershop"
+    }
+  ]
+}
+{% endschema %}

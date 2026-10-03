@@ -1,0 +1,844 @@
+{%- comment -%} Generated from the Claude Design page "Blog - Barber in Orem Utah". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_barber_at_work != blank
+  assign img_barber_at_work = section.settings.img_barber_at_work | image_url: width: 2400
+else
+  assign img_barber_at_work = 'ba-barber-at-work.webp' | asset_url
+endif
+if section.settings.img_hs_client2_before != blank
+  assign img_hs_client2_before = section.settings.img_hs_client2_before | image_url: width: 2400
+else
+  assign img_hs_client2_before = 'ba-hs-client2-before.webp' | asset_url
+endif
+if section.settings.img_hs_client2_after != blank
+  assign img_hs_client2_after = section.settings.img_hs_client2_after | image_url: width: 2400
+else
+  assign img_hs_client2_after = 'ba-hs-client2-after.webp' | asset_url
+endif
+if section.settings.img_cut_textured_flow != blank
+  assign img_cut_textured_flow = section.settings.img_cut_textured_flow | image_url: width: 2400
+else
+  assign img_cut_textured_flow = 'ba-cut-textured-flow.webp' | asset_url
+endif
+if section.settings.img_cut_side_part != blank
+  assign img_cut_side_part = section.settings.img_cut_side_part | image_url: width: 2400
+else
+  assign img_cut_side_part = 'ba-cut-side-part.webp' | asset_url
+endif
+if section.settings.img_cut_curly_taper != blank
+  assign img_cut_curly_taper = section.settings.img_cut_curly_taper | image_url: width: 2400
+else
+  assign img_cut_curly_taper = 'ba-cut-curly-taper.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="barber-orem-utah-broken-arrow"] :is(ul, blockquote) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="barber-orem-utah-broken-arrow" data-ba-active="journal">
+<article><header data-screen-label="Article / Hero" style="position: relative; background: var(--band); min-height: clamp(560px, 82vh, 820px); display: flex; align-items: flex-end; overflow: hidden;">
+<img alt="Inside Broken Arrow Barbershop in Orem, Utah" loading="lazy" src="{{ img_shop_interior }}" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85);"/>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_shop_guide_375_e_800_s_suite | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_looking_for_a_barber_in_orem | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_6_min_read | escape }}</p>
+</div></header><section data-screen-label="Article / Intro" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<nav aria-label="In this article" style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 10px; align-self: flex-start;">
+<p class="ba-label">{{ section.settings.t_in_this_article | escape }}</p>
+<a href="#meet" style="font-size: 15px; line-height: 22px; text-decoration: none;">{{ section.settings.t_meet_broken_arrow | escape }}</a>
+<a href="#award" style="font-size: 15px; line-height: 22px; text-decoration: none;">{{ section.settings.t_best_of_utah_valley | escape }}</a>
+<a href="#haircuts" style="font-size: 15px; line-height: 22px; text-decoration: none;">{{ section.settings.t_men_s_haircuts | escape }}</a>
+<a href="#thinning" style="font-size: 15px; line-height: 22px; text-decoration: none;">{{ section.settings.t_thinning_hair | escape }}</a>
+<a href="#systems" style="font-size: 15px; line-height: 22px; text-decoration: none;">{{ section.settings.t_hair_replacement | escape }}</a>
+<a href="#barbers" style="font-size: 15px; line-height: 22px; text-decoration: none;">{{ section.settings.t_the_barbers | escape }}</a>
+<a href="#serve" style="font-size: 15px; line-height: 22px; text-decoration: none;">{{ section.settings.t_who_we_serve | escape }}</a>
+<a href="#expect" style="font-size: 15px; line-height: 22px; text-decoration: none;">{{ section.settings.t_your_first_appointment | escape }}</a>
+</nav>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">If you’re looking for a barber in Orem, Utah, <a href="{{ routes.root_url }}">{{ section.settings.t_broken_arrow_barbershop | escape }}</a> is a locally owned men’s barbershop focused on great haircuts, personal service, and helping clients find hairstyles that actually work for them.</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_serves_clients_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_isn_t_built_aro | escape }}</p>
+</div></section><section data-screen-label="Article / Meet" id="meet" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<figure style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<img alt="Green walls and cognac barber chairs inside Broken Arrow Barbershop" loading="lazy" src="{{ img_shop_interior }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_the_shop_suite_12_375_e_800_ | escape }}</figcaption>
+</figure>
+<div style="flex: 1 1 440px; max-width: 620px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 14ch;">{{ section.settings.t_meet_broken_arrow_barbershop | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_is_a_local_barb | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_don_t_think_a_haircut_sho | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_goal_is_a_haircut_that_l | escape }}</p>
+</div>
+</div></section><section data-screen-label="Article / Award" id="award" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_02 | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_an_award_winning_utah_valley | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">Broken Arrow has been recognized in the Daily Herald’s Best of Utah Valley awards three times. In the <a href="/pages/best-barbershop-utah-valley-2026">{{ section.settings.t_2026_best_of_utah_valley | escape }}</a> awards, Broken Arrow was again recognized as one of Utah Valley’s top barbershops.</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_that_one_meant_a_lot_because | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_community_recognition_matter | escape }}</p>
+</div></section><figure data-screen-label="Article / Photo" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 12px;">
+<img alt="A barber cutting a client's hair at Broken Arrow Barbershop" loading="lazy" src="{{ img_barber_at_work }}" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_every_appointment_starts_wit | escape }}</figcaption></figure><section data-screen-label="Article / Haircuts" id="haircuts" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_03 | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_men_s_haircuts_in_orem | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_not_every_client_needs_the_s | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">Our job is to understand what you want and look at your hair before deciding how to cut it. Our <a href="/pages/services">{{ section.settings.t_haircut_services | escape }}</a> include:</p>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0px; border-bottom: 1px solid var(--line);"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_classic_haircut | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_routine_upkeep_for_the_style | escape }}</span></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0px; border-bottom: 1px solid var(--line);"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_haircut_beard | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_a_haircut_plus_beard_shaping | escape }}</span></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0px; border-bottom: 1px solid var(--line);"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_signature_haircut | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_extra_time_for_a_bigger_chan | escape }}</span></li>
+</ul>
+</div></section><section data-screen-label="Article / Thinning" id="thinning" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: flex-start;">
+<div style="flex: 1 1 440px; max-width: 640px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_haircuts_for_thinning_hair_a | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_choosing_the_right_haircut_m | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_a_very_high_fade_lines_that_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_we_d_rather_help_you_find_a_ | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; opacity: 0.78; text-wrap: pretty;">{{ section.settings.t_a_haircut_can_change_how_thi | escape }}</p>
+</div>
+<blockquote style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--on-band); padding-top: 32px;">
+<p class="ba-display" style="color: var(--on-band); font-size: clamp(28px, 3.2vw, 40px); line-height: 1.05; max-width: 14ch;">{{ section.settings.t_work_with_the_hair_you_have_ | escape }}</p>
+<a class="ba-label" href="/pages/hair-replacement" style="color: var(--on-band); text-decoration-line: underline; text-decoration-thickness: 2px; text-decoration-style: initial; text-decoration-color: var(--green); text-underline-offset: 6px;">{{ section.settings.t_see_hair_replacement_options | escape }}</a>
+</blockquote>
+</div></section><section data-screen-label="Article / Hair systems" id="systems" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<div style="flex: 1 1 440px; max-width: 620px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_men_s_hair_replacement_and_h | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_also_offers_non | escape }}</p>
+<ol style="margin: 0px; padding: 0px; list-style: none; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: grid; grid-template-columns: 40px minmax(0px, 1fr); gap: 12px; padding: 16px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 3px;">{{ section.settings.t_01_2 | escape }}</span><p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_consultation_covers_your_h | escape }}</p></li>
+<li style="display: grid; grid-template-columns: 40px minmax(0px, 1fr); gap: 12px; padding: 16px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 3px;">{{ section.settings.t_02_2 | escape }}</span><p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_system_is_fitted_attache | escape }}</p></li>
+<li style="display: grid; grid-template-columns: 40px minmax(0px, 1fr); gap: 12px; padding: 16px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 3px;">{{ section.settings.t_03_2 | escape }}</span><p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_handle_ongoing_maintenanc | escape }}</p></li>
+</ol>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_a_hair_system_generally_last | escape }}</p>
+<p style="font: 800 22px/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">As low as $5.07 a day. <span style="font: 400 15px/24px var(--font-sans); letter-spacing: 0px; text-transform: none; color: var(--ink-muted);">{{ section.settings.t_skip_the_energy_drinks_get_a | escape }}</span></p>
+<div><a class="ba-btn ba-btn-primary" href="/pages/hair-replacement">{{ section.settings.t_learn_about_men_s_hair_repla | escape }}</a></div>
+</div>
+<figure style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+<div style="position: relative; aspect-ratio: 4 / 5; background: var(--canvas-sunk);"><img alt="Client before, thinning at the front and temples" loading="lazy" src="{{ img_hs_client2_before }}" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"/><p class="ba-label" style="position: absolute; left: 0px; bottom: 0px; margin: 0px; padding: 10px 14px; background: var(--band); color: var(--on-band);">{{ section.settings.t_before | escape }}</p></div>
+<div style="position: relative; aspect-ratio: 4 / 5; background: var(--canvas-sunk);"><img alt="Same client after, hair system cut and styled up at the front" loading="lazy" src="{{ img_hs_client2_after }}" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"/><p class="ba-label" style="position: absolute; left: 0px; bottom: 0px; margin: 0px; padding: 10px 14px; background: var(--band); color: var(--on-band);">{{ section.settings.t_after | escape }}</p></div>
+</div>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_hair_system_color_matched_cu | escape }}</figcaption>
+</figure>
+</div></section><section data-screen-label="Article / Barbers" id="barbers" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_06 | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_meet_the_barbers_at_broken_a | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_picking_a_barber_matters_as_ | escape }}</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px;">
+<a href="/pages/team" style="display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 16px; text-decoration: none;">
+<h3 style="font: 800 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_bryton | escape }}</h3>
+<p class="ba-label">{{ section.settings.t_owner_licensed_barber_instru | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_big_changes_haircut_and_bear | escape }}</p>
+</a>
+<a href="/pages/team" style="display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 16px; text-decoration: none;">
+<h3 style="font: 800 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_connor | escape }}</h3>
+<p class="ba-label">{{ section.settings.t_barber | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_medium_to_longer_hair_utah_c | escape }}</p>
+</a>
+<a href="/pages/team" style="display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 16px; text-decoration: none;">
+<h3 style="font: 800 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_elise | escape }}</h3>
+<p class="ba-label">{{ section.settings.t_barber_2 | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_curly_hair_medium_length_and | escape }}</p>
+</a>
+</div>
+<div><a class="ba-btn ba-btn-text" href="/pages/team">{{ section.settings.t_meet_our_barbers | escape }}</a></div></section><figure data-screen-label="Article / Cuts" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 4px;">
+<img alt="Textured flow haircut" loading="lazy" src="{{ img_cut_textured_flow }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="Side part haircut" loading="lazy" src="{{ img_cut_side_part }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="Curly hair with a taper" loading="lazy" src="{{ img_cut_curly_taper }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/></figure><section data-screen-label="Article / Who we serve" id="serve" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_07 | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_who_we_serve_2 | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_has_one_shop_at | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_if_you_live_in_utah_valley_a | escape }}</p>
+</div></section><section data-screen-label="Article / What to expect" id="expect" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_08 | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_what_to_expect_at_broken_arr | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;"><a href="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_online | escape }}</a>, choose your barber and service, and come into the Orem shop for your appointment.</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_if_it_s_your_first_visit_tel | escape }}</p>
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_not_sure_what_haircut_you_wa | escape }}</p>
+</div></section></article><section data-screen-label="Article / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_09 | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_looking_for_a_barber_in_orem_2 | escape }}</h2>
+<div style="max-width: 680px; display: flex; flex-direction: column; gap: 20px;">
+<p style="font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_if_you_re_looking_for_a_barb | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.78; text-wrap: pretty;">{{ section.settings.t_whether_you_need_your_regula | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px solid var(--line-strong); padding-top: 24px;">
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_broken_arrow_barbershop_2 | escape }}</p>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_orem_utah | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_an_appointment | escape }}</a>
+<a class="ba-btn ba-btn-secondary ba-on-dark" href="/pages/services">{{ section.settings.t_explore_our_services | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="/pages/team">{{ section.settings.t_meet_our_barbers_2 | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Looking for a Barber in Orem, Utah? Meet Broken Arrow Barbershop","description":"Meet Broken Arrow Barbershop in Orem, Utah. Discover our men's haircuts, beard services, hair replacement, award-winning history, barbers, and approach to men's hair.","image":["{{ shop.url }}/assets/photos/shop-wide.webp","{{ shop.url }}/assets/photos/barber-at-work.webp"],"datePublished":"2026-09-26","dateModified":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/barber-orem-utah-broken-arrow","author":{"@id":"{{ shop.url }}/#shop"},"publisher":{"@id":"{{ shop.url }}/#shop"},"about":{"@id":"{{ shop.url }}/#shop"}},{"@type":"BarberShop","@id":"{{ shop.url }}/#shop","name":"Broken Arrow Barbershop","url":"{{ shop.url }}/","image":"{{ shop.url }}/assets/photos/shop-interior.jpg","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097","addressCountry":"US"},"areaServed":["Orem","Provo","Vineyard","Lindon","Pleasant Grove","Springville","Utah County"],"award":"Daily Herald Best of Utah Valley (recognized three times, including 2026)","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Men's haircut"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Haircut + beard"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Signature haircut"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Men's hair replacement / hair systems"}}]}]}</script>
+{% schema %}
+{
+  "name": "Blog - Barber in Orem Uta",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Article / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_barber_at_work",
+      "label": "Article / Photo — photo (barber-at-work.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hs_client2_before",
+      "label": "Article / Hair systems — photo (hs-client2-before.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hs_client2_after",
+      "label": "Article / Hair systems — photo (hs-client2-after.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_textured_flow",
+      "label": "Article / Cuts — photo (cut-textured-flow.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_side_part",
+      "label": "Article / Cuts — photo (cut-side-part.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_curly_taper",
+      "label": "Article / Cuts — photo (cut-curly-taper.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_shop_guide_375_e_800_s_suite",
+      "label": "Article / Hero — Text: Shop guide · 375 E 800 S, Suite 12, Orem",
+      "default": "Shop guide · 375 E 800 S, Suite 12, Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_looking_for_a_barber_in_orem",
+      "label": "Article / Hero — Heading: Looking for a Barber in Orem, Utah? Meet",
+      "default": "Looking for a Barber in Orem, Utah? Meet Broken Arrow Barbershop"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_6_min_read",
+      "label": "Article / Hero — Text: September 26, 2026 · 6 min read",
+      "default": "September 26, 2026 · 6 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Intro"
+    },
+    {
+      "type": "text",
+      "id": "t_in_this_article",
+      "label": "Article / Intro — Text: In this article",
+      "default": "In this article"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_broken_arrow",
+      "label": "Article / Intro — Link text: Meet Broken Arrow",
+      "default": "Meet Broken Arrow"
+    },
+    {
+      "type": "text",
+      "id": "t_best_of_utah_valley",
+      "label": "Article / Intro — Link text: Best of Utah Valley",
+      "default": "Best of Utah Valley"
+    },
+    {
+      "type": "text",
+      "id": "t_men_s_haircuts",
+      "label": "Article / Intro — Link text: Men’s haircuts",
+      "default": "Men’s haircuts"
+    },
+    {
+      "type": "text",
+      "id": "t_thinning_hair",
+      "label": "Article / Intro — Link text: Thinning hair",
+      "default": "Thinning hair"
+    },
+    {
+      "type": "text",
+      "id": "t_hair_replacement",
+      "label": "Article / Intro — Link text: Hair replacement",
+      "default": "Hair replacement"
+    },
+    {
+      "type": "text",
+      "id": "t_the_barbers",
+      "label": "Article / Intro — Link text: The barbers",
+      "default": "The barbers"
+    },
+    {
+      "type": "text",
+      "id": "t_who_we_serve",
+      "label": "Article / Intro — Link text: Who we serve",
+      "default": "Who we serve"
+    },
+    {
+      "type": "text",
+      "id": "t_your_first_appointment",
+      "label": "Article / Intro — Link text: Your first appointment",
+      "default": "Your first appointment"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop",
+      "label": "Article / Intro — Link text: Broken Arrow Barbershop",
+      "default": "Broken Arrow Barbershop"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_serves_clients_",
+      "label": "Article / Intro — Text: Broken Arrow serves clients from Orem, P",
+      "default": "Broken Arrow serves clients from Orem, Provo, and communities throughout Utah County. We offer men’s haircuts, haircut and beard services, Signature Haircut appointments, and men’s hair replacement and hair systems."
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_isn_t_built_aro",
+      "label": "Article / Intro — Text: Broken Arrow isn’t built around getting ",
+      "default": "Broken Arrow isn’t built around getting as many people through the chair as possible. We want clients to feel comfortable asking questions, getting recommendations, and working with a barber to find a haircut or hair solution that fits their hair, style, and lifestyle."
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Meet"
+    },
+    {
+      "type": "text",
+      "id": "t_the_shop_suite_12_375_e_800_",
+      "label": "Article / Meet — Text: The shop, Suite 12, 375 E 800 S, Orem.",
+      "default": "The shop, Suite 12, 375 E 800 S, Orem."
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Article / Meet — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_broken_arrow_barbershop",
+      "label": "Article / Meet — Heading: Meet Broken Arrow Barbershop",
+      "default": "Meet Broken Arrow Barbershop"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_is_a_local_barb",
+      "label": "Article / Meet — Text: Broken Arrow is a local barbershop in Or",
+      "default": "Broken Arrow is a local barbershop in Orem, Utah. The shop combines traditional barbershop service with a more personal approach to men’s hair."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_don_t_think_a_haircut_sho",
+      "label": "Article / Meet — Text: We don’t think a haircut should be picke",
+      "default": "We don’t think a haircut should be picked from a photo and copied onto every person. Your hair type, density, growth pattern, hairline, face shape, the style you want, how much upkeep you’re willing to do, and your daily routine all change which haircut will work for you."
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_goal_is_a_haircut_that_l",
+      "label": "Article / Meet — Text: The goal is a haircut that looks good wh",
+      "default": "The goal is a haircut that looks good when you leave the shop and that you can realistically keep up and style yourself."
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Award"
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Article / Award — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_an_award_winning_utah_valley",
+      "label": "Article / Award — Heading: An award-winning Utah Valley barbershop",
+      "default": "An award-winning Utah Valley barbershop"
+    },
+    {
+      "type": "text",
+      "id": "t_2026_best_of_utah_valley",
+      "label": "Article / Award — Link text: 2026 Best of Utah Valley",
+      "default": "2026 Best of Utah Valley"
+    },
+    {
+      "type": "textarea",
+      "id": "t_that_one_meant_a_lot_because",
+      "label": "Article / Award — Text: That one meant a lot, because it came on",
+      "default": "That one meant a lot, because it came only a few months after we opened our new Orem space."
+    },
+    {
+      "type": "textarea",
+      "id": "t_community_recognition_matter",
+      "label": "Article / Award — Text: Community recognition matters to us beca",
+      "default": "Community recognition matters to us because the shop has grown mostly through clients: people choosing us, coming back, leaving reviews, recommending the shop to friends, and supporting our barbers."
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Photo"
+    },
+    {
+      "type": "text",
+      "id": "t_every_appointment_starts_wit",
+      "label": "Article / Photo — Text: Every appointment starts with a conversa",
+      "default": "Every appointment starts with a conversation about your hair."
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Haircuts"
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Article / Haircuts — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_men_s_haircuts_in_orem",
+      "label": "Article / Haircuts — Heading: Men’s haircuts in Orem",
+      "default": "Men’s haircuts in Orem"
+    },
+    {
+      "type": "textarea",
+      "id": "t_not_every_client_needs_the_s",
+      "label": "Article / Haircuts — Text: Not every client needs the same sharp fa",
+      "default": "Not every client needs the same sharp fade or the haircut that’s trending this year. Some people want fades and shorter styles. Others look better with softer, longer, more natural hair."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_services",
+      "label": "Article / Haircuts — Link text: haircut services",
+      "default": "haircut services"
+    },
+    {
+      "type": "text",
+      "id": "t_classic_haircut",
+      "label": "Article / Haircuts — Text: Classic haircut",
+      "default": "Classic haircut"
+    },
+    {
+      "type": "text",
+      "id": "t_routine_upkeep_for_the_style",
+      "label": "Article / Haircuts — Text: Routine upkeep for the style you already",
+      "default": "Routine upkeep for the style you already have."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_beard",
+      "label": "Article / Haircuts — Text: Haircut + beard",
+      "default": "Haircut + beard"
+    },
+    {
+      "type": "text",
+      "id": "t_a_haircut_plus_beard_shaping",
+      "label": "Article / Haircuts — Text: A haircut plus beard shaping in the same",
+      "default": "A haircut plus beard shaping in the same appointment."
+    },
+    {
+      "type": "text",
+      "id": "t_signature_haircut",
+      "label": "Article / Haircuts — Text: Signature haircut",
+      "default": "Signature haircut"
+    },
+    {
+      "type": "text",
+      "id": "t_extra_time_for_a_bigger_chan",
+      "label": "Article / Haircuts — Text: Extra time for a bigger change or a full",
+      "default": "Extra time for a bigger change or a full transformation."
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Thinning"
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Article / Thinning — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_haircuts_for_thinning_hair_a",
+      "label": "Article / Thinning — Heading: Haircuts for thinning hair and receding ",
+      "default": "Haircuts for thinning hair and receding hairlines"
+    },
+    {
+      "type": "textarea",
+      "id": "t_choosing_the_right_haircut_m",
+      "label": "Article / Thinning — Text: Choosing the right haircut matters more ",
+      "default": "Choosing the right haircut matters more when your hair is thinning or your hairline is moving back."
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_very_high_fade_lines_that_",
+      "label": "Article / Thinning — Text: A very high fade, lines that are too sha",
+      "default": "A very high fade, lines that are too sharp, too much length, or the wrong styling can draw attention to the areas you’d rather play down. The right haircut works with the density, texture, hairline, and growth pattern you already have."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_d_rather_help_you_find_a_",
+      "label": "Article / Thinning — Text: We’d rather help you find a style that s",
+      "default": "We’d rather help you find a style that suits the hair you actually have than give you the same cut as everyone else. Depending on how much hair you’ve lost and what you want, the options range from changing the haircut and how you style it to considering a hair system."
+    },
+    {
+      "type": "text",
+      "id": "t_a_haircut_can_change_how_thi",
+      "label": "Article / Thinning — Text: A haircut can change how thinning hair l",
+      "default": "A haircut can change how thinning hair looks. It won’t stop or reverse hair loss."
+    },
+    {
+      "type": "text",
+      "id": "t_work_with_the_hair_you_have_",
+      "label": "Article / Thinning — Text: Work with the hair you have, not against",
+      "default": "Work with the hair you have, not against it."
+    },
+    {
+      "type": "text",
+      "id": "t_see_hair_replacement_options",
+      "label": "Article / Thinning — Link text: See hair replacement options →",
+      "default": "See hair replacement options →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Hair systems"
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Article / Hair systems — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_men_s_hair_replacement_and_h",
+      "label": "Article / Hair systems — Heading: Men’s hair replacement and hair systems ",
+      "default": "Men’s hair replacement and hair systems in Orem"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_also_offers_non",
+      "label": "Article / Hair systems — Text: Broken Arrow also offers non-surgical me",
+      "default": "Broken Arrow also offers non-surgical men’s hair replacement, also called hair systems. It’s for men with significant thinning, a receding hairline, or hair loss who want the look of fuller hair without surgery."
+    },
+    {
+      "type": "text",
+      "id": "t_01_2",
+      "label": "Article / Hair systems — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_consultation_covers_your_h",
+      "label": "Article / Hair systems — Text: A consultation covers your hair loss, th",
+      "default": "A consultation covers your hair loss, the hairstyle you want, color, density, lifestyle, maintenance, and what to expect."
+    },
+    {
+      "type": "text",
+      "id": "t_02_2",
+      "label": "Article / Hair systems — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_system_is_fitted_attache",
+      "label": "Article / Hair systems — Text: The system is fitted, attached, cut, and",
+      "default": "The system is fitted, attached, cut, and blended into your existing hair so it looks natural."
+    },
+    {
+      "type": "text",
+      "id": "t_03_2",
+      "label": "Article / Hair systems — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_we_handle_ongoing_maintenanc",
+      "label": "Article / Hair systems — Text: We handle ongoing maintenance and reappl",
+      "default": "We handle ongoing maintenance and reapplication."
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_hair_system_generally_last",
+      "label": "Article / Hair systems — Text: A hair system generally lasts about 2–6 ",
+      "default": "A hair system generally lasts about 2–6 months, depending on the system, wear, care, and lifestyle. Results and lifespan vary from person to person."
+    },
+    {
+      "type": "text",
+      "id": "t_skip_the_energy_drinks_get_a",
+      "label": "Article / Hair systems — Text: Skip the energy drinks. Get a non-surgic",
+      "default": "Skip the energy drinks. Get a non-surgical hair system."
+    },
+    {
+      "type": "text",
+      "id": "t_learn_about_men_s_hair_repla",
+      "label": "Article / Hair systems — Link text: LEARN ABOUT MEN'S HAIR REPLACEMENT →",
+      "default": "LEARN ABOUT MEN'S HAIR REPLACEMENT →"
+    },
+    {
+      "type": "text",
+      "id": "t_before",
+      "label": "Article / Hair systems — Text: Before",
+      "default": "Before"
+    },
+    {
+      "type": "text",
+      "id": "t_after",
+      "label": "Article / Hair systems — Text: After",
+      "default": "After"
+    },
+    {
+      "type": "text",
+      "id": "t_hair_system_color_matched_cu",
+      "label": "Article / Hair systems — Text: Hair system, color-matched, cut and styl",
+      "default": "Hair system, color-matched, cut and styled at Broken Arrow."
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Barbers"
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Article / Barbers — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_the_barbers_at_broken_a",
+      "label": "Article / Barbers — Heading: Meet the barbers at Broken Arrow",
+      "default": "Meet the barbers at Broken Arrow"
+    },
+    {
+      "type": "textarea",
+      "id": "t_picking_a_barber_matters_as_",
+      "label": "Article / Barbers — Text: Picking a barber matters as much as pick",
+      "default": "Picking a barber matters as much as picking a shop. Each of our barbers has hair they especially like working with, so it’s worth choosing the one who fits what you want."
+    },
+    {
+      "type": "text",
+      "id": "t_bryton",
+      "label": "Article / Barbers — Subheading: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_owner_licensed_barber_instru",
+      "label": "Article / Barbers — Text: Owner & licensed barber instructor",
+      "default": "Owner & licensed barber instructor"
+    },
+    {
+      "type": "text",
+      "id": "t_big_changes_haircut_and_bear",
+      "label": "Article / Barbers — Text: Big changes, haircut and beard. Does all",
+      "default": "Big changes, haircut and beard. Does all of our hair system work."
+    },
+    {
+      "type": "text",
+      "id": "t_connor",
+      "label": "Article / Barbers — Subheading: Connor",
+      "default": "Connor"
+    },
+    {
+      "type": "text",
+      "id": "t_barber",
+      "label": "Article / Barbers — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_medium_to_longer_hair_utah_c",
+      "label": "Article / Barbers — Text: Medium to longer hair. Utah County local",
+      "default": "Medium to longer hair. Utah County local."
+    },
+    {
+      "type": "text",
+      "id": "t_elise",
+      "label": "Article / Barbers — Subheading: Elise",
+      "default": "Elise"
+    },
+    {
+      "type": "text",
+      "id": "t_barber_2",
+      "label": "Article / Barbers — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_curly_hair_medium_length_and",
+      "label": "Article / Barbers — Text: Curly hair, medium-length and flow cuts.",
+      "default": "Curly hair, medium-length and flow cuts."
+    },
+    {
+      "type": "text",
+      "id": "t_meet_our_barbers",
+      "label": "Article / Barbers — Link text: MEET OUR BARBERS →",
+      "default": "MEET OUR BARBERS →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / Who we serve"
+    },
+    {
+      "type": "text",
+      "id": "t_07",
+      "label": "Article / Who we serve — Text: 07",
+      "default": "07"
+    },
+    {
+      "type": "text",
+      "id": "t_who_we_serve_2",
+      "label": "Article / Who we serve — Heading: Who we serve",
+      "default": "Who we serve"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_has_one_shop_at",
+      "label": "Article / Who we serve — Text: Broken Arrow has one shop, at 375 E 800 ",
+      "default": "Broken Arrow has one shop, at 375 E 800 S, Suite 12, in Orem. Most of our clients come from Orem and Provo, and plenty drive in from Vineyard, Lindon, Pleasant Grove, Springville, and elsewhere in Utah County."
+    },
+    {
+      "type": "textarea",
+      "id": "t_if_you_live_in_utah_valley_a",
+      "label": "Article / Who we serve — Text: If you live in Utah Valley and want a ba",
+      "default": "If you live in Utah Valley and want a barber who takes the time to get your haircut right, the drive to Orem is usually short."
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / What to expect"
+    },
+    {
+      "type": "text",
+      "id": "t_08",
+      "label": "Article / What to expect — Text: 08",
+      "default": "08"
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_expect_at_broken_arr",
+      "label": "Article / What to expect — Heading: What to expect at Broken Arrow",
+      "default": "What to expect at Broken Arrow"
+    },
+    {
+      "type": "text",
+      "id": "t_book_online",
+      "label": "Article / What to expect — Link text: Book online",
+      "default": "Book online"
+    },
+    {
+      "type": "textarea",
+      "id": "t_if_it_s_your_first_visit_tel",
+      "label": "Article / What to expect — Text: If it’s your first visit, tell your barb",
+      "default": "If it’s your first visit, tell your barber what you like and don’t like about your hair now. Photos help."
+    },
+    {
+      "type": "textarea",
+      "id": "t_not_sure_what_haircut_you_wa",
+      "label": "Article / What to expect — Text: Not sure what haircut you want? That’s f",
+      "default": "Not sure what haircut you want? That’s fine. Working it out from your hair and the result you’re after is part of the job."
+    },
+    {
+      "type": "header",
+      "content": "Text: Article / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_09",
+      "label": "Article / CTA — Text: 09",
+      "default": "09"
+    },
+    {
+      "type": "text",
+      "id": "t_looking_for_a_barber_in_orem_2",
+      "label": "Article / CTA — Heading: Looking for a barber in Orem?",
+      "default": "Looking for a barber in Orem?"
+    },
+    {
+      "type": "text",
+      "id": "t_if_you_re_looking_for_a_barb",
+      "label": "Article / CTA — Text: If you’re looking for a barbershop in Or",
+      "default": "If you’re looking for a barbershop in Orem, we’d love to have you at Broken Arrow."
+    },
+    {
+      "type": "textarea",
+      "id": "t_whether_you_need_your_regula",
+      "label": "Article / CTA — Text: Whether you need your regular haircut, w",
+      "default": "Whether you need your regular haircut, want to make a bigger change, need help figuring out what works with a receding hairline, or are interested in men’s hair replacement, start by choosing the service and barber that makes sense for you."
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_2",
+      "label": "Article / CTA — Text: Broken Arrow Barbershop",
+      "default": "Broken Arrow Barbershop"
+    },
+    {
+      "type": "text",
+      "id": "t_orem_utah",
+      "label": "Article / CTA — Text: Orem, Utah",
+      "default": "Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_book_an_appointment",
+      "label": "Article / CTA — Link text: BOOK AN APPOINTMENT",
+      "default": "BOOK AN APPOINTMENT"
+    },
+    {
+      "type": "text",
+      "id": "t_explore_our_services",
+      "label": "Article / CTA — Link text: EXPLORE OUR SERVICES",
+      "default": "EXPLORE OUR SERVICES"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_our_barbers_2",
+      "label": "Article / CTA — Link text: MEET OUR BARBERS",
+      "default": "MEET OUR BARBERS"
+    }
+  ]
+}
+{% endschema %}

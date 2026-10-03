@@ -1,0 +1,1275 @@
+{%- comment -%} Generated from the Claude Design page "Journal". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_cut_side_part != blank
+  assign img_cut_side_part = section.settings.img_cut_side_part | image_url: width: 2400
+else
+  assign img_cut_side_part = 'ba-cut-side-part.webp' | asset_url
+endif
+if section.settings.img_guide_discuss != blank
+  assign img_guide_discuss = section.settings.img_guide_discuss | image_url: width: 2400
+else
+  assign img_guide_discuss = 'ba-guide-discuss.webp' | asset_url
+endif
+if section.settings.img_hs_client2_after != blank
+  assign img_hs_client2_after = section.settings.img_hs_client2_after | image_url: width: 2400
+else
+  assign img_hs_client2_after = 'ba-hs-client2-after.webp' | asset_url
+endif
+if section.settings.img_bryton_cut_slick != blank
+  assign img_bryton_cut_slick = section.settings.img_bryton_cut_slick | image_url: width: 2400
+else
+  assign img_bryton_cut_slick = 'ba-bryton-cut-slick.webp' | asset_url
+endif
+if section.settings.img_shop_wide != blank
+  assign img_shop_wide = section.settings.img_shop_wide | image_url: width: 2400
+else
+  assign img_shop_wide = 'ba-shop-wide.webp' | asset_url
+endif
+if section.settings.img_bryton_cut_fade_beard != blank
+  assign img_bryton_cut_fade_beard = section.settings.img_bryton_cut_fade_beard | image_url: width: 2400
+else
+  assign img_bryton_cut_fade_beard = 'ba-bryton-cut-fade-beard.webp' | asset_url
+endif
+if section.settings.img_hs_client1_after != blank
+  assign img_hs_client1_after = section.settings.img_hs_client1_after | image_url: width: 2400
+else
+  assign img_hs_client1_after = 'ba-hs-client1-after.webp' | asset_url
+endif
+if section.settings.img_bryton_cut_pomp_beard != blank
+  assign img_bryton_cut_pomp_beard = section.settings.img_bryton_cut_pomp_beard | image_url: width: 2400
+else
+  assign img_bryton_cut_pomp_beard = 'ba-bryton-cut-pomp-beard.webp' | asset_url
+endif
+if section.settings.img_connor_wide != blank
+  assign img_connor_wide = section.settings.img_connor_wide | image_url: width: 2400
+else
+  assign img_connor_wide = 'ba-connor-wide.webp' | asset_url
+endif
+if section.settings.img_payson_storefront != blank
+  assign img_payson_storefront = section.settings.img_payson_storefront | image_url: width: 2400
+else
+  assign img_payson_storefront = 'ba-payson-storefront.webp' | asset_url
+endif
+if section.settings.img_barber_at_work != blank
+  assign img_barber_at_work = section.settings.img_barber_at_work | image_url: width: 2400
+else
+  assign img_barber_at_work = 'ba-barber-at-work.webp' | asset_url
+endif
+if section.settings.img_cut_curly_taper != blank
+  assign img_cut_curly_taper = section.settings.img_cut_curly_taper | image_url: width: 2400
+else
+  assign img_cut_curly_taper = 'ba-cut-curly-taper.webp' | asset_url
+endif
+if section.settings.img_bryton_hair_system != blank
+  assign img_bryton_hair_system = section.settings.img_bryton_hair_system | image_url: width: 2400
+else
+  assign img_bryton_hair_system = 'ba-bryton-hair-system.webp' | asset_url
+endif
+if section.settings.img_connor_card != blank
+  assign img_connor_card = section.settings.img_connor_card | image_url: width: 2400
+else
+  assign img_connor_card = 'ba-connor-card.webp' | asset_url
+endif
+if section.settings.img_wash_rinse != blank
+  assign img_wash_rinse = section.settings.img_wash_rinse | image_url: width: 2400
+else
+  assign img_wash_rinse = 'ba-wash-rinse.webp' | asset_url
+endif
+-%}
+<style>
+.bah-journal-0:hover { color: var(--green) !important; }
+</style>
+<div class="ba-page" data-ba-page="journal" data-ba-active="journal">
+<section data-screen-label="Journal / Header" style="background: var(--canvas);">
+<div data-m-stackrow="" style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) 40px; display: flex; flex-wrap: wrap; gap: 24px 32px;">
+<p class="ba-label" style="flex: 1 1 240px;">{{ section.settings.t_journal | escape }}</p>
+<div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 24px;">
+<h1 class="ba-display" style="font-size: min(clamp(56px, 8vw, 96px), 11vw); letter-spacing: -0.045em;">{{ section.settings.t_from_the_chair | escape }}</h1>
+<p style="max-width: 680px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_haircut_guides_hair_system_q | escape }}</p>
+</div>
+</div></section><section data-screen-label="Journal / Featured" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) 64px;">
+<a href="/pages/best-barbershop-utah-valley-2026" style="display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: center; text-decoration: none; color: var(--ink); border-top: 2px solid var(--ink); padding-top: 32px;">
+<img alt="Broken Arrow Barbershop in Orem, Utah" loading="lazy" src="{{ img_shop_interior }}" style="flex: 1.3 1 440px; width: 100%; min-width: 0px; aspect-ratio: 16 / 10; object-fit: cover; display: block;"/>
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 18px;">
+<p class="ba-label">{{ section.settings.t_featured_shop_news_2026_best | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(36px, 4.4vw, 56px);">{{ section.settings.t_broken_arrow_named_a_2026_be | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); max-width: 480px;">{{ section.settings.t_daily_herald_readers_choice_ | escape }}</p>
+<p class="ba-label" style="text-decoration-line: underline; text-decoration-thickness: 2px; text-decoration-style: initial; text-decoration-color: var(--green); text-underline-offset: 6px;">{{ section.settings.t_read_the_story | escape }}</p>
+</div>
+</a>
+</div></section><section data-screen-label="Journal / Posts" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 8vw, 96px); display: flex; flex-direction: column; gap: 40px;">
+<div data-ba-filter="underline" data-ba-filter-scope="" role="tablist" style="display: flex; flex-wrap: wrap; gap: 4px 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 6px 0px;">
+<button aria-selected="true" class="bah-journal-0" data-ba-tab="all" role="tab" style="background: none; border-top: 0px; border-right: 0px; border-bottom: 2px solid var(--green); border-left: 0px; border-image: initial; padding: 0px; min-height: 44px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);">{{ section.settings.t_all | escape }}</button>
+<button aria-selected="false" class="bah-journal-0" data-ba-tab="guides" role="tab" style="background: none; border-width: 0px 0px 2px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: transparent; border-left-color: initial; border-image: initial; padding: 0px; min-height: 44px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);">{{ section.settings.t_haircut_guides | escape }}</button>
+<button aria-selected="false" class="bah-journal-0" data-ba-tab="systems" role="tab" style="background: none; border-width: 0px 0px 2px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: transparent; border-left-color: initial; border-image: initial; padding: 0px; min-height: 44px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);">{{ section.settings.t_hair_systems | escape }}</button>
+<button aria-selected="false" class="bah-journal-0" data-ba-tab="transformations" role="tab" style="background: none; border-width: 0px 0px 2px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: transparent; border-left-color: initial; border-image: initial; padding: 0px; min-height: 44px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);">{{ section.settings.t_transformations | escape }}</button>
+<button aria-selected="false" class="bah-journal-0" data-ba-tab="howto" role="tab" style="background: none; border-width: 0px 0px 2px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: transparent; border-left-color: initial; border-image: initial; padding: 0px; min-height: 44px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);">{{ section.settings.t_product_how_tos | escape }}</button>
+<button aria-selected="false" class="bah-journal-0" data-ba-tab="news" role="tab" style="background: none; border-width: 0px 0px 2px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: transparent; border-left-color: initial; border-image: initial; padding: 0px; min-height: 44px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);">{{ section.settings.t_shop_news | escape }}</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 56px 32px;">
+<a data-ba-cat="guides" href="/pages/why-your-haircut-looks-bulky" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Why your haircut looks bulky, and what can help" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_why_your_haircut_looks_bulky | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_puffy_sides_and_a_wide_shape | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/scissor-haircut-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Looking for a scissor haircut in Orem? Here’s what to book" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_3_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_looking_for_a_scissor_haircu | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_why_we_recommend_the_signatu | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/what-is-a-scissor-cut" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="What is a scissor cut, and who is it for?" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_2 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_what_is_a_scissor_cut_and_wh | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_scissors_vs_clippers_who_a_s | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/longer-mens-hair-regular-haircuts" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Why longer men’s hair still needs regular haircuts" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_3 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_why_longer_men_s_hair_still_ | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_what_a_regular_cut_does_for_ | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/signs-its-time-to-change-your-hairstyle" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Signs it’s time to change your hairstyle" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_4 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_signs_it_s_time_to_change_yo | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_eight_signs_your_haircut_isn | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/haircut-for-your-daily-routine" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="How to choose a haircut that fits your daily routine" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_how_to_choose_a_haircut_that | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_morning_time_hats_workouts_y | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/what-to-book-new-hairstyle" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="What to book when you want a completely new hairstyle" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_5 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_what_to_book_when_you_want_a | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_which_service_to_book_what_t | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/middle-part-haircut-orem-utah" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Middle-part haircuts in Orem, Utah" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_6 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_middle_part_haircuts_in_orem | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_middle_parts_at_every_length | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/modern-mullet-haircut-orem-utah" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Modern mullet haircuts in Orem, Utah" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_7 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_modern_mullet_haircuts_in_or | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_how_the_modern_mullet_differ | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/low-taper-haircut-orem-utah" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Low taper haircuts in Orem, Utah" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_8 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_low_taper_haircuts_in_orem_u | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_what_a_low_taper_is_how_it_d | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/curtains-middle-part-haircut-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Curtains and the middle part" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_9 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_curtains_and_the_middle_part | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_how_curtains_frame_the_face_ | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/textured-fringe-haircut-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Textured fringe haircuts in Orem" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_10 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_textured_fringe_haircuts_in_ | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_who_it_suits_why_most_go_wro | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/receding-hairline-haircuts-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Haircuts for receding hairlines in Orem" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min_2 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_haircuts_for_receding_hairli | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_how_we_choose_the_right_shap | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/mens-long-haircuts-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Men’s long haircuts in Orem" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min_3 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_men_s_long_haircuts_in_orem | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_keeping_your_length_without_ | escape }}</p>
+</a>
+<a data-ba-cat="news" href="/pages/inside-broken-arrow-barbershop-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Inside Broken Arrow Barbershop in Orem: what to expect" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_shop_guide_5_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_inside_broken_arrow_barbersh | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_the_shop_the_atmosphere_wher | escape }}</p>
+</a>
+<a data-ba-cat="news" href="/pages/new-barber-orem-meet-the-team" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Looking for a new barber in Orem? Meet the team" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_shop_guide_4_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_looking_for_a_new_barber_in_ | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_bryton_connor_and_elise_what | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/classic-vs-signature-haircut" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Classic vs Signature Haircut at Broken Arrow: which should you choose?" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_4_min_11 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_classic_vs_signature_haircut | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_prices_appointment_lengths_w | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/wedding-groom-haircut-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Wedding and groom haircuts: plan it before the week of" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min_4 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_wedding_and_groom_haircuts_p | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_why_not_to_get_your_first_cu | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/signature-haircut-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Why your haircut needs more than 15 minutes" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min_5 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_why_your_haircut_needs_more_ | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_most_shops_rush_a_30_minute_ | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/haircut-names-mean-different-things" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Haircut names are terrible. Bring a photo." role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_cut_side_part }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min_6 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_haircut_names_are_terrible_b | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_why_a_trim_or_a_fade_means_s | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/how-to-find-the-right-hairstyle-for-men" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="How to find the perfect hairstyle for your face, hair type and lifestyle" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_guide_discuss }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_9_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_how_to_find_the_perfect_hair | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_face_shape_hair_type_referen | escape }}</p>
+</a>
+<a data-ba-cat="systems" href="/pages/toupee-queen-utah-mens-hair-systems-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Looking for the Toupee Queen in Utah? Men’s Hair Systems in Orem" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_hs_client2_after }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_hair_systems_8_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_looking_for_the_toupee_queen | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_men_s_hair_systems_in_utah_c | escape }}</p>
+</a>
+<a data-ba-cat="systems" href="/pages/toupee-vs-hair-system" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Toupee vs hair system: what’s the difference?" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_hair_systems_6_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_toupee_vs_hair_system_what_s | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_why_old_toupees_looked_fake_ | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/how-to-choose-a-barbershop-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="How to choose the right barbershop in Orem" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_local_guide_5_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_how_to_choose_the_right_barb | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_what_to_look_for_what_to_ask | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/mens-haircuts-orem-utah" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Men’s haircuts in Orem, Utah" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_bryton_cut_slick }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_local_guide_5_min_2 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_men_s_haircuts_in_orem_utah | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_fades_tapers_scissor_cuts_lo | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/barber-near-byu-uvu" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="A barber near BYU and UVU" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_wide }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_local_guide_4_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_a_barber_near_byu_and_uvu | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_how_far_we_are_from_campus_w | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/fade-haircut-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Fade haircuts in Orem: which one to ask for" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_bryton_cut_fade_beard }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min_7 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_fade_haircuts_in_orem_which_ | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_taper_low_mid_high_and_skin_ | escape }}</p>
+</a>
+<a data-ba-cat="systems" href="/pages/hair-system-utah" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Non-surgical hair replacement in Utah: what it is and what it costs" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_hs_client1_after }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_hair_systems_6_min_2 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_non_surgical_hair_replacemen | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_non_surgical_hair_replacemen_2 | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/haircuts-thinning-hair-utah-county" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Haircuts for thinning hair and receding hairlines" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_bryton_cut_pomp_beard }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min_8 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_haircuts_for_thinning_hair_a | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_what_to_ask_for_what_to_avoi | escape }}</p>
+</a>
+<a data-ba-cat="news" href="/pages/award-winning-barbershop-orem" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Award-winning barbering in Orem, Utah" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_shop_news_4_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_award_winning_barbering_in_o | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_our_daily_herald_awards_who_ | escape }}</p>
+</a>
+<a data-ba-cat="news" href="/pages/why-broken-arrow-makes-its-own-products" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Why we’re making our own products" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_shop_news_4_min_2 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_why_we_re_making_our_own_pro | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_nothing_on_the_shelf_was_goo | escape }}</p>
+</a>
+<a data-ba-cat="news" href="/pages/small-barbershop-orem-same-barber" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Why the same barber every time matters" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_connor_wide }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_shop_news_4_min_3 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_why_the_same_barber_every_ti | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_we_aren_t_a_chain_why_a_smal | escape }}</p>
+</a>
+<a data-ba-cat="news" href="/pages/broken-arrow-barbershop-story" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="The story of Broken Arrow: from Payson to Orem" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_payson_storefront }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_our_story_8_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_the_story_of_broken_arrow_fr | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_how_a_small_shop_in_payson_b | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/barber-orem-utah-broken-arrow" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Looking for a barber in Orem, Utah? Meet Broken Arrow" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_barber_at_work }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_shop_guide_6_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_looking_for_a_barber_in_orem | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_who_we_are_what_we_offer_the | escape }}</p>
+</a>
+<a data-ba-cat="guides" href="/pages/taper-vs-fade-haircut" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Taper or fade: what's the difference?" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_cut_curly_taper }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min_9 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_taper_or_fade_what_s_the_dif | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_a_taper_shortens_gradually_t | escape }}</p>
+</a>
+<a data-ba-cat="systems" href="/pages/what-is-a-hair-system" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="What a hair system actually is" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_bryton_hair_system }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_hair_systems_7_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_what_a_hair_system_actually_ | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_the_base_the_hair_how_it_s_a | escape }}</p>
+</a>
+<a data-ba-cat="howto" href="/pages/why-hair-falls-flat-after-styling" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Why your hair falls flat after you style it" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_product_how_tos_5_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_why_your_hair_falls_flat_aft | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_the_cut_the_prep_and_the_pro | escape }}</p>
+</a>
+<a data-ba-cat="howto" href="/pages/how-much-matte-clay-to-use" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="How much matte clay to use" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_connor_wide }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">{{ section.settings.t_product_how_tos_3_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_how_much_matte_clay_to_use | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">Less than you think. A fingertip, dry hair, back to front.</p>
+</a>
+<a data-ba-cat="guides" href="/pages/what-to-tell-your-barber" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="What to tell your barber" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_connor_card }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">Haircut guides · 6 min</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_what_to_tell_your_barber | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">Photos help. So does saying what you don't like about your hair now.</p>
+</a>
+<a data-ba-cat="systems" href="/pages/hair-system-maintenance-at-home" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Doing your own maintenance at home" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_wash_rinse }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">Hair systems · 4 min</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_doing_your_own_maintenance_a | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">What it involves, how long it takes, and when to come in instead.</p>
+</a>
+<a data-ba-cat="guides" href="/pages/growing-hair-out-without-awkward-stage" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Growing your hair out: how shaping appointments help" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center;'></div>
+<p class="ba-label">Haircut guides · 6 min</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_growing_your_hair_out_how_sh | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">Getting through the awkward stages, what to keep trimming, and longer styles to grow into.</p>
+</a>
+</div>
+</div></section><section data-screen-label="Journal / Book band" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(48px, 7vw, 88px); max-width: 8ch;">{{ section.settings.t_book_a_haircut | escape }}</h2>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">BOOK NOW</a>
+</div></section>
+</div>
+<script src="{{ 'ba-filter.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Journal",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Journal / Featured — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_side_part",
+      "label": "Journal / Posts — photo (cut-side-part.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_guide_discuss",
+      "label": "Journal / Posts — photo (guide-discuss.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hs_client2_after",
+      "label": "Journal / Posts — photo (hs-client2-after.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_cut_slick",
+      "label": "Journal / Posts — photo (bryton-cut-slick.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_wide",
+      "label": "Journal / Posts — photo (shop-wide.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_cut_fade_beard",
+      "label": "Journal / Posts — photo (bryton-cut-fade-beard.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hs_client1_after",
+      "label": "Journal / Posts — photo (hs-client1-after.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_cut_pomp_beard",
+      "label": "Journal / Posts — photo (bryton-cut-pomp-beard.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_wide",
+      "label": "Journal / Posts — photo (connor-wide.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_storefront",
+      "label": "Journal / Posts — photo (payson-storefront.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_barber_at_work",
+      "label": "Journal / Posts — photo (barber-at-work.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_curly_taper",
+      "label": "Journal / Posts — photo (cut-curly-taper.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_hair_system",
+      "label": "Journal / Posts — photo (bryton-hair-system.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_card",
+      "label": "Journal / Posts — photo (connor-card.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_wash_rinse",
+      "label": "Journal / Posts — photo (wash-rinse.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Journal / Header"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Journal / Header — Text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_from_the_chair",
+      "label": "Journal / Header — Heading: From the chair",
+      "default": "From the chair"
+    },
+    {
+      "type": "textarea",
+      "id": "t_haircut_guides_hair_system_q",
+      "label": "Journal / Header — Text: Haircut guides, hair system questions an",
+      "default": "Haircut guides, hair system questions answered, filmed cuts and shop news. Written by the barbers who do the work."
+    },
+    {
+      "type": "header",
+      "content": "Text: Journal / Featured"
+    },
+    {
+      "type": "text",
+      "id": "t_featured_shop_news_2026_best",
+      "label": "Journal / Featured — Text: Featured · Shop news · 2026 Best of Utah",
+      "default": "Featured · Shop news · 2026 Best of Utah Valley"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_named_a_2026_be",
+      "label": "Journal / Featured — Heading: Broken Arrow named a 2026 Best of Utah V",
+      "default": "Broken Arrow named a 2026 Best of Utah Valley barbershop"
+    },
+    {
+      "type": "textarea",
+      "id": "t_daily_herald_readers_choice_",
+      "label": "Journal / Featured — Text: Daily Herald Readers' Choice. Our third ",
+      "default": "Daily Herald Readers' Choice. Our third time being recognized, a few months into our new Orem location."
+    },
+    {
+      "type": "text",
+      "id": "t_read_the_story",
+      "label": "Journal / Featured — Text: Read the story",
+      "default": "Read the story"
+    },
+    {
+      "type": "header",
+      "content": "Text: Journal / Posts"
+    },
+    {
+      "type": "text",
+      "id": "t_all",
+      "label": "Journal / Posts — Text: All",
+      "default": "All"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides",
+      "label": "Journal / Posts — Text: Haircut guides",
+      "default": "Haircut guides"
+    },
+    {
+      "type": "text",
+      "id": "t_hair_systems",
+      "label": "Journal / Posts — Text: Hair systems",
+      "default": "Hair systems"
+    },
+    {
+      "type": "text",
+      "id": "t_transformations",
+      "label": "Journal / Posts — Text: Transformations",
+      "default": "Transformations"
+    },
+    {
+      "type": "text",
+      "id": "t_product_how_tos",
+      "label": "Journal / Posts — Text: Product how-tos",
+      "default": "Product how-tos"
+    },
+    {
+      "type": "text",
+      "id": "t_shop_news",
+      "label": "Journal / Posts — Text: Shop news",
+      "default": "Shop news"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_why_your_haircut_looks_bulky",
+      "label": "Journal / Posts — Subheading: Why your haircut looks bulky, and what c",
+      "default": "Why your haircut looks bulky, and what can help"
+    },
+    {
+      "type": "text",
+      "id": "t_puffy_sides_and_a_wide_shape",
+      "label": "Journal / Posts — Text: Puffy sides and a wide shape usually com",
+      "default": "Puffy sides and a wide shape usually come down to the cut, or the length."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_3_min",
+      "label": "Journal / Posts — Text: Haircut guides · 3 min",
+      "default": "Haircut guides · 3 min"
+    },
+    {
+      "type": "text",
+      "id": "t_looking_for_a_scissor_haircu",
+      "label": "Journal / Posts — Subheading: Looking for a scissor haircut in Orem? H",
+      "default": "Looking for a scissor haircut in Orem? Here’s what to book"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_recommend_the_signatu",
+      "label": "Journal / Posts — Text: Why we recommend the Signature Haircut f",
+      "default": "Why we recommend the Signature Haircut for scissor cuts, and what to tell your barber."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_2",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_what_is_a_scissor_cut_and_wh",
+      "label": "Journal / Posts — Subheading: What is a scissor cut, and who is it for",
+      "default": "What is a scissor cut, and who is it for?"
+    },
+    {
+      "type": "text",
+      "id": "t_scissors_vs_clippers_who_a_s",
+      "label": "Journal / Posts — Text: Scissors vs clippers, who a scissor cut ",
+      "default": "Scissors vs clippers, who a scissor cut suits, and what to book."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_3",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_why_longer_men_s_hair_still_",
+      "label": "Journal / Posts — Subheading: Why longer men’s hair still needs regula",
+      "default": "Why longer men’s hair still needs regular haircuts"
+    },
+    {
+      "type": "text",
+      "id": "t_what_a_regular_cut_does_for_",
+      "label": "Journal / Posts — Text: What a regular cut does for long hair an",
+      "default": "What a regular cut does for long hair and how often to come in."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_4",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_signs_it_s_time_to_change_yo",
+      "label": "Journal / Posts — Subheading: Signs it’s time to change your hairstyle",
+      "default": "Signs it’s time to change your hairstyle"
+    },
+    {
+      "type": "text",
+      "id": "t_eight_signs_your_haircut_isn",
+      "label": "Journal / Posts — Text: Eight signs your haircut isn’t working a",
+      "default": "Eight signs your haircut isn’t working anymore, and how to make the change."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min",
+      "label": "Journal / Posts — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_choose_a_haircut_that",
+      "label": "Journal / Posts — Subheading: How to choose a haircut that fits your d",
+      "default": "How to choose a haircut that fits your daily routine"
+    },
+    {
+      "type": "text",
+      "id": "t_morning_time_hats_workouts_y",
+      "label": "Journal / Posts — Text: Morning time, hats, workouts, your job a",
+      "default": "Morning time, hats, workouts, your job and how often you want to come in."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_5",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_book_when_you_want_a",
+      "label": "Journal / Posts — Subheading: What to book when you want a completely ",
+      "default": "What to book when you want a completely new hairstyle"
+    },
+    {
+      "type": "text",
+      "id": "t_which_service_to_book_what_t",
+      "label": "Journal / Posts — Text: Which service to book, what to bring, an",
+      "default": "Which service to book, what to bring, and what to expect with a big change."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_6",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_middle_part_haircuts_in_orem",
+      "label": "Journal / Posts — Subheading: Middle-part haircuts in Orem, Utah",
+      "default": "Middle-part haircuts in Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_middle_parts_at_every_length",
+      "label": "Journal / Posts — Text: Middle parts at every length, and how to",
+      "default": "Middle parts at every length, and how to find where your hair wants to part."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_7",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_modern_mullet_haircuts_in_or",
+      "label": "Journal / Posts — Subheading: Modern mullet haircuts in Orem, Utah",
+      "default": "Modern mullet haircuts in Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_how_the_modern_mullet_differ",
+      "label": "Journal / Posts — Text: How the modern mullet differs from the ’",
+      "default": "How the modern mullet differs from the ’80s version, and how to wear it."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_8",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_low_taper_haircuts_in_orem_u",
+      "label": "Journal / Posts — Subheading: Low taper haircuts in Orem, Utah",
+      "default": "Low taper haircuts in Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_what_a_low_taper_is_how_it_d",
+      "label": "Journal / Posts — Text: What a low taper is, how it differs from",
+      "default": "What a low taper is, how it differs from a fade, and who it suits."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_9",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_curtains_and_the_middle_part",
+      "label": "Journal / Posts — Subheading: Curtains and the middle part",
+      "default": "Curtains and the middle part"
+    },
+    {
+      "type": "text",
+      "id": "t_how_curtains_frame_the_face_",
+      "label": "Journal / Posts — Text: How curtains frame the face, and why you",
+      "default": "How curtains frame the face, and why your part doesn’t need to be perfectly centered."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_10",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_textured_fringe_haircuts_in_",
+      "label": "Journal / Posts — Subheading: Textured fringe haircuts in Orem",
+      "default": "Textured fringe haircuts in Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_who_it_suits_why_most_go_wro",
+      "label": "Journal / Posts — Text: Who it suits, why most go wrong, and how",
+      "default": "Who it suits, why most go wrong, and how to style it."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min_2",
+      "label": "Journal / Posts — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_haircuts_for_receding_hairli",
+      "label": "Journal / Posts — Subheading: Haircuts for receding hairlines in Orem",
+      "default": "Haircuts for receding hairlines in Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_how_we_choose_the_right_shap",
+      "label": "Journal / Posts — Text: How we choose the right shape, what we a",
+      "default": "How we choose the right shape, what we avoid, and how clients style it."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min_3",
+      "label": "Journal / Posts — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_men_s_long_haircuts_in_orem",
+      "label": "Journal / Posts — Subheading: Men’s long haircuts in Orem",
+      "default": "Men’s long haircuts in Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_keeping_your_length_without_",
+      "label": "Journal / Posts — Text: Keeping your length without losing shape",
+      "default": "Keeping your length without losing shape, and when to book the Signature."
+    },
+    {
+      "type": "text",
+      "id": "t_shop_guide_5_min",
+      "label": "Journal / Posts — Text: Shop guide · 5 min",
+      "default": "Shop guide · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_inside_broken_arrow_barbersh",
+      "label": "Journal / Posts — Subheading: Inside Broken Arrow Barbershop in Orem: ",
+      "default": "Inside Broken Arrow Barbershop in Orem: what to expect"
+    },
+    {
+      "type": "text",
+      "id": "t_the_shop_the_atmosphere_wher",
+      "label": "Journal / Posts — Text: The shop, the atmosphere, where to park ",
+      "default": "The shop, the atmosphere, where to park and how booking works."
+    },
+    {
+      "type": "text",
+      "id": "t_shop_guide_4_min",
+      "label": "Journal / Posts — Text: Shop guide · 4 min",
+      "default": "Shop guide · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_looking_for_a_new_barber_in_",
+      "label": "Journal / Posts — Subheading: Looking for a new barber in Orem? Meet t",
+      "default": "Looking for a new barber in Orem? Meet the team"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_connor_and_elise_what",
+      "label": "Journal / Posts — Text: Bryton, Connor and Elise: what each does",
+      "default": "Bryton, Connor and Elise: what each does best and who to book."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_4_min_11",
+      "label": "Journal / Posts — Text: Haircut guides · 4 min",
+      "default": "Haircut guides · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_classic_vs_signature_haircut",
+      "label": "Journal / Posts — Subheading: Classic vs Signature Haircut at Broken A",
+      "default": "Classic vs Signature Haircut at Broken Arrow: which should you choose?"
+    },
+    {
+      "type": "text",
+      "id": "t_prices_appointment_lengths_w",
+      "label": "Journal / Posts — Text: Prices, appointment lengths, what’s incl",
+      "default": "Prices, appointment lengths, what’s included and who each suits."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min_4",
+      "label": "Journal / Posts — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_wedding_and_groom_haircuts_p",
+      "label": "Journal / Posts — Subheading: Wedding and groom haircuts: plan it befo",
+      "default": "Wedding and groom haircuts: plan it before the week of"
+    },
+    {
+      "type": "text",
+      "id": "t_why_not_to_get_your_first_cu",
+      "label": "Journal / Posts — Text: Why not to get your first cut the day be",
+      "default": "Why not to get your first cut the day before, when to book, and which service to choose."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min_5",
+      "label": "Journal / Posts — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_why_your_haircut_needs_more_",
+      "label": "Journal / Posts — Subheading: Why your haircut needs more than 15 minu",
+      "default": "Why your haircut needs more than 15 minutes"
+    },
+    {
+      "type": "textarea",
+      "id": "t_most_shops_rush_a_30_minute_",
+      "label": "Journal / Posts — Text: Most shops rush a 30-minute appointment.",
+      "default": "Most shops rush a 30-minute appointment. Here’s what the Signature Haircut does with the extra time."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min_6",
+      "label": "Journal / Posts — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_names_are_terrible_b",
+      "label": "Journal / Posts — Subheading: Haircut names are terrible. Bring a phot",
+      "default": "Haircut names are terrible. Bring a photo."
+    },
+    {
+      "type": "textarea",
+      "id": "t_why_a_trim_or_a_fade_means_s",
+      "label": "Journal / Posts — Text: Why “a trim” or “a fade” means something",
+      "default": "Why “a trim” or “a fade” means something different to everyone, and why a picture fixes it."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_9_min",
+      "label": "Journal / Posts — Text: Haircut guides · 9 min",
+      "default": "Haircut guides · 9 min"
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_find_the_perfect_hair",
+      "label": "Journal / Posts — Subheading: How to find the perfect hairstyle for yo",
+      "default": "How to find the perfect hairstyle for your face, hair type and lifestyle"
+    },
+    {
+      "type": "textarea",
+      "id": "t_face_shape_hair_type_referen",
+      "label": "Journal / Posts — Text: Face shape, hair type, reference photos,",
+      "default": "Face shape, hair type, reference photos, the consultation, and how much styling you’ll really do."
+    },
+    {
+      "type": "text",
+      "id": "t_hair_systems_8_min",
+      "label": "Journal / Posts — Text: Hair systems · 8 min",
+      "default": "Hair systems · 8 min"
+    },
+    {
+      "type": "text",
+      "id": "t_looking_for_the_toupee_queen",
+      "label": "Journal / Posts — Subheading: Looking for the Toupee Queen in Utah? Me",
+      "default": "Looking for the Toupee Queen in Utah? Men’s Hair Systems in Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_men_s_hair_systems_in_utah_c",
+      "label": "Journal / Posts — Text: Men’s hair systems in Utah County, desig",
+      "default": "Men’s hair systems in Utah County, designed around the finished haircut."
+    },
+    {
+      "type": "text",
+      "id": "t_hair_systems_6_min",
+      "label": "Journal / Posts — Text: Hair systems · 6 min",
+      "default": "Hair systems · 6 min"
+    },
+    {
+      "type": "text",
+      "id": "t_toupee_vs_hair_system_what_s",
+      "label": "Journal / Posts — Subheading: Toupee vs hair system: what’s the differ",
+      "default": "Toupee vs hair system: what’s the difference?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_why_old_toupees_looked_fake_",
+      "label": "Journal / Posts — Text: Why old toupees looked fake, what a mode",
+      "default": "Why old toupees looked fake, what a modern men’s hair system is, and what it costs in Orem."
+    },
+    {
+      "type": "text",
+      "id": "t_local_guide_5_min",
+      "label": "Journal / Posts — Text: Local guide · 5 min",
+      "default": "Local guide · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_choose_the_right_barb",
+      "label": "Journal / Posts — Subheading: How to choose the right barbershop in Or",
+      "default": "How to choose the right barbershop in Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_look_for_what_to_ask",
+      "label": "Journal / Posts — Text: What to look for, what to ask, and the r",
+      "default": "What to look for, what to ask, and the red flags to avoid."
+    },
+    {
+      "type": "text",
+      "id": "t_local_guide_5_min_2",
+      "label": "Journal / Posts — Text: Local guide · 5 min",
+      "default": "Local guide · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_men_s_haircuts_in_orem_utah",
+      "label": "Journal / Posts — Subheading: Men’s haircuts in Orem, Utah",
+      "default": "Men’s haircuts in Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_fades_tapers_scissor_cuts_lo",
+      "label": "Journal / Posts — Text: Fades, tapers, scissor cuts, longer styl",
+      "default": "Fades, tapers, scissor cuts, longer styles and beard trims, with prices and how to pick."
+    },
+    {
+      "type": "text",
+      "id": "t_local_guide_4_min",
+      "label": "Journal / Posts — Text: Local guide · 4 min",
+      "default": "Local guide · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_a_barber_near_byu_and_uvu",
+      "label": "Journal / Posts — Subheading: A barber near BYU and UVU",
+      "default": "A barber near BYU and UVU"
+    },
+    {
+      "type": "text",
+      "id": "t_how_far_we_are_from_campus_w",
+      "label": "Journal / Posts — Text: How far we are from campus, when we’re o",
+      "default": "How far we are from campus, when we’re open late, and who to book."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min_7",
+      "label": "Journal / Posts — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_fade_haircuts_in_orem_which_",
+      "label": "Journal / Posts — Subheading: Fade haircuts in Orem: which one to ask ",
+      "default": "Fade haircuts in Orem: which one to ask for"
+    },
+    {
+      "type": "text",
+      "id": "t_taper_low_mid_high_and_skin_",
+      "label": "Journal / Posts — Text: Taper, low, mid, high and skin fades, an",
+      "default": "Taper, low, mid, high and skin fades, and which suits your hair."
+    },
+    {
+      "type": "text",
+      "id": "t_hair_systems_6_min_2",
+      "label": "Journal / Posts — Text: Hair systems · 6 min",
+      "default": "Hair systems · 6 min"
+    },
+    {
+      "type": "text",
+      "id": "t_non_surgical_hair_replacemen",
+      "label": "Journal / Posts — Subheading: Non-surgical hair replacement in Utah: w",
+      "default": "Non-surgical hair replacement in Utah: what it is and what it costs"
+    },
+    {
+      "type": "text",
+      "id": "t_non_surgical_hair_replacemen_2",
+      "label": "Journal / Posts — Text: Non-surgical hair replacement, real pric",
+      "default": "Non-surgical hair replacement, real prices, and how long a system lasts."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min_8",
+      "label": "Journal / Posts — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_haircuts_for_thinning_hair_a",
+      "label": "Journal / Posts — Subheading: Haircuts for thinning hair and receding ",
+      "default": "Haircuts for thinning hair and receding hairlines"
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_ask_for_what_to_avoi",
+      "label": "Journal / Posts — Text: What to ask for, what to avoid, and when",
+      "default": "What to ask for, what to avoid, and when a haircut isn’t enough."
+    },
+    {
+      "type": "text",
+      "id": "t_shop_news_4_min",
+      "label": "Journal / Posts — Text: Shop news · 4 min",
+      "default": "Shop news · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_award_winning_barbering_in_o",
+      "label": "Journal / Posts — Subheading: Award-winning barbering in Orem, Utah",
+      "default": "Award-winning barbering in Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_our_daily_herald_awards_who_",
+      "label": "Journal / Posts — Text: Our Daily Herald awards, who gives them,",
+      "default": "Our Daily Herald awards, who gives them, and what our clients say."
+    },
+    {
+      "type": "text",
+      "id": "t_shop_news_4_min_2",
+      "label": "Journal / Posts — Text: Shop news · 4 min",
+      "default": "Shop news · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_re_making_our_own_pro",
+      "label": "Journal / Posts — Subheading: Why we’re making our own products",
+      "default": "Why we’re making our own products"
+    },
+    {
+      "type": "textarea",
+      "id": "t_nothing_on_the_shelf_was_goo",
+      "label": "Journal / Posts — Text: Nothing on the shelf was good enough, so",
+      "default": "Nothing on the shelf was good enough, so we’re building a complete line, tested in the chair."
+    },
+    {
+      "type": "text",
+      "id": "t_shop_news_4_min_3",
+      "label": "Journal / Posts — Text: Shop news · 4 min",
+      "default": "Shop news · 4 min"
+    },
+    {
+      "type": "text",
+      "id": "t_why_the_same_barber_every_ti",
+      "label": "Journal / Posts — Subheading: Why the same barber every time matters",
+      "default": "Why the same barber every time matters"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_aren_t_a_chain_why_a_smal",
+      "label": "Journal / Posts — Text: We aren’t a chain. Why a small shop and ",
+      "default": "We aren’t a chain. Why a small shop and a barber who knows your hair make a better haircut."
+    },
+    {
+      "type": "text",
+      "id": "t_our_story_8_min",
+      "label": "Journal / Posts — Text: Our story · 8 min",
+      "default": "Our story · 8 min"
+    },
+    {
+      "type": "text",
+      "id": "t_the_story_of_broken_arrow_fr",
+      "label": "Journal / Posts — Subheading: The story of Broken Arrow: from Payson t",
+      "default": "The story of Broken Arrow: from Payson to Orem"
+    },
+    {
+      "type": "textarea",
+      "id": "t_how_a_small_shop_in_payson_b",
+      "label": "Journal / Posts — Text: How a small shop in Payson became the Or",
+      "default": "How a small shop in Payson became the Orem shop, and how Bryton, Connor and Elise came together."
+    },
+    {
+      "type": "text",
+      "id": "t_shop_guide_6_min",
+      "label": "Journal / Posts — Text: Shop guide · 6 min",
+      "default": "Shop guide · 6 min"
+    },
+    {
+      "type": "text",
+      "id": "t_looking_for_a_barber_in_orem",
+      "label": "Journal / Posts — Subheading: Looking for a barber in Orem, Utah? Meet",
+      "default": "Looking for a barber in Orem, Utah? Meet Broken Arrow"
+    },
+    {
+      "type": "text",
+      "id": "t_who_we_are_what_we_offer_the",
+      "label": "Journal / Posts — Text: Who we are, what we offer, the barbers, ",
+      "default": "Who we are, what we offer, the barbers, and what to expect at your first appointment."
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min_9",
+      "label": "Journal / Posts — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_taper_or_fade_what_s_the_dif",
+      "label": "Journal / Posts — Subheading: Taper or fade: what's the difference?",
+      "default": "Taper or fade: what's the difference?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_taper_shortens_gradually_t",
+      "label": "Journal / Posts — Text: A taper shortens gradually toward the ne",
+      "default": "A taper shortens gradually toward the neckline. A fade goes down to skin. How to tell which one you want."
+    },
+    {
+      "type": "text",
+      "id": "t_hair_systems_7_min",
+      "label": "Journal / Posts — Text: Hair systems · 7 min",
+      "default": "Hair systems · 7 min"
+    },
+    {
+      "type": "text",
+      "id": "t_what_a_hair_system_actually_",
+      "label": "Journal / Posts — Subheading: What a hair system actually is",
+      "default": "What a hair system actually is"
+    },
+    {
+      "type": "text",
+      "id": "t_the_base_the_hair_how_it_s_a",
+      "label": "Journal / Posts — Text: The base, the hair, how it's attached, a",
+      "default": "The base, the hair, how it's attached, and what the first year looks like."
+    },
+    {
+      "type": "text",
+      "id": "t_product_how_tos_5_min",
+      "label": "Journal / Posts — Text: Product how-tos · 5 min",
+      "default": "Product how-tos · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_why_your_hair_falls_flat_aft",
+      "label": "Journal / Posts — Subheading: Why your hair falls flat after you style",
+      "default": "Why your hair falls flat after you style it"
+    },
+    {
+      "type": "text",
+      "id": "t_the_cut_the_prep_and_the_pro",
+      "label": "Journal / Posts — Text: The cut, the prep and the product, and a",
+      "default": "The cut, the prep and the product, and a five-step routine that holds."
+    },
+    {
+      "type": "text",
+      "id": "t_product_how_tos_3_min",
+      "label": "Journal / Posts — Text: Product how-tos · 3 min",
+      "default": "Product how-tos · 3 min"
+    },
+    {
+      "type": "text",
+      "id": "t_how_much_matte_clay_to_use",
+      "label": "Journal / Posts — Subheading: How much matte clay to use",
+      "default": "How much matte clay to use"
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_tell_your_barber",
+      "label": "Journal / Posts — Subheading: What to tell your barber",
+      "default": "What to tell your barber"
+    },
+    {
+      "type": "text",
+      "id": "t_doing_your_own_maintenance_a",
+      "label": "Journal / Posts — Subheading: Doing your own maintenance at home",
+      "default": "Doing your own maintenance at home"
+    },
+    {
+      "type": "text",
+      "id": "t_growing_your_hair_out_how_sh",
+      "label": "Journal / Posts — Subheading: Growing your hair out: how shaping appoi",
+      "default": "Growing your hair out: how shaping appointments help"
+    },
+    {
+      "type": "header",
+      "content": "Text: Journal / Book band"
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_haircut",
+      "label": "Journal / Book band — Heading: Book a haircut.",
+      "default": "Book a haircut."
+    }
+  ]
+}
+{% endschema %}

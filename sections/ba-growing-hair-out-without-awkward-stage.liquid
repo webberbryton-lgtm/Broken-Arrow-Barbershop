@@ -1,0 +1,602 @@
+{%- comment -%} Generated from the Claude Design page "Local Guide - Growing Hair Out". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_cut_textured_flow != blank
+  assign img_cut_textured_flow = section.settings.img_cut_textured_flow | image_url: width: 2400
+else
+  assign img_cut_textured_flow = 'ba-cut-textured-flow.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="growing-hair-out-without-awkward-stage"] :is(ul, ol) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="growing-hair-out-without-awkward-stage" data-ba-active="journal">
+<article><header data-screen-label="Guide / Hero" style="position: relative; background: var(--band); min-height: clamp(520px, 76vh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<div aria-label="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center; filter: saturate(0.85);'></div>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;"><a href="/pages/journal" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_journal | escape }}</a><span style="opacity: 0.5;">/</span><span style="opacity: 0.78;">{{ section.settings.t_haircut_guides | escape }}</span></nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_growing_your_hair_out_how_sh | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_6_min_read | escape }}</p>
+</div></header><section data-screen-label="Guide / Intro" style="max-width: 920px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(40px, 6vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_growing_your_hair_out_doesn_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_most_people_who_try_to_grow_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_that_s_the_awkward_stage_and | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_short_answer | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_book_a_shaping_appointment_e | escape }}</p>
+</div>
+</div></section>
+<section data-screen-label="Guide / Section" id="s1" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_a_shaping_appointment_i | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_shaping_appointment_isn_t_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_your_barber_leaves_the_top_a | escape }}</p>
+<blockquote style="margin: 8px 0px; display: flex; flex-direction: column; gap: 16px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding: 28px 0px;">
+<p class="ba-display" style="font-size: clamp(26px, 3vw, 38px); line-height: 1.05; max-width: 24ch;">{{ section.settings.t_you_re_not_cutting_it_shorte | escape }}</p>
+</blockquote>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s2" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_02 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_how_it_helps_at_each_stage | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_every_stage_of_growing_your_ | escape }}</p>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_months_1_2 | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_the_sides_grow_faster_than_t | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_months_2_3 | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_the_awkward_stage_sides_puff | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_months_3_5 | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_enough_length_to_style_add_t | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_months_5_and_on | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_refine_it_into_the_finished_ | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s3" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_03 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_longer_styles_to_grow_into | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_knowing_where_you_re_headed_ | escape }}</p>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_the_flow | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_pushed_back_past_the_ears_wi | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_warrior_cut | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_longer_on_top_and_through_th | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_modern_mullet | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_shorter_or_textured_on_top_a | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_textured_shag | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_layered_and_loose_with_movem | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_curtains | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_a_center_part_with_length_fa | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="A textured flow haircut" loading="lazy" src="{{ img_cut_textured_flow }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_a_textured_flow | escape }}</figcaption>
+</figure>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s4" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_tell_your_barber_the_goal | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_say_what_length_you_want_to_ | escape }}</p>
+<a href="/pages/what-to-tell-your-barber" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_what_to_tell_your_barber | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s5" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_which_service_to_book | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_recommend_the_signature_h | escape }}</p>
+<a href="/pages/signature-haircut-orem" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_why_longer_cuts_need_more_ti | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s6" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_06 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_styling_along_the_way | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_little_matte_clay_or_cream | escape }}</p>
+<a href="/pages/how-much-matte-clay-to-use" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_how_much_clay_to_use | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s7" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_07 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_curly_or_wavy_hair | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_curls_need_length_to_form_so | escape }}</p>
+<a href="Barber.dc.html?b=elise" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_elise_s_page | escape }}</a>
+</div>
+</section><section data-screen-label="Guide / FAQ" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 20px;">
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px);">{{ section.settings.t_questions | escape }}</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Should I stop getting haircuts while I grow my hair out?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_no_keep_booking_shaping_appo | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How often should I come in?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_about_every_6_8_weeks | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How long does it take to grow my hair out?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_going_from_short_to_medium_u | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Who should I book?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_connor_and_elise_both_do_a_l | escape }}</p>
+</details>
+</div></section></article><section data-screen-label="Guide / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_growing_it_out | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_book_a_signature_haircut_and | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="/pages/team">{{ section.settings.t_meet_the_barbers | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Growing your hair out: how shaping appointments get you through the awkward stage","description":"Growing your hair out? How shaping appointments get you through the awkward stages, what to keep trimming, and longer men’s styles to grow into, from barbers in Orem, Utah.","datePublished":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/growing-hair-out-without-awkward-stage","author":{"@type":"Organization","name":"Broken Arrow Barbershop"},"about":{"@type":"BarberShop","name":"Broken Arrow Barbershop","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097"}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I stop getting haircuts while I grow my hair out?","acceptedAnswer":{"@type":"Answer","text":"No. Keep booking shaping appointments. Skipping cuts is what makes the awkward stage worse."}},{"@type":"Question","name":"How often should I come in?","acceptedAnswer":{"@type":"Answer","text":"About every 6–8 weeks."}},{"@type":"Question","name":"How long does it take to grow my hair out?","acceptedAnswer":{"@type":"Answer","text":"Going from short to medium usually takes 4–6 months. Longer styles take longer."}},{"@type":"Question","name":"Who should I book?","acceptedAnswer":{"@type":"Answer","text":"Connor and Elise both do a lot of medium and longer cuts, and Bryton specializes in scissor haircuts."}}]}]}</script>
+{% schema %}
+{
+  "name": "Local Guide - Growing Hai",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Guide / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_textured_flow",
+      "label": "Guide / Section — photo (cut-textured-flow.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Guide / Hero — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides",
+      "label": "Guide / Hero — Text: Haircut guides",
+      "default": "Haircut guides"
+    },
+    {
+      "type": "text",
+      "id": "t_growing_your_hair_out_how_sh",
+      "label": "Guide / Hero — Heading: Growing your hair out: how shaping appoi",
+      "default": "Growing your hair out: how shaping appointments get you through the awkward stage"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_6_min_read",
+      "label": "Guide / Hero — Text: September 26, 2026 · 6 min read",
+      "default": "September 26, 2026 · 6 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Intro"
+    },
+    {
+      "type": "textarea",
+      "id": "t_growing_your_hair_out_doesn_",
+      "label": "Guide / Intro — Text: Growing your hair out doesn’t mean skipp",
+      "default": "Growing your hair out doesn’t mean skipping haircuts. It means booking the right ones: shaping appointments that cut different parts at different times, so it always looks intentional."
+    },
+    {
+      "type": "textarea",
+      "id": "t_most_people_who_try_to_grow_",
+      "label": "Guide / Intro — Text: Most people who try to grow their hair o",
+      "default": "Most people who try to grow their hair out give up somewhere around month two or three. The sides puff out, the back gets shaggy, the top falls in your eyes and nothing sits right."
+    },
+    {
+      "type": "textarea",
+      "id": "t_that_s_the_awkward_stage_and",
+      "label": "Guide / Intro — Text: That’s the awkward stage, and it’s almos",
+      "default": "That’s the awkward stage, and it’s almost always made worse by not getting your hair cut at all."
+    },
+    {
+      "type": "text",
+      "id": "t_short_answer",
+      "label": "Guide / Intro — Text: Short answer",
+      "default": "Short answer"
+    },
+    {
+      "type": "textarea",
+      "id": "t_book_a_shaping_appointment_e",
+      "label": "Guide / Intro — Text: Book a shaping appointment every 6–8 wee",
+      "default": "Book a shaping appointment every 6–8 weeks while you grow your hair out. Your barber keeps the neckline, around the ears and the bulk at the sides under control while the top grows, so your hair looks like a style at every stage. Tell your barber what length you’re aiming for."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Section"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Guide / Section — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_what_a_shaping_appointment_i",
+      "label": "Guide / Section — Heading: What a shaping appointment is",
+      "default": "What a shaping appointment is"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_shaping_appointment_isn_t_",
+      "label": "Guide / Section — Text: A shaping appointment isn’t a regular ha",
+      "default": "A shaping appointment isn’t a regular haircut. The goal isn’t to take length off. It’s to control the shape while you gain length."
+    },
+    {
+      "type": "textarea",
+      "id": "t_your_barber_leaves_the_top_a",
+      "label": "Guide / Section — Text: Your barber leaves the top and the parts",
+      "default": "Your barber leaves the top and the parts you’re growing alone, and works on the areas that make growing hair look messy: the neckline, around the ears, the weight at the sides and the back."
+    },
+    {
+      "type": "text",
+      "id": "t_you_re_not_cutting_it_shorte",
+      "label": "Guide / Section — Text: You’re not cutting it shorter. You’re cu",
+      "default": "You’re not cutting it shorter. You’re cutting it into shape."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Guide / Section — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_how_it_helps_at_each_stage",
+      "label": "Guide / Section — Heading: How it helps at each stage",
+      "default": "How it helps at each stage"
+    },
+    {
+      "type": "textarea",
+      "id": "t_every_stage_of_growing_your_",
+      "label": "Guide / Section — Text: Every stage of growing your hair out has",
+      "default": "Every stage of growing your hair out has its own problem. A shaping appointment fixes the one you’re in."
+    },
+    {
+      "type": "text",
+      "id": "t_months_1_2",
+      "label": "Guide / Section — Text: Months 1–2",
+      "default": "Months 1–2"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_sides_grow_faster_than_t",
+      "label": "Guide / Section — Text: The sides grow faster than the top. Tidy",
+      "default": "The sides grow faster than the top. Tidy the sides and neckline so it still looks like a haircut."
+    },
+    {
+      "type": "text",
+      "id": "t_months_2_3",
+      "label": "Guide / Section — Text: Months 2–3",
+      "default": "Months 2–3"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_awkward_stage_sides_puff",
+      "label": "Guide / Section — Text: The awkward stage. Sides puff out and th",
+      "default": "The awkward stage. Sides puff out and the top hits your eyes. Thin the bulk and shape the back so it sits closer."
+    },
+    {
+      "type": "text",
+      "id": "t_months_3_5",
+      "label": "Guide / Section — Text: Months 3–5",
+      "default": "Months 3–5"
+    },
+    {
+      "type": "text",
+      "id": "t_enough_length_to_style_add_t",
+      "label": "Guide / Section — Text: Enough length to style. Add texture and ",
+      "default": "Enough length to style. Add texture and movement, and start shaping toward the final cut."
+    },
+    {
+      "type": "text",
+      "id": "t_months_5_and_on",
+      "label": "Guide / Section — Text: Months 5 and on",
+      "default": "Months 5 and on"
+    },
+    {
+      "type": "text",
+      "id": "t_refine_it_into_the_finished_",
+      "label": "Guide / Section — Text: Refine it into the finished style and ke",
+      "default": "Refine it into the finished style and keep it there."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Guide / Section — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_longer_styles_to_grow_into",
+      "label": "Guide / Section — Heading: Longer styles to grow into",
+      "default": "Longer styles to grow into"
+    },
+    {
+      "type": "text",
+      "id": "t_knowing_where_you_re_headed_",
+      "label": "Guide / Section — Text: Knowing where you’re headed makes the in",
+      "default": "Knowing where you’re headed makes the in-between easier. A few longer styles we cut a lot:"
+    },
+    {
+      "type": "text",
+      "id": "t_the_flow",
+      "label": "Guide / Section — Text: The flow",
+      "default": "The flow"
+    },
+    {
+      "type": "text",
+      "id": "t_pushed_back_past_the_ears_wi",
+      "label": "Guide / Section — Text: Pushed back, past the ears, with natural",
+      "default": "Pushed back, past the ears, with natural movement. Needs even length all the way around."
+    },
+    {
+      "type": "text",
+      "id": "t_warrior_cut",
+      "label": "Guide / Section — Text: Warrior cut",
+      "default": "Warrior cut"
+    },
+    {
+      "type": "textarea",
+      "id": "t_longer_on_top_and_through_th",
+      "label": "Guide / Section — Text: Longer on top and through the back, with",
+      "default": "Longer on top and through the back, with the sides kept tighter. A good in-between on the way to longer hair."
+    },
+    {
+      "type": "text",
+      "id": "t_modern_mullet",
+      "label": "Guide / Section — Text: Modern mullet",
+      "default": "Modern mullet"
+    },
+    {
+      "type": "text",
+      "id": "t_shorter_or_textured_on_top_a",
+      "label": "Guide / Section — Text: Shorter or textured on top and sides, wi",
+      "default": "Shorter or textured on top and sides, with length left through the back."
+    },
+    {
+      "type": "text",
+      "id": "t_textured_shag",
+      "label": "Guide / Section — Text: Textured shag",
+      "default": "Textured shag"
+    },
+    {
+      "type": "text",
+      "id": "t_layered_and_loose_with_movem",
+      "label": "Guide / Section — Text: Layered and loose, with movement all ove",
+      "default": "Layered and loose, with movement all over. Works well on wavy hair."
+    },
+    {
+      "type": "text",
+      "id": "t_curtains",
+      "label": "Guide / Section — Text: Curtains",
+      "default": "Curtains"
+    },
+    {
+      "type": "text",
+      "id": "t_a_center_part_with_length_fa",
+      "label": "Guide / Section — Text: A center part with length falling to eit",
+      "default": "A center part with length falling to either side of the face."
+    },
+    {
+      "type": "text",
+      "id": "t_a_textured_flow",
+      "label": "Guide / Section — Text: A textured flow.",
+      "default": "A textured flow."
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Guide / Section — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_tell_your_barber_the_goal",
+      "label": "Guide / Section — Heading: Tell your barber the goal",
+      "default": "Tell your barber the goal"
+    },
+    {
+      "type": "textarea",
+      "id": "t_say_what_length_you_want_to_",
+      "label": "Guide / Section — Text: Say what length you want to end up at an",
+      "default": "Say what length you want to end up at and roughly how long you’re willing to wait. Bring a photo if you have one. Your barber will plan which parts to leave alone and which to keep shaped."
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_tell_your_barber",
+      "label": "Guide / Section — Link text: What to tell your barber →",
+      "default": "What to tell your barber →"
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Guide / Section — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_which_service_to_book",
+      "label": "Guide / Section — Heading: Which service to book",
+      "default": "Which service to book"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_recommend_the_signature_h",
+      "label": "Guide / Section — Text: We recommend the Signature Haircut for s",
+      "default": "We recommend the Signature Haircut for shaping appointments. It gives your barber the extra time to plan the grow-out and do the detail work, and because you’re coming in less often, it usually costs about the same over a year."
+    },
+    {
+      "type": "text",
+      "id": "t_why_longer_cuts_need_more_ti",
+      "label": "Guide / Section — Link text: Why longer cuts need more time →",
+      "default": "Why longer cuts need more time →"
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Guide / Section — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_styling_along_the_way",
+      "label": "Guide / Section — Heading: Styling along the way",
+      "default": "Styling along the way"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_little_matte_clay_or_cream",
+      "label": "Guide / Section — Text: A little matte clay or cream gives the i",
+      "default": "A little matte clay or cream gives the in-between length some direction. Pushing it back or to the side usually looks more intentional than letting it hang."
+    },
+    {
+      "type": "text",
+      "id": "t_how_much_clay_to_use",
+      "label": "Guide / Section — Link text: How much clay to use →",
+      "default": "How much clay to use →"
+    },
+    {
+      "type": "text",
+      "id": "t_07",
+      "label": "Guide / Section — Text: 07",
+      "default": "07"
+    },
+    {
+      "type": "text",
+      "id": "t_curly_or_wavy_hair",
+      "label": "Guide / Section — Heading: Curly or wavy hair",
+      "default": "Curly or wavy hair"
+    },
+    {
+      "type": "textarea",
+      "id": "t_curls_need_length_to_form_so",
+      "label": "Guide / Section — Text: Curls need length to form, so the awkwar",
+      "default": "Curls need length to form, so the awkward stage can look bigger. Keep the shape even and don’t let the sides get heavier than the top. Elise does a lot of curly and longer cuts."
+    },
+    {
+      "type": "text",
+      "id": "t_elise_s_page",
+      "label": "Guide / Section — Link text: Elise’s page →",
+      "default": "Elise’s page →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Guide / FAQ — Heading: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "textarea",
+      "id": "t_no_keep_booking_shaping_appo",
+      "label": "Guide / FAQ — Text: No. Keep booking shaping appointments. S",
+      "default": "No. Keep booking shaping appointments. Skipping cuts is what makes the awkward stage worse."
+    },
+    {
+      "type": "text",
+      "id": "t_about_every_6_8_weeks",
+      "label": "Guide / FAQ — Text: About every 6–8 weeks.",
+      "default": "About every 6–8 weeks."
+    },
+    {
+      "type": "text",
+      "id": "t_going_from_short_to_medium_u",
+      "label": "Guide / FAQ — Text: Going from short to medium usually takes",
+      "default": "Going from short to medium usually takes 4–6 months. Longer styles take longer."
+    },
+    {
+      "type": "textarea",
+      "id": "t_connor_and_elise_both_do_a_l",
+      "label": "Guide / FAQ — Text: Connor and Elise both do a lot of medium",
+      "default": "Connor and Elise both do a lot of medium and longer cuts, and Bryton specializes in scissor haircuts."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Guide / CTA — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_growing_it_out",
+      "label": "Guide / CTA — Heading: Growing it out?",
+      "default": "Growing it out?"
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_signature_haircut_and",
+      "label": "Guide / CTA — Text: Book a Signature Haircut and tell us the",
+      "default": "Book a Signature Haircut and tell us the length you’re aiming for. We’ll plan the rest."
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Guide / CTA — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_the_barbers",
+      "label": "Guide / CTA — Link text: Meet the barbers",
+      "default": "Meet the barbers"
+    }
+  ]
+}
+{% endschema %}

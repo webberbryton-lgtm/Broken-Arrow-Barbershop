@@ -1,0 +1,25 @@
+{%- comment -%}
+  Product schema for Broken Arrow Grooming. Most Shopify themes already output this.
+  Only add if your theme doesn't (search main-product.liquid for "application/ld+json" first).
+  Install in sections/main-product.liquid:  {% render 'schema-product', product: product %}
+{%- endcomment -%}
+{%- assign v = product.selected_or_first_available_variant -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "description": {{ product.description | strip_html | truncate: 300 | json }},
+  "image": [{% for img in product.images limit: 4 %}{{ img | image_url: width: 1200 | prepend: 'https:' | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "brand": { "@type": "Brand", "name": "Broken Arrow Grooming" },
+  "sku": {{ v.sku | json }},
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ shop.url }}{{ product.url }}",
+    "priceCurrency": {{ cart.currency.iso_code | json }},
+    "price": {{ v.price | divided_by: 100.0 | json }},
+    "availability": "https://schema.org/{% if v.available %}InStock{% else %}OutOfStock{% endif %}",
+    "shippingDetails": { "@type": "OfferShippingDetails", "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" } }
+  }
+}
+</script>

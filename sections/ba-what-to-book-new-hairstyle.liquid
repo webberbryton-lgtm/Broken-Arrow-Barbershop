@@ -1,0 +1,446 @@
+{%- comment -%} Generated from the Claude Design page "Local Guide - New Hairstyle". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_guide_discuss != blank
+  assign img_guide_discuss = section.settings.img_guide_discuss | image_url: width: 2400
+else
+  assign img_guide_discuss = 'ba-guide-discuss.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="what-to-book-new-hairstyle"] :is(ul, ol) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="what-to-book-new-hairstyle" data-ba-active="journal" data-ba-book="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ" data-ba-book-label="BOOK A SIGNATURE HAIRCUT">
+<article><header data-screen-label="Guide / Hero" style="position: relative; background: var(--band); min-height: clamp(520px, 76vh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<div aria-label="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center; filter: saturate(0.85);'></div>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;"><a href="/pages/journal" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_journal | escape }}</a><span style="opacity: 0.5;">/</span><span style="opacity: 0.78;">{{ section.settings.t_haircut_guides | escape }}</span></nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_what_to_book_when_you_want_a | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_4_min_read | escape }}</p>
+</div></header><section data-screen-label="Guide / Intro" style="max-width: 920px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(40px, 6vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_if_you_want_a_completely_new | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_short_answer | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_book_the_signature_haircut_6 | escape }}</p>
+</div>
+</div></section>
+<section data-screen-label="Guide / Section" id="s1" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_why_the_signature_haircut | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_new_hairstyle_isn_t_a_trim | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_in_a_rushed_appointment_that | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="A barber and client talking through a new haircut" loading="lazy" src="{{ img_guide_discuss }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_the_consultation_comes_first | escape }}</figcaption>
+</figure>
+<a href="/pages/signature-haircut-orem" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_why_your_haircut_needs_more_ | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s2" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_02 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_to_bring | escape }}</h2>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_photos | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_2_3_cuts_you_like_ideally_on | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_what_you_don_t_like | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_what_bugs_you_about_your_hai | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_your_routine | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_how_long_you_ll_spend_stylin | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+<a href="/pages/what-to-tell-your-barber" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_what_to_tell_your_barber | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s3" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_03 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_going_short_from_long | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_if_you_re_cutting_off_a_lot_ | escape }}</p>
+<a href="/pages/free-haircut" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_apply_for_a_free_haircut | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s4" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_going_longer_from_short | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_you_can_t_add_length_in_one_ | escape }}</p>
+<a href="/pages/growing-hair-out-without-awkward-stage" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_growing_your_hair_out | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s5" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_not_sure_what_you_want | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_that_s_fine_say_you_want_a_c | escape }}</p>
+<a href="/pages/how-to-find-the-right-hairstyle-for-men" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_how_to_find_the_right_hairst | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s6" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_06 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_after_the_new_cut | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_your_barber_will_show_you_ho | escape }}</p>
+</div>
+</section><section data-screen-label="Guide / FAQ" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 20px;">
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px);">{{ section.settings.t_questions | escape }}</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Can I book a Classic Haircut for a new style?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_you_can_but_we_recommend_the | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Should I bring photos?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_two_or_three_is_ideal | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">What if I also want my beard changed?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">Book the Signature and ask your barber to add a beard trim, or book the Haircut + Beard. <a href="/pages/services" style="color: var(--ink);">{{ section.settings.t_see_all_services | escape }}</a></p>
+</details>
+</div></section></article><section data-screen-label="Guide / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_ready_for_a_change | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_book_the_signature_haircut_a | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ">{{ section.settings.t_book_a_signature_haircut | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="/pages/service-quiz">{{ section.settings.t_not_sure_take_the_quiz | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"What to book when you want a completely new hairstyle","description":"Want a completely new hairstyle? What to book, what to bring and what to expect when you’re making a big change at Broken Arrow Barbershop in Orem, Utah.","datePublished":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/what-to-book-new-hairstyle","author":{"@type":"Organization","name":"Broken Arrow Barbershop"},"about":{"@type":"BarberShop","name":"Broken Arrow Barbershop","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097"}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I book a Classic Haircut for a new style?","acceptedAnswer":{"@type":"Answer","text":"You can, but we recommend the Signature so there’s time for the consultation and detail work."}},{"@type":"Question","name":"Should I bring photos?","acceptedAnswer":{"@type":"Answer","text":"Yes. Two or three is ideal."}},{"@type":"Question","name":"What if I also want my beard changed?","acceptedAnswer":{"@type":"Answer","text":"Book the Signature and ask your barber to add a beard trim, or book the Haircut + Beard."}}]}]}</script>
+{% schema %}
+{
+  "name": "Local Guide - New Hairsty",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Guide / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_guide_discuss",
+      "label": "Guide / Section — photo (guide-discuss.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Guide / Hero — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides",
+      "label": "Guide / Hero — Text: Haircut guides",
+      "default": "Haircut guides"
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_book_when_you_want_a",
+      "label": "Guide / Hero — Heading: What to book when you want a completely ",
+      "default": "What to book when you want a completely new hairstyle"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_4_min_read",
+      "label": "Guide / Hero — Text: September 26, 2026 · 4 min read",
+      "default": "September 26, 2026 · 4 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Intro"
+    },
+    {
+      "type": "textarea",
+      "id": "t_if_you_want_a_completely_new",
+      "label": "Guide / Intro — Text: If you want a completely new hairstyle, ",
+      "default": "If you want a completely new hairstyle, book the Signature Haircut. A big change needs a real conversation before anything gets cut, and that takes time."
+    },
+    {
+      "type": "text",
+      "id": "t_short_answer",
+      "label": "Guide / Intro — Text: Short answer",
+      "default": "Short answer"
+    },
+    {
+      "type": "textarea",
+      "id": "t_book_the_signature_haircut_6",
+      "label": "Guide / Intro — Text: Book the Signature Haircut ($65) for a c",
+      "default": "Book the Signature Haircut ($65) for a completely new hairstyle. It includes extra consultation and detail time, a hair wash, neck shave and hot towel. Bring 2–3 reference photos and tell your barber what you don’t like about your hair now."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Section"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Guide / Section — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_why_the_signature_haircut",
+      "label": "Guide / Section — Heading: Why the Signature Haircut",
+      "default": "Why the Signature Haircut"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_new_hairstyle_isn_t_a_trim",
+      "label": "Guide / Section — Text: A new hairstyle isn’t a trim. Your barbe",
+      "default": "A new hairstyle isn’t a trim. Your barber needs to look at your head shape, growth patterns, cowlicks, texture and density, then work out how to get from where your hair is now to where you want it."
+    },
+    {
+      "type": "textarea",
+      "id": "t_in_a_rushed_appointment_that",
+      "label": "Guide / Section — Text: In a rushed appointment, that conversati",
+      "default": "In a rushed appointment, that conversation gets skipped. The Signature gives it the time it needs, plus the detail work that makes a new cut grow out well."
+    },
+    {
+      "type": "text",
+      "id": "t_the_consultation_comes_first",
+      "label": "Guide / Section — Text: The consultation comes first.",
+      "default": "The consultation comes first."
+    },
+    {
+      "type": "text",
+      "id": "t_why_your_haircut_needs_more_",
+      "label": "Guide / Section — Link text: Why your haircut needs more than 15 minu",
+      "default": "Why your haircut needs more than 15 minutes →"
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Guide / Section — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_bring",
+      "label": "Guide / Section — Heading: What to bring",
+      "default": "What to bring"
+    },
+    {
+      "type": "text",
+      "id": "t_photos",
+      "label": "Guide / Section — Text: Photos",
+      "default": "Photos"
+    },
+    {
+      "type": "text",
+      "id": "t_2_3_cuts_you_like_ideally_on",
+      "label": "Guide / Section — Text: 2–3 cuts you like, ideally on hair simil",
+      "default": "2–3 cuts you like, ideally on hair similar to yours."
+    },
+    {
+      "type": "text",
+      "id": "t_what_you_don_t_like",
+      "label": "Guide / Section — Text: What you don’t like",
+      "default": "What you don’t like"
+    },
+    {
+      "type": "text",
+      "id": "t_what_bugs_you_about_your_hai",
+      "label": "Guide / Section — Text: What bugs you about your hair now is oft",
+      "default": "What bugs you about your hair now is often the most useful thing you can say."
+    },
+    {
+      "type": "text",
+      "id": "t_your_routine",
+      "label": "Guide / Section — Text: Your routine",
+      "default": "Your routine"
+    },
+    {
+      "type": "text",
+      "id": "t_how_long_you_ll_spend_stylin",
+      "label": "Guide / Section — Text: How long you’ll spend styling it in the ",
+      "default": "How long you’ll spend styling it in the morning, and whether you wear a hat."
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_tell_your_barber",
+      "label": "Guide / Section — Link text: What to tell your barber →",
+      "default": "What to tell your barber →"
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Guide / Section — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_going_short_from_long",
+      "label": "Guide / Section — Heading: Going short from long",
+      "default": "Going short from long"
+    },
+    {
+      "type": "textarea",
+      "id": "t_if_you_re_cutting_off_a_lot_",
+      "label": "Guide / Section — Text: If you’re cutting off a lot of length, t",
+      "default": "If you’re cutting off a lot of length, this is the easiest big change to make in one visit. Your barber will talk through the shape first so you know exactly what you’re getting. Big long-to-short changes are also what we film for YouTube, so you could get it free."
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_haircut",
+      "label": "Guide / Section — Link text: Apply for a free haircut →",
+      "default": "Apply for a free haircut →"
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Guide / Section — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_going_longer_from_short",
+      "label": "Guide / Section — Heading: Going longer from short",
+      "default": "Going longer from short"
+    },
+    {
+      "type": "textarea",
+      "id": "t_you_can_t_add_length_in_one_",
+      "label": "Guide / Section — Text: You can’t add length in one visit, but y",
+      "default": "You can’t add length in one visit, but you can start the plan. Your barber will shape what you have so the grow-out looks intentional at every stage."
+    },
+    {
+      "type": "text",
+      "id": "t_growing_your_hair_out",
+      "label": "Guide / Section — Link text: Growing your hair out →",
+      "default": "Growing your hair out →"
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Guide / Section — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_what_you_want",
+      "label": "Guide / Section — Heading: Not sure what you want?",
+      "default": "Not sure what you want?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_that_s_fine_say_you_want_a_c",
+      "label": "Guide / Section — Text: That’s fine. Say you want a change and a",
+      "default": "That’s fine. Say you want a change and ask what would suit your face shape and hair type. Figuring that out is our job."
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_find_the_right_hairst",
+      "label": "Guide / Section — Link text: How to find the right hairstyle →",
+      "default": "How to find the right hairstyle →"
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Guide / Section — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_after_the_new_cut",
+      "label": "Guide / Section — Heading: After the new cut",
+      "default": "After the new cut"
+    },
+    {
+      "type": "textarea",
+      "id": "t_your_barber_will_show_you_ho",
+      "label": "Guide / Section — Text: Your barber will show you how to style i",
+      "default": "Your barber will show you how to style it and what product to use. Come back in a few weeks so they can refine the shape once they’ve seen how your hair grows."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Guide / FAQ — Heading: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "textarea",
+      "id": "t_you_can_but_we_recommend_the",
+      "label": "Guide / FAQ — Text: You can, but we recommend the Signature ",
+      "default": "You can, but we recommend the Signature so there’s time for the consultation and detail work."
+    },
+    {
+      "type": "text",
+      "id": "t_yes_two_or_three_is_ideal",
+      "label": "Guide / FAQ — Text: Yes. Two or three is ideal.",
+      "default": "Yes. Two or three is ideal."
+    },
+    {
+      "type": "text",
+      "id": "t_see_all_services",
+      "label": "Guide / FAQ — Link text: See all services →",
+      "default": "See all services →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Guide / CTA — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_ready_for_a_change",
+      "label": "Guide / CTA — Heading: Ready for a change?",
+      "default": "Ready for a change?"
+    },
+    {
+      "type": "text",
+      "id": "t_book_the_signature_haircut_a",
+      "label": "Guide / CTA — Text: Book the Signature Haircut and bring a f",
+      "default": "Book the Signature Haircut and bring a few photos. We’ll take it from there."
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_signature_haircut",
+      "label": "Guide / CTA — Link text: BOOK A SIGNATURE HAIRCUT",
+      "default": "BOOK A SIGNATURE HAIRCUT"
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_take_the_quiz",
+      "label": "Guide / CTA — Link text: Not sure? Take the quiz",
+      "default": "Not sure? Take the quiz"
+    }
+  ]
+}
+{% endschema %}

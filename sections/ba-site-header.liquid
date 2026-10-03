@@ -1,0 +1,126 @@
+{%- comment -%}
+  Broken Arrow site header, ported from the Claude Design component "SiteHeader".
+  The design switched layouts with JavaScript at 520px and 900px; here the same breakpoints are CSS media queries.
+  A page can change the active tab and the booking button with data-ba-active / data-ba-book / data-ba-book-label
+  on its .ba-page wrapper (set by each page section).
+{%- endcomment -%}
+{%- liquid
+  if section.settings.logo != blank
+    assign logo_src = section.settings.logo | image_url: width: 400
+  else
+    assign logo_src = 'ba-lockup-black.svg' | asset_url
+  endif
+  assign book = section.settings.book_url | default: 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services'
+-%}
+<style>
+  .ba-hdr-spacer { height: 169px; }
+  .ba-hdr { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--canvas); color: var(--ink); border-bottom: 1px solid var(--line); }
+  .ba-hdr__strip { background: var(--canvas-sunk); color: var(--ink); border-bottom: 1px solid var(--line); }
+  .ba-hdr__strip a { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px,5vw,64px); height: 40px; display: flex; align-items: center; justify-content: center; gap: 12px; box-sizing: border-box; text-decoration: none; color: var(--ink); white-space: nowrap; overflow: hidden; }
+  .ba-hdr__strip a:hover { color: var(--green) !important; }
+  .ba-hdr__strip-text { font: 500 13px/18px var(--font-sans); }
+  .ba-hdr__strip-cta { font: 600 12px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; text-decoration: underline; text-decoration-color: var(--green); text-underline-offset: 4px; }
+  .ba-hdr__strip-narrow { display: none; }
+  .ba-hdr__row { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px,5vw,64px); height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; box-sizing: border-box; }
+  .ba-hdr__logo { display: block; flex: none; }
+  .ba-hdr__logo img { width: 164px; height: auto; display: block; }
+  .ba-hdr__actions { display: flex; align-items: center; gap: 20px; }
+  .ba-hdr__menu { background: none; border: 0; padding: 0; min-height: 44px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--ink); }
+  .ba-hdr__book { display: flex; align-items: center; min-height: 44px; padding: 0 20px; background: var(--ink); color: var(--canvas); font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; text-decoration: none; white-space: nowrap; transition: background-color 150ms ease; }
+  .ba-hdr__book:hover { background: var(--green) !important; color: var(--canvas) !important; }
+  .ba-hdr__nav { border-top: 1px solid var(--line); }
+  .ba-hdr__nav > div { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px,5vw,64px); min-height: 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 32px; box-sizing: border-box; }
+  .ba-hdr__nav a { font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--ink); text-decoration: none; white-space: nowrap; padding: 14px 0 12px; border-bottom: 2px solid transparent; }
+  .ba-hdr__nav a:hover { color: var(--green) !important; }
+  .ba-hdr__nav a[aria-current="page"] { border-bottom-color: var(--green); }
+  .ba-hdr__drawer { border-top: 1px solid var(--line); padding: 16px clamp(16px,5vw,64px) 32px; display: flex; flex-direction: column; max-height: calc(100vh - 120px); overflow: auto; }
+  .ba-hdr__drawer[hidden] { display: none; }
+  .ba-hdr__drawer > a { font: 800 32px/1 var(--font-display); letter-spacing: -.03em; text-transform: uppercase; color: var(--ink); text-decoration: none; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .ba-hdr__drawer-info { display: flex; flex-direction: column; gap: 8px; margin-top: 24px; }
+  .ba-hdr__drawer-info a { font: 500 17px/28px var(--font-sans); color: var(--ink); }
+  .ba-hdr.is-open .ba-hdr__nav { display: none; }
+  .ba-hdr__bar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--band); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); gap: 12px; align-items: center; }
+  .ba-hdr__bar a { flex: 1; min-height: 56px; display: flex; align-items: center; justify-content: center; text-align: center; background: var(--on-band); color: var(--band); text-decoration: none; font: 600 13px/16px var(--font-sans); letter-spacing: .18em; }
+  @media (max-width: 899px) {
+    .ba-hdr-spacer { height: 120px; }
+    .ba-hdr__book, .ba-hdr__nav { display: none; }
+    .ba-hdr__bar { display: flex; }
+  }
+  @media (max-width: 519px) {
+    .ba-hdr__strip-wide { display: none; }
+    .ba-hdr__strip-narrow { display: inline; }
+  }
+</style>
+<div class="ba-hdr-spacer" data-ba-hdr-spacer></div>
+<header class="ba-hdr" data-hdr="site" data-ba-header>
+  {%- if section.settings.strip_text != blank or section.settings.strip_cta != blank -%}
+    <div class="ba-hdr__strip">
+      <a href="{{ section.settings.strip_link | default: '/pages/shop' }}">
+        <span class="ba-hdr__strip-wide"><span class="ba-hdr__strip-text">{{ section.settings.strip_text }}</span> <span class="ba-hdr__strip-cta">{{ section.settings.strip_cta }}</span></span>
+        <span class="ba-hdr__strip-narrow ba-hdr__strip-cta">{{ section.settings.strip_narrow }}</span>
+      </a>
+    </div>
+  {%- endif -%}
+  <div class="ba-hdr__row">
+    <a class="ba-hdr__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }} home"><img src="{{ logo_src }}" alt="{{ shop.name | escape }}" width="164" height="71"></a>
+    <div class="ba-hdr__actions">
+      <button type="button" class="ba-hdr__menu" aria-expanded="false" aria-controls="BaHeaderDrawer" data-ba-menu>MENU</button>
+      <a class="ba-hdr__book" href="{{ book }}" data-ba-book>{{ section.settings.book_label | default: 'Book now' }}</a>
+    </div>
+  </div>
+  <nav class="ba-hdr__nav" aria-label="Main">
+    <div>
+      {%- for block in section.blocks -%}
+        {%- if block.settings.show_top -%}
+          <a href="{{ block.settings.link }}" data-ba-key="{{ block.settings.key }}"{% if block.settings.link == request.path %} aria-current="page"{% endif %} {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </nav>
+  <nav class="ba-hdr__drawer" id="BaHeaderDrawer" aria-label="Main" hidden>
+    {%- for block in section.blocks -%}
+      <a href="{{ block.settings.link }}">{{ block.settings.label }}</a>
+    {%- endfor -%}
+    <div class="ba-hdr__drawer-info">
+      <p class="ba-label" style="color:var(--ink-muted)">{{ section.settings.address }}</p>
+      <a href="tel:{{ section.settings.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' | prepend: '+1' }}">{{ section.settings.phone }}</a>
+    </div>
+  </nav>
+</header>
+<div class="ba-hdr__bar"><a href="{{ book }}" data-ba-book data-ba-book-bar>{{ section.settings.bar_label | default: 'BOOK NOW' }}</a></div>
+<script src="{{ 'ba-header.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "BA site header",
+  "tag": "div",
+  "class": "ba-header-section",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo", "info": "Leave empty to use the Broken Arrow Barbershop lockup." },
+    { "type": "header", "content": "Announcement strip" },
+    { "type": "text", "id": "strip_text", "label": "Text", "default": "New from the shop: the Broken Arrow product line." },
+    { "type": "text", "id": "strip_cta", "label": "Link text", "default": "Shop our products →" },
+    { "type": "text", "id": "strip_narrow", "label": "Text on small phones", "default": "Shop the Broken Arrow product line →" },
+    { "type": "url", "id": "strip_link", "label": "Link", "info": "Defaults to the shop page." },
+    { "type": "header", "content": "Booking" },
+    { "type": "text", "id": "book_url", "label": "Booking link (Square)", "default": "https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services", "info": "Pages like a barber's page or hair replacement swap in their own booking link." },
+    { "type": "text", "id": "book_label", "label": "Header button text", "default": "Book now" },
+    { "type": "text", "id": "bar_label", "label": "Phone booking bar text", "default": "BOOK NOW" },
+    { "type": "header", "content": "Menu details" },
+    { "type": "text", "id": "address", "label": "Address line", "default": "375 E 800 S, Suite 12 · Orem, UT" },
+    { "type": "text", "id": "phone", "label": "Phone", "default": "(801) 709-1280" }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Menu link",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Link" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "text", "id": "key", "label": "Page key", "info": "Pages that set this key underline this link (services, team, hair, shop, education, journal, apprenticeship, faq, about)." },
+        { "type": "checkbox", "id": "show_top", "label": "Show in the top bar on desktop", "default": false }
+      ]
+    }
+  ]
+}
+{% endschema %}

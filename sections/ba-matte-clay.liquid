@@ -1,0 +1,892 @@
+{%- comment -%} Generated from the Claude Design page "Product - Matte Clay". {%- endcomment -%}
+{%- liquid
+if section.settings.img_clay_jar != blank
+  assign img_clay_jar = section.settings.img_clay_jar | image_url: width: 2400
+else
+  assign img_clay_jar = 'ba-clay-jar.webp' | asset_url
+endif
+if section.settings.img_clay_scene != blank
+  assign img_clay_scene = section.settings.img_clay_scene | image_url: width: 2400
+else
+  assign img_clay_scene = 'ba-clay-scene.webp' | asset_url
+endif
+if section.settings.img_clay_card != blank
+  assign img_clay_card = section.settings.img_clay_card | image_url: width: 2400
+else
+  assign img_clay_card = 'ba-clay-card.webp' | asset_url
+endif
+if section.settings.img_shampoo_card != blank
+  assign img_shampoo_card = section.settings.img_shampoo_card | image_url: width: 2400
+else
+  assign img_shampoo_card = 'ba-shampoo-card.webp' | asset_url
+endif
+if section.settings.img_conditioner_card != blank
+  assign img_conditioner_card = section.settings.img_conditioner_card | image_url: width: 2400
+else
+  assign img_conditioner_card = 'ba-conditioner-card.webp' | asset_url
+endif
+if section.settings.img_cut_textured_flow != blank
+  assign img_cut_textured_flow = section.settings.img_cut_textured_flow | image_url: width: 2400
+else
+  assign img_cut_textured_flow = 'ba-cut-textured-flow.webp' | asset_url
+endif
+if section.settings.img_cut_side_part != blank
+  assign img_cut_side_part = section.settings.img_cut_side_part | image_url: width: 2400
+else
+  assign img_cut_side_part = 'ba-cut-side-part.webp' | asset_url
+endif
+if section.settings.img_cut_curly_taper != blank
+  assign img_cut_curly_taper = section.settings.img_cut_curly_taper | image_url: width: 2400
+else
+  assign img_cut_curly_taper = 'ba-cut-curly-taper.webp' | asset_url
+endif
+if section.settings.img_cream_card != blank
+  assign img_cream_card = section.settings.img_cream_card | image_url: width: 2400
+else
+  assign img_cream_card = 'ba-cream-card.webp' | asset_url
+endif
+-%}
+<style>
+.bah-matteclay-0:hover { border-color: var(--ink) !important; }
+</style>
+<div class="ba-page" data-ba-page="matte-clay" data-ba-active="grooming">
+<section data-screen-label="Product / Main" id="top" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: 24px clamp(16px, 5vw, 64px) clamp(48px, 8vw, 96px); display: flex; flex-direction: column; gap: 24px;">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;">
+<a href="/pages/shop" style="color: var(--ink-muted); text-decoration: none;">{{ section.settings.t_shop | escape }}</a><span style="color: var(--ink-muted);">/</span><span>{{ section.settings.t_matte_clay | escape }}</span>
+</nav>
+<div style="display: flex; flex-wrap: wrap; gap: 48px;">
+<div style="flex: 1.2 1 420px; display: flex; flex-direction: column; gap: 12px;">
+<div data-mark="{{ 'ba-mark-black.svg' | asset_url }}" data-mc-photo="" style="position: relative; aspect-ratio: 1 / 1; background: var(--canvas-sunk); display: flex; flex-direction: column; justify-content: space-between; padding: 20px; overflow: hidden;">
+<div aria-label="Broken Arrow Grooming matte clay jar, front label" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_clay_jar }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); gap: 12px;">
+<button aria-label="Matte clay jar, front label" aria-pressed="true" data-mc-thumb="0" style="position: relative; overflow: hidden; aspect-ratio: 1 / 1; background: var(--canvas-sunk); border: 2px solid var(--ink); padding: 8px; cursor: pointer; display: flex; align-items: flex-end; text-align: left;">
+<div aria-hidden="true" style='position: absolute; inset: 0px; background-image: url("{{ img_clay_jar }}"); background-size: cover; background-position: center center;'></div>
+<span style="font: 600 11px/14px var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted);">Front</span>
+</button>
+<button aria-label="Photo: lid off, clay texture close-up" aria-pressed="false" data-mc-thumb="1" style="position: relative; overflow: hidden; aspect-ratio: 1 / 1; background: var(--canvas-sunk); border: 2px solid transparent; padding: 8px; cursor: pointer; display: flex; align-items: flex-end; text-align: left;">
+<span style="font: 600 11px/14px var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted);">Texture</span>
+</button>
+<button aria-label="Matte clay jar and box" aria-pressed="false" data-mc-thumb="2" style="position: relative; overflow: hidden; aspect-ratio: 1 / 1; background: var(--canvas-sunk); border: 2px solid transparent; padding: 8px; cursor: pointer; display: flex; align-items: flex-end; text-align: left;">
+<div aria-hidden="true" style='position: absolute; inset: 0px; background-image: url("{{ img_clay_scene }}"); background-size: cover; background-position: center center;'></div>
+<span style="font: 600 11px/14px var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted);">Jar + box</span>
+</button>
+<button aria-label="Photo: fingertip amount, scale for how much to use" aria-pressed="false" data-mc-thumb="3" style="position: relative; overflow: hidden; aspect-ratio: 1 / 1; background: var(--canvas-sunk); border: 2px solid transparent; padding: 8px; cursor: pointer; display: flex; align-items: flex-end; text-align: left;">
+<span style="font: 600 11px/14px var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted);">Amount</span>
+</button>
+</div>
+</div>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 24px; align-self: flex-start; position: sticky; top: 116px;">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<p class="ba-label">{{ section.settings.t_broken_arrow_grooming | escape }}</p>
+<h1 class="ba-display" style="font-size: min(clamp(48px, 6vw, 72px), 11vw);">{{ section.settings.t_matte_clay_2 | escape }}</h1>
+<p style="font:600 24px/32px var(--font-sans);font-variant-numeric:tabular-nums">{{ section.settings.t_28 | escape }}</p>
+</div>
+<p style="font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_the_clay_we_style_with_in_th | escape }}</p>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0px, 1fr)); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line);">
+<div style="padding: 14px 12px 14px 0px; display: flex; flex-direction: column; gap: 4px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_hold | escape }}</p><p style="font-weight: 600;">{{ section.settings.t_firm | escape }}</p></div>
+<div style="padding: 14px 12px; border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_finish | escape }}</p><p style="font-weight: 600;">{{ section.settings.t_matte | escape }}</p></div>
+<div style="padding: 14px 0px 14px 12px; border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_size | escape }}</p><p style="font-weight: 600;">{{ section.settings.t_2_oz | escape }}</p></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<p class="ba-label">{{ section.settings.t_choose_your_set | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_one_jar_two_or_the_daily_kit | escape }}</p>
+</div>
+<div aria-label="Choose your set" role="radiogroup" style="display: grid; grid-template-columns: repeat(3, minmax(0px, 1fr)); gap: 8px;">
+<button aria-checked="true" class="bah-matteclay-0" data-mc-set="0" role="radio" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 12px 8px 14px; background: var(--ink); color: var(--canvas); border: 1px solid var(--ink); cursor: pointer; text-align: center; transition: border-color 150ms;">
+<div style="width: 100%; aspect-ratio: 1 / 1; display: flex; gap: 2px; background: var(--canvas-sunk);">
+<div aria-hidden="true" style='flex: 1 1 0%; background-image: url("{{ img_clay_card }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<span style="font: 800 16px/20px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">1 jar</span>
+<span style="display:flex;flex-wrap:wrap;justify-content:center;gap:4px 8px;font:600 15px/20px var(--font-sans);font-variant-numeric:tabular-nums"><span>$28</span></span>
+</button>
+<button aria-checked="false" class="bah-matteclay-0" data-mc-set="1" role="radio" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 12px 8px 14px; background: var(--canvas); color: var(--ink); border: 1px solid var(--line-strong); cursor: pointer; text-align: center; transition: border-color 150ms;">
+<div style="width: 100%; aspect-ratio: 1 / 1; display: flex; gap: 2px; background: var(--canvas-sunk);">
+<div aria-hidden="true" style='flex: 1 1 0%; background-image: url("{{ img_clay_card }}"); background-size: cover; background-position: center center;'></div>
+<div aria-hidden="true" style='flex: 1 1 0%; background-image: url("{{ img_clay_card }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<span style="font: 800 16px/20px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">2 jars</span>
+<span style="display:flex;flex-wrap:wrap;justify-content:center;gap:4px 8px;font:600 15px/20px var(--font-sans);font-variant-numeric:tabular-nums"><s style="opacity: 0.6; font-weight: 400;">$56</s><span>$50.40</span></span>
+</button>
+<button aria-checked="false" class="bah-matteclay-0" data-mc-set="2" role="radio" style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 12px 8px 14px; background: var(--canvas); color: var(--ink); border: 1px solid var(--line-strong); cursor: pointer; text-align: center; transition: border-color 150ms;">
+<div style="width: 100%; aspect-ratio: 1 / 1; display: flex; gap: 2px; background: var(--canvas-sunk);">
+<div aria-hidden="true" style='flex: 1 1 0%; background-image: url("{{ img_clay_card }}"); background-size: cover; background-position: center center;'></div>
+<div aria-hidden="true" style='flex: 1 1 0%; background-image: url("{{ img_shampoo_card }}"); background-size: cover; background-position: center center;'></div>
+<div aria-hidden="true" style='flex: 1 1 0%; background-image: url("{{ img_conditioner_card }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<span style="font: 800 16px/20px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">The daily kit</span>
+<span style="display:flex;flex-wrap:wrap;justify-content:center;gap:4px 8px;font:600 15px/20px var(--font-sans);font-variant-numeric:tabular-nums"><s style="opacity: 0.6; font-weight: 400;">$84</s><span>$71.40</span></span>
+</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<p class="ba-label">{{ section.settings.t_purchase_option | escape }}</p>
+<button aria-checked="true" data-mc-once="" role="radio" style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0px 18px; background: var(--canvas); border: 2px solid var(--ink); cursor: pointer; text-align: left; color: var(--ink);">
+<span aria-hidden="true" data-mc-dot="once" style="flex: 0 0 auto; width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--ink); display: flex; align-items: center; justify-content: center;"><span style="width: 10px; height: 10px; border-radius: 50%; background: var(--ink);"></span></span>
+<span style="flex: 1 1 0%; font-size: 17px; line-height: 24px;">One-time purchase</span>
+<span data-mc-onceprice="" style="font:600 17px/24px var(--font-sans);font-variant-numeric:tabular-nums">$28</span>
+</button>
+<div data-mc-subbox="" style="display: flex; flex-direction: column; border: 1px solid var(--line-strong); background: var(--canvas);">
+<p class="ba-label" style="background: var(--green); color: var(--on-band); text-align: center; padding: 10px 12px;">{{ section.settings.t_best_value_save_15_on_every_ | escape }}</p>
+<button aria-checked="false" data-mc-sub="" role="radio" style="display: flex; align-items: center; gap: 14px; min-height: 64px; padding: 0px 18px; background: none; border: 0px; cursor: pointer; text-align: left; color: var(--ink);">
+<span aria-hidden="true" data-mc-dot="sub" style="flex: 0 0 auto; width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--ink); display: flex; align-items: center; justify-content: center;"></span>
+<span style="flex: 1 1 0%; font: 600 17px/24px var(--font-sans);">Subscribe and save</span>
+<span style="display:flex;gap:10px;font:600 17px/24px var(--font-sans);font-variant-numeric:tabular-nums"><s data-mc-subwas="" style="font-weight: 400; color: var(--ink-muted);">$28</s><span>$23.80</span></span>
+</button>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 16px 18px 18px; border-top: 1px solid var(--line);">
+<ul style="list-style: none; padding: 0px; margin: 0px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 24px;">
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="flex: 0 0 auto; width: 6px; height: 11px; margin: 5px 4px 0px 3px; border-right: 2px solid var(--green); border-bottom: 2px solid var(--green); transform: rotate(45deg);"></span>15% off every order</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="flex: 0 0 auto; width: 6px; height: 11px; margin: 5px 4px 0px 3px; border-right: 2px solid var(--green); border-bottom: 2px solid var(--green); transform: rotate(45deg);"></span>Skip, change or cancel any time</li>
+<li style="display: flex; gap: 10px;"><span aria-hidden="true" style="flex: 0 0 auto; width: 6px; height: 11px; margin: 5px 4px 0px 3px; border-right: 2px solid var(--green); border-bottom: 2px solid var(--green); transform: rotate(45deg);"></span>Free local pickup at the shop, if you prefer</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; border-top: 1px solid var(--line); padding-top: 12px;">
+<span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_ships_every | escape }}</span>
+<div aria-label="Delivery frequency" role="group" style="display: flex; border: 1px solid var(--line-strong);">
+<button aria-pressed="false" data-mc-freq="0" style="min-height: 40px; padding: 0px 14px; border: 0px; background: transparent; color: var(--ink); cursor: pointer; font: 600 12px/16px var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase;">{{ section.settings.t_30_days | escape }}</button>
+<button aria-pressed="true" data-mc-freq="1" style="min-height: 40px; padding: 0px 14px; border: 0px; background: var(--ink); color: var(--canvas); cursor: pointer; font: 600 12px/16px var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase;">{{ section.settings.t_60_days | escape }}</button>
+<button aria-pressed="false" data-mc-freq="2" style="min-height: 40px; padding: 0px 14px; border: 0px; background: transparent; color: var(--ink); cursor: pointer; font: 600 12px/16px var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase;">{{ section.settings.t_90_days | escape }}</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button class="ba-btn ba-btn-primary" data-ba-dynamic="" data-mc-add="" style="width: 100%;" type="button">ADD TO CART — $28</button>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_ships_from_orem_or_choose_lo | escape }}</p>
+<div data-acc-closed="Open" data-acc-open="Close" data-ba-accordion="single" style="border-top: 1px solid var(--line);">
+<div data-ba-acc-item="" style="border-bottom: 1px solid var(--line);">
+<button aria-expanded="true" data-ba-acc-btn="" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; background: none; border: 0px; padding: 0px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); text-align: left;">
+<span>What it does</span><span>Close</span>
+</button>
+<p data-ba-acc-panel="" style="padding: 0px 0px 20px; font-size: 17px; line-height: 28px; color: var(--ink-muted); max-width: 560px;">{{ section.settings.t_holds_your_style_in_place_al | escape }}</p>
+</div>
+<div data-ba-acc-item="" style="border-bottom: 1px solid var(--line);">
+<button aria-expanded="false" data-ba-acc-btn="" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; background: none; border: 0px; padding: 0px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); text-align: left;">
+<span>Ingredients</span><span>Open</span>
+</button>
+<p data-ba-acc-panel="" hidden="" style="padding: 0px 0px 20px; font-size: 17px; line-height: 28px; color: var(--ink-muted); max-width: 560px;">{{ section.settings.t_full_ingredient_list_goes_he | escape }}</p></div>
+<div data-ba-acc-item="" style="border-bottom: 1px solid var(--line);">
+<button aria-expanded="false" data-ba-acc-btn="" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; background: none; border: 0px; padding: 0px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); text-align: left;">
+<span>Shipping and pickup</span><span>Open</span>
+</button>
+<p data-ba-acc-panel="" hidden="" style="padding: 0px 0px 20px; font-size: 17px; line-height: 28px; color: var(--ink-muted); max-width: 560px;">{{ section.settings.t_orders_ship_within_2_busines | escape }}</p></div>
+</div>
+</div>
+</div>
+</div></section><section data-screen-label="Product / How to use" id="how-to-use" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px;">
+<p class="ba-label" style="flex: 1 1 240px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_how_to_use_it | escape }}</p>
+<h2 class="ba-display" style="flex: 2 1 520px; color: var(--on-band); font-size: clamp(44px, 6.2vw, 72px);">{{ section.settings.t_less_than_you_think | escape }}</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); border-top: 1px solid var(--line-strong);">
+<div style="padding: 24px 24px 0px 0px; display: flex; flex-direction: column; gap: 12px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_01 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_start_with_dry_hair | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_towel_dry_or_blow_dry_first_ | escape }}</p>
+</div>
+<div style="padding: 24px 24px 0px 0px; display: flex; flex-direction: column; gap: 12px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_02 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_a_fingertip_is_enough | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_rub_it_between_your_palms_un | escape }}</p>
+</div>
+<div style="padding: 24px 24px 0px 0px; display: flex; flex-direction: column; gap: 12px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_03 | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_back_to_front | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_work_it_in_from_the_back_so_ | escape }}</p>
+</div>
+</div>
+<div style="aspect-ratio: 16 / 7; background: rgb(34, 35, 38); display: flex; align-items: flex-end; padding: 20px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_video_bryton_styling_a_clien | escape }}</p>
+</div>
+</div></section><section data-screen-label="Product / In the shop" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px;">
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 60px);">{{ section.settings.t_styled_with_it | escape }}</h2>
+<a class="ba-btn ba-btn-primary" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now | escape }}</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 24px;">
+<figure style="display: flex; flex-direction: column; gap: 10px;"><img alt="Textured flow haircut" loading="lazy" src="{{ img_cut_textured_flow }}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;"/><figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_textured_flow | escape }}</figcaption></figure>
+<figure style="display: flex; flex-direction: column; gap: 10px;"><img alt="Side part haircut" loading="lazy" src="{{ img_cut_side_part }}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;"/><figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_side_part | escape }}</figcaption></figure>
+<figure style="display: flex; flex-direction: column; gap: 10px;"><img alt="Curly taper haircut" loading="lazy" src="{{ img_cut_curly_taper }}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;"/><figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_curly_top_tapered_sides | escape }}</figcaption></figure>
+</div>
+</div></section><section data-screen-label="Product / Ingredients" id="ingredients" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px;">
+<p class="ba-label" style="flex: 1 1 240px;">{{ section.settings.t_what_s_in_it | escape }}</p>
+<h2 class="ba-display" style="flex: 2 1 520px; font-size: clamp(44px, 6.2vw, 72px);">{{ section.settings.t_ingredients | escape }}</h2>
+</div>
+<div data-ba-accordion="single" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 16px; align-items: start;">
+<div data-ba-acc-item="" style="display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="aspect-ratio: 1 / 1; background-color: var(--canvas-sunk); background-image: none; background-size: cover; background-position: center center; display: flex; align-items: flex-end; padding: 12px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_photo_ingredient_1 | escape }}</p></div>
+<button aria-expanded="false" data-ba-acc-btn="" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 16px 18px; background: none; border-top: 1px solid var(--line); border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; cursor: pointer; text-align: left; color: var(--ink);">
+<span style="font: 800 18px/22px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">Ingredient 1</span>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(45deg) translate(-2px, -2px); transition: transform 150ms;"></span>
+</button>
+<div data-ba-acc-panel="" hidden="" style="display:flex;flex-direction:column;gap:10px;padding:0 18px 20px"><p class="ba-label" style="color:var(--ink-muted)">{{ section.settings.t_why_we_use_it | escape }}</p><p style="font-size:15px;line-height:24px;text-wrap:pretty">{{ section.settings.t_why_we_use_it_and_what_it_do | escape }}</p></div></div>
+<div data-ba-acc-item="" style="display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="aspect-ratio: 1 / 1; background-color: var(--canvas-sunk); background-image: none; background-size: cover; background-position: center center; display: flex; align-items: flex-end; padding: 12px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_photo_ingredient_2 | escape }}</p></div>
+<button aria-expanded="false" data-ba-acc-btn="" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 16px 18px; background: none; border-top: 1px solid var(--line); border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; cursor: pointer; text-align: left; color: var(--ink);">
+<span style="font: 800 18px/22px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">Ingredient 2</span>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(45deg) translate(-2px, -2px); transition: transform 150ms;"></span>
+</button>
+<div data-ba-acc-panel="" hidden="" style="display:flex;flex-direction:column;gap:10px;padding:0 18px 20px"><p class="ba-label" style="color:var(--ink-muted)">{{ section.settings.t_why_we_use_it_2 | escape }}</p><p style="font-size:15px;line-height:24px;text-wrap:pretty">{{ section.settings.t_why_we_use_it_and_what_it_do_2 | escape }}</p></div></div>
+<div data-ba-acc-item="" style="display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="aspect-ratio: 1 / 1; background-color: var(--canvas-sunk); background-image: none; background-size: cover; background-position: center center; display: flex; align-items: flex-end; padding: 12px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_photo_ingredient_3 | escape }}</p></div>
+<button aria-expanded="false" data-ba-acc-btn="" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 16px 18px; background: none; border-top: 1px solid var(--line); border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; cursor: pointer; text-align: left; color: var(--ink);">
+<span style="font: 800 18px/22px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">Ingredient 3</span>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(45deg) translate(-2px, -2px); transition: transform 150ms;"></span>
+</button>
+<div data-ba-acc-panel="" hidden="" style="display:flex;flex-direction:column;gap:10px;padding:0 18px 20px"><p class="ba-label" style="color:var(--ink-muted)">{{ section.settings.t_why_we_use_it_3 | escape }}</p><p style="font-size:15px;line-height:24px;text-wrap:pretty">{{ section.settings.t_why_we_use_it_and_what_it_do_3 | escape }}</p></div></div>
+<div data-ba-acc-item="" style="display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="aspect-ratio: 1 / 1; background-color: var(--canvas-sunk); background-image: none; background-size: cover; background-position: center center; display: flex; align-items: flex-end; padding: 12px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_photo_ingredient_4 | escape }}</p></div>
+<button aria-expanded="false" data-ba-acc-btn="" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 16px 18px; background: none; border-top: 1px solid var(--line); border-right: 0px; border-bottom: 0px; border-left: 0px; border-image: initial; cursor: pointer; text-align: left; color: var(--ink);">
+<span style="font: 800 18px/22px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">Ingredient 4</span>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(45deg) translate(-2px, -2px); transition: transform 150ms;"></span>
+</button>
+<div data-ba-acc-panel="" hidden="" style="display:flex;flex-direction:column;gap:10px;padding:0 18px 20px"><p class="ba-label" style="color:var(--ink-muted)">{{ section.settings.t_why_we_use_it_4 | escape }}</p><p style="font-size:15px;line-height:24px;text-wrap:pretty">{{ section.settings.t_why_we_use_it_and_what_it_do_4 | escape }}</p></div></div>
+</div>
+</div></section><section data-screen-label="Product / FAQ" id="faq" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 24px 32px;">
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_questions | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(44px, 6.2vw, 72px);">{{ section.settings.t_faq | escape }}</h2>
+</div>
+<div style="flex: 2 1 520px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">What makes our matte clay different?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_answer_coming_soon | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How is the matte clay different from the cream?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_answer_coming_soon_2 | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">What hair is it best for? What will it do to my hair?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_answer_coming_soon_3 | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">What does it smell and feel like?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_answer_coming_soon_4 | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Does it wash out easily?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_answer_coming_soon_5 | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">There’s an issue with my order. Now what?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_answer_coming_soon_6 | escape }}</p>
+</details>
+</div>
+</div></section><section data-screen-label="Product / Clay vs cream" id="compare" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px;">
+<p class="ba-label" style="flex: 1 1 240px;">{{ section.settings.t_which_one_is_for_you | escape }}</p>
+<h2 class="ba-display" style="flex: 2 1 520px; font-size: clamp(44px, 6.2vw, 72px);">{{ section.settings.t_clay_or_cream | escape }}</h2>
+</div>
+<div data-m-cmp="" style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 16px;">
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="display: flex; align-items: center; gap: 20px; padding: 24px; background: var(--band); color: var(--on-band);">
+<div aria-hidden="true" style='flex: 0 0 auto; width: 88px; height: 88px; background-color: rgb(34, 35, 38); background-image: url("{{ img_clay_card }}"); background-size: cover; background-position: center center;'></div>
+<h3 class="ba-display" style="color: var(--on-band); font-size: clamp(28px, 3vw, 40px);">{{ section.settings.t_matte_clay_3 | escape }}</h3>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 20px 24px; border-top: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_performance | escape }}</p><p style="font: 600 17px/26px var(--font-sans);">{{ section.settings.t_firm_hold_matte_finish | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 20px 24px; border-top: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_longevity | escape }}</p><p style="font: 600 17px/26px var(--font-sans);">{{ section.settings.t_details_coming_soon | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 20px 24px; border-top: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_best_suits | escape }}</p><p style="font: 600 17px/26px var(--font-sans);">{{ section.settings.t_short_to_medium_hair | escape }}</p></div>
+<div style="padding: 20px 24px; border-top: 1px solid var(--line); margin-top: auto;"><a class="ba-label" href="#top" style="color: var(--ink);">{{ section.settings.t_you_re_here | escape }}</a></div>
+</div>
+<div style="flex: 0 0 auto; align-self: center; margin: 0px auto; display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: var(--ink); color: var(--canvas); font: 800 26px/1 var(--font-display); letter-spacing: -0.02em;">VS</div>
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="display: flex; align-items: center; gap: 20px; padding: 24px; background: var(--band); color: var(--on-band);">
+<div aria-hidden="true" style='flex: 0 0 auto; width: 88px; height: 88px; background-color: rgb(34, 35, 38); background-image: url("{{ img_cream_card }}"); background-size: cover; background-position: center center;'></div>
+<h3 class="ba-display" style="color: var(--on-band); font-size: clamp(28px, 3vw, 40px);">{{ section.settings.t_styling_cream | escape }}</h3>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 20px 24px; border-top: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_performance_2 | escape }}</p><p style="font: 600 17px/26px var(--font-sans);">{{ section.settings.t_details_coming_soon_2 | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 20px 24px; border-top: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_longevity_2 | escape }}</p><p style="font: 600 17px/26px var(--font-sans);">{{ section.settings.t_details_coming_soon_3 | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 20px 24px; border-top: 1px solid var(--line);"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_best_suits_2 | escape }}</p><p style="font: 600 17px/26px var(--font-sans);">{{ section.settings.t_details_coming_soon_4 | escape }}</p></div>
+<div style="padding: 20px 24px; border-top: 1px solid var(--line); margin-top: auto;"><a class="ba-label" href="/pages/shop" style="color: var(--ink);">{{ section.settings.t_shop_the_cream | escape }}</a></div>
+</div>
+</div>
+</div></section>
+</div>
+{%- if product -%}<script type="application/json" data-mc-product>{{ product | json }}</script>{%- endif -%}
+<script src="{{ 'ba-accordion.js' | asset_url }}" defer></script>
+<script src="{{ 'ba-matte-clay.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Product - Matte Clay",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_clay_jar",
+      "label": "Product / Main — photo (clay-jar.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_clay_scene",
+      "label": "Product / Main — photo (clay-scene.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_clay_card",
+      "label": "Product / Main — photo (clay-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shampoo_card",
+      "label": "Product / Main — photo (shampoo-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_conditioner_card",
+      "label": "Product / Main — photo (conditioner-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_textured_flow",
+      "label": "Product / In the shop — photo (cut-textured-flow.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_side_part",
+      "label": "Product / In the shop — photo (cut-side-part.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_curly_taper",
+      "label": "Product / In the shop — photo (cut-curly-taper.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cream_card",
+      "label": "Product / Clay vs cream — photo (cream-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Product / Main"
+    },
+    {
+      "type": "text",
+      "id": "t_shop",
+      "label": "Product / Main — Link text: Shop",
+      "default": "Shop"
+    },
+    {
+      "type": "text",
+      "id": "t_matte_clay",
+      "label": "Product / Main — Text: Matte clay",
+      "default": "Matte clay"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_grooming",
+      "label": "Product / Main — Text: Broken Arrow Grooming",
+      "default": "Broken Arrow Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_matte_clay_2",
+      "label": "Product / Main — Heading: Matte clay",
+      "default": "Matte clay"
+    },
+    {
+      "type": "text",
+      "id": "t_28",
+      "label": "Product / Main — Text: $28",
+      "default": "$28"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_clay_we_style_with_in_th",
+      "label": "Product / Main — Text: The clay we style with in the shop. Firm",
+      "default": "The clay we style with in the shop. Firm hold with no shine, so your hair looks like hair, not product. Works best on short to medium hair."
+    },
+    {
+      "type": "text",
+      "id": "t_hold",
+      "label": "Product / Main — Text: Hold",
+      "default": "Hold"
+    },
+    {
+      "type": "text",
+      "id": "t_firm",
+      "label": "Product / Main — Text: Firm",
+      "default": "Firm"
+    },
+    {
+      "type": "text",
+      "id": "t_finish",
+      "label": "Product / Main — Text: Finish",
+      "default": "Finish"
+    },
+    {
+      "type": "text",
+      "id": "t_matte",
+      "label": "Product / Main — Text: Matte",
+      "default": "Matte"
+    },
+    {
+      "type": "text",
+      "id": "t_size",
+      "label": "Product / Main — Text: Size",
+      "default": "Size"
+    },
+    {
+      "type": "text",
+      "id": "t_2_oz",
+      "label": "Product / Main — Text: 2 oz",
+      "default": "2 oz"
+    },
+    {
+      "type": "text",
+      "id": "t_choose_your_set",
+      "label": "Product / Main — Text: Choose your set",
+      "default": "Choose your set"
+    },
+    {
+      "type": "text",
+      "id": "t_one_jar_two_or_the_daily_kit",
+      "label": "Product / Main — Text: One jar, two, or the daily kit.",
+      "default": "One jar, two, or the daily kit."
+    },
+    {
+      "type": "text",
+      "id": "t_purchase_option",
+      "label": "Product / Main — Text: Purchase option",
+      "default": "Purchase option"
+    },
+    {
+      "type": "text",
+      "id": "t_best_value_save_15_on_every_",
+      "label": "Product / Main — Text: Best value · Save 15% on every order",
+      "default": "Best value · Save 15% on every order"
+    },
+    {
+      "type": "text",
+      "id": "t_ships_every",
+      "label": "Product / Main — Text: Ships every",
+      "default": "Ships every"
+    },
+    {
+      "type": "text",
+      "id": "t_30_days",
+      "label": "Product / Main — Text: 30 days",
+      "default": "30 days"
+    },
+    {
+      "type": "text",
+      "id": "t_60_days",
+      "label": "Product / Main — Text: 60 days",
+      "default": "60 days"
+    },
+    {
+      "type": "text",
+      "id": "t_90_days",
+      "label": "Product / Main — Text: 90 days",
+      "default": "90 days"
+    },
+    {
+      "type": "textarea",
+      "id": "t_ships_from_orem_or_choose_lo",
+      "label": "Product / Main — Text: Ships from Orem. Or choose local pickup ",
+      "default": "Ships from Orem. Or choose local pickup at checkout and grab it at the shop during open hours."
+    },
+    {
+      "type": "text",
+      "id": "t_holds_your_style_in_place_al",
+      "label": "Product / Main — Text: Holds your style in place all day withou",
+      "default": "Holds your style in place all day without shine or crunch. Washes out with shampoo."
+    },
+    {
+      "type": "text",
+      "id": "t_full_ingredient_list_goes_he",
+      "label": "Product / Main — Text: Full ingredient list goes here once the ",
+      "default": "Full ingredient list goes here once the formula is final."
+    },
+    {
+      "type": "textarea",
+      "id": "t_orders_ship_within_2_busines",
+      "label": "Product / Main — Text: Orders ship within 2 business days. Loca",
+      "default": "Orders ship within 2 business days. Local pickup is free at the shop in Orem during open hours."
+    },
+    {
+      "type": "header",
+      "content": "Text: Product / How to use"
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_use_it",
+      "label": "Product / How to use — Text: How to use it",
+      "default": "How to use it"
+    },
+    {
+      "type": "text",
+      "id": "t_less_than_you_think",
+      "label": "Product / How to use — Heading: Less than you think",
+      "default": "Less than you think"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Product / How to use — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_start_with_dry_hair",
+      "label": "Product / How to use — Subheading: Start with dry hair",
+      "default": "Start with dry hair"
+    },
+    {
+      "type": "text",
+      "id": "t_towel_dry_or_blow_dry_first_",
+      "label": "Product / How to use — Text: Towel-dry or blow-dry first. Clay holds ",
+      "default": "Towel-dry or blow-dry first. Clay holds best on hair that is fully dry."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Product / How to use — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_a_fingertip_is_enough",
+      "label": "Product / How to use — Subheading: A fingertip is enough",
+      "default": "A fingertip is enough"
+    },
+    {
+      "type": "text",
+      "id": "t_rub_it_between_your_palms_un",
+      "label": "Product / How to use — Text: Rub it between your palms until it warms",
+      "default": "Rub it between your palms until it warms up and you can barely see it."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Product / How to use — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_back_to_front",
+      "label": "Product / How to use — Subheading: Back to front",
+      "default": "Back to front"
+    },
+    {
+      "type": "text",
+      "id": "t_work_it_in_from_the_back_so_",
+      "label": "Product / How to use — Text: Work it in from the back so the front do",
+      "default": "Work it in from the back so the front doesn't get too much. Shape with your fingers."
+    },
+    {
+      "type": "text",
+      "id": "t_video_bryton_styling_a_clien",
+      "label": "Product / How to use — Text: Video: Bryton styling a client with matt",
+      "default": "Video: Bryton styling a client with matte clay, 60–90 sec, no music voiceover"
+    },
+    {
+      "type": "header",
+      "content": "Text: Product / In the shop"
+    },
+    {
+      "type": "text",
+      "id": "t_styled_with_it",
+      "label": "Product / In the shop — Heading: Styled with it",
+      "default": "Styled with it"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Product / In the shop — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "text",
+      "id": "t_textured_flow",
+      "label": "Product / In the shop — Text: Textured flow.",
+      "default": "Textured flow."
+    },
+    {
+      "type": "text",
+      "id": "t_side_part",
+      "label": "Product / In the shop — Text: Side part.",
+      "default": "Side part."
+    },
+    {
+      "type": "text",
+      "id": "t_curly_top_tapered_sides",
+      "label": "Product / In the shop — Text: Curly top, tapered sides.",
+      "default": "Curly top, tapered sides."
+    },
+    {
+      "type": "header",
+      "content": "Text: Product / Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "t_what_s_in_it",
+      "label": "Product / Ingredients — Text: What’s in it",
+      "default": "What’s in it"
+    },
+    {
+      "type": "text",
+      "id": "t_ingredients",
+      "label": "Product / Ingredients — Heading: Ingredients",
+      "default": "Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "t_photo_ingredient_1",
+      "label": "Product / Ingredients — Text: Photo: Ingredient 1",
+      "default": "Photo: Ingredient 1"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_use_it",
+      "label": "Product / Ingredients — Text: Why we use it",
+      "default": "Why we use it"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_use_it_and_what_it_do",
+      "label": "Product / Ingredients — Text: Why we use it and what it does. Coming s",
+      "default": "Why we use it and what it does. Coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_photo_ingredient_2",
+      "label": "Product / Ingredients — Text: Photo: Ingredient 2",
+      "default": "Photo: Ingredient 2"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_use_it_2",
+      "label": "Product / Ingredients — Text: Why we use it",
+      "default": "Why we use it"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_use_it_and_what_it_do_2",
+      "label": "Product / Ingredients — Text: Why we use it and what it does. Coming s",
+      "default": "Why we use it and what it does. Coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_photo_ingredient_3",
+      "label": "Product / Ingredients — Text: Photo: Ingredient 3",
+      "default": "Photo: Ingredient 3"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_use_it_3",
+      "label": "Product / Ingredients — Text: Why we use it",
+      "default": "Why we use it"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_use_it_and_what_it_do_3",
+      "label": "Product / Ingredients — Text: Why we use it and what it does. Coming s",
+      "default": "Why we use it and what it does. Coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_photo_ingredient_4",
+      "label": "Product / Ingredients — Text: Photo: Ingredient 4",
+      "default": "Photo: Ingredient 4"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_use_it_4",
+      "label": "Product / Ingredients — Text: Why we use it",
+      "default": "Why we use it"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_use_it_and_what_it_do_4",
+      "label": "Product / Ingredients — Text: Why we use it and what it does. Coming s",
+      "default": "Why we use it and what it does. Coming soon."
+    },
+    {
+      "type": "header",
+      "content": "Text: Product / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Product / FAQ — Text: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "t_faq",
+      "label": "Product / FAQ — Heading: FAQ",
+      "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_answer_coming_soon",
+      "label": "Product / FAQ — Text: Answer coming soon.",
+      "default": "Answer coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_answer_coming_soon_2",
+      "label": "Product / FAQ — Text: Answer coming soon.",
+      "default": "Answer coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_answer_coming_soon_3",
+      "label": "Product / FAQ — Text: Answer coming soon.",
+      "default": "Answer coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_answer_coming_soon_4",
+      "label": "Product / FAQ — Text: Answer coming soon.",
+      "default": "Answer coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_answer_coming_soon_5",
+      "label": "Product / FAQ — Text: Answer coming soon.",
+      "default": "Answer coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_answer_coming_soon_6",
+      "label": "Product / FAQ — Text: Answer coming soon.",
+      "default": "Answer coming soon."
+    },
+    {
+      "type": "header",
+      "content": "Text: Product / Clay vs cream"
+    },
+    {
+      "type": "text",
+      "id": "t_which_one_is_for_you",
+      "label": "Product / Clay vs cream — Text: Which one is for you?",
+      "default": "Which one is for you?"
+    },
+    {
+      "type": "text",
+      "id": "t_clay_or_cream",
+      "label": "Product / Clay vs cream — Heading: Clay or cream",
+      "default": "Clay or cream"
+    },
+    {
+      "type": "text",
+      "id": "t_matte_clay_3",
+      "label": "Product / Clay vs cream — Subheading: Matte clay",
+      "default": "Matte clay"
+    },
+    {
+      "type": "text",
+      "id": "t_performance",
+      "label": "Product / Clay vs cream — Text: Performance",
+      "default": "Performance"
+    },
+    {
+      "type": "text",
+      "id": "t_firm_hold_matte_finish",
+      "label": "Product / Clay vs cream — Text: Firm hold, matte finish",
+      "default": "Firm hold, matte finish"
+    },
+    {
+      "type": "text",
+      "id": "t_longevity",
+      "label": "Product / Clay vs cream — Text: Longevity",
+      "default": "Longevity"
+    },
+    {
+      "type": "text",
+      "id": "t_details_coming_soon",
+      "label": "Product / Clay vs cream — Text: Details coming soon",
+      "default": "Details coming soon"
+    },
+    {
+      "type": "text",
+      "id": "t_best_suits",
+      "label": "Product / Clay vs cream — Text: Best suits",
+      "default": "Best suits"
+    },
+    {
+      "type": "text",
+      "id": "t_short_to_medium_hair",
+      "label": "Product / Clay vs cream — Text: Short to medium hair",
+      "default": "Short to medium hair"
+    },
+    {
+      "type": "text",
+      "id": "t_you_re_here",
+      "label": "Product / Clay vs cream — Link text: You’re here",
+      "default": "You’re here"
+    },
+    {
+      "type": "text",
+      "id": "t_styling_cream",
+      "label": "Product / Clay vs cream — Subheading: Styling cream",
+      "default": "Styling cream"
+    },
+    {
+      "type": "text",
+      "id": "t_performance_2",
+      "label": "Product / Clay vs cream — Text: Performance",
+      "default": "Performance"
+    },
+    {
+      "type": "text",
+      "id": "t_details_coming_soon_2",
+      "label": "Product / Clay vs cream — Text: Details coming soon",
+      "default": "Details coming soon"
+    },
+    {
+      "type": "text",
+      "id": "t_longevity_2",
+      "label": "Product / Clay vs cream — Text: Longevity",
+      "default": "Longevity"
+    },
+    {
+      "type": "text",
+      "id": "t_details_coming_soon_3",
+      "label": "Product / Clay vs cream — Text: Details coming soon",
+      "default": "Details coming soon"
+    },
+    {
+      "type": "text",
+      "id": "t_best_suits_2",
+      "label": "Product / Clay vs cream — Text: Best suits",
+      "default": "Best suits"
+    },
+    {
+      "type": "text",
+      "id": "t_details_coming_soon_4",
+      "label": "Product / Clay vs cream — Text: Details coming soon",
+      "default": "Details coming soon"
+    },
+    {
+      "type": "text",
+      "id": "t_shop_the_cream",
+      "label": "Product / Clay vs cream — Link text: Shop the cream →",
+      "default": "Shop the cream →"
+    }
+  ]
+}
+{% endschema %}

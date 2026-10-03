@@ -1,0 +1,795 @@
+{%- comment -%} Generated from the Claude Design page "Education". {%- endcomment -%}
+{%- liquid
+if section.settings.img_bryton_class_1 != blank
+  assign img_bryton_class_1 = section.settings.img_bryton_class_1 | image_url: width: 2400
+else
+  assign img_bryton_class_1 = 'ba-bryton-class-1.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="education"] :is(ul) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="education" data-ba-active="education">
+<section data-screen-label="Education / Hero" style="background: var(--band); color: var(--on-band);">
+<div data-m-edhero="" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<div style="flex: 1.2 1 460px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_education | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(52px, 8vw, 104px), 11vw); letter-spacing: -0.045em; max-width: 11ch;">{{ section.settings.t_learn_how_we_cut | escape }}</h1>
+<p style="max-width: 560px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_learn_from_broken_arrow_educ | escape }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="#notify">{{ section.settings.t_get_notified | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="#classes">{{ section.settings.t_in_person_classes | escape }}</a>
+</div>
+</div>
+<div aria-label="Bryton teaching a class of barbers, notes and a slide on word of mouth behind him" role="img" style='flex: 1 1 380px; aspect-ratio: 3 / 2; background-color: rgb(34, 35, 38); background-image: url("{{ img_bryton_class_1 }}"); background-size: cover; background-position: center center;'></div>
+</div></section><section data-screen-label="Education / What you'll learn" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px; align-items: flex-end;">
+<div style="flex: 2 1 480px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_01_what_you_ll_learn | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px); max-width: 14ch;">{{ section.settings.t_what_we_teach | escape }}</h2>
+</div>
+<p style="flex: 1 1 320px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_the_same_techniques_and_syst | escape }}</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 0px 32px; border-top: 2px solid var(--ink);">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_01 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_consultations | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_reading_head_shape_growth_pa | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_02 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_fades_and_tapers | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_clean_blends_at_every_height | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_03 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_scissor_work | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_scissor_over_comb_texturizin | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_04 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_textured_and_modern_cuts | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_crops_flow_cuts_and_textured | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_05 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_curly_hair | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_cutting_with_the_curl_patter | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_06 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_beard_work | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_shaping_and_lining_beards_so | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_07 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_hair_systems | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_color_matching_fitting_cutti | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_08 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_building_your_book | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_photos_content_and_client_re | escape }}</p>
+</div>
+</div></section><section data-screen-label="Education / Who it's for" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_02_who_it_s_for | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 5vw, 64px); max-width: 10ch;">{{ section.settings.t_wherever_you_are_in_your_car | escape }}</h2>
+</div>
+<ul style="flex: 2 1 520px; max-width: 760px; list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--on-band);">
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0px; border-bottom: 1px solid var(--line-strong);"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_barber_students | escape }}</p><p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_get_ahead_of_what_school_cov | escape }}</p></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0px; border-bottom: 1px solid var(--line-strong);"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_newly_licensed_barbers | escape }}</p><p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_build_speed_consistency_and_ | escape }}</p></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0px; border-bottom: 1px solid var(--line-strong);"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_experienced_barbers | escape }}</p><p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_add_new_skills_including_hai | escape }}</p></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0px; border-bottom: 1px solid var(--line-strong);"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_shop_owners | escape }}</p><p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_train_your_team_on_shared_sy | escape }}</p></li>
+</ul>
+</div></section><section data-screen-label="Education / Formats" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_03_two_ways_to_learn | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px);">{{ section.settings.t_online_or_in_the_shop | escape }}</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="padding: 24px; background: var(--band); color: var(--on-band);"><p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_online_courses | escape }}</p><p class="ba-display" style="color: var(--on-band); font-size: clamp(28px, 3vw, 40px);">{{ section.settings.t_at_your_own_pace | escape }}</p></div>
+<div style="padding: 14px 24px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">Watch from anywhere, any time</div>
+<div style="padding: 14px 24px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">Close-up, step-by-step technique</div>
+<div style="padding: 14px 24px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">Rewatch as often as you need</div>
+<div style="padding: 20px 24px; border-top: 1px solid var(--line); margin-top: auto;"><a class="ba-label" href="#courses">{{ section.settings.t_see_courses | escape }}</a></div>
+</div>
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="padding: 24px; background: var(--band); color: var(--on-band);"><p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_in_person_classes_2 | escape }}</p><p class="ba-display" style="color: var(--on-band); font-size: clamp(28px, 3vw, 40px);">{{ section.settings.t_hands_on_in_orem | escape }}</p></div>
+<div style="padding: 14px 24px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">Small groups at the shop</div>
+<div style="padding: 14px 24px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">Watch a live demo, then cut</div>
+<div style="padding: 14px 24px; border-top: 1px solid var(--line); font-size: 17px; line-height: 26px;">Feedback from our educators as you work</div>
+<div style="padding: 20px 24px; border-top: 1px solid var(--line); margin-top: auto;"><a class="ba-label" href="#classes">{{ section.settings.t_see_classes | escape }}</a></div>
+</div>
+</div></section><section data-screen-label="Education / Courses" id="courses" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px; align-items: flex-end;">
+<div style="flex: 2 1 480px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_04_online_courses | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px);">{{ section.settings.t_coming_soon | escape }}</h2>
+</div>
+<p style="flex: 1 1 320px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_learn_at_your_own_pace_the_f | escape }}</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px;">
+<div style="display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="aspect-ratio: 16 / 10; background: var(--canvas-sunk); display: flex; align-items: flex-end; padding: 14px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_course_image | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px;">
+<p class="ba-label" style="color: var(--green);">{{ section.settings.t_coming_soon_2 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_course_title | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_what_the_course_covers_and_w | escape }}</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="aspect-ratio: 16 / 10; background: var(--canvas-sunk); display: flex; align-items: flex-end; padding: 14px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_course_image_2 | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px;">
+<p class="ba-label" style="color: var(--green);">{{ section.settings.t_coming_soon_3 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_course_title_2 | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_what_the_course_covers_and_w_2 | escape }}</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; background: var(--canvas-raised); border: 1px solid var(--line);">
+<div style="aspect-ratio: 16 / 10; background: var(--canvas-sunk); display: flex; align-items: flex-end; padding: 14px;"><p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_course_image_3 | escape }}</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px;">
+<p class="ba-label" style="color: var(--green);">{{ section.settings.t_coming_soon_4 | escape }}</p>
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_course_title_3 | escape }}</h3>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_what_the_course_covers_and_w_3 | escape }}</p>
+</div>
+</div>
+</div></section><section data-screen-label="Education / Classes" id="classes" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_05_in_person_classes | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px); max-width: 10ch;">{{ section.settings.t_at_the_shop_in_orem | escape }}</h2>
+</div>
+<div style="flex: 2 1 520px; max-width: 760px; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas); border: 1px solid var(--line); padding: 28px;">
+<p class="ba-label">{{ section.settings.t_upcoming_classes | escape }}</p>
+<p style="font: 800 clamp(24px,2.6vw,32px)/1.1 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_no_classes_scheduled_yet | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_small_hands_on_classes_at_br | escape }}</p>
+</div>
+</div>
+</div></section><section data-screen-label="Education / Private training" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; border-bottom: 1px solid var(--line);">
+<div style="flex: 1 1 480px; display: flex; flex-direction: column; gap: 16px; max-width: 680px;">
+<p class="ba-label">{{ section.settings.t_06_private_and_shop_training | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px);">{{ section.settings.t_training_for_your_team | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_interested_in_a_private_clas | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-primary" href="/pages/contact">{{ section.settings.t_contact_us | escape }}</a></section><section data-screen-label="Education / FAQ" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 24px 32px;">
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 16px;"><p class="ba-label">{{ section.settings.t_questions | escape }}</p><h2 class="ba-display" style="font-size: clamp(40px, 5vw, 60px);">{{ section.settings.t_faq | escape }}</h2></div>
+<div style="flex: 2 1 520px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Do I need a license to take a course?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_details_coming_soon | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Are online courses self-paced?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_watch_any_time_and_rewat | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Where are in-person classes held?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_at_broken_arrow_barbershop_3 | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How big are in-person classes?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_we_keep_classes_small_so_eve | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How much do courses and classes cost?<span aria-hidden="true" style="font: 600 22px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_prices_will_be_posted_with_e | escape }}</p>
+</details>
+</div></section><section data-screen-label="Education / Notify" id="notify" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 16px; max-width: 560px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_be_the_first_to_know | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 5.6vw, 72px);">{{ section.settings.t_get_notified_2 | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85;">{{ section.settings.t_we_ll_email_you_when_courses | escape }}</p>
+</div>
+<p class="ba-label" data-ba-done="" hidden="" style="color:var(--on-band)">{{ section.settings.t_you_re_on_the_list | escape }}</p><form data-ba-form="education-notify" novalidate="" style="flex: 1 1 380px; max-width: 520px; display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start;">
+<input aria-label="Email" name="email" placeholder="Email address" style="flex: 1 1 240px; min-height: 56px; padding: 0px 16px; background: var(--canvas); color: var(--ink); border: 1px solid var(--line-strong); border-radius: 2px; font: 400 17px/24px var(--font-sans);" type="email" value=""/>
+<button class="ba-btn ba-btn-primary ba-on-dark" type="submit">NOTIFY ME</button>
+</form>
+</div></section><section data-screen-label="Education / Apprenticeship" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_apprenticeship_no_current_op | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 5.6vw, 72px);">{{ section.settings.t_train_to_hire_hire_to_train | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_we_train_a_few_apprentices_t | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="/pages/apprenticeship">{{ section.settings.t_about_the_apprenticeship | escape }}</a>
+</div></section>
+</div>
+<script src="{{ 'ba-email-notify.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Education",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_class_1",
+      "label": "Education / Hero — photo (bryton-class-1.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_education",
+      "label": "Education / Hero — Text: Broken Arrow Education",
+      "default": "Broken Arrow Education"
+    },
+    {
+      "type": "text",
+      "id": "t_learn_how_we_cut",
+      "label": "Education / Hero — Heading: Learn how we cut.",
+      "default": "Learn how we cut."
+    },
+    {
+      "type": "textarea",
+      "id": "t_learn_from_broken_arrow_educ",
+      "label": "Education / Hero — Text: Learn from Broken Arrow Education. Built",
+      "default": "Learn from Broken Arrow Education. Built by experienced barbers and educators, our online courses and hands-on classes teach the techniques, systems, and skills we use behind the chair every day."
+    },
+    {
+      "type": "text",
+      "id": "t_get_notified",
+      "label": "Education / Hero — Link text: GET NOTIFIED",
+      "default": "GET NOTIFIED"
+    },
+    {
+      "type": "text",
+      "id": "t_in_person_classes",
+      "label": "Education / Hero — Link text: IN-PERSON CLASSES",
+      "default": "IN-PERSON CLASSES"
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / What you'll learn"
+    },
+    {
+      "type": "text",
+      "id": "t_01_what_you_ll_learn",
+      "label": "Education / What you'll learn — Text: 01 / What you’ll learn",
+      "default": "01 / What you’ll learn"
+    },
+    {
+      "type": "text",
+      "id": "t_what_we_teach",
+      "label": "Education / What you'll learn — Heading: What we teach",
+      "default": "What we teach"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_same_techniques_and_syst",
+      "label": "Education / What you'll learn — Text: The same techniques and systems we use b",
+      "default": "The same techniques and systems we use behind the chair every day, broken down so you can use them in your own chair."
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Education / What you'll learn — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_consultations",
+      "label": "Education / What you'll learn — Subheading: Consultations",
+      "default": "Consultations"
+    },
+    {
+      "type": "text",
+      "id": "t_reading_head_shape_growth_pa",
+      "label": "Education / What you'll learn — Text: Reading head shape, growth patterns and ",
+      "default": "Reading head shape, growth patterns and hairline, and recommending a cut with confidence."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Education / What you'll learn — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_fades_and_tapers",
+      "label": "Education / What you'll learn — Subheading: Fades and tapers",
+      "default": "Fades and tapers"
+    },
+    {
+      "type": "text",
+      "id": "t_clean_blends_at_every_height",
+      "label": "Education / What you'll learn — Text: Clean blends at every height, from a sub",
+      "default": "Clean blends at every height, from a subtle taper to a skin fade."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Education / What you'll learn — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_scissor_work",
+      "label": "Education / What you'll learn — Subheading: Scissor work",
+      "default": "Scissor work"
+    },
+    {
+      "type": "text",
+      "id": "t_scissor_over_comb_texturizin",
+      "label": "Education / What you'll learn — Text: Scissor-over-comb, texturizing and shapi",
+      "default": "Scissor-over-comb, texturizing and shaping longer men’s hair."
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Education / What you'll learn — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_textured_and_modern_cuts",
+      "label": "Education / What you'll learn — Subheading: Textured and modern cuts",
+      "default": "Textured and modern cuts"
+    },
+    {
+      "type": "text",
+      "id": "t_crops_flow_cuts_and_textured",
+      "label": "Education / What you'll learn — Text: Crops, flow cuts and textured styles tha",
+      "default": "Crops, flow cuts and textured styles that grow out well."
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Education / What you'll learn — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_curly_hair",
+      "label": "Education / What you'll learn — Subheading: Curly hair",
+      "default": "Curly hair"
+    },
+    {
+      "type": "text",
+      "id": "t_cutting_with_the_curl_patter",
+      "label": "Education / What you'll learn — Text: Cutting with the curl pattern, not again",
+      "default": "Cutting with the curl pattern, not against it."
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Education / What you'll learn — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_beard_work",
+      "label": "Education / What you'll learn — Subheading: Beard work",
+      "default": "Beard work"
+    },
+    {
+      "type": "text",
+      "id": "t_shaping_and_lining_beards_so",
+      "label": "Education / What you'll learn — Text: Shaping and lining beards so they match ",
+      "default": "Shaping and lining beards so they match the haircut."
+    },
+    {
+      "type": "text",
+      "id": "t_07",
+      "label": "Education / What you'll learn — Text: 07",
+      "default": "07"
+    },
+    {
+      "type": "text",
+      "id": "t_hair_systems",
+      "label": "Education / What you'll learn — Subheading: Hair systems",
+      "default": "Hair systems"
+    },
+    {
+      "type": "text",
+      "id": "t_color_matching_fitting_cutti",
+      "label": "Education / What you'll learn — Text: Color matching, fitting, cutting in and ",
+      "default": "Color matching, fitting, cutting in and maintaining non-surgical hair replacement."
+    },
+    {
+      "type": "text",
+      "id": "t_08",
+      "label": "Education / What you'll learn — Text: 08",
+      "default": "08"
+    },
+    {
+      "type": "text",
+      "id": "t_building_your_book",
+      "label": "Education / What you'll learn — Subheading: Building your book",
+      "default": "Building your book"
+    },
+    {
+      "type": "text",
+      "id": "t_photos_content_and_client_re",
+      "label": "Education / What you'll learn — Text: Photos, content and client relationships",
+      "default": "Photos, content and client relationships that bring people back."
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / Who it's for"
+    },
+    {
+      "type": "text",
+      "id": "t_02_who_it_s_for",
+      "label": "Education / Who it's for — Text: 02 / Who it’s for",
+      "default": "02 / Who it’s for"
+    },
+    {
+      "type": "text",
+      "id": "t_wherever_you_are_in_your_car",
+      "label": "Education / Who it's for — Heading: Wherever you are in your career",
+      "default": "Wherever you are in your career"
+    },
+    {
+      "type": "text",
+      "id": "t_barber_students",
+      "label": "Education / Who it's for — Text: Barber students",
+      "default": "Barber students"
+    },
+    {
+      "type": "text",
+      "id": "t_get_ahead_of_what_school_cov",
+      "label": "Education / Who it's for — Text: Get ahead of what school covers, with re",
+      "default": "Get ahead of what school covers, with real shop technique."
+    },
+    {
+      "type": "text",
+      "id": "t_newly_licensed_barbers",
+      "label": "Education / Who it's for — Text: Newly licensed barbers",
+      "default": "Newly licensed barbers"
+    },
+    {
+      "type": "text",
+      "id": "t_build_speed_consistency_and_",
+      "label": "Education / Who it's for — Text: Build speed, consistency and confidence ",
+      "default": "Build speed, consistency and confidence behind the chair."
+    },
+    {
+      "type": "text",
+      "id": "t_experienced_barbers",
+      "label": "Education / Who it's for — Text: Experienced barbers",
+      "default": "Experienced barbers"
+    },
+    {
+      "type": "text",
+      "id": "t_add_new_skills_including_hai",
+      "label": "Education / Who it's for — Text: Add new skills, including hair systems, ",
+      "default": "Add new skills, including hair systems, to what you already offer."
+    },
+    {
+      "type": "text",
+      "id": "t_shop_owners",
+      "label": "Education / Who it's for — Text: Shop owners",
+      "default": "Shop owners"
+    },
+    {
+      "type": "text",
+      "id": "t_train_your_team_on_shared_sy",
+      "label": "Education / Who it's for — Text: Train your team on shared systems and st",
+      "default": "Train your team on shared systems and standards."
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / Formats"
+    },
+    {
+      "type": "text",
+      "id": "t_03_two_ways_to_learn",
+      "label": "Education / Formats — Text: 03 / Two ways to learn",
+      "default": "03 / Two ways to learn"
+    },
+    {
+      "type": "text",
+      "id": "t_online_or_in_the_shop",
+      "label": "Education / Formats — Heading: Online or in the shop",
+      "default": "Online or in the shop"
+    },
+    {
+      "type": "text",
+      "id": "t_online_courses",
+      "label": "Education / Formats — Text: Online courses",
+      "default": "Online courses"
+    },
+    {
+      "type": "text",
+      "id": "t_at_your_own_pace",
+      "label": "Education / Formats — Text: At your own pace",
+      "default": "At your own pace"
+    },
+    {
+      "type": "text",
+      "id": "t_see_courses",
+      "label": "Education / Formats — Link text: See courses →",
+      "default": "See courses →"
+    },
+    {
+      "type": "text",
+      "id": "t_in_person_classes_2",
+      "label": "Education / Formats — Text: In-person classes",
+      "default": "In-person classes"
+    },
+    {
+      "type": "text",
+      "id": "t_hands_on_in_orem",
+      "label": "Education / Formats — Text: Hands-on in Orem",
+      "default": "Hands-on in Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_see_classes",
+      "label": "Education / Formats — Link text: See classes →",
+      "default": "See classes →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / Courses"
+    },
+    {
+      "type": "text",
+      "id": "t_04_online_courses",
+      "label": "Education / Courses — Text: 04 / Online courses",
+      "default": "04 / Online courses"
+    },
+    {
+      "type": "text",
+      "id": "t_coming_soon",
+      "label": "Education / Courses — Heading: Coming soon",
+      "default": "Coming soon"
+    },
+    {
+      "type": "textarea",
+      "id": "t_learn_at_your_own_pace_the_f",
+      "label": "Education / Courses — Text: Learn at your own pace. The first course",
+      "default": "Learn at your own pace. The first courses are in the works. Sign up below to hear when they launch."
+    },
+    {
+      "type": "text",
+      "id": "t_course_image",
+      "label": "Education / Courses — Text: Course image",
+      "default": "Course image"
+    },
+    {
+      "type": "text",
+      "id": "t_coming_soon_2",
+      "label": "Education / Courses — Text: Coming soon",
+      "default": "Coming soon"
+    },
+    {
+      "type": "text",
+      "id": "t_course_title",
+      "label": "Education / Courses — Subheading: Course title",
+      "default": "Course title"
+    },
+    {
+      "type": "text",
+      "id": "t_what_the_course_covers_and_w",
+      "label": "Education / Courses — Text: What the course covers and who it’s for.",
+      "default": "What the course covers and who it’s for. Details coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_course_image_2",
+      "label": "Education / Courses — Text: Course image",
+      "default": "Course image"
+    },
+    {
+      "type": "text",
+      "id": "t_coming_soon_3",
+      "label": "Education / Courses — Text: Coming soon",
+      "default": "Coming soon"
+    },
+    {
+      "type": "text",
+      "id": "t_course_title_2",
+      "label": "Education / Courses — Subheading: Course title",
+      "default": "Course title"
+    },
+    {
+      "type": "text",
+      "id": "t_what_the_course_covers_and_w_2",
+      "label": "Education / Courses — Text: What the course covers and who it’s for.",
+      "default": "What the course covers and who it’s for. Details coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_course_image_3",
+      "label": "Education / Courses — Text: Course image",
+      "default": "Course image"
+    },
+    {
+      "type": "text",
+      "id": "t_coming_soon_4",
+      "label": "Education / Courses — Text: Coming soon",
+      "default": "Coming soon"
+    },
+    {
+      "type": "text",
+      "id": "t_course_title_3",
+      "label": "Education / Courses — Subheading: Course title",
+      "default": "Course title"
+    },
+    {
+      "type": "text",
+      "id": "t_what_the_course_covers_and_w_3",
+      "label": "Education / Courses — Text: What the course covers and who it’s for.",
+      "default": "What the course covers and who it’s for. Details coming soon."
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / Classes"
+    },
+    {
+      "type": "text",
+      "id": "t_05_in_person_classes",
+      "label": "Education / Classes — Text: 05 / In-person classes",
+      "default": "05 / In-person classes"
+    },
+    {
+      "type": "text",
+      "id": "t_at_the_shop_in_orem",
+      "label": "Education / Classes — Heading: At the shop in Orem",
+      "default": "At the shop in Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_upcoming_classes",
+      "label": "Education / Classes — Text: Upcoming classes",
+      "default": "Upcoming classes"
+    },
+    {
+      "type": "text",
+      "id": "t_no_classes_scheduled_yet",
+      "label": "Education / Classes — Text: No classes scheduled yet",
+      "default": "No classes scheduled yet"
+    },
+    {
+      "type": "textarea",
+      "id": "t_small_hands_on_classes_at_br",
+      "label": "Education / Classes — Text: Small, hands-on classes at Broken Arrow ",
+      "default": "Small, hands-on classes at Broken Arrow in Orem. Dates, topics and prices will be posted here first. Sign up to get notified."
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / Private training"
+    },
+    {
+      "type": "text",
+      "id": "t_06_private_and_shop_training",
+      "label": "Education / Private training — Text: 06 / Private and shop training",
+      "default": "06 / Private and shop training"
+    },
+    {
+      "type": "text",
+      "id": "t_training_for_your_team",
+      "label": "Education / Private training — Heading: Training for your team",
+      "default": "Training for your team"
+    },
+    {
+      "type": "textarea",
+      "id": "t_interested_in_a_private_clas",
+      "label": "Education / Private training — Text: Interested in a private class for yourse",
+      "default": "Interested in a private class for yourself or training for your shop? Get in touch and tell us what you’re looking for."
+    },
+    {
+      "type": "text",
+      "id": "t_contact_us",
+      "label": "Education / Private training — Link text: CONTACT US",
+      "default": "CONTACT US"
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Education / FAQ — Text: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "t_faq",
+      "label": "Education / FAQ — Heading: FAQ",
+      "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_details_coming_soon",
+      "label": "Education / FAQ — Text: Details coming soon.",
+      "default": "Details coming soon."
+    },
+    {
+      "type": "text",
+      "id": "t_yes_watch_any_time_and_rewat",
+      "label": "Education / FAQ — Text: Yes. Watch any time and rewatch as often",
+      "default": "Yes. Watch any time and rewatch as often as you like."
+    },
+    {
+      "type": "text",
+      "id": "t_at_broken_arrow_barbershop_3",
+      "label": "Education / FAQ — Text: At Broken Arrow Barbershop, 375 E 800 S,",
+      "default": "At Broken Arrow Barbershop, 375 E 800 S, Suite 12, Orem, Utah."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_keep_classes_small_so_eve",
+      "label": "Education / FAQ — Text: We keep classes small so everyone gets h",
+      "default": "We keep classes small so everyone gets hands-on time. Exact sizes will be listed with each class."
+    },
+    {
+      "type": "text",
+      "id": "t_prices_will_be_posted_with_e",
+      "label": "Education / FAQ — Text: Prices will be posted with each course a",
+      "default": "Prices will be posted with each course and class. Sign up to be notified."
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / Notify"
+    },
+    {
+      "type": "text",
+      "id": "t_be_the_first_to_know",
+      "label": "Education / Notify — Text: Be the first to know",
+      "default": "Be the first to know"
+    },
+    {
+      "type": "text",
+      "id": "t_get_notified_2",
+      "label": "Education / Notify — Heading: Get notified",
+      "default": "Get notified"
+    },
+    {
+      "type": "text",
+      "id": "t_we_ll_email_you_when_courses",
+      "label": "Education / Notify — Text: We’ll email you when courses launch and ",
+      "default": "We’ll email you when courses launch and class dates are set."
+    },
+    {
+      "type": "text",
+      "id": "t_you_re_on_the_list",
+      "label": "Education / Notify — Text: You’re on the list.",
+      "default": "You’re on the list."
+    },
+    {
+      "type": "header",
+      "content": "Text: Education / Apprenticeship"
+    },
+    {
+      "type": "text",
+      "id": "t_apprenticeship_no_current_op",
+      "label": "Education / Apprenticeship — Text: Apprenticeship · No current openings",
+      "default": "Apprenticeship · No current openings"
+    },
+    {
+      "type": "text",
+      "id": "t_train_to_hire_hire_to_train",
+      "label": "Education / Apprenticeship — Heading: Train to hire. Hire to train.",
+      "default": "Train to hire. Hire to train."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_train_a_few_apprentices_t",
+      "label": "Education / Apprenticeship — Text: We train a few apprentices toward their ",
+      "default": "We train a few apprentices toward their Utah barber license, with the goal of joining our team. Apply now and we’ll reach out when a spot opens."
+    },
+    {
+      "type": "text",
+      "id": "t_about_the_apprenticeship",
+      "label": "Education / Apprenticeship — Link text: ABOUT THE APPRENTICESHIP",
+      "default": "ABOUT THE APPRENTICESHIP"
+    }
+  ]
+}
+{% endschema %}

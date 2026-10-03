@@ -1,0 +1,494 @@
+{%- comment -%} Generated from the Claude Design page "Local Guide - Choose a Barbershop Orem". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_award_2023_plaque != blank
+  assign img_award_2023_plaque = section.settings.img_award_2023_plaque | image_url: width: 2400
+else
+  assign img_award_2023_plaque = 'ba-award-2023-plaque.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="how-to-choose-a-barbershop-orem"] :is(ul, ol) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="how-to-choose-a-barbershop-orem" data-ba-active="journal">
+<article><header data-screen-label="Guide / Hero" style="position: relative; background: var(--band); min-height: clamp(520px, 76vh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<div aria-label="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center; filter: saturate(0.85);'></div>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;"><a href="/pages/journal" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_journal | escape }}</a><span style="opacity: 0.5;">/</span><span style="opacity: 0.78;">{{ section.settings.t_local_guide | escape }}</span></nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_how_to_choose_the_right_barb | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_5_min_read | escape }}</p>
+</div></header><section data-screen-label="Guide / Intro" style="max-width: 920px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(40px, 6vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_there_are_a_lot_of_places_to | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_if_you_just_want_the_fastest | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_if_you_care_how_your_hair_lo | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_short_answer | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_choose_a_barbershop_in_orem_ | escape }}</p>
+</div>
+</div></section>
+<section data-screen-label="Guide / Section" id="s1" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_to_look_for | escape }}</h2>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_time_for_the_cut | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_a_30_minute_slot_with_a_wash | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_the_same_barber_every_time | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_a_barber_who_knows_your_hair | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_photos_of_their_work | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_look_for_cuts_on_hair_like_y | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_recent_reviews | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_read_what_people_say_about_c | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_clear_prices | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_you_should_know_what_s_inclu | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s2" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_02 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_questions_to_ask | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_do_you_cut_my_hair_type_can_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_good_shop_will_be_glad_you | escape }}</p>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s3" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_03 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_red_flags | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_new_barber_every_visit_no_ | escape }}</p>
+<a href="/pages/why-your-haircut-looks-bulky" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_why_your_haircut_looks_bulky | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s4" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_why_we_recommend_broken_arro | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_re_a_small_locally_owned_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_daily_herald_readers_voted_u | escape }}</p>
+<blockquote style="margin: 8px 0px; display: flex; flex-direction: column; gap: 16px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding: 28px 0px;">
+<p class="ba-display" style="font-size: clamp(26px, 3vw, 38px); line-height: 1.05; max-width: 24ch;">{{ section.settings.t_if_you_care_how_your_hair_lo_2 | escape }}</p>
+</blockquote>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Daily Herald Readers’ Choice plaque, Best Barbershop 2023" loading="lazy" src="{{ img_award_2023_plaque }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_best_barbershop_in_utah_vall | escape }}</figcaption>
+</figure>
+<a href="/pages/best-barbershop-utah-valley-2026" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_read_about_best_of_2026 | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s5" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_when_we_re_not_the_right_fit | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_if_you_want_a_five_minute_cu | escape }}</p>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s6" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_06 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_to_book_for_your_first_ | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_signature_haircut_it_giv | escape }}</p>
+<a href="/pages/classic-vs-signature-haircut" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_classic_vs_signature | escape }}</a>
+</div>
+</section><section data-screen-label="Guide / FAQ" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 20px;">
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px);">{{ section.settings.t_questions | escape }}</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Where is Broken Arrow Barbershop?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">375 E 800 S, Suite 12, Orem, UT 84097. Parking is in the front. <a href="/#visit" style="color: var(--ink);">{{ section.settings.t_how_to_find_us | escape }}</a></p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How much is a haircut?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_the_classic_haircut_is_40_ha | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Do you take walk-ins?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_we_take_walk_ins_when_we_can | escape }}</p>
+</details>
+</div></section></article><section data-screen-label="Guide / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_book_your_first_visit | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_book_a_signature_haircut_and | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="/pages/services">{{ section.settings.t_see_all_services | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"How to choose the right barbershop in Orem","description":"How to choose the right barbershop in Orem, Utah: what to look for, what to ask, and red flags to avoid. From Broken Arrow Barbershop in Orem.","datePublished":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/how-to-choose-a-barbershop-orem","author":{"@type":"Organization","name":"Broken Arrow Barbershop"},"about":{"@type":"BarberShop","name":"Broken Arrow Barbershop","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097"}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where is Broken Arrow Barbershop?","acceptedAnswer":{"@type":"Answer","text":"375 E 800 S, Suite 12, Orem, UT 84097. Parking is in the front."}},{"@type":"Question","name":"How much is a haircut?","acceptedAnswer":{"@type":"Answer","text":"The Classic Haircut is $40. Haircut + Beard and the Signature Haircut are $65."}},{"@type":"Question","name":"Do you take walk-ins?","acceptedAnswer":{"@type":"Answer","text":"We take walk-ins when we can, but we mainly run on appointments."}}]}]}</script>
+{% schema %}
+{
+  "name": "Local Guide - Choose a Ba",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Guide / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_award_2023_plaque",
+      "label": "Guide / Section — photo (award-2023-plaque.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Guide / Hero — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_local_guide",
+      "label": "Guide / Hero — Text: Local guide",
+      "default": "Local guide"
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_choose_the_right_barb",
+      "label": "Guide / Hero — Heading: How to choose the right barbershop in Or",
+      "default": "How to choose the right barbershop in Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_5_min_read",
+      "label": "Guide / Hero — Text: September 26, 2026 · 5 min read",
+      "default": "September 26, 2026 · 5 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Intro"
+    },
+    {
+      "type": "textarea",
+      "id": "t_there_are_a_lot_of_places_to",
+      "label": "Guide / Intro — Text: There are a lot of places to get a hairc",
+      "default": "There are a lot of places to get a haircut in Orem. Which one is right depends on what you want out of it."
+    },
+    {
+      "type": "textarea",
+      "id": "t_if_you_just_want_the_fastest",
+      "label": "Guide / Intro — Text: If you just want the fastest, cheapest c",
+      "default": "If you just want the fastest, cheapest cut possible and don’t mind how it looks in two weeks, plenty of places will get you in and out in a few minutes."
+    },
+    {
+      "type": "textarea",
+      "id": "t_if_you_care_how_your_hair_lo",
+      "label": "Guide / Intro — Text: If you care how your hair looks, here’s ",
+      "default": "If you care how your hair looks, here’s what to look for. (We’re biased: Broken Arrow was voted Best Barbershop in Utah Valley in the Daily Herald’s Best of 2026.)"
+    },
+    {
+      "type": "text",
+      "id": "t_short_answer",
+      "label": "Guide / Intro — Text: Short answer",
+      "default": "Short answer"
+    },
+    {
+      "type": "textarea",
+      "id": "t_choose_a_barbershop_in_orem_",
+      "label": "Guide / Intro — Text: Choose a barbershop in Orem that books e",
+      "default": "Choose a barbershop in Orem that books enough time for a real consultation, lets you see the same barber every visit, has recent reviews and photos of their work, cuts your hair type and style, and is clear about prices. Broken Arrow Barbershop at 375 E 800 S, Suite 12, Orem, was voted Best Barbershop in Utah Valley by Daily Herald readers in 2023, 2024 and 2026."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Section"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Guide / Section — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_look_for",
+      "label": "Guide / Section — Heading: What to look for",
+      "default": "What to look for"
+    },
+    {
+      "type": "text",
+      "id": "t_time_for_the_cut",
+      "label": "Guide / Section — Text: Time for the cut",
+      "default": "Time for the cut"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_30_minute_slot_with_a_wash",
+      "label": "Guide / Section — Text: A 30-minute slot with a wash and consult",
+      "default": "A 30-minute slot with a wash and consult often leaves 15 minutes of cutting. Ask how long appointments are."
+    },
+    {
+      "type": "text",
+      "id": "t_the_same_barber_every_time",
+      "label": "Guide / Section — Text: The same barber every time",
+      "default": "The same barber every time"
+    },
+    {
+      "type": "text",
+      "id": "t_a_barber_who_knows_your_hair",
+      "label": "Guide / Section — Text: A barber who knows your hair gets it mor",
+      "default": "A barber who knows your hair gets it more right every visit."
+    },
+    {
+      "type": "text",
+      "id": "t_photos_of_their_work",
+      "label": "Guide / Section — Text: Photos of their work",
+      "default": "Photos of their work"
+    },
+    {
+      "type": "text",
+      "id": "t_look_for_cuts_on_hair_like_y",
+      "label": "Guide / Section — Text: Look for cuts on hair like yours, not ju",
+      "default": "Look for cuts on hair like yours, not just fades."
+    },
+    {
+      "type": "text",
+      "id": "t_recent_reviews",
+      "label": "Guide / Section — Text: Recent reviews",
+      "default": "Recent reviews"
+    },
+    {
+      "type": "text",
+      "id": "t_read_what_people_say_about_c",
+      "label": "Guide / Section — Text: Read what people say about consistency, ",
+      "default": "Read what people say about consistency, not just friendliness."
+    },
+    {
+      "type": "text",
+      "id": "t_clear_prices",
+      "label": "Guide / Section — Text: Clear prices",
+      "default": "Clear prices"
+    },
+    {
+      "type": "text",
+      "id": "t_you_should_know_what_s_inclu",
+      "label": "Guide / Section — Text: You should know what’s included before y",
+      "default": "You should know what’s included before you sit down."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Guide / Section — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_questions_to_ask",
+      "label": "Guide / Section — Heading: Questions to ask",
+      "default": "Questions to ask"
+    },
+    {
+      "type": "textarea",
+      "id": "t_do_you_cut_my_hair_type_can_",
+      "label": "Guide / Section — Text: Do you cut my hair type? Can I book the ",
+      "default": "Do you cut my hair type? Can I book the same barber next time? What’s included in the price? How long is the appointment? What would you recommend for my hair?"
+    },
+    {
+      "type": "text",
+      "id": "t_a_good_shop_will_be_glad_you",
+      "label": "Guide / Section — Text: A good shop will be glad you asked.",
+      "default": "A good shop will be glad you asked."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Guide / Section — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_red_flags",
+      "label": "Guide / Section — Heading: Red flags",
+      "default": "Red flags"
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_new_barber_every_visit_no_",
+      "label": "Guide / Section — Text: A new barber every visit. No consultatio",
+      "default": "A new barber every visit. No consultation before the clippers come out. Extra charges for every add-on, including the wash. A cut that looks fine when you leave and puffy a week later."
+    },
+    {
+      "type": "text",
+      "id": "t_why_your_haircut_looks_bulky",
+      "label": "Guide / Section — Link text: Why your haircut looks bulky →",
+      "default": "Why your haircut looks bulky →"
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Guide / Section — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_recommend_broken_arro",
+      "label": "Guide / Section — Heading: Why we recommend Broken Arrow",
+      "default": "Why we recommend Broken Arrow"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_re_a_small_locally_owned_",
+      "label": "Guide / Section — Text: We’re a small, locally owned shop, not a",
+      "default": "We’re a small, locally owned shop, not a chain. We book the time to understand your hair before we cut it. Every haircut includes a hair wash, scalp scrub, menthol scalp treatment, neck shave and hot towel. And you can book the same barber every visit."
+    },
+    {
+      "type": "textarea",
+      "id": "t_daily_herald_readers_voted_u",
+      "label": "Guide / Section — Text: Daily Herald readers voted us Best Barbe",
+      "default": "Daily Herald readers voted us Best Barbershop in Utah Valley in the Best of 2026, our third win after 2023 and 2024."
+    },
+    {
+      "type": "text",
+      "id": "t_if_you_care_how_your_hair_lo_2",
+      "label": "Guide / Section — Text: If you care how your hair looks, come se",
+      "default": "If you care how your hair looks, come see us."
+    },
+    {
+      "type": "text",
+      "id": "t_best_barbershop_in_utah_vall",
+      "label": "Guide / Section — Text: Best Barbershop in Utah Valley, 2023.",
+      "default": "Best Barbershop in Utah Valley, 2023."
+    },
+    {
+      "type": "text",
+      "id": "t_read_about_best_of_2026",
+      "label": "Guide / Section — Link text: Read about Best of 2026 →",
+      "default": "Read about Best of 2026 →"
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Guide / Section — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_when_we_re_not_the_right_fit",
+      "label": "Guide / Section — Heading: When we’re not the right fit",
+      "default": "When we’re not the right fit"
+    },
+    {
+      "type": "textarea",
+      "id": "t_if_you_want_a_five_minute_cu",
+      "label": "Guide / Section — Text: If you want a five-minute cut and don’t ",
+      "default": "If you want a five-minute cut and don’t mind how it grows out, we’re probably not the shop for you. We’d rather take the time and get it right."
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Guide / Section — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_what_to_book_for_your_first_",
+      "label": "Guide / Section — Heading: What to book for your first visit",
+      "default": "What to book for your first visit"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_signature_haircut_it_giv",
+      "label": "Guide / Section — Text: The Signature Haircut. It gives your bar",
+      "default": "The Signature Haircut. It gives your barber time to learn your hair, talk through what you want and get the cut right the first time."
+    },
+    {
+      "type": "text",
+      "id": "t_classic_vs_signature",
+      "label": "Guide / Section — Link text: Classic vs Signature →",
+      "default": "Classic vs Signature →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Guide / FAQ — Heading: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_find_us",
+      "label": "Guide / FAQ — Link text: How to find us →",
+      "default": "How to find us →"
+    },
+    {
+      "type": "text",
+      "id": "t_the_classic_haircut_is_40_ha",
+      "label": "Guide / FAQ — Text: The Classic Haircut is $40. Haircut + Be",
+      "default": "The Classic Haircut is $40. Haircut + Beard and the Signature Haircut are $65."
+    },
+    {
+      "type": "text",
+      "id": "t_we_take_walk_ins_when_we_can",
+      "label": "Guide / FAQ — Text: We take walk-ins when we can, but we mai",
+      "default": "We take walk-ins when we can, but we mainly run on appointments."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Guide / CTA — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_book_your_first_visit",
+      "label": "Guide / CTA — Heading: Book your first visit.",
+      "default": "Book your first visit."
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_signature_haircut_and",
+      "label": "Guide / CTA — Text: Book a Signature Haircut and see the dif",
+      "default": "Book a Signature Haircut and see the difference the time makes."
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Guide / CTA — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "text",
+      "id": "t_see_all_services",
+      "label": "Guide / CTA — Link text: See all services",
+      "default": "See all services"
+    }
+  ]
+}
+{% endschema %}

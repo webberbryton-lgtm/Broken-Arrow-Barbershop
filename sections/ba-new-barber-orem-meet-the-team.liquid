@@ -1,0 +1,556 @@
+{%- comment -%} Generated from the Claude Design page "Local Guide - Meet the Team". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_bryton_teaching != blank
+  assign img_bryton_teaching = section.settings.img_bryton_teaching | image_url: width: 2400
+else
+  assign img_bryton_teaching = 'ba-bryton-teaching.webp' | asset_url
+endif
+if section.settings.img_connor_card != blank
+  assign img_connor_card = section.settings.img_connor_card | image_url: width: 2400
+else
+  assign img_connor_card = 'ba-connor-card.webp' | asset_url
+endif
+if section.settings.img_elise_profile != blank
+  assign img_elise_profile = section.settings.img_elise_profile | image_url: width: 2400
+else
+  assign img_elise_profile = 'ba-elise-profile.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="new-barber-orem-meet-the-team"] :is(ul, ol) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="new-barber-orem-meet-the-team" data-ba-active="journal">
+<article><header data-screen-label="Guide / Hero" style="position: relative; background: var(--band); min-height: clamp(520px, 76vh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<div aria-label="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center; filter: saturate(0.85);'></div>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;"><a href="/pages/journal" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_journal | escape }}</a><span style="opacity: 0.5;">/</span><span style="opacity: 0.78;">{{ section.settings.t_shop_guide | escape }}</span></nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_looking_for_a_new_barber_in_ | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_4_min_read | escape }}</p>
+</div></header><section data-screen-label="Guide / Intro" style="max-width: 920px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(40px, 6vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_finding_a_barber_you_trust_i | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_re_a_small_shop_with_thre | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_short_answer | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_barbershop_in_o | escape }}</p>
+</div>
+</div></section>
+<section data-screen-label="Guide / Section" id="s1" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_bryton_owner_and_licensed_ba | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_bryton_owns_broken_arrow_he_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_he_specializes_in_scissor_ha | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Bryton teaching a class of barber students" loading="lazy" src="{{ img_bryton_teaching }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_bryton_teaching_barbers | escape }}</figcaption>
+</figure>
+<a href="/pages/bryton" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_bryton_s_page | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s2" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_02 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_connor_barber | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_connor_is_a_utah_county_loca | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_he_takes_his_time_gets_the_d | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Connor cutting a client’s hair" loading="lazy" src="{{ img_connor_card }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_connor | escape }}</figcaption>
+</figure>
+<a href="/pages/connor" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_connor_s_page | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s3" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_03 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_elise_barber | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_elise_specializes_in_medium_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_she_takes_the_time_to_unders | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Elise fading a client’s haircut" loading="lazy" src="{{ img_elise_profile }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_elise | escape }}</figcaption>
+</figure>
+<a href="Barber.dc.html?b=elise" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_elise_s_page | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s4" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_who_to_book | escape }}</h2>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_short_classic_cuts_and_fades | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_bryton | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_receding_hairline_or_thinnin | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_bryton_2 | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_scissor_haircuts | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_bryton_3 | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_medium_and_longer_hair | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_connor_or_elise | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_curly_hair_and_flow_cuts | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_elise_2 | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_hair_systems | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_bryton_4 | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s5" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_why_a_small_shop | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_aren_t_a_chain_with_a_new | escape }}</p>
+<blockquote style="margin: 8px 0px; display: flex; flex-direction: column; gap: 16px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding: 28px 0px;">
+<p class="ba-display" style="font-size: clamp(26px, 3vw, 38px); line-height: 1.05; max-width: 24ch;">{{ section.settings.t_voted_best_barbershop_in_uta | escape }}</p>
+</blockquote>
+<a href="/pages/small-barbershop-orem-same-barber" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_why_the_same_barber_every_ti | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s6" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_06 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_your_first_visit | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_book_a_signature_haircut_it_ | escape }}</p>
+<a href="/pages/classic-vs-signature-haircut" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_classic_vs_signature | escape }}</a>
+</div>
+</section><section data-screen-label="Guide / FAQ" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 20px;">
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px);">{{ section.settings.t_questions | escape }}</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Can I switch barbers?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_book_whoever_fits_what_y | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Where are you?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">375 E 800 S, Suite 12, Orem, UT 84097. Parking is in the front. <a href="/#visit" style="color: var(--ink);">{{ section.settings.t_how_to_find_us | escape }}</a></p>
+</details>
+</div></section></article><section data-screen-label="Guide / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_find_your_barber | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_pick_one_of_our_three_barber | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="/pages/team">{{ section.settings.t_meet_the_team | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Looking for a new barber in Orem? Meet the Broken Arrow team","description":"Looking for a new barber in Orem, Utah? Meet Bryton, Connor and Elise at Broken Arrow Barbershop: what each specializes in and who to book.","datePublished":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/new-barber-orem-meet-the-team","author":{"@type":"Organization","name":"Broken Arrow Barbershop"},"about":{"@type":"BarberShop","name":"Broken Arrow Barbershop","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097"}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I switch barbers?","acceptedAnswer":{"@type":"Answer","text":"Yes. Book whoever fits what you want that day."}},{"@type":"Question","name":"Where are you?","acceptedAnswer":{"@type":"Answer","text":"375 E 800 S, Suite 12, Orem, UT 84097. Parking is in the front."}}]}]}</script>
+{% schema %}
+{
+  "name": "Local Guide - Meet the Te",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Guide / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_teaching",
+      "label": "Guide / Section — photo (bryton-teaching.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_card",
+      "label": "Guide / Section — photo (connor-card.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_profile",
+      "label": "Guide / Section — photo (elise-profile.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Guide / Hero — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_shop_guide",
+      "label": "Guide / Hero — Text: Shop guide",
+      "default": "Shop guide"
+    },
+    {
+      "type": "text",
+      "id": "t_looking_for_a_new_barber_in_",
+      "label": "Guide / Hero — Heading: Looking for a new barber in Orem? Meet t",
+      "default": "Looking for a new barber in Orem? Meet the Broken Arrow team"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_4_min_read",
+      "label": "Guide / Hero — Text: September 26, 2026 · 4 min read",
+      "default": "September 26, 2026 · 4 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Intro"
+    },
+    {
+      "type": "textarea",
+      "id": "t_finding_a_barber_you_trust_i",
+      "label": "Guide / Intro — Text: Finding a barber you trust is worth the ",
+      "default": "Finding a barber you trust is worth the effort. Here’s who you’ll find at Broken Arrow, what each of us does best, and how to pick."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_re_a_small_shop_with_thre",
+      "label": "Guide / Intro — Text: We’re a small shop with three barbers. Y",
+      "default": "We’re a small shop with three barbers. You can book the same one every visit, so they get to know your hair, what you liked about your last cut and what you didn’t."
+    },
+    {
+      "type": "text",
+      "id": "t_short_answer",
+      "label": "Guide / Intro — Text: Short answer",
+      "default": "Short answer"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_barbershop_in_o",
+      "label": "Guide / Intro — Text: Broken Arrow Barbershop in Orem has thre",
+      "default": "Broken Arrow Barbershop in Orem has three barbers. Bryton, the owner, specializes in short and classic cuts, big changes, scissor haircuts, receding hairlines and hair systems. Connor focuses on medium to longer haircuts. Elise specializes in medium-length styles, curly hair and flow cuts."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Section"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Guide / Section — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_owner_and_licensed_ba",
+      "label": "Guide / Section — Heading: Bryton · Owner and licensed barber instr",
+      "default": "Bryton · Owner and licensed barber instructor"
+    },
+    {
+      "type": "textarea",
+      "id": "t_bryton_owns_broken_arrow_he_",
+      "label": "Guide / Section — Text: Bryton owns Broken Arrow. He cuts just a",
+      "default": "Bryton owns Broken Arrow. He cuts just about everything and does his best work on short and classic cuts. He likes a challenge: big changes, and clients who haven’t liked their hair in a while because of thinning or a receding hairline."
+    },
+    {
+      "type": "textarea",
+      "id": "t_he_specializes_in_scissor_ha",
+      "label": "Guide / Section — Text: He specializes in scissor haircuts, has ",
+      "default": "He specializes in scissor haircuts, has trained with barbers from around the world, and taught hundreds of students at Paul Mitchell The School Provo. He also does every hair system fitting and cut at the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_teaching_barbers",
+      "label": "Guide / Section — Text: Bryton teaching barbers.",
+      "default": "Bryton teaching barbers."
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_s_page",
+      "label": "Guide / Section — Link text: Bryton’s page →",
+      "default": "Bryton’s page →"
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Guide / Section — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_connor_barber",
+      "label": "Guide / Section — Heading: Connor · Barber",
+      "default": "Connor · Barber"
+    },
+    {
+      "type": "textarea",
+      "id": "t_connor_is_a_utah_county_loca",
+      "label": "Guide / Section — Text: Connor is a Utah County local, born and ",
+      "default": "Connor is a Utah County local, born and raised. Most of his work is medium to longer haircuts: keeping the length and giving it shape."
+    },
+    {
+      "type": "text",
+      "id": "t_he_takes_his_time_gets_the_d",
+      "label": "Guide / Section — Text: He takes his time, gets the details righ",
+      "default": "He takes his time, gets the details right, and makes sure you’re comfortable in the chair."
+    },
+    {
+      "type": "text",
+      "id": "t_connor",
+      "label": "Guide / Section — Text: Connor.",
+      "default": "Connor."
+    },
+    {
+      "type": "text",
+      "id": "t_connor_s_page",
+      "label": "Guide / Section — Link text: Connor’s page →",
+      "default": "Connor’s page →"
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Guide / Section — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_elise_barber",
+      "label": "Guide / Section — Heading: Elise · Barber",
+      "default": "Elise · Barber"
+    },
+    {
+      "type": "textarea",
+      "id": "t_elise_specializes_in_medium_",
+      "label": "Guide / Section — Text: Elise specializes in medium-length style",
+      "default": "Elise specializes in medium-length styles and curly hair, and she likes flow cuts and longer, natural looks. Her cuts are clean and detailed."
+    },
+    {
+      "type": "textarea",
+      "id": "t_she_takes_the_time_to_unders",
+      "label": "Guide / Section — Text: She takes the time to understand how you",
+      "default": "She takes the time to understand how you actually style your hair day to day, and if you’re not sure what you want, she’ll help you figure it out."
+    },
+    {
+      "type": "text",
+      "id": "t_elise",
+      "label": "Guide / Section — Text: Elise.",
+      "default": "Elise."
+    },
+    {
+      "type": "text",
+      "id": "t_elise_s_page",
+      "label": "Guide / Section — Link text: Elise’s page →",
+      "default": "Elise’s page →"
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Guide / Section — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_who_to_book",
+      "label": "Guide / Section — Heading: Who to book",
+      "default": "Who to book"
+    },
+    {
+      "type": "text",
+      "id": "t_short_classic_cuts_and_fades",
+      "label": "Guide / Section — Text: Short, classic cuts and fades",
+      "default": "Short, classic cuts and fades"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton",
+      "label": "Guide / Section — Text: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_receding_hairline_or_thinnin",
+      "label": "Guide / Section — Text: Receding hairline or thinning hair",
+      "default": "Receding hairline or thinning hair"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_2",
+      "label": "Guide / Section — Text: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_scissor_haircuts",
+      "label": "Guide / Section — Text: Scissor haircuts",
+      "default": "Scissor haircuts"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_3",
+      "label": "Guide / Section — Text: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_medium_and_longer_hair",
+      "label": "Guide / Section — Text: Medium and longer hair",
+      "default": "Medium and longer hair"
+    },
+    {
+      "type": "text",
+      "id": "t_connor_or_elise",
+      "label": "Guide / Section — Text: Connor or Elise",
+      "default": "Connor or Elise"
+    },
+    {
+      "type": "text",
+      "id": "t_curly_hair_and_flow_cuts",
+      "label": "Guide / Section — Text: Curly hair and flow cuts",
+      "default": "Curly hair and flow cuts"
+    },
+    {
+      "type": "text",
+      "id": "t_elise_2",
+      "label": "Guide / Section — Text: Elise",
+      "default": "Elise"
+    },
+    {
+      "type": "text",
+      "id": "t_hair_systems",
+      "label": "Guide / Section — Text: Hair systems",
+      "default": "Hair systems"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_4",
+      "label": "Guide / Section — Text: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Guide / Section — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_why_a_small_shop",
+      "label": "Guide / Section — Heading: Why a small shop",
+      "default": "Why a small shop"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_aren_t_a_chain_with_a_new",
+      "label": "Guide / Section — Text: We aren’t a chain with a new barber ever",
+      "default": "We aren’t a chain with a new barber every visit. We’d rather get to know you and get your hair more right each time."
+    },
+    {
+      "type": "text",
+      "id": "t_voted_best_barbershop_in_uta",
+      "label": "Guide / Section — Text: Voted Best Barbershop in Utah Valley by ",
+      "default": "Voted Best Barbershop in Utah Valley by Daily Herald readers in 2023, 2024 and 2026."
+    },
+    {
+      "type": "text",
+      "id": "t_why_the_same_barber_every_ti",
+      "label": "Guide / Section — Link text: Why the same barber every time matters →",
+      "default": "Why the same barber every time matters →"
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Guide / Section — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_your_first_visit",
+      "label": "Guide / Section — Heading: Your first visit",
+      "default": "Your first visit"
+    },
+    {
+      "type": "textarea",
+      "id": "t_book_a_signature_haircut_it_",
+      "label": "Guide / Section — Text: Book a Signature Haircut. It gives your ",
+      "default": "Book a Signature Haircut. It gives your new barber time to learn your hair and get the cut right the first time."
+    },
+    {
+      "type": "text",
+      "id": "t_classic_vs_signature",
+      "label": "Guide / Section — Link text: Classic vs Signature →",
+      "default": "Classic vs Signature →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Guide / FAQ — Heading: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "t_yes_book_whoever_fits_what_y",
+      "label": "Guide / FAQ — Text: Yes. Book whoever fits what you want tha",
+      "default": "Yes. Book whoever fits what you want that day."
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_find_us",
+      "label": "Guide / FAQ — Link text: How to find us →",
+      "default": "How to find us →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Guide / CTA — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_find_your_barber",
+      "label": "Guide / CTA — Heading: Find your barber.",
+      "default": "Find your barber."
+    },
+    {
+      "type": "text",
+      "id": "t_pick_one_of_our_three_barber",
+      "label": "Guide / CTA — Text: Pick one of our three barbers and book y",
+      "default": "Pick one of our three barbers and book your first visit."
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Guide / CTA — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_the_team",
+      "label": "Guide / CTA — Link text: Meet the team",
+      "default": "Meet the team"
+    }
+  ]
+}
+{% endschema %}

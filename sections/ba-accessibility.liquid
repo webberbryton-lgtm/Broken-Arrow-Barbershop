@@ -1,0 +1,138 @@
+{%- comment -%} Generated from the Claude Design page "Accessibility Statement". {%- endcomment -%}
+<style>
+.ba-page[data-ba-page="accessibility"] :is(ul) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="accessibility">
+<section data-screen-label="Info / Header" style="background: var(--canvas-sunk); border-bottom: 1px solid var(--line);">
+<div style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_legal | escape }}</p>
+<h1 class="ba-display" style="font-size: min(clamp(44px, 6.4vw, 80px), 11vw); letter-spacing: -0.045em;">{{ section.settings.t_accessibility_statement | escape }}</h1>
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_last_updated_september_26_20 | escape }}</p>
+</div></section><article data-screen-label="Info / Body" style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 40px;">
+<p style="font-size: clamp(19px, 1.9vw, 22px); line-height: 1.6; text-wrap: pretty;">{{ section.settings.t_we_believe_the_internet_shou | escape }}</p>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_our_commitment_to_accessibil | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_barbershop_and_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_if_you_are_having_difficulty | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_how_we_respond | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_take_your_feedback_seriou | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_third_party_content | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_some_parts_of_this_website_s | escape }}</p>
+</section>
+<div style="display: flex; flex-direction: column; gap: 8px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_contact_us | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;"><a href="tel:+18017091280">{{ section.settings.t_801_709_1280 | escape }}</a> · <a href="mailto:brokenarrowbarbershoporem@gmail.com">{{ section.settings.t_brokenarrowbarbershoporem_gm | escape }}</a></p>
+</div></article>
+</div>
+{% schema %}
+{
+  "name": "Accessibility Statement",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text: Info / Header"
+    },
+    {
+      "type": "text",
+      "id": "t_legal",
+      "label": "Info / Header — Text: Legal",
+      "default": "Legal"
+    },
+    {
+      "type": "text",
+      "id": "t_accessibility_statement",
+      "label": "Info / Header — Heading: Accessibility statement",
+      "default": "Accessibility statement"
+    },
+    {
+      "type": "text",
+      "id": "t_last_updated_september_26_20",
+      "label": "Info / Header — Text: Last updated September 26, 2026",
+      "default": "Last updated September 26, 2026"
+    },
+    {
+      "type": "header",
+      "content": "Text: Info / Body"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_believe_the_internet_shou",
+      "label": "Info / Body — Text: We believe the internet should be availa",
+      "default": "We believe the internet should be available and accessible to everyone, and we are committed to providing a website that works for the broadest possible audience, regardless of ability."
+    },
+    {
+      "type": "text",
+      "id": "t_our_commitment_to_accessibil",
+      "label": "Info / Body — Heading: Our commitment to accessibility",
+      "default": "Our commitment to accessibility"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_barbershop_and_",
+      "label": "Info / Body — Text: Broken Arrow Barbershop and Broken Arrow",
+      "default": "Broken Arrow Barbershop and Broken Arrow Grooming are committed to making our website’s content accessible and user friendly to everyone. We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA."
+    },
+    {
+      "type": "textarea",
+      "id": "t_if_you_are_having_difficulty",
+      "label": "Info / Body — Text: If you are having difficulty viewing or ",
+      "default": "If you are having difficulty viewing or navigating the content on this website, or notice any content, feature or functionality that you believe is not fully accessible to people with disabilities, please call the shop at (801) 709-1280 or email brokenarrowbarbershoporem@gmail.com with “Access Barrier” in the subject line. Describe the specific feature you feel is not fully accessible, or share a suggestion for improvement."
+    },
+    {
+      "type": "text",
+      "id": "t_how_we_respond",
+      "label": "Info / Body — Heading: How we respond",
+      "default": "How we respond"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_take_your_feedback_seriou",
+      "label": "Info / Body — Text: We take your feedback seriously and will",
+      "default": "We take your feedback seriously and will consider it as we evaluate ways to accommodate all of our customers and our overall accessibility policies. If you have trouble booking online, call the shop during open hours and we’ll book your appointment for you."
+    },
+    {
+      "type": "text",
+      "id": "t_third_party_content",
+      "label": "Info / Body — Heading: Third-party content",
+      "default": "Third-party content"
+    },
+    {
+      "type": "textarea",
+      "id": "t_some_parts_of_this_website_s",
+      "label": "Info / Body — Text: Some parts of this website, such as onli",
+      "default": "Some parts of this website, such as online booking and checkout, are provided by third parties. While we do not control such vendors, we strongly encourage vendors of third-party digital content to provide content that is accessible and user friendly."
+    },
+    {
+      "type": "text",
+      "id": "t_contact_us",
+      "label": "Info / Body — Text: Contact us",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Info / Body — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem, UT 84097"
+    },
+    {
+      "type": "text",
+      "id": "t_801_709_1280",
+      "label": "Info / Body — Link text: (801) 709-1280",
+      "default": "(801) 709-1280"
+    },
+    {
+      "type": "text",
+      "id": "t_brokenarrowbarbershoporem_gm",
+      "label": "Info / Body — Link text: brokenarrowbarbershoporem@gmail.com",
+      "default": "brokenarrowbarbershoporem@gmail.com"
+    }
+  ]
+}
+{% endschema %}

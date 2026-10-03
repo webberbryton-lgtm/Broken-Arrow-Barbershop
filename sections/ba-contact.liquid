@@ -1,0 +1,131 @@
+{%- comment -%} Generated from the Claude Design page "Contact". {%- endcomment -%}
+<style>
+.ba-page[data-ba-page="contact"] :is(ul) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="contact">
+<section data-screen-label="Info / Header" style="background: var(--canvas-sunk); border-bottom: 1px solid var(--line);">
+<div style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_help | escape }}</p>
+<h1 class="ba-display" style="font-size: min(clamp(44px, 6.4vw, 80px), 11vw); letter-spacing: -0.045em;">{{ section.settings.t_contact_us | escape }}</h1>
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_last_updated_september_26_20 | escape }}</p>
+</div></section><article data-screen-label="Info / Body" style="max-width: 920px; margin: 0px auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 40px;">
+<p style="font-size: clamp(19px, 1.9vw, 22px); line-height: 1.6; text-wrap: pretty;">{{ section.settings.t_the_fastest_way_to_book_is_o | escape }}</p>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_the_shop | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_375_e_800_s_suite_12_orem_ut | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_orders_and_products | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_email_brokenarrowbarbershopo | escape }}</p>
+</section>
+<section style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid var(--ink); padding-top: 24px;">
+<h2 style="font: 800 clamp(22px,2.4vw,28px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_media_and_partnerships | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_for_press_collaborations_or_ | escape }}</p>
+</section>
+<div style="display: flex; flex-direction: column; gap: 8px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_contact_us_2 | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px;"><a href="tel:+18017091280">{{ section.settings.t_801_709_1280 | escape }}</a> · <a href="mailto:brokenarrowbarbershoporem@gmail.com">{{ section.settings.t_brokenarrowbarbershoporem_gm | escape }}</a></p>
+</div></article>
+</div>
+{% schema %}
+{
+  "name": "Contact",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text: Info / Header"
+    },
+    {
+      "type": "text",
+      "id": "t_help",
+      "label": "Info / Header — Text: Help",
+      "default": "Help"
+    },
+    {
+      "type": "text",
+      "id": "t_contact_us",
+      "label": "Info / Header — Heading: Contact us",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "t_last_updated_september_26_20",
+      "label": "Info / Header — Text: Last updated September 26, 2026",
+      "default": "Last updated September 26, 2026"
+    },
+    {
+      "type": "header",
+      "content": "Text: Info / Body"
+    },
+    {
+      "type": "text",
+      "id": "t_the_fastest_way_to_book_is_o",
+      "label": "Info / Body — Text: The fastest way to book is online. For a",
+      "default": "The fastest way to book is online. For anything else, call or email the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_the_shop",
+      "label": "Info / Body — Heading: The shop",
+      "default": "The shop"
+    },
+    {
+      "type": "textarea",
+      "id": "t_375_e_800_s_suite_12_orem_ut",
+      "label": "Info / Body — Text: 375 E 800 S, Suite 12, Orem, UT 84097. O",
+      "default": "375 E 800 S, Suite 12, Orem, UT 84097. Open Tuesday 10 AM – 6 PM, Wednesday to Friday 10 AM – 7:30 PM, and Saturday 10 AM – 5:30 PM. Closed Sunday and Monday."
+    },
+    {
+      "type": "text",
+      "id": "t_orders_and_products",
+      "label": "Info / Body — Heading: Orders and products",
+      "default": "Orders and products"
+    },
+    {
+      "type": "textarea",
+      "id": "t_email_brokenarrowbarbershopo",
+      "label": "Info / Body — Text: Email brokenarrowbarbershoporem@gmail.co",
+      "default": "Email brokenarrowbarbershoporem@gmail.com with your order number and we’ll get back to you within 2 business days."
+    },
+    {
+      "type": "text",
+      "id": "t_media_and_partnerships",
+      "label": "Info / Body — Heading: Media and partnerships",
+      "default": "Media and partnerships"
+    },
+    {
+      "type": "textarea",
+      "id": "t_for_press_collaborations_or_",
+      "label": "Info / Body — Text: For press, collaborations or YouTube fea",
+      "default": "For press, collaborations or YouTube features, email brokenarrowbarbershoporem@gmail.com with “Media” in the subject line."
+    },
+    {
+      "type": "text",
+      "id": "t_contact_us_2",
+      "label": "Info / Body — Text: Contact us",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Info / Body — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem, UT 84097"
+    },
+    {
+      "type": "text",
+      "id": "t_801_709_1280",
+      "label": "Info / Body — Link text: (801) 709-1280",
+      "default": "(801) 709-1280"
+    },
+    {
+      "type": "text",
+      "id": "t_brokenarrowbarbershoporem_gm",
+      "label": "Info / Body — Link text: brokenarrowbarbershoporem@gmail.com",
+      "default": "brokenarrowbarbershoporem@gmail.com"
+    }
+  ]
+}
+{% endschema %}

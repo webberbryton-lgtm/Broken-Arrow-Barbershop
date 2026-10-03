@@ -1,0 +1,1234 @@
+{%- comment -%} Generated from the Claude Design page "Home". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_hs_client1_before != blank
+  assign img_hs_client1_before = section.settings.img_hs_client1_before | image_url: width: 2400
+else
+  assign img_hs_client1_before = 'ba-hs-client1-before.webp' | asset_url
+endif
+if section.settings.img_hs_client1_after != blank
+  assign img_hs_client1_after = section.settings.img_hs_client1_after | image_url: width: 2400
+else
+  assign img_hs_client1_after = 'ba-hs-client1-after.webp' | asset_url
+endif
+if section.settings.img_cut_curly_taper != blank
+  assign img_cut_curly_taper = section.settings.img_cut_curly_taper | image_url: width: 2400
+else
+  assign img_cut_curly_taper = 'ba-cut-curly-taper.webp' | asset_url
+endif
+if section.settings.img_cut_slick_back != blank
+  assign img_cut_slick_back = section.settings.img_cut_slick_back | image_url: width: 2400
+else
+  assign img_cut_slick_back = 'ba-cut-slick-back.webp' | asset_url
+endif
+if section.settings.img_cut_textured_flow != blank
+  assign img_cut_textured_flow = section.settings.img_cut_textured_flow | image_url: width: 2400
+else
+  assign img_cut_textured_flow = 'ba-cut-textured-flow.webp' | asset_url
+endif
+if section.settings.img_cut_side_part != blank
+  assign img_cut_side_part = section.settings.img_cut_side_part | image_url: width: 2400
+else
+  assign img_cut_side_part = 'ba-cut-side-part.webp' | asset_url
+endif
+if section.settings.img_barber_at_work != blank
+  assign img_barber_at_work = section.settings.img_barber_at_work | image_url: width: 2400
+else
+  assign img_barber_at_work = 'ba-barber-at-work.webp' | asset_url
+endif
+if section.settings.img_before_after_flow != blank
+  assign img_before_after_flow = section.settings.img_before_after_flow | image_url: width: 2400
+else
+  assign img_before_after_flow = 'ba-before-after-flow.webp' | asset_url
+endif
+if section.settings.img_bryton_main != blank
+  assign img_bryton_main = section.settings.img_bryton_main | image_url: width: 2400
+else
+  assign img_bryton_main = 'ba-bryton-main.webp' | asset_url
+endif
+if section.settings.img_connor_card != blank
+  assign img_connor_card = section.settings.img_connor_card | image_url: width: 2400
+else
+  assign img_connor_card = 'ba-connor-card.webp' | asset_url
+endif
+if section.settings.img_elise_profile != blank
+  assign img_elise_profile = section.settings.img_elise_profile | image_url: width: 2400
+else
+  assign img_elise_profile = 'ba-elise-profile.webp' | asset_url
+endif
+if section.settings.img_clay_scene != blank
+  assign img_clay_scene = section.settings.img_clay_scene | image_url: width: 2400
+else
+  assign img_clay_scene = 'ba-clay-scene.webp' | asset_url
+endif
+if section.settings.img_building_2_entrance != blank
+  assign img_building_2_entrance = section.settings.img_building_2_entrance | image_url: width: 2400
+else
+  assign img_building_2_entrance = 'ba-building-2-entrance.webp' | asset_url
+endif
+if section.settings.img_suite_12_door != blank
+  assign img_suite_12_door = section.settings.img_suite_12_door | image_url: width: 2400
+else
+  assign img_suite_12_door = 'ba-suite-12-door.webp' | asset_url
+endif
+if section.settings.img_bryton_hair_system != blank
+  assign img_bryton_hair_system = section.settings.img_bryton_hair_system | image_url: width: 2400
+else
+  assign img_bryton_hair_system = 'ba-bryton-hair-system.webp' | asset_url
+endif
+-%}
+<style>
+@media (max-width: 639px) {
+  :where([data-ba-page="home"] [data-ba-m="1"]) { max-width: 200px !important; padding: 10px 14px !important; }
+  :where([data-ba-page="home"] [data-ba-m="2"]) { font: 800 14px/17px var(--font-display) !important; }
+  :where([data-ba-page="home"] [data-ba-m="3"]) { padding: 120px clamp(16px, 5vw, 64px) clamp(72px, 11vw, 150px) !important; }
+  :where([data-ba-page="home"] [data-ba-m="4"]) { width: 100% !important; }
+}
+.bah-home-0:hover { border-color: var(--on-band) !important; }
+.ba-avail-shop:hover { color: var(--on-band) !important; border-color: var(--on-band) !important; }
+.ba-avail-barber:hover { color: var(--green) !important; }
+@media (max-width: 639px) { .ba-avail-shop { margin-left: 0 !important; padding: 0 16px !important; } }
+</style>
+<div class="ba-page" data-ba-page="home" data-ba-active="home" data-ba-hide-award>
+<section data-screen-label="Home / Hero" style="position: relative; background: var(--band); min-height: clamp(600px, 88vh, 880px); display: flex; align-items: flex-end; overflow: hidden;">
+<img alt="Inside Broken Arrow Barbershop: green walls, cognac barber chairs, wood floor" loading="lazy" src="{{ img_shop_interior }}" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; filter: saturate(0.85) brightness(0.8);"/>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 20%, rgba(22, 23, 26, 0.55) 55%, rgb(22, 23, 26) 100%);"></div>
+<a class="bah-home-0" data-ba-m="1" data-m-badge="" href="/pages/free-haircut" style="position: absolute; top: 0px; right: 0px; z-index: 2; display: flex; flex-direction: column; gap: 4px; max-width: 220px; padding: 12px 16px; background: var(--band); border: 1px solid transparent; color: var(--on-band); text-decoration: none; transition: border-color 150ms;">
+<span class="ba-label" style="color: var(--on-band); opacity: 0.78; font-size: 11px; letter-spacing: 0.16em;">{{ section.settings.t_filmed_for_youtube | escape }}</span>
+<span data-ba-m="2" style="font: 800 15px/18px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase;">{{ section.settings.t_apply_for_a_free_haircut | escape }}</span>
+</a>
+<div data-ba-m="3" style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(72px, 11vw, 150px); display: flex; flex-direction: column; gap: 28px;">
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(56px, 10vw, 120px), 11vw); line-height: 0.88; letter-spacing: -0.045em; max-width: 9ch;">{{ section.settings.t_your_hair_done_right | escape }}</h1>
+<p style="max-width: 560px; color: var(--on-band); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_personalized_cuts_no_one_siz | escape }}</p>
+<div data-ba-avail-slot="shop" style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" data-ba-m="4" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services" style="min-height: 68px; padding: 0px 56px; font-size: 15px;">{{ section.settings.t_book_now | escape }}</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 32px; border-top: 1px solid var(--line-strong); padding-top: 20px; margin-top: 12px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_daily_herald_readers_choice_ | escape }}</p>
+<p class="ba-label" data-ba-dynamic="" data-ba-today="" style="color: var(--on-band);">Open today until 5:30 PM</p>
+</div>
+</div></section><section data-screen-label="Home / Reviews" id="reviews" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(8px, 1.5vw, 16px); display: flex; flex-direction: column; gap: clamp(48px, 6vw, 72px);">
+<div style="display: flex; flex-wrap: wrap; gap: 40px 48px; align-items: flex-end; justify-content: space-between;">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_serving_utah_valley_since_20 | escape }}</p>
+<div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 20px;">
+<p class="ba-display" style="font-size: clamp(88px, 11vw, 144px); line-height: 0.85; letter-spacing: -0.05em; font-variant-numeric: tabular-nums;">{{ section.settings.t_5_0 | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<p aria-label="5 out of 5 stars" style="font-size: 24px; letter-spacing: 0.18em; line-height: 1;">{{ section.settings.t_ | escape }}</p>
+<p class="ba-label">{{ section.settings.t_on_google | escape }}</p>
+</div>
+</div>
+</div>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 10px; border-left: 2px solid var(--ink); padding-left: clamp(20px, 3vw, 40px);">
+<h2 class="ba-display" style="font-size: clamp(32px, 3.6vw, 44px); max-width: 14ch;">{{ section.settings.t_voted_best_barbershop_in_uta | escape }}</h2>
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_daily_herald_best_of_utah_va | escape }}</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 24px;">
+<figure style="position: relative; background: var(--band); color: var(--on-band); border: 1px solid var(--band); padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; gap: 24px;">
+<span aria-hidden="true" style="position: absolute; top: clamp(8px, 1vw, 16px); right: clamp(20px, 2.4vw, 32px); font: 800 120px/1 var(--font-display); color: var(--line-strong);">“</span>
+<p aria-label="5 out of 5 stars" style="font-size: 16px; letter-spacing: 0.2em; color: var(--on-band);">{{ section.settings.t__2 | escape }}</p>
+<blockquote style="margin: 0px; flex: 1 1 0%; font: 500 clamp(19px,1.7vw,22px)/1.5 var(--font-sans); letter-spacing: -0.01em; text-wrap: pretty; max-width: 34ch; color: var(--on-band);">{{ section.settings.t_cut_my_hair_exactly_how_i_wa | escape }}</blockquote>
+<figcaption style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-top: 1px solid var(--line-strong); padding-top: 18px;">
+<span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_brigham | escape }}</span>
+<span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_google_review | escape }}</span>
+</figcaption>
+</figure>
+<figure style="position: relative; background: var(--band); color: var(--on-band); border: 1px solid var(--band); padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; gap: 24px;">
+<span aria-hidden="true" style="position: absolute; top: clamp(8px, 1vw, 16px); right: clamp(20px, 2.4vw, 32px); font: 800 120px/1 var(--font-display); color: var(--line-strong);">“</span>
+<p aria-label="5 out of 5 stars" style="font-size: 16px; letter-spacing: 0.2em; color: var(--on-band);">{{ section.settings.t__3 | escape }}</p>
+<blockquote style="margin: 0px; flex: 1 1 0%; font: 500 clamp(19px,1.7vw,22px)/1.5 var(--font-sans); letter-spacing: -0.01em; text-wrap: pretty; max-width: 34ch; color: var(--on-band);">{{ section.settings.t_i_don_t_usually_go_to_barber | escape }}</blockquote>
+<figcaption style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-top: 1px solid var(--line-strong); padding-top: 18px;">
+<span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_jerryck | escape }}</span>
+<span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_google_review_2 | escape }}</span>
+</figcaption>
+</figure>
+<figure style="position: relative; background: var(--band); color: var(--on-band); border: 1px solid var(--band); padding: clamp(28px, 3vw, 40px); display: flex; flex-direction: column; gap: 24px;">
+<span aria-hidden="true" style="position: absolute; top: clamp(8px, 1vw, 16px); right: clamp(20px, 2.4vw, 32px); font: 800 120px/1 var(--font-display); color: var(--line-strong);">“</span>
+<p aria-label="5 out of 5 stars" style="font-size: 16px; letter-spacing: 0.2em; color: var(--on-band);">{{ section.settings.t__4 | escape }}</p>
+<blockquote style="margin: 0px; flex: 1 1 0%; font: 500 clamp(19px,1.7vw,22px)/1.5 var(--font-sans); letter-spacing: -0.01em; text-wrap: pretty; max-width: 34ch; color: var(--on-band);">{{ section.settings.t_what_an_amazing_place_hands_ | escape }}</blockquote>
+<figcaption style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-top: 1px solid var(--line-strong); padding-top: 18px;">
+<span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.01em; text-transform: uppercase; color: var(--on-band);">{{ section.settings.t_jed | escape }}</span>
+<span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_google_review_3 | escape }}</span>
+</figcaption>
+</figure>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px; background: var(--green); color: var(--on-band); padding: clamp(28px, 4vw, 48px);">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 560px;">
+<span class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_free_haircut_filmed_for_yout | escape }}</span>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(36px, 4.6vw, 56px); max-width: 16ch;">{{ section.settings.t_apply_for_a_free_haircut_2 | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; color: var(--on-band); opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_we_film_transformation_hairc | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px; align-items: center;">
+<a class="ba-btn ba-btn-secondary ba-on-dark" href="/pages/free-haircut">{{ section.settings.t_apply_now | escape }}</a>
+</div>
+</div>
+</div></section><section data-screen-label="Home / 01 Services" id="services" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_01_services | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<h2 class="ba-display" style="font-size: clamp(44px, 6.2vw, 72px); max-width: 16ch;">{{ section.settings.t_not_sure_what_you_want | escape }}</h2>
+<p style="max-width: 680px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">Book a Haircut and tell your barber what's bugging you about your hair now. Figuring out the rest is our job. Or <a href="/pages/service-quiz">{{ section.settings.t_answer_four_quick_questions | escape }}</a> and we’ll tell you which one to book.</p>
+</div>
+</div>
+<ol class="ba-services"><li class="ba-service"><span class="ba-service-n">{{ section.settings.t_01 | escape }}</span><h3 class="ba-service-name">{{ section.settings.t_haircut_beard | escape }}</h3><p class="ba-service-desc">{{ section.settings.t_refresh_your_current_style_w | escape }}</p><div class="ba-service-meta"><span class="ba-price">{{ section.settings.t_65 | escape }}</span><a aria-label="Book now: Haircut + Beard" class="ba-btn ba-btn-text ba-service-book" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/SMNS7RO5ETWVT5AYBLLPYKLR">{{ section.settings.t_book_now_2 | escape }}</a></div></li><li class="ba-service"><span class="ba-service-n">{{ section.settings.t_02 | escape }}</span><h3 class="ba-service-name">{{ section.settings.t_signature_haircut | escape }}</h3><p class="ba-service-desc">{{ section.settings.t_our_most_personalized_haircu | escape }}</p><div class="ba-service-meta"><span class="ba-price">{{ section.settings.t_65_2 | escape }}</span><a aria-label="Book now: Signature Haircut" class="ba-btn ba-btn-text ba-service-book" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ">{{ section.settings.t_book_now_3 | escape }}</a></div></li><li class="ba-service"><span class="ba-service-n">{{ section.settings.t_03 | escape }}</span><h3 class="ba-service-name">{{ section.settings.t_classic_haircut | escape }}</h3><p class="ba-service-desc">{{ section.settings.t_refresh_your_current_style_w_2 | escape }}</p><div class="ba-service-meta"><span class="ba-price">{{ section.settings.t_40 | escape }}</span><a aria-label="Book now: Classic Haircut" class="ba-btn ba-btn-text ba-service-book" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/7T6J5FCSOTULAKKXBJQXL2H5">{{ section.settings.t_book_now_4 | escape }}</a></div></li></ol>
+</div></section><section data-screen-label="Home / 02 Hair replacement" id="hair" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: clamp(40px, 6vw, 80px); align-items: center;">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_02_non_surgical_hair_replace | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 60px); max-width: 14ch;">{{ section.settings.t_natural_looking_hair_systems | escape }}</h2>
+<p style="max-width: 520px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_for_men_experiencing_thinnin | escape }}</p>
+<p style="font: 800 clamp(24px,2.6vw,32px)/1.1 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_as_low_as_5_07_a_day | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_skip_the_energy_drinks_get_a | escape }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding-top: 8px;">
+<a class="ba-btn ba-btn-primary" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU">{{ section.settings.t_book_a_consultation | escape }}</a>
+<a class="ba-btn ba-btn-text" href="/pages/hair-replacement">{{ section.settings.t_learn_more | escape }}</a>
+</div>
+</div>
+<figure style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 12px;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+<div style="position: relative; aspect-ratio: 4 / 5; background: var(--canvas-sunk);"><img alt="Client before his hair system, bald on top with a marked hairline" loading="lazy" src="{{ img_hs_client1_before }}" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"/><p class="ba-label" style="position: absolute; left: 0px; bottom: 0px; margin: 0px; padding: 10px 14px; background: var(--band); color: var(--on-band);">{{ section.settings.t_before | escape }}</p></div>
+<div style="position: relative; aspect-ratio: 4 / 5; background: var(--canvas-sunk);"><img alt="Same client after, full hair system cut into a textured quiff" loading="lazy" src="{{ img_hs_client1_after }}" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"/><p class="ba-label" style="position: absolute; left: 0px; bottom: 0px; margin: 0px; padding: 10px 14px; background: var(--band); color: var(--on-band);">{{ section.settings.t_after | escape }}</p></div>
+</div>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_full_hair_system_color_match | escape }}</figcaption>
+</figure>
+</div></section><section data-screen-label="Home / 03 The work" id="work" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_03_the_work | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.2vw, 72px);">{{ section.settings.t_the_work | escape }}</h2>
+</div>
+<a class="ba-btn ba-btn-text ba-on-dark" href="#">{{ section.settings.t_more_on_instagram | escape }}</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(max(160px, 33.3333% - 21.3333px), 1fr)); gap: clamp(12px, 2vw, 32px);">
+<figure style="display: flex; flex-direction: column; gap: 12px;">
+<img alt="Curly haircut with a taper" loading="lazy" src="{{ img_cut_curly_taper }}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_curly_top_kept_long_tapered_ | escape }}</figcaption>
+</figure>
+<figure style="display: flex; flex-direction: column; gap: 12px;">
+<img alt="Slicked-back haircut, side view" loading="lazy" src="{{ img_cut_slick_back }}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_slicked_back_scissor_cut_thr | escape }}</figcaption>
+</figure>
+<figure style="display: flex; flex-direction: column; gap: 12px;">
+<img alt="Textured flow haircut" loading="lazy" src="{{ img_cut_textured_flow }}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_grown_out_flow_shaped_and_th | escape }}</figcaption>
+</figure>
+<figure style="display: flex; flex-direction: column; gap: 12px;">
+<img alt="Medium-length side part" loading="lazy" src="{{ img_cut_side_part }}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_medium_length_side_part_clea | escape }}</figcaption>
+</figure>
+<figure style="display: flex; flex-direction: column; gap: 12px;">
+<img alt="Barber blow-drying a client's hair" loading="lazy" src="{{ img_barber_at_work }}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_blow_drying_to_set_the_shape | escape }}</figcaption>
+</figure>
+<figure style="display: flex; flex-direction: column; gap: 12px;">
+<img alt="Before and after: long hair cut into a textured flow" loading="lazy" src="{{ img_before_after_flow }}" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--on-band); opacity: 0.78;">{{ section.settings.t_before_and_after_long_hair_c | escape }}</figcaption>
+</figure>
+</div>
+</div></section><section data-screen-label="Home / 04 The team" id="team" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px;">
+<p class="ba-label" style="flex: 1 1 240px;">{{ section.settings.t_04_the_team | escape }}</p>
+<div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 24px;">
+<h2 class="ba-display" style="font-size: clamp(44px, 6.2vw, 72px);">{{ section.settings.t_three_barbers | escape }}</h2>
+<p style="max-width: 680px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_each_of_us_has_the_kind_of_h | escape }}</p>
+</div>
+</div>
+<div data-m-three="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px;">
+<article style="display: flex; flex-direction: column; gap: 16px;">
+<div aria-label="Bryton fitting a hair system on a client at Broken Arrow Barbershop" role="img" style='aspect-ratio: 4 / 5; background-color: var(--canvas-sunk); background-image: url("{{ img_bryton_main }}"); background-size: cover; background-position: center 30%;'></div>
+<div data-ba-avail-after="bryton" style="display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 16px;">
+<h3 style="font: 800 clamp(32px,3.4vw,40px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_bryton | escape }}</h3>
+<p class="ba-label">{{ section.settings.t_owner | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_classic_cuts_big_changes_and | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-text" href="/pages/bryton">{{ section.settings.t_see_bryton_s_page | escape }}</a>
+</article>
+<article style="display: flex; flex-direction: column; gap: 16px;">
+<img alt="Connor cutting a client’s hair with a comb at Broken Arrow Barbershop" loading="lazy" src="{{ img_connor_card }}" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%;"/>
+<div data-ba-avail-after="connor" style="display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 16px;">
+<h3 style="font: 800 clamp(32px,3.4vw,40px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_connor | escape }}</h3>
+<p class="ba-label">{{ section.settings.t_barber | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_medium_to_longer_hair_utah_c | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-text" href="/pages/connor">{{ section.settings.t_see_connor_s_page | escape }}</a>
+</article>
+<article style="display: flex; flex-direction: column; gap: 16px;">
+<a aria-label="Elise’s page" href="/pages/elise" style='display: block; aspect-ratio: 4 / 5; background-color: var(--canvas-sunk); background-image: url("{{ img_elise_profile }}"); background-size: cover; background-position: center center;'></a>
+<div data-ba-avail-after="elise" style="display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 16px;">
+<h3 style="font: 800 clamp(32px,3.4vw,40px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_elise | escape }}</h3>
+<p class="ba-label">{{ section.settings.t_barber_2 | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_curly_hair_medium_length_and | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-text" href="/pages/elise">{{ section.settings.t_see_elise_s_page | escape }}</a>
+</article>
+</div>
+<div style="display: flex;">
+<a class="ba-btn ba-btn-primary" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now_5 | escape }}</a>
+</div>
+</div></section><section data-screen-label="Home / 05 Grooming" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">05 / Broken Arrow Grooming · <span style="color: var(--green);">{{ section.settings.t_coming_soon | escape }}</span></p>
+<h2 class="ba-display" style="font-size: clamp(44px, 6.2vw, 72px);">{{ section.settings.t_matte_clay | escape }}</h2>
+<p style="max-width: 520px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_our_first_product_the_clay_w | escape }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
+<a class="ba-btn ba-btn-secondary" href="/products/matte-clay">{{ section.settings.t_shop_matte_clay | escape }}</a>
+<a class="ba-btn ba-btn-text" href="/pages/shop">{{ section.settings.t_see_the_shop | escape }}</a>
+</div>
+</div>
+<a href="/products/matte-clay" style="position: relative; overflow: hidden; flex: 1 1 420px; aspect-ratio: 1 / 1; background: var(--canvas-sunk); display: flex; flex-direction: column; justify-content: space-between; padding: 20px; text-decoration: none;">
+<img alt="Broken Arrow Grooming matte clay jar with its box" loading="lazy" src="{{ img_clay_scene }}" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; display: block;"/>
+</a>
+</div></section><section data-screen-label="Home / 06 Visit" id="visit" style="background: var(--canvas); border-top: 1px solid var(--line);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 32px;">
+<p class="ba-label" style="flex: 1 1 240px;">{{ section.settings.t_06_visit | escape }}</p>
+<div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 24px;">
+<h2 class="ba-display" style="font-size: clamp(44px, 6.2vw, 72px);">{{ section.settings.t_finding_the_shop | escape }}</h2>
+<p style="max-width: 680px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; text-wrap: pretty;">{{ section.settings.t_we_re_in_suite_12_at_375_e_8 | escape }}</p>
+</div>
+</div>
+<div data-m-stack="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 48px 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px;">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 12px;">
+<figure style="display: flex; flex-direction: column; gap: 10px;"><img alt="Glass door marked Building 2, Suite 8–15, beside the 375 address numbers" loading="lazy" src="{{ img_building_2_entrance }}" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 62% 60%;"/><figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_1_go_in_the_door_marked_buil | escape }}</figcaption></figure>
+<figure style="display: flex; flex-direction: column; gap: 10px;"><img alt="Hallway inside Building 2 with the open door to Suite 12 on the right" loading="lazy" src="{{ img_suite_12_door }}" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 70% 50%;"/><figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_2_inside_suite_12_is_on_the_ | escape }}</figcaption></figure>
+</div>
+<p style="font-size: 17px; line-height: 28px;">375 E 800 S, Suite 12<br/>Orem, UT 84097</p>
+<div style="display: flex; flex-wrap: wrap; gap: 24px;">
+<a class="ba-btn ba-btn-text" href="https://maps.google.com/?q=375+E+800+S+Suite+12+Orem+UT+84097">{{ section.settings.t_get_directions | escape }}</a>
+<a class="ba-btn ba-btn-text" href="tel:+18017091280">{{ section.settings.t_call_the_shop | escape }}</a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_hours | escape }}</p>
+<div style="border-top: 2px solid var(--ink);">
+<div data-ba-day="2" data-ba-dynamic="" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0px; border-bottom: 1px solid var(--line); font-size: 17px; line-height: 28px; font-variant-numeric: tabular-nums; font-weight: 400;">
+<span>Tuesday</span><span>10 AM – 6 PM</span>
+</div>
+<div data-ba-day="3" data-ba-dynamic="" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0px; border-bottom: 1px solid var(--line); font-size: 17px; line-height: 28px; font-variant-numeric: tabular-nums; font-weight: 400;">
+<span>Wednesday</span><span>10 AM – 7:30 PM</span>
+</div>
+<div data-ba-day="4" data-ba-dynamic="" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0px; border-bottom: 1px solid var(--line); font-size: 17px; line-height: 28px; font-variant-numeric: tabular-nums; font-weight: 400;">
+<span>Thursday</span><span>10 AM – 7:30 PM</span>
+</div>
+<div data-ba-day="5" data-ba-dynamic="" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0px; border-bottom: 1px solid var(--line); font-size: 17px; line-height: 28px; font-variant-numeric: tabular-nums; font-weight: 400;">
+<span>Friday</span><span>10 AM – 7:30 PM</span>
+</div>
+<div data-ba-day="6" data-ba-dynamic="" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0px; border-bottom: 1px solid var(--line); font-size: 17px; line-height: 28px; font-variant-numeric: tabular-nums; font-weight: 600;">
+<span>Saturday</span><span>10 AM – 5:30 PM</span>
+</div>
+<div data-ba-day="0" data-ba-dynamic="" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0px; border-bottom: 1px solid var(--line); font-size: 17px; line-height: 28px; font-variant-numeric: tabular-nums; font-weight: 400;">
+<span>Sunday</span><span>Closed</span>
+</div>
+<div data-ba-day="1" data-ba-dynamic="" style="display: flex; justify-content: space-between; gap: 16px; padding: 12px 0px; border-bottom: 1px solid var(--line); font-size: 17px; line-height: 28px; font-variant-numeric: tabular-nums; font-weight: 400;">
+<span>Monday</span><span>Closed</span>
+</div>
+</div>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_these_are_our_regular_hours_ | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_before_you_come_in | escape }}</p>
+<div style="border-top: 2px solid var(--ink); display: flex; flex-direction: column;">
+<div style="padding: 16px 0px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px;">
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_walk_ins_by_appointment_or_l | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_walk_ins_are_welcome_when_we | escape }}</p>
+</div>
+<div style="padding: 16px 0px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px;">
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_no_cancellation_fees | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_just_let_us_know_if_you_can_ | escape }}</p>
+</div>
+<div style="padding: 16px 0px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px;">
+<h3 style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_men_s_haircuts | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_we_focus_on_men_s_haircuts | escape }}</p>
+</div>
+</div>
+</div>
+</div>
+</div></section><section data-screen-label="Home / 07 Journal" style="background: var(--canvas); border-top: 1px solid var(--line);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 40px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_07_journal | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(44px, 6.2vw, 72px);">{{ section.settings.t_from_the_chair | escape }}</h2>
+</div>
+<a class="ba-btn ba-btn-text" href="/pages/journal">{{ section.settings.t_all_articles | escape }}</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px;">
+<a href="/pages/journal" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<img alt="" loading="lazy" src="{{ img_cut_curly_taper }}" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block;"/>
+<p class="ba-label">{{ section.settings.t_haircut_guides_5_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_taper_or_fade_what_s_the_dif | escape }}</h3>
+</a>
+<a href="/pages/journal" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<div aria-label="Bryton fitting a hair system on a client" role="img" style='width: 100%; aspect-ratio: 3 / 2; background-color: var(--canvas-sunk); background-image: url("{{ img_bryton_hair_system }}"); background-size: cover; background-position: center 30%;'></div>
+<p class="ba-label">{{ section.settings.t_hair_systems_7_min | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_what_a_hair_system_actually_ | escape }}</h3>
+</a>
+<a href="/pages/journal" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none; color: var(--ink);">
+<img alt="" loading="lazy" src="{{ img_before_after_flow }}" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block;"/>
+<p class="ba-label">{{ section.settings.t_transformations_video | escape }}</p>
+<h3 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_grown_out_to_shaped_a_filmed | escape }}</h3>
+</a>
+</div>
+</div></section><section data-screen-label="Home / Book band" style="background: var(--band); color: var(--on-band); border-bottom: 1px solid var(--line-strong);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(48px, 7vw, 88px); max-width: 8ch;">{{ section.settings.t_book_a_haircut | escape }}</h2>
+<p style="font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.78;">{{ section.settings.t_pick_your_barber_service_and | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
+<a class="ba-btn ba-btn-text ba-on-dark" href="tel:+18017091280">{{ section.settings.t_call_the_shop_2 | escape }}</a>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_now_6 | escape }}</a>
+</div>
+</div></section>
+</div>
+<script src="{{ 'ba-home.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Home",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Home / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hs_client1_before",
+      "label": "Home / 02 Hair replacement — photo (hs-client1-before.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hs_client1_after",
+      "label": "Home / 02 Hair replacement — photo (hs-client1-after.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_curly_taper",
+      "label": "Home / 03 The work — photo (cut-curly-taper.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_slick_back",
+      "label": "Home / 03 The work — photo (cut-slick-back.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_textured_flow",
+      "label": "Home / 03 The work — photo (cut-textured-flow.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_side_part",
+      "label": "Home / 03 The work — photo (cut-side-part.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_barber_at_work",
+      "label": "Home / 03 The work — photo (barber-at-work.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_before_after_flow",
+      "label": "Home / 03 The work — photo (before-after-flow.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_main",
+      "label": "Home / 04 The team — photo (bryton-main.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_connor_card",
+      "label": "Home / 04 The team — photo (connor-card.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_profile",
+      "label": "Home / 04 The team — photo (elise-profile.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_clay_scene",
+      "label": "Home / 05 Grooming — photo (clay-scene.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_building_2_entrance",
+      "label": "Home / 06 Visit — photo (building-2-entrance.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_suite_12_door",
+      "label": "Home / 06 Visit — photo (suite-12-door.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_hair_system",
+      "label": "Home / 07 Journal — photo (bryton-hair-system.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_filmed_for_youtube",
+      "label": "Home / Hero — Text: Filmed for YouTube",
+      "default": "Filmed for YouTube"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_haircut",
+      "label": "Home / Hero — Text: Apply for a free haircut →",
+      "default": "Apply for a free haircut →"
+    },
+    {
+      "type": "text",
+      "id": "t_your_hair_done_right",
+      "label": "Home / Hero — Heading: Your hair done right.",
+      "default": "Your hair done right."
+    },
+    {
+      "type": "text",
+      "id": "t_personalized_cuts_no_one_siz",
+      "label": "Home / Hero — Text: PERSONALIZED CUTS. NO- ONE- SIZE -FITS -",
+      "default": "PERSONALIZED CUTS. NO- ONE- SIZE -FITS -ALL BARBERING"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Home / Hero — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_herald_readers_choice_",
+      "label": "Home / Hero — Text: Daily Herald Readers' Choice · Best Barb",
+      "default": "Daily Herald Readers' Choice · Best Barbershop in Utah Valley · 2023, 2024, 2026"
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / Reviews"
+    },
+    {
+      "type": "text",
+      "id": "t_serving_utah_valley_since_20",
+      "label": "Home / Reviews — Text: Serving Utah Valley since 2022",
+      "default": "Serving Utah Valley since 2022"
+    },
+    {
+      "type": "text",
+      "id": "t_5_0",
+      "label": "Home / Reviews — Text: 5.0",
+      "default": "5.0"
+    },
+    {
+      "type": "text",
+      "id": "t_",
+      "label": "Home / Reviews — Text: ★★★★★",
+      "default": "★★★★★"
+    },
+    {
+      "type": "text",
+      "id": "t_on_google",
+      "label": "Home / Reviews — Text: On Google",
+      "default": "On Google"
+    },
+    {
+      "type": "text",
+      "id": "t_voted_best_barbershop_in_uta",
+      "label": "Home / Reviews — Heading: Voted Best Barbershop in Utah County",
+      "default": "Voted Best Barbershop in Utah County"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_herald_best_of_utah_va",
+      "label": "Home / Reviews — Text: Daily Herald — Best of Utah Valley",
+      "default": "Daily Herald — Best of Utah Valley"
+    },
+    {
+      "type": "text",
+      "id": "t__2",
+      "label": "Home / Reviews — Text: ★★★★★",
+      "default": "★★★★★"
+    },
+    {
+      "type": "textarea",
+      "id": "t_cut_my_hair_exactly_how_i_wa",
+      "label": "Home / Reviews — Text: “Cut my hair exactly how I wanted. Super",
+      "default": "“Cut my hair exactly how I wanted. Super friendly, and the vibe was stellar. Best haircut I've had.”"
+    },
+    {
+      "type": "text",
+      "id": "t_brigham",
+      "label": "Home / Reviews — Text: Brigham",
+      "default": "Brigham"
+    },
+    {
+      "type": "text",
+      "id": "t_google_review",
+      "label": "Home / Reviews — Text: Google Review",
+      "default": "Google Review"
+    },
+    {
+      "type": "text",
+      "id": "t__3",
+      "label": "Home / Reviews — Text: ★★★★★",
+      "default": "★★★★★"
+    },
+    {
+      "type": "textarea",
+      "id": "t_i_don_t_usually_go_to_barber",
+      "label": "Home / Reviews — Text: “I don't usually go to barbershops so I ",
+      "default": "“I don't usually go to barbershops so I was a little hesitant, but they made me feel great and did everything I asked them to do.”"
+    },
+    {
+      "type": "text",
+      "id": "t_jerryck",
+      "label": "Home / Reviews — Text: Jerryck",
+      "default": "Jerryck"
+    },
+    {
+      "type": "text",
+      "id": "t_google_review_2",
+      "label": "Home / Reviews — Text: Google Review",
+      "default": "Google Review"
+    },
+    {
+      "type": "text",
+      "id": "t__4",
+      "label": "Home / Reviews — Text: ★★★★★",
+      "default": "★★★★★"
+    },
+    {
+      "type": "text",
+      "id": "t_what_an_amazing_place_hands_",
+      "label": "Home / Reviews — Text: “What an amazing place. Hands down, the ",
+      "default": "“What an amazing place. Hands down, the best barber shop in Orem.”"
+    },
+    {
+      "type": "text",
+      "id": "t_jed",
+      "label": "Home / Reviews — Text: Jed",
+      "default": "Jed"
+    },
+    {
+      "type": "text",
+      "id": "t_google_review_3",
+      "label": "Home / Reviews — Text: Google Review",
+      "default": "Google Review"
+    },
+    {
+      "type": "text",
+      "id": "t_free_haircut_filmed_for_yout",
+      "label": "Home / Reviews — Text: Free haircut · Filmed for YouTube",
+      "default": "Free haircut · Filmed for YouTube"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_haircut_2",
+      "label": "Home / Reviews — Heading: Apply for a free haircut",
+      "default": "Apply for a free haircut"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_film_transformation_hairc",
+      "label": "Home / Reviews — Text: We film transformation haircuts for our ",
+      "default": "We film transformation haircuts for our YouTube channel. If you’re picked, your cut is free and it goes on the channel. Tell us about your hair and what you want changed."
+    },
+    {
+      "type": "text",
+      "id": "t_apply_now",
+      "label": "Home / Reviews — Link text: APPLY NOW",
+      "default": "APPLY NOW"
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / 01 Services"
+    },
+    {
+      "type": "text",
+      "id": "t_01_services",
+      "label": "Home / 01 Services — Text: 01 / Services",
+      "default": "01 / Services"
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_what_you_want",
+      "label": "Home / 01 Services — Heading: Not sure what you want?",
+      "default": "Not sure what you want?"
+    },
+    {
+      "type": "text",
+      "id": "t_answer_four_quick_questions",
+      "label": "Home / 01 Services — Link text: answer four quick questions",
+      "default": "answer four quick questions"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Home / 01 Services — Text: 01 /",
+      "default": "01 /"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_beard",
+      "label": "Home / 01 Services — Subheading: Haircut + Beard",
+      "default": "Haircut + Beard"
+    },
+    {
+      "type": "textarea",
+      "id": "t_refresh_your_current_style_w",
+      "label": "Home / 01 Services — Text: Refresh your current style with our Clas",
+      "default": "Refresh your current style with our Classic Haircut, plus a beard trim and shaping for a clean, balanced look. Includes a hair wash, haircut, beard trim, neck shave, and hot towel."
+    },
+    {
+      "type": "text",
+      "id": "t_65",
+      "label": "Home / 01 Services — Text: $65",
+      "default": "$65"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now_2",
+      "label": "Home / 01 Services — Link text: Book now",
+      "default": "Book now"
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Home / 01 Services — Text: 02 /",
+      "default": "02 /"
+    },
+    {
+      "type": "text",
+      "id": "t_signature_haircut",
+      "label": "Home / 01 Services — Subheading: Signature Haircut",
+      "default": "Signature Haircut"
+    },
+    {
+      "type": "textarea",
+      "id": "t_our_most_personalized_haircu",
+      "label": "Home / 01 Services — Text: Our most personalized haircut experience",
+      "default": "Our most personalized haircut experience, with extra time to discuss your goals and refine the details. Includes a hair wash, haircut, neck shave, and hot towel. Recommended for your first visit, a change in style, or long scissor haircuts."
+    },
+    {
+      "type": "text",
+      "id": "t_65_2",
+      "label": "Home / 01 Services — Text: $65",
+      "default": "$65"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now_3",
+      "label": "Home / 01 Services — Link text: Book now",
+      "default": "Book now"
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Home / 01 Services — Text: 03 /",
+      "default": "03 /"
+    },
+    {
+      "type": "text",
+      "id": "t_classic_haircut",
+      "label": "Home / 01 Services — Subheading: Classic Haircut",
+      "default": "Classic Haircut"
+    },
+    {
+      "type": "textarea",
+      "id": "t_refresh_your_current_style_w_2",
+      "label": "Home / 01 Services — Text: Refresh your current style with a haircu",
+      "default": "Refresh your current style with a haircut focused on maintaining its shape and cleaning up grown-out length. Includes a hair wash, haircut, neck shave, and hot towel."
+    },
+    {
+      "type": "text",
+      "id": "t_40",
+      "label": "Home / 01 Services — Text: $40",
+      "default": "$40"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now_4",
+      "label": "Home / 01 Services — Link text: Book now",
+      "default": "Book now"
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / 02 Hair replacement"
+    },
+    {
+      "type": "text",
+      "id": "t_02_non_surgical_hair_replace",
+      "label": "Home / 02 Hair replacement — Text: 02 / Non-surgical hair replacement",
+      "default": "02 / Non-surgical hair replacement"
+    },
+    {
+      "type": "text",
+      "id": "t_natural_looking_hair_systems",
+      "label": "Home / 02 Hair replacement — Heading: Natural-looking hair systems, cut specif",
+      "default": "Natural-looking hair systems, cut specifically for you."
+    },
+    {
+      "type": "textarea",
+      "id": "t_for_men_experiencing_thinnin",
+      "label": "Home / 02 Hair replacement — Text: For men experiencing thinning hair, rece",
+      "default": "For men experiencing thinning hair, receding hairlines, or hair loss. Each system is color-matched, fitted, cut, and blended into your existing hair."
+    },
+    {
+      "type": "text",
+      "id": "t_as_low_as_5_07_a_day",
+      "label": "Home / 02 Hair replacement — Text: As low as $5.07 a day.",
+      "default": "As low as $5.07 a day."
+    },
+    {
+      "type": "text",
+      "id": "t_skip_the_energy_drinks_get_a",
+      "label": "Home / 02 Hair replacement — Text: Skip the energy drinks. Get a non-surgic",
+      "default": "Skip the energy drinks. Get a non-surgical hair system. Starts with a free consultation."
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_consultation",
+      "label": "Home / 02 Hair replacement — Link text: BOOK A CONSULTATION",
+      "default": "BOOK A CONSULTATION"
+    },
+    {
+      "type": "text",
+      "id": "t_learn_more",
+      "label": "Home / 02 Hair replacement — Link text: LEARN MORE →",
+      "default": "LEARN MORE →"
+    },
+    {
+      "type": "text",
+      "id": "t_before",
+      "label": "Home / 02 Hair replacement — Text: Before",
+      "default": "Before"
+    },
+    {
+      "type": "text",
+      "id": "t_after",
+      "label": "Home / 02 Hair replacement — Text: After",
+      "default": "After"
+    },
+    {
+      "type": "text",
+      "id": "t_full_hair_system_color_match",
+      "label": "Home / 02 Hair replacement — Text: Full hair system, color-matched and cut ",
+      "default": "Full hair system, color-matched and cut in."
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / 03 The work"
+    },
+    {
+      "type": "text",
+      "id": "t_03_the_work",
+      "label": "Home / 03 The work — Text: 03 / The work",
+      "default": "03 / The work"
+    },
+    {
+      "type": "text",
+      "id": "t_the_work",
+      "label": "Home / 03 The work — Heading: The work",
+      "default": "The work"
+    },
+    {
+      "type": "text",
+      "id": "t_more_on_instagram",
+      "label": "Home / 03 The work — Link text: MORE ON INSTAGRAM",
+      "default": "MORE ON INSTAGRAM"
+    },
+    {
+      "type": "text",
+      "id": "t_curly_top_kept_long_tapered_",
+      "label": "Home / 03 The work — Text: Curly top kept long, tapered at the side",
+      "default": "Curly top kept long, tapered at the sides."
+    },
+    {
+      "type": "text",
+      "id": "t_slicked_back_scissor_cut_thr",
+      "label": "Home / 03 The work — Text: Slicked back, scissor-cut through the to",
+      "default": "Slicked back, scissor-cut through the top."
+    },
+    {
+      "type": "text",
+      "id": "t_grown_out_flow_shaped_and_th",
+      "label": "Home / 03 The work — Text: Grown-out flow, shaped and thinned.",
+      "default": "Grown-out flow, shaped and thinned."
+    },
+    {
+      "type": "text",
+      "id": "t_medium_length_side_part_clea",
+      "label": "Home / 03 The work — Text: Medium length, side part, clean neckline",
+      "default": "Medium length, side part, clean neckline."
+    },
+    {
+      "type": "text",
+      "id": "t_blow_drying_to_set_the_shape",
+      "label": "Home / 03 The work — Text: Blow-drying to set the shape before styl",
+      "default": "Blow-drying to set the shape before styling."
+    },
+    {
+      "type": "text",
+      "id": "t_before_and_after_long_hair_c",
+      "label": "Home / 03 The work — Text: Before and after: long hair cut into a t",
+      "default": "Before and after: long hair cut into a textured flow."
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / 04 The team"
+    },
+    {
+      "type": "text",
+      "id": "t_04_the_team",
+      "label": "Home / 04 The team — Text: 04 / The team",
+      "default": "04 / The team"
+    },
+    {
+      "type": "text",
+      "id": "t_three_barbers",
+      "label": "Home / 04 The team — Heading: Three barbers",
+      "default": "Three barbers"
+    },
+    {
+      "type": "textarea",
+      "id": "t_each_of_us_has_the_kind_of_h",
+      "label": "Home / 04 The team — Text: Each of us has the kind of hair we like ",
+      "default": "Each of us has the kind of hair we like working on most. Pick by who fits your hair, or book whoever has the time that works."
+    },
+    {
+      "type": "text",
+      "id": "t_bryton",
+      "label": "Home / 04 The team — Subheading: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_owner",
+      "label": "Home / 04 The team — Text: Owner",
+      "default": "Owner"
+    },
+    {
+      "type": "text",
+      "id": "t_classic_cuts_big_changes_and",
+      "label": "Home / 04 The team — Text: Classic cuts, big changes and thinning h",
+      "default": "Classic cuts, big changes and thinning hair."
+    },
+    {
+      "type": "text",
+      "id": "t_see_bryton_s_page",
+      "label": "Home / 04 The team — Link text: SEE BRYTON'S PAGE",
+      "default": "SEE BRYTON'S PAGE"
+    },
+    {
+      "type": "text",
+      "id": "t_connor",
+      "label": "Home / 04 The team — Subheading: Connor",
+      "default": "Connor"
+    },
+    {
+      "type": "text",
+      "id": "t_barber",
+      "label": "Home / 04 The team — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_medium_to_longer_hair_utah_c",
+      "label": "Home / 04 The team — Text: Medium to longer hair. Utah County local",
+      "default": "Medium to longer hair. Utah County local."
+    },
+    {
+      "type": "text",
+      "id": "t_see_connor_s_page",
+      "label": "Home / 04 The team — Link text: SEE CONNOR'S PAGE",
+      "default": "SEE CONNOR'S PAGE"
+    },
+    {
+      "type": "text",
+      "id": "t_elise",
+      "label": "Home / 04 The team — Subheading: Elise",
+      "default": "Elise"
+    },
+    {
+      "type": "text",
+      "id": "t_barber_2",
+      "label": "Home / 04 The team — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_curly_hair_medium_length_and",
+      "label": "Home / 04 The team — Text: Curly hair, medium-length and flow cuts.",
+      "default": "Curly hair, medium-length and flow cuts."
+    },
+    {
+      "type": "text",
+      "id": "t_see_elise_s_page",
+      "label": "Home / 04 The team — Link text: SEE ELISE'S PAGE",
+      "default": "SEE ELISE'S PAGE"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now_5",
+      "label": "Home / 04 The team — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / 05 Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_coming_soon",
+      "label": "Home / 05 Grooming — Text: Coming soon",
+      "default": "Coming soon"
+    },
+    {
+      "type": "text",
+      "id": "t_matte_clay",
+      "label": "Home / 05 Grooming — Heading: Matte clay",
+      "default": "Matte clay"
+    },
+    {
+      "type": "textarea",
+      "id": "t_our_first_product_the_clay_w",
+      "label": "Home / 05 Grooming — Text: Our first product. The clay we style wit",
+      "default": "Our first product. The clay we style with in the shop, now in a jar for home. Buy it online, or pick it up at your next appointment."
+    },
+    {
+      "type": "text",
+      "id": "t_shop_matte_clay",
+      "label": "Home / 05 Grooming — Link text: SHOP MATTE CLAY",
+      "default": "SHOP MATTE CLAY"
+    },
+    {
+      "type": "text",
+      "id": "t_see_the_shop",
+      "label": "Home / 05 Grooming — Link text: SEE THE SHOP",
+      "default": "SEE THE SHOP"
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / 06 Visit"
+    },
+    {
+      "type": "text",
+      "id": "t_06_visit",
+      "label": "Home / 06 Visit — Text: 06 / Visit",
+      "default": "06 / Visit"
+    },
+    {
+      "type": "text",
+      "id": "t_finding_the_shop",
+      "label": "Home / 06 Visit — Heading: Finding the shop",
+      "default": "Finding the shop"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_re_in_suite_12_at_375_e_8",
+      "label": "Home / 06 Visit — Text: We're in Suite 12 at 375 E 800 S. The sh",
+      "default": "We're in Suite 12 at 375 E 800 S. The shop is tough to find the first time, so please arrive 5–10 minutes early."
+    },
+    {
+      "type": "text",
+      "id": "t_1_go_in_the_door_marked_buil",
+      "label": "Home / 06 Visit — Text: 1 / Go in the door marked Building 2, ne",
+      "default": "1 / Go in the door marked Building 2, next to the 375 on the wall."
+    },
+    {
+      "type": "text",
+      "id": "t_2_inside_suite_12_is_on_the_",
+      "label": "Home / 06 Visit — Text: 2 / Inside, Suite 12 is on the right, ne",
+      "default": "2 / Inside, Suite 12 is on the right, next to Suite 11."
+    },
+    {
+      "type": "text",
+      "id": "t_get_directions",
+      "label": "Home / 06 Visit — Link text: GET DIRECTIONS",
+      "default": "GET DIRECTIONS"
+    },
+    {
+      "type": "text",
+      "id": "t_call_the_shop",
+      "label": "Home / 06 Visit — Link text: CALL THE SHOP",
+      "default": "CALL THE SHOP"
+    },
+    {
+      "type": "text",
+      "id": "t_hours",
+      "label": "Home / 06 Visit — Text: Hours",
+      "default": "Hours"
+    },
+    {
+      "type": "textarea",
+      "id": "t_these_are_our_regular_hours_",
+      "label": "Home / 06 Visit — Text: These are our regular hours, and we keep",
+      "default": "These are our regular hours, and we keep to them. We're a small shop, so on holidays or when several of us are away, hours may change. The booking page always shows our real availability."
+    },
+    {
+      "type": "text",
+      "id": "t_before_you_come_in",
+      "label": "Home / 06 Visit — Text: Before you come in",
+      "default": "Before you come in"
+    },
+    {
+      "type": "text",
+      "id": "t_walk_ins_by_appointment_or_l",
+      "label": "Home / 06 Visit — Subheading: Walk-ins: by appointment or luck.",
+      "default": "Walk-ins: by appointment or luck."
+    },
+    {
+      "type": "textarea",
+      "id": "t_walk_ins_are_welcome_when_we",
+      "label": "Home / 06 Visit — Text: Walk-ins are welcome when we have an ope",
+      "default": "Walk-ins are welcome when we have an opening, but we're usually booked. Booking online is the best way to get a spot."
+    },
+    {
+      "type": "text",
+      "id": "t_no_cancellation_fees",
+      "label": "Home / 06 Visit — Subheading: No cancellation fees",
+      "default": "No cancellation fees"
+    },
+    {
+      "type": "text",
+      "id": "t_just_let_us_know_if_you_can_",
+      "label": "Home / 06 Visit — Text: Just let us know if you can't make it, s",
+      "default": "Just let us know if you can't make it, so someone else can have the spot."
+    },
+    {
+      "type": "text",
+      "id": "t_men_s_haircuts",
+      "label": "Home / 06 Visit — Subheading: Men's haircuts",
+      "default": "Men's haircuts"
+    },
+    {
+      "type": "text",
+      "id": "t_we_focus_on_men_s_haircuts",
+      "label": "Home / 06 Visit — Text: We focus on men's haircuts.",
+      "default": "We focus on men's haircuts."
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / 07 Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_07_journal",
+      "label": "Home / 07 Journal — Text: 07 / Journal",
+      "default": "07 / Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_from_the_chair",
+      "label": "Home / 07 Journal — Heading: From the chair",
+      "default": "From the chair"
+    },
+    {
+      "type": "text",
+      "id": "t_all_articles",
+      "label": "Home / 07 Journal — Link text: ALL ARTICLES",
+      "default": "ALL ARTICLES"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides_5_min",
+      "label": "Home / 07 Journal — Text: Haircut guides · 5 min",
+      "default": "Haircut guides · 5 min"
+    },
+    {
+      "type": "text",
+      "id": "t_taper_or_fade_what_s_the_dif",
+      "label": "Home / 07 Journal — Subheading: Taper or fade: what's the difference?",
+      "default": "Taper or fade: what's the difference?"
+    },
+    {
+      "type": "text",
+      "id": "t_hair_systems_7_min",
+      "label": "Home / 07 Journal — Text: Hair systems · 7 min",
+      "default": "Hair systems · 7 min"
+    },
+    {
+      "type": "text",
+      "id": "t_what_a_hair_system_actually_",
+      "label": "Home / 07 Journal — Subheading: What a hair system actually is",
+      "default": "What a hair system actually is"
+    },
+    {
+      "type": "text",
+      "id": "t_transformations_video",
+      "label": "Home / 07 Journal — Text: Transformations · Video",
+      "default": "Transformations · Video"
+    },
+    {
+      "type": "text",
+      "id": "t_grown_out_to_shaped_a_filmed",
+      "label": "Home / 07 Journal — Subheading: Grown out to shaped: a filmed cut",
+      "default": "Grown out to shaped: a filmed cut"
+    },
+    {
+      "type": "header",
+      "content": "Text: Home / Book band"
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_haircut",
+      "label": "Home / Book band — Heading: Book a haircut.",
+      "default": "Book a haircut."
+    },
+    {
+      "type": "text",
+      "id": "t_pick_your_barber_service_and",
+      "label": "Home / Book band — Text: Pick your barber, service and time. The ",
+      "default": "Pick your barber, service and time. The booking page shows real availability."
+    },
+    {
+      "type": "text",
+      "id": "t_call_the_shop_2",
+      "label": "Home / Book band — Link text: CALL THE SHOP",
+      "default": "CALL THE SHOP"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now_6",
+      "label": "Home / Book band — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    }
+  ]
+}
+{% endschema %}

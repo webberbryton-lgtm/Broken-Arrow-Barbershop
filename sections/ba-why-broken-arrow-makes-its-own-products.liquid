@@ -1,0 +1,476 @@
+{%- comment -%} Generated from the Claude Design page "Local Guide - Why We Make Our Own Products". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_payson_interior != blank
+  assign img_payson_interior = section.settings.img_payson_interior | image_url: width: 2400
+else
+  assign img_payson_interior = 'ba-payson-interior.webp' | asset_url
+endif
+if section.settings.img_clay_scene != blank
+  assign img_clay_scene = section.settings.img_clay_scene | image_url: width: 2400
+else
+  assign img_clay_scene = 'ba-clay-scene.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="why-broken-arrow-makes-its-own-products"] :is(ul, ol) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="why-broken-arrow-makes-its-own-products" data-ba-active="journal" data-ba-book="Shop.dc.html" data-ba-book-label="SHOP ALL">
+<article><header data-screen-label="Guide / Hero" style="position: relative; background: var(--band); min-height: clamp(520px, 76vh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<div aria-label="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center; filter: saturate(0.85);'></div>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;"><a href="/pages/journal" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_journal | escape }}</a><span style="opacity: 0.5;">/</span><span style="opacity: 0.78;">{{ section.settings.t_shop_news | escape }}</span></nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_why_we_re_making_our_own_pro | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_4_min_read | escape }}</p>
+</div></header><section data-screen-label="Guide / Intro" style="max-width: 920px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(40px, 6vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_we_ve_used_and_sold_a_lot_of | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_grooming_is_the | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_short_answer | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_is_making_its_o | escape }}</p>
+</div>
+</div></section>
+<section data-screen-label="Guide / Section" id="s1" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_nothing_on_the_shelf_was_goo | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_between_us_we_ve_used_and_so | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_wanted_to_give_clients_so | escape }}</p>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s2" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_02 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_one_great_product_isn_t_a_li | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_noticed_a_pattern_a_lot_o | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_couldn_t_find_a_complete_ | escape }}</p>
+<blockquote style="margin: 8px 0px; display: flex; flex-direction: column; gap: 16px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding: 28px 0px;">
+<p class="ba-display" style="font-size: clamp(26px, 3vw, 38px); line-height: 1.05; max-width: 24ch;">{{ section.settings.t_every_product_has_to_be_one_ | escape }}</p>
+</blockquote>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s3" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_03 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_it_started_in_2022 | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_for_bryton_making_products_w | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Inside the original Payson shop" loading="lazy" src="{{ img_payson_interior }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_the_payson_shop_where_it_sta | escape }}</figcaption>
+</figure>
+<a href="/pages/broken-arrow-barbershop-story" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_read_the_shop_story | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s4" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_we_hold_them_to | escape }}</h2>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_works_on_real_hair | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_tested_on_clients_in_the_cha | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_easy_at_home | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_if_it_only_works_when_a_barb | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_looks_right_on_the_shelf | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_simple_well_made_packaging_t | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s5" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_the_line | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_matte_clay_styling_cream_sea | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Broken Arrow Grooming matte clay jar and box" loading="lazy" src="{{ img_clay_scene }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_matte_clay_the_first_product | escape }}</figcaption>
+</figure>
+<a href="/products/matte-clay" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_see_the_matte_clay | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s6" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_06 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_try_it_in_the_chair | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_best_way_to_find_the_rig | escape }}</p>
+<a href="/pages/why-hair-falls-flat-after-styling" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_why_your_hair_falls_flat_aft | escape }}</a>
+</div>
+</section><section data-screen-label="Guide / FAQ" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 20px;">
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px);">{{ section.settings.t_questions | escape }}</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Who makes Broken Arrow Grooming products?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_the_team_at_broken_arrow_bar | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Can I buy them at the shop?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_once_they_re_available_i | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Which product should I start with?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">Ask your barber. They’ll recommend one for your hair. <a href="/pages/product-quiz" style="color: var(--ink);">{{ section.settings.t_take_the_product_quiz | escape }}</a></p>
+</details>
+</div></section></article><section data-screen-label="Guide / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_see_the_line | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_every_product_developed_and_ | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="/pages/shop">{{ section.settings.t_shop_all | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_a_haircut | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Why we’re making our own products","description":"Why a barbershop in Orem, Utah started its own line of men’s grooming products: clay, cream, sea salt spray, shampoo, conditioner and aftershave, tested in the chair.","datePublished":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/why-broken-arrow-makes-its-own-products","author":{"@type":"Organization","name":"Broken Arrow Barbershop"},"about":{"@type":"BarberShop","name":"Broken Arrow Barbershop","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097"}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who makes Broken Arrow Grooming products?","acceptedAnswer":{"@type":"Answer","text":"The team at Broken Arrow Barbershop in Orem, Utah."}},{"@type":"Question","name":"Can I buy them at the shop?","acceptedAnswer":{"@type":"Answer","text":"Yes, once they’re available, in the shop or online."}},{"@type":"Question","name":"Which product should I start with?","acceptedAnswer":{"@type":"Answer","text":"Ask your barber. They’ll recommend one for your hair."}}]}]}</script>
+{% schema %}
+{
+  "name": "Local Guide - Why We Make",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Guide / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_interior",
+      "label": "Guide / Section — photo (payson-interior.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_clay_scene",
+      "label": "Guide / Section — photo (clay-scene.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Guide / Hero — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_shop_news",
+      "label": "Guide / Hero — Text: Shop news",
+      "default": "Shop news"
+    },
+    {
+      "type": "text",
+      "id": "t_why_we_re_making_our_own_pro",
+      "label": "Guide / Hero — Heading: Why we’re making our own products",
+      "default": "Why we’re making our own products"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_4_min_read",
+      "label": "Guide / Hero — Text: September 26, 2026 · 4 min read",
+      "default": "September 26, 2026 · 4 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Intro"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_ve_used_and_sold_a_lot_of",
+      "label": "Guide / Intro — Text: We’ve used and sold a lot of product lin",
+      "default": "We’ve used and sold a lot of product lines. None of them lived up to what we wanted to hand our clients. So we’re making our own."
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_grooming_is_the",
+      "label": "Guide / Intro — Text: Broken Arrow Grooming is the product lin",
+      "default": "Broken Arrow Grooming is the product line from Broken Arrow Barbershop in Orem, Utah. Every product is developed and tested by barbers who cut hair every day."
+    },
+    {
+      "type": "text",
+      "id": "t_short_answer",
+      "label": "Guide / Intro — Text: Short answer",
+      "default": "Short answer"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_is_making_its_o",
+      "label": "Guide / Intro — Text: Broken Arrow is making its own grooming ",
+      "default": "Broken Arrow is making its own grooming products because nothing on the market met the shop’s standards for both performance and design, and most brands have one great product with the rest of the line as an afterthought. Broken Arrow Grooming is a complete line, including clay, cream, sea salt spray, shampoo, conditioner and aftershave, tested on clients at the shop in Orem."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Section"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Guide / Section — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_nothing_on_the_shelf_was_goo",
+      "label": "Guide / Section — Heading: Nothing on the shelf was good enough",
+      "default": "Nothing on the shelf was good enough"
+    },
+    {
+      "type": "textarea",
+      "id": "t_between_us_we_ve_used_and_so",
+      "label": "Guide / Section — Text: Between us, we’ve used and sold a lot of",
+      "default": "Between us, we’ve used and sold a lot of different product lines. We knew what we liked, and what we wished was better."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_wanted_to_give_clients_so",
+      "label": "Guide / Section — Text: We wanted to give clients something to t",
+      "default": "We wanted to give clients something to take home, but nothing we found lived up to our standards for both how it performed and how it looked."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Guide / Section — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_one_great_product_isn_t_a_li",
+      "label": "Guide / Section — Heading: One great product isn’t a line",
+      "default": "One great product isn’t a line"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_noticed_a_pattern_a_lot_o",
+      "label": "Guide / Section — Text: We noticed a pattern. A lot of brands ha",
+      "default": "We noticed a pattern. A lot of brands have one great product, usually a clay or a pomade, and the rest of the line is an afterthought. The clay is good, but the sea salt spray isn’t."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_couldn_t_find_a_complete_",
+      "label": "Guide / Section — Text: We couldn’t find a complete line where e",
+      "default": "We couldn’t find a complete line where every product was one we’d reach for. So we’re building one."
+    },
+    {
+      "type": "text",
+      "id": "t_every_product_has_to_be_one_",
+      "label": "Guide / Section — Text: Every product has to be one we’d reach f",
+      "default": "Every product has to be one we’d reach for in the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Guide / Section — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_it_started_in_2022",
+      "label": "Guide / Section — Heading: It started in 2022",
+      "default": "It started in 2022"
+    },
+    {
+      "type": "textarea",
+      "id": "t_for_bryton_making_products_w",
+      "label": "Guide / Section — Text: For Bryton, making products wasn’t new. ",
+      "default": "For Bryton, making products wasn’t new. He started making beard oils and other grooming products in 2022, the same year he opened the shop in Payson. Broken Arrow Grooming grew from that early work and everything our team has learned behind the chair since."
+    },
+    {
+      "type": "text",
+      "id": "t_the_payson_shop_where_it_sta",
+      "label": "Guide / Section — Text: The Payson shop, where it started.",
+      "default": "The Payson shop, where it started."
+    },
+    {
+      "type": "text",
+      "id": "t_read_the_shop_story",
+      "label": "Guide / Section — Link text: Read the shop story →",
+      "default": "Read the shop story →"
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Guide / Section — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_what_we_hold_them_to",
+      "label": "Guide / Section — Heading: What we hold them to",
+      "default": "What we hold them to"
+    },
+    {
+      "type": "text",
+      "id": "t_works_on_real_hair",
+      "label": "Guide / Section — Text: Works on real hair",
+      "default": "Works on real hair"
+    },
+    {
+      "type": "text",
+      "id": "t_tested_on_clients_in_the_cha",
+      "label": "Guide / Section — Text: Tested on clients in the chair: thick, f",
+      "default": "Tested on clients in the chair: thick, fine, curly, thinning and everything in between."
+    },
+    {
+      "type": "text",
+      "id": "t_easy_at_home",
+      "label": "Guide / Section — Text: Easy at home",
+      "default": "Easy at home"
+    },
+    {
+      "type": "text",
+      "id": "t_if_it_only_works_when_a_barb",
+      "label": "Guide / Section — Text: If it only works when a barber does it, ",
+      "default": "If it only works when a barber does it, it doesn’t make the cut."
+    },
+    {
+      "type": "text",
+      "id": "t_looks_right_on_the_shelf",
+      "label": "Guide / Section — Text: Looks right on the shelf",
+      "default": "Looks right on the shelf"
+    },
+    {
+      "type": "text",
+      "id": "t_simple_well_made_packaging_t",
+      "label": "Guide / Section — Text: Simple, well-made packaging that looks a",
+      "default": "Simple, well-made packaging that looks as good in your bathroom as it does in the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Guide / Section — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_the_line",
+      "label": "Guide / Section — Heading: The line",
+      "default": "The line"
+    },
+    {
+      "type": "textarea",
+      "id": "t_matte_clay_styling_cream_sea",
+      "label": "Guide / Section — Text: Matte clay, styling cream, sea salt spra",
+      "default": "Matte clay, styling cream, sea salt spray, shampoo, conditioner and aftershave, each held to the same standard. The matte clay is first."
+    },
+    {
+      "type": "text",
+      "id": "t_matte_clay_the_first_product",
+      "label": "Guide / Section — Text: Matte clay, the first product in the lin",
+      "default": "Matte clay, the first product in the line."
+    },
+    {
+      "type": "text",
+      "id": "t_see_the_matte_clay",
+      "label": "Guide / Section — Link text: See the matte clay →",
+      "default": "See the matte clay →"
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Guide / Section — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_try_it_in_the_chair",
+      "label": "Guide / Section — Heading: Try it in the chair",
+      "default": "Try it in the chair"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_best_way_to_find_the_rig",
+      "label": "Guide / Section — Text: The best way to find the right product i",
+      "default": "The best way to find the right product is to have your barber use it on you. We’ll show you how much to use and how to apply it at your next appointment."
+    },
+    {
+      "type": "text",
+      "id": "t_why_your_hair_falls_flat_aft",
+      "label": "Guide / Section — Link text: Why your hair falls flat after you style",
+      "default": "Why your hair falls flat after you style it →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Guide / FAQ — Heading: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "t_the_team_at_broken_arrow_bar",
+      "label": "Guide / FAQ — Text: The team at Broken Arrow Barbershop in O",
+      "default": "The team at Broken Arrow Barbershop in Orem, Utah."
+    },
+    {
+      "type": "text",
+      "id": "t_yes_once_they_re_available_i",
+      "label": "Guide / FAQ — Text: Yes, once they’re available, in the shop",
+      "default": "Yes, once they’re available, in the shop or online."
+    },
+    {
+      "type": "text",
+      "id": "t_take_the_product_quiz",
+      "label": "Guide / FAQ — Link text: Take the product quiz →",
+      "default": "Take the product quiz →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Guide / CTA — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_see_the_line",
+      "label": "Guide / CTA — Heading: See the line.",
+      "default": "See the line."
+    },
+    {
+      "type": "text",
+      "id": "t_every_product_developed_and_",
+      "label": "Guide / CTA — Text: Every product developed and tested in th",
+      "default": "Every product developed and tested in the chair at Broken Arrow Barbershop."
+    },
+    {
+      "type": "text",
+      "id": "t_shop_all",
+      "label": "Guide / CTA — Link text: SHOP ALL",
+      "default": "SHOP ALL"
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_haircut",
+      "label": "Guide / CTA — Link text: Book a haircut",
+      "default": "Book a haircut"
+    }
+  ]
+}
+{% endschema %}

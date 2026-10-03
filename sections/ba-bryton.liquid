@@ -1,0 +1,956 @@
+{%- comment -%} Generated from the Claude Design page "Barber - Bryton". {%- endcomment -%}
+{%- liquid
+if section.settings.img_bryton_teaching_portrait != blank
+  assign img_bryton_teaching_portrait = section.settings.img_bryton_teaching_portrait | image_url: width: 2400
+else
+  assign img_bryton_teaching_portrait = 'ba-bryton-teaching-portrait.webp' | asset_url
+endif
+if section.settings.img_hs_client1_before != blank
+  assign img_hs_client1_before = section.settings.img_hs_client1_before | image_url: width: 2400
+else
+  assign img_hs_client1_before = 'ba-hs-client1-before.webp' | asset_url
+endif
+if section.settings.img_hs_client1_after != blank
+  assign img_hs_client1_after = section.settings.img_hs_client1_after | image_url: width: 2400
+else
+  assign img_hs_client1_after = 'ba-hs-client1-after.webp' | asset_url
+endif
+if section.settings.img_bryton_teaching != blank
+  assign img_bryton_teaching = section.settings.img_bryton_teaching | image_url: width: 2400
+else
+  assign img_bryton_teaching = 'ba-bryton-teaching.webp' | asset_url
+endif
+if section.settings.img_bryton_class_2 != blank
+  assign img_bryton_class_2 = section.settings.img_bryton_class_2 | image_url: width: 2400
+else
+  assign img_bryton_class_2 = 'ba-bryton-class-2.webp' | asset_url
+endif
+if section.settings.img_payson_storefront != blank
+  assign img_payson_storefront = section.settings.img_payson_storefront | image_url: width: 2400
+else
+  assign img_payson_storefront = 'ba-payson-storefront.webp' | asset_url
+endif
+if section.settings.img_payson_interior != blank
+  assign img_payson_interior = section.settings.img_payson_interior | image_url: width: 2400
+else
+  assign img_payson_interior = 'ba-payson-interior.webp' | asset_url
+endif
+if section.settings.img_payson_cut_pomp != blank
+  assign img_payson_cut_pomp = section.settings.img_payson_cut_pomp | image_url: width: 2400
+else
+  assign img_payson_cut_pomp = 'ba-payson-cut-pomp.webp' | asset_url
+endif
+if section.settings.img_payson_cut != blank
+  assign img_payson_cut = section.settings.img_payson_cut | image_url: width: 2400
+else
+  assign img_payson_cut = 'ba-payson-cut.webp' | asset_url
+endif
+if section.settings.img_clay_scene != blank
+  assign img_clay_scene = section.settings.img_clay_scene | image_url: width: 2400
+else
+  assign img_clay_scene = 'ba-clay-scene.webp' | asset_url
+endif
+if section.settings.img_bryton_cut_mullet != blank
+  assign img_bryton_cut_mullet = section.settings.img_bryton_cut_mullet | image_url: width: 2400
+else
+  assign img_bryton_cut_mullet = 'ba-bryton-cut-mullet.webp' | asset_url
+endif
+if section.settings.img_bryton_cut_pomp_beard != blank
+  assign img_bryton_cut_pomp_beard = section.settings.img_bryton_cut_pomp_beard | image_url: width: 2400
+else
+  assign img_bryton_cut_pomp_beard = 'ba-bryton-cut-pomp-beard.webp' | asset_url
+endif
+if section.settings.img_bryton_cut_fade_beard != blank
+  assign img_bryton_cut_fade_beard = section.settings.img_bryton_cut_fade_beard | image_url: width: 2400
+else
+  assign img_bryton_cut_fade_beard = 'ba-bryton-cut-fade-beard.webp' | asset_url
+endif
+if section.settings.img_bryton_cut_slick != blank
+  assign img_bryton_cut_slick = section.settings.img_bryton_cut_slick | image_url: width: 2400
+else
+  assign img_bryton_cut_slick = 'ba-bryton-cut-slick.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="bryton"] :is(ul) { margin: 0; }
+.bah-bryton-1:hover { color: var(--green) !important; }
+.ba-avail-hero:hover { color: var(--on-band) !important; border-color: var(--on-band) !important; }
+</style>
+<div class="ba-page" data-ba-page="bryton" data-ba-active="team" data-ba-book="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services" data-ba-book-label="BOOK WITH BRYTON" data-ba-barber="bryton">
+<section data-screen-label="Barber / Hero" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 7vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: flex-end;">
+<div style="position: relative; overflow: hidden; flex: 1 1 360px; aspect-ratio: 4 / 5; background: rgb(34, 35, 38); display: flex; align-items: flex-end; padding: 16px;">
+<div aria-label="Bryton, owner and licensed barber instructor at Broken Arrow Barbershop" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_bryton_teaching_portrait }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="flex: 1.1 1 440px; display: flex; flex-direction: column; gap: 24px;">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;">
+<a href="/pages/team" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_the_team | escape }}</a><span style="opacity: 0.5;">/</span><span>{{ section.settings.t_bryton | escape }}</span>
+</nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(64px, 10vw, 140px), 11vw); letter-spacing: -0.045em; line-height: 0.88;">{{ section.settings.t_bryton_2 | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_owner_licensed_barber_instru | escape }}</p>
+<p data-ba-dynamic="" data-ba-years="byears" style="max-width: 560px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.85; text-wrap: pretty;">Bryton owns Broken Arrow and has 5 years of experience. He cuts just about everything, and does his best work on short and classic cuts. He likes a challenge: big changes, and clients who haven’t liked their hair in a while because of thinning or a receding hairline. He decides what will work for your hair and tells you why. He’s a licensed barber instructor and taught hundreds of students at Paul Mitchell The School Provo. He still teaches now and then, but most of his week is spent behind the chair. Before moving to Orem, he built Broken Arrow in Payson, where clients left more than 240 Google reviews.</p>
+<div data-ba-avail-slot="bryton" style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px;">
+<div><a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services" style="min-height: 72px; padding: 0px 48px; font-size: 17px; letter-spacing: 0.16em; width: 100%; max-width: 460px; justify-content: center; box-sizing: border-box;">{{ section.settings.t_book_with_bryton | escape }}</a></div>
+</div>
+</div>
+</div></section><section data-screen-label="Barber / Credentials" style="background: var(--band); color: var(--on-band); border-top: 1px solid var(--line-strong);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(32px, 4vw, 48px) clamp(16px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); column-gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 0px; border-top: 2px solid var(--on-band);">
+<p style="font:800 clamp(28px,3vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase;font-variant-numeric:tabular-nums;color:var(--on-band)">{{ section.settings.t_owner | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_he_started_broken_arrow_in_p | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 0px; border-top: 2px solid var(--on-band);">
+<p style="font:800 clamp(28px,3vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase;font-variant-numeric:tabular-nums;color:var(--on-band)">{{ section.settings.t_hundreds | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_of_barbers_taught_as_an_inst | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 0px; border-top: 2px solid var(--on-band);">
+<p style="font:800 clamp(28px,3vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase;font-variant-numeric:tabular-nums;color:var(--on-band)">{{ section.settings.t_389_reviews | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_across_the_payson_and_orem_s | escape }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 0px; border-top: 2px solid var(--on-band);">
+<p style="font:800 clamp(28px,3vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase;font-variant-numeric:tabular-nums;color:var(--on-band)">{{ section.settings.t_hair_systems | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_he_does_every_hair_system_fi | escape }}</p>
+</div>
+</div></section><section data-screen-label="Barber / YouTube" style="background: var(--green); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 6vw, 80px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px 48px;">
+<div style="flex: 1 1 480px; max-width: 760px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_filmed_for_youtube_applicati | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6vw, 80px); letter-spacing: -0.045em; max-width: 14ch;">{{ section.settings.t_apply_for_a_free_haircut | escape }}</h2>
+<p style="font-size: 18px; line-height: 30px; color: var(--on-band); text-wrap: pretty;">{{ section.settings.t_no_charge_we_film_transforma | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-secondary ba-on-dark" href="/pages/free-haircut">{{ section.settings.t_apply_for_a_free_cut | escape }}</a>
+</div></section><section data-screen-label="Barber / Book for" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_01_book_bryton_for | escape }}</p>
+<ul style="flex: 2 1 520px; max-width: 760px; list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_01 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_short_classic_haircuts | escape }}</p>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_02 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_big_changes_hand_him_the_dec | escape }}</p>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_03 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_thinning_hair_or_a_receding_ | escape }}</p>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_04 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_haircut_and_beard_together | escape }}</p>
+</li>
+</ul></section><section data-screen-label="Bryton / In the chair" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_02_in_the_chair | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 760px; display: flex; flex-direction: column; gap: 32px;">
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px); max-width: 14ch;">{{ section.settings.t_sit_down_he_ll_take_it_from_ | escape }}</h2>
+<p style="font-size: 20px; line-height: 34px; text-wrap: pretty;">{{ section.settings.t_he_looks_at_your_head_shape_ | escape }}</p>
+<ol style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_01_2 | escape }}</span><div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_he_reads_your_hair | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_head_shape_cowlicks_density_ | escape }}</p></div></li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_02_2 | escape }}</span><div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_he_makes_the_call | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_what_stays_what_comes_off_an | escape }}</p></div></li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_03_2 | escape }}</span><div style="display: flex; flex-direction: column; gap: 6px;"><p style="font: 800 22px/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_he_shows_you_how_to_wear_it | escape }}</p><p style="font-size: 17px; line-height: 28px; color: var(--ink-muted);">{{ section.settings.t_what_product_to_use_and_how_ | escape }}</p></div></li>
+</ol>
+</div></section><section data-screen-label="Bryton / Scissor cuts" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_03_scissor_cuts | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 760px; display: flex; flex-direction: column; gap: 28px;">
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px); max-width: 16ch;">{{ section.settings.t_scissor_work_influenced_by_e | escape }}</h2>
+<p style="font-size: 20px; line-height: 34px; text-wrap: pretty;">{{ section.settings.t_bryton_does_fades_and_clippe | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 20px; padding: 32px; background: var(--band); color: var(--on-band);">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_signature_haircut | escape }}</p>
+<p style="font:600 20px/28px var(--font-sans);font-variant-numeric:tabular-nums">{{ section.settings.t_65 | escape }}</p>
+</div>
+<h3 class="ba-display" style="color: var(--on-band); font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_more_time_a_more_personal_ha | escape }}</h3>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_the_signature_haircut_gives_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_it_s_a_great_choice_if_you_r | escape }}</p>
+<p style="font: 800 clamp(18px,2vw,22px)/1.25 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.2);">{{ section.settings.t_not_sure_what_to_book_choose | escape }}</p>
+<div><a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ" style="min-height: 72px; padding: 0px 48px; font-size: 17px; letter-spacing: 0.16em; justify-content: center;">{{ section.settings.t_book_a_signature_haircut | escape }}</a></div>
+</div>
+</div>
+</div></section><section data-screen-label="Bryton / Hair systems" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<div style="flex: 1 1 420px; min-width: 0px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+<div aria-label="Client before his hair system, bald on top" role="img" style='position: relative; aspect-ratio: 4 / 5; background-color: rgb(34, 35, 38); background-image: url("{{ img_hs_client1_before }}"); background-size: cover; background-position: center center;'><p class="ba-label" style="position: absolute; left: 0px; bottom: 0px; padding: 10px 14px; background: var(--canvas); color: var(--ink);">{{ section.settings.t_before | escape }}</p></div>
+<div aria-label="Same client after, hair system cut into a textured quiff" role="img" style='position: relative; aspect-ratio: 4 / 5; background-color: rgb(34, 35, 38); background-image: url("{{ img_hs_client1_after }}"); background-size: cover; background-position: center center;'><p class="ba-label" style="position: absolute; left: 0px; bottom: 0px; padding: 10px 14px; background: var(--canvas); color: var(--ink);">{{ section.settings.t_after | escape }}</p></div>
+</div>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_04_hair_systems | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 5vw, 64px); max-width: 12ch;">{{ section.settings.t_every_system_in_the_shop_goe | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_a_hair_system_is_a_thin_base | escape }}</p>
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_as_low_as_5_07_a_day_skip_th | escape }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU">{{ section.settings.t_book_a_free_consultation | escape }}</a>
+<a href="/pages/hair-replacement" style="color: var(--on-band); font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;">{{ section.settings.t_how_it_works | escape }}</a>
+</div>
+</div>
+</div></section><section data-screen-label="Bryton / Teaching" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap-reverse; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_05_teaching | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px); max-width: 12ch;">{{ section.settings.t_he_s_taught_other_barbers_ho | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_bryton_is_a_licensed_barber_ | escape }}</p>
+<a href="/pages/broken-arrow-barbershop-story" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_read_the_broken_arrow_story | escape }}</a>
+</div>
+<div style="flex: 1.2 1 460px; display: grid; grid-template-columns: minmax(0px, 1.5fr) minmax(0px, 1fr); gap: 4px;">
+<div aria-label="Bryton demonstrating a haircut on a mannequin head for a class of barber students" role="img" style='aspect-ratio: 3 / 4; background-color: var(--canvas-sunk); background-image: url("{{ img_bryton_teaching }}"); background-size: cover; background-position: center center;'></div>
+<div aria-label="Bryton teaching a room of barbers, a slide projected on the wall" role="img" style='aspect-ratio: auto; min-height: 100%; background-color: var(--canvas-sunk); background-image: url("{{ img_bryton_class_2 }}"); background-size: cover; background-position: center 60%;'></div>
+</div></section><section data-screen-label="Bryton / Payson" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: flex-end;">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_06_where_it_started | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px); max-width: 12ch;">{{ section.settings.t_built_in_payson_now_in_orem | escape }}</h2>
+</div>
+<p style="flex: 1 1 360px; max-width: 520px; font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_bryton_opened_the_first_brok | escape }}</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 4px;">
+<div aria-label="The original Broken Arrow storefront in Payson" role="img" style='aspect-ratio: 4 / 5; background-color: var(--line); background-image: url("{{ img_payson_storefront }}"); background-size: cover; background-position: center center;'></div>
+<div aria-label="Inside the Payson shop" role="img" style='aspect-ratio: 4 / 5; background-color: var(--line); background-image: url("{{ img_payson_interior }}"); background-size: cover; background-position: center center;'></div>
+<div aria-label="A pompadour cut at the Payson shop" role="img" style='aspect-ratio: 4 / 5; background-color: var(--line); background-image: url("{{ img_payson_cut_pomp }}"); background-size: cover; background-position: center center;'></div>
+<div aria-label="A cut finished at the Payson shop" role="img" style='aspect-ratio: 4 / 5; background-color: var(--line); background-image: url("{{ img_payson_cut }}"); background-size: cover; background-position: center center;'></div>
+</div>
+</div></section><section data-screen-label="Bryton / Products" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<a aria-label="Shop Broken Arrow Grooming" href="/pages/shop" style='flex: 1 1 380px; aspect-ratio: 1 / 1; background-color: var(--canvas-sunk); background-image: url("{{ img_clay_scene }}"); background-size: cover; background-position: center center; display: block;'></a>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_07_broken_arrow_grooming | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px); max-width: 12ch;">{{ section.settings.t_what_he_styles_with | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_grooming_is_the | escape }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-secondary" href="/pages/shop">{{ section.settings.t_see_the_products | escape }}</a>
+<a href="/products/matte-clay" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;">{{ section.settings.t_matte_clay | escape }}</a>
+</div>
+</div></section><section data-screen-label="Bryton / FAQ" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_08_booking_with_bryton | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 760px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line); padding: 0px;">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How far out is he booked?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_it_changes_week_to_week_the_ | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line); padding: 0px;">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">What should I book?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_classic_haircut_for_routine_ | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line); padding: 0px;">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Should I bring a photo?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_bryton_loves_photos_he_l | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line); padding: 0px;">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Do I need a consultation for a hair system?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_it_s_free_he_looks_at_yo | escape }}</p>
+</details>
+</div></section><section data-screen-label="Barber / Work" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_09_the_work | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px);">{{ section.settings.t_bryton_s_cuts | escape }}</h2>
+</div>
+<a class="ba-btn ba-btn-text" href="https://www.instagram.com/broken.arrow.barbershop/">{{ section.settings.t_more_on_instagram | escape }}</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 4px;">
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Modern mullet, textured on top with length kept at the back" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_bryton_cut_mullet }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Pompadour with a skin fade and a full shaped beard" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_bryton_cut_pomp_beard }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="High skin fade with a short, lined-up beard" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_bryton_cut_fade_beard }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Slick back with a low taper and a mustache" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_bryton_cut_slick }}"); background-size: cover; background-position: center center;'></div>
+</div>
+</div>
+</div></section><section data-screen-label="Barber / Others" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_the_rest_of_the_team | escape }}</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px;">
+<a class="bah-bryton-1" href="/pages/connor" style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 24px 0px; border-top: 2px solid var(--ink); text-decoration: none; color: var(--ink);">
+<span style="display: flex; flex-direction: column; gap: 6px;"><span style="font: 800 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_connor | escape }}</span><span class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_barber | escape }}</span></span>
+<span class="ba-label">{{ section.settings.t_view | escape }}</span>
+</a>
+<a class="bah-bryton-1" href="/pages/elise" style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 24px 0px; border-top: 2px solid var(--ink); text-decoration: none; color: var(--ink);">
+<span style="display: flex; flex-direction: column; gap: 6px;"><span style="font: 800 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_elise | escape }}</span><span class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_barber_2 | escape }}</span></span>
+<span class="ba-label">{{ section.settings.t_view_2 | escape }}</span>
+</a>
+</div></section><section data-screen-label="Barber / Book band" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(48px, 7vw, 88px); max-width: 10ch;">{{ section.settings.t_book_with_bryton_2 | escape }}</h2>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services" style="min-height: 72px; padding: 0px 48px; font-size: 17px; letter-spacing: 0.16em; justify-content: center;">{{ section.settings.t_book_with_bryton_3 | escape }}</a>
+</div></section>
+<div style="position: fixed; left: 50%; transform: translateX(-50%); bottom: clamp(16px, 3vw, 32px); z-index: 50; width: calc(100% - 32px); max-width: 320px; display: flex; outline: 1px solid var(--canvas);">
+<a class="ba-btn ba-btn-primary" href="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services" style="flex: 1 1 0%; min-height: 64px; font-size: 16px; letter-spacing: 0.16em; justify-content: center;">{{ section.settings.t_book_now | escape }}</a>
+</div>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Bryton","jobTitle":"Owner & licensed barber instructor","description":"Bryton owns Broken Arrow and has {byears} years of experience. He cuts just about everything, and does his best work on short and classic cuts. He likes a challenge: big changes, and clients who haven’t liked their hair in a while because of thinning or a receding hairline. He decides what will work for your hair and tells you why. He’s a licensed barber instructor and taught hundreds of students at Paul Mitchell The School Provo. He still teaches now and then, but most of his week is spent behind the chair. Before moving to Orem, he built Broken Arrow in Payson, where clients left more than 240 Google reviews.","knowsAbout":["Short, classic haircuts.","Big changes. Hand him the decision.","Thinning hair or a receding hairline. He’ll find a cut that works with it, or talk you through a hair system.","Haircut and beard together."],"worksFor":{"@type":"BarberShop","name":"Broken Arrow Barbershop","url":"{{ shop.url }}/","sameAs":["https://www.instagram.com/broken.arrow.barbershop/","https://www.youtube.com/@BrokenArrowBarbershop"],"address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097","addressCountry":"US"}},"potentialAction":{"@type":"ReserveAction","target":"https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services","name":"Book with Bryton"},"hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"Licensed barber instructor"}}</script>
+<script src="{{ 'ba-barber.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Barber - Bryton",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_teaching_portrait",
+      "label": "Barber / Hero — photo (bryton-teaching-portrait.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hs_client1_before",
+      "label": "Bryton / Hair systems — photo (hs-client1-before.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hs_client1_after",
+      "label": "Bryton / Hair systems — photo (hs-client1-after.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_teaching",
+      "label": "Bryton / Teaching — photo (bryton-teaching.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_class_2",
+      "label": "Bryton / Teaching — photo (bryton-class-2.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_storefront",
+      "label": "Bryton / Payson — photo (payson-storefront.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_interior",
+      "label": "Bryton / Payson — photo (payson-interior.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_cut_pomp",
+      "label": "Bryton / Payson — photo (payson-cut-pomp.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_cut",
+      "label": "Bryton / Payson — photo (payson-cut.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_clay_scene",
+      "label": "Bryton / Products — photo (clay-scene.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_cut_mullet",
+      "label": "Barber / Work — photo (bryton-cut-mullet.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_cut_pomp_beard",
+      "label": "Barber / Work — photo (bryton-cut-pomp-beard.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_cut_fade_beard",
+      "label": "Barber / Work — photo (bryton-cut-fade-beard.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_cut_slick",
+      "label": "Barber / Work — photo (bryton-cut-slick.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_the_team",
+      "label": "Barber / Hero — Link text: The team",
+      "default": "The team"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton",
+      "label": "Barber / Hero — Text: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_2",
+      "label": "Barber / Hero — Heading: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_owner_licensed_barber_instru",
+      "label": "Barber / Hero — Text: Owner & licensed barber instructor",
+      "default": "Owner & licensed barber instructor"
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_bryton",
+      "label": "Barber / Hero — Link text: BOOK WITH BRYTON",
+      "default": "BOOK WITH BRYTON"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Credentials"
+    },
+    {
+      "type": "text",
+      "id": "t_owner",
+      "label": "Barber / Credentials — Text: Owner",
+      "default": "Owner"
+    },
+    {
+      "type": "text",
+      "id": "t_he_started_broken_arrow_in_p",
+      "label": "Barber / Credentials — Text: He started Broken Arrow in Payson and mo",
+      "default": "He started Broken Arrow in Payson and moved it to Orem."
+    },
+    {
+      "type": "text",
+      "id": "t_hundreds",
+      "label": "Barber / Credentials — Text: Hundreds",
+      "default": "Hundreds"
+    },
+    {
+      "type": "text",
+      "id": "t_of_barbers_taught_as_an_inst",
+      "label": "Barber / Credentials — Text: Of barbers taught as an instructor at Pa",
+      "default": "Of barbers taught as an instructor at Paul Mitchell The School Provo."
+    },
+    {
+      "type": "text",
+      "id": "t_389_reviews",
+      "label": "Barber / Credentials — Text: 389 reviews",
+      "default": "389 reviews"
+    },
+    {
+      "type": "text",
+      "id": "t_across_the_payson_and_orem_s",
+      "label": "Barber / Credentials — Text: Across the Payson and Orem shops. Every ",
+      "default": "Across the Payson and Orem shops. Every one that names Bryton is five stars."
+    },
+    {
+      "type": "text",
+      "id": "t_hair_systems",
+      "label": "Barber / Credentials — Text: Hair systems",
+      "default": "Hair systems"
+    },
+    {
+      "type": "text",
+      "id": "t_he_does_every_hair_system_fi",
+      "label": "Barber / Credentials — Text: He does every hair system fitting and cu",
+      "default": "He does every hair system fitting and cut at the shop."
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / YouTube"
+    },
+    {
+      "type": "text",
+      "id": "t_filmed_for_youtube_applicati",
+      "label": "Barber / YouTube — Text: Filmed for YouTube · Applications open",
+      "default": "Filmed for YouTube · Applications open"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_haircut",
+      "label": "Barber / YouTube — Heading: Apply for a free haircut.",
+      "default": "Apply for a free haircut."
+    },
+    {
+      "type": "textarea",
+      "id": "t_no_charge_we_film_transforma",
+      "label": "Barber / YouTube — Text: No charge. We film transformations for o",
+      "default": "No charge. We film transformations for our YouTube channel and are looking for big changes, thinning hair and receding hairlines. If you’re picked, the cut is free and it goes on the channel."
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_cut",
+      "label": "Barber / YouTube — Link text: APPLY FOR A FREE CUT",
+      "default": "APPLY FOR A FREE CUT"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Book for"
+    },
+    {
+      "type": "text",
+      "id": "t_01_book_bryton_for",
+      "label": "Barber / Book for — Text: 01 / Book Bryton for",
+      "default": "01 / Book Bryton for"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Barber / Book for — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_short_classic_haircuts",
+      "label": "Barber / Book for — Text: Short, classic haircuts.",
+      "default": "Short, classic haircuts."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Barber / Book for — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_big_changes_hand_him_the_dec",
+      "label": "Barber / Book for — Text: Big changes. Hand him the decision.",
+      "default": "Big changes. Hand him the decision."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Barber / Book for — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "textarea",
+      "id": "t_thinning_hair_or_a_receding_",
+      "label": "Barber / Book for — Text: Thinning hair or a receding hairline. He",
+      "default": "Thinning hair or a receding hairline. He’ll find a cut that works with it, or talk you through a hair system."
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Barber / Book for — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_and_beard_together",
+      "label": "Barber / Book for — Text: Haircut and beard together.",
+      "default": "Haircut and beard together."
+    },
+    {
+      "type": "header",
+      "content": "Text: Bryton / In the chair"
+    },
+    {
+      "type": "text",
+      "id": "t_02_in_the_chair",
+      "label": "Bryton / In the chair — Text: 02 / In the chair",
+      "default": "02 / In the chair"
+    },
+    {
+      "type": "text",
+      "id": "t_sit_down_he_ll_take_it_from_",
+      "label": "Bryton / In the chair — Heading: Sit down. He’ll take it from there.",
+      "default": "Sit down. He’ll take it from there."
+    },
+    {
+      "type": "textarea",
+      "id": "t_he_looks_at_your_head_shape_",
+      "label": "Bryton / In the chair — Text: He looks at your head shape, your growth",
+      "default": "He looks at your head shape, your growth patterns, your hairline and how your hair behaves, then tells you what the cut should be and why. Clients book him because they want that call made by someone who knows. You don’t need to bring a plan."
+    },
+    {
+      "type": "text",
+      "id": "t_01_2",
+      "label": "Bryton / In the chair — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_he_reads_your_hair",
+      "label": "Bryton / In the chair — Text: He reads your hair",
+      "default": "He reads your hair"
+    },
+    {
+      "type": "text",
+      "id": "t_head_shape_cowlicks_density_",
+      "label": "Bryton / In the chair — Text: Head shape, cowlicks, density, hairline,",
+      "default": "Head shape, cowlicks, density, hairline, and how you actually wear it."
+    },
+    {
+      "type": "text",
+      "id": "t_02_2",
+      "label": "Bryton / In the chair — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_he_makes_the_call",
+      "label": "Bryton / In the chair — Text: He makes the call",
+      "default": "He makes the call"
+    },
+    {
+      "type": "text",
+      "id": "t_what_stays_what_comes_off_an",
+      "label": "Bryton / In the chair — Text: What stays, what comes off, and how it w",
+      "default": "What stays, what comes off, and how it will grow out. He’ll explain it, then get to work."
+    },
+    {
+      "type": "text",
+      "id": "t_03_2",
+      "label": "Bryton / In the chair — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_he_shows_you_how_to_wear_it",
+      "label": "Bryton / In the chair — Text: He shows you how to wear it",
+      "default": "He shows you how to wear it"
+    },
+    {
+      "type": "text",
+      "id": "t_what_product_to_use_and_how_",
+      "label": "Bryton / In the chair — Text: What product to use and how much, so it ",
+      "default": "What product to use and how much, so it looks right after you leave."
+    },
+    {
+      "type": "header",
+      "content": "Text: Bryton / Scissor cuts"
+    },
+    {
+      "type": "text",
+      "id": "t_03_scissor_cuts",
+      "label": "Bryton / Scissor cuts — Text: 03 / Scissor cuts",
+      "default": "03 / Scissor cuts"
+    },
+    {
+      "type": "text",
+      "id": "t_scissor_work_influenced_by_e",
+      "label": "Bryton / Scissor cuts — Heading: Scissor work influenced by European barb",
+      "default": "Scissor work influenced by European barbering."
+    },
+    {
+      "type": "textarea",
+      "id": "t_bryton_does_fades_and_clippe",
+      "label": "Bryton / Scissor cuts — Text: Bryton does fades and clipper work too. ",
+      "default": "Bryton does fades and clipper work too. That came naturally to him, and he saw a gap in his scissor work, so he went looking for training. He has since received training from barbers all over the world, including barbers from Europe, through mentorship and classes, and specializes in scissor haircuts: cuts done mostly or entirely with shears instead of clippers. Scissors leave the hair softer and give longer styles more movement as they grow out."
+    },
+    {
+      "type": "text",
+      "id": "t_signature_haircut",
+      "label": "Bryton / Scissor cuts — Text: Signature Haircut",
+      "default": "Signature Haircut"
+    },
+    {
+      "type": "text",
+      "id": "t_65",
+      "label": "Bryton / Scissor cuts — Text: $65",
+      "default": "$65"
+    },
+    {
+      "type": "text",
+      "id": "t_more_time_a_more_personal_ha",
+      "label": "Bryton / Scissor cuts — Subheading: More Time. A More Personal Haircut.",
+      "default": "More Time. A More Personal Haircut."
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_signature_haircut_gives_",
+      "label": "Bryton / Scissor cuts — Text: The Signature Haircut gives us more time",
+      "default": "The Signature Haircut gives us more time to understand your hair, talk through your goals, and work carefully through the details of your cut."
+    },
+    {
+      "type": "textarea",
+      "id": "t_it_s_a_great_choice_if_you_r",
+      "label": "Bryton / Scissor cuts — Text: It’s a great choice if you’re considerin",
+      "default": "It’s a great choice if you’re considering a new style, growing your hair out, or finding it difficult to get a haircut that works for you. Together, we’ll consider your face shape, natural texture, and styling routine to create a look you feel comfortable maintaining."
+    },
+    {
+      "type": "textarea",
+      "id": "t_not_sure_what_to_book_choose",
+      "label": "Bryton / Scissor cuts — Text: Not sure what to book? Choose the Signat",
+      "default": "Not sure what to book? Choose the Signature Haircut for your first visit or a bigger change."
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_signature_haircut",
+      "label": "Bryton / Scissor cuts — Link text: BOOK A SIGNATURE HAIRCUT",
+      "default": "BOOK A SIGNATURE HAIRCUT"
+    },
+    {
+      "type": "header",
+      "content": "Text: Bryton / Hair systems"
+    },
+    {
+      "type": "text",
+      "id": "t_before",
+      "label": "Bryton / Hair systems — Text: Before",
+      "default": "Before"
+    },
+    {
+      "type": "text",
+      "id": "t_after",
+      "label": "Bryton / Hair systems — Text: After",
+      "default": "After"
+    },
+    {
+      "type": "text",
+      "id": "t_04_hair_systems",
+      "label": "Bryton / Hair systems — Text: 04 / Hair systems",
+      "default": "04 / Hair systems"
+    },
+    {
+      "type": "text",
+      "id": "t_every_system_in_the_shop_goe",
+      "label": "Bryton / Hair systems — Heading: Every system in the shop goes through hi",
+      "default": "Every system in the shop goes through him."
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_hair_system_is_a_thin_base",
+      "label": "Bryton / Hair systems — Text: A hair system is a thin base with real h",
+      "default": "A hair system is a thin base with real hair that’s attached to your scalp and cut into your own hair. Bryton color-matches it, fits it and cuts it in so it blends. Maintenance visits are with him too, so the same person looks after it every time."
+    },
+    {
+      "type": "text",
+      "id": "t_as_low_as_5_07_a_day_skip_th",
+      "label": "Bryton / Hair systems — Text: As low as $5.07 a day · Skip the energy ",
+      "default": "As low as $5.07 a day · Skip the energy drinks. Get a non-surgical hair system."
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_free_consultation",
+      "label": "Bryton / Hair systems — Link text: BOOK A FREE CONSULTATION",
+      "default": "BOOK A FREE CONSULTATION"
+    },
+    {
+      "type": "text",
+      "id": "t_how_it_works",
+      "label": "Bryton / Hair systems — Link text: How it works →",
+      "default": "How it works →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Bryton / Teaching"
+    },
+    {
+      "type": "text",
+      "id": "t_05_teaching",
+      "label": "Bryton / Teaching — Text: 05 / Teaching",
+      "default": "05 / Teaching"
+    },
+    {
+      "type": "text",
+      "id": "t_he_s_taught_other_barbers_ho",
+      "label": "Bryton / Teaching — Heading: He’s taught other barbers how to cut.",
+      "default": "He’s taught other barbers how to cut."
+    },
+    {
+      "type": "textarea",
+      "id": "t_bryton_is_a_licensed_barber_",
+      "label": "Bryton / Teaching — Text: Bryton is a licensed barber instructor. ",
+      "default": "Bryton is a licensed barber instructor. He taught hundreds of students at Paul Mitchell The School Provo, and still teaches a class from time to time, showing new barbers how to read a head shape, blend a fade and talk a client through a change. The same habits go into every cut he does at the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_read_the_broken_arrow_story",
+      "label": "Bryton / Teaching — Link text: Read the Broken Arrow story →",
+      "default": "Read the Broken Arrow story →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Bryton / Payson"
+    },
+    {
+      "type": "text",
+      "id": "t_06_where_it_started",
+      "label": "Bryton / Payson — Text: 06 / Where it started",
+      "default": "06 / Where it started"
+    },
+    {
+      "type": "text",
+      "id": "t_built_in_payson_now_in_orem",
+      "label": "Bryton / Payson — Heading: Built in Payson. Now in Orem.",
+      "default": "Built in Payson. Now in Orem."
+    },
+    {
+      "type": "textarea",
+      "id": "t_bryton_opened_the_first_brok",
+      "label": "Bryton / Payson — Text: Bryton opened the first Broken Arrow in ",
+      "default": "Bryton opened the first Broken Arrow in Payson. His clients there left more than 240 Google reviews before he moved the shop to Orem. Plenty of them still make the drive."
+    },
+    {
+      "type": "header",
+      "content": "Text: Bryton / Products"
+    },
+    {
+      "type": "text",
+      "id": "t_07_broken_arrow_grooming",
+      "label": "Bryton / Products — Text: 07 / Broken Arrow Grooming",
+      "default": "07 / Broken Arrow Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_what_he_styles_with",
+      "label": "Bryton / Products — Heading: What he styles with.",
+      "default": "What he styles with."
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_grooming_is_the",
+      "label": "Bryton / Products — Text: Broken Arrow Grooming is the shop’s own ",
+      "default": "Broken Arrow Grooming is the shop’s own product line. The matte clay is what Bryton uses to finish cuts in the chair, and he’ll show you how much to use on your hair before you leave."
+    },
+    {
+      "type": "text",
+      "id": "t_see_the_products",
+      "label": "Bryton / Products — Link text: SEE THE PRODUCTS",
+      "default": "SEE THE PRODUCTS"
+    },
+    {
+      "type": "text",
+      "id": "t_matte_clay",
+      "label": "Bryton / Products — Link text: Matte clay →",
+      "default": "Matte clay →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Bryton / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_08_booking_with_bryton",
+      "label": "Bryton / FAQ — Text: 08 / Booking with Bryton",
+      "default": "08 / Booking with Bryton"
+    },
+    {
+      "type": "textarea",
+      "id": "t_it_changes_week_to_week_the_",
+      "label": "Bryton / FAQ — Text: It changes week to week. The next openin",
+      "default": "It changes week to week. The next opening at the top of this page is live from our booking system, so that’s the fastest way to see."
+    },
+    {
+      "type": "textarea",
+      "id": "t_classic_haircut_for_routine_",
+      "label": "Bryton / FAQ — Text: Classic Haircut for routine upkeep. Hair",
+      "default": "Classic Haircut for routine upkeep. Haircut + Beard if you want both done. For your first visit, a new style or a long scissor cut, book the Signature Haircut so there’s time to talk it through."
+    },
+    {
+      "type": "textarea",
+      "id": "t_yes_bryton_loves_photos_he_l",
+      "label": "Bryton / FAQ — Text: Yes. Bryton loves photos. He’ll talk you",
+      "default": "Yes. Bryton loves photos. He’ll talk you through what’s realistic for your hair and get you as close to the look you want as he can."
+    },
+    {
+      "type": "textarea",
+      "id": "t_yes_it_s_free_he_looks_at_yo",
+      "label": "Bryton / FAQ — Text: Yes. It’s free. He looks at your hair lo",
+      "default": "Yes. It’s free. He looks at your hair loss, talks through options and color, and you decide from there. Book it from the Hair Replacement page."
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Work"
+    },
+    {
+      "type": "text",
+      "id": "t_09_the_work",
+      "label": "Barber / Work — Text: 09 / The work",
+      "default": "09 / The work"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_s_cuts",
+      "label": "Barber / Work — Heading: Bryton’s cuts",
+      "default": "Bryton’s cuts"
+    },
+    {
+      "type": "text",
+      "id": "t_more_on_instagram",
+      "label": "Barber / Work — Link text: MORE ON INSTAGRAM →",
+      "default": "MORE ON INSTAGRAM →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Others"
+    },
+    {
+      "type": "text",
+      "id": "t_the_rest_of_the_team",
+      "label": "Barber / Others — Text: The rest of the team",
+      "default": "The rest of the team"
+    },
+    {
+      "type": "text",
+      "id": "t_connor",
+      "label": "Barber / Others — Text: Connor",
+      "default": "Connor"
+    },
+    {
+      "type": "text",
+      "id": "t_barber",
+      "label": "Barber / Others — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_view",
+      "label": "Barber / Others — Text: View →",
+      "default": "View →"
+    },
+    {
+      "type": "text",
+      "id": "t_elise",
+      "label": "Barber / Others — Text: Elise",
+      "default": "Elise"
+    },
+    {
+      "type": "text",
+      "id": "t_barber_2",
+      "label": "Barber / Others — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_view_2",
+      "label": "Barber / Others — Text: View →",
+      "default": "View →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Book band"
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_bryton_2",
+      "label": "Barber / Book band — Heading: Book with Bryton.",
+      "default": "Book with Bryton."
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_bryton_3",
+      "label": "Barber / Book band — Link text: BOOK WITH BRYTON",
+      "default": "BOOK WITH BRYTON"
+    },
+    {
+      "type": "header",
+      "content": "Text: Page"
+    },
+    {
+      "type": "text",
+      "id": "t_book_now",
+      "label": "Page — Link text: BOOK NOW",
+      "default": "BOOK NOW"
+    }
+  ]
+}
+{% endschema %}

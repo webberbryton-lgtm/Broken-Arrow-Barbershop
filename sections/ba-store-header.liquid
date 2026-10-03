@@ -1,0 +1,106 @@
+{%- comment -%}
+  Broken Arrow Grooming store header, ported from the Claude Design component "StoreHeader".
+  The design's JavaScript breakpoints (400px, 640px, 1360px) are CSS media queries here.
+{%- endcomment -%}
+{%- liquid
+  if section.settings.logo != blank
+    assign logo_src = section.settings.logo | image_url: width: 400
+  else
+    assign logo_src = 'ba-lockup-grooming-offwhite.svg' | asset_url
+  endif
+  assign book = section.settings.book_link | default: '/'
+-%}
+<style>
+  .ba-shdr-spacer { height: 120px; }
+  .ba-shdr { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--band); color: var(--on-band); }
+  .ba-shdr__strip { background: var(--canvas-sunk); color: var(--ink); }
+  .ba-shdr__strip > div { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px,5vw,64px); min-height: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 16px; box-sizing: border-box; text-align: center; }
+  .ba-shdr__strip p { margin: 0; font: 500 13px/18px var(--font-sans); }
+  .ba-shdr__strip a { font: 600 12px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--ink); text-decoration: underline; text-decoration-color: var(--green); text-underline-offset: 4px; }
+  .ba-shdr__strip a:hover { color: var(--green) !important; }
+  .ba-shdr__row { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px,5vw,64px); height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; box-sizing: border-box; }
+  .ba-shdr__logo { display: block; flex: none; }
+  .ba-shdr__logo img { width: 168px; height: auto; display: block; }
+  .ba-shdr__nav { display: flex; align-items: center; gap: 24px; min-width: 0; }
+  .ba-shdr__nav a { font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--on-band); text-decoration: none; white-space: nowrap; padding: 6px 0; border-bottom: 2px solid transparent; }
+  .ba-shdr__nav a:hover { border-bottom-color: var(--on-band) !important; }
+  .ba-shdr__nav a[aria-current="page"] { border-bottom-color: var(--on-band); }
+  .ba-shdr__actions { display: flex; align-items: center; gap: 16px; flex: none; }
+  .ba-shdr__book { white-space: nowrap; display: flex; align-items: center; min-height: 44px; padding: 0 18px; background: var(--on-band); color: var(--band); font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: background-color 150ms ease, color 150ms ease; }
+  .ba-shdr__book:hover { background: var(--green) !important; color: var(--on-band) !important; }
+  .ba-shdr__menu { display: none; background: none; border: 0; cursor: pointer; min-height: 44px; padding: 0; font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--on-band); }
+  .ba-shdr__cart { display: flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid var(--line-strong); font: 600 13px/16px var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--on-band); text-decoration: none; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .ba-shdr__cart:hover { border-color: var(--on-band) !important; }
+  .ba-shdr__drawer { border-top: 1px solid var(--line-strong); padding: 16px clamp(16px,5vw,64px) 32px; display: flex; flex-direction: column; }
+  .ba-shdr__drawer[hidden] { display: none; }
+  .ba-shdr__drawer > a:not(.ba-label) { font: 800 32px/1 var(--font-display); letter-spacing: -.03em; text-transform: uppercase; color: var(--on-band); text-decoration: none; padding: 16px 0; border-bottom: 1px solid var(--line-strong); }
+  .ba-shdr__drawer > a.ba-label { margin-top: 24px; display: flex; align-items: center; min-height: 44px; color: var(--on-band); opacity: .78; }
+  @media (max-width: 1359px) {
+    .ba-shdr__nav { display: none; }
+    .ba-shdr__menu { display: block; }
+  }
+  @media (min-width: 1360px) { .ba-shdr__drawer { display: none !important; } }
+  @media (max-width: 639px) {
+    .ba-shdr-spacer { height: 138px; }
+    .ba-shdr__book { display: none; }
+    .ba-shdr__cart { padding: 0 12px; }
+  }
+  @media (max-width: 399px) { .ba-shdr__logo img { width: 136px; } }
+</style>
+<div class="ba-shdr-spacer" data-ba-hdr-spacer></div>
+<header class="ba-shdr" data-hdr="store" data-ba-header>
+  <div class="ba-shdr__strip">
+    <div>
+      {%- if section.settings.strip_text != blank -%}<p data-m-hide="">{{ section.settings.strip_text }}</p>{%- endif -%}
+      <a href="{{ book }}">{{ section.settings.strip_cta }}</a>
+    </div>
+  </div>
+  <div class="ba-shdr__row">
+    <a class="ba-shdr__logo" href="{{ section.settings.logo_link | default: '/pages/shop' }}" aria-label="Broken Arrow Grooming shop home"><img src="{{ logo_src }}" alt="Broken Arrow Grooming" width="168" height="72"></a>
+    <nav class="ba-shdr__nav" aria-label="Shop">
+      {%- for block in section.blocks -%}
+        <a href="{{ block.settings.link }}" data-ba-key="{{ block.settings.key }}"{% if block.settings.link == request.path %} aria-current="page"{% endif %} {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+      {%- endfor -%}
+    </nav>
+    <div class="ba-shdr__actions">
+      <a class="ba-shdr__book" href="{{ book }}">{{ section.settings.book_label }}</a>
+      <button type="button" class="ba-shdr__menu" aria-expanded="false" aria-controls="BaStoreDrawer" data-ba-menu>MENU</button>
+      <a class="ba-shdr__cart" href="{{ routes.cart_url }}" data-ba-cart-count>CART ({{ cart.item_count }})</a>
+    </div>
+  </div>
+  <nav class="ba-shdr__drawer" id="BaStoreDrawer" aria-label="Shop" hidden>
+    {%- for block in section.blocks -%}
+      <a href="{{ block.settings.link }}">{{ block.settings.label }}</a>
+    {%- endfor -%}
+    <a href="{{ book }}" class="ba-label">{{ section.settings.drawer_cta }}</a>
+  </nav>
+</header>
+<script src="{{ 'ba-header.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "BA store header",
+  "tag": "div",
+  "class": "ba-header-section",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo", "info": "Leave empty to use the Broken Arrow Grooming lockup." },
+    { "type": "url", "id": "logo_link", "label": "Logo link", "info": "Defaults to the shop page." },
+    { "type": "text", "id": "strip_text", "label": "Strip text", "default": "Developed and used at Broken Arrow Barbershop, Orem. Ships anywhere in the US, or pick up at your next appointment." },
+    { "type": "text", "id": "strip_cta", "label": "Strip link text", "default": "Book a haircut →" },
+    { "type": "url", "id": "book_link", "label": "Barbershop link", "info": "Where \"Book a haircut\" goes. Defaults to the barbershop home page." },
+    { "type": "text", "id": "book_label", "label": "Button text", "default": "Book a haircut" },
+    { "type": "text", "id": "drawer_cta", "label": "Menu link text", "default": "Book a haircut at Broken Arrow Barbershop →" }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Menu link",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Link" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "text", "id": "key", "label": "Page key", "info": "Pages that set this key underline this link (all, grooming, quiz, learn, wholesale, about)." }
+      ]
+    }
+  ]
+}
+{% endschema %}

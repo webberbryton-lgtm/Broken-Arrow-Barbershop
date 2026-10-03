@@ -1,0 +1,283 @@
+{%- comment -%} Generated from the Claude Design page "Free Haircut". {%- endcomment -%}
+{%- liquid
+if section.settings.img_fh_thumbnail != blank
+  assign img_fh_thumbnail = section.settings.img_fh_thumbnail | image_url: width: 2400
+else
+  assign img_fh_thumbnail = 'ba-fh-thumbnail.webp' | asset_url
+endif
+if section.settings.img_fh_thumbnail_2 != blank
+  assign img_fh_thumbnail_2 = section.settings.img_fh_thumbnail_2 | image_url: width: 2400
+else
+  assign img_fh_thumbnail_2 = 'ba-fh-thumbnail-2.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="free-haircut"] :is(ul) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="free-haircut" data-ba-active="free">
+<section data-screen-label="Free Haircut / Hero" style="background: var(--band); color: var(--on-band);">
+<div data-m-fh="" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
+<div style="flex: 1.2 1 460px; display: flex; flex-direction: column; gap: 28px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_free_haircut_filmed_for_yout | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(48px, 7vw, 88px), 11vw); letter-spacing: -0.045em; line-height: 0.92; max-width: 12ch;">{{ section.settings.t_apply_for_a_free_haircut | escape }}</h1>
+<p style="max-width: 560px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.78; text-wrap: pretty;">{{ section.settings.t_we_film_transformation_hairc | escape }}</p>
+<p style="max-width: 560px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.78; text-wrap: pretty;">{{ section.settings.t_we_re_looking_for_big_change | escape }}</p>
+<div style="max-width: 560px; display: flex; flex-direction: column; gap: 8px; border: 1px solid var(--line-strong); padding: 16px 20px;">
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_already_a_client | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; opacity: 0.85; text-wrap: pretty;">If you’re already a regular client, you probably won’t be selected. We’re looking for people who can create a <strong>big transformation on camera</strong>: long-to-short haircuts, major style changes, overgrown hair, and especially thinning or receding hairlines, including shorter hair that’s thinning.</p>
+<p style="font-size: 15px; line-height: 24px; opacity: 0.85; text-wrap: pretty;">If you’re just due for your normal maintenance haircut, please <a href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services" style="color: var(--on-band);">{{ section.settings.t_book_with_us | escape }}</a> as usual.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="#apply">{{ section.settings.t_apply_now | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="https://www.youtube.com/@BrokenArrowBarbershop" rel="noopener" target="_blank">{{ section.settings.t_our_youtube_channel | escape }}</a>
+</div>
+</div>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 4px;">
+<div aria-label="Before and after: long overgrown hair and beard cut into a short textured haircut with a fade" role="img" style='aspect-ratio: 16 / 9; background-color: rgb(34, 35, 38); background-image: url("{{ img_fh_thumbnail }}"); background-size: cover; background-position: center center;'></div>
+<div aria-label="Before and after: long slicked-back hair with a receding hairline cut into a short textured crop with a shaped beard" role="img" style='aspect-ratio: 16 / 9; background-color: rgb(34, 35, 38); background-image: url("{{ img_fh_thumbnail_2 }}"); background-size: cover; background-position: center center;'></div>
+</div>
+</div></section><section data-screen-label="Free Haircut / How it works" style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 48px;">
+<p class="ba-label">{{ section.settings.t_01_how_it_works | escape }}</p>
+<ul style="grid-column: span 2; list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_01 | escape }}</span><div style="display: flex; flex-direction: column; gap: 12px;"><p style="font: 800 22px/26px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_what_we_pick | escape }}</p><p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_transformations_thinning_or_ | escape }}</p></div></li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_02 | escape }}</span><p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_haircut_is_free_because_ | escape }}</p></li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_03 | escape }}</span><p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_this_is_an_application_not_a | escape }}</p></li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_04 | escape }}</span><p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_ll_only_contact_you_if_yo | escape }}</p></li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);"><span class="ba-label" style="padding-top: 4px;">{{ section.settings.t_05 | escape }}</span><p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">Interested in a hair system? <a href="/pages/hair-replacement">{{ section.settings.t_book_a_free_consultation | escape }}</a> instead.</p></li>
+</ul></section><section data-screen-label="Free Haircut / Form" id="apply" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_02_apply | escape }}</p>
+<p style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_required_fields_are_marked | escape }}</p>
+</div>
+<div data-ba-done="" hidden="" style="grid-column:span 2;display:flex;flex-direction:column;gap:24px;max-width:680px;border-top:2px solid var(--ink);padding-top:32px"><h2 class="ba-display" style="font-size:clamp(40px,5vw,64px)">{{ section.settings.t_thanks_for_applying | escape }}</h2><p style="font-size:20px;line-height:34px;text-wrap:pretty">{{ section.settings.t_we_ll_be_in_touch_if_you_re_ | escape }}</p><div><a class="ba-btn ba-btn-secondary" href="{{ routes.root_url }}">{{ section.settings.t_back_to_the_home_page | escape }}</a></div></div><form data-ba-form="free-haircut" novalidate="" style="grid-column: span 2; display: flex; flex-direction: column; gap: 32px; max-width: 680px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<div class="ba-field"><label class="ba-field-label" for="ba-f1">Name<span aria-hidden="true" class="ba-field-req">*</span></label><input class="ba-field-input" id="ba-f1" name="name" required="" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f2">Email<span aria-hidden="true" class="ba-field-req">*</span></label><input class="ba-field-input" id="ba-f2" name="email" required="" type="email" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f3">Phone number</label><input class="ba-field-input" id="ba-f3" name="phone" type="tel" value=""/></div>
+<fieldset style="display: flex; flex-direction: column; gap: 12px;">
+<legend class="ba-field-label" style="margin-bottom: 12px;">Are you 18 or older?<span class="ba-field-req">*</span></legend>
+<div style="display: flex; gap: 32px;">
+<label class="ba-check ba-check-radio"><input checked="" name="adult" type="radio" value="Yes"/><span aria-hidden="true" class="ba-check-box"></span><span>Yes</span></label>
+<label class="ba-check ba-check-radio"><input name="adult" type="radio" value="No"/><span aria-hidden="true" class="ba-check-box"></span><span>No</span></label>
+</div>
+</fieldset>
+<div class="ba-field"><label class="ba-field-label" for="ba-f4">Where do you live?<span aria-hidden="true" class="ba-field-req">*</span></label><p class="ba-field-hint" id="ba-f4-hint">City and state, so we know you can get to the shop in Orem.</p><input aria-describedby="ba-f4-hint" class="ba-field-input" id="ba-f4" name="city" required="" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f5">What do you want from your haircut?<span aria-hidden="true" class="ba-field-req">*</span></label><p class="ba-field-hint" id="ba-f5-hint">Tell us how big a change you’re after. Give us as much as you can: the style you want, anything you like or don’t like about your hair now, how much time you spend on it in the morning.</p><textarea aria-describedby="ba-f5-hint" class="ba-field-input" id="ba-f5" name="want" required="" rows="5"></textarea></div>
+<fieldset style="display: flex; flex-direction: column;">
+<legend class="ba-field-label" style="margin-bottom: 12px;">Which of these describe your hair?</legend>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); column-gap: 24px;">
+<label class="ba-check"><input name="hair" type="checkbox" value="Longer or grown out"/><span aria-hidden="true" class="ba-check-box"></span><span>Longer or grown out</span></label>
+<label class="ba-check"><input name="hair" type="checkbox" value="Thinning or receding"/><span aria-hidden="true" class="ba-check-box"></span><span>Thinning or receding</span></label>
+<label class="ba-check"><input name="hair" type="checkbox" value="Curly or textured"/><span aria-hidden="true" class="ba-check-box"></span><span>Curly or textured</span></label>
+<label class="ba-check"><input name="hair" type="checkbox" value="Haven’t had a good cut in a while"/><span aria-hidden="true" class="ba-check-box"></span><span>Haven’t had a good cut in a while</span></label>
+<label class="ba-check"><input name="hair" type="checkbox" value="Ready for a big change"/><span aria-hidden="true" class="ba-check-box"></span><span>Ready for a big change</span></label>
+<label class="ba-check"><input name="hair" type="checkbox" value="Other"/><span aria-hidden="true" class="ba-check-box"></span><span>Other</span></label>
+</div>
+</fieldset>
+<fieldset style="display: flex; flex-direction: column;">
+<legend class="ba-field-label" style="margin-bottom: 12px;">How much creative freedom are you willing to give the barber?<span class="ba-field-req">*</span></legend>
+<label class="ba-check ba-check-radio"><input name="freedom" type="radio" value="Do whatever you think works"/><span aria-hidden="true" class="ba-check-box"></span><span>Do whatever you think works</span></label>
+<label class="ba-check ba-check-radio"><input checked="" name="freedom" type="radio" value="Some, within limits"/><span aria-hidden="true" class="ba-check-box"></span><span>Some, within limits</span></label>
+<label class="ba-check ba-check-radio"><input name="freedom" type="radio" value="I know exactly what I want"/><span aria-hidden="true" class="ba-check-box"></span><span>I know exactly what I want</span></label>
+</fieldset>
+<div class="ba-field"><label class="ba-field-label" for="ba-f6">When was your last haircut?<span aria-hidden="true" class="ba-field-req">*</span></label><p class="ba-field-hint" id="ba-f6-hint">Add anything we should know about it, like only the sides were cut or you have an undercut.</p><input aria-describedby="ba-f6-hint" class="ba-field-input" id="ba-f6" name="last" required="" value=""/></div>
+<div class="ba-field"><label class="ba-field-label" for="ba-f7">Instagram or photo link</label><p class="ba-field-hint" id="ba-f7-hint">Optional. A current photo of your hair helps us pick.</p><input aria-describedby="ba-f7-hint" class="ba-field-input" id="ba-f7" name="photo" value=""/></div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<label class="ba-check"><input name="big" type="checkbox"/><span aria-hidden="true" class="ba-check-box"></span><span>I’m looking for a big transformation, or my hair is thinning or receding and I want help with it. Not just a clean-up. *</span></label>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<label class="ba-check"><input name="agree" type="checkbox"/><span aria-hidden="true" class="ba-check-box"></span><span>I understand the haircut is free because the appointment will be filmed and photographed, and that the footage and photos may be used on Broken Arrow’s YouTube, social media and website. *</span></label>
+</div>
+<div><button class="ba-btn ba-btn-primary" type="submit">APPLY</button></div>
+</form>
+</div></section>
+</div>
+<script src="{{ 'ba-form-kit.js' | asset_url }}" defer></script>
+<script src="{{ 'ba-free-haircut.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Free Haircut",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_fh_thumbnail",
+      "label": "Free Haircut / Hero — photo (fh-thumbnail.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_fh_thumbnail_2",
+      "label": "Free Haircut / Hero — photo (fh-thumbnail-2.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Free Haircut / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_free_haircut_filmed_for_yout",
+      "label": "Free Haircut / Hero — Text: Free haircut · Filmed for YouTube",
+      "default": "Free haircut · Filmed for YouTube"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_haircut",
+      "label": "Free Haircut / Hero — Heading: Apply for a free haircut",
+      "default": "Apply for a free haircut"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_film_transformation_hairc",
+      "label": "Free Haircut / Hero — Text: We film transformation haircuts for our ",
+      "default": "We film transformation haircuts for our YouTube channel. If you’re picked, your cut is free and it goes on the channel."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_re_looking_for_big_change",
+      "label": "Free Haircut / Hero — Text: We’re looking for big changes: thinning ",
+      "default": "We’re looking for big changes: thinning or receding hair, very long hair going short, or hair that hasn’t had a real cut in a long time. A clean-up of a cut you already like won’t make a video."
+    },
+    {
+      "type": "text",
+      "id": "t_already_a_client",
+      "label": "Free Haircut / Hero — Text: Already a client?",
+      "default": "Already a client?"
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_us",
+      "label": "Free Haircut / Hero — Link text: book with us",
+      "default": "book with us"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_now",
+      "label": "Free Haircut / Hero — Link text: APPLY NOW",
+      "default": "APPLY NOW"
+    },
+    {
+      "type": "text",
+      "id": "t_our_youtube_channel",
+      "label": "Free Haircut / Hero — Link text: OUR YOUTUBE CHANNEL",
+      "default": "OUR YOUTUBE CHANNEL"
+    },
+    {
+      "type": "header",
+      "content": "Text: Free Haircut / How it works"
+    },
+    {
+      "type": "text",
+      "id": "t_01_how_it_works",
+      "label": "Free Haircut / How it works — Text: 01 / How it works",
+      "default": "01 / How it works"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Free Haircut / How it works — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_what_we_pick",
+      "label": "Free Haircut / How it works — Text: What we pick",
+      "default": "What we pick"
+    },
+    {
+      "type": "textarea",
+      "id": "t_transformations_thinning_or_",
+      "label": "Free Haircut / How it works — Text: Transformations. Thinning or receding ha",
+      "default": "Transformations. Thinning or receding hair, very long to short, grown-out or overdue cuts, and anyone ready for a completely different look. We don’t film maintenance cuts or small clean-ups."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Free Haircut / How it works — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_haircut_is_free_because_",
+      "label": "Free Haircut / How it works — Text: The haircut is free because the appointm",
+      "default": "The haircut is free because the appointment is being filmed. It will be filmed and photographed at Broken Arrow Barbershop in Orem, Utah, and used on our YouTube and social media."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Free Haircut / How it works — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "textarea",
+      "id": "t_this_is_an_application_not_a",
+      "label": "Free Haircut / How it works — Text: This is an application, not a booking. W",
+      "default": "This is an application, not a booking. We have a limited number of filming spots each month and can’t take everyone."
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Free Haircut / How it works — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_ll_only_contact_you_if_yo",
+      "label": "Free Haircut / How it works — Text: We’ll only contact you if you’re picked.",
+      "default": "We’ll only contact you if you’re picked. If you’re not picked this time, you’re welcome to apply again next month."
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Free Haircut / How it works — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_free_consultation",
+      "label": "Free Haircut / How it works — Link text: Book a free consultation",
+      "default": "Book a free consultation"
+    },
+    {
+      "type": "header",
+      "content": "Text: Free Haircut / Form"
+    },
+    {
+      "type": "text",
+      "id": "t_02_apply",
+      "label": "Free Haircut / Form — Text: 02 / Apply",
+      "default": "02 / Apply"
+    },
+    {
+      "type": "text",
+      "id": "t_required_fields_are_marked",
+      "label": "Free Haircut / Form — Text: Required fields are marked *",
+      "default": "Required fields are marked *"
+    },
+    {
+      "type": "text",
+      "id": "t_thanks_for_applying",
+      "label": "Free Haircut / Form — Heading: Thanks for applying.",
+      "default": "Thanks for applying."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_ll_be_in_touch_if_you_re_",
+      "label": "Free Haircut / Form — Text: We’ll be in touch if you’re picked for a",
+      "default": "We’ll be in touch if you’re picked for a filming spot. If you don’t hear from us this month, apply again next month."
+    },
+    {
+      "type": "text",
+      "id": "t_back_to_the_home_page",
+      "label": "Free Haircut / Form — Link text: BACK TO THE HOME PAGE",
+      "default": "BACK TO THE HOME PAGE"
+    }
+  ]
+}
+{% endschema %}

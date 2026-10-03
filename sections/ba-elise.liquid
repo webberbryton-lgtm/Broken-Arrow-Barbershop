@@ -1,0 +1,377 @@
+{%- comment -%} Generated from the Claude Design page "Barber - Elise". {%- endcomment -%}
+{%- liquid
+if section.settings.img_elise_profile != blank
+  assign img_elise_profile = section.settings.img_elise_profile | image_url: width: 2400
+else
+  assign img_elise_profile = 'ba-elise-profile.webp' | asset_url
+endif
+if section.settings.img_elise_wide != blank
+  assign img_elise_wide = section.settings.img_elise_wide | image_url: width: 2400
+else
+  assign img_elise_wide = 'ba-elise-wide.webp' | asset_url
+endif
+if section.settings.img_elise_cut_a != blank
+  assign img_elise_cut_a = section.settings.img_elise_cut_a | image_url: width: 2400
+else
+  assign img_elise_cut_a = 'ba-elise-cut-a.webp' | asset_url
+endif
+if section.settings.img_elise_cut_b != blank
+  assign img_elise_cut_b = section.settings.img_elise_cut_b | image_url: width: 2400
+else
+  assign img_elise_cut_b = 'ba-elise-cut-b.webp' | asset_url
+endif
+if section.settings.img_elise_cut_c != blank
+  assign img_elise_cut_c = section.settings.img_elise_cut_c | image_url: width: 2400
+else
+  assign img_elise_cut_c = 'ba-elise-cut-c.webp' | asset_url
+endif
+if section.settings.img_elise_cut_d != blank
+  assign img_elise_cut_d = section.settings.img_elise_cut_d | image_url: width: 2400
+else
+  assign img_elise_cut_d = 'ba-elise-cut-d.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="elise"] :is(ul) { margin: 0; }
+.bah-elise-1:hover { color: var(--green) !important; }
+.ba-avail-hero:hover { color: var(--on-band) !important; border-color: var(--on-band) !important; }
+</style>
+<div class="ba-page" data-ba-page="elise" data-ba-active="team" data-ba-book="https://book.squareup.com/appointments/wkoxhle5mmhzak/location/LFBJAQ8MMHY0Z/services" data-ba-book-label="BOOK WITH ELISE" data-ba-barber="elise">
+<section data-screen-label="Barber / Hero" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 7vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: flex-end;">
+<div style="position: relative; overflow: hidden; flex: 1 1 360px; aspect-ratio: 4 / 5; background: rgb(34, 35, 38); display: flex; align-items: flex-end; padding: 16px;">
+<div aria-label="Elise fading the back of a client’s haircut with clippers at Broken Arrow Barbershop" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_elise_profile }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="flex: 1.1 1 440px; display: flex; flex-direction: column; gap: 24px;">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;">
+<a href="/pages/team" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_the_team | escape }}</a><span style="opacity: 0.5;">/</span><span>{{ section.settings.t_elise | escape }}</span>
+</nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(64px, 10vw, 140px), 11vw); letter-spacing: -0.045em; line-height: 0.88;">{{ section.settings.t_elise_2 | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_barber | escape }}</p>
+<p data-ba-dynamic="" data-ba-years="years" style="max-width: 560px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; opacity: 0.85; text-wrap: pretty;">Elise has been cutting hair since September 2023, so she has 3 years of experience. She specializes in medium-length styles and curly hair, and she likes flow cuts and longer, natural looks. Her cuts are clean and detailed. She takes the time to understand what you want and how you actually style your hair day to day, so the cut works with your routine. If you’re not sure what you want, she’ll help you figure it out. She also loves teaching clients how to style their hair at home, because styling makes or breaks a haircut.</p>
+<div data-ba-avail-slot="elise" style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px;">
+<div><a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/wkoxhle5mmhzak/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_with_elise | escape }}</a></div>
+</div>
+</div>
+</div></section><section data-screen-label="Barber / YouTube" style="background: var(--green); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(48px, 6vw, 80px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px 48px;">
+<div style="flex: 1 1 480px; max-width: 760px; display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_filmed_for_youtube_applicati | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6vw, 80px); letter-spacing: -0.045em; max-width: 14ch;">{{ section.settings.t_apply_for_a_free_haircut | escape }}</h2>
+<p style="font-size: 18px; line-height: 30px; color: var(--on-band); text-wrap: pretty;">{{ section.settings.t_no_charge_elise_films_transf | escape }}</p>
+</div>
+<a class="ba-btn ba-btn-secondary ba-on-dark" href="/pages/free-haircut">{{ section.settings.t_apply_for_a_free_cut | escape }}</a>
+</div></section><div aria-label="Elise cutting a skin fade at her chair, the shop’s green wall behind her" data-screen-label="Barber / Wide photo" role="img" style='width: 100%; aspect-ratio: 2 / 1; max-height: 720px; background-color: var(--band); background-image: url("{{ img_elise_wide }}"); background-size: cover; background-position: center center;'></div><section data-screen-label="Barber / Book for" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_01_book_elise_for | escape }}</p>
+<ul style="flex: 2 1 520px; max-width: 760px; list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_01 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_curly_hair | escape }}</p>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_02 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_medium_length_and_flow_cuts | escape }}</p>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_03 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_help_finding_a_style_that_fi | escape }}</p>
+</li>
+<li style="display: grid; grid-template-columns: 56px minmax(0px, 1fr); gap: 16px; padding: 24px 0px; border-bottom: 1px solid var(--line);">
+<span class="ba-label" style="padding-top: 6px;">{{ section.settings.t_04 | escape }}</span>
+<p style="font: 800 clamp(20px,2.2vw,26px)/1.15 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase; text-wrap: pretty;">{{ section.settings.t_learning_how_to_style_your_h | escape }}</p>
+</li>
+</ul></section><section data-screen-label="Barber / Work" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
+<div style="display: flex; flex-direction: column; gap: 16px;">
+<p class="ba-label">{{ section.settings.t_02_the_work | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px);">{{ section.settings.t_elise_s_cuts | escape }}</h2>
+</div>
+<a class="ba-btn ba-btn-text" href="https://www.instagram.com/broken.arrow.barbershop/">{{ section.settings.t_more_on_instagram | escape }}</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 4px;">
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Curly hair kept long on top and at the back, with a taper on the sides" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_elise_cut_a }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Medium-length cut combed back, with length kept over the ears" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_elise_cut_b }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Textured cut with a taper at the sides and neckline" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_elise_cut_c }}"); background-size: cover; background-position: center center;'></div>
+</div>
+<div style="position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--line); display: flex; align-items: flex-end; padding: 14px;">
+<div aria-label="Flow cut with a taper around the ear and length at the back" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_elise_cut_d }}"); background-size: cover; background-position: center center;'></div>
+</div>
+</div>
+</div></section><section data-screen-label="Barber / Others" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_the_rest_of_the_team | escape }}</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px;">
+<a class="bah-elise-1" href="/pages/bryton" style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 24px 0px; border-top: 2px solid var(--ink); text-decoration: none; color: var(--ink);">
+<span style="display: flex; flex-direction: column; gap: 6px;"><span style="font: 800 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_bryton | escape }}</span><span class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_owner_licensed_barber_instru | escape }}</span></span>
+<span class="ba-label">{{ section.settings.t_view | escape }}</span>
+</a>
+<a class="bah-elise-1" href="/pages/connor" style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 24px 0px; border-top: 2px solid var(--ink); text-decoration: none; color: var(--ink);">
+<span style="display: flex; flex-direction: column; gap: 6px;"><span style="font: 800 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: -0.03em; text-transform: uppercase;">{{ section.settings.t_connor | escape }}</span><span class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_barber_2 | escape }}</span></span>
+<span class="ba-label">{{ section.settings.t_view_2 | escape }}</span>
+</a>
+</div></section><section data-screen-label="Barber / Book band" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(48px, 7vw, 88px); max-width: 10ch;">{{ section.settings.t_book_with_elise_2 | escape }}</h2>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/wkoxhle5mmhzak/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_with_elise_3 | escape }}</a>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Elise","jobTitle":"Barber","description":"Elise has been cutting hair since September 2023, so she has {years} years of experience. She specializes in medium-length styles and curly hair, and she likes flow cuts and longer, natural looks. Her cuts are clean and detailed. She takes the time to understand what you want and how you actually style your hair day to day, so the cut works with your routine. If you’re not sure what you want, she’ll help you figure it out. She also loves teaching clients how to style their hair at home, because styling makes or breaks a haircut.","knowsAbout":["Curly hair.","Medium-length and flow cuts.","Help finding a style that fits your routine.","Learning how to style your hair at home."],"worksFor":{"@type":"BarberShop","name":"Broken Arrow Barbershop","url":"{{ shop.url }}/","sameAs":["https://www.instagram.com/broken.arrow.barbershop/","https://www.youtube.com/@BrokenArrowBarbershop"],"address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097","addressCountry":"US"}},"potentialAction":{"@type":"ReserveAction","target":"https://book.squareup.com/appointments/wkoxhle5mmhzak/location/LFBJAQ8MMHY0Z/services","name":"Book with Elise"}}</script>
+<script src="{{ 'ba-barber.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Barber - Elise",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_profile",
+      "label": "Barber / Hero — photo (elise-profile.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_wide",
+      "label": "Barber / Wide photo — photo (elise-wide.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_cut_a",
+      "label": "Barber / Work — photo (elise-cut-a.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_cut_b",
+      "label": "Barber / Work — photo (elise-cut-b.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_cut_c",
+      "label": "Barber / Work — photo (elise-cut-c.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_elise_cut_d",
+      "label": "Barber / Work — photo (elise-cut-d.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_the_team",
+      "label": "Barber / Hero — Link text: The team",
+      "default": "The team"
+    },
+    {
+      "type": "text",
+      "id": "t_elise",
+      "label": "Barber / Hero — Text: Elise",
+      "default": "Elise"
+    },
+    {
+      "type": "text",
+      "id": "t_elise_2",
+      "label": "Barber / Hero — Heading: Elise",
+      "default": "Elise"
+    },
+    {
+      "type": "text",
+      "id": "t_barber",
+      "label": "Barber / Hero — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_elise",
+      "label": "Barber / Hero — Link text: BOOK WITH ELISE",
+      "default": "BOOK WITH ELISE"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / YouTube"
+    },
+    {
+      "type": "text",
+      "id": "t_filmed_for_youtube_applicati",
+      "label": "Barber / YouTube — Text: Filmed for YouTube · Applications open",
+      "default": "Filmed for YouTube · Applications open"
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_haircut",
+      "label": "Barber / YouTube — Heading: Apply for a free haircut.",
+      "default": "Apply for a free haircut."
+    },
+    {
+      "type": "textarea",
+      "id": "t_no_charge_elise_films_transf",
+      "label": "Barber / YouTube — Text: No charge. Elise films transformations f",
+      "default": "No charge. Elise films transformations for our YouTube channel and is looking for big changes: long hair going short, overgrown curls and cuts that need a fresh start. If you’re picked, the cut is free and it goes on the channel."
+    },
+    {
+      "type": "text",
+      "id": "t_apply_for_a_free_cut",
+      "label": "Barber / YouTube — Link text: APPLY FOR A FREE CUT",
+      "default": "APPLY FOR A FREE CUT"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Book for"
+    },
+    {
+      "type": "text",
+      "id": "t_01_book_elise_for",
+      "label": "Barber / Book for — Text: 01 / Book Elise for",
+      "default": "01 / Book Elise for"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Barber / Book for — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_curly_hair",
+      "label": "Barber / Book for — Text: Curly hair.",
+      "default": "Curly hair."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Barber / Book for — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_medium_length_and_flow_cuts",
+      "label": "Barber / Book for — Text: Medium-length and flow cuts.",
+      "default": "Medium-length and flow cuts."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Barber / Book for — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_help_finding_a_style_that_fi",
+      "label": "Barber / Book for — Text: Help finding a style that fits your rout",
+      "default": "Help finding a style that fits your routine."
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Barber / Book for — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_learning_how_to_style_your_h",
+      "label": "Barber / Book for — Text: Learning how to style your hair at home.",
+      "default": "Learning how to style your hair at home."
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Work"
+    },
+    {
+      "type": "text",
+      "id": "t_02_the_work",
+      "label": "Barber / Work — Text: 02 / The work",
+      "default": "02 / The work"
+    },
+    {
+      "type": "text",
+      "id": "t_elise_s_cuts",
+      "label": "Barber / Work — Heading: Elise’s cuts",
+      "default": "Elise’s cuts"
+    },
+    {
+      "type": "text",
+      "id": "t_more_on_instagram",
+      "label": "Barber / Work — Link text: MORE ON INSTAGRAM →",
+      "default": "MORE ON INSTAGRAM →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Others"
+    },
+    {
+      "type": "text",
+      "id": "t_the_rest_of_the_team",
+      "label": "Barber / Others — Text: The rest of the team",
+      "default": "The rest of the team"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton",
+      "label": "Barber / Others — Text: Bryton",
+      "default": "Bryton"
+    },
+    {
+      "type": "text",
+      "id": "t_owner_licensed_barber_instru",
+      "label": "Barber / Others — Text: Owner & licensed barber instructor",
+      "default": "Owner & licensed barber instructor"
+    },
+    {
+      "type": "text",
+      "id": "t_view",
+      "label": "Barber / Others — Text: View →",
+      "default": "View →"
+    },
+    {
+      "type": "text",
+      "id": "t_connor",
+      "label": "Barber / Others — Text: Connor",
+      "default": "Connor"
+    },
+    {
+      "type": "text",
+      "id": "t_barber_2",
+      "label": "Barber / Others — Text: Barber",
+      "default": "Barber"
+    },
+    {
+      "type": "text",
+      "id": "t_view_2",
+      "label": "Barber / Others — Text: View →",
+      "default": "View →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Barber / Book band"
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_elise_2",
+      "label": "Barber / Book band — Heading: Book with Elise.",
+      "default": "Book with Elise."
+    },
+    {
+      "type": "text",
+      "id": "t_book_with_elise_3",
+      "label": "Barber / Book band — Link text: BOOK WITH ELISE",
+      "default": "BOOK WITH ELISE"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,847 @@
+{%- comment -%} Generated from the Claude Design page "Local Guide - Find Your Hairstyle". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_guide_face_shapes != blank
+  assign img_guide_face_shapes = section.settings.img_guide_face_shapes | image_url: width: 2400
+else
+  assign img_guide_face_shapes = 'ba-guide-face-shapes.webp' | asset_url
+endif
+if section.settings.img_guide_hair_types != blank
+  assign img_guide_hair_types = section.settings.img_guide_hair_types | image_url: width: 2400
+else
+  assign img_guide_hair_types = 'ba-guide-hair-types.webp' | asset_url
+endif
+if section.settings.img_guide_what_to_bring != blank
+  assign img_guide_what_to_bring = section.settings.img_guide_what_to_bring | image_url: width: 2400
+else
+  assign img_guide_what_to_bring = 'ba-guide-what-to-bring.webp' | asset_url
+endif
+if section.settings.img_guide_discuss != blank
+  assign img_guide_discuss = section.settings.img_guide_discuss | image_url: width: 2400
+else
+  assign img_guide_discuss = 'ba-guide-discuss.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="how-to-find-the-right-hairstyle-for-men"] :is(ul, ol) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="how-to-find-the-right-hairstyle-for-men" data-ba-active="journal" data-ba-book-label="BOOK A HAIRCUT">
+<article><header data-screen-label="Guide / Hero" style="position: relative; background: var(--band); min-height: clamp(520px, 76vh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<div aria-label="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shop_interior }}"); background-size: cover; background-position: center center; filter: saturate(0.85);'></div>
+<div style="position: absolute; inset: 0px; background: linear-gradient(rgba(22, 23, 26, 0) 15%, rgba(22, 23, 26, 0.6) 55%, rgb(22, 23, 26) 100%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 24px; color: var(--on-band);">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 10px; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase;"><a href="/pages/journal" style="color: var(--on-band); opacity: 0.78; text-decoration: none;">{{ section.settings.t_journal | escape }}</a><span style="opacity: 0.5;">/</span><span style="opacity: 0.78;">{{ section.settings.t_haircut_guides | escape }}</span></nav>
+<h1 class="ba-display" style="color: var(--on-band); font-size: clamp(40px, 6vw, 80px); letter-spacing: -0.045em; line-height: 0.95; max-width: 16ch; text-wrap: balance;">{{ section.settings.t_how_to_find_the_perfect_hair | escape }}</h1>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_9_min_read | escape }}</p>
+</div></header><section data-screen-label="Guide / Intro" style="max-width: 920px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px) clamp(40px, 6vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_the_right_haircut_isn_t_the_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_we_cut_men_s_hair_every_day_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_here_s_the_five_step_way_we_ | escape }}</p>
+<div style="display: flex; flex-direction: column; gap: 12px; background: var(--canvas-sunk); padding: 24px;">
+<p class="ba-label">{{ section.settings.t_short_answer | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_to_find_the_right_men_s_hair | escape }}</p>
+</div>
+</div></section>
+<section data-screen-label="Guide / Section" id="s1" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_01 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_step_1_how_does_face_shape_a | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_face_shape_is_a_useful_start | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_common_men_s_face_shapes | escape }}</p>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_oval | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_balanced_proportions_most_cu | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_round | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_similar_width_and_length_wit | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_square | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_strong_jaw_and_straight_side | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_rectangle_or_oblong | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_longer_than_it_is_wide_avoid | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_diamond | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_wide_cheekbones_narrower_for | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_heart | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_wider_forehead_narrower_chin | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_good_barber_also_looks_at_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_few_practical_examples_a_t | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_try_this_at_home_take_a_stra | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Men’s face shape guide: oval, round, square, rectangle, diamond and heart, with hairstyles that work well for each" loading="lazy" src="{{ img_guide_face_shapes }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_most_men_are_a_combination_o | escape }}</figcaption>
+</figure>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s2" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_02 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_step_2_what_haircut_works_fo | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_easiest_haircut_to_live_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_wash_it_let_it_dry_without_p | escape }}</p>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_straight | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_holds_sharp_lines_well_can_f | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_wavy | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_very_versatile_works_especia | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_curly | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_needs_enough_length_for_the_ | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_coily | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_tight_curl_pattern_shape_and | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_two_more_things_matter_as_mu | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_fine_vs_coarse_is_about_how_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_growth_patterns_and_cowlicks | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Men’s hair type guide: straight, wavy, curly and coily hair, plus strand thickness and hair density" loading="lazy" src="{{ img_guide_hair_types }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_texture_strand_thickness_and | escape }}</figcaption>
+</figure>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s3" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_03 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_step_3_should_you_bring_a_pi | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_yes_bring_2_3_reference_phot | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_just_don_t_expect_to_look_id | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_you_ll_get_more_out_of_a_pho | escape }}</p>
+<blockquote style="margin: 8px 0px; display: flex; flex-direction: column; gap: 16px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding: 28px 0px;">
+<p class="ba-display" style="font-size: clamp(26px, 3vw, 38px); line-height: 1.05; max-width: 24ch;">{{ section.settings.t_show_your_barber_what_you_li | escape }}</p>
+</blockquote>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="What to bring to your barber: 2–3 reference photos, similar features, what you like, and openness to adjustments" loading="lazy" src="{{ img_guide_what_to_bring }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_two_or_three_photos_of_hair_ | escape }}</figcaption>
+</figure>
+<a href="/pages/haircuts-thinning-hair-utah-county" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_haircuts_for_thinning_hair_a | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s4" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_04 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_step_4_why_does_a_barber_con | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_consultation_is_part_of_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_that_conversation_is_what_we | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_looking_for_a_new_barber_ask | escape }}</p>
+<a href="/pages/team" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_meet_our_barbers | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s5" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_05 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_step_5_how_much_maintenance_ | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_right_haircut_has_to_loo | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_how_much_work_a_style_takes_ | escape }}</p>
+<ul style="list-style: none; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid var(--line);">
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_usually_lower_maintenance | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_buzz_cuts_short_textured_cro | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+<li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 18px 0px; border-bottom: 1px solid var(--line);">
+<span style="display: flex; flex-direction: column; gap: 6px; flex: 1 1 320px;"><span style="font: 800 20px/24px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_usually_higher_maintenance | escape }}</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-muted);">{{ section.settings.t_pompadours_longer_slick_back | escape }}</span></span>
+<span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums"></span>
+</li>
+</ul>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_before_your_barber_starts_as | escape }}</p>
+<figure style="margin: 8px 0px; display: flex; flex-direction: column; gap: 10px;">
+<img alt="Discuss with your barber: trim frequency, styling products, styling time and your lifestyle" loading="lazy" src="{{ img_guide_discuss }}" style="width: 100%; height: auto; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_ask_these_before_the_first_c | escape }}</figcaption>
+</figure>
+<a href="/pages/fade-haircut-orem" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_fade_haircuts_explained | escape }}</a>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s6" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_06 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_what_should_you_tell_your_ba | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_tell_them_exactly_that_you_d | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_try_i_want_to_change_my_hair | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_a_good_barber_will_take_it_f | escape }}</p>
+</div>
+</section>
+<section data-screen-label="Guide / Section" id="s7" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px);">
+<div style="display: flex; flex-direction: column; gap: 20px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<p class="ba-label">{{ section.settings.t_07 | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px); max-width: 18ch;">{{ section.settings.t_the_best_haircut_is_personal | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_there_isn_t_one_perfect_men_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_take_inspiration_from_other_ | escape }}</p>
+<a href="/pages/hair-replacement" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; align-self: flex-start;">{{ section.settings.t_non_surgical_hair_replacemen | escape }}</a>
+</div>
+</section><section data-screen-label="Guide / FAQ" style="max-width: 920px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-direction: column; gap: 20px;">
+<h2 class="ba-display" style="font-size: clamp(30px, 3.6vw, 44px);">{{ section.settings.t_questions | escape }}</h2>
+<div style="display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How do I know what haircut suits my face?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_start_with_your_face_shape_t | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">What should I tell my barber if I don’t know what haircut I want?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_say_you_want_a_change_but_ar | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Should I bring a picture to my barber?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_2_3_photos_ideally_of_me | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">What haircut is best for my hair type?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_work_with_your_texture_wavy_ | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">How much maintenance does my haircut require?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_it_depends_on_the_style_and_ | escape }}</p>
+</details>
+<details style="border-bottom: 1px solid var(--line);">
+<summary style="list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 72px; padding: 20px 0px; font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">Can a barber recommend a hairstyle for me?<span aria-hidden="true" style="font: 600 20px/1 var(--font-sans);">+</span></summary>
+<p style="padding: 0px 0px 24px; max-width: 640px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_yes_recommending_a_haircut_i | escape }}</p>
+</details>
+</div></section></article><section data-screen-label="Guide / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_broken_arrow_barbershop_375_ | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(44px, 6.4vw, 84px); max-width: 12ch;">{{ section.settings.t_not_sure_what_haircut_would_ | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_book_a_haircut_at_broken_arr | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_a_haircut | escape }}</a>
+<a class="ba-btn ba-btn-text ba-on-dark" href="/pages/services">{{ section.settings.t_see_services | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"How to find the perfect hairstyle for your face, hair type and lifestyle","description":"Not sure what haircut suits you? Learn how face shape, hair type, styling and lifestyle determine the right men’s hairstyle, with advice from Broken Arrow Barbershop in Orem.","datePublished":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/how-to-find-the-right-hairstyle-for-men","author":{"@type":"Organization","name":"Broken Arrow Barbershop"},"about":{"@type":"BarberShop","name":"Broken Arrow Barbershop","address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097"}}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know what haircut suits my face?","acceptedAnswer":{"@type":"Answer","text":"Start with your face shape, then look at your forehead, jaw, hairline and head shape. Most good haircuts create balance, adding height or width where your face needs it. A barber can assess this in person in a few minutes."}},{"@type":"Question","name":"What should I tell my barber if I don’t know what haircut I want?","acceptedAnswer":{"@type":"Answer","text":"Say you want a change but aren’t sure what suits you, and ask for a recommendation based on your face shape, hair type and how much styling you’ll do."}},{"@type":"Question","name":"Should I bring a picture to my barber?","acceptedAnswer":{"@type":"Answer","text":"Yes, 2–3 photos, ideally of men with hair and a hairline similar to yours. Treat them as a direction, not an exact copy."}},{"@type":"Question","name":"What haircut is best for my hair type?","acceptedAnswer":{"@type":"Answer","text":"Work with your texture. Wavy hair suits textured styles, curly hair needs enough length for the curl to form, and fine or thin hair usually looks fuller with texture and shorter sides."}},{"@type":"Question","name":"How much maintenance does my haircut require?","acceptedAnswer":{"@type":"Answer","text":"It depends on the style and your hair. Short crops and buzz cuts take little styling. Pompadours and longer styled looks take more time, product and often a blow dryer. Ask your barber before they start."}},{"@type":"Question","name":"Can a barber recommend a hairstyle for me?","acceptedAnswer":{"@type":"Answer","text":"Yes. Recommending a haircut is part of a barber’s job. At Broken Arrow, every appointment starts with a consultation."}}]}]}</script>
+{% schema %}
+{
+  "name": "Local Guide - Find Your H",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Guide / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_guide_face_shapes",
+      "label": "Guide / Section — photo (guide-face-shapes.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_guide_hair_types",
+      "label": "Guide / Section — photo (guide-hair-types.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_guide_what_to_bring",
+      "label": "Guide / Section — photo (guide-what-to-bring.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_guide_discuss",
+      "label": "Guide / Section — photo (guide-discuss.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_journal",
+      "label": "Guide / Hero — Link text: Journal",
+      "default": "Journal"
+    },
+    {
+      "type": "text",
+      "id": "t_haircut_guides",
+      "label": "Guide / Hero — Text: Haircut guides",
+      "default": "Haircut guides"
+    },
+    {
+      "type": "text",
+      "id": "t_how_to_find_the_perfect_hair",
+      "label": "Guide / Hero — Heading: How to find the perfect hairstyle for yo",
+      "default": "How to find the perfect hairstyle for your face, hair type and lifestyle"
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_9_min_read",
+      "label": "Guide / Hero — Text: September 26, 2026 · 9 min read",
+      "default": "September 26, 2026 · 9 min read"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Intro"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_right_haircut_isn_t_the_",
+      "label": "Guide / Intro — Text: The right haircut isn’t the one you saw ",
+      "default": "The right haircut isn’t the one you saw on TikTok or Pinterest. It’s the one that works with your face, your natural hair, the look you want, and how much time you’ll actually spend on it in the morning."
+    },
+    {
+      "type": "textarea",
+      "id": "t_we_cut_men_s_hair_every_day_",
+      "label": "Guide / Intro — Text: We cut men’s hair every day at Broken Ar",
+      "default": "We cut men’s hair every day at Broken Arrow Barbershop in Orem, Utah, and most clients who don’t like their haircut have the same problem: the cut was copied from someone with a different face, different hair and a different routine."
+    },
+    {
+      "type": "textarea",
+      "id": "t_here_s_the_five_step_way_we_",
+      "label": "Guide / Intro — Text: Here’s the five-step way we work out the",
+      "default": "Here’s the five-step way we work out the right haircut with a client in the chair. You can use it before your next appointment, wherever you get your hair cut."
+    },
+    {
+      "type": "text",
+      "id": "t_short_answer",
+      "label": "Guide / Intro — Text: Short answer",
+      "default": "Short answer"
+    },
+    {
+      "type": "textarea",
+      "id": "t_to_find_the_right_men_s_hair",
+      "label": "Guide / Intro — Text: To find the right men’s hairstyle, look ",
+      "default": "To find the right men’s hairstyle, look at five things together: 1. your face and head shape, 2. your natural hair type, 3. the look you want, shown with 2–3 reference photos, 4. a barber who will consult with you, and 5. how much styling you’ll realistically do. The goal is balance, not copying a photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / Section"
+    },
+    {
+      "type": "text",
+      "id": "t_01",
+      "label": "Guide / Section — Text: 01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "t_step_1_how_does_face_shape_a",
+      "label": "Guide / Section — Heading: Step 1: How does face shape affect which",
+      "default": "Step 1: How does face shape affect which haircut suits you?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_face_shape_is_a_useful_start",
+      "label": "Guide / Section — Text: Face shape is a useful starting point, n",
+      "default": "Face shape is a useful starting point, not a rulebook. Most haircuts aim for balance: adding height or width where the face needs it, and taking it away where it doesn’t."
+    },
+    {
+      "type": "text",
+      "id": "t_the_common_men_s_face_shapes",
+      "label": "Guide / Section — Text: The common men’s face shapes are:",
+      "default": "The common men’s face shapes are:"
+    },
+    {
+      "type": "text",
+      "id": "t_oval",
+      "label": "Guide / Section — Text: Oval",
+      "default": "Oval"
+    },
+    {
+      "type": "text",
+      "id": "t_balanced_proportions_most_cu",
+      "label": "Guide / Section — Text: Balanced proportions. Most cuts work, so",
+      "default": "Balanced proportions. Most cuts work, so choose based on hair type and lifestyle."
+    },
+    {
+      "type": "text",
+      "id": "t_round",
+      "label": "Guide / Section — Text: Round",
+      "default": "Round"
+    },
+    {
+      "type": "text",
+      "id": "t_similar_width_and_length_wit",
+      "label": "Guide / Section — Text: Similar width and length with soft angle",
+      "default": "Similar width and length with soft angles. Height on top and shorter sides add length."
+    },
+    {
+      "type": "text",
+      "id": "t_square",
+      "label": "Guide / Section — Text: Square",
+      "default": "Square"
+    },
+    {
+      "type": "textarea",
+      "id": "t_strong_jaw_and_straight_side",
+      "label": "Guide / Section — Text: Strong jaw and straight sides. Short, cl",
+      "default": "Strong jaw and straight sides. Short, clean cuts suit it. Softer texture on top keeps it from looking too severe."
+    },
+    {
+      "type": "text",
+      "id": "t_rectangle_or_oblong",
+      "label": "Guide / Section — Text: Rectangle or oblong",
+      "default": "Rectangle or oblong"
+    },
+    {
+      "type": "textarea",
+      "id": "t_longer_than_it_is_wide_avoid",
+      "label": "Guide / Section — Text: Longer than it is wide. Avoid a lot of h",
+      "default": "Longer than it is wide. Avoid a lot of height on top, and keep some weight through the sides."
+    },
+    {
+      "type": "text",
+      "id": "t_diamond",
+      "label": "Guide / Section — Text: Diamond",
+      "default": "Diamond"
+    },
+    {
+      "type": "textarea",
+      "id": "t_wide_cheekbones_narrower_for",
+      "label": "Guide / Section — Text: Wide cheekbones, narrower forehead and j",
+      "default": "Wide cheekbones, narrower forehead and jaw. Some fullness at the forehead and sides balances it."
+    },
+    {
+      "type": "text",
+      "id": "t_heart",
+      "label": "Guide / Section — Text: Heart",
+      "default": "Heart"
+    },
+    {
+      "type": "textarea",
+      "id": "t_wider_forehead_narrower_chin",
+      "label": "Guide / Section — Text: Wider forehead, narrower chin. Medium le",
+      "default": "Wider forehead, narrower chin. Medium length with forward movement or a fringe works well. Facial hair can add weight at the jaw."
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_good_barber_also_looks_at_",
+      "label": "Guide / Section — Text: A good barber also looks at your forehea",
+      "default": "A good barber also looks at your forehead, jaw, cheekbones, head shape, hairline, facial hair and overall proportions. Two people with the same face shape can still need different haircuts."
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_few_practical_examples_a_t",
+      "label": "Guide / Section — Text: A few practical examples: a taller foreh",
+      "default": "A few practical examples: a taller forehead often looks better with some forward movement, a fringe or a French crop. A strong jaw works well with a buzz cut, a fade or other shorter styles that show more of the face. A longer face usually looks better without too much height on top, and a side part can add width."
+    },
+    {
+      "type": "textarea",
+      "id": "t_try_this_at_home_take_a_stra",
+      "label": "Guide / Section — Text: Try this at home: take a straight-on pho",
+      "default": "Try this at home: take a straight-on photo with your hair pulled back. Look across three lines, your forehead, your cheekbones and your jaw, and notice which is widest and which is narrowest. That’s what the haircut needs to balance."
+    },
+    {
+      "type": "textarea",
+      "id": "t_most_men_are_a_combination_o",
+      "label": "Guide / Section — Text: Most men are a combination of two shapes",
+      "default": "Most men are a combination of two shapes. Use this as a starting point, then talk it through with your barber."
+    },
+    {
+      "type": "text",
+      "id": "t_02",
+      "label": "Guide / Section — Text: 02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "t_step_2_what_haircut_works_fo",
+      "label": "Guide / Section — Heading: Step 2: What haircut works for your hair",
+      "default": "Step 2: What haircut works for your hair type?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_easiest_haircut_to_live_",
+      "label": "Guide / Section — Text: The easiest haircut to live with works w",
+      "default": "The easiest haircut to live with works with your natural texture instead of fighting it every morning. Start by learning what your hair actually does."
+    },
+    {
+      "type": "textarea",
+      "id": "t_wash_it_let_it_dry_without_p",
+      "label": "Guide / Section — Text: Wash it, let it dry without product, and",
+      "default": "Wash it, let it dry without product, and look at how it falls. That tells you more than any chart. It’s also why the same cut can look sharp on one person and puffy on another two days later."
+    },
+    {
+      "type": "text",
+      "id": "t_straight",
+      "label": "Guide / Section — Text: Straight",
+      "default": "Straight"
+    },
+    {
+      "type": "text",
+      "id": "t_holds_sharp_lines_well_can_f",
+      "label": "Guide / Section — Text: Holds sharp lines well. Can fall flat, s",
+      "default": "Holds sharp lines well. Can fall flat, so it often needs texture cut in."
+    },
+    {
+      "type": "text",
+      "id": "t_wavy",
+      "label": "Guide / Section — Text: Wavy",
+      "default": "Wavy"
+    },
+    {
+      "type": "text",
+      "id": "t_very_versatile_works_especia",
+      "label": "Guide / Section — Text: Very versatile. Works especially well wi",
+      "default": "Very versatile. Works especially well with textured, medium-length styles."
+    },
+    {
+      "type": "text",
+      "id": "t_curly",
+      "label": "Guide / Section — Text: Curly",
+      "default": "Curly"
+    },
+    {
+      "type": "textarea",
+      "id": "t_needs_enough_length_for_the_",
+      "label": "Guide / Section — Text: Needs enough length for the curl pattern",
+      "default": "Needs enough length for the curl pattern to form. Cut too short on top and it just looks frizzy."
+    },
+    {
+      "type": "text",
+      "id": "t_coily",
+      "label": "Guide / Section — Text: Coily",
+      "default": "Coily"
+    },
+    {
+      "type": "textarea",
+      "id": "t_tight_curl_pattern_shape_and",
+      "label": "Guide / Section — Text: Tight curl pattern. Shape and even lengt",
+      "default": "Tight curl pattern. Shape and even length matter most. Works great in both short and fuller styles."
+    },
+    {
+      "type": "text",
+      "id": "t_two_more_things_matter_as_mu",
+      "label": "Guide / Section — Text: Two more things matter as much as textur",
+      "default": "Two more things matter as much as texture:"
+    },
+    {
+      "type": "textarea",
+      "id": "t_fine_vs_coarse_is_about_how_",
+      "label": "Guide / Section — Text: Fine vs. coarse is about how thick each ",
+      "default": "Fine vs. coarse is about how thick each strand is. Thin vs. dense is about how many hairs you have. You can have fine, dense hair or coarse, thin hair. Fine or lower-density hair usually looks fuller with strategic texture and without styles that separate the hair and show scalp."
+    },
+    {
+      "type": "textarea",
+      "id": "t_growth_patterns_and_cowlicks",
+      "label": "Guide / Section — Text: Growth patterns and cowlicks decide whic",
+      "default": "Growth patterns and cowlicks decide which way your hair wants to go. A strong cowlick is usually better built into the cut than fought every morning. If your hairline is receding or your hair is thinning, that changes the plan too."
+    },
+    {
+      "type": "text",
+      "id": "t_texture_strand_thickness_and",
+      "label": "Guide / Section — Text: Texture, strand thickness and density ea",
+      "default": "Texture, strand thickness and density each change which haircut works."
+    },
+    {
+      "type": "text",
+      "id": "t_03",
+      "label": "Guide / Section — Text: 03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "t_step_3_should_you_bring_a_pi",
+      "label": "Guide / Section — Heading: Step 3: Should you bring a picture to yo",
+      "default": "Step 3: Should you bring a picture to your barber?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_yes_bring_2_3_reference_phot",
+      "label": "Guide / Section — Text: Yes. Bring 2–3 reference photos. Photos ",
+      "default": "Yes. Bring 2–3 reference photos. Photos are clearer than haircut terms, which mean different things to different people."
+    },
+    {
+      "type": "textarea",
+      "id": "t_just_don_t_expect_to_look_id",
+      "label": "Guide / Section — Text: Just don’t expect to look identical to t",
+      "default": "Just don’t expect to look identical to the person in the photo. Your hair, hairline and head shape are different, so the photo is a direction, not a blueprint."
+    },
+    {
+      "type": "textarea",
+      "id": "t_you_ll_get_more_out_of_a_pho",
+      "label": "Guide / Section — Text: You’ll get more out of a photo if the pe",
+      "default": "You’ll get more out of a photo if the person in it has hair similar to yours: similar texture, similar density, a similar hairline, and a similar face or head shape."
+    },
+    {
+      "type": "textarea",
+      "id": "t_show_your_barber_what_you_li",
+      "label": "Guide / Section — Text: Show your barber what you like about the",
+      "default": "Show your barber what you like about the photo, and ask what would need to change to make it work for you."
+    },
+    {
+      "type": "text",
+      "id": "t_two_or_three_photos_of_hair_",
+      "label": "Guide / Section — Text: Two or three photos of hair like yours b",
+      "default": "Two or three photos of hair like yours beat one photo of a celebrity."
+    },
+    {
+      "type": "text",
+      "id": "t_haircuts_for_thinning_hair_a",
+      "label": "Guide / Section — Link text: Haircuts for thinning hair and receding ",
+      "default": "Haircuts for thinning hair and receding hairlines →"
+    },
+    {
+      "type": "text",
+      "id": "t_04",
+      "label": "Guide / Section — Text: 04",
+      "default": "04"
+    },
+    {
+      "type": "text",
+      "id": "t_step_4_why_does_a_barber_con",
+      "label": "Guide / Section — Heading: Step 4: Why does a barber consultation m",
+      "default": "Step 4: Why does a barber consultation matter?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_consultation_is_part_of_",
+      "label": "Guide / Section — Text: The consultation is part of the haircut.",
+      "default": "The consultation is part of the haircut. Before cutting, a good barber should look at your growth patterns, face and head shape, texture, density, hairline, the style you want, how well you can style it, and how often you’re willing to come in."
+    },
+    {
+      "type": "textarea",
+      "id": "t_that_conversation_is_what_we",
+      "label": "Guide / Section — Text: That conversation is what we start every",
+      "default": "That conversation is what we start every appointment with at our shop in Orem. It’s also why seeing the same barber over time helps. Each visit, your barber learns more about how your hair grows and what you like, and the cut gets refined, a bit like a suit that fits better after a second fitting."
+    },
+    {
+      "type": "textarea",
+      "id": "t_looking_for_a_new_barber_ask",
+      "label": "Guide / Section — Text: Looking for a new barber? Ask people wit",
+      "default": "Looking for a new barber? Ask people with haircuts you like where they go, and look through a barber’s Instagram before you book. Once you sit down, you don’t have to ask for a specific cut. Try: “Based on my hair and face, what would you recommend?”"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_our_barbers",
+      "label": "Guide / Section — Link text: Meet our barbers →",
+      "default": "Meet our barbers →"
+    },
+    {
+      "type": "text",
+      "id": "t_05",
+      "label": "Guide / Section — Text: 05",
+      "default": "05"
+    },
+    {
+      "type": "text",
+      "id": "t_step_5_how_much_maintenance_",
+      "label": "Guide / Section — Heading: Step 5: How much maintenance should your",
+      "default": "Step 5: How much maintenance should your haircut take?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_right_haircut_has_to_loo",
+      "label": "Guide / Section — Text: The right haircut has to look good on a ",
+      "default": "The right haircut has to look good on a normal Tuesday morning when you’re styling it yourself, not just when you walk out of the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_how_much_work_a_style_takes_",
+      "label": "Guide / Section — Text: How much work a style takes depends on y",
+      "default": "How much work a style takes depends on your hair, but as a rough guide:"
+    },
+    {
+      "type": "text",
+      "id": "t_usually_lower_maintenance",
+      "label": "Guide / Section — Text: Usually lower maintenance",
+      "default": "Usually lower maintenance"
+    },
+    {
+      "type": "text",
+      "id": "t_buzz_cuts_short_textured_cro",
+      "label": "Guide / Section — Text: Buzz cuts, short textured crops, French ",
+      "default": "Buzz cuts, short textured crops, French crops, many shorter tapers and textured fades."
+    },
+    {
+      "type": "text",
+      "id": "t_usually_higher_maintenance",
+      "label": "Guide / Section — Text: Usually higher maintenance",
+      "default": "Usually higher maintenance"
+    },
+    {
+      "type": "text",
+      "id": "t_pompadours_longer_slick_back",
+      "label": "Guide / Section — Text: Pompadours, longer slick backs, some qui",
+      "default": "Pompadours, longer slick backs, some quiffs and longer styled looks."
+    },
+    {
+      "type": "textarea",
+      "id": "t_before_your_barber_starts_as",
+      "label": "Guide / Section — Text: Before your barber starts, ask: how ofte",
+      "default": "Before your barber starts, ask: how often will I need a haircut? How long will it take to style? Do I need a blow dryer? Which products do I need, and how much? How do I style it at home? Don’t leave the chair until you know."
+    },
+    {
+      "type": "text",
+      "id": "t_ask_these_before_the_first_c",
+      "label": "Guide / Section — Text: Ask these before the first cut, not afte",
+      "default": "Ask these before the first cut, not after."
+    },
+    {
+      "type": "text",
+      "id": "t_fade_haircuts_explained",
+      "label": "Guide / Section — Link text: Fade haircuts explained →",
+      "default": "Fade haircuts explained →"
+    },
+    {
+      "type": "text",
+      "id": "t_06",
+      "label": "Guide / Section — Text: 06",
+      "default": "06"
+    },
+    {
+      "type": "text",
+      "id": "t_what_should_you_tell_your_ba",
+      "label": "Guide / Section — Heading: What should you tell your barber if you ",
+      "default": "What should you tell your barber if you don’t know what haircut you want?"
+    },
+    {
+      "type": "text",
+      "id": "t_tell_them_exactly_that_you_d",
+      "label": "Guide / Section — Text: Tell them exactly that. You don’t need t",
+      "default": "Tell them exactly that. You don’t need to know barber terms before you book."
+    },
+    {
+      "type": "textarea",
+      "id": "t_try_i_want_to_change_my_hair",
+      "label": "Guide / Section — Text: Try: “I want to change my hairstyle, but",
+      "default": "Try: “I want to change my hairstyle, but I’m not sure what would suit me. What would you recommend based on my face shape, hair type and how much styling I’m willing to do?”"
+    },
+    {
+      "type": "text",
+      "id": "t_a_good_barber_will_take_it_f",
+      "label": "Guide / Section — Text: A good barber will take it from there.",
+      "default": "A good barber will take it from there."
+    },
+    {
+      "type": "text",
+      "id": "t_07",
+      "label": "Guide / Section — Text: 07",
+      "default": "07"
+    },
+    {
+      "type": "text",
+      "id": "t_the_best_haircut_is_personal",
+      "label": "Guide / Section — Heading: The best haircut is personal",
+      "default": "The best haircut is personal"
+    },
+    {
+      "type": "textarea",
+      "id": "t_there_isn_t_one_perfect_men_",
+      "label": "Guide / Section — Text: There isn’t one perfect men’s haircut. T",
+      "default": "There isn’t one perfect men’s haircut. The right one comes from putting together your face and head shape, texture, density, hairline, personal style, lifestyle and how much maintenance you want, with a barber who knows how to combine them."
+    },
+    {
+      "type": "text",
+      "id": "t_take_inspiration_from_other_",
+      "label": "Guide / Section — Text: Take inspiration from other people’s hai",
+      "default": "Take inspiration from other people’s haircuts. Then adapt it to you."
+    },
+    {
+      "type": "text",
+      "id": "t_non_surgical_hair_replacemen",
+      "label": "Guide / Section — Link text: Non-surgical hair replacement →",
+      "default": "Non-surgical hair replacement →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / FAQ"
+    },
+    {
+      "type": "text",
+      "id": "t_questions",
+      "label": "Guide / FAQ — Heading: Questions",
+      "default": "Questions"
+    },
+    {
+      "type": "textarea",
+      "id": "t_start_with_your_face_shape_t",
+      "label": "Guide / FAQ — Text: Start with your face shape, then look at",
+      "default": "Start with your face shape, then look at your forehead, jaw, hairline and head shape. Most good haircuts create balance, adding height or width where your face needs it. A barber can assess this in person in a few minutes."
+    },
+    {
+      "type": "textarea",
+      "id": "t_say_you_want_a_change_but_ar",
+      "label": "Guide / FAQ — Text: Say you want a change but aren’t sure wh",
+      "default": "Say you want a change but aren’t sure what suits you, and ask for a recommendation based on your face shape, hair type and how much styling you’ll do."
+    },
+    {
+      "type": "textarea",
+      "id": "t_yes_2_3_photos_ideally_of_me",
+      "label": "Guide / FAQ — Text: Yes, 2–3 photos, ideally of men with hai",
+      "default": "Yes, 2–3 photos, ideally of men with hair and a hairline similar to yours. Treat them as a direction, not an exact copy."
+    },
+    {
+      "type": "textarea",
+      "id": "t_work_with_your_texture_wavy_",
+      "label": "Guide / FAQ — Text: Work with your texture. Wavy hair suits ",
+      "default": "Work with your texture. Wavy hair suits textured styles, curly hair needs enough length for the curl to form, and fine or thin hair usually looks fuller with texture and shorter sides."
+    },
+    {
+      "type": "textarea",
+      "id": "t_it_depends_on_the_style_and_",
+      "label": "Guide / FAQ — Text: It depends on the style and your hair. S",
+      "default": "It depends on the style and your hair. Short crops and buzz cuts take little styling. Pompadours and longer styled looks take more time, product and often a blow dryer. Ask your barber before they start."
+    },
+    {
+      "type": "textarea",
+      "id": "t_yes_recommending_a_haircut_i",
+      "label": "Guide / FAQ — Text: Yes. Recommending a haircut is part of a",
+      "default": "Yes. Recommending a haircut is part of a barber’s job. At Broken Arrow, every appointment starts with a consultation."
+    },
+    {
+      "type": "header",
+      "content": "Text: Guide / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_375_",
+      "label": "Guide / CTA — Text: Broken Arrow Barbershop · 375 E 800 S, S",
+      "default": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_what_haircut_would_",
+      "label": "Guide / CTA — Heading: Not sure what haircut would suit you?",
+      "default": "Not sure what haircut would suit you?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_book_a_haircut_at_broken_arr",
+      "label": "Guide / CTA — Text: Book a haircut at Broken Arrow Barbersho",
+      "default": "Book a haircut at Broken Arrow Barbershop in Orem. Bring a few inspiration photos, or come in with no idea at all. We’ll look at your hair, face shape, growth patterns and lifestyle and help you choose a haircut that actually works for you."
+    },
+    {
+      "type": "text",
+      "id": "t_book_a_haircut",
+      "label": "Guide / CTA — Link text: BOOK A HAIRCUT",
+      "default": "BOOK A HAIRCUT"
+    },
+    {
+      "type": "text",
+      "id": "t_see_services",
+      "label": "Guide / CTA — Link text: See services",
+      "default": "See services"
+    }
+  ]
+}
+{% endschema %}

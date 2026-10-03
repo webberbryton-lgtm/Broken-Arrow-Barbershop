@@ -1,0 +1,587 @@
+{%- comment -%} Generated from the Claude Design page "Shop". {%- endcomment -%}
+{%- liquid
+if section.settings.img_clay_hero != blank
+  assign img_clay_hero = section.settings.img_clay_hero | image_url: width: 2400
+else
+  assign img_clay_hero = 'ba-clay-hero.webp' | asset_url
+endif
+if section.settings.img_clay_card != blank
+  assign img_clay_card = section.settings.img_clay_card | image_url: width: 2400
+else
+  assign img_clay_card = 'ba-clay-card.webp' | asset_url
+endif
+if section.settings.img_cream_card != blank
+  assign img_cream_card = section.settings.img_cream_card | image_url: width: 2400
+else
+  assign img_cream_card = 'ba-cream-card.webp' | asset_url
+endif
+if section.settings.img_salt_card != blank
+  assign img_salt_card = section.settings.img_salt_card | image_url: width: 2400
+else
+  assign img_salt_card = 'ba-salt-card.webp' | asset_url
+endif
+if section.settings.img_shampoo_card != blank
+  assign img_shampoo_card = section.settings.img_shampoo_card | image_url: width: 2400
+else
+  assign img_shampoo_card = 'ba-shampoo-card.webp' | asset_url
+endif
+if section.settings.img_conditioner_card != blank
+  assign img_conditioner_card = section.settings.img_conditioner_card | image_url: width: 2400
+else
+  assign img_conditioner_card = 'ba-conditioner-card.webp' | asset_url
+endif
+if section.settings.img_aftershave_card != blank
+  assign img_aftershave_card = section.settings.img_aftershave_card | image_url: width: 2400
+else
+  assign img_aftershave_card = 'ba-aftershave-card.webp' | asset_url
+endif
+if section.settings.img_refuge_card != blank
+  assign img_refuge_card = section.settings.img_refuge_card | image_url: width: 2400
+else
+  assign img_refuge_card = 'ba-refuge-card.webp' | asset_url
+endif
+if section.settings.img_wash_brush != blank
+  assign img_wash_brush = section.settings.img_wash_brush | image_url: width: 2400
+else
+  assign img_wash_brush = 'ba-wash-brush.webp' | asset_url
+endif
+-%}
+<style>
+.bah-shop-0:hover { color: var(--green) !important; }
+</style>
+<div class="ba-page" data-ba-page="shop" data-ba-active="all">
+<section data-screen-label="Shop / Hero" style="position: relative; background: var(--band); color: var(--on-band); min-height: clamp(560px, 82vh, 820px); display: flex; align-items: center; overflow: hidden;">
+<img alt="Broken Arrow Grooming matte clay jar on a rock with mountains behind" loading="lazy" src="{{ img_clay_hero }}" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: 70% center;"/>
+<div style="position: absolute; inset: 0px; background: linear-gradient(90deg, rgba(22, 23, 26, 0.88) 0%, rgba(22, 23, 26, 0.6) 38%, rgba(22, 23, 26, 0) 68%);"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 28px;">
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_broken_arrow_grooming_first_ | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(48px, 7vw, 96px), 11vw); letter-spacing: -0.045em; line-height: 0.92; max-width: 10ch;">{{ section.settings.t_the_clay_we_use_in_the_chair | escape }}</h1>
+<p style="max-width: 460px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; opacity: 0.9; text-wrap: pretty;">{{ section.settings.t_matte_clay_firm_hold_no_shin | escape }}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+<a class="ba-btn ba-btn-primary ba-on-dark" href="/products/matte-clay">{{ section.settings.t_see_the_clay | escape }}</a>
+</div>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_developed_and_used_at_broken | escape }}</p>
+</div></section><section data-screen-label="Shop / Lineup intro" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px) 32px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px;">
+<h2 class="ba-display" style="font-size: clamp(40px, 5vw, 64px);">{{ section.settings.t_the_lineup | escape }}</h2>
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 440px;">
+<p style="max-width: 440px; font-size: 17px; line-height: 28px; color: var(--ink-muted); text-wrap: pretty;">{{ section.settings.t_five_products_released_one_a | escape }}</p>
+<a class="ba-label" href="/pages/product-quiz" style="color: var(--ink); text-decoration: none; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; min-height: 44px; line-height: 22px;"><span style="color: var(--ink-muted);">{{ section.settings.t_not_sure_which | escape }}</span><span style="border-bottom: 2px solid var(--green); padding-bottom: 2px;">{{ section.settings.t_take_the_30_second_quiz | escape }}</span></a>
+</div>
+</div></section><section data-screen-label="Shop / Grid" id="shop" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 8vw, 96px); display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); padding: 8px 0px;">
+<div data-ba-filter="underline" data-ba-filter-hash="grooming" data-ba-filter-scope="" role="tablist" style="display: flex; flex-wrap: wrap; gap: 4px 28px;">
+<button aria-selected="true" class="bah-shop-0" data-ba-tab="all" role="tab" style="background: none; border-top: 0px; border-right: 0px; border-bottom: 2px solid var(--green); border-left: 0px; border-image: initial; padding: 0px; min-height: 44px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);">{{ section.settings.t_all | escape }}</button>
+<button aria-selected="false" class="bah-shop-0" data-ba-tab="grooming" role="tab" style="background: none; border-width: 0px 0px 2px; border-top-style: initial; border-right-style: initial; border-bottom-style: solid; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-bottom-color: transparent; border-left-color: initial; border-image: initial; padding: 0px; min-height: 44px; cursor: pointer; font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);">{{ section.settings.t_grooming | escape }}</button>
+</div>
+</div>
+<div data-grid="shop" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 48px 32px;">
+<article data-ba-cat="grooming" id="clay" style="display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 140px;">
+<a aria-label="Matte clay" href="/products/matte-clay" style="position: relative; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 4 / 5; background: var(--canvas-sunk); padding: 16px; text-decoration: none; overflow: hidden;">
+<div aria-label="Broken Arrow Grooming matte clay jar with its box" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_clay_card }}"); background-size: cover; background-position: center center;'></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+<span class="ba-label" style="background: var(--canvas); padding: 6px 10px;">{{ section.settings.t_out_of_stock | escape }}</span>
+</div>
+</a>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--line); padding-top: 14px;">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_grooming_2 | escape }}</p>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+<h2 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;"><a href="/products/matte-clay" style="color: var(--ink); text-decoration: none;">{{ section.settings.t_matte_clay | escape }}</a></h2>
+<p style="font:600 17px/28px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ section.settings.t_28 | escape }}</p>
+</div>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_firm_hold_no_shine_what_we_s | escape }}</p>
+</div>
+</article>
+<article data-ba-cat="grooming" id="cream" style="display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 140px;">
+<a aria-label="Styling cream" href="#shop" style="position: relative; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 4 / 5; background: var(--canvas-sunk); padding: 16px; text-decoration: none; overflow: hidden;">
+<div aria-label="Broken Arrow Grooming styling cream jar" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_cream_card }}"); background-size: cover; background-position: center center;'></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+<span class="ba-label" style="background: var(--canvas); padding: 6px 10px;">{{ section.settings.t_out_of_stock_2 | escape }}</span>
+</div>
+</a>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--line); padding-top: 14px;">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_grooming_3 | escape }}</p>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+<h2 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;"><a href="#shop" style="color: var(--ink); text-decoration: none;">{{ section.settings.t_styling_cream | escape }}</a></h2>
+<p style="font:600 17px/28px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ section.settings.t_28_2 | escape }}</p>
+</div>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_light_hold_with_a_natural_fi | escape }}</p>
+</div>
+</article>
+<article data-ba-cat="grooming" id="salt" style="display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 140px;">
+<a aria-label="Sea salt spray" href="#shop" style="position: relative; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 4 / 5; background: var(--canvas-sunk); padding: 16px; text-decoration: none; overflow: hidden;">
+<div aria-label="Broken Arrow Grooming sea salt spray bottle" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_salt_card }}"); background-size: cover; background-position: center center;'></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+<span class="ba-label" style="background: var(--canvas); padding: 6px 10px;">{{ section.settings.t_out_of_stock_3 | escape }}</span>
+</div>
+</a>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--line); padding-top: 14px;">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_grooming_4 | escape }}</p>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+<h2 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;"><a href="#shop" style="color: var(--ink); text-decoration: none;">{{ section.settings.t_sea_salt_spray | escape }}</a></h2>
+<p style="font:600 17px/28px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ section.settings.t_22 | escape }}</p>
+</div>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_pre_styler_for_texture_and_v | escape }}</p>
+</div>
+</article>
+<article data-ba-cat="grooming" id="shampoo" style="display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 140px;">
+<a aria-label="Shampoo" href="#shop" style="position: relative; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 4 / 5; background: var(--canvas-sunk); padding: 16px; text-decoration: none; overflow: hidden;">
+<div aria-label="Broken Arrow Grooming shampoo, 300ml bottle" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_shampoo_card }}"); background-size: cover; background-position: center center;'></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+<span class="ba-label" style="background: var(--canvas); padding: 6px 10px;">{{ section.settings.t_out_of_stock_4 | escape }}</span>
+</div>
+</a>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--line); padding-top: 14px;">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_grooming_5 | escape }}</p>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+<h2 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;"><a href="#shop" style="color: var(--ink); text-decoration: none;">{{ section.settings.t_shampoo | escape }}</a></h2>
+<p style="font:600 17px/28px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ section.settings.t_28_3 | escape }}</p>
+</div>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_daily_shampoo_for_men_s_hair | escape }}</p>
+</div>
+</article>
+<article data-ba-cat="grooming" id="cond" style="display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 140px;">
+<a aria-label="Conditioner" href="#shop" style="position: relative; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 4 / 5; background: var(--canvas-sunk); padding: 16px; text-decoration: none; overflow: hidden;">
+<div aria-label="Broken Arrow Grooming conditioner, 300ml bottle" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_conditioner_card }}"); background-size: cover; background-position: center center;'></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+<span class="ba-label" style="background: var(--canvas); padding: 6px 10px;">{{ section.settings.t_out_of_stock_5 | escape }}</span>
+</div>
+</a>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--line); padding-top: 14px;">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_grooming_6 | escape }}</p>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+<h2 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;"><a href="#shop" style="color: var(--ink); text-decoration: none;">{{ section.settings.t_conditioner | escape }}</a></h2>
+<p style="font:600 17px/28px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ section.settings.t_28_4 | escape }}</p>
+</div>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_daily_conditioner_to_pair_wi | escape }}</p>
+</div>
+</article>
+<article data-ba-cat="grooming" id="aftershave" style="display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 140px;">
+<a aria-label="Aftershave" href="#shop" style="position: relative; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 4 / 5; background: var(--canvas-sunk); padding: 16px; text-decoration: none; overflow: hidden;">
+<div aria-label="Broken Arrow Grooming aftershave, 120ml amber bottle" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_aftershave_card }}"); background-size: cover; background-position: center center;'></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+<span class="ba-label" style="background: var(--canvas); padding: 6px 10px;">{{ section.settings.t_out_of_stock_6 | escape }}</span>
+</div>
+</a>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--line); padding-top: 14px;">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_grooming_7 | escape }}</p>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+<h2 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;"><a href="#shop" style="color: var(--ink); text-decoration: none;">{{ section.settings.t_aftershave | escape }}</a></h2>
+<p style="font:600 17px/28px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ section.settings.t_26 | escape }}</p>
+</div>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_soothes_and_refreshes_after_ | escape }}</p>
+</div>
+</article>
+<article data-ba-cat="grooming" id="refuge" style="display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 140px;">
+<a aria-label="Refuge" href="#shop" style="position: relative; display: flex; flex-direction: column; justify-content: space-between; aspect-ratio: 4 / 5; background: var(--canvas-sunk); padding: 16px; text-decoration: none; overflow: hidden;">
+<div aria-label="Refuge by Broken Arrow Grooming, 30ml extrait de parfum bottle" role="img" style='position: absolute; inset: 0px; background-image: url("{{ img_refuge_card }}"); background-size: cover; background-position: center center;'></div>
+<div style="position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+<span class="ba-label" style="background: var(--canvas); padding: 6px 10px;">{{ section.settings.t_out_of_stock_7 | escape }}</span>
+</div>
+</a>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--line); padding-top: 14px;">
+<p class="ba-label" style="color: var(--ink-muted);">{{ section.settings.t_grooming_8 | escape }}</p>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px;">
+<h2 style="font: 800 24px/28px var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;"><a href="#shop" style="color: var(--ink); text-decoration: none;">{{ section.settings.t_refuge | escape }}</a></h2>
+<p style="font:600 17px/28px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ section.settings.t_159 | escape }}</p>
+</div>
+<p style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_extrait_de_parfum_30ml | escape }}</p>
+</div>
+</article>
+</div>
+</div></section><section data-screen-label="Shop / Developed by barbers" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<img alt="A barber working shampoo through a client’s hair with a scalp brush at the shop sink" loading="lazy" src="{{ img_wash_brush }}" style="flex: 1 1 420px; min-width: 0px; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 40%; display: block;"/>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_developed_by_barbers | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(36px, 4.4vw, 56px); max-width: 12ch;">{{ section.settings.t_tested_on_clients_before_it_ | escape }}</h2>
+<p style="max-width: 480px; font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_every_broken_arrow_grooming_ | escape }}</p>
+<div><a class="ba-btn ba-btn-text ba-on-dark" href="{{ routes.root_url }}">{{ section.settings.t_visit_the_barbershop | escape }}</a></div>
+</div>
+</div></section>
+</div>
+<script src="{{ 'ba-filter.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Shop",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_clay_hero",
+      "label": "Shop / Hero — photo (clay-hero.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_clay_card",
+      "label": "Shop / Grid — photo (clay-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cream_card",
+      "label": "Shop / Grid — photo (cream-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_salt_card",
+      "label": "Shop / Grid — photo (salt-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shampoo_card",
+      "label": "Shop / Grid — photo (shampoo-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_conditioner_card",
+      "label": "Shop / Grid — photo (conditioner-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_aftershave_card",
+      "label": "Shop / Grid — photo (aftershave-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_refuge_card",
+      "label": "Shop / Grid — photo (refuge-card.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_wash_brush",
+      "label": "Shop / Developed by barbers — photo (wash-brush.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Shop / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_grooming_first_",
+      "label": "Shop / Hero — Text: Broken Arrow Grooming · First product",
+      "default": "Broken Arrow Grooming · First product"
+    },
+    {
+      "type": "text",
+      "id": "t_the_clay_we_use_in_the_chair",
+      "label": "Shop / Hero — Heading: The clay we use in the chair.",
+      "default": "The clay we use in the chair."
+    },
+    {
+      "type": "textarea",
+      "id": "t_matte_clay_firm_hold_no_shin",
+      "label": "Shop / Hero — Text: Matte clay. Firm hold, no shine, washes ",
+      "default": "Matte clay. Firm hold, no shine, washes out clean. Coming soon to order online or pick up at the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_see_the_clay",
+      "label": "Shop / Hero — Link text: SEE THE CLAY",
+      "default": "SEE THE CLAY"
+    },
+    {
+      "type": "text",
+      "id": "t_developed_and_used_at_broken",
+      "label": "Shop / Hero — Text: Developed and used at Broken Arrow Barbe",
+      "default": "Developed and used at Broken Arrow Barbershop, Orem, Utah"
+    },
+    {
+      "type": "header",
+      "content": "Text: Shop / Lineup intro"
+    },
+    {
+      "type": "text",
+      "id": "t_the_lineup",
+      "label": "Shop / Lineup intro — Heading: The lineup",
+      "default": "The lineup"
+    },
+    {
+      "type": "textarea",
+      "id": "t_five_products_released_one_a",
+      "label": "Shop / Lineup intro — Text: Five products, released one at a time. C",
+      "default": "Five products, released one at a time. Clay first, then cream, sea salt spray, shampoo and conditioner."
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_which",
+      "label": "Shop / Lineup intro — Text: Not sure which?",
+      "default": "Not sure which?"
+    },
+    {
+      "type": "text",
+      "id": "t_take_the_30_second_quiz",
+      "label": "Shop / Lineup intro — Text: Take the 30-second quiz →",
+      "default": "Take the 30-second quiz →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Shop / Grid"
+    },
+    {
+      "type": "text",
+      "id": "t_all",
+      "label": "Shop / Grid — Text: All",
+      "default": "All"
+    },
+    {
+      "type": "text",
+      "id": "t_grooming",
+      "label": "Shop / Grid — Text: Grooming",
+      "default": "Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_out_of_stock",
+      "label": "Shop / Grid — Text: Out of stock",
+      "default": "Out of stock"
+    },
+    {
+      "type": "text",
+      "id": "t_grooming_2",
+      "label": "Shop / Grid — Text: Grooming",
+      "default": "Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_matte_clay",
+      "label": "Shop / Grid — Link text: Matte clay",
+      "default": "Matte clay"
+    },
+    {
+      "type": "text",
+      "id": "t_28",
+      "label": "Shop / Grid — Text: $28",
+      "default": "$28"
+    },
+    {
+      "type": "text",
+      "id": "t_firm_hold_no_shine_what_we_s",
+      "label": "Shop / Grid — Text: Firm hold, no shine. What we style with ",
+      "default": "Firm hold, no shine. What we style with in the shop."
+    },
+    {
+      "type": "text",
+      "id": "t_out_of_stock_2",
+      "label": "Shop / Grid — Text: Out of stock",
+      "default": "Out of stock"
+    },
+    {
+      "type": "text",
+      "id": "t_grooming_3",
+      "label": "Shop / Grid — Text: Grooming",
+      "default": "Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_styling_cream",
+      "label": "Shop / Grid — Link text: Styling cream",
+      "default": "Styling cream"
+    },
+    {
+      "type": "text",
+      "id": "t_28_2",
+      "label": "Shop / Grid — Text: $28",
+      "default": "$28"
+    },
+    {
+      "type": "text",
+      "id": "t_light_hold_with_a_natural_fi",
+      "label": "Shop / Grid — Text: Light hold with a natural finish, for lo",
+      "default": "Light hold with a natural finish, for longer and textured hair."
+    },
+    {
+      "type": "text",
+      "id": "t_out_of_stock_3",
+      "label": "Shop / Grid — Text: Out of stock",
+      "default": "Out of stock"
+    },
+    {
+      "type": "text",
+      "id": "t_grooming_4",
+      "label": "Shop / Grid — Text: Grooming",
+      "default": "Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_sea_salt_spray",
+      "label": "Shop / Grid — Link text: Sea salt spray",
+      "default": "Sea salt spray"
+    },
+    {
+      "type": "text",
+      "id": "t_22",
+      "label": "Shop / Grid — Text: $22",
+      "default": "$22"
+    },
+    {
+      "type": "text",
+      "id": "t_pre_styler_for_texture_and_v",
+      "label": "Shop / Grid — Text: Pre-styler for texture and volume before",
+      "default": "Pre-styler for texture and volume before blow-drying."
+    },
+    {
+      "type": "text",
+      "id": "t_out_of_stock_4",
+      "label": "Shop / Grid — Text: Out of stock",
+      "default": "Out of stock"
+    },
+    {
+      "type": "text",
+      "id": "t_grooming_5",
+      "label": "Shop / Grid — Text: Grooming",
+      "default": "Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_shampoo",
+      "label": "Shop / Grid — Link text: Shampoo",
+      "default": "Shampoo"
+    },
+    {
+      "type": "text",
+      "id": "t_28_3",
+      "label": "Shop / Grid — Text: $28",
+      "default": "$28"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_shampoo_for_men_s_hair",
+      "label": "Shop / Grid — Text: Daily shampoo for men’s hair.",
+      "default": "Daily shampoo for men’s hair."
+    },
+    {
+      "type": "text",
+      "id": "t_out_of_stock_5",
+      "label": "Shop / Grid — Text: Out of stock",
+      "default": "Out of stock"
+    },
+    {
+      "type": "text",
+      "id": "t_grooming_6",
+      "label": "Shop / Grid — Text: Grooming",
+      "default": "Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_conditioner",
+      "label": "Shop / Grid — Link text: Conditioner",
+      "default": "Conditioner"
+    },
+    {
+      "type": "text",
+      "id": "t_28_4",
+      "label": "Shop / Grid — Text: $28",
+      "default": "$28"
+    },
+    {
+      "type": "text",
+      "id": "t_daily_conditioner_to_pair_wi",
+      "label": "Shop / Grid — Text: Daily conditioner to pair with the shamp",
+      "default": "Daily conditioner to pair with the shampoo."
+    },
+    {
+      "type": "text",
+      "id": "t_out_of_stock_6",
+      "label": "Shop / Grid — Text: Out of stock",
+      "default": "Out of stock"
+    },
+    {
+      "type": "text",
+      "id": "t_grooming_7",
+      "label": "Shop / Grid — Text: Grooming",
+      "default": "Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_aftershave",
+      "label": "Shop / Grid — Link text: Aftershave",
+      "default": "Aftershave"
+    },
+    {
+      "type": "text",
+      "id": "t_26",
+      "label": "Shop / Grid — Text: $26",
+      "default": "$26"
+    },
+    {
+      "type": "text",
+      "id": "t_soothes_and_refreshes_after_",
+      "label": "Shop / Grid — Text: Soothes and refreshes after a shave. All",
+      "default": "Soothes and refreshes after a shave. All skin types. 120ml."
+    },
+    {
+      "type": "text",
+      "id": "t_out_of_stock_7",
+      "label": "Shop / Grid — Text: Out of stock",
+      "default": "Out of stock"
+    },
+    {
+      "type": "text",
+      "id": "t_grooming_8",
+      "label": "Shop / Grid — Text: Grooming",
+      "default": "Grooming"
+    },
+    {
+      "type": "text",
+      "id": "t_refuge",
+      "label": "Shop / Grid — Link text: Refuge",
+      "default": "Refuge"
+    },
+    {
+      "type": "text",
+      "id": "t_159",
+      "label": "Shop / Grid — Text: $159",
+      "default": "$159"
+    },
+    {
+      "type": "text",
+      "id": "t_extrait_de_parfum_30ml",
+      "label": "Shop / Grid — Text: Extrait de parfum, 30ml.",
+      "default": "Extrait de parfum, 30ml."
+    },
+    {
+      "type": "header",
+      "content": "Text: Shop / Developed by barbers"
+    },
+    {
+      "type": "text",
+      "id": "t_developed_by_barbers",
+      "label": "Shop / Developed by barbers — Text: Developed by barbers",
+      "default": "Developed by barbers"
+    },
+    {
+      "type": "text",
+      "id": "t_tested_on_clients_before_it_",
+      "label": "Shop / Developed by barbers — Heading: Tested on clients before it’s sold.",
+      "default": "Tested on clients before it’s sold."
+    },
+    {
+      "type": "textarea",
+      "id": "t_every_broken_arrow_grooming_",
+      "label": "Shop / Developed by barbers — Text: Every Broken Arrow Grooming product is u",
+      "default": "Every Broken Arrow Grooming product is used in our Orem shop first. If it doesn’t work in the chair, we don’t sell it."
+    },
+    {
+      "type": "text",
+      "id": "t_visit_the_barbershop",
+      "label": "Shop / Developed by barbers — Link text: VISIT THE BARBERSHOP →",
+      "default": "VISIT THE BARBERSHOP →"
+    }
+  ]
+}
+{% endschema %}

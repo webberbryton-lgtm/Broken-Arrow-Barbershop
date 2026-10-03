@@ -1,0 +1,145 @@
+{%- comment -%} Generated from the Claude Design page "Service Quiz". {%- endcomment -%}
+<div class="ba-page" data-ba-page="service-quiz" data-ba-active="services">
+<section data-screen-label="Quiz" style="background: var(--canvas);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(40px, 7vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 20px;">
+<a href="/pages/services" style="font: 600 13px/16px var(--font-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-muted); text-decoration: none;">{{ section.settings.t_services | escape }}</a>
+<h1 class="ba-display" style="font-size: clamp(40px, 6vw, 72px); max-width: 10ch;">{{ section.settings.t_not_sure_which_service_fits_ | escape }}</h1>
+<p style="font-size: 17px; line-height: 28px; color: var(--ink-muted); max-width: 340px; text-wrap: pretty;">{{ section.settings.t_four_quick_questions_you_can | escape }}</p>
+</div>
+<div data-ba-service-quiz="band" style="flex: 2 1 520px; max-width: 760px; min-width: 0px; display: flex; flex-direction: column; border-top: 2px solid var(--ink);">
+<div aria-label="Is this your first visit?" role="group" style="padding: 24px 0px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 16px;">
+<p style="font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_is_this_your_first_visit | escape }}</p>
+<div style="display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0px, 1fr); gap: 8px;">
+<button aria-pressed="false" data-ba-q="first" data-ba-v="yes" style="min-height: 52px; padding: 10px 8px; border: 1px solid var(--line-strong); border-radius: 0px; background: var(--canvas); color: var(--ink); font: 600 12px/16px var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-align: center; transition: background-color 150ms, color 150ms;" type="button">{{ section.settings.t_yes | escape }}</button>
+<button aria-pressed="false" data-ba-q="first" data-ba-v="no" style="min-height: 52px; padding: 10px 8px; border: 1px solid var(--line-strong); border-radius: 0px; background: var(--canvas); color: var(--ink); font: 600 12px/16px var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-align: center; transition: background-color 150ms, color 150ms;" type="button">{{ section.settings.t_no | escape }}</button>
+</div>
+</div>
+<div aria-label="How long do you wear your hair?" role="group" style="padding: 24px 0px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 16px;">
+<p style="font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_how_long_do_you_wear_your_ha | escape }}</p>
+<div style="display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0px, 1fr); gap: 8px;">
+<button aria-pressed="false" data-ba-q="length" data-ba-v="short" style="min-height: 52px; padding: 10px 8px; border: 1px solid var(--line-strong); border-radius: 0px; background: var(--canvas); color: var(--ink); font: 600 12px/16px var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-align: center; transition: background-color 150ms, color 150ms;" type="button">{{ section.settings.t_short_or_faded | escape }}</button>
+<button aria-pressed="false" data-ba-q="length" data-ba-v="mid" style="min-height: 52px; padding: 10px 8px; border: 1px solid var(--line-strong); border-radius: 0px; background: var(--canvas); color: var(--ink); font: 600 12px/16px var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-align: center; transition: background-color 150ms, color 150ms;" type="button">{{ section.settings.t_mid_length_or_longer | escape }}</button>
+</div>
+</div>
+<div aria-label="Keeping your style or changing it?" role="group" style="padding: 24px 0px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 16px;">
+<p style="font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_keeping_your_style_or_changi | escape }}</p>
+<div style="display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0px, 1fr); gap: 8px;">
+<button aria-pressed="false" data-ba-q="want" data-ba-v="keep" style="min-height: 52px; padding: 10px 8px; border: 1px solid var(--line-strong); border-radius: 0px; background: var(--canvas); color: var(--ink); font: 600 12px/16px var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-align: center; transition: background-color 150ms, color 150ms;" type="button">{{ section.settings.t_keeping_it | escape }}</button>
+<button aria-pressed="false" data-ba-q="want" data-ba-v="new" style="min-height: 52px; padding: 10px 8px; border: 1px solid var(--line-strong); border-radius: 0px; background: var(--canvas); color: var(--ink); font: 600 12px/16px var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-align: center; transition: background-color 150ms, color 150ms;" type="button">{{ section.settings.t_something_new | escape }}</button>
+</div>
+</div>
+<div aria-label="Beard too?" role="group" style="padding: 24px 0px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 16px;">
+<p style="font: 800 clamp(18px,2vw,22px)/1.2 var(--font-display); letter-spacing: -0.02em; text-transform: uppercase;">{{ section.settings.t_beard_too | escape }}</p>
+<div style="display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0px, 1fr); gap: 8px;">
+<button aria-pressed="false" data-ba-q="beard" data-ba-v="yes" style="min-height: 52px; padding: 10px 8px; border: 1px solid var(--line-strong); border-radius: 0px; background: var(--canvas); color: var(--ink); font: 600 12px/16px var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-align: center; transition: background-color 150ms, color 150ms;" type="button">{{ section.settings.t_yes_2 | escape }}</button>
+<button aria-pressed="false" data-ba-q="beard" data-ba-v="no" style="min-height: 52px; padding: 10px 8px; border: 1px solid var(--line-strong); border-radius: 0px; background: var(--canvas); color: var(--ink); font: 600 12px/16px var(--font-sans); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; text-align: center; transition: background-color 150ms, color 150ms;" type="button">{{ section.settings.t_no_2 | escape }}</button>
+</div>
+</div>
+</div>
+</div></section>
+</div>
+<script src="{{ 'ba-service-quiz.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "Service Quiz",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text: Quiz"
+    },
+    {
+      "type": "text",
+      "id": "t_services",
+      "label": "Quiz — Link text: ← Services",
+      "default": "← Services"
+    },
+    {
+      "type": "text",
+      "id": "t_not_sure_which_service_fits_",
+      "label": "Quiz — Heading: Not sure which service fits you?",
+      "default": "Not sure which service fits you?"
+    },
+    {
+      "type": "textarea",
+      "id": "t_four_quick_questions_you_can",
+      "label": "Quiz — Text: Four quick questions. You can book any h",
+      "default": "Four quick questions. You can book any haircut as either service; this tells you which one we recommend. Or call the shop and we’ll help you pick."
+    },
+    {
+      "type": "text",
+      "id": "t_is_this_your_first_visit",
+      "label": "Quiz — Text: Is this your first visit?",
+      "default": "Is this your first visit?"
+    },
+    {
+      "type": "text",
+      "id": "t_yes",
+      "label": "Quiz — Text: Yes",
+      "default": "Yes"
+    },
+    {
+      "type": "text",
+      "id": "t_no",
+      "label": "Quiz — Text: No",
+      "default": "No"
+    },
+    {
+      "type": "text",
+      "id": "t_how_long_do_you_wear_your_ha",
+      "label": "Quiz — Text: How long do you wear your hair?",
+      "default": "How long do you wear your hair?"
+    },
+    {
+      "type": "text",
+      "id": "t_short_or_faded",
+      "label": "Quiz — Text: Short or faded",
+      "default": "Short or faded"
+    },
+    {
+      "type": "text",
+      "id": "t_mid_length_or_longer",
+      "label": "Quiz — Text: Mid-length or longer",
+      "default": "Mid-length or longer"
+    },
+    {
+      "type": "text",
+      "id": "t_keeping_your_style_or_changi",
+      "label": "Quiz — Text: Keeping your style or changing it?",
+      "default": "Keeping your style or changing it?"
+    },
+    {
+      "type": "text",
+      "id": "t_keeping_it",
+      "label": "Quiz — Text: Keeping it",
+      "default": "Keeping it"
+    },
+    {
+      "type": "text",
+      "id": "t_something_new",
+      "label": "Quiz — Text: Something new",
+      "default": "Something new"
+    },
+    {
+      "type": "text",
+      "id": "t_beard_too",
+      "label": "Quiz — Text: Beard too?",
+      "default": "Beard too?"
+    },
+    {
+      "type": "text",
+      "id": "t_yes_2",
+      "label": "Quiz — Text: Yes",
+      "default": "Yes"
+    },
+    {
+      "type": "text",
+      "id": "t_no_2",
+      "label": "Quiz — Text: No",
+      "default": "No"
+    }
+  ]
+}
+{% endschema %}

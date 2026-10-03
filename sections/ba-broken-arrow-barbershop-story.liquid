@@ -1,0 +1,738 @@
+{%- comment -%} Generated from the Claude Design page "Blog - Our Story". {%- endcomment -%}
+{%- liquid
+if section.settings.img_shop_interior != blank
+  assign img_shop_interior = section.settings.img_shop_interior | image_url: width: 2400
+else
+  assign img_shop_interior = 'ba-shop-interior.webp' | asset_url
+endif
+if section.settings.img_payson_storefront != blank
+  assign img_payson_storefront = section.settings.img_payson_storefront | image_url: width: 2400
+else
+  assign img_payson_storefront = 'ba-payson-storefront.webp' | asset_url
+endif
+if section.settings.img_payson_lounge != blank
+  assign img_payson_lounge = section.settings.img_payson_lounge | image_url: width: 2400
+else
+  assign img_payson_lounge = 'ba-payson-lounge.webp' | asset_url
+endif
+if section.settings.img_payson_floor != blank
+  assign img_payson_floor = section.settings.img_payson_floor | image_url: width: 2400
+else
+  assign img_payson_floor = 'ba-payson-floor.webp' | asset_url
+endif
+if section.settings.img_payson_cut_pomp != blank
+  assign img_payson_cut_pomp = section.settings.img_payson_cut_pomp | image_url: width: 2400
+else
+  assign img_payson_cut_pomp = 'ba-payson-cut-pomp.webp' | asset_url
+endif
+if section.settings.img_payson_cut_mullet != blank
+  assign img_payson_cut_mullet = section.settings.img_payson_cut_mullet | image_url: width: 2400
+else
+  assign img_payson_cut_mullet = 'ba-payson-cut-mullet.webp' | asset_url
+endif
+if section.settings.img_bryton_hair_system != blank
+  assign img_bryton_hair_system = section.settings.img_bryton_hair_system | image_url: width: 2400
+else
+  assign img_bryton_hair_system = 'ba-bryton-hair-system.webp' | asset_url
+endif
+if section.settings.img_bryton_teaching != blank
+  assign img_bryton_teaching = section.settings.img_bryton_teaching | image_url: width: 2400
+else
+  assign img_bryton_teaching = 'ba-bryton-teaching.webp' | asset_url
+endif
+if section.settings.img_shop_wide != blank
+  assign img_shop_wide = section.settings.img_shop_wide | image_url: width: 2400
+else
+  assign img_shop_wide = 'ba-shop-wide.webp' | asset_url
+endif
+if section.settings.img_cut_textured_flow != blank
+  assign img_cut_textured_flow = section.settings.img_cut_textured_flow | image_url: width: 2400
+else
+  assign img_cut_textured_flow = 'ba-cut-textured-flow.webp' | asset_url
+endif
+if section.settings.img_cut_side_part != blank
+  assign img_cut_side_part = section.settings.img_cut_side_part | image_url: width: 2400
+else
+  assign img_cut_side_part = 'ba-cut-side-part.webp' | asset_url
+endif
+if section.settings.img_cut_curly_taper != blank
+  assign img_cut_curly_taper = section.settings.img_cut_curly_taper | image_url: width: 2400
+else
+  assign img_cut_curly_taper = 'ba-cut-curly-taper.webp' | asset_url
+endif
+if section.settings.img_bryton_class_2 != blank
+  assign img_bryton_class_2 = section.settings.img_bryton_class_2 | image_url: width: 2400
+else
+  assign img_bryton_class_2 = 'ba-bryton-class-2.webp' | asset_url
+endif
+if section.settings.img_bryton_teaching_2 != blank
+  assign img_bryton_teaching_2 = section.settings.img_bryton_teaching_2 | image_url: width: 2400
+else
+  assign img_bryton_teaching_2 = 'ba-bryton-teaching-2.webp' | asset_url
+endif
+-%}
+<style>
+.ba-page[data-ba-page="broken-arrow-barbershop-story"] :is(ul, blockquote) { margin: 0; }
+</style>
+<div class="ba-page" data-ba-page="broken-arrow-barbershop-story" data-ba-active="journal">
+<article><header data-screen-label="Story / Hero" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(64px, 10vw, 140px) clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 28px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_our_story_payson_to_orem | escape }}</p>
+<h1 class="ba-display" style="color: var(--on-band); font-size: min(clamp(44px, 7vw, 96px), 11vw); letter-spacing: -0.045em; line-height: 0.92; max-width: 14ch; text-wrap: balance;">{{ section.settings.t_the_story_of_broken_arrow_ba | escape }}</h1>
+<p style="max-width: 620px; font-size: clamp(18px, 1.8vw, 22px); line-height: 1.6; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_from_a_small_barbershop_in_p | escape }}</p>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_september_26_2026_8_min_read | escape }}</p>
+</div>
+<figure style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(48px, 7vw, 88px); display: flex; flex-direction: column; gap: 12px;">
+<img alt="Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem" loading="lazy" src="{{ img_shop_interior }}" style="width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; opacity: 0.78;">{{ section.settings.t_the_orem_shop_today | escape }}</figcaption>
+</figure></header><section data-screen-label="Story / Intro" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_introduction | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px;">
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;"><a href="{{ routes.root_url }}">{{ section.settings.t_broken_arrow_barbershop | escape }}</a> didn’t start as an established shop in Orem. It started smaller, in Payson, Utah, and grew one client at a time.</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_is_in_orem_now_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_was_founded_by_ | escape }}</p>
+</div></section><section data-screen-label="Story / 01 Payson" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<figure style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<img alt="The original Broken Arrow Barbershop storefront on Main Street in Payson, with the round logo sign in the window" loading="lazy" src="{{ img_payson_storefront }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_broken_arrow_s_first_shop_5_ | escape }}</figcaption>
+</figure>
+<div style="flex: 1 1 440px; max-width: 620px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_01_payson | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 14ch;">{{ section.settings.t_where_broken_arrow_started | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_s_first_chapter | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_by_the_time_the_payson_shop_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_that_s_not_something_that_ha | escape }}</p>
+</div>
+</div></section><figure data-screen-label="Story / Payson photos" style="background: var(--canvas-sunk); margin: 0px;">
+<div style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 4px;">
+<img alt="Waiting area of the Payson shop: guitars on the wall, record shelves and leather chairs" loading="lazy" src="{{ img_payson_lounge }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="The Payson shop floor with a red barber chair and the back bar" loading="lazy" src="{{ img_payson_floor }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="Side profile of a skin fade with a slicked-back top and a full beard, cut in Payson" loading="lazy" src="{{ img_payson_cut_pomp }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="Textured modern mullet with a taper, cut in Payson" loading="lazy" src="{{ img_payson_cut_mullet }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+</div></figure><section data-screen-label="Story / 02 Instructor" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_02_teaching | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_more_than_cutting_hair | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_over_time_bryton_s_work_in_b | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_teaching_put_him_next_to_bar | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_it_s_also_where_two_importan | escape }}</p>
+</div></section><figure data-screen-label="Story / Photo teaching" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 4px;">
+<img alt="Bryton fitting a hair system on a client in the chair" loading="lazy" src="{{ img_bryton_hair_system }}" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: center 30%; display: block;"/>
+<img alt="Bryton demonstrating a haircut on a mannequin head for a class of barber students" loading="lazy" src="{{ img_bryton_teaching }}" style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block;"/></figure><section data-screen-label="Story / 03 Team" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: clamp(40px, 6vw, 64px);">
+<div style="display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: flex-start;">
+<div style="flex: 1 1 440px; max-width: 640px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_03_the_team | escape }}</p>
+<h2 class="ba-display" style="color: var(--on-band); font-size: clamp(32px, 4vw, 48px); max-width: 14ch;">{{ section.settings.t_building_the_broken_arrow_te | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">Before <a href="/pages/team" style="color: var(--on-band);">{{ section.settings.t_connor | escape }}</a> and <a href="/pages/team" style="color: var(--on-band);">{{ section.settings.t_elise | escape }}</a> ever worked at Broken Arrow, Bryton knew them as their instructor. He watched them learn, build their skills, figure out how to work with people, and grow into barbers.</p>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_when_it_was_time_to_put_a_te | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; opacity: 0.85; text-wrap: pretty;">{{ section.settings.t_they_didn_t_answer_an_open_c | escape }}</p>
+</div>
+<blockquote style="flex: 1 1 320px; border-top: 2px solid var(--on-band); padding-top: 32px;">
+<p class="ba-display" style="color: var(--on-band); font-size: clamp(28px, 3.2vw, 40px); line-height: 1.05; max-width: 14ch;">{{ section.settings.t_they_didn_t_answer_a_listing | escape }}</p>
+</blockquote>
+</div>
+<figure style="display: flex; flex-direction: column; gap: 12px;">
+<div style="aspect-ratio: 21 / 9; background: rgb(34, 35, 38); display: flex; align-items: flex-end; padding: 16px;"><p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_photo_needed_bryton_connor_a | escape }}</p></div>
+<figcaption style="font-size: 14px; line-height: 22px; opacity: 0.78;">{{ section.settings.t_bryton_connor_and_elise | escape }}</figcaption>
+</figure>
+</div></section><section data-screen-label="Story / 04 Recognition" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_04_recognition | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_three_best_of_utah_valley_re | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_as_broken_arrow_grew_the_wid | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">That matters to us because Broken Arrow’s reputation has mostly been built by its clients: their reviews, their recommendations, and the local community. <a href="/pages/best-barbershop-utah-valley-2026">{{ section.settings.t_read_about_the_2026_recognit | escape }}</a>.</p>
+</div></section><section data-screen-label="Story / 05 Orem" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 40px clamp(40px, 6vw, 80px); align-items: center;">
+<div style="flex: 1 1 440px; max-width: 620px; display: flex; flex-direction: column; gap: 24px;">
+<p class="ba-label">{{ section.settings.t_05_orem | escape }}</p>
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 14ch;">{{ section.settings.t_a_new_chapter_in_orem | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_s_next_chapter_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_one_of_the_first_milestones_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_that_one_meant_a_lot_a_new_l | escape }}</p>
+</div>
+<figure style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<img alt="Inside the Broken Arrow Barbershop in Orem, Utah" loading="lazy" src="{{ img_shop_wide }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<figcaption style="font-size: 14px; line-height: 22px; color: var(--ink-muted);">{{ section.settings.t_375_e_800_s_suite_12_orem | escape }}</figcaption>
+</figure>
+</div></section><section data-screen-label="Story / 06 Today" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_06_today | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_broken_arrow_today | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">Today Broken Arrow Barbershop is a men’s barbershop in Orem, Utah, serving clients from Orem, Provo, and throughout Utah Valley and Utah County. <a href="/pages/services">{{ section.settings.t_our_services | escape }}</a> are men’s haircuts, haircut and beard, Signature Haircut appointments, and men’s hair replacement and hair systems.</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_the_idea_behind_the_shop_is_ | escape }}</p>
+<p style="font-size: clamp(20px, 2vw, 24px); line-height: 1.55; text-wrap: pretty;">{{ section.settings.t_a_good_barber_should_underst | escape }}</p>
+</div></section><figure data-screen-label="Story / Work" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 4px;">
+<img alt="Textured flow haircut" loading="lazy" src="{{ img_cut_textured_flow }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="Side part haircut" loading="lazy" src="{{ img_cut_side_part }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/>
+<img alt="Curly hair with a taper" loading="lazy" src="{{ img_cut_curly_taper }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;"/></figure><section data-screen-label="Story / 07 Hair loss" style="background: var(--canvas-sunk);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_07_hair_loss | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_helping_men_with_hair_loss | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_one_area_broken_arrow_keeps_ | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_sometimes_changing_the_hairc | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_for_more_significant_hair_lo | escape }}</p>
+<div><a class="ba-btn ba-btn-primary" href="/pages/hair-replacement">{{ section.settings.t_learn_about_men_s_hair_repla | escape }}</a></div>
+</div>
+</div></section><section data-screen-label="Story / 08 Education" style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(16px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_08_what_s_next | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_still_learning_still_teachin | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_education_is_still_a_big_par | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_helping_barbers_grow_and_kee | escape }}</p>
+</div></section><figure data-screen-label="Story / Photo classes" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 4px;">
+<img alt="Bryton teaching a room of barbers, a slide projected on the wall" loading="lazy" src="{{ img_bryton_class_2 }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 60%; display: block;"/>
+<img alt="Bryton speaking to a class with a tablet in hand" loading="lazy" src="{{ img_bryton_teaching_2 }}" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 40%; display: block;"/></figure><section data-screen-label="Story / Conclusion" style="max-width: 1280px; margin: 0px auto; padding: 0px clamp(16px, 5vw, 64px) clamp(56px, 8vw, 96px); display: flex; flex-wrap: wrap; gap: 32px 48px;">
+<p class="ba-label" style="flex: 1 1 220px;">{{ section.settings.t_09 | escape }}</p>
+<div style="flex: 2 1 520px; max-width: 720px; display: flex; flex-direction: column; gap: 24px; border-top: 2px solid var(--ink); padding-top: 32px;">
+<h2 class="ba-display" style="font-size: clamp(32px, 4vw, 48px); max-width: 16ch;">{{ section.settings.t_the_story_isn_t_finished | escape }}</h2>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_broken_arrow_has_gone_from_a | escape }}</p>
+<p style="font-size: 17px; line-height: 28px; text-wrap: pretty;">{{ section.settings.t_to_the_clients_who_supported | escape }}</p>
+</div></section></article><section data-screen-label="Story / CTA" style="background: var(--band); color: var(--on-band);">
+<div style="max-width: 1280px; margin: 0px auto; padding: clamp(56px, 8vw, 112px) clamp(16px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px;">
+<blockquote style="margin: 0px;">
+<p class="ba-display" style="color: var(--on-band); font-size: clamp(36px, 5.2vw, 68px); line-height: 1; max-width: 18ch; text-wrap: balance;">{{ section.settings.t_payson_was_where_broken_arro | escape }}</p>
+</blockquote>
+<div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px solid var(--line-strong); padding-top: 24px;">
+<p class="ba-label" style="color: var(--on-band);">{{ section.settings.t_broken_arrow_barbershop_2 | escape }}</p>
+<p class="ba-label" style="color: var(--on-band); opacity: 0.78;">{{ section.settings.t_orem_utah | escape }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center;">
+<a class="ba-btn ba-btn-secondary ba-on-dark" href="/pages/team">{{ section.settings.t_meet_our_barbers | escape }}</a>
+<a class="ba-btn ba-btn-secondary ba-on-dark" href="/pages/services">{{ section.settings.t_explore_our_services | escape }}</a>
+<a class="ba-btn ba-btn-primary ba-on-dark" href="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services">{{ section.settings.t_book_an_appointment | escape }}</a>
+</div>
+</div></section>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"The Story of Broken Arrow Barbershop: From Payson to Orem","description":"Discover the story of Broken Arrow Barbershop, from its beginnings in Payson to its current award-winning barbershop and team in Orem, Utah.","image":["{{ shop.url }}/assets/photos/shop-interior.jpg","{{ shop.url }}/assets/photos/shop-wide.webp"],"datePublished":"2026-09-26","dateModified":"2026-09-26","mainEntityOfPage":"{{ shop.url }}/pages/broken-arrow-barbershop-story","author":{"@id":"{{ shop.url }}/#shop"},"publisher":{"@id":"{{ shop.url }}/#shop"},"about":{"@id":"{{ shop.url }}/#shop"},"mentions":[{"@id":"{{ shop.url }}/#bryton"},{"@type":"Person","name":"Connor","jobTitle":"Barber","worksFor":{"@id":"{{ shop.url }}/#shop"}},{"@type":"Person","name":"Elise","jobTitle":"Barber","worksFor":{"@id":"{{ shop.url }}/#shop"}},{"@type":"Place","name":"Payson, Utah"},{"@type":"Organization","name":"Daily Herald"}]},{"@type":"Person","@id":"{{ shop.url }}/#bryton","name":"Bryton Webber","jobTitle":"Owner, licensed barber and licensed barber instructor","worksFor":{"@id":"{{ shop.url }}/#shop"}},{"@type":"BarberShop","@id":"{{ shop.url }}/#shop","name":"Broken Arrow Barbershop","url":"{{ shop.url }}/","founder":{"@id":"{{ shop.url }}/#bryton"},"address":{"@type":"PostalAddress","streetAddress":"375 E 800 S, Suite 12","addressLocality":"Orem","addressRegion":"UT","postalCode":"84097","addressCountry":"US"},"areaServed":["Orem","Provo","Utah County","Utah Valley"],"award":"Daily Herald Best of Utah Valley (recognized three times, including 2026)"}]}</script>
+{% schema %}
+{
+  "name": "Blog - Our Story",
+  "tag": "div",
+  "class": "ba-page-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Photos"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_interior",
+      "label": "Story / Hero — photo (shop-interior.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_storefront",
+      "label": "Story / 01 Payson — photo (payson-storefront.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_lounge",
+      "label": "Story / Payson photos — photo (payson-lounge.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_floor",
+      "label": "Story / Payson photos — photo (payson-floor.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_cut_pomp",
+      "label": "Story / Payson photos — photo (payson-cut-pomp.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_payson_cut_mullet",
+      "label": "Story / Payson photos — photo (payson-cut-mullet.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_hair_system",
+      "label": "Story / Photo teaching — photo (bryton-hair-system.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_teaching",
+      "label": "Story / Photo teaching — photo (bryton-teaching.png)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_shop_wide",
+      "label": "Story / 05 Orem — photo (shop-wide.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_textured_flow",
+      "label": "Story / Work — photo (cut-textured-flow.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_side_part",
+      "label": "Story / Work — photo (cut-side-part.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_cut_curly_taper",
+      "label": "Story / Work — photo (cut-curly-taper.webp)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_class_2",
+      "label": "Story / Photo classes — photo (bryton-class-2.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bryton_teaching_2",
+      "label": "Story / Photo classes — photo (bryton-teaching-2.jpg)",
+      "info": "Leave empty to use the built-in photo."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / Hero"
+    },
+    {
+      "type": "text",
+      "id": "t_our_story_payson_to_orem",
+      "label": "Story / Hero — Text: Our story · Payson to Orem",
+      "default": "Our story · Payson to Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_the_story_of_broken_arrow_ba",
+      "label": "Story / Hero — Heading: The Story of Broken Arrow Barbershop: Fr",
+      "default": "The Story of Broken Arrow Barbershop: From Payson to Orem"
+    },
+    {
+      "type": "textarea",
+      "id": "t_from_a_small_barbershop_in_p",
+      "label": "Story / Hero — Text: From a small barbershop in Payson to an ",
+      "default": "From a small barbershop in Payson to an award-winning shop in Orem, this is how Broken Arrow came together."
+    },
+    {
+      "type": "text",
+      "id": "t_september_26_2026_8_min_read",
+      "label": "Story / Hero — Text: September 26, 2026 · 8 min read",
+      "default": "September 26, 2026 · 8 min read"
+    },
+    {
+      "type": "text",
+      "id": "t_the_orem_shop_today",
+      "label": "Story / Hero — Text: The Orem shop today.",
+      "default": "The Orem shop today."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / Intro"
+    },
+    {
+      "type": "text",
+      "id": "t_introduction",
+      "label": "Story / Intro — Text: Introduction",
+      "default": "Introduction"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop",
+      "label": "Story / Intro — Link text: Broken Arrow Barbershop",
+      "default": "Broken Arrow Barbershop"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_is_in_orem_now_",
+      "label": "Story / Intro — Text: Broken Arrow is in Orem now, but a lot o",
+      "default": "Broken Arrow is in Orem now, but a lot of what defines the shop came from those earlier years: relationships with clients, learning and teaching the craft, and trying to make a barbershop people actually want to come back to."
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_was_founded_by_",
+      "label": "Story / Intro — Text: Broken Arrow was founded by Bryton Webbe",
+      "default": "Broken Arrow was founded by Bryton Webber. Bryton has 5 years of experience cutting hair. He’s a licensed barber and a licensed barber instructor."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / 01 Payson"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_s_first_shop_5_",
+      "label": "Story / 01 Payson — Text: Broken Arrow’s first shop, 5 N. Main, Pa",
+      "default": "Broken Arrow’s first shop, 5 N. Main, Payson, Utah."
+    },
+    {
+      "type": "text",
+      "id": "t_01_payson",
+      "label": "Story / 01 Payson — Text: 01 / Payson",
+      "default": "01 / Payson"
+    },
+    {
+      "type": "text",
+      "id": "t_where_broken_arrow_started",
+      "label": "Story / 01 Payson — Heading: Where Broken Arrow Started",
+      "default": "Where Broken Arrow Started"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_s_first_chapter",
+      "label": "Story / 01 Payson — Text: Broken Arrow’s first chapter was in Pays",
+      "default": "Broken Arrow’s first chapter was in Payson. The shop’s reputation there came slowly: one appointment at a time, clients who came back, people who told their friends, and reviews."
+    },
+    {
+      "type": "text",
+      "id": "t_by_the_time_the_payson_shop_",
+      "label": "Story / 01 Payson — Text: By the time the Payson shop closed, it h",
+      "default": "By the time the Payson shop closed, it had more than 240 Google reviews."
+    },
+    {
+      "type": "textarea",
+      "id": "t_that_s_not_something_that_ha",
+      "label": "Story / 01 Payson — Text: That’s not something that happens overni",
+      "default": "That’s not something that happens overnight. Payson is where Broken Arrow learned what kind of shop it wanted to be, and much of that came with it to Orem."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / 02 Instructor"
+    },
+    {
+      "type": "text",
+      "id": "t_02_teaching",
+      "label": "Story / 02 Instructor — Text: 02 / Teaching",
+      "default": "02 / Teaching"
+    },
+    {
+      "type": "text",
+      "id": "t_more_than_cutting_hair",
+      "label": "Story / 02 Instructor — Heading: More Than Cutting Hair",
+      "default": "More Than Cutting Hair"
+    },
+    {
+      "type": "textarea",
+      "id": "t_over_time_bryton_s_work_in_b",
+      "label": "Story / 02 Instructor — Text: Over time, Bryton’s work in barbering we",
+      "default": "Over time, Bryton’s work in barbering went beyond the chair. He became a licensed barber instructor and taught at Paul Mitchell."
+    },
+    {
+      "type": "textarea",
+      "id": "t_teaching_put_him_next_to_bar",
+      "label": "Story / 02 Instructor — Text: Teaching put him next to barbers while t",
+      "default": "Teaching put him next to barbers while they were still learning: how to hold the clippers, how to read someone’s hair, how to talk to the person in the chair."
+    },
+    {
+      "type": "textarea",
+      "id": "t_it_s_also_where_two_importan",
+      "label": "Story / 02 Instructor — Text: It’s also where two important relationsh",
+      "default": "It’s also where two important relationships started. Two of his students at Paul Mitchell were Connor and Elise."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / 03 Team"
+    },
+    {
+      "type": "text",
+      "id": "t_03_the_team",
+      "label": "Story / 03 Team — Text: 03 / The team",
+      "default": "03 / The team"
+    },
+    {
+      "type": "text",
+      "id": "t_building_the_broken_arrow_te",
+      "label": "Story / 03 Team — Heading: Building the Broken Arrow Team",
+      "default": "Building the Broken Arrow Team"
+    },
+    {
+      "type": "text",
+      "id": "t_connor",
+      "label": "Story / 03 Team — Link text: Connor",
+      "default": "Connor"
+    },
+    {
+      "type": "text",
+      "id": "t_elise",
+      "label": "Story / 03 Team — Link text: Elise",
+      "default": "Elise"
+    },
+    {
+      "type": "textarea",
+      "id": "t_when_it_was_time_to_put_a_te",
+      "label": "Story / 03 Team — Text: When it was time to put a team together ",
+      "default": "When it was time to put a team together for the new shop in Orem, he asked both of them to come work with him."
+    },
+    {
+      "type": "textarea",
+      "id": "t_they_didn_t_answer_an_open_c",
+      "label": "Story / 03 Team — Text: They didn’t answer an open-chair listing",
+      "default": "They didn’t answer an open-chair listing. Bryton had already worked closely with them, had been part of their education, and knew what kind of people and barbers they were becoming. He wanted people around him he already knew and trusted, so the team was built on purpose from the start."
+    },
+    {
+      "type": "text",
+      "id": "t_they_didn_t_answer_a_listing",
+      "label": "Story / 03 Team — Text: They didn’t answer a listing. He asked t",
+      "default": "They didn’t answer a listing. He asked them."
+    },
+    {
+      "type": "text",
+      "id": "t_photo_needed_bryton_connor_a",
+      "label": "Story / 03 Team — Text: Photo needed: Bryton, Connor and Elise t",
+      "default": "Photo needed: Bryton, Connor and Elise together"
+    },
+    {
+      "type": "text",
+      "id": "t_bryton_connor_and_elise",
+      "label": "Story / 03 Team — Text: Bryton, Connor and Elise.",
+      "default": "Bryton, Connor and Elise."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / 04 Recognition"
+    },
+    {
+      "type": "text",
+      "id": "t_04_recognition",
+      "label": "Story / 04 Recognition — Text: 04 / Recognition",
+      "default": "04 / Recognition"
+    },
+    {
+      "type": "text",
+      "id": "t_three_best_of_utah_valley_re",
+      "label": "Story / 04 Recognition — Heading: Three Best of Utah Valley Recognitions",
+      "default": "Three Best of Utah Valley Recognitions"
+    },
+    {
+      "type": "textarea",
+      "id": "t_as_broken_arrow_grew_the_wid",
+      "label": "Story / 04 Recognition — Text: As Broken Arrow grew, the wider Utah Val",
+      "default": "As Broken Arrow grew, the wider Utah Valley community started to notice. The shop has been recognized in the Daily Herald’s Best of Utah Valley awards three times."
+    },
+    {
+      "type": "text",
+      "id": "t_read_about_the_2026_recognit",
+      "label": "Story / 04 Recognition — Link text: Read about the 2026 recognition",
+      "default": "Read about the 2026 recognition"
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / 05 Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_05_orem",
+      "label": "Story / 05 Orem — Text: 05 / Orem",
+      "default": "05 / Orem"
+    },
+    {
+      "type": "text",
+      "id": "t_a_new_chapter_in_orem",
+      "label": "Story / 05 Orem — Heading: A New Chapter in Orem",
+      "default": "A New Chapter in Orem"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_s_next_chapter_",
+      "label": "Story / 05 Orem — Text: Broken Arrow’s next chapter started when",
+      "default": "Broken Arrow’s next chapter started when it opened its current shop in Orem. Moving into the new space meant starting again in a new community while bringing along everything built in Payson."
+    },
+    {
+      "type": "textarea",
+      "id": "t_one_of_the_first_milestones_",
+      "label": "Story / 05 Orem — Text: One of the first milestones came in 2026",
+      "default": "One of the first milestones came in 2026. After only a few months in the new space, Broken Arrow was recognized again in the Daily Herald Best of Utah Valley awards."
+    },
+    {
+      "type": "textarea",
+      "id": "t_that_one_meant_a_lot_a_new_l",
+      "label": "Story / 05 Orem — Text: That one meant a lot. A new location is ",
+      "default": "That one meant a lot. A new location is a fresh start, and hearing from the community that early told the team the move was working."
+    },
+    {
+      "type": "text",
+      "id": "t_375_e_800_s_suite_12_orem",
+      "label": "Story / 05 Orem — Text: 375 E 800 S, Suite 12, Orem.",
+      "default": "375 E 800 S, Suite 12, Orem."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / 06 Today"
+    },
+    {
+      "type": "text",
+      "id": "t_06_today",
+      "label": "Story / 06 Today — Text: 06 / Today",
+      "default": "06 / Today"
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_today",
+      "label": "Story / 06 Today — Heading: Broken Arrow Today",
+      "default": "Broken Arrow Today"
+    },
+    {
+      "type": "text",
+      "id": "t_our_services",
+      "label": "Story / 06 Today — Link text: Our services",
+      "default": "Our services"
+    },
+    {
+      "type": "textarea",
+      "id": "t_the_idea_behind_the_shop_is_",
+      "label": "Story / 06 Today — Text: The idea behind the shop is that men’s h",
+      "default": "The idea behind the shop is that men’s hair isn’t one-size-fits-all. People have different hair types, textures, growth patterns, hairlines, face shapes, lifestyles, styling habits, and goals."
+    },
+    {
+      "type": "textarea",
+      "id": "t_a_good_barber_should_underst",
+      "label": "Story / 06 Today — Text: A good barber should understand the pers",
+      "default": "A good barber should understand the person in the chair instead of giving everyone the same haircut."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / 07 Hair loss"
+    },
+    {
+      "type": "text",
+      "id": "t_07_hair_loss",
+      "label": "Story / 07 Hair loss — Text: 07 / Hair loss",
+      "default": "07 / Hair loss"
+    },
+    {
+      "type": "text",
+      "id": "t_helping_men_with_hair_loss",
+      "label": "Story / 07 Hair loss — Heading: Helping Men With Hair Loss",
+      "default": "Helping Men With Hair Loss"
+    },
+    {
+      "type": "textarea",
+      "id": "t_one_area_broken_arrow_keeps_",
+      "label": "Story / 07 Hair loss — Text: One area Broken Arrow keeps developing i",
+      "default": "One area Broken Arrow keeps developing is helping men with thinning hair, receding hairlines, and hair loss."
+    },
+    {
+      "type": "textarea",
+      "id": "t_sometimes_changing_the_hairc",
+      "label": "Story / 07 Hair loss — Text: Sometimes changing the haircut’s shape, ",
+      "default": "Sometimes changing the haircut’s shape, length, texture, or how it’s styled makes a big difference to how your existing hair looks."
+    },
+    {
+      "type": "textarea",
+      "id": "t_for_more_significant_hair_lo",
+      "label": "Story / 07 Hair loss — Text: For more significant hair loss, we also ",
+      "default": "For more significant hair loss, we also offer non-surgical men’s hair replacement. A hair system is fitted, cut, and blended into your own hair so the result looks natural."
+    },
+    {
+      "type": "text",
+      "id": "t_learn_about_men_s_hair_repla",
+      "label": "Story / 07 Hair loss — Link text: LEARN ABOUT MEN'S HAIR REPLACEMENT →",
+      "default": "LEARN ABOUT MEN'S HAIR REPLACEMENT →"
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / 08 Education"
+    },
+    {
+      "type": "text",
+      "id": "t_08_what_s_next",
+      "label": "Story / 08 Education — Text: 08 / What’s next",
+      "default": "08 / What’s next"
+    },
+    {
+      "type": "text",
+      "id": "t_still_learning_still_teachin",
+      "label": "Story / 08 Education — Heading: Still Learning. Still Teaching. Still Bu",
+      "default": "Still Learning. Still Teaching. Still Building."
+    },
+    {
+      "type": "textarea",
+      "id": "t_education_is_still_a_big_par",
+      "label": "Story / 08 Education — Text: Education is still a big part of Broken ",
+      "default": "Education is still a big part of Broken Arrow. Bryton’s years as an instructor, including teaching Connor and Elise before they joined him, shaped how he thinks about running a shop and developing barbers."
+    },
+    {
+      "type": "textarea",
+      "id": "t_helping_barbers_grow_and_kee",
+      "label": "Story / 08 Education — Text: Helping barbers grow and keep improving ",
+      "default": "Helping barbers grow and keep improving the craft is part of where Broken Arrow wants to go next."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / Conclusion"
+    },
+    {
+      "type": "text",
+      "id": "t_09",
+      "label": "Story / Conclusion — Text: 09",
+      "default": "09"
+    },
+    {
+      "type": "text",
+      "id": "t_the_story_isn_t_finished",
+      "label": "Story / Conclusion — Heading: The Story Isn’t Finished",
+      "default": "The Story Isn’t Finished"
+    },
+    {
+      "type": "textarea",
+      "id": "t_broken_arrow_has_gone_from_a",
+      "label": "Story / Conclusion — Text: Broken Arrow has gone from a shop in Pay",
+      "default": "Broken Arrow has gone from a shop in Payson to its home in Orem. Along the way it has collected hundreds of client reviews, been recognized in Best of Utah Valley three times, added men’s hair replacement, and brought together a team whose relationships started before the current shop existed."
+    },
+    {
+      "type": "textarea",
+      "id": "t_to_the_clients_who_supported",
+      "label": "Story / Conclusion — Text: To the clients who supported us in Payso",
+      "default": "To the clients who supported us in Payson, and the clients supporting the Orem shop now: thank you."
+    },
+    {
+      "type": "header",
+      "content": "Text: Story / CTA"
+    },
+    {
+      "type": "text",
+      "id": "t_payson_was_where_broken_arro",
+      "label": "Story / CTA — Text: Payson was where Broken Arrow started. O",
+      "default": "Payson was where Broken Arrow started. Orem is where we’re building what’s next."
+    },
+    {
+      "type": "text",
+      "id": "t_broken_arrow_barbershop_2",
+      "label": "Story / CTA — Text: Broken Arrow Barbershop",
+      "default": "Broken Arrow Barbershop"
+    },
+    {
+      "type": "text",
+      "id": "t_orem_utah",
+      "label": "Story / CTA — Text: Orem, Utah",
+      "default": "Orem, Utah"
+    },
+    {
+      "type": "text",
+      "id": "t_meet_our_barbers",
+      "label": "Story / CTA — Link text: MEET OUR BARBERS",
+      "default": "MEET OUR BARBERS"
+    },
+    {
+      "type": "text",
+      "id": "t_explore_our_services",
+      "label": "Story / CTA — Link text: EXPLORE OUR SERVICES",
+      "default": "EXPLORE OUR SERVICES"
+    },
+    {
+      "type": "text",
+      "id": "t_book_an_appointment",
+      "label": "Story / CTA — Link text: BOOK AN APPOINTMENT",
+      "default": "BOOK AN APPOINTMENT"
+    }
+  ]
+}
+{% endschema %}
