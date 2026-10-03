@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Shop · Broken Arrow Grooming</title>
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="StoreHeader" active="all" cart-count="{{ cartCount }}" hint-size="100%,120px"></dc-import>
+
+<section data-screen-label="Shop / Hero" style="position:relative;background:var(--band);color:var(--on-band);min-height:clamp(560px,82vh,820px);display:flex;align-items:center;overflow:hidden">
+  <img src="assets/photos/clay-hero.png" alt="Broken Arrow Grooming matte clay jar on a rock with mountains behind" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,23,26,.88) 0%,rgba(22,23,26,.6) 38%,rgba(22,23,26,0) 68%)"></div>
+  <div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:28px">
+    <p class="ba-label" style="color:var(--on-band)">Broken Arrow Grooming · First product</p>
+    <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(48px,7vw,96px),11vw);letter-spacing:-.045em;line-height:.92;max-width:10ch">The clay we use in the chair.</h1>
+    <p style="max-width:460px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;opacity:.9;text-wrap:pretty">Matte clay. Firm hold, no shine, washes out clean. Coming soon to order online or pick up at the shop.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="Product%20-%20Matte%20Clay.dc.html" hint-size="200px,56px">SEE THE CLAY</x-import>
+    </div>
+    <p class="ba-label" style="color:var(--on-band);opacity:.78">Developed and used at Broken Arrow Barbershop, Orem, Utah</p>
+  </div>
+</section>
+
+<section data-screen-label="Shop / Lineup intro" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px) 32px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px">
+    <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px)">The lineup</h2>
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:440px">
+      <p style="max-width:440px;font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">Five products, released one at a time. Clay first, then cream, sea salt spray, shampoo and conditioner.</p>
+      <a href="Product%20Quiz.dc.html" class="ba-label" style="color:var(--ink);text-decoration:none;display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;min-height:44px;line-height:22px"><span style="color:var(--ink-muted)">Not sure which?</span><span style="border-bottom:2px solid var(--green);padding-bottom:2px">Take the 30-second quiz →</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="shop" data-screen-label="Shop / Grid" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,5vw,64px) clamp(48px,8vw,96px);display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding:8px 0">
+      <div role="tablist" style="display:flex;flex-wrap:wrap;gap:4px 28px">
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="3">
+          <button role="tab" aria-selected="{{ f.selected }}" onClick="{{ f.pick }}" style="background:none;border:0;border-bottom:2px solid {{ f.border }};padding:0;min-height:44px;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink)" style-hover="color:var(--green)">{{ f.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+
+    <div data-grid="shop" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:48px 32px">
+      <sc-for list="{{ products }}" as="p" hint-placeholder-count="4">
+        <article id="{{ p.id }}" style="display:flex;flex-direction:column;gap:16px;scroll-margin-top:140px">
+          <a href="{{ p.href }}" aria-label="{{ p.name }}" style="position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:4/5;background:var(--canvas-sunk);padding:16px;text-decoration:none;overflow:hidden">
+            <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ p.alt }}" style="position:absolute;inset:0;background-image:{{ p.bg }};background-size:cover;background-position:center"></div></sc-if>
+            <div style="position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+              <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ true }}"><img src="assets/logos/ba-mark-black.svg" alt="" style="width:32px;opacity:.9"></sc-if>
+              <sc-if value="{{ p.hasTag }}" hint-placeholder-val="{{ false }}">
+                <span class="ba-label" style="background:var(--canvas);padding:6px 10px">{{ p.tag }}</span>
+              </sc-if>
+            </div>
+            <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ true }}"><p class="ba-label" style="color:var(--ink-muted)">{{ p.photo }}</p></sc-if>
+          </a>
+          <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:14px">
+            <p class="ba-label" style="color:var(--ink-muted)">{{ p.cat }}</p>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+              <h2 style="font:800 24px/28px var(--font-display);letter-spacing:-.02em;text-transform:uppercase"><a href="{{ p.href }}" style="color:var(--ink);text-decoration:none">{{ p.name }}</a></h2>
+              <p style="font:600 17px/28px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ p.price }}</p>
+            </div>
+            <p style="font-size:14px;line-height:22px;color:var(--ink-muted)">{{ p.line }}</p>
+          </div>
+          <sc-if value="{{ p.available }}" hint-placeholder-val="{{ true }}">
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="secondary" on-click="{{ p.add }}" hint-size="100%,56px">{{ p.addLabel }}</x-import>
+          </sc-if>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Shop / Developed by barbers" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,80px);align-items:center">
+    <img src="assets/photos/wash-brush.jpg" alt="A barber working shampoo through a client’s hair with a scalp brush at the shop sink" style="flex:1 1 420px;min-width:0;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%;display:block">
+    <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Developed by barbers</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(36px,4.4vw,56px);max-width:12ch">Tested on clients before it’s sold.</h2>
+      <p style="max-width:480px;font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">Every Broken Arrow Grooming product is used in our Orem shop first. If it doesn’t work in the chair, we don’t sell it.</p>
+      <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" tone="dark" href="Home.dc.html" hint-size="220px,44px">VISIT THE BARBERSHOP →</x-import></div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="StoreFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { filter: 'all', cart: 0, added: {}, email: '', emailError: '', sent: false };
+  goHash = () => { const id = decodeURIComponent((location.hash || '').slice(1)); if (!id) return; let n = 0; const t = () => { const el = document.getElementById(id); const hd = document.querySelector('header'); if (el) { window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - (hd ? hd.offsetHeight : 0) - 16); if (n === 0 && el.tagName === 'ARTICLE') { el.style.outline = '2px solid var(--green)'; el.style.outlineOffset = '8px'; setTimeout(() => { el.style.outline = ''; }, 2500); } if (n++ < 6) setTimeout(t, 250); } else if (n++ < 20) setTimeout(t, 150); }; setTimeout(t, 50); };
+  componentDidMount() { this.goHash(); window.addEventListener('hashchange', this.goHash); this.onH = () => { const h = (location.hash || '').slice(1); this.setState({ filter: ['grooming'].includes(h) ? h : 'all' }); }; this.onH(); window.addEventListener('hashchange', this.onH); }
+  componentWillUnmount() { window.removeEventListener('hashchange', this.onH); }
+  renderVals() {
+    const items = [
+      { id: 'clay', cat: 'Grooming', name: 'Matte clay', price: '$28', line: 'Firm hold, no shine. What we style with in the shop.', photo: 'Photo: matte clay jar, lid off, on the shop counter', img: 'assets/photos/clay-card.png', alt: 'Broken Arrow Grooming matte clay jar with its box', href: 'Product%20-%20Matte%20Clay.dc.html', soon: true, tag: 'Out of stock' },
+      { id: 'cream', cat: 'Grooming', name: 'Styling cream', price: '$28', line: 'Light hold with a natural finish, for longer and textured hair.', photo: 'Photo: styling cream jar, lid off, on the shop counter', img: 'assets/photos/cream-card.png', alt: 'Broken Arrow Grooming styling cream jar', href: '#shop', soon: true, tag: 'Out of stock' },
+      { id: 'salt', cat: 'Grooming', name: 'Sea salt spray', price: '$22', line: 'Pre-styler for texture and volume before blow-drying.', photo: 'Photo: sea salt spray bottle on the shop counter', img: 'assets/photos/salt-card.png', alt: 'Broken Arrow Grooming sea salt spray bottle', href: '#shop', soon: true, tag: 'Out of stock' },
+      { id: 'shampoo', cat: 'Grooming', name: 'Shampoo', price: '$28', line: 'Daily shampoo for men’s hair.', photo: 'Photo: shampoo bottle at the shop sink', img: 'assets/photos/shampoo-card.png', alt: 'Broken Arrow Grooming shampoo, 300ml bottle', href: '#shop', soon: true, tag: 'Out of stock' },
+      { id: 'cond', cat: 'Grooming', name: 'Conditioner', price: '$28', line: 'Daily conditioner to pair with the shampoo.', photo: 'Photo: conditioner bottle at the shop sink', img: 'assets/photos/conditioner-card.png', alt: 'Broken Arrow Grooming conditioner, 300ml bottle', href: '#shop', soon: true, tag: 'Out of stock' },
+      { id: 'aftershave', cat: 'Grooming', name: 'Aftershave', price: '$26', line: 'Soothes and refreshes after a shave. All skin types. 120ml.', photo: 'Photo: aftershave bottle', img: 'assets/photos/aftershave-card.png', alt: 'Broken Arrow Grooming aftershave, 120ml amber bottle', href: '#shop', soon: true, tag: 'Out of stock' },
+      { id: 'refuge', cat: 'Grooming', name: 'Refuge', price: '$159', line: 'Extrait de parfum, 30ml.', photo: 'Photo: Refuge bottle', img: 'assets/photos/refuge-card.png', alt: 'Refuge by Broken Arrow Grooming, 30ml extrait de parfum bottle', href: '#shop', soon: true, tag: 'Out of stock' },
+    ];
+    const f = this.state.filter;
+    const list = items.filter(i => f === 'all' || i.cat.toLowerCase() === f);
+    return {
+      cartCount: this.state.cart,
+      filters: [['all', 'All'], ['grooming', 'Grooming']].map(([id, label]) => ({
+        label, selected: id === f, border: id === f ? 'var(--green)' : 'transparent', pick: () => this.setState({ filter: id }),
+      })),
+      countLabel: list.length + (list.length === 1 ? ' product' : ' products'),
+      products: list.map(p => ({
+        ...p, hasImg: !!p.img, noImg: !p.img, bg: p.img ? 'url("' + p.img + '")' : 'none', available: !!p.available, soon: !!p.soon, hasTag: !!p.tag,
+        addLabel: this.state.added[p.id] ? 'ADDED TO CART' : 'ADD TO CART',
+        add: () => this.setState(s => ({ cart: s.cart + 1, added: { ...s.added, [p.id]: true } })),
+      })),
+      email: this.state.email, emailError: this.state.emailError,
+      onEmail: (e) => this.setState({ email: e && e.target ? e.target.value : e, emailError: '' }),
+      submit: (e) => {
+        e.preventDefault();
+        const __top = (el) => { if (!el) return; const hdr = document.querySelector('[data-hdr="site"]'); const off = (hdr ? hdr.getBoundingClientRect().height : 120) + 16; window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + window.scrollY - off), behavior: 'smooth' }); }; const __sec = e.currentTarget && e.currentTarget.closest ? e.currentTarget.closest('section') : null;
+        if (!/^\S+@\S+\.\S+$/.test(this.state.email)) return this.setState({ emailError: 'Add an email address like name@example.com.' });
+        this.setState({ sent: true }, () => __top(__sec));
+      },
+      sent: this.state.sent, notSent: !this.state.sent,
+    };
+  }
+}
+</script>
+</body>
+</html>

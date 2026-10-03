@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Wholesale · Broken Arrow Grooming</title>
+<meta name="description" content="Wholesale Broken Arrow Grooming products for licensed barbers, cosmetologists and businesses. Sold in packs of 6.">
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<script src="send-form.js"></script>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure,ul,ol{margin:0}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="StoreHeader" active="wholesale" hint-size="100%,120px"></dc-import>
+
+<sc-if value="{{ isOut }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="Wholesale / Hero" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,80px);align-items:flex-end">
+    <div style="flex:1.2 1 460px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Broken Arrow Grooming · Wholesale</p>
+      <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(48px,7vw,92px),11vw);letter-spacing:-.045em;line-height:.92;max-width:11ch">Stock what we use in the chair.</h1>
+      <p style="max-width:520px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;opacity:.85;text-wrap:pretty">Wholesale is for industry professionals only. Apply with your EIN, barber license or cosmetology license. Once you’re approved, sign in to see pricing and order.</p>
+    </div>
+    <ul style="flex:1 1 320px;list-style:none;padding:0;display:flex;flex-direction:column;border-top:2px solid var(--on-band)">
+      <li style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid var(--line-strong)"><span class="ba-label" style="color:var(--on-band);opacity:.78;padding-top:3px">01</span><span style="font-size:17px;line-height:26px">Apply with your EIN or license.</span></li>
+      <li style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid var(--line-strong)"><span class="ba-label" style="color:var(--on-band);opacity:.78;padding-top:3px">02</span><span style="font-size:17px;line-height:26px">We review it and email you when your account is approved.</span></li>
+      <li style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid var(--line-strong)"><span class="ba-label" style="color:var(--on-band);opacity:.78;padding-top:3px">03</span><span style="font-size:17px;line-height:26px">Sign in and order in packs of 6. Six units minimum per product.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section data-screen-label="Wholesale / Access" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:56px clamp(40px,6vw,96px);align-items:flex-start">
+
+  <div style="flex:1 1 340px;min-width:0;max-width:440px;display:flex;flex-direction:column;gap:28px;border-top:2px solid var(--ink);padding-top:28px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p class="ba-label">Approved accounts</p>
+      <h2 class="ba-display" style="font-size:clamp(32px,3.6vw,44px)">Sign in</h2>
+    </div>
+    <form onSubmit="{{ signIn }}" noValidate="{{ true }}" style="display:flex;flex-direction:column;gap:24px">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Email" type="email" autoComplete="username" value="{{ login.email }}" onChange="{{ onLogin.email }}" error="{{ loginErr.email }}" hint-size="100%,84px"></x-import>
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Password" type="password" autoComplete="current-password" value="{{ login.password }}" onChange="{{ onLogin.password }}" error="{{ loginErr.password }}" hint-size="100%,84px"></x-import>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" type="submit" loading="{{ signingIn }}" hint-size="160px,56px">SIGN IN</x-import>
+        <a href="#" style="font-size:15px;line-height:24px">Forgot your password?</a>
+      </div>
+    </form>
+    <p style="font-size:15px;line-height:24px;border-top:1px solid var(--line);padding-top:20px">Don’t have an account? <a href="#apply">Apply today →</a></p>
+  </div>
+
+  <div id="apply" style="flex:1.6 1 480px;min-width:0;max-width:720px;display:flex;flex-direction:column;gap:28px;border-top:2px solid var(--ink);padding-top:28px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <p class="ba-label">New to wholesale</p>
+      <h2 class="ba-display" style="font-size:clamp(32px,3.6vw,44px)">Apply for a wholesale account</h2>
+      <p style="font-size:15px;line-height:24px;color:var(--ink-muted)">Required fields are marked *</p>
+    </div>
+
+    <sc-if value="{{ applied }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:16px;background:var(--canvas-sunk);padding:28px">
+        <p class="ba-label">Application received</p>
+        <p style="font:800 clamp(24px,2.6vw,32px)/1.1 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Thanks, {{ firstName }}.</p>
+        <p style="font-size:17px;line-height:28px;text-wrap:pretty">We’ll check your {{ credName }} and email {{ app.email }} when your account is approved. You can sign in with the password you just created once it is.</p>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ notApplied }}" hint-placeholder-val="{{ true }}">
+    <form onSubmit="{{ apply }}" noValidate="{{ true }}" style="display:flex;flex-direction:column;gap:28px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Business name" required="{{ true }}" value="{{ app.business }}" onChange="{{ on.business }}" error="{{ err.business }}" hint-size="100%,84px"></x-import>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Your name" required="{{ true }}" value="{{ app.name }}" onChange="{{ on.name }}" error="{{ err.name }}" hint-size="100%,84px"></x-import>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Email" type="email" required="{{ true }}" value="{{ app.email }}" onChange="{{ on.email }}" error="{{ err.email }}" hint-size="100%,84px"></x-import>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Phone" type="tel" required="{{ true }}" value="{{ app.phone }}" onChange="{{ on.phone }}" error="{{ err.phone }}" hint-size="100%,84px"></x-import>
+      </div>
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Business address" required="{{ true }}" hint="Street, city, state and ZIP." value="{{ app.address }}" onChange="{{ on.address }}" error="{{ err.address }}" hint-size="100%,108px"></x-import>
+
+      <fieldset style="display:flex;flex-direction:column">
+        <legend class="ba-field-label" style="margin-bottom:12px">What kind of business is it?<span class="ba-field-req">*</span></legend>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));column-gap:24px">
+          <sc-for list="{{ typeOpts }}" as="o" hint-placeholder-count="4">
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Checkbox" type="radio" name="btype" label="{{ o.label }}" checked="{{ o.checked }}" onChange="{{ o.pick }}" hint-size="100%,44px"></x-import>
+          </sc-for>
+        </div>
+        <sc-if value="{{ err.type }}" hint-placeholder-val="{{ false }}"><p class="ba-field-error">{{ err.type }}</p></sc-if>
+      </fieldset>
+
+      <fieldset style="display:flex;flex-direction:column;gap:20px;background:var(--canvas-sunk);padding:24px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <legend class="ba-field-label">Professional credential<span class="ba-field-req">*</span></legend>
+          <p style="font-size:15px;line-height:24px;color:var(--ink-muted)">Wholesale is only for industry professionals. Give us one of these so we can verify you.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));column-gap:24px">
+          <sc-for list="{{ credOpts }}" as="o" hint-placeholder-count="3">
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Checkbox" type="radio" name="cred" label="{{ o.label }}" checked="{{ o.checked }}" onChange="{{ o.pick }}" hint-size="100%,44px"></x-import>
+          </sc-for>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px">
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="{{ credNumLabel }}" required="{{ true }}" hint="{{ credHint }}" value="{{ app.credNum }}" onChange="{{ on.credNum }}" error="{{ err.credNum }}" hint-size="100%,108px"></x-import>
+          <sc-if value="{{ isLicense }}" hint-placeholder-val="{{ false }}">
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Issuing state" required="{{ true }}" hint="The state that issued your license." value="{{ app.state }}" onChange="{{ on.state }}" error="{{ err.state }}" hint-size="100%,108px"></x-import>
+          </sc-if>
+        </div>
+        <div class="ba-field" style="display:flex;flex-direction:column;gap:8px">
+          <label class="ba-field-label" for="cred-file">Upload a copy <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--ink-muted)">(optional)</span></label>
+          <p class="ba-field-hint">A photo or PDF of your license or EIN letter speeds up approval.</p>
+          <input id="cred-file" type="file" accept="image/*,.pdf" onChange="{{ onFile }}" style="font:400 15px/24px var(--font-sans);color:var(--ink);padding:12px;background:var(--canvas);border:1px solid var(--line-strong);border-radius:2px;min-height:56px">
+        </div>
+      </fieldset>
+
+      <fieldset style="display:flex;flex-direction:column">
+        <legend class="ba-field-label" style="margin-bottom:12px">Which products are you interested in?</legend>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));column-gap:24px">
+          <sc-for list="{{ prodOpts }}" as="o" hint-placeholder-count="6">
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Checkbox" label="{{ o.label }}" checked="{{ o.checked }}" onChange="{{ o.pick }}" hint-size="100%,44px"></x-import>
+          </sc-for>
+        </div>
+      </fieldset>
+
+      <div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--line);padding-top:24px">
+        <p class="ba-label">Create your sign-in</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px">
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Password" type="password" autoComplete="new-password" required="{{ true }}" hint="At least 8 characters." value="{{ app.password }}" onChange="{{ on.password }}" error="{{ err.password }}" hint-size="100%,108px"></x-import>
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Confirm password" type="password" autoComplete="new-password" required="{{ true }}" value="{{ app.confirm }}" onChange="{{ on.confirm }}" error="{{ err.confirm }}" hint-size="100%,108px"></x-import>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Checkbox" checked="{{ app.agree }}" onChange="{{ on.agree }}" invalid="{{ agreeInvalid }}" label="I understand wholesale orders are sold in packs of 6, with a minimum of 6 units per product. *" hint-size="100%,56px"></x-import>
+        <sc-if value="{{ err.agree }}" hint-placeholder-val="{{ false }}"><p class="ba-field-error">{{ err.agree }}</p></sc-if>
+      </div>
+      <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" type="submit" loading="{{ applying }}" hint-size="220px,56px">SUBMIT APPLICATION</x-import></div>
+    </form>
+    </sc-if>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isIn }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Wholesale / Portal header" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Wholesale account · {{ login.email }}</p>
+      <h1 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,5.6vw,72px);letter-spacing:-.045em">Wholesale order</h1>
+      <p style="font-size:17px;line-height:28px;opacity:.85">Packs of 6. Six units minimum per product.</p>
+    </div>
+    <button onClick="{{ signOut }}" style="background:none;border:1px solid var(--line-strong);color:var(--on-band);min-height:44px;padding:0 18px;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase" style-hover="border-color:var(--on-band)">Sign out</button>
+  </div>
+</section>
+
+<section data-screen-label="Wholesale / Catalog" style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(16px,5vw,64px) clamp(56px,8vw,96px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+  <div style="flex:2 1 560px;min-width:0;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+    <sc-for list="{{ catalog }}" as="p" hint-placeholder-count="6">
+      <div style="display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:16px 20px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)">
+        <div role="img" aria-label="{{ p.name }}" style="width:88px;aspect-ratio:4/5;background-color:var(--canvas-sunk);background-image:{{ p.bg }};background-size:cover;background-position:center"></div>
+        <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+          <p style="font:800 20px/24px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ p.name }}</p>
+          <p style="font-size:14px;line-height:22px;color:var(--ink-muted)">{{ p.size }} · Pack of 6 · {{ p.status }}</p>
+          <p style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums">{{ p.priceLabel }}</p>
+        </div>
+        <div style="display:flex;align-items:center;border:1px solid var(--line-strong)">
+          <button onClick="{{ p.dec }}" aria-label="{{ p.decLabel }}" style="width:44px;height:44px;background:none;border:0;cursor:pointer;font:600 18px/1 var(--font-sans);color:var(--ink)">−</button>
+          <span style="min-width:72px;text-align:center;font:600 13px/16px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;font-variant-numeric:tabular-nums">{{ p.qtyLabel }}</span>
+          <button onClick="{{ p.inc }}" aria-label="{{ p.incLabel }}" style="width:44px;height:44px;background:none;border:0;cursor:pointer;font:600 18px/1 var(--font-sans);color:var(--ink)">+</button>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <aside style="flex:1 1 300px;position:sticky;top:140px;display:flex;flex-direction:column;gap:20px;background:var(--canvas-sunk);padding:28px">
+    <p class="ba-label">Order summary</p>
+    <sc-if value="{{ hasLines }}" hint-placeholder-val="{{ false }}">
+      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--line)">
+        <sc-for list="{{ lines }}" as="l" hint-placeholder-count="2">
+          <li style="display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:22px"><span>{{ l.name }}</span><span style="font-variant-numeric:tabular-nums;white-space:nowrap">{{ l.units }}</span></li>
+        </sc-for>
+      </ul>
+    </sc-if>
+    <sc-if value="{{ noLines }}" hint-placeholder-val="{{ true }}"><p style="font-size:15px;line-height:24px;color:var(--ink-muted)">Add packs to start an order.</p></sc-if>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span class="ba-label">Total units</span><span style="font:800 28px/1 var(--font-display);font-variant-numeric:tabular-nums">{{ totalUnits }}</span></div>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" disabled="{{ noLines }}" on-click="{{ placeOrder }}" hint-size="100%,56px">{{ orderLabel }}</x-import>
+    <p style="font-size:14px;line-height:22px;color:var(--ink-muted)">Pricing, shipping and payment terms are confirmed with your approved account.</p>
+  </aside>
+</section>
+</sc-if>
+
+<dc-import name="StoreFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Wholesale catalog. Fill in price (per pack of 6) when set; available: false shows "Coming soon".
+const CATALOG = [
+  { id: 'clay', name: 'Hair Clay', size: '1.0 fl oz', img: 'assets/photos/clay-card.png', price: null, available: false },
+  { id: 'cream', name: 'Cream', size: '1.0 fl oz', img: 'assets/photos/cream-card.png', price: null, available: false },
+  { id: 'salt', name: 'Sea Salt Spray', size: '', img: 'assets/photos/salt-card.png', price: null, available: false },
+  { id: 'shampoo', name: 'Shampoo', size: '300ml', img: 'assets/photos/shampoo-card.png', price: null, available: false },
+  { id: 'cond', name: 'Conditioner', size: '300ml', img: 'assets/photos/conditioner-card.png', price: null, available: false },
+  { id: 'aftershave', name: 'Aftershave', size: '120ml', img: 'assets/photos/aftershave-card.png', price: null, available: false },
+  { id: 'refuge', name: 'Refuge', size: '30ml extrait de parfum', img: 'assets/photos/refuge-card.png', price: null, available: false },
+];
+const TYPES = ['Barbershop', 'Salon', 'Independent barber or stylist', 'Retail store'];
+const CREDS = { ein: 'EIN', barber: 'Barber license', cosmo: 'Cosmetology license' };
+const PACK = 6;
+
+class Component extends DCLogic {
+  state = {
+    mode: 'out', signingIn: false, applying: false, applied: false,
+    login: { email: '', password: '' }, loginErr: {},
+    app: { business: '', name: '', email: '', phone: '', address: '', type: '', cred: 'barber', credNum: '', state: '', file: null, products: [], password: '', confirm: '', agree: false },
+    err: {}, packs: {}, ordered: false,
+  };
+  setApp(k, v) { this.setState(s => ({ app: { ...s.app, [k]: v }, err: { ...s.err, [k]: undefined } })); }
+  signIn = e => {
+    e.preventDefault();
+    const { email, password } = this.state.login, er = {};
+    if (!/^\S+@\S+\.\S+$/.test(email)) er.email = 'Add the email you applied with.';
+    if (!password) er.password = 'Add your password.';
+    this.setState({ loginErr: er });
+    if (Object.keys(er).length) return;
+    this.setState({ signingIn: true });
+    // TODO: replace with real auth (Shopify customer accounts tagged "wholesale").
+    setTimeout(() => { try { sessionStorage.setItem('ba-wholesale-session', email); } catch (e) {} location.href = 'Wholesale%20Shop.dc.html'; }, 900);
+  };
+  apply = e => {
+    e.preventDefault();
+    const __sec = e.currentTarget && e.currentTarget.closest ? (e.currentTarget.closest('section') || e.currentTarget) : null; const __top = () => { if (!__sec) return; const hdr = document.querySelector('[data-hdr="site"]'); const off = (hdr ? hdr.getBoundingClientRect().height : 120) + 16; window.scrollTo({ top: Math.max(0, __sec.getBoundingClientRect().top + window.scrollY - off), behavior: 'smooth' }); };
+    const a = this.state.app, er = {};
+    if (!a.business.trim()) er.business = 'Add your business name.';
+    if (!a.name.trim()) er.name = 'Add your name so we know who to contact.';
+    if (!/^\S+@\S+\.\S+$/.test(a.email)) er.email = 'Add an email address like name@example.com.';
+    if (a.phone.replace(/\D/g, '').length < 10) er.phone = 'Add a phone number with area code.';
+    if (!a.address.trim()) er.address = 'Add your business address.';
+    if (!a.type) er.type = 'Pick the kind of business.';
+    if (a.cred === 'ein' && a.credNum.replace(/\D/g, '').length !== 9) er.credNum = 'An EIN is 9 digits, like 12-3456789.';
+    if (a.cred !== 'ein' && a.credNum.trim().length < 3) er.credNum = 'Add your license number as it appears on your license.';
+    if (a.cred !== 'ein' && !a.state.trim()) er.state = 'Add the state that issued your license.';
+    if (a.password.length < 8) er.password = 'Use at least 8 characters.';
+    if (a.confirm !== a.password) er.confirm = 'The passwords don’t match.';
+    if (!a.agree) er.agree = 'Tick the box to confirm you understand the pack sizes.';
+    this.setState({ err: er });
+    if (Object.keys(er).length) return;
+    this.setState({ applying: true });
+    (window.baSend ? window.baSend('Wholesale application', a) : Promise.resolve(false)).then(ok => ok ? this.setState({ applying: false, applied: true }, __top) : this.setState({ applying: false }));
+  };
+  renderVals() {
+    const { app, err, login, loginErr, packs } = this.state;
+    const text = k => e => this.setApp(k, e.target.value);
+    const lines = CATALOG.filter(p => packs[p.id]).map(p => ({ name: p.name, units: packs[p.id] + ' × 6 = ' + packs[p.id] * PACK }));
+    const total = CATALOG.reduce((n, p) => n + (packs[p.id] || 0) * PACK, 0);
+    const isLicense = app.cred !== 'ein';
+    return {
+      isOut: this.state.mode === 'out', isIn: this.state.mode === 'in',
+      login, loginErr, signIn: this.signIn, signingIn: this.state.signingIn,
+      onLogin: { email: e => this.setState({ login: { ...login, email: e.target.value }, loginErr: {} }), password: e => this.setState({ login: { ...login, password: e.target.value }, loginErr: {} }) },
+      signOut: () => { this.setState({ mode: 'out', packs: {}, ordered: false, login: { email: '', password: '' } }); window.scrollTo(0, 0); },
+      app, err, apply: this.apply, applying: this.state.applying,
+      applied: this.state.applied, notApplied: !this.state.applied,
+      firstName: (app.name.trim().split(' ')[0]) || 'there', credName: CREDS[app.cred].replace('EIN', 'EIN').toLowerCase().replace('ein', 'EIN'),
+      on: { business: text('business'), name: text('name'), email: text('email'), phone: text('phone'), address: text('address'), credNum: text('credNum'), state: text('state'), password: text('password'), confirm: text('confirm'), agree: e => this.setApp('agree', e.target.checked) },
+      onFile: e => this.setApp('file', e.target.files && e.target.files[0] ? e.target.files[0].name : null),
+      agreeInvalid: !!err.agree,
+      typeOpts: TYPES.map(label => ({ label, checked: app.type === label, pick: () => this.setApp('type', label) })),
+      credOpts: Object.entries(CREDS).map(([id, label]) => ({ label, checked: app.cred === id, pick: () => this.setState(s => ({ app: { ...s.app, cred: id, credNum: '', state: '' }, err: { ...s.err, credNum: undefined, state: undefined } })) })),
+      isLicense,
+      credNumLabel: app.cred === 'ein' ? 'EIN' : CREDS[app.cred] + ' number',
+      credHint: app.cred === 'ein' ? 'Your 9-digit federal Employer Identification Number.' : 'As it appears on your license.',
+      prodOpts: CATALOG.map(p => ({ label: p.name, checked: app.products.includes(p.id), pick: () => this.setApp('products', app.products.includes(p.id) ? app.products.filter(x => x !== p.id) : [...app.products, p.id]) })),
+      catalog: CATALOG.map(p => {
+        const n = packs[p.id] || 0;
+        const set = v => this.setState(s => ({ packs: { ...s.packs, [p.id]: Math.max(0, v) }, ordered: false }));
+        return { name: p.name, size: p.size || 'Size TBC', bg: 'url("' + p.img + '")', status: p.available ? 'In stock' : 'Coming soon · pre-order',
+          priceLabel: p.price ? '$' + p.price + ' per pack of 6' : 'Wholesale price confirmed on approval',
+          qtyLabel: n ? n * PACK + ' units' : '0', inc: () => set(n + 1), dec: () => set(n - 1),
+          incLabel: 'Add a pack of 6 ' + p.name, decLabel: 'Remove a pack of 6 ' + p.name };
+      }),
+      lines, hasLines: lines.length > 0, noLines: lines.length === 0,
+      totalUnits: String(total),
+      orderLabel: this.state.ordered ? 'ORDER REQUEST SENT' : 'SEND ORDER REQUEST',
+      placeOrder: () => this.setState({ ordered: true }),
+    };
+  }
+}
+</script>
+</body>
+</html>

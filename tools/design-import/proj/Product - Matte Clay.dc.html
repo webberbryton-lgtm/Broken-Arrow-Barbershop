@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Matte clay · Broken Arrow Grooming</title>
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="StoreHeader" active="grooming" cart-count="{{ cartCount }}" hint-size="100%,120px"></dc-import>
+
+<section id="top" data-screen-label="Product / Main" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:24px clamp(16px,5vw,64px) clamp(48px,8vw,96px);display:flex;flex-direction:column;gap:24px">
+    <nav aria-label="Breadcrumb" style="display:flex;gap:10px;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase">
+      <a href="Shop.dc.html" style="color:var(--ink-muted);text-decoration:none">Shop</a><span style="color:var(--ink-muted)">/</span><span>Matte clay</span>
+    </nav>
+    <div style="display:flex;flex-wrap:wrap;gap:48px">
+      <div style="flex:1.2 1 420px;display:flex;flex-direction:column;gap:12px">
+        <div style="position:relative;aspect-ratio:1/1;background:var(--canvas-sunk);display:flex;flex-direction:column;justify-content:space-between;padding:20px;overflow:hidden">
+          <sc-if value="{{ activeHasImg }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ activeAlt }}" style="position:absolute;inset:0;background-image:{{ activeBg }};background-size:cover;background-position:center"></div></sc-if>
+          <sc-if value="{{ activeNoImg }}" hint-placeholder-val="{{ false }}">
+            <img src="assets/logos/ba-mark-black.svg" alt="" style="width:40px;opacity:.9">
+            <p class="ba-label" style="color:var(--ink-muted)">{{ activePhoto }}</p>
+          </sc-if>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px">
+          <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="4">
+            <button onClick="{{ t.pick }}" aria-label="{{ t.label }}" aria-pressed="{{ t.selected }}" style="position:relative;overflow:hidden;aspect-ratio:1/1;background:var(--canvas-sunk);border:2px solid {{ t.border }};padding:8px;cursor:pointer;display:flex;align-items:flex-end;text-align:left">
+              <sc-if value="{{ t.hasImg }}" hint-placeholder-val="{{ false }}"><div aria-hidden="true" style="position:absolute;inset:0;background-image:{{ t.bg }};background-size:cover;background-position:center"></div></sc-if>
+              <span style="font:600 11px/14px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted)">{{ t.short }}</span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:24px;align-self:flex-start;position:sticky;top:116px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <p class="ba-label">Broken Arrow Grooming</p>
+          <h1 class="ba-display" style="font-size:min(clamp(48px,6vw,72px),11vw)">Matte clay</h1>
+          <p style="font:600 24px/32px var(--font-sans);font-variant-numeric:tabular-nums">{{ headPrice }}</p>
+        </div>
+        <p style="font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">The clay we style with in the shop. Firm hold with no shine, so your hair looks like hair, not product. Works best on short to medium hair.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink);border-bottom:1px solid var(--line)">
+          <div style="padding:14px 12px 14px 0;display:flex;flex-direction:column;gap:4px"><p class="ba-label" style="color:var(--ink-muted)">Hold</p><p style="font-weight:600">Firm</p></div>
+          <div style="padding:14px 12px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px"><p class="ba-label" style="color:var(--ink-muted)">Finish</p><p style="font-weight:600">Matte</p></div>
+          <div style="padding:14px 0 14px 12px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px"><p class="ba-label" style="color:var(--ink-muted)">Size</p><p style="font-weight:600">2 oz</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <p class="ba-label">Choose your set</p>
+            <p style="font-size:15px;line-height:24px;color:var(--ink-muted)">One jar, two, or the daily kit.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px" role="radiogroup" aria-label="Choose your set">
+            <sc-for list="{{ sets }}" as="b" hint-placeholder-count="3">
+              <button onClick="{{ b.pick }}" role="radio" aria-checked="{{ b.selected }}" style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:12px 8px 14px;background:{{ b.bg }};color:{{ b.fg }};border:1px solid {{ b.border }};cursor:pointer;text-align:center;transition:border-color 150ms ease" style-hover="border-color:var(--ink)">
+                <div style="width:100%;aspect-ratio:1/1;display:flex;gap:2px;background:var(--canvas-sunk)">
+                  <sc-for list="{{ b.imgs }}" as="im" hint-placeholder-count="1">
+                    <div aria-hidden="true" style="flex:1;background-image:{{ im }};background-size:cover;background-position:center"></div>
+                  </sc-for>
+                </div>
+                <span style="font:800 16px/20px var(--font-display);letter-spacing:-.01em;text-transform:uppercase">{{ b.name }}</span>
+                <span style="display:flex;flex-wrap:wrap;justify-content:center;gap:4px 8px;font:600 15px/20px var(--font-sans);font-variant-numeric:tabular-nums"><sc-if value="{{ b.hasWas }}" hint-placeholder-val="{{ false }}"><s style="opacity:.6;font-weight:400">{{ b.was }}</s></sc-if><span>{{ b.price }}</span></span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <p class="ba-label">Purchase option</p>
+          <button onClick="{{ pickOnce }}" role="radio" aria-checked="{{ once }}" style="display:flex;align-items:center;gap:14px;min-height:64px;padding:0 18px;background:var(--canvas);border:{{ onceBorder }};cursor:pointer;text-align:left;color:var(--ink)">
+            <span aria-hidden="true" style="flex:none;width:20px;height:20px;border-radius:50%;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center"><sc-if value="{{ once }}" hint-placeholder-val="{{ true }}"><span style="width:10px;height:10px;border-radius:50%;background:var(--ink)"></span></sc-if></span>
+            <span style="flex:1;font-size:17px;line-height:24px">One-time purchase</span>
+            <span style="font:600 17px/24px var(--font-sans);font-variant-numeric:tabular-nums">{{ oncePrice }}</span>
+          </button>
+          <div style="display:flex;flex-direction:column;border:{{ subBorder }};background:var(--canvas)">
+            <p class="ba-label" style="background:var(--green);color:var(--on-band);text-align:center;padding:10px 12px">Best value · Save 20% on every order</p>
+            <button onClick="{{ pickSub }}" role="radio" aria-checked="{{ sub }}" style="display:flex;align-items:center;gap:14px;min-height:64px;padding:0 18px;background:none;border:0;cursor:pointer;text-align:left;color:var(--ink)">
+              <span aria-hidden="true" style="flex:none;width:20px;height:20px;border-radius:50%;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center"><sc-if value="{{ sub }}" hint-placeholder-val="{{ false }}"><span style="width:10px;height:10px;border-radius:50%;background:var(--ink)"></span></sc-if></span>
+              <span style="flex:1;font:600 17px/24px var(--font-sans)">Subscribe and save</span>
+              <span style="display:flex;gap:10px;font:600 17px/24px var(--font-sans);font-variant-numeric:tabular-nums"><s style="font-weight:400;color:var(--ink-muted)">{{ oncePrice }}</s><span>{{ subPrice }}</span></span>
+            </button>
+            <div style="display:flex;flex-direction:column;gap:12px;padding:16px 18px 18px;border-top:1px solid var(--line)">
+              <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:24px">
+                <li style="display:flex;gap:10px"><span aria-hidden="true" style="flex:none;width:6px;height:11px;margin:5px 4px 0 3px;border-right:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(45deg)"></span>20% off every order</li>
+                <li style="display:flex;gap:10px"><span aria-hidden="true" style="flex:none;width:6px;height:11px;margin:5px 4px 0 3px;border-right:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(45deg)"></span>Skip, change or cancel any time</li>
+                <li style="display:flex;gap:10px"><span aria-hidden="true" style="flex:none;width:6px;height:11px;margin:5px 4px 0 3px;border-right:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(45deg)"></span>Free local pickup at the shop, if you prefer</li>
+              </ul>
+              <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;border-top:1px solid var(--line);padding-top:12px">
+                <span style="font-size:15px;line-height:24px;color:var(--ink-muted)">Ships every</span>
+                <div style="display:flex;border:1px solid var(--line-strong)" role="group" aria-label="Delivery frequency">
+                  <sc-for list="{{ freqs }}" as="f" hint-placeholder-count="3">
+                    <button onClick="{{ f.pick }}" aria-pressed="{{ f.selected }}" style="min-height:40px;padding:0 14px;border:0;background:{{ f.bg }};color:{{ f.fg }};cursor:pointer;font:600 12px/16px var(--font-sans);letter-spacing:.12em;text-transform:uppercase">{{ f.label }}</button>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" on-click="{{ add }}" dc-props="{{ fullBtn }}" hint-size="100%,56px">{{ addLabel }}</x-import>
+        <p style="font-size:14px;line-height:22px;color:var(--ink-muted)">Ships from Orem. Or choose local pickup at checkout and grab it at the shop during open hours.</p>
+        <div style="border-top:1px solid var(--line)">
+          <sc-for list="{{ details }}" as="d" hint-placeholder-count="3">
+            <div style="border-bottom:1px solid var(--line)">
+              <button onClick="{{ d.toggle }}" aria-expanded="{{ d.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;background:none;border:0;padding:0;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink);text-align:left">
+                <span>{{ d.title }}</span><span>{{ d.state }}</span>
+              </button>
+              <sc-if value="{{ d.open }}" hint-placeholder-val="{{ false }}">
+                <p style="padding:0 0 20px;font-size:17px;line-height:28px;color:var(--ink-muted);max-width:560px">{{ d.body }}</p>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-to-use" data-screen-label="Product / How to use" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 32px">
+      <p class="ba-label" style="flex:1 1 240px;color:var(--on-band);opacity:.78">How to use it</p>
+      <h2 class="ba-display" style="flex:2 1 520px;color:var(--on-band);font-size:clamp(44px,6.2vw,72px)">Less than you think</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));border-top:1px solid var(--line-strong)">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+        <div style="padding:24px 24px 0 0;display:flex;flex-direction:column;gap:12px">
+          <p class="ba-label" style="color:var(--on-band);opacity:.78">{{ s.n }}</p>
+          <h3 style="font:800 24px/28px var(--font-display);letter-spacing:-.02em;text-transform:uppercase;color:var(--on-band)">{{ s.title }}</h3>
+          <p style="font-size:17px;line-height:28px;color:var(--on-band);opacity:.78">{{ s.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div style="aspect-ratio:16/7;background:#222326;display:flex;align-items:flex-end;padding:20px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Video: Bryton styling a client with matte clay, 60–90 sec, no music voiceover</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Product / In the shop" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+      <h2 class="ba-display" style="font-size:clamp(40px,5vw,60px)">Styled with it</h2>
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="{{ book }}" hint-size="170px,56px">BOOK NOW</x-import>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px">
+      <figure style="display:flex;flex-direction:column;gap:10px"><img src="assets/photos/cut-textured-flow.webp" alt="Textured flow haircut" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block"><figcaption style="font-size:14px;line-height:22px;color:var(--ink-muted)">Textured flow.</figcaption></figure>
+      <figure style="display:flex;flex-direction:column;gap:10px"><img src="assets/photos/cut-side-part.webp" alt="Side part haircut" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block"><figcaption style="font-size:14px;line-height:22px;color:var(--ink-muted)">Side part.</figcaption></figure>
+      <figure style="display:flex;flex-direction:column;gap:10px"><img src="assets/photos/cut-curly-taper.webp" alt="Curly taper haircut" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block"><figcaption style="font-size:14px;line-height:22px;color:var(--ink-muted)">Curly top, tapered sides.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="ingredients" data-screen-label="Product / Ingredients" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 32px">
+      <p class="ba-label" style="flex:1 1 240px">What’s in it</p>
+      <h2 class="ba-display" style="flex:2 1 520px;font-size:clamp(44px,6.2vw,72px)">Ingredients</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:16px;align-items:start">
+      <sc-for list="{{ ingredients }}" as="g" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;background:var(--canvas-raised);border:1px solid var(--line)">
+          <div style="aspect-ratio:1/1;background-color:var(--canvas-sunk);background-image:{{ g.bg }};background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:12px"><sc-if value="{{ g.noImg }}" hint-placeholder-val="{{ true }}"><p class="ba-label" style="color:var(--ink-muted)">Photo: {{ g.name }}</p></sc-if></div>
+          <button onClick="{{ g.toggle }}" aria-expanded="{{ g.open }}" style="display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:64px;padding:16px 18px;background:none;border:0;border-top:1px solid var(--line);cursor:pointer;text-align:left;color:var(--ink)">
+            <span style="font:800 18px/22px var(--font-display);letter-spacing:-.01em;text-transform:uppercase">{{ g.name }}</span>
+            <span aria-hidden="true" style="flex:none;width:10px;height:10px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:{{ g.rot }};transition:transform 150ms ease"></span>
+          </button>
+          <sc-if value="{{ g.open }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:10px;padding:0 18px 20px">
+              <p class="ba-label" style="color:var(--ink-muted)">Why we use it</p>
+              <p style="font-size:15px;line-height:24px;text-wrap:pretty">{{ g.why }}</p>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-screen-label="Product / FAQ" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px 32px">
+    <div style="flex:1 1 240px;display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label">Questions</p>
+      <h2 class="ba-display" style="font-size:clamp(44px,6.2vw,72px)">FAQ</h2>
+    </div>
+    <div style="flex:2 1 520px;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="6">
+        <details style="border-bottom:1px solid var(--line)">
+          <summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;padding:20px 0;font:800 clamp(18px,2vw,22px)/1.2 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ q.q }}<span aria-hidden="true" style="font:600 22px/1 var(--font-sans)">+</span></summary>
+          <p style="padding:0 0 24px;max-width:640px;font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">{{ q.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="compare" data-screen-label="Product / Clay vs cream" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 32px">
+      <p class="ba-label" style="flex:1 1 240px">Which one is for you?</p>
+      <h2 class="ba-display" style="flex:2 1 520px;font-size:clamp(44px,6.2vw,72px)">Clay or cream</h2>
+    </div>
+    <div data-m-cmp="" style="display:flex;flex-wrap:wrap;align-items:stretch;gap:16px">
+      <div style="flex:1 1 320px;display:flex;flex-direction:column;background:var(--canvas-raised);border:1px solid var(--line)">
+        <div style="display:flex;align-items:center;gap:20px;padding:24px;background:var(--band);color:var(--on-band)">
+          <div aria-hidden="true" style="flex:none;width:88px;height:88px;background-color:#222326;background-image:url('assets/photos/clay-card.png');background-size:cover;background-position:center"></div>
+          <h3 class="ba-display" style="color:var(--on-band);font-size:clamp(28px,3vw,40px)">Matte clay</h3>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-top:1px solid var(--line)"><p class="ba-label" style="color:var(--ink-muted)">Performance</p><p style="font:600 17px/26px var(--font-sans)">Firm hold, matte finish</p></div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-top:1px solid var(--line)"><p class="ba-label" style="color:var(--ink-muted)">Longevity</p><p style="font:600 17px/26px var(--font-sans)">Details coming soon</p></div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-top:1px solid var(--line)"><p class="ba-label" style="color:var(--ink-muted)">Best suits</p><p style="font:600 17px/26px var(--font-sans)">Short to medium hair</p></div>
+        <div style="padding:20px 24px;border-top:1px solid var(--line);margin-top:auto"><a href="#top" class="ba-label" style="color:var(--ink)">You’re here</a></div>
+      </div>
+      <div style="flex:0 0 auto;align-self:center;margin:0 auto;display:flex;align-items:center;justify-content:center;width:72px;height:72px;background:var(--ink);color:var(--canvas);font:800 26px/1 var(--font-display);letter-spacing:-.02em">VS</div>
+      <div style="flex:1 1 320px;display:flex;flex-direction:column;background:var(--canvas-raised);border:1px solid var(--line)">
+        <div style="display:flex;align-items:center;gap:20px;padding:24px;background:var(--band);color:var(--on-band)">
+          <div aria-hidden="true" style="flex:none;width:88px;height:88px;background-color:#222326;background-image:url('assets/photos/cream-card.png');background-size:cover;background-position:center"></div>
+          <h3 class="ba-display" style="color:var(--on-band);font-size:clamp(28px,3vw,40px)">Styling cream</h3>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-top:1px solid var(--line)"><p class="ba-label" style="color:var(--ink-muted)">Performance</p><p style="font:600 17px/26px var(--font-sans)">Details coming soon</p></div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-top:1px solid var(--line)"><p class="ba-label" style="color:var(--ink-muted)">Longevity</p><p style="font:600 17px/26px var(--font-sans)">Details coming soon</p></div>
+        <div style="display:flex;flex-direction:column;gap:6px;padding:20px 24px;border-top:1px solid var(--line)"><p class="ba-label" style="color:var(--ink-muted)">Best suits</p><p style="font:600 17px/26px var(--font-sans)">Details coming soon</p></div>
+        <div style="padding:20px 24px;border-top:1px solid var(--line);margin-top:auto"><a href="Shop.dc.html" class="ba-label" style="color:var(--ink)">Shop the cream →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="StoreFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { ing: -1, set: 0, sub: false, freq: 1, cart: 0, justAdded: false, photo: 0, open: 0 };
+  buyVals() {
+    // Bundle discounts and subscribe rate are placeholders until set in Shopify.
+    const SETS = [
+      { name: '1 jar', full: 28, price: 28, imgs: ['assets/photos/clay-card.png'] },
+      { name: '2 jars', full: 56, price: 50.4, imgs: ['assets/photos/clay-card.png', 'assets/photos/clay-card.png'] },
+      { name: 'The daily kit', full: 84, price: 71.4, imgs: ['assets/photos/clay-card.png', 'assets/photos/shampoo-card.png', 'assets/photos/conditioner-card.png'] },
+    ];
+    const SUB = 0.20, FREQ = ['30 days', '60 days', '90 days'];
+    const $ = n => '$' + (Math.round(n * 100) % 100 ? n.toFixed(2) : String(Math.round(n)));
+    const st = this.state, cur = SETS[st.set], sub = cur.price * (1 - SUB), now = st.sub ? sub : cur.price;
+    return {
+      sets: SETS.map((b, i) => { const on = i === st.set; return { name: b.name, price: $(b.price), was: $(b.full), hasWas: b.full !== b.price, selected: on, bg: on ? 'var(--ink)' : 'var(--canvas)', fg: on ? 'var(--canvas)' : 'var(--ink)', border: on ? 'var(--ink)' : 'var(--line-strong)', imgs: b.imgs.map(u => 'url("' + u + '")'), pick: () => this.setState({ set: i }) }; }),
+      once: !st.sub, sub: st.sub, oncePrice: $(cur.price), subPrice: $(sub),
+      onceBorder: st.sub ? '1px solid var(--line-strong)' : '2px solid var(--ink)', subBorder: st.sub ? '2px solid var(--ink)' : '1px solid var(--line-strong)',
+      pickOnce: () => this.setState({ sub: false }), pickSub: () => this.setState({ sub: true }),
+      freqs: FREQ.map((label, i) => ({ label, selected: i === st.freq, bg: i === st.freq ? 'var(--ink)' : 'transparent', fg: i === st.freq ? 'var(--canvas)' : 'var(--ink)', pick: () => this.setState({ freq: i, sub: true }) })),
+      headPrice: $(now) + (st.sub ? ' every ' + FREQ[st.freq] : ''),
+      addLabel: st.justAdded ? 'ADDED TO CART' : 'ADD TO CART — ' + $(now),
+    };
+  }
+  renderVals() {
+    const photos = [
+      ['Matte clay jar, front label', 'Front', 'assets/photos/clay-jar.png'],
+      ['Photo: lid off, clay texture close-up', 'Texture'],
+      ['Matte clay jar and box', 'Jar + box', 'assets/photos/clay-scene.png'],
+      ['Photo: fingertip amount, scale for how much to use', 'Amount'],
+    ];
+    const details = [
+      ['What it does', 'Holds your style in place all day without shine or crunch. Washes out with shampoo.'],
+      ['Ingredients', 'Full ingredient list goes here once the formula is final.'],
+      ['Shipping and pickup', 'Orders ship within 2 business days. Local pickup is free at the shop in Orem during open hours.'],
+    ];
+    return {
+      book: 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services',
+      cartCount: this.state.cart,
+      // Ingredients: add name, photo path (img) and why we use it when ready.
+      ingredients: [
+        { name: 'Ingredient 1', img: '', why: 'Why we use it and what it does. Coming soon.' },
+        { name: 'Ingredient 2', img: '', why: 'Why we use it and what it does. Coming soon.' },
+        { name: 'Ingredient 3', img: '', why: 'Why we use it and what it does. Coming soon.' },
+        { name: 'Ingredient 4', img: '', why: 'Why we use it and what it does. Coming soon.' },
+      ].map((g, i) => { const open = this.state.ing === i; return { ...g, bg: g.img ? 'url("' + g.img + '")' : 'none', noImg: !g.img, open, rot: open ? 'rotate(-135deg) translate(-2px,-2px)' : 'rotate(45deg) translate(-2px,-2px)', toggle: () => this.setState(s => ({ ing: s.ing === i ? -1 : i })) }; }),
+      // Product FAQ: replace each answer when ready.
+      faqs: [
+        ['What makes our matte clay different?', 'Answer coming soon.'],
+        ['How is the matte clay different from the cream?', 'Answer coming soon.'],
+        ['What hair is it best for? What will it do to my hair?', 'Answer coming soon.'],
+        ['What does it smell and feel like?', 'Answer coming soon.'],
+        ['Does it wash out easily?', 'Answer coming soon.'],
+        ['There’s an issue with my order. Now what?', 'Answer coming soon.'],
+      ].map(([q, a]) => ({ q, a })),
+      ...this.buyVals(),
+      fullBtn: { style: { width: '100%' } },
+      add: () => { this.setState(s => ({ cart: s.cart + 1, justAdded: true })); clearTimeout(this.t); this.t = setTimeout(() => this.setState({ justAdded: false }), 2000); },
+      activePhoto: photos[this.state.photo][0], activeBg: photos[this.state.photo][2] ? 'url("' + photos[this.state.photo][2] + '")' : 'none', activeAlt: 'Broken Arrow Grooming ' + photos[this.state.photo][0].toLowerCase(), activeHasImg: !!photos[this.state.photo][2], activeNoImg: !photos[this.state.photo][2],
+      thumbs: photos.map((p, i) => ({ label: p[0], short: p[1], bg: p[2] ? 'url("' + p[2] + '")' : 'none', hasImg: !!p[2], selected: i === this.state.photo, border: i === this.state.photo ? 'var(--ink)' : 'transparent', pick: () => this.setState({ photo: i }) })),
+      details: details.map((d, i) => ({ title: d[0], body: d[1], open: i === this.state.open, state: i === this.state.open ? 'Close' : 'Open', toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })) })),
+      steps: [
+        { n: '01', title: 'Start with dry hair', body: 'Towel-dry or blow-dry first. Clay holds best on hair that is fully dry.' },
+        { n: '02', title: 'A fingertip is enough', body: 'Rub it between your palms until it warms up and you can barely see it.' },
+        { n: '03', title: 'Back to front', body: 'Work it in from the back so the front doesn\'t get too much. Shape with your fingers.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

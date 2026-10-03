@@ -1,0 +1,42 @@
+{%- comment -%}
+  Barber profile schema. Create pages with handles bryton / connor / elise,
+  then in the page template add:  {% render 'schema-barber', handle: page.handle %}
+{%- endcomment -%}
+{%- case handle -%}
+  {%- when 'bryton' -%}
+    {%- assign b_name = 'Bryton' -%}
+    {%- assign b_role = 'Owner & licensed barber instructor' -%}
+    {%- assign b_desc = 'Owns Broken Arrow Barbershop. Best known for short, classic haircuts, big changes, and thinning hair or a receding hairline. Does all of the shop’s hair system work. Taught hundreds of students as an instructor at Paul Mitchell The School Provo.' -%}
+    {%- assign b_book = 'https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services' -%}
+    {%- assign b_knows = 'Short classic haircuts|Big transformations|Thinning hair|Receding hairlines|Hair systems|Haircut and beard' -%}
+  {%- when 'connor' -%}
+    {%- assign b_name = 'Connor' -%}
+    {%- assign b_role = 'Barber' -%}
+    {%- assign b_desc = 'Utah County local. Most of his work is medium to longer haircuts: keeping the length and giving it shape.' -%}
+    {%- assign b_book = 'https://book.squareup.com/appointments/cnl05yngyr8vhx/location/LFBJAQ8MMHY0Z/services' -%}
+    {%- assign b_knows = 'Medium-length haircuts|Longer hair|Detail work' -%}
+  {%- when 'elise' -%}
+    {%- assign b_name = 'Elise' -%}
+    {%- assign b_role = 'Barber' -%}
+    {%- assign b_desc = 'Specializes in medium-length styles and curly hair, including flow cuts and longer, natural looks.' -%}
+    {%- assign b_book = 'https://book.squareup.com/appointments/wkoxhle5mmhzak/location/LFBJAQ8MMHY0Z/services' -%}
+    {%- assign b_knows = 'Curly hair|Flow cuts|Medium-length styles' -%}
+{%- endcase -%}
+{%- if b_name -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ b_name | json }},
+  "jobTitle": {{ b_role | json }},
+  "description": {{ b_desc | json }},
+  "url": "{{ shop.url }}{{ request.path }}",
+  "knowsAbout": {{ b_knows | split: '|' | json }},
+  {%- if handle == 'bryton' -%}
+  "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Licensed barber instructor" },
+  {%- endif -%}
+  "worksFor": { "@id": "{{ shop.url }}/#barbershop", "@type": "BarberShop", "name": "Broken Arrow Barbershop" },
+  "potentialAction": { "@type": "ReserveAction", "target": {{ b_book | json }}, "name": {{ 'Book with ' | append: b_name | json }} }
+}
+</script>
+{%- endif -%}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Learn · Broken Arrow Grooming</title>
+<meta name="description" content="Hair guides and product how-tos from the barbers at Broken Arrow in Orem, Utah.">
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="StoreHeader" active="learn" hint-size="100%,120px"></dc-import>
+
+<section data-screen-label="Learn / Header" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,5vw,64px) 32px;display:flex;flex-wrap:wrap;gap:24px 32px;align-items:flex-end">
+    <div style="flex:2 1 520px;display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label">Broken Arrow Grooming · Learn</p>
+      <h1 class="ba-display" style="font-size:min(clamp(52px,8vw,104px),11vw);letter-spacing:-.045em">Learn</h1>
+      <p style="max-width:600px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">Hair guides and product how-tos from the barbers who use these products in the chair every day.</p>
+    </div>
+    <div style="flex:1 1 280px;display:flex;flex-wrap:wrap;gap:8px" role="tablist" aria-label="Topics">
+      <sc-for list="{{ topics }}" as="t" hint-placeholder-count="4">
+        <button onClick="{{ t.pick }}" role="tab" aria-selected="{{ t.selected }}" style="min-height:44px;padding:0 16px;border:1px solid {{ t.border }};background:{{ t.bg }};color:{{ t.fg }};cursor:pointer;font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase">{{ t.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Learn / Grid" style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,5vw,64px) clamp(56px,8vw,96px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:40px 24px;border-top:2px solid var(--ink);padding-top:32px">
+    <sc-for list="{{ items }}" as="p" hint-placeholder-count="6">
+      <a href="{{ p.href }}" style="display:flex;flex-direction:column;gap:12px;text-decoration:none;color:var(--ink)" style-hover="color:var(--green)">
+        <div role="img" aria-label="{{ p.title }}" style="aspect-ratio:3/2;background-color:var(--canvas-sunk);background-image:{{ p.bg }};background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:12px"><sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ false }}"><p class="ba-label" style="color:var(--ink-muted)">{{ p.photo }}</p></sc-if></div>
+        <p class="ba-label" style="color:var(--ink-muted)">{{ p.meta }}</p>
+        <h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance">{{ p.title }}</h3>
+        <p style="font-size:15px;line-height:24px;color:var(--ink-muted)">{{ p.dek }}</p>
+      </a>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Learn / Quiz band" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:640px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Not sure what to use?</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,5.6vw,72px)">Take the product quiz.</h2>
+    </div>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="Product%20Quiz.dc.html" hint-size="220px,56px">START THE QUIZ</x-import>
+  </div>
+</section>
+
+<dc-import name="StoreFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const ITEMS = [
+  ['howto', 'Product how-to', '3 min', 'How much matte clay to use', 'Less than you think. A fingertip, dry hair, back to front.', '', 'Photo: fingertip of clay, close-up', 'Product%20-%20Matte%20Clay.dc.html#how-to-use'],
+  ['howto', 'Product how-to', '3 min', 'Clay or cream: which one is for you?', 'Hold, finish and hair length, side by side.', 'assets/photos/clay-card.png', '', 'Product%20-%20Matte%20Clay.dc.html#compare'],
+];
+const TOPICS = [['all', 'All'], ['howto', 'Product how-tos']];
+class Component extends DCLogic {
+  state = { t: 'all' };
+  renderVals() {
+    const t = this.state.t;
+    return {
+      topics: TOPICS.map(([id, label]) => { const on = id === t; return { label, selected: on, bg: on ? 'var(--ink)' : 'transparent', fg: on ? 'var(--canvas)' : 'var(--ink)', border: on ? 'var(--ink)' : 'var(--line-strong)', pick: () => this.setState({ t: id }) }; }),
+      items: ITEMS.filter(i => t === 'all' || i[0] === t).map(i => ({ meta: i[1] + ' · ' + i[2], title: i[3], dek: i[4], bg: i[5] ? 'url("' + i[5] + '")' : 'none', noImg: !i[5], photo: i[6], href: i[7] })),
+    };
+  }
+}
+</script>
+</body>
+</html>

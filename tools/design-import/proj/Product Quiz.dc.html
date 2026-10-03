@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Find your product · Broken Arrow Grooming</title>
+<meta name="description" content="Answer five quick questions about your hair and we'll match you with the right Broken Arrow Grooming product.">
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure,ul,ol{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="StoreHeader" active="quiz" hint-size="100%,120px"></dc-import>
+
+<sc-if value="{{ isStart }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="Quiz / Start" style="position:relative;background:var(--band);color:var(--on-band);min-height:clamp(520px,76vh,760px);display:flex;align-items:center;overflow:hidden">
+  <img src="assets/photos/clay-hero.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,23,26,.9) 0%,rgba(22,23,26,.65) 42%,rgba(22,23,26,.1) 75%)"></div>
+  <div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:28px">
+    <p class="ba-label" style="color:var(--on-band)">Find your product · 5 questions · 30 seconds</p>
+    <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(48px,7vw,92px),11vw);letter-spacing:-.045em;line-height:.92;max-width:11ch">What does your hair actually need?</h1>
+    <p style="max-width:460px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;opacity:.9;text-wrap:pretty">Answer a few quick questions and we’ll match you with the right Broken Arrow product.</p>
+    <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" on-click="{{ start }}" hint-size="220px,56px">FIND MY PRODUCT</x-import></div>
+    <p class="ba-label" style="color:var(--on-band);opacity:.78">Good grooming starts with being understood.</p>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isQuestion }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Quiz / Question" style="background:var(--canvas);min-height:clamp(560px,78vh,820px)">
+  <div style="max-width:960px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(16px,5vw,64px) clamp(56px,8vw,96px);display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px">
+        <button onClick="{{ back }}" style="background:none;border:0;padding:0;min-height:44px;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink)" style-hover="color:var(--green)">← Back</button>
+        <p class="ba-label" style="color:var(--ink-muted);font-variant-numeric:tabular-nums">{{ stepLabel }}</p>
+      </div>
+      <div style="height:2px;background:var(--line)"><div style="height:2px;background:var(--ink);width:{{ progress }};transition:width 150ms ease"></div></div>
+    </div>
+    <h2 class="ba-display" style="font-size:clamp(36px,5vw,64px);max-width:16ch;text-wrap:balance">{{ q.title }}</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px">
+      <sc-for list="{{ q.options }}" as="o" hint-placeholder-count="3">
+        <button onClick="{{ o.pick }}" aria-pressed="{{ o.selected }}" style="display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:24px;min-height:136px;padding:22px;text-align:left;cursor:pointer;background:{{ o.bg }};color:{{ o.fg }};border:1px solid {{ o.border }};transition:background-color 150ms ease,border-color 150ms ease,color 150ms ease" style-hover="border-color:var(--ink)">
+          <span class="ba-label" style="color:inherit;opacity:.7">{{ o.num }}</span>
+          <span style="display:flex;flex-direction:column;gap:6px">
+            <span style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ o.title }}</span>
+            <sc-if value="{{ o.hasSub }}" hint-placeholder-val="{{ false }}"><span style="font-size:15px;line-height:22px;opacity:.75">{{ o.sub }}</span></sc-if>
+          </span>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ isResult }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Quiz / Result" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(16px,5vw,64px) clamp(56px,8vw,96px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,80px);align-items:flex-start">
+    <div style="flex:1 1 420px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:4px">
+      <sc-for list="{{ r.products }}" as="p" hint-placeholder-count="1">
+        <figure style="position:relative;aspect-ratio:4/5;background:var(--canvas-sunk);overflow:hidden">
+          <div role="img" aria-label="{{ p.alt }}" style="position:absolute;inset:0;background-image:{{ p.bg }};background-size:cover;background-position:center"></div>
+          <sc-if value="{{ r.isCombo }}" hint-placeholder-val="{{ false }}"><p class="ba-label" style="position:absolute;left:0;bottom:0;padding:10px 14px;background:var(--band);color:var(--on-band)">{{ p.stepLabel }}</p></sc-if>
+        </figure>
+      </sc-for>
+    </div>
+    <div style="flex:1 1 440px;max-width:600px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label">{{ r.kicker }}</p>
+      <h1 class="ba-display" style="font-size:min(clamp(44px,6vw,80px),11vw);letter-spacing:-.045em;line-height:.92">{{ r.name }}</h1>
+      <p style="font:800 clamp(22px,2.4vw,28px)/1.15 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ r.headline }}</p>
+      <p style="font-size:17px;line-height:28px;text-wrap:pretty">{{ r.body }}</p>
+
+      <sc-if value="{{ r.isCombo }}" hint-placeholder-val="{{ false }}">
+        <ol style="list-style:none;padding:0;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+          <sc-for list="{{ r.products }}" as="p" hint-placeholder-count="2">
+            <li style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid var(--line)">
+              <span class="ba-label" style="padding-top:4px">{{ p.stepNum }}</span>
+              <span style="display:flex;flex-direction:column;gap:4px"><span style="font:800 20px/24px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ p.name }}</span><span style="font-size:15px;line-height:24px;color:var(--ink-muted)">{{ p.step }}</span></span>
+            </li>
+          </sc-for>
+        </ol>
+      </sc-if>
+
+      <div style="display:flex;flex-direction:column;gap:10px;background:var(--canvas-sunk);padding:20px 22px">
+        <p class="ba-label">Why it fits</p>
+        <p style="font-size:15px;line-height:24px;text-wrap:pretty">{{ r.why }}</p>
+      </div>
+
+      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--line)">
+        <sc-for list="{{ r.benefits }}" as="b" hint-placeholder-count="3">
+          <li style="padding:14px 0;border-bottom:1px solid var(--line);font:600 13px/18px var(--font-sans);letter-spacing:.18em;text-transform:uppercase">{{ b }}</li>
+        </sc-for>
+      </ul>
+
+      <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center">
+        <sc-for list="{{ r.ctas }}" as="c" hint-placeholder-count="1">
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="{{ c.variant }}" href="{{ c.href }}" hint-size="220px,56px">{{ c.label }}</x-import>
+        </sc-for>
+        <button onClick="{{ restart }}" style="background:none;border:0;padding:0;min-height:44px;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink);text-decoration:underline;text-decoration-color:var(--green);text-underline-offset:6px" style-hover="color:var(--green)">Retake the quiz</button>
+      </div>
+      <p style="font-size:14px;line-height:22px;color:var(--ink-muted)">Not sure? Ask your barber at your next appointment. They use all of these in the chair.</p>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<dc-import name="StoreFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Products and routines are data: add a new product by adding an entry to PRODUCTS and scores to the answers in QUESTIONS.
+const PRODUCTS = {
+  clay: { name: 'Hair Clay', img: 'assets/photos/clay-card.png', href: 'Product%20-%20Matte%20Clay.dc.html', cta: 'SHOP HAIR CLAY',
+    headline: 'Control without looking overdone.',
+    body: 'Our low-shine, medium-hold clay gives shorter and medium-length hair the control it needs while keeping the finished style natural. Work a small amount through your hair for definition, texture and an effortless finish.',
+    benefits: ['Medium hold', 'Low shine', 'Best for short to medium hair'],
+    step: 'Work a small amount through dry hair for control and definition.' },
+  cream: { name: 'Cream', img: 'assets/photos/cream-card.png', href: 'Shop.dc.html#cream', cta: 'SHOP CREAM',
+    headline: 'Work with your hair, not against it.',
+    body: 'Our lightweight styling cream conditions, smooths and controls frizz while letting your natural texture do its thing. Low hold and a natural matte finish make it especially good for medium and longer styles that should still move.',
+    benefits: ['Low hold, natural finish', 'Conditions and tames frizz', 'Best for medium to long hair'],
+    step: 'Finish with cream for hydration, frizz control and a natural shape.' },
+  salt: { name: 'Sea Salt Spray', img: 'assets/photos/salt-card.png', href: 'Shop.dc.html#salt', cta: 'SHOP SEA SALT SPRAY',
+    headline: 'Give your hair something to work with.',
+    body: 'Add texture, volume and that slightly lived-in feel hair gets after a day outside. Use it on its own for an effortless textured style or as a pre-styler before your Clay or Cream.',
+    benefits: ['Texture and separation', 'Volume and body', 'Works alone or as a pre-styler'],
+    step: 'Spray into damp hair first for volume and texture, then dry.' },
+};
+const ROUTINES = [
+  { ids: ['salt', 'clay'], name: 'Sea Salt Spray + Hair Clay', headline: 'Texture + Control',
+    body: 'Your hair needs lift and texture, and you want it to stay where you put it. Start with Sea Salt Spray as a pre-styler, then finish with Hair Clay for control and definition.' },
+  { ids: ['salt', 'cream'], name: 'Sea Salt Spray + Cream', headline: 'Texture + Movement',
+    body: 'Your hair needs more volume and texture but should stay soft and movable. Start with Sea Salt Spray for body, then finish with Cream for hydration, frizz control and a natural shape.' },
+];
+const QUESTIONS = [
+  { id: 'length', title: 'How long is your hair?', options: [
+    { t: 'Short', s: 'Above roughly 3 inches', score: { clay: 2 }, why: 'shorter hair' },
+    { t: 'Medium', s: 'Roughly 3–6 inches', score: { clay: 1, cream: 1, salt: 1 }, why: 'medium-length hair' },
+    { t: 'Long', s: '6+ inches', score: { cream: 2 }, why: 'longer hair' } ] },
+  { id: 'goal', title: 'What do you want most from your hair?', options: [
+    { t: 'More control and hold', score: { clay: 3 }, why: 'more control' },
+    { t: 'More texture and volume', score: { salt: 3 }, why: 'more texture and volume' },
+    { t: 'Less frizz and more hydration', score: { cream: 3 }, why: 'less frizz' },
+    { t: 'A loose, natural look', score: { cream: 2, salt: 1 }, why: 'a loose, natural look' },
+    { t: 'A little of everything', score: { clay: 1, cream: 1, salt: 1 }, why: 'a bit of everything' } ] },
+  { id: 'hold', title: 'How much hold do you want?', options: [
+    { t: 'Very little', s: 'I want my hair to move', score: { cream: 2, salt: 1 }, why: 'light hold' },
+    { t: 'Medium', s: 'Controlled but still natural', score: { clay: 2 }, why: 'medium hold' },
+    { t: 'Texture over hold', s: 'I care more about texture', score: { salt: 2 }, why: 'texture over hold' } ] },
+  { id: 'finish', title: 'What finish do you prefer?', options: [
+    { t: 'Matte', s: 'No shine', score: { clay: 1, cream: 1 }, why: 'a matte finish' },
+    { t: 'Low shine', s: 'Natural', score: { clay: 1 }, why: 'a low-shine finish' },
+    { t: 'I don’t really care', score: {} } ] },
+  { id: 'frustration', title: 'What’s your biggest hair frustration?', options: [
+    { t: 'It falls flat', score: { salt: 2 }, why: 'hair that falls flat' },
+    { t: 'It gets frizzy or dry', score: { cream: 2 }, why: 'frizz and dryness' },
+    { t: 'It won’t stay put', score: { clay: 2 }, why: 'hair that won’t stay put' },
+    { t: 'It needs more texture', score: { salt: 2 }, why: 'needing more texture' },
+    { t: 'I want it to look naturally better', score: { cream: 1, salt: 1 }, why: 'wanting it to look naturally better' } ] },
+];
+
+class Component extends DCLogic {
+  state = { step: -1, answers: [] };
+  score() {
+    const s = {}; Object.keys(PRODUCTS).forEach(k => (s[k] = 0));
+    this.state.answers.forEach((a, qi) => { const o = QUESTIONS[qi].options[a]; if (o) Object.entries(o.score).forEach(([k, v]) => (s[k] += v)); });
+    return s;
+  }
+  result() {
+    const s = this.score();
+    const ranked = Object.keys(s).sort((a, b) => s[b] - s[a]);
+    const [top, second] = ranked;
+    const combo = ROUTINES.find(r => r.ids.includes(top) && r.ids.includes(second) && s[top] >= 4 && s[second] >= 4 && s[top] - s[second] <= 2);
+    const whys = this.state.answers.map((a, qi) => QUESTIONS[qi].options[a] && QUESTIONS[qi].options[a].why).filter(Boolean);
+    const why = 'You told us you have ' + whys[0] + ', want ' + whys.slice(1, -1).join(', ') + (whys.length > 2 ? ', and' : '') + ' are dealing with ' + whys[whys.length - 1] + '.';
+    const card = (id, i) => ({ ...PRODUCTS[id], alt: 'Broken Arrow Grooming ' + PRODUCTS[id].name, bg: 'url("' + PRODUCTS[id].img + '")', stepNum: '0' + (i + 1), stepLabel: 'Step ' + (i + 1) });
+    if (combo) {
+      const products = combo.ids.map(card);
+      return { isCombo: true, kicker: 'Your routine', name: combo.name, headline: combo.headline, body: combo.body, why, products,
+        benefits: [PRODUCTS[combo.ids[0]].benefits[0], PRODUCTS[combo.ids[1]].benefits[0], PRODUCTS[combo.ids[1]].benefits[2]],
+        ctas: products.map((p, i) => ({ label: p.cta, href: p.href, variant: i === 0 ? 'primary' : 'secondary' })) };
+    }
+    const p = card(top, 0);
+    return { isCombo: false, kicker: 'Your match', name: p.name, headline: p.headline, body: p.body, why, products: [p], benefits: p.benefits,
+      ctas: [{ label: p.cta, href: p.href, variant: 'primary' }] };
+  }
+  renderVals() {
+    const { step, answers } = this.state, n = QUESTIONS.length;
+    const isQuestion = step >= 0 && step < n;
+    const q = isQuestion ? QUESTIONS[step] : QUESTIONS[0];
+    return {
+      isStart: step < 0, isQuestion, isResult: step >= n,
+      start: () => this.setState({ step: 0, answers: [] }),
+      restart: () => this.setState({ step: 0, answers: [] }),
+      back: () => this.setState(st => ({ step: st.step - 1 })),
+      stepLabel: String(Math.min(step + 1, n)).padStart(2, '0') + ' / ' + String(n).padStart(2, '0'),
+      progress: ((Math.min(step, n) / n) * 100) + '%',
+      q: { title: q.title, options: q.options.map((o, i) => {
+        const sel = answers[step] === i;
+        return { num: String.fromCharCode(65 + i), title: o.t, sub: o.s || '', hasSub: !!o.s, selected: sel,
+          bg: sel ? 'var(--band)' : 'var(--canvas-raised, var(--canvas))', fg: sel ? 'var(--on-band)' : 'var(--ink)', border: sel ? 'var(--band)' : 'var(--line)',
+          pick: () => { const a = answers.slice(0, step); a[step] = i; this.setState({ answers: a }); clearTimeout(this.t); this.t = setTimeout(() => this.setState({ step: step + 1 }), 180); } };
+      }) },
+      r: step >= n ? this.result() : { products: [], benefits: [], ctas: [] },
+    };
+  }
+}
+</script>
+</body>
+</html>

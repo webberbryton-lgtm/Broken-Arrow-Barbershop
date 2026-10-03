@@ -1,0 +1,147 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "Logos": {
+      "files": {
+        "lockup-barbershop-black.svg": {
+          "name": "lockup-barbershop-black.svg",
+          "blob": "7f9e24d9dcf6f1351789403242dabc95",
+          "size": 59531,
+          "type": "image/svg+xml"
+        },
+        "lockup-barbershop-offwhite.svg": {
+          "name": "lockup-barbershop-offwhite.svg",
+          "blob": "179ffdf427f1790a0ee1cd856c7e65cb",
+          "size": 59531,
+          "type": "image/svg+xml"
+        },
+        "lockup-barbershop-green.svg": {
+          "name": "lockup-barbershop-green.svg",
+          "blob": "7afca4dfb4a19f54a699e7b311957509",
+          "size": 59531,
+          "type": "image/svg+xml"
+        },
+        "ba-mark-black.svg": {
+          "name": "ba-mark-black.svg",
+          "blob": "8fd986c17e632c0b27347ed25f4df753",
+          "size": 17378,
+          "type": "image/svg+xml"
+        },
+        "ba-mark-offwhite.svg": {
+          "name": "ba-mark-offwhite.svg",
+          "blob": "7308127452b6cd50569e9ae32d04d8b0",
+          "size": 17378,
+          "type": "image/svg+xml"
+        },
+        "ba-mark-green.svg": {
+          "name": "ba-mark-green.svg",
+          "blob": "2b70be2059c78ffd212fd17385b7ea5c",
+          "size": 17378,
+          "type": "image/svg+xml"
+        },
+        "ba-mark.png": {
+          "blob": "a5747d34670b406f1985a2a7dc615982",
+          "name": "ba-mark.png",
+          "size": 21742,
+          "type": "image/png"
+        },
+        "lockup-grooming-black.svg": {
+          "name": "lockup-grooming-black.svg",
+          "blob": "07baefce133c7d2eb5c51edb7ca56e5e",
+          "size": 50616,
+          "type": "image/svg+xml"
+        },
+        "lockup-grooming-offwhite.svg": {
+          "name": "lockup-grooming-offwhite.svg",
+          "blob": "471d3424032ea689b6fdd3448b0273a7",
+          "size": 50616,
+          "type": "image/svg+xml"
+        },
+        "lockup-grooming-green.svg": {
+          "name": "lockup-grooming-green.svg",
+          "blob": "dd51263d7f95ae5ce5ea72c3166e9042",
+          "size": 50616,
+          "type": "image/svg+xml"
+        }
+      },
+      "name": "Logos",
+      "order": [
+        "lockup-barbershop-black.svg",
+        "lockup-barbershop-offwhite.svg",
+        "lockup-barbershop-green.svg",
+        "lockup-grooming-black.svg",
+        "lockup-grooming-offwhite.svg",
+        "lockup-grooming-green.svg",
+        "ba-mark-black.svg",
+        "ba-mark-offwhite.svg",
+        "ba-mark-green.svg",
+        "ba-mark.png"
+      ],
+      "tile": "l"
+    },
+    "Photo References": {
+      "name": "Photo References",
+      "tile": "l",
+      "order": [
+        "broken-arrow-shop-interior.jpg",
+        "ref-city-barbers-grid.jpg",
+        "ref-bradley-mountain-grid.jpg"
+      ],
+      "files": {
+        "broken-arrow-shop-interior.jpg": {
+          "name": "broken-arrow-shop-interior.jpg",
+          "blob": "3fb952444298951daea48a9145290879",
+          "size": 391855,
+          "type": "image/jpeg"
+        },
+        "ref-city-barbers-grid.jpg": {
+          "name": "ref-city-barbers-grid.jpg",
+          "blob": "76c9d5af50c69dbd0b12f79359e4d309",
+          "size": 396019,
+          "type": "image/jpeg"
+        },
+        "ref-bradley-mountain-grid.jpg": {
+          "name": "ref-bradley-mountain-grid.jpg",
+          "blob": "837589db28862e159d1d0584b51a2cea",
+          "size": 442224,
+          "type": "image/jpeg"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-09-26T00:06:49Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "groups": [
+    "Logos",
+    "Photo References"
+  ],
+  "lastChange": {
+    "at": "2026-09-26T01:28:49Z",
+    "by": "Bryton Webber",
+    "via": "Cowork",
+    "note": "Elise's bio, rewritten in the brand voice. All three bios done."
+  },
+  "layout": "files",
+  "libraries": [
+    {
+      "global": "React",
+      "name": "react",
+      "version": "18"
+    },
+    {
+      "global": "ReactDOM",
+      "name": "react-dom",
+      "version": "18"
+    }
+  ],
+  "namespace": "BrokenArrow",
+  "sections": {},
+  "title": "Broken Arrow"
+}

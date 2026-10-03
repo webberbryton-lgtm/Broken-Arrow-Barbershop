@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Apply for the Barber Apprenticeship | Broken Arrow, Orem</title>
+<meta name="description" content="Broken Arrow's barber apprenticeship in Orem, Utah. We train to hire and hire to train. Apply for future openings.">
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<script src="send-form.js"></script>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" active="apprenticeship" hint-size="100%,92px"></dc-import>
+
+<section data-screen-label="Application / Hero" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:24px">
+    <nav aria-label="Breadcrumb" style="display:flex;gap:10px;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase"><a href="Apprenticeship.dc.html" style="color:var(--on-band);opacity:.78;text-decoration:none">Apprenticeship</a><span style="opacity:.5">/</span><span>Apply</span></nav>
+    <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(52px,8vw,112px),11vw);letter-spacing:-.045em;line-height:.92;max-width:12ch">We Hire for Character. We Train for Skill.</h1>
+    <p style="max-width:620px;font-size:clamp(18px,1.8vw,22px);line-height:1.6;text-wrap:pretty">You do <strong>not</strong> need any haircutting experience to apply to the Broken Arrow Apprenticeship.</p>
+    <p class="ba-label" style="color:var(--on-band);border-top:1px solid var(--line-strong);padding-top:16px;max-width:620px">Every barber in our shop today was trained by Bryton at Paul Mitchell The School Provo.</p>
+    <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="#apply" hint-size="220px,56px">START YOUR APPLICATION</x-import></div>
+  </div>
+</section>
+
+<section data-screen-label="Application / Character" style="max-width:920px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:20px">
+  <p style="font-size:clamp(19px,1.9vw,22px);line-height:1.6;text-wrap:pretty">We can teach you how to cut hair. We can teach fades, scissor work, consultations, styling, and the technical skills it takes to become a great barber.</p>
+  <p class="ba-display" style="font-size:clamp(32px,4vw,52px);line-height:1;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding:28px 0">What we can’t teach is character.</p>
+  <p style="font-size:17px;line-height:28px;text-wrap:pretty">We’re looking for people who work hard, show up when they say they will, treat people well, take responsibility, stay humble, and genuinely want to improve.</p>
+  <p style="font-size:17px;line-height:28px;text-wrap:pretty">At Broken Arrow, we’d rather train someone from day one who has the right attitude and values than take someone with years of experience who doesn’t.</p>
+</section>
+
+<section data-screen-label="Application / What we look for" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+    <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:16px"><p class="ba-label">01 / Character</p><h2 class="ba-display" style="font-size:clamp(40px,5vw,64px);max-width:10ch">What We Look For</h2></div>
+    <div style="flex:2 1 520px;min-width:0;max-width:760px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:0 32px;border-top:2px solid var(--ink)">
+      <div style="display:flex;flex-direction:column;gap:8px;padding:24px 0;border-bottom:1px solid var(--line)"><h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Work ethic</h3><p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">You show up, put in the work, and don’t need someone constantly pushing you.</p></div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:24px 0;border-bottom:1px solid var(--line)"><h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Character</h3><p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">You’re honest, responsible, respectful, and someone we’d trust around our clients and team.</p></div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:24px 0;border-bottom:1px solid var(--line)"><h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">People skills</h3><p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">You don’t have to be the most outgoing person in the room, but you should care about people and be able to make someone feel comfortable in your chair.</p></div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:24px 0;border-bottom:1px solid var(--line)"><h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Coachability</h3><p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">You can take correction without getting defensive and put feedback into practice.</p></div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:24px 0;border-bottom:1px solid var(--line)"><h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Reliability</h3><p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">If you say you’re going to be somewhere, you’re there.</p></div>
+      <div style="display:flex;flex-direction:column;gap:8px;padding:24px 0;border-bottom:1px solid var(--line)"><h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Drive</h3><p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">You actually want to become great at this, not simply do enough to get licensed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Application / Not required" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+  <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:16px"><p class="ba-label">02 / Experience</p><h2 class="ba-display" style="font-size:clamp(40px,5vw,64px);max-width:10ch">What We Don’t Require</h2></div>
+  <div style="flex:2 1 520px;max-width:760px;display:flex;flex-direction:column;gap:20px;border-top:2px solid var(--ink);padding-top:28px">
+    <p style="font:800 clamp(24px,2.6vw,32px)/1.1 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Previous haircutting experience.</p>
+    <p style="font-size:17px;line-height:28px">Never held clippers before? That’s okay.</p>
+    <p style="font-size:17px;line-height:28px;text-wrap:pretty">Our job is to teach you the skill. Your job is to bring the character, work ethic, and willingness to learn.</p>
+    <p class="ba-display" style="font-size:clamp(28px,3.4vw,44px);line-height:1;color:var(--green)">Hire for character. Train for skill.</p>
+  </div>
+</section>
+
+<section id="apply" data-screen-label="Apprenticeship / Apply" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:40px 64px">
+    <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:20px;max-width:480px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">03 / Apply</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,5.6vw,72px)">Apply like it’s a job. Because it is.</h2>
+      <p style="font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">We don’t have any apprenticeship openings right now. Apply and we’ll keep your application on file and reach out when we do.</p>
+      <div data-m-price="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;border-top:1px solid var(--line-strong);padding-top:20px">
+        <span style="font:800 clamp(44px,5vw,64px)/1 var(--font-display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--on-band)">$4,995</span>
+        <span class="ba-label" style="color:var(--on-band);opacity:.78">Program fee · vs. around $20,000 at a typical school</span>
+      </div>
+      <p class="ba-label" style="color:var(--on-band);border:1px solid var(--line-strong);padding:12px 16px;align-self:flex-start">No current openings · Please still apply</p>
+    </div>
+    <div style="flex:1.3 1 420px;max-width:720px;background:var(--canvas);color:var(--ink);padding:clamp(24px,3vw,40px)">
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:12px"><p class="ba-label">Application received</p><p style="font-size:17px;line-height:28px">Thanks, {{ first }}. We’ll keep your application on file and reach out when an apprenticeship opens.</p></div></sc-if>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" noValidate="{{ true }}" style="display:flex;flex-direction:column;gap:22px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:22px">
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Full name" required="{{ true }}" value="{{ f.name }}" onChange="{{ on.name }}" error="{{ err.name }}" hint-size="100%,84px"></x-import>
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Phone" type="tel" required="{{ true }}" value="{{ f.phone }}" onChange="{{ on.phone }}" error="{{ err.phone }}" hint-size="100%,84px"></x-import>
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Email" type="email" required="{{ true }}" value="{{ f.email }}" onChange="{{ on.email }}" error="{{ err.email }}" hint-size="100%,84px"></x-import>
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="City" required="{{ true }}" value="{{ f.city }}" onChange="{{ on.city }}" error="{{ err.city }}" hint-size="100%,84px"></x-import>
+          </div>
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Why do you want to be a barber?" required="{{ true }}" multiline="{{ true }}" value="{{ f.why }}" onChange="{{ on.why }}" error="{{ err.why }}" hint-size="100%,160px"></x-import>
+          
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Instagram (optional)" value="{{ f.ig }}" onChange="{{ on.ig }}" hint-size="100%,84px"></x-import>
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Checkbox" checked="{{ f.commit }}" onChange="{{ onCommit }}" invalid="{{ commitInvalid }}" label="I understand the goal of this apprenticeship is to work at Broken Arrow after I’m licensed. *" hint-size="100%,56px"></x-import>
+          <sc-if value="{{ err.commit }}" hint-placeholder-val="{{ false }}"><p class="ba-field-error">{{ err.commit }}</p></sc-if>
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" type="submit" dc-props="{{ fullBtn }}" hint-size="100%,56px">SUBMIT APPLICATION</x-import>
+        </form>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { f: { name: '', phone: '', email: '', city: '', why: '', work: '', exp: '', ig: '', commit: false }, err: {}, sent: false };
+  set(k, v) { this.setState(s => ({ f: { ...s.f, [k]: v }, err: { ...s.err, [k]: undefined } })); }
+  submit = e => {
+    e.preventDefault();
+    const __sec = e.currentTarget && e.currentTarget.closest ? (e.currentTarget.closest('section') || e.currentTarget) : null; const __top = () => { if (!__sec) return; const hdr = document.querySelector('[data-hdr="site"]'); const off = (hdr ? hdr.getBoundingClientRect().height : 120) + 16; window.scrollTo({ top: Math.max(0, __sec.getBoundingClientRect().top + window.scrollY - off), behavior: 'smooth' }); };
+    const f = this.state.f, er = {};
+    if (!f.name.trim()) er.name = 'Add your full name.';
+    if (f.phone.replace(/\D/g, '').length < 10) er.phone = 'Add a phone number with area code.';
+    if (!/^\S+@\S+\.\S+$/.test(f.email)) er.email = 'Add an email address like name@example.com.';
+    if (!f.city.trim()) er.city = 'Add your city so we know you can get to the shop in Orem.';
+    if (f.why.trim().length < 20) er.why = 'Tell us a little more. A few sentences is plenty.';
+    if (!f.commit) er.commit = 'Tick the box to confirm you understand the goal of the program.';
+    this.setState({ err: er });
+    if (!Object.keys(er).length) { (window.baSend ? window.baSend('Apprenticeship application', f) : Promise.resolve(false)).then(ok => { if (ok) this.setState({ sent: true }, __top); }); }
+  };
+  renderVals() {
+    const f = this.state.f, t = k => e => this.set(k, e.target.value);
+    return {
+      old: ['Around $20,000 in tuition', '1,000+ hours, mostly in a classroom', 'Enrolls anyone who can pay', 'Graduate, then find a job on your own'],
+      ours: ['$4,995 program fee', 'Chosen like a new hire, not sold a seat', 'Hours spent in a working shop with real clients', 'Mentored one-on-one by licensed educators', 'The goal is a chair on our team when you’re licensed'],
+      whyUs: [
+        ['An award-winning shop', 'Daily Herald Readers’ Choice for Best Barbershop in Utah Valley, 2023, 2024 and 2026.'],
+        ['Taught by educators', 'Our owner is a licensed barber instructor who has taught hundreds of students.'],
+        ['A full book to learn from', 'Hundreds of five-star Google reviews means real clients in the chair every day.'],
+        ['More than haircuts', 'Exposure to hair systems, content creation and building your own book.'],
+      ].map(([tt, b], i) => ({ n: '0' + (i + 1), t: tt, b })),
+      program: [
+        ['Hours inside a working shop', 'You train at Broken Arrow alongside our barbers, on the floor, not in a lecture hall.'],
+        ['Mentorship from licensed educators', 'Direct supervision and feedback from barbers who have taught hundreds of students.'],
+        ['The Broken Arrow standard', 'Consultations, fades, scissor work and the details that earn five-star reviews.'],
+        ['A path onto the team', 'Earn your Utah license and the goal is for you to keep cutting here.'],
+      ].map(([tt, b], i) => ({ n: '0' + (i + 1), t: tt, b })),
+      lookFor: ['Shows up on time, every time', 'Takes feedback and wants to get better', 'Treats every client like a regular', 'Wants a career, not a quick certificate', 'Lives within reach of Orem'],
+      f, err: this.state.err, submit: this.submit, sent: this.state.sent, notSent: !this.state.sent,
+      first: f.name.trim().split(' ')[0] || 'there',
+      on: { name: t('name'), phone: t('phone'), email: t('email'), city: t('city'), why: t('why'), work: t('work'), exp: t('exp'), ig: t('ig') },
+      onCommit: e => this.set('commit', e.target.checked), commitInvalid: !!this.state.err.commit,
+      fullBtn: { style: { width: '100%' } },
+    };
+  }
+}
+</script>
+</body>
+</html>

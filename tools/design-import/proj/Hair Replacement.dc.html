@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Hair replacement · Broken Arrow Barbershop</title>
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" active="hair" book="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU" book-label="BOOK FREE CONSULTATION" hint-size="100%,92px"></dc-import>
+
+<section data-screen-label="Hair / Hero" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+    <div style="flex:1.2 1 460px;display:flex;flex-direction:column;gap:28px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Non-surgical hair replacement · Orem, Utah</p>
+      <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(48px,7vw,88px),11vw);letter-spacing:-.045em;max-width:12ch">Losing your hair doesn't mean you have to shave it.</h1>
+      <p style="max-width:560px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;opacity:.78;text-wrap:pretty">No surgery, no grafts, no months of recovery. A hair system is a thin base with real hair on it. We color-match it to your hair, attach it, and cut it into your existing hair so it looks like your own. Bryton does all of our hair system work, right here at the shop in Orem.</p>
+      <p style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);padding:16px 0;max-width:560px"><span style="font:800 clamp(28px,3.4vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase">As low as $5.07 a day</span><span style="font-size:15px;line-height:24px;opacity:.78">Skip the energy drinks. Get a non-surgical hair system.</span></p>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ consult }}" hint-size="280px,56px">BOOK A FREE CONSULTATION</x-import>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" tone="dark" href="#quiz" hint-size="200px,44px">TAKE THE 1-MINUTE QUIZ</x-import>
+      </div>
+    </div>
+    <figure style="flex:1 1 420px;margin:0;display:flex;flex-direction:column;gap:12px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+        <div style="position:relative;aspect-ratio:4/5;background:var(--canvas-sunk)"><img src="assets/photos/hs-client2-before.png" alt="Client before, thinning at the front and temples" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"><p class="ba-label" style="position:absolute;left:0;bottom:0;margin:0;padding:10px 14px;background:var(--canvas);color:var(--ink)">Before</p></div>
+        <div style="position:relative;aspect-ratio:4/5;background:var(--canvas-sunk)"><img src="assets/photos/hs-client2-after.png" alt="Same client after, hair system cut and styled up at the front" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"><p class="ba-label" style="position:absolute;left:0;bottom:0;margin:0;padding:10px 14px;background:var(--canvas);color:var(--ink)">After</p></div>
+      </div>
+      <figcaption style="font-size:14px;line-height:22px;opacity:.78">Hair system, color-matched and cut in.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="quiz" data-screen-label="Hair / Quiz" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+    <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label">01 / Is a hair system right for you?</p>
+      <h2 class="ba-display" style="font-size:clamp(36px,4.4vw,56px);max-width:12ch">Seven questions. Two minutes.</h2>
+      <p style="font-size:17px;line-height:28px;color:var(--ink-muted);max-width:360px;text-wrap:pretty">Answer honestly and we’ll tell you whether to start with a haircut or a free hair system consultation. If you’re in doubt, just book the free consultation. It’s no pressure.</p>
+    </div>
+    <div style="flex:2 1 520px;max-width:760px;display:flex;flex-direction:column;gap:32px">
+      <sc-if value="{{ quiz.asking }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid var(--ink);padding-top:24px">
+          <div style="display:flex;justify-content:space-between;gap:16px"><p class="ba-label">{{ quiz.step }}</p><sc-if value="{{ quiz.canBack }}" hint-placeholder-val="{{ false }}"><button onClick="{{ quiz.back }}" style="background:none;border:0;padding:0;min-height:44px;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink)">← Back</button></sc-if></div>
+          <h3 style="font:800 clamp(24px,2.8vw,34px)/1.1 var(--font-display);letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance">{{ quiz.q }}</h3>
+          <div style="display:flex;flex-direction:column;border-top:1px solid var(--line)">
+            <sc-for list="{{ quiz.opts }}" as="o" hint-placeholder-count="4">
+              <button onClick="{{ o.pick }}" style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding:16px 0;background:none;border:0;border-bottom:1px solid var(--line);cursor:pointer;text-align:left;font:500 17px/26px var(--font-sans);color:var(--ink)" style-hover="color:var(--green)"><span>{{ o.label }}</span><span aria-hidden="true" class="ba-label">→</span></button>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ quiz.done }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:20px;background:var(--band);color:var(--on-band);padding:clamp(28px,4vw,48px)">
+          <p class="ba-label" style="color:var(--on-band);opacity:.78">Our recommendation</p>
+          <h3 class="ba-display" style="color:var(--on-band);font-size:clamp(32px,4vw,52px);max-width:16ch">{{ quiz.title }}</h3>
+          <sc-if value="{{ quiz.price }}" hint-placeholder-val="{{ false }}"><p class="ba-label" style="color:var(--on-band)">As low as $5.07 a day · Skip the energy drinks. Get a non-surgical hair system.</p></sc-if>
+          <p style="font-size:17px;line-height:28px;opacity:.85;max-width:560px;text-wrap:pretty">{{ quiz.body }}</p>
+          <p style="font-size:15px;line-height:24px;opacity:.78;max-width:560px;text-wrap:pretty">{{ quiz.note }}</p>
+          <p style="font-size:15px;line-height:24px;max-width:560px;border-top:1px solid var(--line-strong);padding-top:16px;text-wrap:pretty">{{ quiz.doubt }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;padding-top:8px">
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ quiz.primaryHref }}" hint-size="280px,56px">{{ quiz.primary }}</x-import>
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" tone="dark" href="{{ quiz.secondaryHref }}" hint-size="240px,44px">{{ quiz.secondary }}</x-import>
+            <button onClick="{{ quiz.restart }}" style="background:none;border:0;padding:0;min-height:44px;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--on-band);opacity:.78">Start over</button>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Hair / How it works" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 32px">
+      <p class="ba-label" style="flex:1 1 240px">02 / How it works</p>
+      <div style="flex:2 1 520px;display:flex;flex-direction:column;gap:24px">
+        <h2 class="ba-display" style="font-size:clamp(44px,6.2vw,72px)">Four steps</h2>
+        <p style="max-width:680px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">Everyone starts with a free consultation. Nothing is decided until you've seen the options and the costs.</p>
+      </div>
+    </div>
+    <div style="border-top:2px solid var(--ink)">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+        <div style="display:flex;flex-wrap:wrap;gap:12px 32px;padding:28px 0;border-bottom:1px solid var(--line)">
+          <p style="flex:0 0 64px;font:800 32px/1 var(--font-display);letter-spacing:-.03em">{{ s.n }}</p>
+          <h3 style="flex:1 1 240px;font:800 28px/32px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ s.title }}</h3>
+          <div style="flex:2 1 420px;display:flex;flex-direction:column;gap:10px">
+            <p style="font-size:17px;line-height:28px;max-width:680px">{{ s.body }}</p>
+            <sc-if value="{{ s.hasLink }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ s.href }}" class="ba-label" style="align-self:flex-start;color:var(--ink);text-decoration:underline;text-decoration-color:var(--green);text-decoration-thickness:2px;text-underline-offset:6px" style-hover="color:var(--green)">{{ s.price }}</a>
+            </sc-if>
+            <sc-if value="{{ s.noLink }}" hint-placeholder-val="{{ true }}">
+              <p class="ba-label" style="font-variant-numeric:tabular-nums">{{ s.price }}</p>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Hair / Transformation" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,80px);align-items:center">
+    <figure style="flex:1.3 1 460px;margin:0;display:flex;flex-direction:column;gap:12px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+        <div role="img" aria-label="Client before his hair system, bald on top with the new hairline marked" style="position:relative;aspect-ratio:4/5;background-color:#222326;background-image:url('assets/photos/hs-client1-before.png');background-size:cover;background-position:center"><p class="ba-label" style="position:absolute;left:0;bottom:0;margin:0;padding:10px 14px;background:var(--canvas);color:var(--ink)">Before</p></div>
+        <div role="img" aria-label="Same client after, hair system cut into a textured quiff with a low fade" style="position:relative;aspect-ratio:4/5;background-color:#222326;background-image:url('assets/photos/hs-client1-after.png');background-size:cover;background-position:center"><p class="ba-label" style="position:absolute;left:0;bottom:0;margin:0;padding:10px 14px;background:var(--canvas);color:var(--ink)">After</p></div>
+      </div>
+      <figcaption style="font-size:14px;line-height:22px;opacity:.78">Full hair system, color-matched and cut in. Same day.</figcaption>
+    </figure>
+    <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:20px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">A real client</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,5vw,60px);max-width:12ch">Bald on top to a full cut.</h2>
+      <p style="font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">Bryton marked a hairline that suits his face, fitted the system, then cut it into a textured quiff with a low fade on the sides so it blends with his own hair.</p>
+      <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ consult }}" hint-size="280px,56px">BOOK A FREE CONSULTATION</x-import></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Hair / Transplant or system" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+    <p class="ba-label" style="flex:1 1 240px">Transplant or hair system?</p>
+    <div style="flex:2 1 520px;max-width:720px;display:flex;flex-direction:column;gap:24px">
+      <h2 class="ba-display" style="font-size:clamp(40px,5vw,60px);max-width:14ch">We’re not against transplants.</h2>
+      <p style="font-size:20px;line-height:34px;text-wrap:pretty">For the right person, a transplant can work well. But Bryton has had several clients come to him after a transplant that didn’t give them the result they wanted. Most of them say they wish they’d tried a hair system first. It would have saved them a lot of money.</p>
+      <p style="font-size:17px;line-height:28px;text-wrap:pretty">A transplant moves your own hair from the back and sides to the top. How well it works depends on how much donor hair you have and whether your hair loss keeps going. A hair system doesn’t depend on either, involves no surgery, and you can stop any time.</p>
+      <p style="font-size:17px;line-height:28px;text-wrap:pretty">And if a system isn’t right for your hair, Bryton is just as happy to cut it. The consultation is free and there’s no pressure either way.</p>
+      <div style="display:flex;flex-direction:column;gap:12px;background:var(--canvas-sunk);padding:24px">
+        <p class="ba-label">If a transplant is the right call</p>
+        <p style="font-size:17px;line-height:28px;text-wrap:pretty">Bryton works directly with local doctors. If your hair is a good fit for a transplant, he can refer you to one here in Utah for about what people pay to fly to Turkey, without the travel or the risks of having surgery overseas.</p>
+      </div>
+      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+        <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><span class="ba-label">Hair system</span><span class="ba-label">Transplant</span></li>
+        <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:26px"><span>No surgery</span><span>Surgery</span></li>
+        <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:26px"><span>Full density, same day</span><span>Results show over months</span></li>
+        <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:26px"><span>Works however much hair you’ve lost</span><span>Limited by your donor hair</span></li>
+        <li style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:26px"><span>As low as $5.07 a day, stop any time</span><span>Large cost up front</span></li>
+      </ul>
+      <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="{{ consult }}" hint-size="280px,56px">BOOK A FREE CONSULTATION</x-import></div>
+    </div>
+  </div>
+</section>
+
+<section id="prices" data-screen-label="Hair / Prices" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 32px">
+      <p class="ba-label" style="flex:1 1 240px">03 / Prices</p>
+      <div style="flex:2 1 520px;display:flex;flex-direction:column;gap:24px">
+        <h2 class="ba-display" style="font-size:clamp(44px,6.2vw,72px)">Hair system prices</h2>
+        <p style="max-width:680px;font-size:17px;line-height:28px;text-wrap:pretty">Every new system is customized, cut and blended to match your look. Buying several at once gives you backups ready to go and means fewer trips, which helps if you travel or live farther away.</p>
+      </div>
+    </div>
+    <div style="border-top:2px solid var(--ink)">
+      <sc-for list="{{ prices }}" as="p" hint-placeholder-count="8">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 24px;padding:18px 0;border-bottom:1px solid var(--line)">
+          <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:4px">
+            <h3 style="font:800 20px/26px var(--font-display);letter-spacing:-.01em;text-transform:uppercase">{{ p.name }}</h3>
+            <p style="font-size:14px;line-height:22px;color:var(--ink-muted)">{{ p.who }}</p>
+          </div>
+          <p style="font:600 17px/28px var(--font-sans);font-variant-numeric:tabular-nums;text-align:right">{{ p.price }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Hair / $8 a day" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 32px">
+      <p class="ba-label" style="flex:1 1 240px;color:var(--on-band);opacity:.78">04 / What it costs</p>
+      <div style="flex:2 1 520px;display:flex;flex-direction:column;gap:20px">
+        <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(56px,8vw,104px);letter-spacing:-.045em">As low as $5.07 a day.</h2>
+        <p style="font-size:clamp(17px,1.6vw,20px);line-height:1.7">Skip the energy drinks. Get a non-surgical hair system.</p>
+        <p style="font-size:14px;line-height:22px;opacity:.78;max-width:560px">Based on your first year: the $1,200 filmed installation plus one more system at $650, each worn for about 6 months, with maintenance done at home. Doesn’t include supplies. Systems last 2–6 months depending on wear, sweat, sun and care, so your number depends on how long yours last.</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:24px 32px">
+      <p class="ba-label" style="flex:1 1 240px;color:var(--on-band);opacity:.78">Your first year, the lowest way in</p>
+      <div style="flex:2 1 520px;display:flex;flex-direction:column">
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;border-top:2px solid var(--on-band);font-variant-numeric:tabular-nums">
+          <li style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-strong);font-size:17px;line-height:26px"><span>First installation, filmed for social media. Includes your first system.</span><span style="white-space:nowrap">$1,200</span></li>
+          <li style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-strong);font-size:17px;line-height:26px"><span>Second system, at about 6 months</span><span style="white-space:nowrap">$650</span></li>
+          <li style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-strong);font-size:17px;line-height:26px"><span>Maintenance, done at home</span><span style="white-space:nowrap">$0</span></li>
+                  </ul>
+        <p style="font-size:14px;line-height:22px;opacity:.78;max-width:560px;padding-top:12px">After the first year it drops further, to 2 systems a year at $650 each.</p>
+      </div>
+    </div>
+    <div style="overflow-x:auto">
+      <table style="width:100%;min-width:640px;border-collapse:collapse;font-variant-numeric:tabular-nums;color:var(--on-band)">
+        <thead>
+          <tr style="border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)">
+            <th style="text-align:left;padding:14px 16px 14px 0;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;opacity:.78">Plan</th>
+            <th style="text-align:right;padding:14px 16px;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;opacity:.78">Per year</th>
+            <th style="text-align:right;padding:14px 16px;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;opacity:.78">Per month</th>
+            <th style="text-align:right;padding:14px 0 14px 16px;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;opacity:.78">Per day</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{ plans }}" as="r" hint-placeholder-count="3">
+            <tr style="border-bottom:1px solid var(--line-strong)">
+              <td style="padding:18px 16px 18px 0;font-size:17px;line-height:26px;font-weight:{{ r.weight }}">{{ r.plan }}</td>
+              <td style="padding:18px 16px;text-align:right;font-size:17px">{{ r.year }}</td>
+              <td style="padding:18px 16px;text-align:right;font-size:17px">{{ r.month }}</td>
+              <td style="padding:18px 0 18px 16px;text-align:right;font-size:17px;font-weight:{{ r.weight }}">{{ r.day }}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14px;line-height:22px;opacity:.78;max-width:680px">Your first year also includes the first installation ($1,350, or $1,200 filmed). Your own number depends on your hair and your schedule; we'll go through it at the free consultation.</p>
+  </div>
+</section>
+
+<section id="questions" data-screen-label="Hair / Questions" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px 32px">
+    <div style="flex:1 1 240px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label">05 / Questions</p>
+      <h2 class="ba-display" style="font-size:clamp(40px,5vw,60px)">What people ask</h2>
+    </div>
+    <div style="flex:2 1 520px;border-top:2px solid var(--ink)">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="8">
+        <div style="border-bottom:1px solid var(--line)">
+          <button onClick="{{ q.toggle }}" aria-expanded="{{ q.open }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:64px;padding:12px 0;background:none;border:0;cursor:pointer;text-align:left;color:var(--ink)">
+            <span style="font:800 20px/26px var(--font-display);letter-spacing:-.01em;text-transform:uppercase">{{ q.q }}</span>
+            <span aria-hidden="true" style="flex:none;width:24px;text-align:center;font:500 28px/1 var(--font-sans)">{{ q.state }}</span>
+          </button>
+          <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
+            <p style="padding:0 0 24px;font-size:17px;line-height:28px;color:var(--ink-muted);max-width:640px">{{ q.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Hair / Book band" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:640px">
+      <h2 class="ba-display" style="font-size:clamp(44px,6.2vw,72px)">Start with a conversation</h2>
+      <p style="font-size:17px;line-height:28px">As low as $5.07 a day. Skip the energy drinks. Get a non-surgical hair system. The consultation is free, at the shop in Orem. You don’t have to be filmed. Clients who’d rather stay off camera are just as welcome as those who want to be on the channel.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="{{ consult }}" hint-size="280px,56px">BOOK A FREE CONSULTATION</x-import>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" show-award="{{ false }}" hint-size="100%,360px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: 0, qa: [] };
+  quizVals(C) {
+    const Q = [
+      ['How much hair have you lost?', [['A little at the temples', 0], ['Thinning on top or at the crown', 1], ['Receding and thinning on top', 2], ['Mostly bald on top', 4]]],
+      ['How long has it been changing?', [['Just started in the last year', 0], ['1–3 years', 1], ['More than 3 years', 1], ['Not sure', 0]]],
+      ['What have you tried so far?', [['Nothing yet', 0], ['Minoxidil or finasteride', 1], ['Fibers, concealers or wearing a hat', 1], ['A hair transplant', 2]]],
+      ['How much does it bother you?', [['A little', 0], ['A fair amount', 1], ['I think about it most days', 2]]],
+      ['What do you want?', [['Make the hair I have look better', 0], ['Not sure yet', 1], ['A full head of hair again', 2]]],
+      ['A system needs upkeep every 2–4 weeks, in the shop or at home. Would you keep that up?', [['Yes, in the shop', 0, 'shop'], ['Yes, I’d learn to do it at home', 0, 'home'], ['Maybe', 0, 'maybe'], ['Probably not', 0, 'no']]],
+      ['Wearing each system about 6 months, your first year can cost as little as $5.07 a day. Does that fit your budget?', [['Yes', 0], ['Maybe', 0], ['Not right now', 0, 'nobudget']]],
+    ];
+    const a = this.state.qa, i = a.length;
+    const set = qa => this.setState({ qa }, () => { const el = document.getElementById('quiz'); if (!el) return; const r = el.getBoundingClientRect(); const hdr = document.querySelector('[data-hdr="site"]'); const off = (hdr ? hdr.getBoundingClientRect().height : 120); if (r.top < off || r.top > window.innerHeight * 0.6) window.scrollTo({ top: Math.max(0, r.top + window.scrollY - off - 8), behavior: 'smooth' }); });
+    const doubt = 'If you’re in doubt, just book a free consultation. It’s no pressure, and you’ll leave knowing your options.';
+    if (i < Q.length) return { asking: true, done: false, step: 'Question ' + (i + 1) + ' of ' + Q.length, q: Q[i][0], canBack: i > 0, back: () => set(a.slice(0, -1)),
+      opts: Q[i][1].map((o, k) => ({ label: o[0], pick: () => set([...a, k]) })) };
+    const pick = n => Q[n][1][a[n]];
+    const score = [0, 1, 2, 3, 4].reduce((t, n) => t + pick(n)[1], 0);
+    const upkeep = pick(5)[2], budget = pick(6)[2];
+    const note = upkeep === 'home' ? 'Doing your own maintenance at home is the lowest-cost way to wear a system, as low as $5.07 a day. We’ll show you how.' : upkeep === 'shop' ? 'Maintenance with us is $175 a visit, every 2–4 weeks.' : 'We’ll go through maintenance, in the shop or at home, at the consultation.';
+    const base = { asking: false, done: true, restart: () => set([]), doubt };
+    const haircut = { primary: 'BOOK A SIGNATURE HAIRCUT', primaryHref: 'https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ', secondary: 'Book a free consultation', secondaryHref: C };
+    if (upkeep === 'no' || budget === 'nobudget') return { ...base, ...haircut, title: 'Start with the right haircut for now.', body: 'A hair system only works if it’s kept up, and it’s an ongoing cost. Until that fits, a Signature Haircut with Bryton is the best next step. He specializes in receding hairlines and thinning hair.', note: 'A haircut can change how thinning hair looks. It won’t stop or reverse hair loss.' };
+    if (score <= 3 || pick(0)[1] === 0) return { ...base, ...haircut, title: 'Book a Signature Haircut with Bryton.', body: 'You probably don’t need a hair system yet. Bryton specializes in receding hairlines and thinning hair, and the Signature Haircut gives him time to look at your hairline and density and cut something that works with it.', note: 'A haircut can change how thinning hair looks. It won’t stop or reverse hair loss. If it progresses, the hair system consultation is free.' };
+    if (score <= 5) return { ...base, price: true, title: 'You could be a good candidate.', body: 'Your answers sit in between. Some clients at this stage do well with the right haircut, others are ready for a system. A free consultation is the quickest way to find out. Bryton will look at your hair and tell you straight.', note, primary: 'BOOK A FREE CONSULTATION', primaryHref: C, secondary: 'Or book a Signature Haircut', secondaryHref: 'https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services' };
+    return { ...base, price: true, title: 'You’re a good fit for a hair system.', body: pick(4)[1] === 2 ? 'You want a full head of hair back, and a non-surgical hair system is how we get you there. At the free consultation Bryton looks at your hair loss, matches color and density, and tells you exactly what it will look like.' : 'With this much hair loss, a haircut alone won’t get you far. A hair system gives you hair to cut and style again. At the free consultation Bryton looks at your hair loss, matches color, and tells you what to expect.', note, primary: 'BOOK A FREE CONSULTATION', primaryHref: C, secondary: 'See prices', secondaryHref: '#prices' };
+  }
+  renderVals() {
+    const faqs = [
+      ['Does it look real? Can people tell?', 'We match the color, density and texture to your hair and cut the system into your existing hair, so it looks like your own hair.'],
+      ['How is it attached?', 'With tape or glue, depending on you and your lifestyle. We\'ll decide which at your consultation.'],
+      ['Can I shower in it? Can I exercise in it?', 'Yes. Wait 48 hours after it\'s attached before getting it wet; after that, live normally.'],
+      ['What happens to my existing hair?', 'The hair where the system sits is shaved so it attaches securely. The rest of your hair stays and is blended into the system.'],
+      ['What kind of systems do you use?', 'Our own hair systems, not another brand\'s. We work with all base types and choose the right one for you.'],
+      ['How often do I come back?', 'Maintenance is every 2–4 weeks. We recommend learning to do it yourself (we\'ll teach you in person if you\'d like) and coming in when you need new systems. You can also book maintenance with us.'],
+      ['How long does a system last?', 'Usually 2–6 months, depending on the system and how much wear it gets.'],
+      ['What does maintenance involve?', 'Removing and cleaning the system, prepping your scalp, applying fresh adhesive, and reattaching and adjusting it.'],
+    ];
+    return {
+      quiz: this.quizVals('https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU'),
+      consult: 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU',
+      steps: [
+        { n: '01', title: 'Free consultation and color match', body: 'Start here. New clients book this before any other hair replacement service. We talk through what you want, look at your hair and scalp, answer questions, explain options, pricing and maintenance, decide whether a hair system makes sense for you, and match the system, color and density.', price: 'Free' },
+        { n: '02', title: 'First installation', body: 'The system is customized, installed, cut and blended into your existing hair. A $1,200 rate is available if you agree to have your transformation filmed and photographed for our content. This is optional, and saying no changes nothing about the service. After your consultation you send a request for this appointment; we review it and confirm once it\'s scheduled.', price: '$1,350 · $1,200 filmed' },
+        { n: '03', title: 'Maintenance', body: 'Every 2–4 weeks the system is removed and cleaned, your scalp is prepared, fresh adhesive is applied, and the system is reinstalled and adjusted. We recommend learning to do this yourself, and we\'ll teach you in person if you\'d like.', price: '$175 with us · or at home' },
+        { n: '04', title: 'Replacing the system', body: 'Hair systems aren\'t permanent. Daily wear, sweat, sun and cleaning break down the base and hair over time. A system typically lasts 2–6 months. When it starts to look thin or the edges won\'t hold, it\'s time for a new one.', price: 'From $500 each' },
+      ].map((s, i) => ({ ...s, hasLink: i === 0, noLink: i !== 0, href: 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU' })),
+      prices: [
+        ['Free consultation and color match', 'Everyone new. The required first step.', 'Free'],
+        ['First installation', 'New clients, after the consultation', '$1,350'],
+        ['First installation, filmed', 'New clients who agree to be filmed and photographed', '$1,200'],
+        ['Re-application (maintenance)', 'Existing clients', '$175'],
+        ['1 new hair system', 'Existing clients', '$650'],
+        ['3 new hair systems', 'Existing clients', '$1,500 ($500 each)'],
+        ['4 new hair systems', 'Existing clients', '$2,000 ($500 each)'],
+        ['6 new hair systems, about a year\'s supply', 'Existing clients', '$3,000 ($500 each)'],
+      ].map(([name, who, price]) => ({ name, who, price })),
+      plans: [
+        ['Lowest cost, first year: filmed install + 1 more system, each worn about 6 months, + your own maintenance', '$1,850', 'about $154', 'about $5.07', 700],
+        ['6-system package + your own maintenance', '$3,000', 'about $250', 'about $8.22', 400],
+        ['6-system package + maintenance with us', 'about $5,275–$7,550', 'about $440–$630', 'about $14.45–$20.68', 400],
+        ['One system at a time + your own maintenance', '$3,900', 'about $325', 'about $10.68', 400],
+      ].map(([plan, year, month, day, weight]) => ({ plan, year, month, day, weight })),
+      faqs: faqs.map((f, i) => ({ q: f[0], a: f[1], open: i === this.state.open, state: i === this.state.open ? '–' : '+', toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })) })),
+    };
+  }
+}
+</script>
+</body>
+</html>

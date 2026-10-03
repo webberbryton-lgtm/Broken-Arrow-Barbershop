@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Careers · Broken Arrow Barbershop, Orem</title>
+<meta name="description" content="Barber jobs in Orem, Utah. Join the team at Broken Arrow Barbershop.">
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<script src="send-form.js"></script>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" hint-size="100%,92px"></dc-import>
+
+<section data-screen-label="Careers / Hero" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,80px);align-items:flex-end">
+    <div style="flex:1.2 1 460px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Careers · No current openings</p>
+      <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(52px,8vw,104px),11vw);letter-spacing:-.045em;max-width:10ch">Cut hair with us.</h1>
+      <p style="max-width:560px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;opacity:.85;text-wrap:pretty">We don’t have any openings right now. We’re still glad to hear from licensed barbers who take the consultation as seriously as the cut. Send us your work and we’ll keep it on file for when a chair opens up.</p>
+      <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="#apply" hint-size="260px,56px">GET IN TOUCH FOR THE FUTURE</x-import></div>
+    </div>
+    <div role="img" aria-label="Inside Broken Arrow Barbershop in Orem" style="flex:1 1 380px;aspect-ratio:4/5;background-color:#222326;background-image:url('assets/photos/shop-interior.jpg');background-size:cover;background-position:center"></div>
+  </div>
+</section>
+
+<section data-screen-label="Careers / Why" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+  <p class="ba-label" style="flex:1 1 220px">01 / Working here</p>
+  <ul style="flex:2 1 520px;max-width:760px;list-style:none;padding:0;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+    <sc-for list="{{ why }}" as="w" hint-placeholder-count="4">
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:24px 0;border-bottom:1px solid var(--line)">
+        <span class="ba-label" style="padding-top:4px">{{ w.n }}</span>
+        <div style="display:flex;flex-direction:column;gap:6px"><p style="font:800 22px/1.15 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ w.t }}</p><p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">{{ w.b }}</p></div>
+      </li>
+    </sc-for>
+  </ul>
+</section>
+
+<section id="apply" data-screen-label="Careers / Apply" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+    <div style="flex:1 1 220px;display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label">02 / Apply</p>
+      <h2 class="ba-display" style="font-size:clamp(40px,5vw,60px);max-width:10ch">Tell us about you</h2>
+      <p style="font-size:17px;line-height:28px;color:var(--ink-muted);max-width:320px;text-wrap:pretty">No openings right now. We’ll reach out if something comes up that fits.</p>
+    </div>
+    <div style="flex:2 1 520px;max-width:760px">
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:12px;background:var(--canvas);padding:28px;border:1px solid var(--line)"><p class="ba-label">Application received</p><p style="font-size:17px;line-height:28px">Thanks, {{ first }}. We’ll keep your details on file and reach out by email if a chair opens up.</p></div>
+      </sc-if>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" noValidate="{{ true }}" style="display:flex;flex-direction:column;gap:24px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px">
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Your name" required="{{ true }}" value="{{ f.name }}" onChange="{{ on.name }}" error="{{ err.name }}" hint-size="100%,84px"></x-import>
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Email" type="email" required="{{ true }}" value="{{ f.email }}" onChange="{{ on.email }}" error="{{ err.email }}" hint-size="100%,84px"></x-import>
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Phone" type="tel" value="{{ f.phone }}" onChange="{{ on.phone }}" hint-size="100%,84px"></x-import>
+            <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Instagram or portfolio link" required="{{ true }}" hint="So we can see your cuts." value="{{ f.ig }}" onChange="{{ on.ig }}" error="{{ err.ig }}" hint-size="100%,108px"></x-import>
+          </div>
+          <fieldset style="border:0;margin:0;padding:0;display:flex;flex-direction:column">
+            <legend class="ba-field-label" style="margin-bottom:12px">Where are you at?<span class="ba-field-req">*</span></legend>
+            <sc-for list="{{ stages }}" as="o" hint-placeholder-count="3">
+              <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Checkbox" type="radio" name="stage" label="{{ o.label }}" checked="{{ o.checked }}" onChange="{{ o.pick }}" hint-size="100%,44px"></x-import>
+            </sc-for>
+            <sc-if value="{{ err.stage }}" hint-placeholder-val="{{ false }}"><p class="ba-field-error">{{ err.stage }}</p></sc-if>
+          </fieldset>
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.TextField" label="Anything else we should know?" multiline="{{ true }}" value="{{ f.note }}" onChange="{{ on.note }}" hint-size="100%,160px"></x-import>
+          <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" type="submit" hint-size="200px,56px">SEND MY DETAILS</x-import></div>
+        </form>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Careers / Apprenticeship" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:640px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Apprenticeship · No current openings</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,5.6vw,72px)">Train to hire. Hire to train.</h2>
+      <p style="font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">We train a few apprentices toward their Utah barber license, with the goal of joining our team. Apply now and we’ll reach out when a spot opens.</p>
+    </div>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="Apprenticeship.dc.html" hint-size="240px,56px">ABOUT THE APPRENTICESHIP</x-import>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { f: { name: '', email: '', phone: '', ig: '', stage: -1, note: '' }, err: {}, sent: false };
+  set(k, v) { this.setState(s => ({ f: { ...s.f, [k]: v }, err: { ...s.err, [k]: undefined } })); }
+  submit = e => {
+    e.preventDefault();
+    const __sec = e.currentTarget && e.currentTarget.closest ? (e.currentTarget.closest('section') || e.currentTarget) : null; const __top = () => { if (!__sec) return; const hdr = document.querySelector('[data-hdr="site"]'); const off = (hdr ? hdr.getBoundingClientRect().height : 120) + 16; window.scrollTo({ top: Math.max(0, __sec.getBoundingClientRect().top + window.scrollY - off), behavior: 'smooth' }); };
+    const f = this.state.f, er = {};
+    if (!f.name.trim()) er.name = 'Add your name.';
+    if (!/^\S+@\S+\.\S+$/.test(f.email)) er.email = 'Add an email address like name@example.com.';
+    if (!f.ig.trim()) er.ig = 'Add a link to your work so we can see your cuts.';
+    if (f.stage < 0) er.stage = 'Pick the one that fits you best.';
+    this.setState({ err: er });
+    if (!Object.keys(er).length) { (window.baSend ? window.baSend('Careers inquiry', f) : Promise.resolve(false)).then(ok => { if (ok) this.setState({ sent: true }, __top); }); }
+  };
+  renderVals() {
+    const f = this.state.f, t = k => e => this.set(k, e.target.value);
+    const STAGES = ['Licensed barber', 'Licensed cosmetologist', 'In barber school or about to graduate'];
+    return {
+      why: [
+        ['Consultation first', 'Every appointment starts with a real conversation about the client’s hair. We give you the time to do it properly.'],
+        ['Room to grow', 'Learn from a licensed barber instructor, including hair system work if you want it.'],
+        ['A shop people come back to', 'Daily Herald Readers’ Choice for Best Barbershop in Utah Valley, with hundreds of five-star Google reviews.'],
+        ['Content that shows your work', 'We film cuts for our YouTube channel and Instagram, which helps build your book.'],
+      ].map(([tt, b], i) => ({ n: '0' + (i + 1), t: tt, b })),
+      f, err: this.state.err, submit: this.submit, sent: this.state.sent, notSent: !this.state.sent,
+      first: f.name.trim().split(' ')[0] || 'there',
+      on: { name: t('name'), email: t('email'), phone: t('phone'), ig: t('ig'), note: t('note') },
+      stages: STAGES.map((label, i) => ({ label, checked: f.stage === i, pick: () => this.set('stage', i) })),
+    };
+  }
+}
+</script>
+</body>
+</html>

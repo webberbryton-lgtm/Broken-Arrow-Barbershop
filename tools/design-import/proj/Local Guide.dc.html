@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure,ul,ol{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" active="journal" book="{{ p.bookHref }}" book-label="{{ p.bookLabel }}" hint-size="100%,92px"></dc-import>
+
+<article>
+<header data-screen-label="Guide / Hero" style="position:relative;background:var(--band);min-height:clamp(520px,76vh,760px);display:flex;align-items:flex-end;overflow:hidden">
+  <div role="img" aria-label="{{ p.heroAlt }}" style="position:absolute;inset:0;background-image:{{ p.heroBg }};background-size:cover;background-position:center;filter:saturate(.85)"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,23,26,0) 15%,rgba(22,23,26,.6) 55%,#16171a 100%)"></div>
+  <div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px) clamp(48px,7vw,88px);display:flex;flex-direction:column;gap:24px;color:var(--on-band)">
+    <nav aria-label="Breadcrumb" style="display:flex;gap:10px;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase"><a href="Journal.dc.html" style="color:var(--on-band);opacity:.78;text-decoration:none">Journal</a><span style="opacity:.5">/</span><span style="opacity:.78">{{ p.topic }}</span></nav>
+    <h1 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,6vw,80px);letter-spacing:-.045em;line-height:.95;max-width:16ch;text-wrap:balance">{{ p.title }}</h1>
+    <p class="ba-label" style="color:var(--on-band);opacity:.78">{{ p.meta }}</p>
+  </div>
+</header>
+
+<section data-screen-label="Guide / Intro" style="max-width:920px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,5vw,64px) clamp(40px,6vw,72px)">
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <p style="font-size:clamp(20px,2vw,24px);line-height:1.55;text-wrap:pretty">{{ p.lead }}</p>
+    <sc-for list="{{ p.intro }}" as="t" hint-placeholder-count="0">
+      <p style="font-size:17px;line-height:28px;text-wrap:pretty">{{ t }}</p>
+    </sc-for>
+    <div style="display:flex;flex-direction:column;gap:12px;background:var(--canvas-sunk);padding:24px">
+      <p class="ba-label">Short answer</p>
+      <p style="font-size:17px;line-height:28px;text-wrap:pretty">{{ p.answer }}</p>
+    </div>
+  </div>
+</section>
+
+<sc-for list="{{ p.sections }}" as="s" hint-placeholder-count="4">
+  <section id="{{ s.id }}" data-screen-label="Guide / Section" style="max-width:920px;margin:0 auto;padding:0 clamp(16px,5vw,64px) clamp(48px,7vw,88px)">
+    <div style="display:flex;flex-direction:column;gap:20px;border-top:2px solid var(--ink);padding-top:32px">
+      <p class="ba-label">{{ s.num }}</p>
+      <h2 class="ba-display" style="font-size:clamp(30px,3.6vw,44px);max-width:18ch">{{ s.h }}</h2>
+      <sc-for list="{{ s.paras }}" as="t" hint-placeholder-count="2">
+        <p style="font-size:17px;line-height:28px;text-wrap:pretty">{{ t }}</p>
+      </sc-for>
+      <sc-if value="{{ s.hasRows }}" hint-placeholder-val="{{ false }}">
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--line)">
+          <sc-for list="{{ s.rows }}" as="r" hint-placeholder-count="3">
+            <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--line)">
+              <span style="display:flex;flex-direction:column;gap:6px;flex:1 1 320px"><span style="font:800 20px/24px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ r.name }}</span><span style="font-size:15px;line-height:24px;color:var(--ink-muted)">{{ r.text }}</span></span>
+              <span style="font:600 15px/24px var(--font-sans);font-variant-numeric:tabular-nums">{{ r.value }}</span>
+            </li>
+          </sc-for>
+        </ul>
+      </sc-if>
+      <sc-if value="{{ s.hasQuote }}" hint-placeholder-val="{{ false }}">
+        <blockquote style="margin:8px 0;display:flex;flex-direction:column;gap:16px;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding:28px 0">
+          <sc-for list="{{ s.quote }}" as="qt" hint-placeholder-count="1">
+            <p class="ba-display" style="font-size:clamp(26px,3vw,38px);line-height:1.05;max-width:24ch">{{ qt }}</p>
+          </sc-for>
+        </blockquote>
+      </sc-if>
+      <sc-if value="{{ s.hasAfter }}" hint-placeholder-val="{{ false }}">
+        <sc-for list="{{ s.after }}" as="t" hint-placeholder-count="1">
+          <p style="font-size:17px;line-height:28px;text-wrap:pretty">{{ t }}</p>
+        </sc-for>
+      </sc-if>
+      <sc-if value="{{ s.hasFig }}" hint-placeholder-val="{{ false }}">
+        <figure style="margin:8px 0;display:flex;flex-direction:column;gap:10px">
+          <sc-if value="{{ s.figHasImg }}" hint-placeholder-val="{{ false }}"><img src="{{ s.figSrc }}" alt="{{ s.figAlt }}" style="width:100%;height:auto;display:block"></sc-if>
+          <sc-if value="{{ s.figNoImg }}" hint-placeholder-val="{{ true }}"><div style="aspect-ratio:16/10;background:var(--canvas-sunk);border:1px solid var(--line);display:flex;align-items:flex-end;padding:14px"><p class="ba-label" style="color:var(--ink-muted)">{{ s.figAlt }}</p></div></sc-if>
+          <figcaption style="font-size:14px;line-height:22px;color:var(--ink-muted)">{{ s.figCap }}</figcaption>
+        </figure>
+      </sc-if>
+      <sc-if value="{{ s.hasLink }}" hint-placeholder-val="{{ false }}">
+        <a href="{{ s.linkHref }}" style="font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;align-self:flex-start">{{ s.linkLabel }}</a>
+      </sc-if>
+    </div>
+  </section>
+</sc-for>
+
+<sc-if value="{{ p.hasFaq }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="Guide / FAQ" style="max-width:920px;margin:0 auto;padding:0 clamp(16px,5vw,64px) clamp(56px,8vw,96px);display:flex;flex-direction:column;gap:20px">
+  <h2 class="ba-display" style="font-size:clamp(30px,3.6vw,44px)">Questions</h2>
+  <div style="display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+    <sc-for list="{{ p.faq }}" as="q" hint-placeholder-count="3">
+      <details style="border-bottom:1px solid var(--line)">
+        <summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;padding:20px 0;font:800 clamp(18px,2vw,22px)/1.2 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ q.q }}<span aria-hidden="true" style="font:600 20px/1 var(--font-sans)">+</span></summary>
+        <p style="padding:0 0 24px;max-width:640px;font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">{{ q.a }}<sc-if value="{{ q.hasLink }}" hint-placeholder-val="{{ false }}"> <a href="{{ q.href }}" style="color:var(--ink)">{{ q.link }}</a></sc-if></p>
+      </details>
+    </sc-for>
+  </div>
+</section>
+</sc-if>
+</article>
+
+<section data-screen-label="Guide / CTA" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:640px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(44px,6.4vw,84px);max-width:12ch">{{ p.ctaTitle }}</h2>
+      <p style="font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">{{ p.ctaBody }}</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ p.bookHref }}" hint-size="260px,56px">{{ p.bookLabel }}</x-import>
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" tone="dark" href="{{ p.altHref }}" hint-size="200px,44px">{{ p.altLabel }}</x-import>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;post&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;students&quot;,&quot;fades&quot;,&quot;systems&quot;,&quot;thinning&quot;,&quot;taperfade&quot;,&quot;whatsystem&quot;,&quot;clay&quot;,&quot;tellbarber&quot;,&quot;maintenance&quot;,&quot;growout&quot;,&quot;names&quot;],&quot;default&quot;:&quot;students&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const SIG_BOOK = 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ';
+const CLASSIC_BOOK = 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/7T6J5FCSOTULAKKXBJQXL2H5';
+const SHOP = 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services';
+const BRYTON = 'https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services';
+const BRYTON_SIG = 'https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ';
+const CONSULT = 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU';
+const FIGS = {"middlepart":{"Middle parts at every length":{"src":"assets/photos/elise-cut-b.jpg","alt":"Medium-length cut with length kept over the ears, by Elise","cap":"A medium-length cut by Elise."},"How we cut it":{"src":"assets/photos/connor-profile.jpg","alt":"Connor cutting with shears","cap":"Cutting the front with scissors."}},"mullet":{"Modern vs ’80s mullet":{"src":"assets/photos/bryton-cut-mullet.jpg","alt":"Modern mullet, textured on top with length kept at the back, by Bryton","cap":"A modern mullet by Bryton."},"Ways to wear it":{"src":"assets/photos/payson-cut-mullet.png","alt":"A modern mullet cut at the original Payson shop","cap":"A modern mullet from the Payson shop."}},"lowtaper":{"Why we cut so many of them":{"src":"assets/photos/elise-cut-c.jpg","alt":"Textured cut with a taper at the sides and neckline, by Elise","cap":"A textured cut with a low taper, by Elise."},"Who a low taper suits":{"src":"assets/photos/elise-cut-a.jpg","alt":"Curly hair kept long on top with a taper on the sides, by Elise","cap":"Curly hair with a taper on the sides."},"How we cut it":{"src":"assets/photos/elise-cut-d.jpg","alt":"Flow cut with a taper around the ear, by Elise","cap":"A flow with a taper around the ear."}},"curtains":{"How we cut curtains":{"src":"assets/photos/elise-cut-b.jpg","alt":"Medium-length cut with length kept at the front, by Elise","cap":"Length kept at the front, weight taken out."},"What to book":{"src":"assets/photos/connor-profile.jpg","alt":"Connor cutting with shears","cap":"Scissor work at the front."}},"awards":{"Our awards":{"src":"assets/photos/award-2024-plaque.jpg","alt":"Daily Herald Readers’ Choice plaque, Best Barbershop, Best of Utah Valley 2024","cap":"The 2024 plaque at the shop."},"What it recognizes":{"src":"assets/photos/award-2023-plaque.jpg","alt":"Daily Herald Readers’ Choice plaque, Best Barbershop, Best of Utah Valley 2023","cap":"The 2023 plaque."},"The work behind it":{"src":"assets/photos/bryton-cut-fade-beard.jpg","alt":"Fade and beard by Bryton","cap":"A fade and beard by Bryton."},"Find the right barber for you":{"src":"assets/photos/elise-cut-d.jpg","alt":"Flow cut by Elise","cap":"A flow cut by Elise."}},"fringe":{"Why most textured fringes go wrong":{"src":"assets/photos/connor-work-1.jpg","alt":"Connor shaping texture into a haircut by hand","cap":"Texture cut in section by section."},"Taper or fade on the sides?":{"src":"assets/photos/cut-curly-taper.webp","alt":"A taper on the sides with texture on top","cap":"A low taper keeps the sides soft."}},"signature":{"What the extra time is for":{"src":"assets/photos/hot-towel-wash.jpg","alt":"Connor wrapping a client’s face in a hot towel at the shampoo sink","cap":"The hot towel at the wash, included with every haircut."},"A haircut that grows out well":{"src":"assets/photos/connor-work-1.jpg","alt":"Connor shaping a longer cut by hand","cap":"Shaping a longer cut so it grows out evenly."}},"smallshop":{"What a barber who knows you gets right":{"src":"assets/photos/connor-wide.jpg","alt":"Connor checking a haircut at his chair","cap":"Connor at his chair in Orem."},"How we run the shop":{"src":"assets/photos/payson-storefront.png","alt":"The original Broken Arrow storefront in Payson","cap":"Where it started: the first shop in Payson."}},"oremhaircuts":{"Fades and tapers in Orem":{"src":"assets/photos/bryton-cut-fade-beard.jpg","alt":"Fade haircut with a shaped beard by Bryton","cap":"A fade and beard by Bryton."},"Scissor cuts and longer men’s hairstyles":{"src":"assets/photos/elise-cut-d.jpg","alt":"Flow cut with a taper around the ear by Elise","cap":"A flow cut by Elise."},"Why clients choose Broken Arrow":{"src":"assets/photos/award-2024-plaque.jpg","alt":"Daily Herald Readers’ Choice plaque, Best Barbershop 2024","cap":"Best Barbershop in Utah Valley, 2024."}},"wedding":{"Book the Signature Haircut for the pre-wedding cut":{"src":"assets/photos/bryton-cut-pomp-beard.jpg","alt":"Pompadour with a shaped beard by Bryton","cap":"A pompadour and beard by Bryton."}},"classicvs":{"The Classic Haircut":{"src":"assets/photos/cut-side-part.webp","alt":"Side part haircut at Broken Arrow","cap":"A side part kept in shape with regular Classic Haircuts."},"The Signature Haircut":{"src":"assets/photos/connor-profile.jpg","alt":"Connor cutting with shears","cap":"Scissor work in a Signature Haircut."}},"newstyle":{"Why the Signature Haircut":{"src":"assets/photos/guide-discuss.jpg","alt":"A barber and client talking through a new haircut","cap":"The consultation comes first."}},"routine":{"Work with your hair, not against it":{"src":"assets/photos/elise-cut-a.jpg","alt":"Curly hair kept long on top with a taper on the sides, by Elise","cap":"Curly hair cut to work with its texture."}},"timetochange":{"How to make the change":{"src":"assets/photos/guide-what-to-bring.jpg","alt":"Reference photos a client brought to the shop","cap":"Bring a few photos of cuts you like."}},"scissorcut":{"Why scissors change how hair grows out":{"src":"assets/photos/connor-profile.jpg","alt":"Connor cutting a client’s hair with shears","cap":"Scissor work at Broken Arrow."},"What to book":{"src":"assets/photos/bryton-cut-slick.jpg","alt":"Slicked-back scissor cut by Bryton","cap":"A scissor cut by Bryton."}},"longerhair":{"What a regular cut does for long hair":{"src":"assets/photos/elise-cut-b.jpg","alt":"Medium-length cut combed back by Elise","cap":"Length kept, shape cleaned up."}},"bulky":{"What can help":{"src":"assets/photos/connor-work-3.jpg","alt":"Connor checking the length before the next section","cap":"Checking weight and length section by section."}},"flathair":{"The product is too heavy":{"src":"assets/photos/clay-jar.png","alt":"Broken Arrow Grooming matte clay jar","cap":"Our matte clay: hold without shine or weight."},"A routine that holds":{"src":"assets/photos/connor-work-2.jpg","alt":"Blow-drying a longer cut with a round brush","cap":"A quick blow-dry builds the volume."}},"ownproducts":{"It started in 2022":{"src":"assets/photos/payson-interior.png","alt":"Inside the original Payson shop","cap":"The Payson shop, where it started."},"The line":{"src":"assets/photos/clay-scene.png","alt":"Broken Arrow Grooming matte clay jar and box","cap":"Matte clay, the first product in the line."}},"choosebarbershop":{"Why we recommend Broken Arrow":{"src":"assets/photos/award-2023-plaque.jpg","alt":"Daily Herald Readers’ Choice plaque, Best Barbershop 2023","cap":"Best Barbershop in Utah Valley, 2023."}},"scissororem":{"What does scissor work help us do?":{"src":"assets/photos/connor-profile.jpg","alt":"Connor cutting a client’s hair with shears","cap":"Scissor work at Broken Arrow in Orem."}},"receding":{"Cuts that usually work":{"src":"assets/photos/bryton-cut-pomp-beard.jpg","alt":"Textured cut with a beard by Bryton","cap":"A cut by Bryton."},"When a haircut isn’t enough":{"src":"assets/photos/bryton-hair-system.png","alt":"Bryton fitting a hair system","cap":"Bryton does every hair system at the shop."}},"longcuts":{"Weight is everything":{"src":"assets/photos/connor-work-1.jpg","alt":"Connor shaping a longer cut by hand","cap":"Taking weight out, keeping the length."},"Long styles we cut":{"src":"assets/photos/elise-cut-d.jpg","alt":"Flow cut with length at the back by Elise","cap":"A flow cut by Elise."}},"meetteam":{"Bryton · Owner and licensed barber instructor":{"src":"assets/photos/bryton-teaching.png","alt":"Bryton teaching a class of barber students","cap":"Bryton teaching barbers."},"Connor · Barber":{"src":"assets/photos/connor-card.jpg","alt":"Connor cutting a client’s hair","cap":"Connor."},"Elise · Barber":{"src":"assets/photos/elise-profile.jpg","alt":"Elise fading a client’s haircut","cap":"Elise."}},"growout":{"Longer styles to grow into":{"src":"assets/photos/cut-textured-flow.webp","alt":"A textured flow haircut","cap":"A textured flow."}},"toupeevs":{"The haircut is what makes it work":{"src":"assets/photos/hs-client1-after.png","alt":"Client after his hair system, cut into a textured quiff","cap":"Full hair system, color-matched and cut in."}}};
+const POSTS = {
+  hairstyle: {
+    slug: 'how-to-find-the-right-hairstyle-for-men', topic: 'Haircut guides', read: '9 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'How to Find the Perfect Men’s Hairstyle | Broken Arrow Orem',
+    desc: 'Not sure what haircut suits you? Learn how face shape, hair type, styling and lifestyle determine the right men’s hairstyle, with advice from Broken Arrow Barbershop in Orem.',
+    title: 'How to find the perfect hairstyle for your face, hair type and lifestyle',
+    lead: 'The right haircut isn’t the one you saw on TikTok or Pinterest. It’s the one that works with your face, your natural hair, the look you want, and how much time you’ll actually spend on it in the morning.',
+    intro: [
+      'We cut men’s hair every day at Broken Arrow Barbershop in Orem, Utah, and most clients who don’t like their haircut have the same problem: the cut was copied from someone with a different face, different hair and a different routine.',
+      'Here’s the five-step way we work out the right haircut with a client in the chair. You can use it before your next appointment, wherever you get your hair cut.',
+    ],
+    answer: 'To find the right men’s hairstyle, look at five things together: 1. your face and head shape, 2. your natural hair type, 3. the look you want, shown with 2–3 reference photos, 4. a barber who will consult with you, and 5. how much styling you’ll realistically do. The goal is balance, not copying a photo.',
+    sections: [
+      ['Step 1: How does face shape affect which haircut suits you?', ['Face shape is a useful starting point, not a rulebook. Most haircuts aim for balance: adding height or width where the face needs it, and taking it away where it doesn’t.', 'The common men’s face shapes are:'], [['Oval', 'Balanced proportions. Most cuts work, so choose based on hair type and lifestyle.', ''], ['Round', 'Similar width and length with soft angles. Height on top and shorter sides add length.', ''], ['Square', 'Strong jaw and straight sides. Short, clean cuts suit it. Softer texture on top keeps it from looking too severe.', ''], ['Rectangle or oblong', 'Longer than it is wide. Avoid a lot of height on top, and keep some weight through the sides.', ''], ['Diamond', 'Wide cheekbones, narrower forehead and jaw. Some fullness at the forehead and sides balances it.', ''], ['Heart', 'Wider forehead, narrower chin. Medium length with forward movement or a fringe works well. Facial hair can add weight at the jaw.', '']], null, null, ['A good barber also looks at your forehead, jaw, cheekbones, head shape, hairline, facial hair and overall proportions. Two people with the same face shape can still need different haircuts.', 'A few practical examples: a taller forehead often looks better with some forward movement, a fringe or a French crop. A strong jaw works well with a buzz cut, a fade or other shorter styles that show more of the face. A longer face usually looks better without too much height on top, and a side part can add width.', 'Try this at home: take a straight-on photo with your hair pulled back. Look across three lines, your forehead, your cheekbones and your jaw, and notice which is widest and which is narrowest. That’s what the haircut needs to balance.'], { src: 'assets/photos/guide-face-shapes.jpg', alt: 'Men’s face shape guide: oval, round, square, rectangle, diamond and heart, with hairstyles that work well for each', cap: 'Most men are a combination of two shapes. Use this as a starting point, then talk it through with your barber.' }],
+      ['Step 2: What haircut works for your hair type?', ['The easiest haircut to live with works with your natural texture instead of fighting it every morning. Start by learning what your hair actually does.', 'Wash it, let it dry without product, and look at how it falls. That tells you more than any chart. It’s also why the same cut can look sharp on one person and puffy on another two days later.'], [['Straight', 'Holds sharp lines well. Can fall flat, so it often needs texture cut in.', ''], ['Wavy', 'Very versatile. Works especially well with textured, medium-length styles.', ''], ['Curly', 'Needs enough length for the curl pattern to form. Cut too short on top and it just looks frizzy.', ''], ['Coily', 'Tight curl pattern. Shape and even length matter most. Works great in both short and fuller styles.', '']], null, null, ['Two more things matter as much as texture:', 'Fine vs. coarse is about how thick each strand is. Thin vs. dense is about how many hairs you have. You can have fine, dense hair or coarse, thin hair. Fine or lower-density hair usually looks fuller with strategic texture and without styles that separate the hair and show scalp.', 'Growth patterns and cowlicks decide which way your hair wants to go. A strong cowlick is usually better built into the cut than fought every morning. If your hairline is receding or your hair is thinning, that changes the plan too.'], { src: 'assets/photos/guide-hair-types.jpg', alt: 'Men’s hair type guide: straight, wavy, curly and coily hair, plus strand thickness and hair density', cap: 'Texture, strand thickness and density each change which haircut works.' }],
+      ['Step 3: Should you bring a picture to your barber?', ['Yes. Bring 2–3 reference photos. Photos are clearer than haircut terms, which mean different things to different people.', 'Just don’t expect to look identical to the person in the photo. Your hair, hairline and head shape are different, so the photo is a direction, not a blueprint.', 'You’ll get more out of a photo if the person in it has hair similar to yours: similar texture, similar density, a similar hairline, and a similar face or head shape.'], null, ['Haircuts for thinning hair and receding hairlines →', 'Local%20Guide%20-%20Thinning%20Hair.dc.html'], ['Show your barber what you like about the photo, and ask what would need to change to make it work for you.'], null, { src: 'assets/photos/guide-what-to-bring.jpg', alt: 'What to bring to your barber: 2–3 reference photos, similar features, what you like, and openness to adjustments', cap: 'Two or three photos of hair like yours beat one photo of a celebrity.' }],
+      ['Step 4: Why does a barber consultation matter?', ['The consultation is part of the haircut. Before cutting, a good barber should look at your growth patterns, face and head shape, texture, density, hairline, the style you want, how well you can style it, and how often you’re willing to come in.', 'That conversation is what we start every appointment with at our shop in Orem. It’s also why seeing the same barber over time helps. Each visit, your barber learns more about how your hair grows and what you like, and the cut gets refined, a bit like a suit that fits better after a second fitting.', 'Looking for a new barber? Ask people with haircuts you like where they go, and look through a barber’s Instagram before you book. Once you sit down, you don’t have to ask for a specific cut. Try: “Based on my hair and face, what would you recommend?”'], null, ['Meet our barbers →', 'Team.dc.html']],
+      ['Step 5: How much maintenance should your haircut take?', ['The right haircut has to look good on a normal Tuesday morning when you’re styling it yourself, not just when you walk out of the shop.', 'How much work a style takes depends on your hair, but as a rough guide:'], [['Usually lower maintenance', 'Buzz cuts, short textured crops, French crops, many shorter tapers and textured fades.', ''], ['Usually higher maintenance', 'Pompadours, longer slick backs, some quiffs and longer styled looks.', '']], ['Fade haircuts explained →', 'Local%20Guide%20-%20Fade%20Haircut%20Orem.dc.html'], null, ['Before your barber starts, ask: how often will I need a haircut? How long will it take to style? Do I need a blow dryer? Which products do I need, and how much? How do I style it at home? Don’t leave the chair until you know.'], { src: 'assets/photos/guide-discuss.jpg', alt: 'Discuss with your barber: trim frequency, styling products, styling time and your lifestyle', cap: 'Ask these before the first cut, not after.' }],
+      ['What should you tell your barber if you don’t know what haircut you want?', ['Tell them exactly that. You don’t need to know barber terms before you book.', 'Try: “I want to change my hairstyle, but I’m not sure what would suit me. What would you recommend based on my face shape, hair type and how much styling I’m willing to do?”', 'A good barber will take it from there.']],
+      ['The best haircut is personal', ['There isn’t one perfect men’s haircut. The right one comes from putting together your face and head shape, texture, density, hairline, personal style, lifestyle and how much maintenance you want, with a barber who knows how to combine them.', 'Take inspiration from other people’s haircuts. Then adapt it to you.'], null, ['Non-surgical hair replacement →', 'Hair%20Replacement.dc.html']],
+    ],
+    faq: [
+      ['How do I know what haircut suits my face?', 'Start with your face shape, then look at your forehead, jaw, hairline and head shape. Most good haircuts create balance, adding height or width where your face needs it. A barber can assess this in person in a few minutes.'],
+      ['What should I tell my barber if I don’t know what haircut I want?', 'Say you want a change but aren’t sure what suits you, and ask for a recommendation based on your face shape, hair type and how much styling you’ll do.'],
+      ['Should I bring a picture to my barber?', 'Yes, 2–3 photos, ideally of men with hair and a hairline similar to yours. Treat them as a direction, not an exact copy.'],
+      ['What haircut is best for my hair type?', 'Work with your texture. Wavy hair suits textured styles, curly hair needs enough length for the curl to form, and fine or thin hair usually looks fuller with texture and shorter sides.'],
+      ['How much maintenance does my haircut require?', 'It depends on the style and your hair. Short crops and buzz cuts take little styling. Pompadours and longer styled looks take more time, product and often a blow dryer. Ask your barber before they start.'],
+      ['Can a barber recommend a hairstyle for me?', 'Yes. Recommending a haircut is part of a barber’s job. At Broken Arrow, every appointment starts with a consultation.'],
+    ],
+    ctaTitle: 'Not sure what haircut would suit you?', ctaBody: 'Book a haircut at Broken Arrow Barbershop in Orem. Bring a few inspiration photos, or come in with no idea at all. We’ll look at your hair, face shape, growth patterns and lifestyle and help you choose a haircut that actually works for you.', bookHref: SHOP, bookLabel: 'BOOK A HAIRCUT', altHref: 'Services.dc.html', altLabel: 'See services',
+  },
+  toupee: {
+    slug: 'toupee-queen-utah-mens-hair-systems-orem', topic: 'Non-surgical hair replacement', read: '8 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Looking for the Toupee Queen in Utah? Men’s Hair Systems in Orem | Broken Arrow',
+    desc: 'Searching for the Toupee Queen in Utah? Broken Arrow Barbershop in Orem offers men’s hair systems and non-surgical hair replacement in Utah County, designed around the finished haircut.',
+    title: 'Looking for the Toupee Queen in Utah? Men’s Hair Systems in Orem',
+    lead: 'If you’ve been searching for the Toupee Queen in Utah, you may have noticed that Emily Cheney, known online as the Toupee Queen, now sees clients at her location in La Jolla, California.',
+    intro: [
+      'Emily has helped bring a huge amount of attention to modern hair systems and shown just how transformative non-surgical hair replacement can be.',
+      'If you’re looking for a hair-system provider closer to home, Broken Arrow Barbershop in Orem, Utah offers men’s hair systems and non-surgical hair replacement right here in Utah County.',
+      'Our approach combines hair replacement with modern men’s barbering.',
+      'We specialize in men’s haircuts every day, from fades and tapers to longer scissor cuts, textured styles and beard work. When we’re designing and installing a hair system, we’re not only thinking about the system itself. We’re thinking about the finished haircut.',
+    ],
+    answer: 'Broken Arrow Barbershop, 375 E 800 S, Suite 12, Orem, offers men’s hair systems and non-surgical hair replacement for clients across Utah County, including Provo. Every system is designed around the finished haircut. The consultation and color match are free.',
+    sections: [
+      ['Hair Replacement Designed Around the Haircut', ['A great hair system isn’t just about replacing missing hair.', 'It needs to work with the person wearing it.', 'The density, hairline, texture and color of the system matter, but so do the haircut, face shape, natural hair on the sides and back, and the way the client actually wants to style his hair.', 'That’s where our background in modern men’s haircutting becomes especially useful.', 'Some clients want a clean taper. Others want a fade, textured fringe, longer scissor cut or a more classic hairstyle.', 'We design the hair system with that final result in mind.', 'Our goal isn’t for someone to look at your hair and think:'], null, null, ['“That’s a great hair system.”'], ['We want them to think:']],
+      ['“That’s a great haircut.”', ['That’s the philosophy behind hair replacement at Broken Arrow.'], null, null, ['At Broken Arrow, the hair system isn’t the finished product. The finished haircut is.'], ['We cut men’s hair all day, so we know how every part of a haircut has to fit together.']],
+      ['What we cut every day', [], [['Fades and tapers', 'Blending your natural hair on the sides and back into the system on top.', ''], ['Textured and scissor cuts', 'Movement and shape that make a system look like it grew there.', ''], ['Longer men’s hairstyles', 'Length that still sits and moves naturally.', ''], ['Modern and classic cuts', 'From a quiff to a side part to a slick back.', ''], ['Beard work', 'So the beard, hairline and cut all match.', '']]],
+      ['What is a men’s hair system?', ['A hair system is a thin base, usually lace or a skin-like polymer, with real human hair tied or injected into it. It’s color-matched to your hair, attached to the area where you’ve lost hair, and cut into your own hair so the two blend.', 'It’s non-surgical. Nothing is implanted, and it can be removed.']],
+      ['Do modern hair systems look natural?', ['Yes, when the base, density, hairline and color are right and the system is cut properly. Most systems that look fake are too dense, have a hairline that’s too straight or too low, or were never cut into the client’s own hair.', 'That last part is where a barber makes the difference.']],
+      ['Can you get a fade with a hair system?', ['Yes. The system covers the top. The sides and back are your own hair, so we can fade, taper or scissor-cut them like any other haircut. A good fade is often what makes a system disappear.'], null, ['See a fade with a hair system →', 'Hair%20Replacement.dc.html']],
+      ['Can younger men wear hair systems?', ['Yes. Many of our hair system clients are in their 20s and 30s. Modern systems are designed to work with current haircuts, not just older, conservative styles.']],
+      ['Are hair systems good for receding hairlines?', ['Yes. A partial system can rebuild a receding hairline and the temples while blending into the hair you still have. We design the hairline to suit your face and age, so it doesn’t look drawn on.']],
+      ['Are hair systems good for thinning hair?', ['Yes. For thinning on top or at the crown, a system adds density over your existing hair. If your thinning is light, a better haircut may be all you need, and we’ll tell you that at the consultation.'], null, ['Is a hair system right for you? Take the quiz →', 'Hair%20Replacement.dc.html#quiz']],
+      ['How long does a hair system last?', ['Usually 2–6 months, depending on the base, how you wear it, sweat, sun and how it’s cleaned. Buying more than one at a time means you always have a replacement ready.']],
+      ['How often does a hair system need maintenance?', ['Every 2–4 weeks. The system is removed and cleaned, your scalp is prepared, and it’s reattached and adjusted. You can come to us for maintenance at $175 a visit, or learn to do it at home to keep the cost down.']],
+      ['What is the difference between a hair system and a hair transplant?', ['A transplant surgically moves your own hair from the back and sides to the top. How well it works depends on how much donor hair you have and whether your hair loss continues. A hair system involves no surgery, gives full density the same day, and works however much hair you’ve lost.', 'We’re not against transplants. For the right person, they can work well, and Bryton works directly with local doctors if a transplant is the better fit for you.'], null, ['Hair system or transplant? →', 'Hair%20Replacement.dc.html']],
+      ['Where can I get a men’s hair system in Orem or Utah County?', ['Broken Arrow Barbershop is at 375 E 800 S, Suite 12, Orem, UT 84097. Clients come from Orem, Provo and across Utah County. Bryton does all of our hair system work, from the free consultation to the final cut.'], null, ['Get directions →', 'https://maps.google.com/?q=375+E+800+S+Suite+12+Orem+UT+84097']],
+    ],
+    faq: [['How much does a hair system cost at Broken Arrow?', 'The consultation and color match are free. First installation is $1,350, or $1,200 if you agree to be filmed. New systems are $500–$650. Your first year can be as low as $5.07 a day.'], ['Do I need a consultation first?', 'Yes. Every new client starts with the free consultation and color match. It’s no pressure.'], ['Can I work out and shower with a hair system?', 'Yes. It stays on through normal life, including the gym and showering.'], ['Do I have to be filmed?', 'No. The filmed rate is optional.']],
+    ctaTitle: 'Start with a free consultation.', ctaBody: 'Bryton will look at your hair loss, match your color and talk you through the haircut you want at the end of it.', bookHref: CONSULT, bookLabel: 'BOOK A FREE CONSULTATION', altHref: 'Hair%20Replacement.dc.html', altLabel: 'Hair replacement prices',
+  },
+  students: {
+    slug: 'barber-near-byu-uvu', topic: 'Local guide', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Barber Near BYU and UVU | Broken Arrow Barbershop, Orem',
+    desc: 'A barbershop near UVU and BYU. Broken Arrow in Orem is a few minutes from UVU and a short drive from BYU. Book online.',
+    title: 'A barber near BYU and UVU',
+    lead: 'Broken Arrow Barbershop is at 375 E 800 S, Suite 12, in Orem. It’s a short drive from Utah Valley University and from BYU in Provo, and you can book online in under a minute.',
+    answer: 'From UVU, it’s about a 5–10 minute drive. From BYU, about 15 minutes. Book online, pick your barber, and park at the building.',
+    sections: [
+      ['Getting here', ['We’re at 375 E 800 S, Suite 12, Orem, UT 84097, just off 800 South in central Orem.', 'From UVU, head east toward State Street and 800 South. From BYU, take University Parkway or State Street north into Orem. Drive times vary with traffic and the time of day.'], null, ['Get directions →', 'https://maps.google.com/?q=375+E+800+S+Suite+12+Orem+UT+84097']],
+      ['Booking between classes', ['Book online and you’ll see open times for each barber. Pick a time that fits around class and you won’t be waiting around.', 'We’re open Tuesday to Saturday. Evenings run until 7:30 PM Wednesday to Friday, which works well after class.'], [['Tuesday', 'Open', '10 AM – 6 PM'], ['Wednesday – Friday', 'Open late', '10 AM – 7:30 PM'], ['Saturday', 'Open', '10 AM – 5:30 PM'], ['Sunday – Monday', '', 'Closed']]],
+      ['Who to book', ['Bryton owns the shop and does most of our short, classic cuts, big changes and thinning-hair work. Elise specializes in curly hair and flow cuts. Connor does a lot of medium to longer cuts.'], null, ['Meet the barbers →', 'Team.dc.html']],
+      ['Getting a free cut', ['We film transformation haircuts for our YouTube channel. If you’re planning a big change, or you’re dealing with thinning hair or a receding hairline, apply. If you’re picked, the cut is free.'], null, ['Apply for a free haircut →', 'Free%20Haircut.dc.html']],
+    ],
+    faq: [['Do you take walk-ins?', 'We take walk-ins when we can, but we mainly run on appointments. Book online to see open times.'], ['How long does a haircut take?', 'Plan on about 45 minutes for a haircut. Book the Signature Haircut for a bigger change.'], ['Is there parking?', 'Yes, at the building.']],
+    ctaTitle: 'Book between classes.', ctaBody: 'Pick your barber and a time that works. It takes less than a minute.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Services.dc.html', altLabel: 'See services',
+  },
+  fades: {
+    slug: 'fade-haircut-orem', topic: 'Haircut guides', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Fade Haircut in Orem, Utah | Low, Mid, High and Skin Fades',
+    desc: 'Low, mid, high, skin and taper fades explained by barbers in Orem, Utah. Which fade suits your hair, and who to book at Broken Arrow.',
+    title: 'Fade haircuts in Orem: which one to ask for',
+    lead: 'A fade is hair cut short at the sides and back that blends gradually into longer hair on top. Where the fade starts and how short it goes changes the whole look.',
+    answer: 'Low fade: subtle and professional. Mid fade: the most common. High fade: sharp and bold. Skin fade: goes down to the skin. Taper: only shortens around the ears and neckline. If you’re not sure, book with Bryton and he’ll decide based on your head shape and hair.',
+    sections: [
+      ['The fades, explained', ['The height of a fade is where it starts on the side of your head.'], [['Taper', 'Shortens only around the ears and neckline. The most conservative option.', 'Subtle'], ['Low fade', 'Starts just above the ear. Clean without being loud.', 'Low'], ['Mid fade', 'Starts around the temple. Works for most people.', 'Medium'], ['High fade', 'Starts near the top of the head. Sharp contrast with the top.', 'High'], ['Skin fade', 'Any height, taken down to the skin at the bottom.', 'Shortest']]],
+      ['Which fade suits you', ['Head shape, cowlicks, hair density and your hairline all decide which fade works. A high fade can make a receding hairline look more obvious. A low fade or taper keeps things softer.', 'Curly and thick hair often look best with a lower fade and more weight left on top. Fine or thinning hair usually needs a softer blend.'], null, ['Haircuts for thinning hair →', 'Local%20Guide%20-%20Thinning%20Hair.dc.html']],
+      ['How long a fade lasts', ['A skin fade starts to grow out in about 1–2 weeks. A low fade or taper looks clean for 2–4 weeks. Most fade clients book every 2–3 weeks.']],
+      ['Who to book for a fade', ['Bryton does most of our short, classic cuts and fades. Elise does clean, detailed fades and is the one to book for curly hair on top. Book online and you’ll see each barber’s next opening.'], null, ['Meet the barbers →', 'Team.dc.html']],
+    ],
+    faq: [['What’s the difference between a taper and a fade?', 'A taper only shortens around the ears and neckline. A fade blends up the sides and usually goes shorter.'], ['Should I bring a photo?', 'Yes. Your barber will tell you what’s realistic for your hair and get as close as possible.'], ['How much is a haircut?', 'See current prices on our services list. You’ll also see them when you book.']],
+    ctaTitle: 'Book a fade in Orem.', ctaBody: 'Book with Bryton for short and classic cuts, or pick any barber online.', bookHref: BRYTON, bookLabel: 'BOOK WITH BRYTON', altHref: SHOP, altLabel: 'Book any barber',
+  },
+  systems: {
+    slug: 'hair-system-utah', topic: 'Non-surgical hair replacement', read: '6 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Non-Surgical Hair Replacement in Utah | Hair Systems, Orem',
+    desc: 'Non-surgical hair replacement in Utah. What a hair system is, what it costs, how long it lasts, and how to book a free consultation in Orem.',
+    title: 'Non-surgical hair replacement in Utah: what it is and what it costs',
+    lead: 'A hair system is a thin base with real hair on it, attached to your scalp and cut into your own hair. It’s non-surgical, and done right, it looks like your own hair.',
+    answer: 'At Broken Arrow in Orem, the consultation and color match are free. First installation is $1,350 ($1,200 if you agree to be filmed). Maintenance is $175 a visit. Systems cost $500–$650 each and last about 2–6 months. Wear each system about 6 months and do your own maintenance, and it can be as low as $5.07 a day.',
+    sections: [
+      ['What a hair system is', ['The base is a thin lace or skin-like material. Real hair is tied or injected into it. We match the color, density and texture to your hair, attach it, then cut it into your existing hair so the two blend.', 'Bryton does all of the hair system work at the shop.']],
+      ['Who it’s for', ['Men with a receding hairline, thinning on top or at the crown, or who are mostly bald on top and want a full head of hair again without surgery.', 'If your hair loss is light, a better haircut may be enough. Take our one-minute quiz to find out.'], null, ['Take the 1-minute quiz →', 'Hair%20Replacement.dc.html#quiz']],
+      ['What it costs', ['Every new client starts with the free consultation.'], [['Consultation and color match', 'Required first step', 'Free'], ['First installation', 'After the consultation', '$1,350'], ['First installation, filmed', 'If you agree to be filmed and photographed', '$1,200'], ['Maintenance', 'Every 2–4 weeks', '$175'], ['New system', 'One at a time', '$650'], ['6-system package', 'About a year’s supply', '$3,000']], ['Full prices and plans →', 'Hair%20Replacement.dc.html#prices']],
+      ['How long it lasts', ['A system typically lasts 2–6 months, depending on the system, how you wear it, sweat, sun and how it’s cleaned. Maintenance every 2–4 weeks keeps it looking right. Many clients learn to do their own maintenance at home to keep the cost down.']],
+      ['Coming from outside Utah County', ['Clients drive in from Salt Lake, Utah County and further. Buying several systems at once means fewer trips, and home maintenance means you only come in for a new system.']],
+    ],
+    faq: [['Does it look real?', 'We match color, density and texture and cut the system into your hair, so it looks like your own.'], ['Can I work out and shower?', 'Yes. It stays on through normal life, including the gym and showering.'], ['Is it surgery?', 'No. Nothing is implanted. The system is attached to your scalp and can be removed.']],
+    ctaTitle: 'As low as $5.07 a day.', ctaBody: 'Skip the energy drinks. Get a non-surgical hair system. Start with a free consultation: Bryton looks at your hair loss, matches color and tells you exactly what to expect.', bookHref: CONSULT, bookLabel: 'BOOK A FREE CONSULTATION', altHref: 'Hair%20Replacement.dc.html', altLabel: 'How it works',
+  },
+  taperfade: {
+    slug: 'taper-vs-fade-haircut', topic: 'Haircut guides', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Taper vs Fade: What’s the Difference? | Broken Arrow Orem',
+    desc: 'A taper shortens gradually and leaves some hair at the neckline. A fade blends down to skin. How to tell which one you want, from barbers in Orem, Utah.',
+    title: 'Taper or fade: what’s the difference?',
+    lead: 'Both get shorter as they go down the sides and back. The difference is how short they end up, and how much of the sides they cover.',
+    answer: 'A taper gets gradually shorter toward the neckline and sideburns but leaves some hair at the bottom. A fade blends all the way down to skin, and usually starts higher. A taper is softer and grows out more gently. A fade is sharper and needs a touch-up sooner.',
+    sections: [
+      ['What is a taper?', ['A taper shortens the hair gradually from the top of the sides down to the neckline and around the ears. It stays mostly at the edges, so from the front it can look like a normal short haircut.', 'Because there’s still hair at the bottom, a taper grows out evenly. Most clients can go 4–6 weeks between cuts.']],
+      ['What is a fade?', ['A fade takes the sides and back down to skin, or very close to it, and blends up into longer hair. It covers more of the side of the head than a taper and shows a clear dark-to-light shift.', 'Fades look sharpest in the first two weeks. Most people who wear them come in every 2–3 weeks.']],
+      ['Low, mid, high and skin fades', ['Fades are named by where the shortest part stops.'], [['Low fade', 'Starts just above the ear and neckline. The most subtle.', ''], ['Mid fade', 'Starts around the temple. The most common.', ''], ['High fade', 'Starts near the top of the head. Strong contrast with the top.', ''], ['Skin or bald fade', 'Any fade that goes all the way to bare skin.', '']], ['Full fade guide →', 'Local%20Guide%20-%20Fade%20Haircut%20Orem.dc.html']],
+      ['Which one should you get?', ['Choose a taper if you want something clean that works at the office, grows out gently, and doesn’t need frequent visits. Choose a fade if you want more contrast and don’t mind coming in more often.', 'Hair type matters too. Curly and coarse hair often looks great with a taper that keeps some shape at the sides. If your hair is thinning, a very high fade can make the top look thinner by comparison, so a low taper is usually safer.']],
+      ['How to ask for it', ['Say where you want it to start, how short you want the bottom, and how long you want to go between cuts. “Low taper, leave a bit at the neckline, I come in every five weeks” tells your barber more than a guard number.', 'If you’re not sure, bring a photo and let your barber tell you what will work on your hair.']],
+    ],
+    faq: [['Is a taper the same as a fade?', 'No. A taper leaves some hair at the bottom. A fade goes down to skin.'], ['Which lasts longer?', 'A taper. It grows out more evenly than a fade.'], ['Can you get a taper with long hair on top?', 'Yes. A taper works with almost any length on top.']],
+    ctaTitle: 'Not sure which one?', ctaBody: 'Book a haircut and we’ll look at your hair and tell you which one suits it.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Team.dc.html', altLabel: 'Meet the barbers',
+  },
+  whatsystem: {
+    slug: 'what-is-a-hair-system', topic: 'Hair systems', read: '7 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'What Is a Men’s Hair System? | Non-Surgical Hair Replacement, Orem',
+    desc: 'What a men’s hair system is, how it’s attached, how long it lasts, and what the first year looks like. From Broken Arrow Barbershop in Orem, Utah.',
+    title: 'What a hair system actually is',
+    lead: 'A hair system is a thin base with real hair attached, fitted to the area where you’ve lost hair and cut into your own hair so the two blend.',
+    answer: 'A men’s hair system is non-surgical hair replacement: a thin, breathable base with human hair tied into it, attached to the scalp with tape or adhesive, color-matched and cut into your existing hair. It isn’t permanent. Systems are replaced every few months and maintained every few weeks.',
+    sections: [
+      ['The base', ['The base is the part that sits on your scalp. Most are thin lace, thin skin (a clear polymer), or a mix of both. Lace breathes well and gives a natural hairline. Skin bases are easier to clean and hold adhesive longer.', 'Your barber picks the base based on your hair loss, your lifestyle and how much maintenance you want to do.']],
+      ['The hair', ['Good systems use human hair. It’s matched to your color, texture, density and wave pattern, then cut so it blends into the hair you already have on the sides and back.', 'At Broken Arrow the system isn’t the finished product. The finished haircut is.']],
+      ['How it’s attached', ['The area is shaved or trimmed, then the system is attached with medical-grade tape, liquid adhesive, or both. It stays on while you shower, sleep, work out and swim.', 'It isn’t surgery and nothing is implanted. It can be removed at any time.']],
+      ['What the first year looks like', ['The first appointment is the fitting and install. After that you come in for maintenance every few weeks: the system is removed, cleaned, re-attached and cut. Most people replace the system itself a couple of times a year.', 'Some clients learn to do their own maintenance at home between visits, which keeps the cost down.'], null, ['Doing your own maintenance →', 'Local%20Guide%20-%20Hair%20System%20Maintenance.dc.html']],
+      ['Who it’s for', ['Men with thinning hair, a receding hairline or larger areas of hair loss who want a full head of hair back without surgery. Age doesn’t matter much. What matters is how much hair you’ve lost and whether you’re willing to keep up with maintenance.'], null, ['Is a hair system right for you? →', 'Hair%20Replacement.dc.html#quiz']],
+    ],
+    faq: [['Is a hair system the same as a toupee?', 'It’s the modern version. Today’s systems are much thinner and are cut into your own hair, so they look like a normal haircut.'], ['Can people tell?', 'When it’s color-matched and cut in properly, most people won’t notice.'], ['How much does it cost?', 'It can be as little as $5.07 a day. Prices are on our Hair Replacement page.', 'See prices →', 'Hair%20Replacement.dc.html']],
+    ctaTitle: 'Book a free consultation.', ctaBody: 'No pressure. We’ll look at your hair and tell you whether a system makes sense.', bookHref: CONSULT, bookLabel: 'BOOK A FREE CONSULTATION', altHref: 'Hair%20Replacement.dc.html', altLabel: 'Hair replacement',
+  },
+  clay: {
+    slug: 'how-much-matte-clay-to-use', topic: 'Product how-tos', read: '3 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'How Much Matte Clay to Use (and How to Apply It) | Broken Arrow',
+    desc: 'How much matte clay to use, how to warm it up, and how to apply it for texture without shine. From the barbers at Broken Arrow in Orem, Utah.',
+    title: 'How much matte clay to use',
+    lead: 'Less than you think. Most people use too much, and that’s what makes clay look heavy or greasy.',
+    answer: 'Start with a fingertip-sized amount, about the size of a pea. Rub it between your palms until it’s warm and almost invisible, apply to dry hair from the back to the front, then add more only if you need it.',
+    sections: [
+      ['How much', ['A pea-sized amount is enough for short hair. Medium-length or thick hair may need a little more. It’s easier to add more than to take it out.'], null, ['See our matte clay →', 'Product%20-%20Matte%20Clay.dc.html']],
+      ['Dry or damp hair?', ['Dry, or almost dry. Clay on wet hair spreads unevenly and loses hold. If you blow-dry, do that first.']],
+      ['How to apply it', ['Warm it between your palms until you can barely see it. Work it in from the back to the front so the front doesn’t get most of the product. Then use your fingertips to shape the top.', 'For more texture, twist small sections between your fingers. For a neater look, finish with a comb.']],
+      ['Common mistakes', ['Using too much. Putting it all on the front. Applying it cold, straight out of the jar. Any of these gives you clumps and shine.']],
+    ],
+    faq: [['Does matte clay wash out?', 'Yes, with regular shampoo.'], ['Is clay good for thinning hair?', 'Yes. Matte products add grip and fullness without shine, which makes thinning hair look thicker.'], ['When is Broken Arrow clay available?', 'It’s coming soon. Sign up on the product page to hear when it’s ready.', 'Matte clay →', 'Product%20-%20Matte%20Clay.dc.html']],
+    ctaTitle: 'Ask in the chair.', ctaBody: 'We’ll show you how much to use on your hair at your next appointment.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Product%20-%20Matte%20Clay.dc.html', altLabel: 'Our matte clay',
+  },
+  toupeevs: {
+    slug: 'toupee-vs-hair-system', topic: 'Non-surgical hair replacement', read: '6 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Toupee Near Me? Toupee vs Modern Men’s Hair Systems | Orem, Utah',
+    desc: 'Searching for a toupee near you? Here’s how a modern men’s hair system differs from an old-school toupee, what it costs, and where to get one in Orem and Utah County.',
+    title: 'Toupee vs hair system: what’s the difference?',
+    lead: 'If you’ve been searching for a toupee near you, what you’re probably looking for today is a men’s hair system. They solve the same problem, but they aren’t the same thing.',
+    intro: [
+      'The word “toupee” usually brings up one picture: a thick hairpiece that sits on top of the head, doesn’t move and doesn’t match the hair around it.',
+      'Modern hair systems were built to fix every one of those problems. At Broken Arrow Barbershop in Orem, we fit, color-match and cut men’s hair systems for clients across Utah County, including Provo.',
+    ],
+    answer: 'A toupee is an older style of hairpiece, usually thick, off-the-shelf and easy to spot. A modern men’s hair system is a thin, custom base with real human hair, color-matched to you, attached securely and cut into your own hair so it blends. Broken Arrow Barbershop, 375 E 800 S, Suite 12, Orem, offers hair systems with a free consultation and color match.',
+    sections: [
+      ['Why old toupees looked fake', ['Most of the toupees people picture were heavy, one-size-fits-all pieces. The base was thick, the hair was often synthetic, the density was too high and the hairline was a straight, solid edge.', 'They were rarely cut into the wearer’s own hair, so the top and the sides never matched. That’s where the reputation comes from.']],
+      ['What a modern hair system is', ['A hair system is a thin base, usually fine lace or a skin-like polymer, with real human hair tied or injected into it. It’s attached to the area where you’ve lost hair and cut into your own hair so the two blend.', 'It’s non-surgical. Nothing is implanted, and it can be removed.']],
+      ['Side by side', [], [['Base', 'Old toupee: thick and stiff. Hair system: thin lace or skin, close to the scalp.', ''], ['Hair', 'Old toupee: often synthetic. Hair system: real human hair.', ''], ['Color and density', 'Old toupee: off the shelf. Hair system: matched to your hair and age.', ''], ['Hairline', 'Old toupee: a solid edge. Hair system: soft and irregular, like a real hairline.', ''], ['Haircut', 'Old toupee: sits on top. Hair system: cut into your own hair, fades and tapers included.', '']]],
+      ['The haircut is what makes it work', ['A hair system that isn’t cut properly can still look like a hairpiece. We cut men’s hair every day, so every system we fit is designed around the finished haircut: the fade or taper on the sides, the texture on top and how you actually style it.'], null, null, ['At Broken Arrow, the hair system isn’t the finished product. The finished haircut is.'], []],
+      ['Can people tell?', ['When the base, density, hairline and color are right and the system is cut in, most people can’t. Our clients work out, shower and live normally with it.'], null, ['See before and after →', 'Hair%20Replacement.dc.html']],
+      ['What it costs', ['The consultation and color match are free. First installation is $1,350, or $1,200 if you agree to be filmed. New systems are $500–$650, and maintenance visits are $175. Your first year can be as low as $5.07 a day.'], null, ['Hair replacement prices →', 'Hair%20Replacement.dc.html']],
+      ['Where to get a hair system near Orem', ['Broken Arrow Barbershop is at 375 E 800 S, Suite 12, Orem, UT 84097. Clients come from Orem, Provo and across Utah County. Bryton does all of our hair system work, from the free consultation to the final cut.'], null, ['Book a free consultation →', 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU']],
+    ],
+    faq: [['Is a hair system the same as a toupee?', 'They solve the same problem, but a modern hair system uses a thinner base, real human hair and a custom color match, and it’s cut into your own hair.'], ['How long does a hair system last?', 'Usually 2–6 months, depending on the base and how you wear it.'], ['Can I get a fade with a hair system?', 'Yes. The sides and back are your own hair, so we can fade or taper them like any other haircut.'], ['Do I need a consultation first?', 'Yes. It’s free and no pressure.']],
+    ctaTitle: 'Start with a free consultation.', ctaBody: 'Bryton will look at your hair loss, match your color and talk you through the haircut you want at the end of it.', bookHref: CONSULT, bookLabel: 'BOOK A FREE CONSULTATION', altHref: 'Hair%20Replacement.dc.html', altLabel: 'How hair replacement works',
+  },
+  signature: {
+    slug: 'signature-haircut-orem', topic: 'Haircut guides', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'The Signature Haircut: A Longer, More Personal Men’s Haircut in Orem | Broken Arrow',
+    desc: 'Most barbershops book 30-minute haircuts and rush the cut. The Signature Haircut at Broken Arrow in Orem gives your barber the time to consult, wash and cut your hair properly.',
+    title: 'Why your haircut needs more than 15 minutes',
+    lead: 'Most barbershops are built to move people through the chair as fast as possible. The Signature Haircut is built the other way around.',
+    intro: [
+      'A lot of shops book you for a 30-minute haircut. By the time you’ve sat down, talked through what you want and had your hair washed, you might be lucky to get 15 minutes of actual cutting.',
+      'Then you leave, and a week later you’re wondering why your hair never looks quite right.',
+      'It usually isn’t your hair. It’s the time.',
+    ],
+    answer: 'The Signature Haircut is Broken Arrow’s most personalized haircut: extra time to talk through your goals, a hair wash, scalp scrub and hot towel, a cut tailored to your hair texture, face shape and routine, and guidance on styling it at home. It’s $65 at Broken Arrow Barbershop, 375 E 800 S, Suite 12, Orem.',
+    sections: [
+      ['What 15 minutes gets you', ['A rushed haircut skips the parts that make a cut last. The consultation turns into “same as last time?” The sides get run over with clippers, the top gets a quick trim, and nobody checks how it sits when it’s dry.', 'It might look fine when you leave. It won’t look fine in two weeks.']],
+      ['What the extra time is for', ['The Signature Haircut gives your barber the time to do the job properly.'], [['A real consultation', 'Your goals, what bugs you about your hair now, and how you actually style it in the morning.', ''], ['Reading your hair', 'Growth patterns, cowlicks, density, texture and head shape, before anything gets cut.', ''], ['The wash', 'A hair wash, scalp scrub with a scalp brush, menthol scalp treatment and hot towel. No extra charge.', ''], ['Detail work', 'Scissor work, blending and refining the shape so it grows out evenly.', ''], ['How to wear it', 'What product to use, how much, and how to style it so it looks right after you leave.', '']]],
+      ['A haircut that grows out well', ['A high-quality haircut doesn’t usually grow out badly. A bad one does.', 'Cut a cowlick too short and it starts sticking up within days. Put a fade too high for your head shape and the sides look puffy as soon as they start growing. That’s not your hair growing fast. That’s a haircut that wasn’t cut for your hair.', 'A good haircut looks right on day one and still looks right on day twenty. That comes from taking weight out in the right places, cutting with how your hair grows, and shaping it for your face and the way you’ll wear it.'], null, null, ['A good haircut is still a good haircut three weeks later.'], []],
+      ['“My hair grows so fast”', ['We hear this all the time. Usually the person saying it has been getting haircuts that don’t suit their hair type or face shape, so the cut falls apart quickly and always seems to need another one.', 'Book the Signature Haircut once and watch how well it grows out.']],
+      ['Who it’s for', ['Your first visit, so your barber can learn your hair. A change in style. Mid-length and longer cuts like a flow, warrior cut or modern mullet. Long scissor haircuts. Or any time you want extra time and attention before a big event.', 'If you’ve never been happy with a haircut, start here.'], null, ['Compare our services →', 'Services.dc.html']],
+      ['It usually costs about the same', ['The Signature Haircut is $65. Longer cuts don’t need cutting as often, usually every 6 to 8 weeks, compared with every 2 to 4 weeks for a short cut. Over a year, it tends to cost about the same as a Classic Haircut, or less.']],
+      ['What’s included', ['A hair wash, haircut, neck shave and hot towel, plus the extra consultation and detail time.'], null, ['Not sure which to book? Take four quick questions →', 'Service%20Quiz.dc.html']],
+    ],
+    faq: [['How long is the Signature Haircut?', 'It’s booked with extra time so nothing gets rushed. The booking page shows the details.'], ['Can I book a Classic Haircut for a longer style?', 'Yes. You can book any haircut as either. We recommend the Signature for longer styles, new looks and first visits.'], ['Is the wash included?', 'Yes, with every haircut, along with the scalp scrub, menthol scalp treatment and hot towel.'], ['Who does Signature Haircuts?', 'All of our barbers. Bryton specializes in scissor haircuts.']],
+    ctaTitle: 'Give your haircut the time it needs.', ctaBody: 'Book the Signature Haircut and tell your barber what you want. We’ll take it from there.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  smallshop: {
+    slug: 'small-barbershop-orem-same-barber', topic: 'Shop guide', read: '4 min', hero: 'assets/photos/shop-wide.webp', heroAlt: 'Inside Broken Arrow Barbershop, a small men’s barbershop in Orem, Utah',
+    seoTitle: 'Tired of a New Barber Every Visit? Why a Small Barbershop in Orem Is Different | Broken Arrow',
+    desc: 'Big haircut chains have high turnover, so you get a new barber every time. Broken Arrow is a small barbershop in Orem where the same barber gets to know your hair.',
+    title: 'Why the same barber every time matters',
+    lead: 'We aren’t a haircut chain. We’re a small shop in Orem with three barbers, and we like to do things right.',
+    intro: [
+      'One of the things we hear most from new clients is some version of: “Every time I went to that place, I got a new barber.”',
+      'That isn’t bad luck. It’s how most big haircut chains are set up.',
+    ],
+    answer: 'Broken Arrow Barbershop is a small, locally owned men’s barbershop at 375 E 800 S, Suite 12, Orem, UT, with three barbers: Bryton, Connor and Elise. You can book the same barber every visit, so they get to know your hair, what you liked about your last cut and what you didn’t.',
+    sections: [
+      ['Why chains feel different', ['Big chains are built for volume. Turnover is high, and for a lot of the people behind the chair, it’s a temporary job on the way to something else.', 'So you sit down with someone new, explain your hair from scratch, and hope it goes well. Next time, you do it all again.']],
+      ['What a barber who knows you gets right', ['There’s real value in a barber who has cut your hair before.'], [['Your hair', 'Where the cowlick is, how fast the sides grow and how your hair behaves after a week.', ''], ['Your last cut', 'What you liked about it, what you didn’t, and what to change this time.', ''], ['How you wear it', 'Whether you style it every morning or just push it back and go.', ''], ['You', 'Your job, your routine, the event coming up next month. It’s a conversation, not a transaction.', '']]],
+      ['Every haircut builds on the last one', ['When the same barber cuts your hair every time, each haircut gets a little better. Small adjustments add up. By the third or fourth visit, you barely need to explain anything.'], null, null, ['You shouldn’t have to explain your hair from scratch every visit.'], []],
+      ['How we run the shop', ['Three barbers. Booked appointments with the time to do the job properly. Clients who have followed Bryton from our first shop in Payson, and plenty who drive in from Provo and across Utah County.'], null, ['Meet the barbers →', 'Team.dc.html']],
+      ['Finding your barber', ['Book with whoever fits what you want, then stick with them. Bryton specializes in scissor haircuts, receding hairlines and hair systems. Connor and Elise each have their own strengths. If you aren’t sure, book any of us for your first visit and we’ll point you in the right direction.'], null, ['Not sure what to book? →', 'Service%20Quiz.dc.html']],
+    ],
+    faq: [['Can I book the same barber every time?', 'Yes. Pick your barber on the booking page and book with them again next time.'], ['What if my barber is booked out?', 'Book a little further ahead, or try another barber in the shop. We talk to each other about clients.'], ['Is Broken Arrow a chain?', 'No. It’s a small, locally owned barbershop in Orem.']],
+    ctaTitle: 'Find your barber.', ctaBody: 'Book with one of our three barbers and come back to the same one next time.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Team.dc.html', altLabel: 'Meet the team',
+  },
+  oremhaircuts: {
+    slug: 'mens-haircuts-orem-utah', topic: 'Local guide', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop, a men’s barbershop in Orem, Utah',
+    seoTitle: 'Men’s Haircuts in Orem, Utah | Fades, Tapers & Scissor Cuts | Broken Arrow Barbershop',
+    desc: 'Looking for men’s haircuts in Orem, Utah? Broken Arrow Barbershop offers fades, tapers, scissor cuts, longer styles and beard trims in Orem, near Provo, BYU and UVU.',
+    title: 'Men’s haircuts in Orem, Utah',
+    lead: 'Broken Arrow Barbershop provides men’s haircuts in Orem, Utah, for clients from Orem, Provo and across Utah County.',
+    intro: [
+      'We’re a small, locally owned men’s barbershop at 375 E 800 S in Orem. Every haircut starts with a conversation about your hair, and every haircut includes a hair wash, neck shave and hot towel.',
+      'Whether you want a clean fade, a longer scissor cut or you aren’t sure yet, here’s what we offer and how to pick.',
+    ],
+    answer: 'Broken Arrow Barbershop provides men’s haircuts in Orem, Utah at 375 E 800 S, Suite 12, Orem, UT 84097. Services include the Classic Haircut ($40), Haircut + Beard ($65) and the Signature Haircut ($65), plus non-surgical hair replacement. Book online.',
+    sections: [
+      ['Men’s haircut services in Orem', ['Three haircuts, all with a hair wash, neck shave and hot towel.'], [['Classic Haircut', 'Routine upkeep for the style you already have. Ideal for short cuts and fades.', '$40'], ['Haircut + Beard', 'Your haircut plus a beard trim and shaping in one visit.', '$65'], ['Signature Haircut', 'Extra consultation and detail time for first visits, new styles and longer cuts.', '$65']], ['See all services →', 'Services.dc.html']],
+      ['Fades and tapers in Orem', ['Low, mid, high and skin fades, plus tapers for a softer finish at the neckline. A fade goes down to skin; a taper shortens gradually but doesn’t. We place the fade to suit your head shape, so it doesn’t grow out puffy on the sides.'], null, ['Which fade should you ask for? →', 'Local%20Guide%20-%20Fade%20Haircut%20Orem.dc.html']],
+      ['Scissor cuts and longer men’s hairstyles', ['Flows, warrior cuts, modern mullets, textured crops and other mid-length styles. Bryton specializes in scissor haircuts. For longer styles, we recommend the Signature Haircut so there’s time for the detail work.'], null, ['Why longer cuts need more time →', 'Local%20Guide%20-%20Signature%20Haircut.dc.html']],
+      ['Beard trims', ['Beard trimming and shaping to match your haircut, with a clean neckline. Book the Haircut + Beard.']],
+      ['Haircuts for thinning hair and receding hairlines', ['The right haircut can change how thinning hair looks. When a haircut isn’t enough, we also offer non-surgical hair replacement in Orem, starting with a free consultation.'], null, ['Haircuts for thinning hair →', 'Local%20Guide%20-%20Thinning%20Hair.dc.html']],
+      ['A barber near Provo, BYU and UVU', ['We’re in Orem, a short drive from UVU, BYU and Provo. Plenty of our clients are students, and plenty drive in from across Utah County.'], null, ['A barber near BYU and UVU →', 'Local%20Guide%20-%20Barber%20Near%20BYU%20and%20UVU.dc.html']],
+      ['Why clients choose Broken Arrow', ['We’re a small shop, not a chain, so you can book the same barber every visit. We take the time to understand your hair before we cut it. And we’ve been named Best Barbershop in Utah Valley in the Daily Herald Readers’ Choice awards in 2023, 2024 and 2026.'], null, ['Why the same barber matters →', 'Local%20Guide%20-%20Same%20Barber%20Every%20Time.dc.html']],
+      ['Where to get a men’s haircut in Orem', ['Broken Arrow Barbershop, 375 E 800 S, Suite 12, Orem, UT 84097. We mainly run on appointments and take walk-ins when we can.'], null, ['Get directions →', 'https://maps.google.com/?q=375+E+800+S+Suite+12+Orem+UT+84097']],
+    ],
+    faq: [['How much is a men’s haircut in Orem at Broken Arrow?', 'The Classic Haircut is $40. Haircut + Beard and the Signature Haircut are $65.'], ['Do you take walk-ins?', 'We take walk-ins when we can, but we mainly run on appointments. Book online to see open times.'], ['Is the hair wash included?', 'Yes, with every haircut, along with a neck shave and hot towel.'], ['Which haircut should I book?', 'The Signature Haircut for your first visit or a new style, the Classic for routine upkeep. Still not sure? Answer four quick questions.', 'Find your haircut →', 'Service%20Quiz.dc.html']],
+    ctaTitle: 'Book a men’s haircut in Orem.', ctaBody: 'Pick your barber, service and time. The booking page shows real availability.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  wedding: {
+    slug: 'wedding-groom-haircut-orem', topic: 'Haircut guides', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Wedding & Groom Haircuts in Orem, Utah: When to Book Your Pre-Wedding Cut | Broken Arrow',
+    desc: 'Planning a groom or wedding haircut in Orem? Why you shouldn’t get your first cut the day before, when to book, and which service to choose. From Broken Arrow Barbershop.',
+    title: 'Wedding and groom haircuts: plan it before the week of',
+    lead: 'A lot of people come in the day of the wedding or the day before for a haircut. We don’t recommend it, especially if you’ve never been to us before.',
+    intro: [
+      'Your wedding photos will be around for the rest of your life. The haircut in them shouldn’t be a first try with a new barber two days before.',
+      'Here’s how to plan it so you walk into the wedding with a cut you already know you love.',
+    ],
+    answer: 'Book your first haircut a month or more before the wedding so you can find a barber you like and a haircut you love. Then book a final Signature Haircut about 3–7 days before the wedding so it has time to settle. Broken Arrow Barbershop is at 375 E 800 S, Suite 12, Orem.',
+    sections: [
+      ['Why not the day before', ['If it’s your first time with a barber, neither of you knows how your hair behaves, how it grows or how it looks a few days after a cut. If something isn’t quite right, there’s no time to fix it.', 'A fresh cut also needs a few days to settle. Lines soften and the shape relaxes into place.'], null, null, ['Your wedding day shouldn’t be the first time you see this haircut.'], []],
+      ['A month before, or longer', ['Come in at least a month before the wedding. Find a barber you like, try the style you’re thinking about, and see how it grows out over the next few weeks.', 'If you want to change it, you have time. If you love it, you know exactly what to ask for next time.'], null, ['Why the same barber every time matters →', 'Local%20Guide%20-%20Same%20Barber%20Every%20Time.dc.html']],
+      ['A simple timeline', [], [['1–3 months before', 'First visit. Try the style and find your barber.', ''], ['2–4 weeks before', 'Adjust the cut if you want to change anything.', ''], ['3–7 days before', 'Final pre-wedding Signature Haircut.', ''], ['Day before or day of', 'Only a quick neckline cleanup, if you need one, with the barber who already knows your hair.', '']]],
+      ['Book the Signature Haircut for the pre-wedding cut', ['We recommend the Signature Haircut for your pre-wedding appointments. You get extra time to talk through the look, detail work so it grows out clean, and guidance on styling it yourself on the day.', 'It includes a hair wash, scalp scrub, menthol scalp treatment, neck shave and hot towel.'], null, ['Why the Signature Haircut is worth it →', 'Local%20Guide%20-%20Signature%20Haircut.dc.html']],
+      ['Beards', ['If you have a beard, book the Haircut + Beard for your final appointment so your beard, hairline and cut all match in the photos.']],
+      ['Groomsmen and family', ['Book early. Weekends before weddings fill up fast, and it’s much easier to fit a group in with a few weeks’ notice.']],
+    ],
+    faq: [['When should I get my haircut before my wedding?', 'Your final cut about 3–7 days before, and a first cut a month or more before that.'], ['Can I get my haircut the day of the wedding?', 'We don’t recommend it, especially if you haven’t been to us before. If you need a quick cleanup, book it with the barber who already cut your hair.'], ['Which service should I book?', 'The Signature Haircut, or the Haircut + Beard if you have a beard.', 'Compare services →', 'Services.dc.html']],
+    ctaTitle: 'Book your first cut now.', ctaBody: 'Find your barber and a haircut you love well before the big day.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  classicvs: {
+    slug: 'classic-vs-signature-haircut', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Classic vs Signature Haircut at Broken Arrow: Which Should You Choose? | Orem, Utah',
+    desc: 'Classic Haircut or Signature Haircut? What each includes, who each is for, how often you’ll come in, and how to pick at Broken Arrow Barbershop in Orem, Utah.',
+    title: 'Classic vs Signature Haircut at Broken Arrow: which should you choose?',
+    lead: 'Both include a hair wash, neck shave and hot towel, and you can book any haircut as either one. The difference is what your hair needs from the appointment.',
+    answer: 'Book the Classic Haircut ($40, about 45 minutes) for routine upkeep of a style you already like, especially short cuts and fades. Book the Signature Haircut ($65, about 1 hour) for your first visit, a new style, mid-length or longer cuts, scissor cuts, or a big event like a wedding.',
+    sections: [
+      ['The short version', [], [['Classic Haircut', 'About 45 minutes. Keep your current style in shape. Best for short cuts and fades, about every 2–4 weeks.', '$40'], ['Signature Haircut', 'About 1 hour. Extra consultation and detail time. Best for first visits, new styles and longer cuts, about every 6–8 weeks.', '$65'], ['Haircut + Beard', 'The Classic Haircut plus a beard trim and shaping.', '$65']]],
+      ['The Classic Haircut', ['Includes a hair wash, haircut, neck shave and hot towel. Refresh your current style with a haircut focused on maintaining its shape and cleaning up grown-out length.', 'It’s the right choice when you already know what you want and your barber already knows your hair. Short cuts and fades grow out quickly, so the Classic is built for regular visits.'], null, null, null, null],
+      ['The Signature Haircut', ['Includes a hair wash, haircut, neck shave, hot towel and styling guidance. Our most personalized haircut, with extra time to discuss your goals and refine the details. Your cut is tailored to your hair texture, face shape and everyday styling routine, with guidance to help you recreate the look at home.', 'Most shops book a 30-minute haircut and rush it. The Signature gives your barber the time to do it properly, which is why it grows out so well.'], null, ['Why your haircut needs more than 15 minutes →', 'Local%20Guide%20-%20Signature%20Haircut.dc.html']],
+      ['Book the Signature if…', [], [['It’s your first visit', 'Your barber needs time to learn your hair.', ''], ['You want a change', 'A new style needs a real consultation.', ''], ['Your hair is mid-length or longer', 'Flows, warrior cuts, modern mullets, etc.', ''], ['You want a scissor cut', 'Scissor work takes more time than clippers.', ''], ['You have a big event', 'Weddings, photos, interviews.', '']]],
+      ['Book the Classic if…', [], [['You love your current cut', 'You just want it cleaned up.', ''], ['You wear it short', 'Fades, tapers and short cuts that need frequent visits.', ''], ['Your barber knows your hair', 'No long consultation needed.', '']]],
+      ['What about the price?', ['The Signature costs more per visit, but longer cuts don’t need cutting as often. Over a year, a longer cut in the Signature usually costs about the same as a short cut in the Classic, or less.']],
+      ['Still not sure?', ['Answer four quick questions and we’ll tell you which one to book. Or call the shop and ask.'], null, ['Find your haircut →', 'Service%20Quiz.dc.html']],
+    ],
+    faq: [['Can I book a Classic Haircut for a longer style?', 'Yes. You can book any haircut as either one. We recommend the Signature for longer styles.'], ['Do both include a wash?', 'Yes. Both include a hair wash, neck shave and hot towel.'], ['What if I also want my beard done?', 'Book the Haircut + Beard ($65).', 'See all services →', 'Services.dc.html']],
+    ctaTitle: 'Pick one and book.', ctaBody: 'Choose your barber and your haircut. You can always switch next time.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Service%20Quiz.dc.html', altLabel: 'Take the quiz',
+  },
+  newstyle: {
+    slug: 'what-to-book-new-hairstyle', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'What to Book When You Want a Completely New Hairstyle | Broken Arrow Barbershop, Orem',
+    desc: 'Want a completely new hairstyle? What to book, what to bring and what to expect when you’re making a big change at Broken Arrow Barbershop in Orem, Utah.',
+    title: 'What to book when you want a completely new hairstyle',
+    lead: 'If you want a completely new hairstyle, book the Signature Haircut. A big change needs a real conversation before anything gets cut, and that takes time.',
+    answer: 'Book the Signature Haircut ($65) for a completely new hairstyle. It includes extra consultation and detail time, a hair wash, neck shave and hot towel. Bring 2–3 reference photos and tell your barber what you don’t like about your hair now.',
+    sections: [
+      ['Why the Signature Haircut', ['A new hairstyle isn’t a trim. Your barber needs to look at your head shape, growth patterns, cowlicks, texture and density, then work out how to get from where your hair is now to where you want it.', 'In a rushed appointment, that conversation gets skipped. The Signature gives it the time it needs, plus the detail work that makes a new cut grow out well.'], null, ['Why your haircut needs more than 15 minutes →', 'Local%20Guide%20-%20Signature%20Haircut.dc.html']],
+      ['What to bring', [], [['Photos', '2–3 cuts you like, ideally on hair similar to yours.', ''], ['What you don’t like', 'What bugs you about your hair now is often the most useful thing you can say.', ''], ['Your routine', 'How long you’ll spend styling it in the morning, and whether you wear a hat.', '']], ['What to tell your barber →', 'Local%20Guide%20-%20What%20to%20Tell%20Your%20Barber.dc.html']],
+      ['Going short from long', ['If you’re cutting off a lot of length, this is the easiest big change to make in one visit. Your barber will talk through the shape first so you know exactly what you’re getting. Big long-to-short changes are also what we film for YouTube, so you could get it free.'], null, ['Apply for a free haircut →', 'Free%20Haircut.dc.html']],
+      ['Going longer from short', ['You can’t add length in one visit, but you can start the plan. Your barber will shape what you have so the grow-out looks intentional at every stage.'], null, ['Growing your hair out →', 'Local%20Guide%20-%20Growing%20Hair%20Out.dc.html']],
+      ['Not sure what you want?', ['That’s fine. Say you want a change and ask what would suit your face shape and hair type. Figuring that out is our job.'], null, ['How to find the right hairstyle →', 'Local%20Guide%20-%20Find%20Your%20Hairstyle.dc.html']],
+      ['After the new cut', ['Your barber will show you how to style it and what product to use. Come back in a few weeks so they can refine the shape once they’ve seen how your hair grows.']],
+    ],
+    faq: [['Can I book a Classic Haircut for a new style?', 'You can, but we recommend the Signature so there’s time for the consultation and detail work.'], ['Should I bring photos?', 'Yes. Two or three is ideal.'], ['What if I also want my beard changed?', 'Book the Signature and ask your barber to add a beard trim, or book the Haircut + Beard.', 'See all services →', 'Services.dc.html']],
+    ctaTitle: 'Ready for a change?', ctaBody: 'Book the Signature Haircut and bring a few photos. We’ll take it from there.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Service%20Quiz.dc.html', altLabel: 'Not sure? Take the quiz',
+  },
+  routine: {
+    slug: 'haircut-for-your-daily-routine', topic: 'Haircut guides', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'How to Choose a Haircut That Fits Your Daily Routine | Broken Arrow Barbershop, Orem',
+    desc: 'How to pick a men’s haircut that fits your morning routine, job, workouts and how often you want to visit the barber. From Broken Arrow Barbershop in Orem, Utah.',
+    title: 'How to choose a haircut that fits your daily routine',
+    lead: 'A great haircut you can’t style at home isn’t a great haircut. The right cut works with how much time you actually spend on your hair.',
+    intro: [
+      'Most bad haircuts aren’t cut badly. They’re cut for a routine the client doesn’t have.',
+      'Before you pick a style, answer a few honest questions about your mornings, your week and your budget.',
+    ],
+    answer: 'Choose a haircut based on how many minutes you’ll spend styling it, whether you wear a hat or helmet, how often you work out, what your job needs, and how often you want to see your barber. Tell your barber all of this before the cut.',
+    sections: [
+      ['How much time do you have in the morning?', [], [['Under a minute', 'Short textured crops, buzz cuts and tapers. Towel-dry and go.', ''], ['2–5 minutes', 'Short to medium cuts with a little matte clay or cream for shape.', ''], ['5–10 minutes', 'Longer styles, quiffs and pompadours that need a blow-dry and product.', '']]],
+      ['Do you wear a hat?', ['If you wear a hat most days, avoid cuts that rely on volume on top. Shorter sides and a textured top recover well when the hat comes off. Longer styles like a flow can work too, since they sit back naturally.']],
+      ['Do you work out every day?', ['Daily workouts and daily showers mean less time for styling. Pick a cut that looks good air-dried, and keep product light.']],
+      ['What does your job need?', ['Some jobs need a clean, conservative cut. Others give you room for longer or more textured styles. Tell your barber what you do so the cut works on Monday morning, not just leaving the shop.']],
+      ['How often do you want to come in?', ['Short cuts and fades look sharpest with a visit every 2–4 weeks. Longer styles usually need a cut every 6–8 weeks.'], null, ['Classic vs Signature Haircut →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+      ['Work with your hair, not against it', ['Curly, wavy, thick and fine hair all behave differently. A cut that fights your natural texture takes more time every morning. A cut designed around it takes less.'], null, ['How to find the right hairstyle →', 'Local%20Guide%20-%20Find%20Your%20Hairstyle.dc.html']],
+      ['Tell your barber', ['Say how long you spend on your hair, what product you use, whether you blow-dry, and what bugs you about your hair after a few days. That tells your barber more than a guard number.'], null, ['What to tell your barber →', 'Local%20Guide%20-%20What%20to%20Tell%20Your%20Barber.dc.html']],
+    ],
+    faq: [['What’s the lowest-maintenance men’s haircut?', 'Short textured crops, buzz cuts and tapers. They need little or no product.'], ['Will my barber show me how to style it?', 'Yes. We’ll show you what product to use and how much.'], ['Which service should I book?', 'The Signature Haircut if you’re changing your style, the Classic if you’re keeping it.', 'Answer four quick questions →', 'Service%20Quiz.dc.html']],
+    ctaTitle: 'Get a cut that fits your mornings.', ctaBody: 'Tell your barber how you live. We’ll cut for it.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  timetochange: {
+    slug: 'signs-its-time-to-change-your-hairstyle', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Signs It’s Time to Change Your Hairstyle | Broken Arrow Barbershop, Orem',
+    desc: 'Eight signs it’s time for a new men’s hairstyle, and how to make the change without guessing. From the barbers at Broken Arrow Barbershop in Orem, Utah.',
+    title: 'Signs it’s time to change your hairstyle',
+    lead: 'Most guys keep the same haircut for years because it’s easy, not because it’s right. Here’s how to tell when it’s time for something new.',
+    answer: 'It’s time to change your hairstyle if you’ve had the same cut for years, it takes too long to style, it grows out badly, your hair has changed, your hairline is shifting, your life or job has changed, or you just don’t like it anymore. Book a Signature Haircut to talk through a new style.',
+    sections: [
+      ['The signs', [], [['You’ve had it for years', 'Same cut since high school or your mission? Your face and hair have changed since then.', ''], ['It takes too long in the morning', 'If styling it feels like a fight, the cut isn’t working with your hair.', ''], ['It grows out badly', 'Puffy sides or a cowlick sticking up a week later usually means the cut isn’t right for your head shape.', ''], ['Your hair has changed', 'Thicker, thinner, curlier or coarser than it used to be. The cut should change with it.', ''], ['Your hairline is moving', 'A receding hairline or thinning on top often needs a different shape.', ''], ['Your routine has changed', 'New job, new baby, more workouts, less time.', ''], ['You keep saving photos', 'If you keep screenshotting other guys’ haircuts, that’s your sign.', ''], ['You just don’t like it', 'That’s reason enough.', '']]],
+      ['How to make the change', ['Book a Signature Haircut. A new style needs a real consultation first, and the Signature gives your barber the time to look at your hair and plan the cut.', 'Bring a few photos and say what you don’t like about your hair now.'], null, ['What to book for a completely new hairstyle →', 'Local%20Guide%20-%20New%20Hairstyle.dc.html']],
+      ['Not sure what to change to?', ['Your barber can recommend a style for your face shape, hair type and routine. Figuring that out is our job.'], null, ['How to choose a haircut that fits your routine →', 'Local%20Guide%20-%20Haircut%20for%20Your%20Routine.dc.html']],
+      ['If your hairline is the reason', ['The right haircut can change how thinning hair or a receding hairline looks. When a haircut isn’t enough, a non-surgical hair system is an option.'], null, ['Haircuts for thinning hair →', 'Local%20Guide%20-%20Thinning%20Hair.dc.html']],
+    ],
+    faq: [['How often should I change my hairstyle?', 'There’s no rule. Change it when it stops working for your hair or your life.'], ['What if I don’t like the new cut?', 'Come back in a few weeks. Your barber can adjust it as it grows.'], ['Which service should I book?', 'The Signature Haircut for a new style.', 'Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+    ctaTitle: 'Time for something new?', ctaBody: 'Book the Signature Haircut and bring a few photos.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Service%20Quiz.dc.html', altLabel: 'Not sure? Take the quiz',
+  },
+  scissorcut: {
+    slug: 'what-is-a-scissor-cut', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'What Is a Scissor Cut—and Who Is It For? | Men’s Scissor Haircuts in Orem | Broken Arrow',
+    desc: 'What a men’s scissor cut is, how it differs from a clipper cut, who it’s for and what to book. Scissor haircuts at Broken Arrow Barbershop in Orem, Utah.',
+    title: 'What is a scissor cut, and who is it for?',
+    lead: 'A scissor cut is a haircut done mostly or entirely with shears instead of clippers. It takes longer, and for the right hair, it’s worth it.',
+    answer: 'A scissor cut is a men’s haircut done mostly or entirely with shears. It leaves hair softer, keeps more length and gives longer styles natural movement as they grow. It’s best for mid-length and longer hair, thick or wavy hair, and anyone who wants a softer finish. Book the Signature Haircut for a scissor cut at Broken Arrow in Orem.',
+    sections: [
+      ['Scissor cut vs clipper cut', [], [['Clipper cut', 'Fast, precise and short. Great for fades, tapers and tight sides.', ''], ['Scissor cut', 'Softer edges, more length and more control over shape and weight.', ''], ['Both', 'Many cuts use clippers on the sides and scissors on top.', '']]],
+      ['Why scissors change how hair grows out', ['Clippers cut every hair to the same length. Scissors let your barber cut each section to suit how it grows, take weight out where it’s heavy and leave it where it’s thin.', 'That’s why a good scissor cut grows out evenly instead of puffing out on the sides.']],
+      ['Who a scissor cut is for', [], [['Mid-length and longer hair', 'Flows, warrior cuts, modern mullets, shags and curtains.', ''], ['Thick hair', 'Scissors take out bulk without making it look choppy.', ''], ['Wavy or curly hair', 'Cutting with the texture instead of against it.', ''], ['Anyone who wants a softer look', 'No hard lines, more natural movement.', ''], ['Growing it out', 'Shaping while you gain length.', '']], ['Growing your hair out →', 'Local%20Guide%20-%20Growing%20Hair%20Out.dc.html']],
+      ['Who might not need one', ['If you wear a tight fade or a buzz cut, clippers do the job. A Classic Haircut is usually the right fit.']],
+      ['What to book', ['Book the Signature Haircut. Scissor work takes more time than clippers, and the Signature gives your barber that time.', 'Bryton specializes in scissor haircuts and has trained with barbers from around the world, including Europe.'], null, ['Book with Bryton →', 'Barber%20-%20Bryton.dc.html']],
+    ],
+    faq: [['How long does a scissor cut take?', 'Longer than a clipper cut. That’s why we recommend the Signature Haircut.'], ['Can I get a fade with a scissor cut on top?', 'Yes. Many of our cuts use clippers on the sides and scissors on top.'], ['Is a scissor cut more expensive?', 'Book it as a Signature Haircut ($65). Longer cuts usually need cutting less often, so it evens out.', 'Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+    ctaTitle: 'Book a scissor cut.', ctaBody: 'Book the Signature Haircut and tell your barber you want it cut with scissors.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  longerhair: {
+    slug: 'longer-mens-hair-regular-haircuts', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Why Longer Men’s Hair Still Needs Regular Haircuts | Broken Arrow Barbershop, Orem',
+    desc: 'Longer men’s hair still needs regular haircuts. How often to come in, what a trim does for long hair, and what to book, from barbers in Orem, Utah.',
+    title: 'Why longer men’s hair still needs regular haircuts',
+    lead: 'Long hair isn’t hair you’ve stopped cutting. The guys with great long hair are still getting it cut. They’re just getting the right cuts.',
+    answer: 'Longer men’s hair still needs a haircut about every 6–8 weeks to keep its shape, control bulk, clean up the neckline and around the ears, and remove split ends. Book the Signature Haircut so there’s time for the scissor and detail work.',
+    sections: [
+      ['What happens when you stop cutting it', ['The sides get heavy and puff out. The back gets shaggy. The ends split and frizz. The shape you liked disappears, and it starts to look like hair that hasn’t been cut, instead of a longer style.']],
+      ['What a regular cut does for long hair', [], [['Keeps the shape', 'A flow or warrior cut needs its shape maintained to look intentional.', ''], ['Controls bulk', 'Taking weight out so the sides sit flat and the hair moves.', ''], ['Cleans up the edges', 'Neckline and around the ears, where long hair looks messy first.', ''], ['Removes damaged ends', 'Split ends make long hair look thinner and frizzier.', ''], ['Makes it easier to style', 'Well-cut long hair falls into place with less product.', '']]],
+      ['How often to come in', ['About every 6–8 weeks for most longer styles. If you’re still growing it out, the same timing works: your barber just takes less off.'], null, ['Growing your hair out →', 'Local%20Guide%20-%20Growing%20Hair%20Out.dc.html']],
+      ['A trim won’t cost you length', ['Tell your barber you’re keeping the length. A good cut for longer hair is mostly shaping and weight removal, not taking inches off.'], null, null, ['Great long hair is still cut hair.'], []],
+      ['What to book', ['Book the Signature Haircut. Longer hair needs scissor work and detail time, and because you’re coming in less often than someone with a fade, it usually costs about the same over a year.'], null, ['What is a scissor cut? →', 'Local%20Guide%20-%20Scissor%20Cut.dc.html']],
+    ],
+    faq: [['Will you cut off all my length?', 'No. Tell your barber how much length you want to keep.'], ['Can I book a Classic Haircut for long hair?', 'Yes. You can book any haircut as either. We recommend the Signature for longer hair.'], ['Who should I book?', 'Connor and Elise both do a lot of medium and longer cuts, and Bryton specializes in scissor haircuts.', 'Meet the barbers →', 'Team.dc.html']],
+    ctaTitle: 'Keep the length. Keep the shape.', ctaBody: 'Book a Signature Haircut and tell us how much length you want to keep.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  bulky: {
+    slug: 'why-your-haircut-looks-bulky', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Why Your Haircut Looks Bulky—and What Can Help | Broken Arrow Barbershop, Orem',
+    desc: 'Puffy sides, a wide shape or hair that won’t lie flat? Why men’s haircuts look bulky and what a barber can do to fix it. From Broken Arrow Barbershop in Orem, Utah.',
+    title: 'Why your haircut looks bulky, and what can help',
+    lead: 'If your hair looks puffy, wide or heavy, it’s usually one of two things: it wasn’t cut right for your hair, or it’s just gotten too long.',
+    answer: 'A haircut usually looks bulky because it wasn’t cut for your hair type and head shape, sections were cut too short and now stick out, or it’s simply grown too long. A barber can fix it by removing weight, cutting with your growth patterns and reshaping the sides. Book a Signature Haircut for the time to do it properly.',
+    sections: [
+      ['It wasn’t cut right for your hair', ['Thick hair needs weight taken out, not just length. If your barber only cut it shorter, the bulk is still there, just closer to your head.', 'A fade placed too high for your head shape does the same thing. As it grows, the sides puff out and your head looks wider.']],
+      ['It was cut too short in the wrong places', ['Cut a cowlick or the hair above the ears too short and it stands straight up as it grows back. Short hair on thick sections pushes outward before it has the length to lie down.'], null, null, ['Bulky hair is usually a cutting problem, not a hair problem.'], []],
+      ['It’s just too long', ['Sometimes the cut was fine and it’s simply been too long since your last one. The sides and back grow out first and get heavy before the top does.'], null, ['Why longer hair still needs regular haircuts →', 'Local%20Guide%20-%20Longer%20Hair%20Haircuts.dc.html']],
+      ['What can help', [], [['Weight removal', 'Scissor and texturizing work that thins out bulk without making it look choppy.', ''], ['Cutting with your growth patterns', 'Leaving enough length on cowlicks and thick spots so they lie flat.', ''], ['The right fade height', 'Placed to suit your head shape, so the sides grow out clean.', ''], ['Regular visits', 'Every 2–4 weeks for short cuts, 6–8 weeks for longer styles.', ''], ['The right product', 'A matte product adds control without adding volume.', '']]],
+      ['What to book', ['Book the Signature Haircut. Fixing a bulky cut means reading your hair, taking out weight and reshaping it, and that takes more time than a quick trim.'], null, ['What is a scissor cut? →', 'Local%20Guide%20-%20Scissor%20Cut.dc.html']],
+    ],
+    faq: [['Why do my sides puff out a week after a haircut?', 'Usually the fade is too high for your head shape, or the sides were cut too short for your hair type.'], ['Will thinning my hair make it look thin?', 'No. Done right, weight removal makes thick hair lie flatter and look neater.'], ['Which service should I book?', 'The Signature Haircut.', 'Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+    ctaTitle: 'Get the bulk out.', ctaBody: 'Book a Signature Haircut and tell your barber what’s bugging you about your hair.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Service%20Quiz.dc.html', altLabel: 'Not sure? Take the quiz',
+  },
+  flathair: {
+    slug: 'why-hair-falls-flat-after-styling', topic: 'Product how-tos', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Why Your Hair Falls Flat After You Style It (and How to Fix It) | Broken Arrow, Orem',
+    desc: 'Hair looks good in the mirror and flat by lunch? Why men’s hair loses volume after styling, and how the right cut, prep and product keep it up. From Broken Arrow in Orem, Utah.',
+    title: 'Why your hair falls flat after you style it',
+    lead: 'Your hair looks right in the mirror, and by lunch it’s flat. It’s usually not your hair. It’s the cut, the prep or the product.',
+    answer: 'Men’s hair usually falls flat because the cut leaves too much weight on top, the hair isn’t prepped before styling, it’s styled wet, or the product is too heavy or used in the wrong amount. A cut with the right texture, a pre-styler like sea salt spray, a quick blow-dry and a matte product like clay fix most of it.',
+    sections: [
+      ['The cut is too heavy on top', ['Hair that’s all one length on top weighs itself down. Texture cut into the top gives it something to hold onto, so it stays where you put it.'], null, ['What is a scissor cut? →', 'Local%20Guide%20-%20Scissor%20Cut.dc.html']],
+      ['You’re styling it wet', ['Product on wet hair spreads unevenly and loses hold as the hair dries. Dry it most of the way first.']],
+      ['You’re skipping the prep', ['Volume is built before the product, not with it. A pre-styler on damp hair and a quick blow-dry in the direction you want it to sit does most of the work.'], null, ['Sea salt spray →', 'Shop.dc.html#shop']],
+      ['The product is too heavy', ['Heavy, shiny products like gels and some pomades weigh fine or thick hair down. A matte product holds shape without adding weight.'], null, ['Our matte clay →', 'Product%20-%20Matte%20Clay.dc.html'], ['The right product is lighter than you think.'], []],
+      ['You’re using too much', ['More product doesn’t mean more hold. Too much makes hair clump and collapse. Start with a pea-sized amount, warm it in your hands and work it from the back to the front.'], null, ['How much clay to use →', 'Local%20Guide%20-%20Matte%20Clay%20How%20To.dc.html']],
+      ['A routine that holds', [], [['1. Damp hair', 'Towel-dry so it’s damp, not dripping.', ''], ['2. Pre-styler', 'A few sprays of sea salt spray for texture and grip.', ''], ['3. Blow-dry', 'Dry it in the direction you want it to sit, lifting at the roots.', ''], ['4. Matte product', 'A pea-sized amount of clay, or cream for longer hair.', ''], ['5. Shape with fingers', 'Push it into place. Skip the comb for a natural finish.', '']]],
+      ['Clay or cream?', ['Clay gives firmer hold and a matte finish, best for short to medium hair. Styling cream gives a lighter hold and a natural finish, better for longer and textured hair.'], null, ['See all products →', 'Shop.dc.html']],
+    ],
+    faq: [['Why does my hair look good at the shop and flat at home?', 'Your barber preps and blow-dries it before styling. Ask them to show you how at your next appointment.'], ['Is clay good for thin or fine hair?', 'Yes. A matte product adds grip without weighing it down.'], ['Can a haircut fix flat hair?', 'Often, yes. Texture on top makes a big difference.', 'Book a Signature Haircut →', SHOP]],
+    ctaTitle: 'Ask in the chair.', ctaBody: 'We’ll show you how to style your hair so it holds, and which product to use.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Shop.dc.html', altLabel: 'Shop products',
+  },
+  ownproducts: {
+    slug: 'why-broken-arrow-makes-its-own-products', topic: 'Shop news', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Why Broken Arrow Is Making Its Own Men’s Grooming Products | Broken Arrow Grooming, Orem',
+    desc: 'Why a barbershop in Orem, Utah started its own line of men’s grooming products: clay, cream, sea salt spray, shampoo, conditioner and aftershave, tested in the chair.',
+    title: 'Why we’re making our own products',
+    lead: 'We’ve used and sold a lot of product lines. None of them lived up to what we wanted to hand our clients. So we’re making our own.',
+    intro: [
+      'Broken Arrow Grooming is the product line from Broken Arrow Barbershop in Orem, Utah. Every product is developed and tested by barbers who cut hair every day.',
+    ],
+    answer: 'Broken Arrow is making its own grooming products because nothing on the market met the shop’s standards for both performance and design, and most brands have one great product with the rest of the line as an afterthought. Broken Arrow Grooming is a complete line, including clay, cream, sea salt spray, shampoo, conditioner and aftershave, tested on clients at the shop in Orem.',
+    sections: [
+      ['Nothing on the shelf was good enough', ['Between us, we’ve used and sold a lot of different product lines. We knew what we liked, and what we wished was better.', 'We wanted to give clients something to take home, but nothing we found lived up to our standards for both how it performed and how it looked.']],
+      ['One great product isn’t a line', ['We noticed a pattern. A lot of brands have one great product, usually a clay or a pomade, and the rest of the line is an afterthought. The clay is good, but the sea salt spray isn’t.', 'We couldn’t find a complete line where every product was one we’d reach for. So we’re building one.'], null, null, ['Every product has to be one we’d reach for in the shop.'], []],
+      ['It started in 2022', ['For Bryton, making products wasn’t new. He started making beard oils and other grooming products in 2022, the same year he opened the shop in Payson. Broken Arrow Grooming grew from that early work and everything our team has learned behind the chair since.'], null, ['Read the shop story →', 'Blog%20-%20Our%20Story.dc.html']],
+      ['What we hold them to', [], [['Works on real hair', 'Tested on clients in the chair: thick, fine, curly, thinning and everything in between.', ''], ['Easy at home', 'If it only works when a barber does it, it doesn’t make the cut.', ''], ['Looks right on the shelf', 'Simple, well-made packaging that looks as good in your bathroom as it does in the shop.', '']]],
+      ['The line', ['Matte clay, styling cream, sea salt spray, shampoo, conditioner and aftershave, each held to the same standard. The matte clay is first.'], null, ['See the matte clay →', 'Product%20-%20Matte%20Clay.dc.html']],
+      ['Try it in the chair', ['The best way to find the right product is to have your barber use it on you. We’ll show you how much to use and how to apply it at your next appointment.'], null, ['Why your hair falls flat after you style it →', 'Local%20Guide%20-%20Hair%20Falls%20Flat.dc.html']],
+    ],
+    faq: [['Who makes Broken Arrow Grooming products?', 'The team at Broken Arrow Barbershop in Orem, Utah.'], ['Can I buy them at the shop?', 'Yes, once they’re available, in the shop or online.'], ['Which product should I start with?', 'Ask your barber. They’ll recommend one for your hair.', 'Take the product quiz →', 'Product%20Quiz.dc.html']],
+    ctaTitle: 'See the line.', ctaBody: 'Every product developed and tested in the chair at Broken Arrow Barbershop.', bookHref: 'Shop.dc.html', bookLabel: 'SHOP ALL', altHref: SHOP, altLabel: 'Book a haircut',
+  },
+  choosebarbershop: {
+    slug: 'how-to-choose-a-barbershop-orem', topic: 'Local guide', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'How to Choose the Right Barbershop in Orem, Utah | Broken Arrow Barbershop',
+    desc: 'How to choose the right barbershop in Orem, Utah: what to look for, what to ask, and red flags to avoid. From Broken Arrow Barbershop in Orem.',
+    title: 'How to choose the right barbershop in Orem',
+    lead: 'There are a lot of places to get a haircut in Orem. Which one is right depends on what you want out of it.',
+    intro: [
+      'If you just want the fastest, cheapest cut possible and don’t mind how it looks in two weeks, plenty of places will get you in and out in a few minutes.',
+      'If you care how your hair looks, here’s what to look for. (We’re biased: Broken Arrow was voted Best Barbershop in Utah Valley in the Daily Herald’s Best of 2026.)',
+    ],
+    answer: 'Choose a barbershop in Orem that books enough time for a real consultation, lets you see the same barber every visit, has recent reviews and photos of their work, cuts your hair type and style, and is clear about prices. Broken Arrow Barbershop at 375 E 800 S, Suite 12, Orem, was voted Best Barbershop in Utah Valley by Daily Herald readers in 2023, 2024 and 2026.',
+    sections: [
+      ['What to look for', [], [['Time for the cut', 'A 30-minute slot with a wash and consult often leaves 15 minutes of cutting. Ask how long appointments are.', ''], ['The same barber every time', 'A barber who knows your hair gets it more right every visit.', ''], ['Photos of their work', 'Look for cuts on hair like yours, not just fades.', ''], ['Recent reviews', 'Read what people say about consistency, not just friendliness.', ''], ['Clear prices', 'You should know what’s included before you sit down.', '']]],
+      ['Questions to ask', ['Do you cut my hair type? Can I book the same barber next time? What’s included in the price? How long is the appointment? What would you recommend for my hair?', 'A good shop will be glad you asked.']],
+      ['Red flags', ['A new barber every visit. No consultation before the clippers come out. Extra charges for every add-on, including the wash. A cut that looks fine when you leave and puffy a week later.'], null, ['Why your haircut looks bulky →', 'Local%20Guide%20-%20Bulky%20Haircut.dc.html']],
+      ['Why we recommend Broken Arrow', ['We’re a small, locally owned shop, not a chain. We book the time to understand your hair before we cut it. Every haircut includes a hair wash, scalp scrub, menthol scalp treatment, neck shave and hot towel. And you can book the same barber every visit.', 'Daily Herald readers voted us Best Barbershop in Utah Valley in the Best of 2026, our third win after 2023 and 2024.'], null, ['Read about Best of 2026 →', 'Blog%20-%20Best%20of%20Utah%20Valley%202026.dc.html'], ['If you care how your hair looks, come see us.'], []],
+      ['When we’re not the right fit', ['If you want a five-minute cut and don’t mind how it grows out, we’re probably not the shop for you. We’d rather take the time and get it right.']],
+      ['What to book for your first visit', ['The Signature Haircut. It gives your barber time to learn your hair, talk through what you want and get the cut right the first time.'], null, ['Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+    ],
+    faq: [['Where is Broken Arrow Barbershop?', '375 E 800 S, Suite 12, Orem, UT 84097. Parking is in the front.', 'How to find us →', 'Home.dc.html#visit'], ['How much is a haircut?', 'The Classic Haircut is $40. Haircut + Beard and the Signature Haircut are $65.'], ['Do you take walk-ins?', 'We take walk-ins when we can, but we mainly run on appointments.']],
+    ctaTitle: 'Book your first visit.', ctaBody: 'Book a Signature Haircut and see the difference the time makes.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  scissororem: {
+    slug: 'scissor-haircut-orem', topic: 'Haircut guides', read: '3 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Looking for a Scissor Haircut in Orem? Here’s What to Book | Broken Arrow Barbershop',
+    desc: 'Looking for a men’s scissor haircut in Orem, Utah? Why Broken Arrow Barbershop recommends the Signature Haircut for scissor cuts, and what to tell your barber.',
+    title: 'Looking for a Scissor Haircut in Orem? Here’s What to Book',
+    lead: 'If you wear your hair longer or want more movement and shape, you may be looking for a scissor haircut rather than a short clipper-focused style.',
+    answer: 'At Broken Arrow Barbershop in Orem, we recommend our Signature Haircut for scissor cuts because it gives us additional time to discuss your goals and work through the details.',
+    sections: [
+      ['What does scissor work help us do?', ['Scissors allow a barber to shape length, adjust weight, and connect different areas of a haircut. Depending on your hair and the desired result, the appointment may use scissors alone or combine scissors and clippers.', 'The choice of tools follows the haircut. What matters is how the finished shape works with your natural texture, growth patterns, and styling habits.']],
+      ['You don’t need to know the technical terms', ['You can describe what you’re experiencing instead:', '“My hair feels too heavy on the sides.”', '“I want to keep the length, but give it more shape.”', '“I like how it looks wet, but it gets difficult to manage when it dries.”', 'Those details, alongside inspiration photos, give us a useful starting point.']],
+      ['Bring your styling routine into the conversation', ['Let us know how you normally wear your hair and how much time you want to spend styling it. A look that requires a daily blow-dry may not suit someone who prefers to air-dry and leave.', 'Our goal is to make the haircut work beyond the appointment.']],
+      ['Book a Signature Haircut', ['Our Signature Haircut includes a consultation, hair wash, precision haircut, shave on the back of the neck, hot towel, and styling guidance.', 'It’s recommended for first visits, style changes, scissor cuts, or anyone wanting a more customized result.']],
+    ],
+    faq: [],
+    ctaTitle: 'Book a Signature Haircut.', ctaBody: 'Recommended for first visits, style changes and scissor cuts.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  receding: {
+    slug: 'receding-hairline-haircuts-orem', topic: 'Haircut guides', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Haircuts for Receding Hairlines in Orem: How We Choose the Right Shape | Broken Arrow',
+    desc: 'Haircuts for receding hairlines in Orem, Utah. How Broken Arrow’s barbers choose the right shape, what to avoid, and how to style it at home.',
+    title: 'Haircuts for receding hairlines in Orem: how we choose the right shape',
+    lead: 'A receding hairline doesn’t mean you’re out of options. The right shape can change how your hairline looks, and we see a lot of them in the chair.',
+    intro: [
+      'Bryton likes this kind of work. Clients who haven’t liked their hair in a while because of a receding hairline are some of his favorite people to cut for.',
+      'Here’s how we decide what to cut, and why.',
+    ],
+    answer: 'For a receding hairline, we usually keep the sides shorter, add texture on top, bring the front slightly forward or keep it messy, and avoid hard lines at the temples. The exact shape depends on how far the hairline has receded, your density on top and how you style it. Book a Signature Haircut with Bryton at Broken Arrow in Orem.',
+    sections: [
+      ['How we choose the shape', [], [['How far it’s receded', 'A slight recession at the temples needs a different cut than a hairline that’s moved back through the middle.', ''], ['Density on top', 'More hair on top gives us more options. Thinner hair needs texture more than length.', ''], ['Head and face shape', 'Where the sides sit changes how wide the forehead looks.', ''], ['How you style it', 'A cut you can’t style yourself won’t hide anything by day three.', '']]],
+      ['Cuts that usually work', [], [['Textured crop', 'Short sides, choppy texture on top and a slightly forward fringe that softens the temples.', ''], ['Short, messy top', 'Movement breaks up the hairline so the eye doesn’t stop at the temples.', ''], ['Low or mid taper', 'Keeps the sides tight without the contrast of a high skin fade.', ''], ['Buzz with a taper', 'When the hairline has moved a long way, going shorter can look intentional instead of hidden.', '']]],
+      ['What we avoid', ['Very high fades, sharp line-ups at the temples, a hard part and slicked-back styles. All of them draw a line straight to the area you’d rather not show.'], null, null, ['The goal isn’t to hide the hairline. It’s to stop the eye landing on it.'], []],
+      ['How clients style it', ['A small amount of matte clay, worked through dry hair from the back to the front, then pushed slightly forward and roughed up with the fingertips. No shine, no comb lines.', 'We’ll show you how at the end of the cut so you can do it the same way at home.'], null, ['How much clay to use →', 'Local%20Guide%20-%20Matte%20Clay%20How%20To.dc.html']],
+      ['See the work', ['Bryton’s page has photos of his cuts, including the thinning-hair and receding-hairline work he specializes in.'], null, ['See Bryton’s work →', 'Barber%20-%20Bryton.dc.html']],
+      ['When a haircut isn’t enough', ['A haircut can change how a receding hairline looks. It won’t bring hair back. If you want your hairline back, a non-surgical hair system can rebuild it, starting with a free consultation.'], null, ['Hair replacement →', 'Hair%20Replacement.dc.html']],
+    ],
+    faq: [['Who should I book for a receding hairline?', 'Bryton. He specializes in receding hairlines and thinning hair.'], ['Which service should I book?', 'The Signature Haircut, so there’s time to talk through the shape.', 'Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html'], ['Should I grow it longer to cover it?', 'Usually not. Longer hair at the front tends to separate and show more of the hairline.']],
+    ctaTitle: 'Get a cut that works with your hairline.', ctaBody: 'Book a Signature Haircut with Bryton. He’ll tell you what will work and why.', bookHref: BRYTON_SIG, bookLabel: 'BOOK WITH BRYTON', altHref: 'Local%20Guide%20-%20Thinning%20Hair.dc.html', altLabel: 'Haircuts for thinning hair',
+  },
+  longcuts: {
+    slug: 'mens-long-haircuts-orem', topic: 'Haircut guides', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Men’s Long Haircuts in Orem: Keeping Length Without Losing Shape | Broken Arrow',
+    desc: 'Men’s long haircuts in Orem, Utah. How Broken Arrow’s barbers keep your length, distribute weight so it sits right, and when to book the Signature Haircut.',
+    title: 'Men’s long haircuts in Orem: keeping length without losing shape',
+    lead: 'Long hair that looks good isn’t just long. It’s shaped. We cut a lot of longer hair, and the whole job is keeping your length while making it sit, move and grow out the way you want.',
+    intro: [
+      'Connor does most of his work on medium to longer haircuts. Elise specializes in medium-length styles, curly hair and flow cuts. Bryton specializes in scissor haircuts.',
+    ],
+    answer: 'At Broken Arrow in Orem, we keep your length and shape longer hair by redistributing weight: taking bulk out where it’s heavy, keeping it where it’s thin, and cleaning up the neckline and around the ears. Book the Signature Haircut for longer hair so there’s time for the scissor and detail work.',
+    sections: [
+      ['Weight is everything', ['Long hair gets heavy in predictable places: above the ears, at the back of the head and underneath. Leave it there and the sides puff out while the top goes flat.', 'We take weight out with scissors in those areas and leave it where you need it, so the hair falls closer to the head and moves when you push it back.'], null, null, ['We don’t take your length. We take the weight.'], []],
+      ['What we do in a longer cut', [], [['Plan the shape', 'Where it should sit, how it should fall and how you’ll wear it.', ''], ['Redistribute weight', 'Scissor and texturizing work in the heavy areas.', ''], ['Connect the sections', 'Top, sides and back blended so it grows out as one shape.', ''], ['Clean the edges', 'Neckline and around the ears, where long hair looks messy first.', ''], ['Show you how to style it', 'Air-dry or blow-dry, and which product.', '']]],
+      ['Long styles we cut', ['Flows, warrior cuts, modern mullets, shags, curtains, and curly hair kept long on top and at the back. Elise’s and Connor’s pages both have photos of their longer-hair work.'], null, ['See Elise’s work →', 'Barber.dc.html?b=elise']],
+      ['When to book the Signature', ['Book the Signature Haircut for any longer cut. It gives us about an hour, so there’s time for the consultation, the scissor work and the detail. Because longer hair only needs cutting every 6–8 weeks, it usually costs about the same over a year as a short cut.'], null, ['Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+      ['Growing it out?', ['Same approach, less length off. Shaping appointments get you through the awkward stages.'], null, ['Growing your hair out →', 'Local%20Guide%20-%20Growing%20Hair%20Out.dc.html']],
+    ],
+    faq: [['Will you cut off my length?', 'Not unless you ask. Tell us how much you want to keep.'], ['Who should I book for long hair?', 'Connor or Elise for most medium and longer cuts. Bryton for scissor haircuts.', 'Meet the team →', 'Local%20Guide%20-%20Meet%20the%20Team.dc.html'], ['How often should I come in?', 'About every 6–8 weeks.']],
+    ctaTitle: 'Keep the length. Get the shape.', ctaBody: 'Book a Signature Haircut and tell us how much length you want to keep.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Team.dc.html', altLabel: 'Meet the barbers',
+  },
+  meetteam: {
+    slug: 'new-barber-orem-meet-the-team', topic: 'Shop guide', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Looking for a New Barber in Orem? Meet the Broken Arrow Team',
+    desc: 'Looking for a new barber in Orem, Utah? Meet Bryton, Connor and Elise at Broken Arrow Barbershop: what each specializes in and who to book.',
+    title: 'Looking for a new barber in Orem? Meet the Broken Arrow team',
+    lead: 'Finding a barber you trust is worth the effort. Here’s who you’ll find at Broken Arrow, what each of us does best, and how to pick.',
+    intro: [
+      'We’re a small shop with three barbers. You can book the same one every visit, so they get to know your hair, what you liked about your last cut and what you didn’t.',
+    ],
+    answer: 'Broken Arrow Barbershop in Orem has three barbers. Bryton, the owner, specializes in short and classic cuts, big changes, scissor haircuts, receding hairlines and hair systems. Connor focuses on medium to longer haircuts. Elise specializes in medium-length styles, curly hair and flow cuts.',
+    sections: [
+      ['Bryton · Owner and licensed barber instructor', ['Bryton owns Broken Arrow. He cuts just about everything and does his best work on short and classic cuts. He likes a challenge: big changes, and clients who haven’t liked their hair in a while because of thinning or a receding hairline.', 'He specializes in scissor haircuts, has trained with barbers from around the world, and taught hundreds of students at Paul Mitchell The School Provo. He also does every hair system fitting and cut at the shop.'], null, ['Bryton’s page →', 'Barber%20-%20Bryton.dc.html']],
+      ['Connor · Barber', ['Connor is a Utah County local, born and raised. Most of his work is medium to longer haircuts: keeping the length and giving it shape.', 'He takes his time, gets the details right, and makes sure you’re comfortable in the chair.'], null, ['Connor’s page →', 'Barber%20-%20Connor.dc.html']],
+      ['Elise · Barber', ['Elise specializes in medium-length styles and curly hair, and she likes flow cuts and longer, natural looks. Her cuts are clean and detailed.', 'She takes the time to understand how you actually style your hair day to day, and if you’re not sure what you want, she’ll help you figure it out.'], null, ['Elise’s page →', 'Barber.dc.html?b=elise']],
+      ['Who to book', [], [['Short, classic cuts and fades', 'Bryton', ''], ['Receding hairline or thinning hair', 'Bryton', ''], ['Scissor haircuts', 'Bryton', ''], ['Medium and longer hair', 'Connor or Elise', ''], ['Curly hair and flow cuts', 'Elise', ''], ['Hair systems', 'Bryton', '']]],
+      ['Why a small shop', ['We aren’t a chain with a new barber every visit. We’d rather get to know you and get your hair more right each time.'], null, ['Why the same barber every time matters →', 'Local%20Guide%20-%20Same%20Barber%20Every%20Time.dc.html'], ['Voted Best Barbershop in Utah Valley by Daily Herald readers in 2023, 2024 and 2026.'], []],
+      ['Your first visit', ['Book a Signature Haircut. It gives your new barber time to learn your hair and get the cut right the first time.'], null, ['Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+    ],
+    faq: [['Can I switch barbers?', 'Yes. Book whoever fits what you want that day.'], ['Where are you?', '375 E 800 S, Suite 12, Orem, UT 84097. Parking is in the front.', 'How to find us →', 'Home.dc.html#visit']],
+    ctaTitle: 'Find your barber.', ctaBody: 'Pick one of our three barbers and book your first visit.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Team.dc.html', altLabel: 'Meet the team',
+  },
+  insideshop: {
+    slug: 'inside-broken-arrow-barbershop-orem', topic: 'Shop guide', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Inside Broken Arrow Barbershop in Orem: What to Expect When You Visit',
+    desc: 'What to expect at Broken Arrow Barbershop in Orem, Utah: the shop, the atmosphere, where to find us, parking, accessibility and how booking works.',
+    title: 'Inside Broken Arrow Barbershop in Orem: what to expect when you visit',
+    lead: 'Green walls, cognac leather chairs, a shampoo sink in the back and three barbers who take their time. Here’s what your first visit looks like.',
+    answer: 'Broken Arrow Barbershop is a small, appointment-based men’s barbershop at 375 E 800 S, Suite 12, Orem, UT 84097, inside Building 2. Parking is in the front. Book online, arrive 5–10 minutes early, and every haircut includes a hair wash, scalp scrub, menthol scalp treatment, neck shave and hot towel.',
+    sections: [
+      ['The shop', ['The shop is small on purpose. Deep green walls, wood floors and cognac leather barber chairs. It’s calm, it’s not crowded, and you won’t be waiting around in a packed lobby.', 'Three barbers work here: Bryton, Connor and Elise.'], null, ['Meet the team →', 'Local%20Guide%20-%20Meet%20the%20Team.dc.html'], null, null, { src: 'assets/photos/connor-wide.jpg', alt: 'Connor checking a haircut at his chair against the shop’s green wall', cap: 'Connor at his chair.' }],
+      ['The atmosphere', ['Relaxed and unhurried. We book enough time to talk before we cut, so nobody’s rushing you through the chair. Most clients come back to the same barber, so conversations pick up where they left off.']],
+      ['What happens in the appointment', [], [['1. The consultation', 'What you want, what you don’t like about your hair now, and how you style it.', ''], ['2. The wash', 'Hair wash, scalp scrub with a scalp brush, menthol scalp treatment and a hot towel.', ''], ['3. The cut', 'Your haircut, plus a shave on the back of the neck.', ''], ['4. The style', 'Your barber styles it and shows you how to do it at home.', '']], null, null, null, { src: 'assets/photos/wash-brush.jpg', alt: 'A barber scrubbing a client’s scalp with a scalp brush at the shampoo sink', cap: 'The scalp brush, one of our clients’ favorite parts.' }],
+      ['Where to find us', ['375 E 800 S, Suite 12, Orem, UT 84097. We’re inside Building 2. Look for the door marked Building 2, next to the 375 on the wall.', 'The shop can be tough to find the first time, so plan to arrive 5–10 minutes early.'], null, ['How to find us →', 'Home.dc.html#visit']],
+      ['Parking', ['Parking is in the front of the building.']],
+      ['Accessibility', ['If you need any accommodation for your visit, call the shop before your appointment and we’ll help however we can.'], null, ['Call the shop →', 'tel:+18017091280']],
+      ['How booking works', ['Book online. Pick your barber, your service and a time. The booking page shows real availability. We take walk-ins when we can, but we mainly run on appointments.', 'There are no cancellation fees. Just let us know if you can’t make it. We have a 5-minute grace period for late arrivals.'], null, ['Not sure what to book? →', 'Service%20Quiz.dc.html']],
+    ],
+    faq: [['Do I need an appointment?', 'We mainly run on appointments and take walk-ins when we can.'], ['What should I book for my first visit?', 'The Signature Haircut.', 'Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html'], ['Do you cut kids’ hair?', 'We don’t cut hair for kids under 8.']],
+    ctaTitle: 'Come see the shop.', ctaBody: 'Book your first visit. Arrive a few minutes early.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'FAQ.dc.html', altLabel: 'Read the FAQ',
+  },
+  fringe: {
+    slug: 'textured-fringe-haircut-orem', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Textured Fringe Haircuts in Orem, Utah | What to Ask For | Broken Arrow Barbershop',
+    desc: 'Textured fringe haircuts in Orem, Utah. What a textured fringe is, who it suits, how to style it, and why to book the Signature Haircut at Broken Arrow.',
+    title: 'Textured fringe haircuts in Orem',
+    lead: 'A textured fringe is short to medium hair on top, cut with choppy texture and pushed forward over the forehead, usually with a taper or fade on the sides. It looks easy. Getting it right isn’t.',
+    intro: [
+      'The difference between a textured fringe that looks great and one that looks like a bowl cut is almost entirely in the texture work on top. That takes scissors, time and a barber who reads your hair first.',
+    ],
+    answer: 'A textured fringe is a men’s haircut with choppy texture on top pushed forward over the forehead, usually paired with a low or mid taper or fade. At Broken Arrow Barbershop in Orem, we recommend booking the Signature Haircut ($65) for a textured fringe so there’s time for the scissor work that keeps it from looking flat or heavy.',
+    sections: [
+      ['Who a textured fringe suits', [], [['Thick or straight hair', 'Texture breaks up the weight so it sits forward instead of puffing out.', ''], ['Receding hairlines', 'A forward fringe softens the temples.', ''], ['Wavy hair', 'The texture works with the wave instead of fighting it.', ''], ['Low-maintenance mornings', 'A little matte product and your fingers.', '']], ['Haircuts for receding hairlines →', 'Local%20Guide%20-%20Receding%20Hairline%20Haircuts.dc.html']],
+      ['Why most textured fringes go wrong', ['A textured fringe that’s only cut with clippers and a quick point-cut on top ends up blunt and heavy. The fringe sits in one solid line, the top goes flat by lunch, and the sides puff out as they grow.', 'The texture has to be cut into the hair, section by section, with scissors, at the right length for your density and cowlicks.'], null, null, ['The texture is the haircut. Rush it and it’s just a fringe.'], []],
+      ['Book the Signature Haircut', ['We recommend the Signature Haircut for a textured fringe. You get the extra time for a real consultation, scissor texture work on top, the right fade or taper height for your head shape, and a lesson on styling it at home.', 'It includes a hair wash, scalp scrub, menthol scalp treatment, neck shave and hot towel.'], null, ['Why your haircut needs more than 15 minutes →', 'Local%20Guide%20-%20Signature%20Haircut.dc.html']],
+      ['Taper or fade on the sides?', ['A low or mid taper keeps it softer and grows out more gradually. A mid skin fade gives more contrast. We’ll place it to suit your head shape so it doesn’t grow out puffy.'], null, ['Taper or fade? →', 'Local%20Guide%20-%20Taper%20vs%20Fade.dc.html']],
+      ['How to style it', ['Towel-dry, then a few sprays of sea salt spray. Blow-dry forward with your fingers. Finish with a pea-sized amount of matte clay, worked in from the back to the front, and twist a few pieces at the fringe for texture.'], null, ['Why your hair falls flat after you style it →', 'Local%20Guide%20-%20Hair%20Falls%20Flat.dc.html']],
+      ['What to ask for', ['“A textured fringe, with a low taper on the sides. I want it to look messy but not heavy, and I’ll spend about two minutes styling it.” Bring a photo if you have one.'], null, ['What to tell your barber →', 'Local%20Guide%20-%20What%20to%20Tell%20Your%20Barber.dc.html']],
+    ],
+    faq: [['How often should I get a textured fringe cut?', 'About every 3–5 weeks to keep the shape and texture.'], ['Can I book a Classic Haircut for a textured fringe?', 'Yes, especially for upkeep. We recommend the Signature for your first one, or any time it needs reshaping.'], ['Who should I book?', 'Any of our barbers. Bryton specializes in scissor work and receding hairlines.', 'Meet the team →', 'Local%20Guide%20-%20Meet%20the%20Team.dc.html']],
+    ctaTitle: 'Get the texture right.', ctaBody: 'Book a Signature Haircut and ask for a textured fringe.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  awards: {
+    slug: 'award-winning-barbershop-orem', topic: 'Shop news', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Award-Winning Barbering in Orem, Utah | Daily Herald Best Barbershop 2023, 2024 & 2026 | Broken Arrow',
+    desc: 'Broken Arrow Barbershop in Orem was voted Best Barbershop in the Daily Herald Best of Utah Valley Readers’ Choice Awards in 2023, 2024 and 2026, with a 5.0 Google rating.',
+    title: 'Award-Winning Barbering in Orem, Utah',
+    lead: 'A 5-star Google rating, multiple barbershop awards, and haircuts tailored to your hair, face shape, and everyday routine.',
+    intro: ['Explore our work and find the right barber for you.'],
+    answer: 'Broken Arrow Barbershop in Orem was voted Best Barbershop in the Daily Herald’s Best of Utah Valley Readers’ Choice Awards in 2023, 2024 and 2026, and has a 5.0 rating on Google.',
+    sections: [
+      ['Our awards', [], [['Best Barbershop · 2026', 'Daily Herald, Best of Utah Valley Readers’ Choice Awards', ''], ['Best Barbershop · 2024', 'Daily Herald, Best of Utah Valley Readers’ Choice Awards', ''], ['Best Barbershop · 2023', 'Daily Herald, Best of Utah Valley Readers’ Choice Awards', ''], ['5.0 on Google', 'Rated by our clients on Google.', '']], ['See our Google reviews →', 'https://www.google.com/maps/search/?api=1&query=Broken+Arrow+Barbershop+375+E+800+S+Orem+UT']],
+      ['Who gives the award', ['The Daily Herald is Utah Valley’s daily newspaper, based in Provo. Every spring it runs the Best of Utah Valley Readers’ Choice Awards, where readers nominate and vote for their favorite local businesses across hundreds of categories.', 'It isn’t a judged award or a paid listing. It’s decided by the people who live here.'], null, ['2026 Best of Utah Valley results →', 'https://issuu.com/dailyheraldofutahvalley/docs/2026_best_of_utah_valley_resource_guide']],
+      ['What it recognizes', ['The Best Barbershop category recognizes the shop Utah Valley readers would recommend for a haircut. For us, that comes from clients who keep coming back, and who tell their friends.'], null, ['2023 Best of Utah Valley results →', 'https://issuu.com/dailyheraldofutahvalley/docs/best_of_utah_valley_2023']],
+      ['What our clients say', ['“Cut my hair exactly how I wanted. Super friendly, and the vibe was stellar. Best haircut I’ve had.” Brigham, Google review', '“I don’t usually go to barbershops so I was a little hesitant, but they made me feel great and did everything I asked them to do.” Jerryck, Google review', '“What an amazing place. Hands down, the best barber shop in Orem.” Jed, Google review'], null, ['Read more reviews on Google →', 'https://www.google.com/maps/search/?api=1&query=Broken+Arrow+Barbershop+375+E+800+S+Orem+UT']],
+      ['The work behind it', ['Awards come from haircuts. Each barber’s page shows photos of their work, from fades and scissor cuts to longer styles and hair systems.'], null, ['Meet the team →', 'Local%20Guide%20-%20Meet%20the%20Team.dc.html']],
+      ['Find the right barber for you', ['Bryton for short and classic cuts, scissor haircuts, receding hairlines and hair systems. Connor for medium to longer haircuts. Elise for medium-length styles, curly hair and flow cuts.'], null, ['See Bryton’s work →', 'Barber%20-%20Bryton.dc.html']],
+    ],
+    faq: [['Who awarded Broken Arrow Best Barbershop?', 'Daily Herald readers, in the Best of Utah Valley Readers’ Choice Awards.'], ['Which years?', '2023, 2024 and 2026.'], ['Where is the shop?', '375 E 800 S, Suite 12, Orem, UT 84097.', 'How to find us →', 'Home.dc.html#visit']],
+    ctaTitle: 'See why clients vote for us.', ctaBody: 'Book your first visit with one of our barbers.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Team.dc.html', altLabel: 'Meet the team',
+  },
+  curtains: {
+    slug: 'curtains-middle-part-haircut-orem', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Curtains and Middle Part Haircuts in Orem, Utah | Broken Arrow Barbershop',
+    desc: 'Curtain and middle part haircuts in Orem, Utah. How curtains frame the face, why your part doesn’t need to be perfectly centered, and how Broken Arrow cuts them.',
+    title: 'Curtains and the middle part',
+    lead: 'Curtains leave enough length at the front for the hair to separate and frame the face. The result can be soft and casual or more deliberately styled.',
+    intro: ['You don’t necessarily need a perfectly centered part. Your natural growth pattern may suit a slightly off-center version better.', 'Curtains and middle parts are one of our specialties at Broken Arrow in Orem.'],
+    answer: 'Curtains are a men’s haircut with enough length at the front to split and fall to either side of the face, usually from a middle or slightly off-center part. At Broken Arrow Barbershop in Orem, we specialize in curtains and recommend the Signature Haircut so there’s time to find your natural part and shape the front with scissors.',
+    sections: [
+      ['Finding your part', ['The part should follow how your hair already wants to fall. We look at your crown, cowlicks and growth pattern at the front before deciding where it goes.', 'A part that fights your growth pattern won’t stay put. One that follows it falls into place on its own.'], null, null, ['Your hair already has a part. We find it.'], []],
+      ['How we cut curtains', [], [['Length at the front', 'Enough to split and fall past the eyebrows or cheekbones.', ''], ['Weight removed', 'Scissor work so the two sides fall softly instead of sitting heavy.', ''], ['Connected sides', 'Blended into the sides so it grows out as one shape.', ''], ['Your choice of sides', 'Kept longer for a softer look, or tapered for a cleaner finish.', '']]],
+      ['Soft and casual, or styled', ['For a casual look, towel-dry, add a little cream and let it air-dry with your fingers. For a more deliberate look, blow-dry each side away from the part and finish with a light matte product.'], null, ['Why your hair falls flat after you style it →', 'Local%20Guide%20-%20Hair%20Falls%20Flat.dc.html']],
+      ['Who curtains suit', ['Straight, wavy and lightly curly hair with enough length at the front. If you’re growing it out, shaping appointments can get you there.'], null, ['Growing your hair out →', 'Local%20Guide%20-%20Growing%20Hair%20Out.dc.html']],
+      ['What to book', ['Book the Signature Haircut. Curtains are almost entirely scissor work at the front, and the extra time lets us find your part and get the shape right.'], null, ['What is a scissor cut? →', 'Local%20Guide%20-%20Scissor%20Cut.dc.html']],
+    ],
+    faq: [['Do I need a perfectly centered part?', 'No. A slightly off-center part that follows your growth pattern often looks better and stays in place.'], ['How long does my hair need to be?', 'Long enough at the front to split and fall to either side, usually past the eyebrows.'], ['Who should I book?', 'Any of our barbers. Connor and Elise do a lot of medium and longer cuts.', 'Meet the team →', 'Local%20Guide%20-%20Meet%20the%20Team.dc.html']],
+    ctaTitle: 'Get curtains that fall right.', ctaBody: 'Book a Signature Haircut and ask for curtains.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  lowtaper: {
+    slug: 'low-taper-haircut-orem-utah', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Low Taper Haircuts in Orem, Utah | Broken Arrow Barbershop',
+    desc: 'Low taper haircuts in Orem, Utah. What a low taper is, how it differs from a fade, who it suits and how Broken Arrow Barbershop cuts it.',
+    title: 'Low taper haircuts in Orem, Utah',
+    lead: 'A low taper shortens the hair gradually around the ears and at the neckline, and leaves everything above it alone. It’s clean without being severe, and it’s one of the cuts we specialize in at Broken Arrow.',
+    answer: 'A low taper is a men’s haircut where the hair gets gradually shorter just above the ears and at the neckline, without fading down to skin. It keeps a natural, clean edge and pairs with almost any length on top. Broken Arrow Barbershop in Orem specializes in low tapers, from textured crops to flows and curly cuts.',
+    sections: [
+      ['Low taper vs fade', ['A fade takes the sides down to skin, often high up the head. A low taper only shortens the edges: around the ears and the neckline. The rest of the sides keep their length, so it looks softer and grows out more gradually.'], null, ['Taper or fade: what’s the difference? →', 'Local%20Guide%20-%20Taper%20vs%20Fade.dc.html']],
+      ['Why we cut so many of them', ['A low taper works with almost every style: textured fringes, crops, curtains, flows, curly hair and longer cuts. It cleans up the shape without taking away from the hair on top, which is exactly what most of our clients want.'], null, null, ['Clean at the edges. Natural everywhere else.'], []],
+      ['Who a low taper suits', [], [['Longer and medium styles', 'Flows, curtains and textured cuts stay tidy around the ears.', ''], ['Curly hair', 'Keeps the sides neat while the curls stay full on top.', ''], ['Work and school', 'Clean enough for any job, relaxed enough for every day.', ''], ['First-time clients', 'A safe, flattering starting point we can build on.', '']]],
+      ['How we cut it', ['We place the taper to suit your head shape and growth pattern, blend it into the sides with clippers and scissors, and clean the neckline and around the ears. Then we shape the top to match.'], null, ['Textured fringe haircuts →', 'Local%20Guide%20-%20Textured%20Fringe%20Orem.dc.html']],
+      ['How often to come in', ['About every 3–5 weeks to keep the edges sharp. For longer styles with a taper, every 6–8 weeks.']],
+      ['What to book', ['A Classic Haircut keeps a low taper in shape. For your first one, a style change or a longer cut on top, book the Signature Haircut so there’s time to get the shape right.'], null, ['Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+    ],
+    faq: [['Is a low taper the same as a low fade?', 'No. A low fade goes down to skin. A low taper keeps some length at the edges.'], ['Can I get a low taper with long hair?', 'Yes. It’s one of the most common ways we finish longer styles.'], ['Who should I book?', 'Any of our barbers. Elise’s and Connor’s pages show a lot of taper work.', 'Meet the team →', 'Local%20Guide%20-%20Meet%20the%20Team.dc.html']],
+    ctaTitle: 'Book a low taper.', ctaBody: 'Tell your barber you want a low taper and what you want on top.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  mullet: {
+    slug: 'modern-mullet-haircut-orem-utah', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Modern Mullet Haircuts in Orem, Utah | Broken Arrow Barbershop',
+    desc: 'Modern mullet haircuts in Orem, Utah. What a modern mullet is, how it differs from the ’80s version, who it suits and how Broken Arrow Barbershop cuts it.',
+    title: 'Modern mullet haircuts in Orem, Utah',
+    lead: 'The modern mullet keeps length through the back, adds texture on top and cleans up the sides. It’s nothing like the ’80s version, and it’s one of the cuts we specialize in at Broken Arrow.',
+    answer: 'A modern mullet is a men’s haircut with textured length on top, shorter or tapered sides, and length left through the back that’s blended into the rest of the cut. Broken Arrow Barbershop in Orem specializes in modern mullets and recommends the Signature Haircut for the scissor work it takes to blend it properly.',
+    sections: [
+      ['Modern vs ’80s mullet', ['The old mullet was short on top and long in the back, with a hard line between the two. The modern version is blended. Texture on top, a taper or fade on the sides, and length at the back that flows into the rest of the cut instead of hanging off it.'], null, null, ['Blended, not business in front and party in back.'], []],
+      ['Why the blend is everything', ['A good modern mullet looks like one haircut. That means connecting the top, sides and back with scissors, taking weight out of the back so it moves, and placing the taper so the sides don’t puff out as they grow.', 'Rush it and you get the ’80s version.']],
+      ['Ways to wear it', [], [['Taper mullet', 'Low taper on the sides, softer and easier to grow out.', ''], ['Burst fade mullet', 'Fade curved around the ear, more contrast.', ''], ['Textured mullet', 'Choppy texture on top and through the back.', ''], ['Curly mullet', 'Curls kept long on top and at the back.', ''], ['Subtle mullet', 'A little extra length at the back of a regular cut.', '']]],
+      ['Who it suits', ['Thick, wavy and curly hair do especially well. If your hair is straight and fine, we’ll add texture so the back doesn’t go flat. If you’re growing your hair out, a modern mullet is an easy stage to wear along the way.'], null, ['Growing your hair out →', 'Local%20Guide%20-%20Growing%20Hair%20Out.dc.html']],
+      ['How to style it', ['A few sprays of sea salt spray on damp hair, a rough blow-dry or air-dry, then a little matte clay or cream through the top and back. Twist a few pieces at the back for texture.'], null, ['Why your hair falls flat after you style it →', 'Local%20Guide%20-%20Hair%20Falls%20Flat.dc.html']],
+      ['What to book', ['Book the Signature Haircut. A modern mullet is mostly scissor work and blending, and the extra time is what keeps it looking modern.'], null, ['What is a scissor cut? →', 'Local%20Guide%20-%20Scissor%20Cut.dc.html']],
+    ],
+    faq: [['How long does my hair need to be for a mullet?', 'A few inches at the back is enough to start. We can shape it as it grows.'], ['How often should I get it cut?', 'About every 4–6 weeks to keep the sides clean and the blend right.'], ['Can I book a Classic Haircut?', 'Yes, for upkeep. We recommend the Signature for your first one.', 'Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+    ctaTitle: 'Get a mullet that looks modern.', ctaBody: 'Book a Signature Haircut and ask for a modern mullet.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  middlepart: {
+    slug: 'middle-part-haircut-orem-utah', topic: 'Haircut guides', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Middle-Part Haircuts in Orem, Utah | Broken Arrow Barbershop',
+    desc: 'Middle-part haircuts for men in Orem, Utah. Short, medium and long middle parts, how to find your part, and how Broken Arrow Barbershop cuts them.',
+    title: 'Middle-part haircuts in Orem, Utah',
+    lead: 'A middle part can work at almost any length, from a short textured cut to full curtains. The trick is finding where your hair actually wants to part. Middle parts are one of the cuts we specialize in at Broken Arrow.',
+    answer: 'A middle-part haircut splits the hair at or near the center of the head so it falls to either side. It works on short, medium and longer hair, usually with a low taper on the sides. Broken Arrow Barbershop in Orem specializes in middle parts and places the part to follow your natural growth pattern, which may be slightly off-center.',
+    sections: [
+      ['It doesn’t have to be dead center', ['Most people’s hair doesn’t naturally split in the exact middle. We look at your crown and the growth at your hairline and place the part where your hair already falls. A slightly off-center part usually looks more natural and stays put all day.'], null, null, ['The best middle part is the one your hair already wants.'], []],
+      ['Middle parts at every length', [], [['Short middle part', 'Textured top just long enough to split, with a taper on the sides.', ''], ['Medium middle part', 'Falls to the eyebrows, with weight taken out so it doesn’t sit flat.', ''], ['Curtains', 'Longer at the front so it frames the face.', ''], ['Long middle part', 'Past the ears, often with a flow at the back.', '']], ['Curtains and the middle part →', 'Local%20Guide%20-%20Curtains%20Middle%20Part.dc.html']],
+      ['How we cut it', ['We find the part first, then cut the front so each side falls cleanly away from it. Weight comes out with scissors so the hair lies close instead of puffing up at the part. The sides usually get a low taper so the whole shape stays clean.'], null, ['Low taper haircuts →', 'Local%20Guide%20-%20Low%20Taper%20Orem.dc.html']],
+      ['Who it suits', ['Straight and wavy hair split most easily. Thick hair needs weight taken out so it doesn’t push up at the part. If you have a strong cowlick at the front, we’ll work with it, and that may mean moving the part slightly.']],
+      ['How to style it', ['Part it while it’s damp. Blow-dry each side away from the part with your fingers or a brush. Finish with a little cream for a soft look or matte clay for more hold.'], null, ['Why your hair falls flat after you style it →', 'Local%20Guide%20-%20Hair%20Falls%20Flat.dc.html']],
+      ['What to book', ['Book the Signature Haircut for your first middle part. The extra time lets us find your natural part and cut the front with scissors so it falls right.'], null, ['Classic vs Signature →', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html']],
+    ],
+    faq: [['Can I get a middle part with short hair?', 'Yes, as long as there’s enough length on top to split.'], ['What if my hair won’t stay parted?', 'Usually the part isn’t following your growth pattern, or there’s too much weight at the front. Both are fixable with the cut.'], ['Who should I book?', 'Any of our barbers.', 'Meet the team →', 'Local%20Guide%20-%20Meet%20the%20Team.dc.html']],
+    ctaTitle: 'Find your part.', ctaBody: 'Book a Signature Haircut and ask for a middle part.', bookHref: SIG_BOOK, bookLabel: 'BOOK A SIGNATURE HAIRCUT', altHref: 'Services.dc.html', altLabel: 'See all services',
+  },
+  tellbarber: {
+    slug: 'what-to-tell-your-barber', topic: 'Haircut guides', read: '6 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'What to Tell Your Barber (Even If You Don’t Know Haircut Terms)',
+    desc: 'How to explain the haircut you want, what to bring, and what to say if you don’t know barber terminology. From Broken Arrow Barbershop in Orem, Utah.',
+    title: 'What to tell your barber',
+    lead: 'You don’t need to know barber terms. You need to say what you like, what you don’t like, and how much time you’ll spend on your hair.',
+    answer: 'Tell your barber what you like and dislike about your hair now, bring 2–3 reference photos, say how often you want to come in, and say how much styling you’ll do each morning. If you don’t know what you want, ask what they’d recommend for your hair.',
+    sections: [
+      ['Start with what you don’t like', ['“It gets puffy on the sides after two weeks” or “it sticks up at the back” tells your barber more than a guard number. Problems are easier to describe than solutions.']],
+      ['Bring photos', ['Two or three photos of cuts you like, ideally on people with hair similar to yours. Say what you like about each one. Your barber will tell you what needs to change to make it work on your hair.'], null, ['How to find the right hairstyle →', 'Local%20Guide%20-%20Find%20Your%20Hairstyle.dc.html']],
+      ['Say how you live', ['How many minutes will you spend on your hair in the morning? Do you wear a hat? Do you work out every day? How often will you come in? A great cut you can’t style at home isn’t a great cut.']],
+      ['If you don’t know what you want', ['Say that. Something like: “I want a change but I’m not sure what would suit me. What would you recommend for my face shape and hair type?” A good barber will be glad you asked.']],
+      ['Speak up during the cut', ['If something looks shorter than you expected, say so before it goes further. Barbers would much rather adjust early than have you leave unhappy.']],
+    ],
+    faq: [['What if I don’t know any haircut terms?', 'You don’t need them. Photos and plain words work.'], ['Should I tell my barber the guard number?', 'Only if you know it worked before. Otherwise describe the result you want.'], ['Is it rude to ask for changes?', 'No. It’s your haircut.']],
+    ctaTitle: 'Come in with no idea at all.', ctaBody: 'We’ll look at your hair and help you choose a cut that works.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Team.dc.html', altLabel: 'Meet the barbers',
+  },
+  maintenance: {
+    slug: 'hair-system-maintenance-at-home', topic: 'Hair systems', read: '4 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Hair System Maintenance at Home: What It Involves | Broken Arrow Orem',
+    desc: 'What at-home hair system maintenance involves, how long it takes, and when to come in to the shop instead. From Broken Arrow Barbershop in Orem, Utah.',
+    title: 'Doing your own hair system maintenance at home',
+    lead: 'Once you’ve been shown how, you can do most routine maintenance yourself. It keeps the cost down and means fewer trips to the shop.',
+    answer: 'At-home maintenance means removing the system, cleaning the base and your scalp, and re-attaching it with fresh tape or adhesive. Most people do it every few weeks and it takes about an hour once you’re used to it. Come in for haircuts, color-matching and new systems.',
+    sections: [
+      ['What it involves', ['Removing the system with adhesive remover, cleaning old tape or glue off the base, washing and conditioning the hair, cleaning and shaving the scalp, then re-attaching with fresh tape or adhesive.']],
+      ['How long it takes', ['The first few times take longer. Once you know the routine, most clients finish in about an hour.']],
+      ['What you’ll need', ['Adhesive remover, tape or liquid adhesive, a scalp protector, a gentle shampoo and conditioner, and a mirror setup that lets you see the back. We’ll tell you exactly what to buy for your system.']],
+      ['When to come in instead', ['Come in for the haircut, for anything that looks off at the hairline, when the system needs replacing, or if you’re having trouble getting it to hold. We cut the system into your hair, and that part is best done in the chair.']],
+      ['Learning how', ['We walk you through it at the shop before you try it yourself. Ask at your consultation or your next maintenance visit.'], null, ['What a hair system is →', 'Local%20Guide%20-%20What%20Is%20a%20Hair%20System.dc.html']],
+    ],
+    faq: [['Is it hard to do yourself?', 'It takes a few tries. After that it’s routine.'], ['How often?', 'Usually every few weeks, depending on your system and how active you are.'], ['Does doing it myself save money?', 'Yes. It’s the main way clients get the cost down to as little as $5.07 a day.', 'See prices →', 'Hair%20Replacement.dc.html']],
+    ctaTitle: 'Book a free consultation.', ctaBody: 'We’ll show you what maintenance looks like for your hair.', bookHref: CONSULT, bookLabel: 'BOOK A FREE CONSULTATION', altHref: 'Hair%20Replacement.dc.html', altLabel: 'Hair replacement',
+  },
+  growout: {
+    slug: 'growing-hair-out-without-awkward-stage', topic: 'Haircut guides', read: '6 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Growing Your Hair Out: How Shaping Appointments Get You Through the Awkward Stage | Broken Arrow, Orem',
+    desc: 'Growing your hair out? How shaping appointments get you through the awkward stages, what to keep trimming, and longer men’s styles to grow into, from barbers in Orem, Utah.',
+    title: 'Growing your hair out: how shaping appointments get you through the awkward stage',
+    lead: 'Growing your hair out doesn’t mean skipping haircuts. It means booking the right ones: shaping appointments that cut different parts at different times, so it always looks intentional.',
+    intro: [
+      'Most people who try to grow their hair out give up somewhere around month two or three. The sides puff out, the back gets shaggy, the top falls in your eyes and nothing sits right.',
+      'That’s the awkward stage, and it’s almost always made worse by not getting your hair cut at all.',
+    ],
+    answer: 'Book a shaping appointment every 6–8 weeks while you grow your hair out. Your barber keeps the neckline, around the ears and the bulk at the sides under control while the top grows, so your hair looks like a style at every stage. Tell your barber what length you’re aiming for.',
+    sections: [
+      ['What a shaping appointment is', ['A shaping appointment isn’t a regular haircut. The goal isn’t to take length off. It’s to control the shape while you gain length.', 'Your barber leaves the top and the parts you’re growing alone, and works on the areas that make growing hair look messy: the neckline, around the ears, the weight at the sides and the back.'], null, null, ['You’re not cutting it shorter. You’re cutting it into shape.'], []],
+      ['How it helps at each stage', ['Every stage of growing your hair out has its own problem. A shaping appointment fixes the one you’re in.'], [['Months 1–2', 'The sides grow faster than the top. Tidy the sides and neckline so it still looks like a haircut.', ''], ['Months 2–3', 'The awkward stage. Sides puff out and the top hits your eyes. Thin the bulk and shape the back so it sits closer.', ''], ['Months 3–5', 'Enough length to style. Add texture and movement, and start shaping toward the final cut.', ''], ['Months 5 and on', 'Refine it into the finished style and keep it there.', '']]],
+      ['Longer styles to grow into', ['Knowing where you’re headed makes the in-between easier. A few longer styles we cut a lot:'], [['The flow', 'Pushed back, past the ears, with natural movement. Needs even length all the way around.', ''], ['Warrior cut', 'Longer on top and through the back, with the sides kept tighter. A good in-between on the way to longer hair.', ''], ['Modern mullet', 'Shorter or textured on top and sides, with length left through the back.', ''], ['Textured shag', 'Layered and loose, with movement all over. Works well on wavy hair.', ''], ['Curtains', 'A center part with length falling to either side of the face.', '']]],
+      ['Tell your barber the goal', ['Say what length you want to end up at and roughly how long you’re willing to wait. Bring a photo if you have one. Your barber will plan which parts to leave alone and which to keep shaped.'], null, ['What to tell your barber →', 'Local%20Guide%20-%20What%20to%20Tell%20Your%20Barber.dc.html']],
+      ['Which service to book', ['We recommend the Signature Haircut for shaping appointments. It gives your barber the extra time to plan the grow-out and do the detail work, and because you’re coming in less often, it usually costs about the same over a year.'], null, ['Why longer cuts need more time →', 'Local%20Guide%20-%20Signature%20Haircut.dc.html']],
+      ['Styling along the way', ['A little matte clay or cream gives the in-between length some direction. Pushing it back or to the side usually looks more intentional than letting it hang.'], null, ['How much clay to use →', 'Local%20Guide%20-%20Matte%20Clay%20How%20To.dc.html']],
+      ['Curly or wavy hair', ['Curls need length to form, so the awkward stage can look bigger. Keep the shape even and don’t let the sides get heavier than the top. Elise does a lot of curly and longer cuts.'], null, ['Elise’s page →', 'Barber.dc.html?b=elise']],
+    ],
+    faq: [['Should I stop getting haircuts while I grow my hair out?', 'No. Keep booking shaping appointments. Skipping cuts is what makes the awkward stage worse.'], ['How often should I come in?', 'About every 6–8 weeks.'], ['How long does it take to grow my hair out?', 'Going from short to medium usually takes 4–6 months. Longer styles take longer.'], ['Who should I book?', 'Connor and Elise both do a lot of medium and longer cuts, and Bryton specializes in scissor haircuts.']],
+    ctaTitle: 'Growing it out?', ctaBody: 'Book a Signature Haircut and tell us the length you’re aiming for. We’ll plan the rest.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Team.dc.html', altLabel: 'Meet the barbers',
+  },
+  names: {
+    slug: 'haircut-names-mean-different-things', topic: 'Haircut guides', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Why Haircut Names Don’t Mean the Same Thing to Everyone | Broken Arrow Orem',
+    desc: 'Haircut names mean different things to different people, and barber terms often don’t match what clients mean. Why a photo helps, from Broken Arrow Barbershop in Orem, Utah.',
+    title: 'Haircut names are terrible. Bring a photo.',
+    lead: 'Ask ten people what a “fade” or a “trim” is and you’ll get ten different haircuts. That’s why we love it when you bring the name and a picture.',
+    answer: 'Haircut names aren’t standardized. The same word can mean a different length, shape or style depending on the barber, the region, or what the client saw online. The easiest way to get the cut you want is to say the name you know and show a photo of it.',
+    sections: [
+      ['Why haircut names don’t work', ['There’s no official dictionary of haircuts. Names come from barbershops, celebrities, social media and whatever a style was called when someone first saw it. The same cut can have three names, and one name can cover three different cuts.', 'That’s not the client’s fault. It’s just how haircut names work.']],
+      ['Words that mean different things to different people', ['A few that come up in the chair all the time:'], [['“Just a trim”', 'To some people it means a quarter inch off. To others it means cleaning up the sides and leaving the top. To some it means “make it look like it did three weeks ago.”', ''], ['“Fade”', 'Some people mean a skin fade. Some mean any cut that gets shorter down the sides. Some mean a taper.', ''], ['“Short on the sides”', 'Short to one person is a 4 guard. To someone else it’s bare skin.', ''], ['“Textured”', 'Could mean choppy, messy, thinned out, or just not slicked down.', ''], ['“Messy” or “flow”', 'Every trend has its own version, and they change every couple of years.', '']]],
+      ['Barber terms vs. client terms', ['Barbers learn a technical vocabulary: guard numbers, weight lines, blending, point-cutting, disconnection. Clients describe how they want to look and feel: “clean,” “not too short,” “like I didn’t try too hard.”', 'Both are right. They’re just two different languages, and a lot of bad haircuts happen when the two don’t get translated.'], null, ['Taper or fade: what’s the difference? →', 'Local%20Guide%20-%20Taper%20vs%20Fade.dc.html']],
+      ['Why a photo helps so much', ['A photo removes the guessing. Your barber can see the length on top, how short the sides are, where the shortest part starts, how it’s styled, and what texture the hair has.', 'We love it when you bring both: tell us the name you know it by, and show us the picture. The name tells us how you think about it. The photo tells us what you actually mean.']],
+      ['How to choose a good reference photo', ['Pick two or three photos of cuts you like, ideally on someone with hair similar to yours in texture and thickness. Photos of the side and back help as much as the front.', 'Then tell your barber what you like about each one. They’ll tell you what needs to change to make it work on your hair.'], null, ['What to tell your barber →', 'Local%20Guide%20-%20What%20to%20Tell%20Your%20Barber.dc.html']],
+    ],
+    faq: [['What if I don’t know what the haircut is called?', 'That’s fine. A photo tells us more than the name anyway.'], ['Is it annoying when clients bring photos?', 'No. We’d much rather see a photo than guess.'], ['Will my haircut look exactly like the photo?', 'Not always. Your hair type, hairline and head shape are different from the person in the picture, so we’ll adapt it to work for you.', 'How to find the right hairstyle →', 'Local%20Guide%20-%20Find%20Your%20Hairstyle.dc.html']],
+    ctaTitle: 'Bring the name and a photo.', ctaBody: 'We’ll take it from there.', bookHref: SHOP, bookLabel: 'BOOK NOW', altHref: 'Team.dc.html', altLabel: 'Meet the barbers',
+  },
+  thinning: {
+    slug: 'haircuts-thinning-hair-utah-county', topic: 'Haircut guides', read: '5 min', hero: 'assets/photos/shop-interior.jpg', heroAlt: 'Green walls and cognac barber chairs inside Broken Arrow Barbershop in Orem',
+    seoTitle: 'Haircuts for Thinning Hair and Receding Hairlines | Orem, Utah',
+    desc: 'Haircuts that work with thinning hair and a receding hairline, from barbers in Orem, Utah County. What to ask for and what to avoid.',
+    title: 'Haircuts for thinning hair and receding hairlines',
+    lead: 'The right haircut can make thinning hair look fuller and a receding hairline less obvious. The wrong one draws attention straight to it.',
+    answer: 'Keep the sides shorter with a low or mid taper, keep the top short to medium with texture, and avoid a hard part line or a very high fade. Bryton does most of our thinning-hair cuts.',
+    sections: [
+      ['What works', ['Shorter sides make the top look fuller by comparison. Texture on top breaks up the scalp showing through. A forward or slightly messy style covers a receding hairline better than a slick back.', 'Matte products add grip without shine. Shine makes thinning hair look thinner.'], null, ['Shop matte clay →', 'Product%20-%20Matte%20Clay.dc.html']],
+      ['What to avoid', ['Very high fades, sharp line-ups at the temples, a hard part, lots of length on top and heavy gel. All of these make the areas you’d rather hide easier to see.']],
+      ['When a haircut isn’t enough', ['A haircut can change how thinning hair looks. It won’t stop or reverse hair loss. If you want a full head of hair back, a non-surgical hair system can cost as little as $5.07 a day, and the consultation is free.'], null, ['Is a hair system right for you? →', 'Hair%20Replacement.dc.html#quiz']],
+      ['Who to book', ['Bryton likes a challenge, and clients who haven’t liked their hair in a while because of thinning or a receding hairline are a big part of his week. He’ll look at your hair and tell you what the cut should be.'], null, ['Bryton’s page →', 'Barber%20-%20Bryton.dc.html']],
+    ],
+    faq: [['Will a buzz cut make it look worse?', 'Not usually. Very short hair makes thinning less noticeable. It depends on your head shape, which Bryton will check.'], ['Should I grow it longer to cover it?', 'Usually no. Longer hair separates and shows more scalp.'], ['Can I get a free cut?', 'We film thinning-hair transformations for YouTube. Apply and, if you’re picked, the cut is free.', 'Apply for a free haircut →', 'Free%20Haircut.dc.html']],
+    ctaTitle: 'Book with Bryton.', ctaBody: 'He’ll look at your hair and tell you what will work.', bookHref: BRYTON, bookLabel: 'BOOK WITH BRYTON', altHref: 'Free%20Haircut.dc.html', altLabel: 'Apply for a free cut',
+  },
+};
+
+class Component extends DCLogic {
+  key() { return POSTS[this.props.post] ? this.props.post : 'students'; }
+  componentDidMount() { this.meta(); }
+  componentDidUpdate() { this.meta(); }
+  meta() {
+    try {
+      const p = POSTS[this.key()], url = 'https://www.orembarbershop.com/blog/' + p.slug;
+      document.title = p.seoTitle;
+      let m = document.querySelector('meta[name="description"]');
+      if (!m) { m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m); }
+      m.content = p.desc;
+      let s = document.getElementById('ba-guide-schema');
+      if (!s) { s = document.createElement('script'); s.type = 'application/ld+json'; s.id = 'ba-guide-schema'; document.head.appendChild(s); }
+      s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': [
+        { '@type': 'BlogPosting', headline: p.title, description: p.desc, datePublished: '2026-09-26', mainEntityOfPage: url, author: { '@type': 'Organization', name: 'Broken Arrow Barbershop' }, about: { '@type': 'BarberShop', name: 'Broken Arrow Barbershop', address: { '@type': 'PostalAddress', streetAddress: '375 E 800 S, Suite 12', addressLocality: 'Orem', addressRegion: 'UT', postalCode: '84097' } } },
+        ...(p.faq.length ? [{ '@type': 'FAQPage', mainEntity: p.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }] : []),
+      ] });
+    } catch (e) {}
+  }
+  renderVals() {
+    const p = POSTS[this.key()];
+    return { p: {
+      ...p, meta: 'September 26, 2026 · ' + p.read + ' read', heroBg: 'url("' + p.hero + '")',
+      intro: p.intro || [],
+      sections: p.sections.map(([h, paras, rows, link, quote, after, fig0], i) => { const fig = fig0 || (FIGS[this.key()] || {})[h]; return ({ h, paras, hasQuote: !!quote, quote: quote || [], hasAfter: !!after, after: after || [],
+        hasFig: !!fig, figHasImg: !!(fig && fig.src), figNoImg: !(fig && fig.src), figSrc: fig ? fig.src || '' : '', figAlt: fig ? fig.alt : '', figCap: fig ? fig.cap || '' : '', id: 's' + (i + 1), anchor: '#s' + (i + 1), num: String(i + 1).padStart(2, '0'),
+        hasRows: !!rows, rows: (rows || []).map(([name, text, value]) => ({ name, text, value })), hasLink: !!link, linkLabel: link ? link[0] : '', linkHref: link ? link[1] : '' }); }),
+      hasFaq: p.faq.length > 0,
+      faq: p.faq.map(([q, a, link, href]) => ({ q, a, link: link || '', href: href || '#', hasLink: !!link })),
+    } };
+  }
+}
+</script>
+</body>
+</html>

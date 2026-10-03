@@ -1,0 +1,118 @@
+{%- comment -%}
+  Broken Arrow Grooming — Wholesale sign in + application.
+  Creates a real Shopify customer account tagged "wholesale-pending".
+  You approve by changing the tag to "wholesale" in Admin > Customers.
+{%- endcomment -%}
+
+<section class="ba-wholesale">
+  <div class="ba-wholesale__hero">
+    <p class="ba-label">Broken Arrow Grooming · Wholesale</p>
+    <h1 class="ba-display">Stock what we use in the chair.</h1>
+    <p>Wholesale is for industry professionals only. Apply with your EIN, barber license or cosmetology license. Once you’re approved, sign in to see pricing and order in packs of 6.</p>
+  </div>
+
+  <div class="ba-wholesale__grid">
+    {%- if customer -%}
+      <div class="ba-wholesale__col">
+        <p class="ba-label">Signed in as {{ customer.email }}</p>
+        {%- if customer.tags contains 'wholesale' -%}
+          <a class="ba-btn" href="{{ section.settings.shop_page.url | default: '/pages/wholesale-shop' }}">Go to the wholesale shop</a>
+        {%- else -%}
+          <h2 class="ba-display">Your application is being reviewed.</h2>
+          <p>We’ll email you when your account is approved.</p>
+        {%- endif -%}
+        <a href="{{ routes.account_logout_url }}">Sign out</a>
+      </div>
+    {%- else -%}
+
+    <div class="ba-wholesale__col">
+      <p class="ba-label">Approved accounts</p>
+      <h2 class="ba-display">Sign in</h2>
+      {%- form 'customer_login', return_to: '/pages/wholesale-shop' -%}
+        {{ form.errors | default_errors }}
+        <label class="ba-field-label" for="wl-email">Email</label>
+        <input id="wl-email" type="email" name="customer[email]" autocomplete="username" required>
+        <label class="ba-field-label" for="wl-pass">Password</label>
+        <input id="wl-pass" type="password" name="customer[password]" autocomplete="current-password" required>
+        <button class="ba-btn" type="submit">Sign in</button>
+        <a href="{{ routes.account_login_url }}#recover">Forgot your password?</a>
+      {%- endform -%}
+    </div>
+
+    <div class="ba-wholesale__col ba-wholesale__col--wide" id="apply">
+      <p class="ba-label">New to wholesale</p>
+      <h2 class="ba-display">Apply for a wholesale account</h2>
+
+      {%- form 'create_customer', return_to: '/pages/wholesale?applied=1' -%}
+        {%- if form.posted_successfully? or request.path contains 'applied' -%}
+          <p class="ba-label">Application received</p>
+          <p>We’ll check your credential and email you when your account is approved.</p>
+        {%- endif -%}
+        {{ form.errors | default_errors }}
+
+        <input type="hidden" name="customer[tags]" value="wholesale-pending">
+        <input type="hidden" name="customer[accepts_marketing]" value="false">
+
+        <label class="ba-field-label" for="wa-first">First name *</label>
+        <input id="wa-first" name="customer[first_name]" required>
+        <label class="ba-field-label" for="wa-last">Last name *</label>
+        <input id="wa-last" name="customer[last_name]" required>
+        <label class="ba-field-label" for="wa-email">Email *</label>
+        <input id="wa-email" type="email" name="customer[email]" required>
+
+        {%- comment -%} Everything below saves to the customer's Note field in Admin. {%- endcomment -%}
+        <label class="ba-field-label" for="wa-biz">Business name *</label>
+        <input id="wa-biz" name="customer[note][Business name]" required>
+        <label class="ba-field-label" for="wa-phone">Phone *</label>
+        <input id="wa-phone" type="tel" name="customer[note][Phone]" required>
+        <label class="ba-field-label" for="wa-addr">Business address *</label>
+        <input id="wa-addr" name="customer[note][Business address]" required>
+
+        <fieldset>
+          <legend class="ba-field-label">What kind of business is it? *</legend>
+          {%- for t in 'Barbershop,Salon,Independent barber or stylist,Retail store' | split: ',' -%}
+            <label class="ba-check"><input type="radio" name="customer[note][Business type]" value="{{ t }}" required> {{ t }}</label>
+          {%- endfor -%}
+        </fieldset>
+
+        <fieldset class="ba-wholesale__cred">
+          <legend class="ba-field-label">Professional credential *</legend>
+          <p>Wholesale is only for industry professionals. Give us one of these so we can verify you.</p>
+          {%- for c in 'EIN,Barber license,Cosmetology license' | split: ',' -%}
+            <label class="ba-check"><input type="radio" name="customer[note][Credential type]" value="{{ c }}" required> {{ c }}</label>
+          {%- endfor -%}
+          <label class="ba-field-label" for="wa-cnum">EIN or license number *</label>
+          <input id="wa-cnum" name="customer[note][Credential number]" required>
+          <label class="ba-field-label" for="wa-state">Issuing state (licenses only)</label>
+          <input id="wa-state" name="customer[note][License state]">
+          <p class="ba-field-hint">To send a copy of your license or EIN letter, reply to the email we send you. (Shopify’s built-in form can’t take file uploads.)</p>
+        </fieldset>
+
+        <fieldset>
+          <legend class="ba-field-label">Which products are you interested in?</legend>
+          {%- for p in collections['wholesale'].products -%}
+            <label class="ba-check"><input type="checkbox" name="customer[note][Interested in {{ forloop.index }}]" value="{{ p.title | escape }}"> {{ p.title }}</label>
+          {%- endfor -%}
+        </fieldset>
+
+        <label class="ba-field-label" for="wa-pass">Create a password * (at least 8 characters)</label>
+        <input id="wa-pass" type="password" name="customer[password]" minlength="8" autocomplete="new-password" required>
+
+        <label class="ba-check"><input type="checkbox" name="customer[note][Agreed to packs of 6]" value="Yes" required> I understand wholesale orders are sold in packs of 6, with a minimum of 6 units per product. *</label>
+
+        <button class="ba-btn" type="submit">Submit application</button>
+      {%- endform -%}
+    </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Wholesale apply + sign in",
+  "settings": [
+    { "type": "page", "id": "shop_page", "label": "Wholesale shop page" }
+  ],
+  "presets": [{ "name": "Wholesale apply + sign in" }]
+}
+{% endschema %}

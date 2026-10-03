@@ -1,0 +1,104 @@
+{%- comment -%}
+  Broken Arrow — Free haircut application (filmed for YouTube).
+  1. Shopify's contact form emails every answer to your store's contact email.
+  2. A second request adds the applicant to Admin > Customers, tagged "free-haircut-applicant".
+     If they tick the marketing box they're also subscribed to email marketing (Shopify Email / CRM).
+{%- endcomment -%}
+
+<section class="ba-free-cut" id="apply">
+  <p class="ba-label">Free haircut · Filmed for YouTube</p>
+  <h1 class="ba-display">Apply for a free haircut</h1>
+  <p>We film transformation haircuts for our YouTube channel. If you’re picked, your cut is free and it goes on the channel. We’re looking for big changes: thinning or receding hair, very long hair going short, or hair that hasn’t had a real cut in a long time.</p>
+
+  {%- form 'contact', id: 'free-cut-form' -%}
+    {%- if form.posted_successfully? -%}
+      <div class="ba-free-cut__done" role="status">
+        <h2 class="ba-display">Thanks for applying.</h2>
+        <p>We’ll be in touch if you’re picked for a filming spot. If you don’t hear from us this month, apply again next month.</p>
+      </div>
+    {%- else -%}
+      {{ form.errors | default_errors }}
+      {%- comment -%} Subject line of the email you receive {%- endcomment -%}
+      <input type="hidden" name="contact[Form]" value="Free haircut application">
+
+      <label class="ba-field-label" for="fc-name">Name *</label>
+      <input id="fc-name" name="contact[Name]" required>
+
+      <label class="ba-field-label" for="fc-email">Email *</label>
+      <input id="fc-email" type="email" name="contact[email]" required>
+
+      <label class="ba-field-label" for="fc-phone">Phone number</label>
+      <input id="fc-phone" type="tel" name="contact[Phone]">
+
+      <fieldset>
+        <legend class="ba-field-label">Are you 18 or older? *</legend>
+        <label class="ba-check"><input type="radio" name="contact[18 or older]" value="Yes" required> Yes</label>
+        <label class="ba-check"><input type="radio" name="contact[18 or older]" value="No"> No</label>
+      </fieldset>
+
+      <label class="ba-field-label" for="fc-city">Where do you live? *</label>
+      <p class="ba-field-hint">City and state, so we know you can get to the shop in Orem.</p>
+      <input id="fc-city" name="contact[City and state]" required>
+
+      <label class="ba-field-label" for="fc-want">What do you want from your haircut? *</label>
+      <p class="ba-field-hint">Tell us how big a change you’re after. Give us as much as you can: the style you want, anything you like or don’t like about your hair now, how much time you spend on it in the morning.</p>
+      <textarea id="fc-want" name="contact[What they want]" rows="5" required></textarea>
+
+      <fieldset>
+        <legend class="ba-field-label">Which of these describe your hair?</legend>
+        {%- for o in 'Longer or grown out,Thinning or receding,Curly or textured,Cowlicks or difficult growth,Haven’t had a good cut in a while,Ready for a big change,Other' | split: ',' -%}
+          <label class="ba-check"><input type="checkbox" name="contact[Hair {{ forloop.index }}]" value="{{ o }}"> {{ o }}</label>
+        {%- endfor -%}
+      </fieldset>
+
+      <fieldset>
+        <legend class="ba-field-label">How much creative freedom are you willing to give the barber? *</legend>
+        {%- for o in 'Do whatever you think works,Some within limits,I know exactly what I want' | split: ',' -%}
+          <label class="ba-check"><input type="radio" name="contact[Creative freedom]" value="{{ o }}" required {% if forloop.index == 2 %}checked{% endif %}> {{ o }}</label>
+        {%- endfor -%}
+      </fieldset>
+
+      <label class="ba-field-label" for="fc-last">When was your last haircut? *</label>
+      <p class="ba-field-hint">Add anything we should know about it, like only the sides were cut or you have an undercut.</p>
+      <input id="fc-last" name="contact[Last haircut]" required>
+
+      <label class="ba-field-label" for="fc-photo">Instagram or photo link</label>
+      <p class="ba-field-hint">Optional. A current photo of your hair helps us pick.</p>
+      <input id="fc-photo" type="url" name="contact[Photo link]">
+
+      <label class="ba-check"><input type="checkbox" name="contact[Filming agreement]" value="Agreed" required> I understand the haircut is free because the appointment will be filmed and photographed, and that the footage and photos may be used on Broken Arrow’s YouTube, social media and website. *</label>
+
+      <label class="ba-check"><input type="checkbox" id="fc-marketing" value="yes"> Email me about new videos, openings and Broken Arrow Grooming products. Unsubscribe any time.</label>
+
+      <button class="ba-btn" type="submit">Apply</button>
+    {%- endif -%}
+  {%- endform -%}
+</section>
+
+<script>
+  // After the email is sent, also create/update the customer in Shopify's CRM.
+  (function () {
+    var f = document.getElementById('free-cut-form');
+    if (!f) return;
+    f.addEventListener('submit', function () {
+      var email = f.querySelector('[name="contact[email]"]').value;
+      var name = (f.querySelector('[name="contact[Name]"]').value || '').trim().split(' ');
+      var optIn = document.getElementById('fc-marketing').checked;
+      var tags = ['free-haircut-applicant'];
+      if (optIn) tags.push('newsletter');
+      var body = new URLSearchParams({
+        form_type: 'customer', utf8: '✓',
+        'contact[email]': email,
+        'contact[first_name]': name[0] || '',
+        'contact[last_name]': name.slice(1).join(' '),
+        'contact[tags]': tags.join(','),
+        'contact[accepts_marketing]': optIn ? 'true' : 'false'
+      });
+      try { navigator.sendBeacon('/contact#contact_form', body); } catch (e) {}
+    });
+  })();
+</script>
+
+{% schema %}
+{ "name": "Free haircut application", "presets": [{ "name": "Free haircut application" }] }
+{% endschema %}

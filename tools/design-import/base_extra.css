@@ -1,0 +1,24 @@
+/* Page base, from each design page's <helmet> */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:var(--ba-hdr-h,170px)}
+body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+summary::-webkit-details-marker{display:none}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+.ba-visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ba-visually-hidden:focus{position:fixed!important;top:8px;left:8px;width:auto;height:auto;clip:auto;z-index:100;background:var(--ink);color:var(--canvas);padding:12px 16px}
+.shopify-section{display:block}
+
+/* The design's root overflows its own box, so mobile.css's 84px body padding never shows there;
+   the footer's bottom padding already clears the phone booking bar. */
+html body:has(header[data-hdr="site"]) { padding-bottom: 0; }
+
+/* Store footer: the barbershop lockup is missing from the design files, so mobile.css's full-width footer images
+   would blow it up. Keep it at its 160px design width. */
+@media (max-width: 899px) {
+  footer img[alt="Broken Arrow Barbershop"] { width: 160px !important; max-width: 100% !important; }
+}

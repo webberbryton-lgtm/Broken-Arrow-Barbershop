@@ -1,0 +1,66 @@
+{%- comment -%}
+  Broken Arrow Grooming — Wholesale shop.
+  Only customers tagged "wholesale" see products. Shows 50% of retail and adds to cart in packs of 6.
+  The DISPLAYED price here is for information. The CHARGED price must come from Shopify B2B
+  or a wholesale app (see README) so it can't be bypassed.
+{%- endcomment -%}
+
+{%- assign pack = section.settings.pack_size | default: 6 -%}
+{%- assign pct = section.settings.discount_percent | default: 50 -%}
+
+<section class="ba-wholesale-shop">
+  {%- if customer and customer.tags contains 'wholesale' -%}
+
+    <div class="ba-wholesale-shop__hero">
+      <p class="ba-label">Wholesale account · {{ customer.email }}</p>
+      <h1 class="ba-display">Wholesale shop</h1>
+      <p>Everything is {{ pct }}% off retail and sold in packs of {{ pack }}.</p>
+      <a href="{{ routes.account_logout_url }}">Sign out</a>
+    </div>
+
+    <div class="ba-wholesale-shop__grid">
+      {%- for product in collections['wholesale'].products -%}
+        {%- assign v = product.selected_or_first_available_variant -%}
+        {%- assign unit_cents = v.price | times: pct | divided_by: 100 -%}
+        {%- assign pack_cents = unit_cents | times: pack -%}
+        <article class="ba-wholesale-shop__card">
+          {{ product.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', alt: product.title }}
+          <span class="ba-label">Pack of {{ pack }}</span>
+          <h2>{{ product.title }}</h2>
+          <p>{{ pack_cents | money }} per pack · {{ unit_cents | money }}/unit · retail {{ v.price | money }}</p>
+
+          {%- if product.available and product.tags contains 'wholesale-live' -%}
+            {%- form 'product', product -%}
+              <input type="hidden" name="id" value="{{ v.id }}">
+              <label class="ba-field-label" for="qty-{{ product.id }}">Units (packs of {{ pack }})</label>
+              <input id="qty-{{ product.id }}" type="number" name="quantity" value="{{ pack }}" min="{{ pack }}" step="{{ pack }}">
+              <button class="ba-btn" type="submit">Add to order</button>
+            {%- endform -%}
+          {%- else -%}
+            <p class="ba-label">Coming soon · Not available to order yet</p>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+
+  {%- else -%}
+    <div class="ba-wholesale-shop__locked">
+      <p class="ba-label">Wholesale · Industry professionals only</p>
+      <h1 class="ba-display">Sign in to see wholesale pricing.</h1>
+      <p>This page is for approved wholesale accounts. Sign in, or apply with your EIN, barber license or cosmetology license.</p>
+      <a class="ba-btn" href="/pages/wholesale">Sign in</a>
+      <a href="/pages/wholesale#apply">Apply for wholesale</a>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Wholesale shop",
+  "settings": [
+    { "type": "number", "id": "pack_size", "label": "Pack size", "default": 6 },
+    { "type": "number", "id": "discount_percent", "label": "Wholesale % of retail", "default": 50 }
+  ],
+  "presets": [{ "name": "Wholesale shop" }]
+}
+{% endschema %}

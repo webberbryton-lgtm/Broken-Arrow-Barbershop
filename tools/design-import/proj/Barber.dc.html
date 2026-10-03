@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Barber · Broken Arrow Barbershop, Orem</title>
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure,ul{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" active="team" book="{{ b.href }}" book-label="{{ bookLabel }}" hint-size="100%,92px"></dc-import>
+
+<section data-screen-label="Barber / Hero" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,80px);align-items:flex-end">
+    <div style="position:relative;overflow:hidden;flex:1 1 360px;aspect-ratio:4/5;background:#222326;display:flex;align-items:flex-end;padding:16px">
+      <sc-if value="{{ hasPhoto }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ photoAlt }}" style="position:absolute;inset:0;background-image:{{ photoBg }};background-size:cover;background-position:center"></div></sc-if>
+      <sc-if value="{{ noPhoto }}" hint-placeholder-val="{{ true }}"><p class="ba-label" style="color:var(--on-band);opacity:.78">{{ photoLabel }}</p></sc-if>
+    </div>
+    <div style="flex:1.1 1 440px;display:flex;flex-direction:column;gap:24px">
+      <nav aria-label="Breadcrumb" style="display:flex;gap:10px;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase">
+        <a href="Team.dc.html" style="color:var(--on-band);opacity:.78;text-decoration:none">The team</a><span style="opacity:.5">/</span><span>{{ b.name }}</span>
+      </nav>
+      <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(64px,10vw,140px),11vw);letter-spacing:-.045em;line-height:.88">{{ b.name }}</h1>
+      <p class="ba-label" style="color:var(--on-band)">{{ b.role }}</p>
+      <p style="max-width:560px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;opacity:.85;text-wrap:pretty">{{ b.bio }}</p>
+      <div style="display:flex;flex-direction:column;gap:16px;padding-top:8px">
+        <sc-if value="{{ bigBook }}" hint-placeholder-val="{{ false }}">
+          <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ b.href }}" dc-props="{{ heroBtn }}" hint-size="460px,72px">{{ bookLabel }}</x-import></div>
+        </sc-if>
+        <sc-if value="{{ smallBook }}" hint-placeholder-val="{{ true }}">
+          <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ b.href }}" hint-size="240px,56px">{{ bookLabel }}</x-import></div>
+        </sc-if>
+        <sc-if value="{{ avail.show }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ avail.url }}" aria-label="{{ avail.aria }}" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;max-width:460px;min-height:56px;padding:12px 0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);text-decoration:none;color:var(--on-band);font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase" style-hover="color:var(--on-band);border-color:var(--on-band)">
+            <span><span style="opacity:.7">Next opening: </span><span style="font-variant-numeric:tabular-nums">{{ avail.label }}</span></span>
+            <span>Book it →</span>
+          </a>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ hasFacts }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Barber / Credentials" style="background:var(--band);color:var(--on-band);border-top:1px solid var(--line-strong)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(32px,4vw,48px) clamp(16px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));column-gap:24px">
+    <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+      <div style="display:flex;flex-direction:column;gap:10px;padding:20px 0;border-top:2px solid var(--on-band)">
+        <p style="font:800 clamp(28px,3vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase;font-variant-numeric:tabular-nums;color:var(--on-band)">{{ f.big }}</p>
+        <p style="font-size:15px;line-height:24px;opacity:.85;text-wrap:pretty">{{ f.text }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ hasFreeCut }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Barber / YouTube" style="background:var(--green);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px 48px">
+    <div style="flex:1 1 480px;max-width:760px;display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label" style="color:var(--on-band)">Filmed for YouTube · Applications open</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(44px,6vw,80px);letter-spacing:-.045em;max-width:14ch">Apply for a free haircut.</h2>
+      <p style="font-size:18px;line-height:30px;color:var(--on-band);text-wrap:pretty">{{ freeCutBody }}</p>
+    </div>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="secondary" tone="dark" href="Free%20Haircut.dc.html" hint-size="280px,56px">APPLY FOR A FREE CUT</x-import>
+  </div>
+</section>
+
+</sc-if>
+
+<sc-if value="{{ hasWide }}" hint-placeholder-val="{{ false }}">
+<div role="img" aria-label="{{ wideAlt }}" data-screen-label="Barber / Wide photo" style="width:100%;aspect-ratio:2/1;max-height:720px;background-color:var(--band);background-image:{{ wideBg }};background-size:cover;background-position:center"></div>
+</sc-if>
+
+<section data-screen-label="Barber / Book for" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+  <p class="ba-label" style="flex:1 1 220px">01 / Book {{ b.name }} for</p>
+  <ul style="flex:2 1 520px;max-width:760px;list-style:none;padding:0;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+    <sc-for list="{{ b.forList }}" as="f" hint-placeholder-count="3">
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:24px 0;border-bottom:1px solid var(--line)">
+        <span class="ba-label" style="padding-top:6px">{{ f.num }}</span>
+        <p style="font:800 clamp(20px,2.2vw,26px)/1.15 var(--font-display);letter-spacing:-.02em;text-transform:uppercase;text-wrap:pretty">{{ f.text }}</p>
+      </li>
+    </sc-for>
+  </ul>
+</section>
+
+<sc-if value="{{ isBryton }}" hint-placeholder-val="{{ false }}">
+
+<section data-screen-label="Bryton / In the chair" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+  <p class="ba-label" style="flex:1 1 220px">02 / In the chair</p>
+  <div style="flex:2 1 520px;max-width:760px;display:flex;flex-direction:column;gap:32px">
+    <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px);max-width:14ch">Sit down. He’ll take it from there.</h2>
+    <p style="font-size:20px;line-height:34px;text-wrap:pretty">He looks at your head shape, your growth patterns, your hairline and how your hair behaves, then tells you what the cut should be and why. Clients book him because they want that call made by someone who knows. You don’t need to bring a plan.</p>
+    <ol style="list-style:none;padding:0;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:24px 0;border-bottom:1px solid var(--line)"><span class="ba-label" style="padding-top:4px">01</span><div style="display:flex;flex-direction:column;gap:6px"><p style="font:800 22px/1.15 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">He reads your hair</p><p style="font-size:17px;line-height:28px;color:var(--ink-muted)">Head shape, cowlicks, density, hairline, and how you actually wear it.</p></div></li>
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:24px 0;border-bottom:1px solid var(--line)"><span class="ba-label" style="padding-top:4px">02</span><div style="display:flex;flex-direction:column;gap:6px"><p style="font:800 22px/1.15 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">He makes the call</p><p style="font-size:17px;line-height:28px;color:var(--ink-muted)">What stays, what comes off, and how it will grow out. He’ll explain it, then get to work.</p></div></li>
+      <li style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:24px 0;border-bottom:1px solid var(--line)"><span class="ba-label" style="padding-top:4px">03</span><div style="display:flex;flex-direction:column;gap:6px"><p style="font:800 22px/1.15 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">He shows you how to wear it</p><p style="font-size:17px;line-height:28px;color:var(--ink-muted)">What product to use and how much, so it looks right after you leave.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section data-screen-label="Bryton / Scissor cuts" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+    <p class="ba-label" style="flex:1 1 220px">03 / Scissor cuts</p>
+    <div style="flex:2 1 520px;max-width:760px;display:flex;flex-direction:column;gap:28px">
+      <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px);max-width:16ch">Scissor work influenced by European barbering.</h2>
+      <p style="font-size:20px;line-height:34px;text-wrap:pretty">Bryton does fades and clipper work too. That came naturally to him, and he saw a gap in his scissor work, so he went looking for training. He has since received training from barbers all over the world, including barbers from Europe, through mentorship and classes, and specializes in scissor haircuts: cuts done mostly or entirely with shears instead of clippers. Scissors leave the hair softer and give longer styles more movement as they grow out.</p>
+      <div style="display:flex;flex-direction:column;gap:20px;padding:32px;background:var(--band);color:var(--on-band)">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px">
+          <p class="ba-label" style="color:var(--on-band);opacity:.78">Signature Haircut</p>
+          <p style="font:600 20px/28px var(--font-sans);font-variant-numeric:tabular-nums">$65</p>
+        </div>
+        <h3 class="ba-display" style="color:var(--on-band);font-size:clamp(32px,4vw,48px);max-width:16ch">More Time. A More Personal Haircut.</h3>
+        <p style="font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">The Signature Haircut gives us more time to understand your hair, talk through your goals, and work carefully through the details of your cut.</p>
+        <p style="font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">It’s a great choice if you’re considering a new style, growing your hair out, or finding it difficult to get a haircut that works for you. Together, we’ll consider your face shape, natural texture, and styling routine to create a look you feel comfortable maintaining.</p>
+        <p style="font:800 clamp(18px,2vw,22px)/1.25 var(--font-display);letter-spacing:-.02em;text-transform:uppercase;text-wrap:pretty;padding-top:16px;border-top:1px solid rgba(255,255,255,.2)">Not sure what to book? Choose the Signature Haircut for your first visit or a bigger change.</p>
+        <div><x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ" dc-props="{{ bigBtn }}" hint-size="360px,72px">BOOK A SIGNATURE HAIRCUT</x-import></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Bryton / Hair systems" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,80px);align-items:center">
+    <div style="flex:1 1 420px;min-width:0;display:grid;grid-template-columns:1fr 1fr;gap:4px">
+      <div style="position:relative;aspect-ratio:4/5;background-color:#222326;background-image:url('assets/photos/hs-client1-before.png');background-size:cover;background-position:center" role="img" aria-label="Client before his hair system, bald on top"><p class="ba-label" style="position:absolute;left:0;bottom:0;padding:10px 14px;background:var(--canvas);color:var(--ink)">Before</p></div>
+      <div style="position:relative;aspect-ratio:4/5;background-color:#222326;background-image:url('assets/photos/hs-client1-after.png');background-size:cover;background-position:center" role="img" aria-label="Same client after, hair system cut into a textured quiff"><p class="ba-label" style="position:absolute;left:0;bottom:0;padding:10px 14px;background:var(--canvas);color:var(--ink)">After</p></div>
+    </div>
+    <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">04 / Hair systems</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,5vw,64px);max-width:12ch">Every system in the shop goes through him.</h2>
+      <p style="font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">A hair system is a thin base with real hair that’s attached to your scalp and cut into your own hair. Bryton color-matches it, fits it and cuts it in so it blends. Maintenance visits are with him too, so the same person looks after it every time.</p>
+      <p class="ba-label" style="color:var(--on-band)">As low as $5.07 a day · Skip the energy drinks. Get a non-surgical hair system.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU" hint-size="280px,56px">BOOK A FREE CONSULTATION</x-import>
+        <a href="Hair%20Replacement.dc.html" style="color:var(--on-band);font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase">How it works →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Bryton / Teaching" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap-reverse;gap:40px clamp(40px,6vw,80px);align-items:center">
+  <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:24px">
+    <p class="ba-label">05 / Teaching</p>
+    <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px);max-width:12ch">He’s taught other barbers how to cut.</h2>
+    <p style="font-size:17px;line-height:28px;text-wrap:pretty">Bryton is a licensed barber instructor. He taught hundreds of students at Paul Mitchell The School Provo, and still teaches a class from time to time, showing new barbers how to read a head shape, blend a fade and talk a client through a change. The same habits go into every cut he does at the shop.</p>
+    <a href="Blog%20-%20Our%20Story.dc.html" style="font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;align-self:flex-start">Read the Broken Arrow story →</a>
+  </div>
+  <div style="flex:1.2 1 460px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:4px">
+    <div role="img" aria-label="Bryton demonstrating a haircut on a mannequin head for a class of barber students" style="aspect-ratio:3/4;background-color:var(--canvas-sunk);background-image:url('assets/photos/bryton-teaching.png');background-size:cover;background-position:center"></div>
+    <div role="img" aria-label="Bryton teaching a room of barbers, a slide projected on the wall" style="aspect-ratio:auto;min-height:100%;background-color:var(--canvas-sunk);background-image:url('assets/photos/bryton-class-2.jpg');background-size:cover;background-position:center 60%"></div>
+  </div>
+</section>
+
+<section data-screen-label="Bryton / Payson" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 48px;align-items:flex-end">
+      <div style="flex:1 1 360px;display:flex;flex-direction:column;gap:16px">
+        <p class="ba-label">06 / Where it started</p>
+        <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px);max-width:12ch">Built in Payson. Now in Orem.</h2>
+      </div>
+      <p style="flex:1 1 360px;max-width:520px;font-size:17px;line-height:28px;text-wrap:pretty">Bryton opened the first Broken Arrow in Payson. His clients there left more than 240 Google reviews before he moved the shop to Orem. Plenty of them still make the drive.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:4px">
+      <div role="img" aria-label="The original Broken Arrow storefront in Payson" style="aspect-ratio:4/5;background-color:var(--line);background-image:url('assets/photos/payson-storefront.png');background-size:cover;background-position:center"></div>
+      <div role="img" aria-label="Inside the Payson shop" style="aspect-ratio:4/5;background-color:var(--line);background-image:url('assets/photos/payson-interior.png');background-size:cover;background-position:center"></div>
+      <div role="img" aria-label="A pompadour cut at the Payson shop" style="aspect-ratio:4/5;background-color:var(--line);background-image:url('assets/photos/payson-cut-pomp.png');background-size:cover;background-position:center"></div>
+      <div role="img" aria-label="A cut finished at the Payson shop" style="aspect-ratio:4/5;background-color:var(--line);background-image:url('assets/photos/payson-cut.png');background-size:cover;background-position:center"></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Bryton / Products" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,80px);align-items:center">
+  <a href="Shop.dc.html" aria-label="Shop Broken Arrow Grooming" style="flex:1 1 380px;aspect-ratio:1/1;background-color:var(--canvas-sunk);background-image:url('assets/photos/clay-scene.png');background-size:cover;background-position:center;display:block"></a>
+  <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:24px">
+    <p class="ba-label">07 / Broken Arrow Grooming</p>
+    <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px);max-width:12ch">What he styles with.</h2>
+    <p style="font-size:17px;line-height:28px;text-wrap:pretty">Broken Arrow Grooming is the shop’s own product line. The matte clay is what Bryton uses to finish cuts in the chair, and he’ll show you how much to use on your hair before you leave.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="secondary" href="Shop.dc.html" hint-size="220px,56px">SEE THE PRODUCTS</x-import>
+      <a href="Product%20-%20Matte%20Clay.dc.html" style="font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase">Matte clay →</a>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Bryton / FAQ" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+  <p class="ba-label" style="flex:1 1 220px">08 / Booking with Bryton</p>
+  <div style="flex:2 1 520px;max-width:760px;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+    <sc-for list="{{ faq }}" as="q" hint-placeholder-count="4">
+      <details style="border-bottom:1px solid var(--line);padding:0">
+        <summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;padding:20px 0;font:800 clamp(18px,2vw,22px)/1.2 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ q.q }}<span aria-hidden="true" style="font:600 20px/1 var(--font-sans)">+</span></summary>
+        <p style="padding:0 0 24px;max-width:640px;font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">{{ q.a }}</p>
+      </details>
+    </sc-for>
+  </div>
+</section>
+
+</sc-if>
+
+<section data-screen-label="Barber / Work" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <p class="ba-label">{{ workNum }} / The work</p>
+        <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px)">{{ workTitle }}</h2>
+      </div>
+      <sc-if value="{{ b.hasIg }}" hint-placeholder-val="{{ false }}">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="{{ b.ig }}" hint-size="200px,44px">MORE ON INSTAGRAM →</x-import>
+      </sc-if>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:4px">
+      <sc-for list="{{ work }}" as="w" hint-placeholder-count="6">
+        <div style="position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--line);display:flex;align-items:flex-end;padding:14px">
+          <sc-if value="{{ w.hasImg }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ w.alt }}" style="position:absolute;inset:0;background-image:{{ w.bg }};background-size:cover;background-position:center"></div></sc-if>
+          <sc-if value="{{ w.noImg }}" hint-placeholder-val="{{ true }}"><p class="ba-label" style="color:var(--ink)">{{ w.label }}</p></sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Barber / Others" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:24px">
+  <p class="ba-label">The rest of the team</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px">
+    <sc-for list="{{ others }}" as="o" hint-placeholder-count="2">
+      <a href="{{ o.page }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:24px 0;border-top:2px solid var(--ink);text-decoration:none;color:var(--ink)" style-hover="color:var(--green)">
+        <span style="display:flex;flex-direction:column;gap:6px"><span style="font:800 clamp(28px,3vw,36px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase">{{ o.name }}</span><span class="ba-label" style="color:var(--ink-muted)">{{ o.role }}</span></span>
+        <span class="ba-label">View →</span>
+      </a>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Barber / Book band" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(48px,7vw,88px);max-width:10ch">{{ bandTitle }}</h2>
+    <sc-if value="{{ bigBook }}" hint-placeholder-val="{{ false }}">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ b.href }}" dc-props="{{ bigBtn }}" hint-size="360px,72px">{{ bookLabel }}</x-import>
+    </sc-if>
+    <sc-if value="{{ smallBook }}" hint-placeholder-val="{{ true }}">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ b.href }}" hint-size="240px,56px">{{ bookLabel }}</x-import>
+    </sc-if>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+<sc-if value="{{ bigBook }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:50%;transform:translateX(-50%);bottom:clamp(16px,3vw,32px);z-index:50;width:calc(100% - 32px);max-width:320px;display:flex;outline:1px solid var(--canvas)">
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="{{ b.href }}" dc-props="{{ floatBtn }}" hint-size="320px,64px">BOOK NOW</x-import>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;barber&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;bryton&quot;,&quot;connor&quot;,&quot;elise&quot;],&quot;default&quot;:&quot;bryton&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const BARBERS = {
+  bryton: { key: 'Bryton', name: 'Bryton', role: 'Owner & licensed barber instructor', ig: 'https://www.instagram.com/broken.arrow.barbershop/',
+    photo: 'assets/photos/bryton-teaching-portrait.jpg', photoAlt: 'Bryton, owner and licensed barber instructor at Broken Arrow Barbershop',
+    facts: [
+      ['Owner', 'He started Broken Arrow in Payson and moved it to Orem.'],
+            ['Hundreds', 'Of barbers taught as an instructor at Paul Mitchell The School Provo.'],
+      ['389 reviews', 'Across the Payson and Orem shops. Every one that names Bryton is five stars.'],
+      ['Hair systems', 'He does every hair system fitting and cut at the shop.'],
+    ],
+    href: 'https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services',
+    bio: "Bryton owns Broken Arrow and has {byears} years of experience. He cuts just about everything, and does his best work on short and classic cuts. He likes a challenge: big changes, and clients who haven’t liked their hair in a while because of thinning or a receding hairline. He decides what will work for your hair and tells you why. He’s a licensed barber instructor and taught hundreds of students at Paul Mitchell The School Provo. He still teaches now and then, but most of his week is spent behind the chair. Before moving to Orem, he built Broken Arrow in Payson, where clients left more than 240 Google reviews.",
+    work: [
+      ['assets/photos/bryton-cut-mullet.jpg', 'Modern mullet, textured on top with length kept at the back'],
+      ['assets/photos/bryton-cut-pomp-beard.jpg', 'Pompadour with a skin fade and a full shaped beard'],
+      ['assets/photos/bryton-cut-fade-beard.jpg', 'High skin fade with a short, lined-up beard'],
+      ['assets/photos/bryton-cut-slick.jpg', 'Slick back with a low taper and a mustache'],
+    ],
+    forList: ['Short, classic haircuts.', 'Big changes. Hand him the decision.', 'Thinning hair or a receding hairline. He’ll find a cut that works with it, or talk you through a hair system.', 'Haircut and beard together.'] },
+  connor: { key: 'Connor', name: 'Connor', role: 'Barber', ig: 'https://www.instagram.com/broken.arrow.barbershop/',
+    photo: 'assets/photos/connor-profile.jpg', photoAlt: 'Connor cutting a client’s hair with shears at Broken Arrow Barbershop',
+    wide: 'assets/photos/connor-wide.jpg', wideAlt: 'Connor checking a haircut with a comb, the shop’s green wall behind him',
+    work: [
+      ['assets/photos/connor-work-1.jpg', 'Connor shaping a longer cut by hand'],
+      ['assets/photos/connor-work-2.jpg', 'Blow-drying a longer cut with a round brush'],
+      ['assets/photos/connor-clipper.jpg', 'Connor detailing around the ear with a trimmer'],
+      ['assets/photos/connor-work-4.jpg', 'Towel-drying after a shampoo at the sink'],
+    ],
+    href: 'https://book.squareup.com/appointments/cnl05yngyr8vhx/location/LFBJAQ8MMHY0Z/services',
+    bio: "Connor is a Utah County local, born and raised. Most of his work is medium to longer haircuts: keeping the length and giving it shape. He got into barbering because he likes helping people feel good about how they look. He takes his time, gets the details right, and makes sure you’re comfortable in the chair.",
+    forList: ['Medium-length cuts that still look good as they grow out.', 'Longer hair that needs shape without losing length.', 'Taking the time to get the details right.'] },
+  elise: { key: 'Elise', name: 'Elise', role: 'Barber', ig: 'https://www.instagram.com/broken.arrow.barbershop/',
+    photo: 'assets/photos/elise-profile.jpg', photoAlt: 'Elise fading the back of a client’s haircut with clippers at Broken Arrow Barbershop',
+    wide: 'assets/photos/elise-wide.jpg', wideAlt: 'Elise cutting a skin fade at her chair, the shop’s green wall behind her',
+    work: [
+      ['assets/photos/elise-cut-a.jpg', 'Curly hair kept long on top and at the back, with a taper on the sides'],
+      ['assets/photos/elise-cut-b.jpg', 'Medium-length cut combed back, with length kept over the ears'],
+      ['assets/photos/elise-cut-c.jpg', 'Textured cut with a taper at the sides and neckline'],
+      ['assets/photos/elise-cut-d.jpg', 'Flow cut with a taper around the ear and length at the back'],
+    ],
+    href: 'https://book.squareup.com/appointments/wkoxhle5mmhzak/location/LFBJAQ8MMHY0Z/services',
+    bio: "Elise has been cutting hair since September 2023, so she has {years} years of experience. She specializes in medium-length styles and curly hair, and she likes flow cuts and longer, natural looks. Her cuts are clean and detailed. She takes the time to understand what you want and how you actually style your hair day to day, so the cut works with your routine. If you’re not sure what you want, she’ll help you figure it out. She also loves teaching clients how to style their hair at home, because styling makes or breaks a haircut.",
+    forList: ['Curly hair.', 'Medium-length and flow cuts.', 'Help finding a style that fits your routine.', 'Learning how to style your hair at home.'] },
+};
+const WORK = ['Grown-out cut, shaped and thinned', 'Taper on the sides, length on top', 'Curly hair, cut dry', 'Beard shaped to the jawline', 'Flow cut, weight removed', 'Low fade, blending up'];
+
+class Component extends DCLogic {
+  state = { avail: null };
+  id() {
+    let q = '';
+    try { q = (new URLSearchParams(location.search).get('b') || '').toLowerCase(); } catch (e) {}
+    return BARBERS[q] ? q : (BARBERS[this.props.barber] ? this.props.barber : 'bryton');
+  }
+  componentDidMount() { this.load(); this.setTitle(); this.addSchema(); }
+  addSchema() {
+    try {
+      const b = BARBERS[this.id()];
+      const data = {
+        '@context': 'https://schema.org', '@type': 'Person', name: b.name, jobTitle: b.role,
+        description: b.bio, knowsAbout: b.forList,
+        worksFor: { '@type': 'BarberShop', name: 'Broken Arrow Barbershop', url: 'https://www.orembarbershop.com/', sameAs: ['https://www.instagram.com/broken.arrow.barbershop/', 'https://www.youtube.com/@BrokenArrowBarbershop'],
+          address: { '@type': 'PostalAddress', streetAddress: '375 E 800 S, Suite 12', addressLocality: 'Orem', addressRegion: 'UT', postalCode: '84097', addressCountry: 'US' } },
+        potentialAction: { '@type': 'ReserveAction', target: b.href, name: 'Book with ' + b.name },
+      };
+      if (this.id() === 'bryton') data.hasCredential = { '@type': 'EducationalOccupationalCredential', credentialCategory: 'license', name: 'Licensed barber instructor' };
+      let el = document.getElementById('ba-barber-schema');
+      if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = 'ba-barber-schema'; document.head.appendChild(el); }
+      el.textContent = JSON.stringify(data);
+    } catch (e) {}
+  }
+  componentDidUpdate() { this.setTitle(); }
+  setTitle() { try { document.title = BARBERS[this.id()].name + ' · Barber at Broken Arrow Barbershop, Orem'; } catch (e) {} }
+  componentWillUnmount() { this.dead = true; if (this.ctrl) this.ctrl.abort(); }
+  async load() {
+    const ctrl = this.ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 3000);
+    try {
+      const res = await fetch('https://barberavalibility.webberbryton.workers.dev/availability', { signal: ctrl.signal, headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json(); clearTimeout(timer);
+      if (this.dead) return;
+      const s = data && data.perBarber && data.perBarber[BARBERS[this.id()].key];
+      if (!s || typeof s.label !== 'string' || !s.label.trim() || typeof s.bookUrl !== 'string') return;
+      const u = new URL(s.bookUrl); if (u.protocol !== 'https:') return;
+      this.setState({ avail: { label: s.label.trim(), url: s.bookUrl } });
+    } catch (e) { clearTimeout(timer); }
+  }
+  renderVals() {
+    const yrs = (() => { const s = new Date(2023, 8, 1), n = new Date(); let y = n.getFullYear() - s.getFullYear(); if (n.getMonth() < s.getMonth()) y--; return Math.max(1, y); })();
+    const id = this.id(), b0 = BARBERS[id], b = { ...b0, bio: b0.bio.replace('{years} years', yrs === 1 ? 'a year' : yrs + ' years').replace('{byears}', Math.ceil((Date.now() - new Date(2021, 10, 1)) / 31557600000)) }, a = this.state.avail;
+    return {
+      title: b.name + ' · Barber at Broken Arrow Barbershop, Orem',
+      b: { ...b, hasIg: !!b.ig, forList: b.forList.map((text, i) => ({ text, num: '0' + (i + 1) })) },
+      photoLabel: 'Photo: ' + b.name + ' behind the chair',
+      bookLabel: 'BOOK WITH ' + b.name.toUpperCase(),
+      bigBook: b.key === 'Bryton', smallBook: b.key !== 'Bryton',
+      heroBtn: { style: { minHeight: 72, padding: '0 48px', fontSize: 17, letterSpacing: '.16em', width: '100%', maxWidth: 460, justifyContent: 'center', boxSizing: 'border-box' } },
+      bigBtn: { style: { minHeight: 72, padding: '0 48px', fontSize: 17, letterSpacing: '.16em', justifyContent: 'center' } },
+      floatBtn: { style: { flex: 1, minHeight: 64, fontSize: 16, letterSpacing: '.16em', justifyContent: 'center' } },
+      workTitle: b.name + '’s cuts',
+      bandTitle: 'Book with ' + b.name + '.',
+      work: b.work ? b.work.map(([src, alt]) => ({ hasImg: true, noImg: false, bg: 'url("' + src + '")', alt, label: '' })) : WORK.map(w => ({ hasImg: false, noImg: true, bg: 'none', alt: '', label: 'Photo: ' + w })),
+      isBryton: id === 'bryton', hasFreeCut: true, freeCutBody: id === 'connor' ? 'No charge. Connor films transformations for our YouTube channel and is looking for big changes: overgrown hair, long hair going short and cuts that need a fresh start. If you’re picked, the cut is free and it goes on the channel.' : id === 'elise' ? 'No charge. Elise films transformations for our YouTube channel and is looking for big changes: long hair going short, overgrown curls and cuts that need a fresh start. If you’re picked, the cut is free and it goes on the channel.' : 'No charge. We film transformations for our YouTube channel and are looking for big changes, thinning hair and receding hairlines. If you’re picked, the cut is free and it goes on the channel.', workNum: id === 'bryton' ? '09' : '02',
+      faq: [
+        { q: 'How far out is he booked?', a: 'It changes week to week. The next opening at the top of this page is live from our booking system, so that’s the fastest way to see.' },
+        { q: 'What should I book?', a: 'Classic Haircut for routine upkeep. Haircut + Beard if you want both done. For your first visit, a new style or a long scissor cut, book the Signature Haircut so there’s time to talk it through.' },
+        { q: 'Should I bring a photo?', a: 'Yes. Bryton loves photos. He’ll talk you through what’s realistic for your hair and get you as close to the look you want as he can.' },
+        { q: 'Do I need a consultation for a hair system?', a: 'Yes. It’s free. He looks at your hair loss, talks through options and color, and you decide from there. Book it from the Hair Replacement page.' },
+      ],
+      hasFacts: !!b.facts, facts: (b.facts || []).map(([big, text]) => ({ big, text })),
+      hasPhoto: !!b.photo, noPhoto: !b.photo, photoBg: b.photo ? 'url("' + b.photo + '")' : 'none', photoAlt: b.photoAlt || '',
+      hasWide: !!b.wide, wideBg: b.wide ? 'url("' + b.wide + '")' : 'none', wideAlt: b.wideAlt || '',
+      avail: a ? { show: true, label: a.label, url: a.url, aria: 'Next opening with ' + b.name + ': ' + a.label + '. Book it.' } : { show: false },
+      others: Object.keys(BARBERS).filter(k => k !== id).map(k => ({ name: BARBERS[k].name, role: BARBERS[k].role, page: 'Barber%20-%20' + BARBERS[k].name + '.dc.html' })),
+    };
+  }
+}
+</script>
+</body>
+</html>

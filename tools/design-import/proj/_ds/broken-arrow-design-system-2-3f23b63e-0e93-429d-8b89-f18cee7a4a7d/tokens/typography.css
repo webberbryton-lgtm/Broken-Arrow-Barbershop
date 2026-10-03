@@ -1,0 +1,26 @@
+:root{
+--font-display:"Inter Tight","Helvetica Neue",Arial,sans-serif;
+--font-sans:Inter,"Helvetica Neue",Arial,sans-serif;
+--font-logo:"EB Garamond",Garamond,Georgia,serif;
+--font-mono:"Courier Prime","Courier New",monospace;
+/* display-xl — hero, one per page, ALL CAPS */
+--display-xl-size:104px;--display-xl-lh:0.9; /* @kind font */--display-xl-weight:800;--display-xl-tracking:-0.045em;
+/* display — section titles, ALL CAPS */
+--display-size:64px;--display-lh:0.95; /* @kind font */--display-weight:800;--display-tracking:-0.04em;
+/* heading — service/card/column titles, ALL CAPS */
+--heading-size:28px;--heading-lh:32px;--heading-weight:800;--heading-tracking:-0.02em;
+/* label — numbering, nav, buttons, place lines, ALL CAPS */
+--label-size:13px;--label-lh:16px;--label-weight:600;--label-tracking:0.18em;
+/* reading text — sentence case */
+--body-lg-size:20px;--body-lg-lh:34px;
+--body-size:17px;--body-lh:28px;
+--body-sm-size:14px;--body-sm-lh:22px;
+--price-size:17px;--price-lh:28px;--price-weight:500;--price-tracking:0.01em;
+/* logo lettering — reference only, use the logo files */
+--logo-name-size:108px;--logo-name-tracking:-0.068em;
+--logo-descriptor-size:42px;--logo-descriptor-tracking:0.506em;
+/* semantic */
+--font-headline:var(--font-display);
+--font-body:var(--font-sans);
+--font-label:var(--font-sans);
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>FAQ · Broken Arrow Barbershop, Orem</title>
+<meta name="description" content="Answers about haircuts at Broken Arrow Barbershop in Orem, Utah: Classic vs Signature Haircut, fades, scissor cuts, walk-ins, kids’ haircuts, cancellations, location and parking.">
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+summary::-webkit-details-marker{display:none}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" active="faq" hint-size="100%,72px"></dc-import>
+
+<section data-screen-label="FAQ / Hero" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(16px,5vw,64px) clamp(40px,6vw,72px);display:flex;flex-direction:column;gap:24px">
+    <p class="ba-label" style="color:var(--on-band);opacity:.78">Broken Arrow Barbershop · Orem, Utah</p>
+    <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(56px,9vw,120px),14vw);letter-spacing:-.045em;line-height:.9">FAQ</h1>
+    <p style="max-width:560px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;opacity:.85;text-wrap:pretty">Quick answers before you book. If yours isn’t here, call the shop.</p>
+  </div>
+</section>
+
+<section data-screen-label="FAQ / Questions" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+    <p class="ba-label" style="flex:1 1 220px">Common questions</p>
+    <div style="flex:2 1 520px;max-width:760px;min-width:0;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+      <sc-for list="{{ faq }}" as="q" hint-placeholder-count="9">
+        <details style="border-bottom:1px solid var(--line)">
+          <summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;padding:20px 0;font:800 clamp(18px,2vw,22px)/1.2 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ q.q }}<span aria-hidden="true" style="flex:none;font:600 20px/1 var(--font-sans)">+</span></summary>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:0 0 24px;max-width:640px">
+            <sc-for list="{{ q.paras }}" as="p" hint-placeholder-count="1">
+              <p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">{{ p }}</p>
+            </sc-for>
+            <sc-if value="{{ q.hasLink }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ q.href }}" style="font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;align-self:flex-start;padding:8px 0">{{ q.link }}</a>
+            </sc-if>
+          </div>
+        </details>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="FAQ / Book band" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(48px,7vw,88px);max-width:8ch">Book a haircut.</h2>
+      <p style="font-size:clamp(17px,1.6vw,20px);line-height:1.7;opacity:.78">Pick your barber, service and time. The booking page shows real availability.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" tone="dark" href="tel:+18017091280" hint-size="160px,44px">CALL THE SHOP</x-import>
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services" hint-size="170px,56px">BOOK NOW</x-import>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const FAQ = [
+  ['Should I book a Classic or Signature Haircut?', ['The Classic Haircut ($40) is for routine upkeep: keeping the style you already have in shape and cleaning up grown-out length. It works well for short cuts and fades.', 'The Signature Haircut ($65) is our most personalized haircut, with extra time to talk through your goals and refine the details. We recommend it for your first visit, a change in style, longer and scissor cuts, or a big event.', 'You can book any haircut as either one.'], 'Answer four quick questions →', 'Service%20Quiz.dc.html'],
+  ['What’s included in a haircut?', ['Every haircut includes a hair wash, scalp scrub with a scalp brush, menthol scalp treatment, neck shave and hot towel. No extra charge for any of it. The Haircut + Beard adds a beard trim and shaping.'], 'See all services →', 'Services.dc.html'],
+  ['Do you cut longer hair or offer scissor cuts?', ['Yes. We cut flows, warrior cuts, modern mullets, textured crops and other mid-length and longer styles. Bryton specializes in scissor haircuts.', 'For longer and scissor cuts, we recommend the Signature Haircut so there’s time for the detail work.'], 'Why longer cuts need more time →', 'Local%20Guide%20-%20Signature%20Haircut.dc.html'],
+  ['Do you do fades?', ['Yes. Low, mid, high and skin fades, plus tapers. We place the fade to suit your head shape so it grows out clean instead of puffy on the sides.'], 'Which fade should you ask for? →', 'Local%20Guide%20-%20Fade%20Haircut%20Orem.dc.html'],
+  ['Do you offer straight razor face or head shaves?', ['We don’t currently offer full straight razor face or head shaves. We do offer beard trimming and shaping, and our haircut services include a shave on the back of the neck.']],
+  ['Do you offer waxing?', ['We don’t offer waxing because our team isn’t licensed to perform that service. We specialize in haircuts and beard trimming, and recommend visiting a properly licensed waxing provider.']],
+  ['Do you accept walk-ins?', ['We take walk-ins when we can, but we mainly run on appointments. Booking online is the best way to get a spot.']],
+  ['What’s your cancellation and late-arrival policy?', ['There are no cancellation or no-show fees. We just ask that you let us know if you can’t make it, so someone else can have the spot.', 'We have a 5-minute grace period. If you arrive later than that, we may not be able to take your appointment.', 'If you regularly miss appointments or arrive late, we may not be able to take future bookings.']],
+  ['Where are you located, and where should I park?', ['We’re at 375 E 800 S, Suite 12, Orem, UT 84097. Parking is in the front of the building.', 'The shop can be tough to find the first time, so plan to arrive 5–10 minutes early.'], 'How to find us →', 'Home.dc.html#visit'],
+  ['Do you cut children’s hair?', ['We don’t cut hair for kids under 8.']],
+];
+class Component extends DCLogic {
+  componentDidMount() {
+    try {
+      const s = document.createElement('script'); s.type = 'application/ld+json';
+      s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.join(' ') } })) });
+      document.head.appendChild(s);
+    } catch (e) {}
+  }
+  renderVals() {
+    return { faq: FAQ.map(([q, paras, link, href]) => ({ q, paras, link: link || '', href: href || '#', hasLink: !!link })) };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Wholesale shop · Broken Arrow Grooming</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure,ul{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="StoreHeader" active="wholesale" cart-count="{{ totalPacks }}" hint-size="100%,120px"></dc-import>
+
+<sc-if value="{{ locked }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Wholesale shop / Locked" style="max-width:1280px;margin:0 auto;padding:clamp(72px,10vw,140px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:24px;min-height:60vh">
+  <p class="ba-label">Wholesale · Industry professionals only</p>
+  <h1 class="ba-display" style="font-size:min(clamp(44px,6vw,80px),11vw);max-width:12ch">Sign in to see wholesale pricing.</h1>
+  <p style="max-width:520px;font-size:17px;line-height:28px;text-wrap:pretty">This page is for approved wholesale accounts. Sign in, or apply with your EIN, barber license or cosmetology license.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center">
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="Wholesale.dc.html" hint-size="160px,56px">SIGN IN</x-import>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="Wholesale.dc.html#apply" hint-size="200px,44px">APPLY FOR WHOLESALE</x-import>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ unlocked }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="Wholesale shop / Header" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Wholesale account · {{ email }}</p>
+      <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(44px,6vw,84px),11vw);letter-spacing:-.045em;line-height:.92">Wholesale shop</h1>
+      <p style="max-width:520px;font-size:17px;line-height:28px;opacity:.85">Everything is 50% off retail and sold in packs of 6.</p>
+    </div>
+    <button onClick="{{ signOut }}" style="background:none;border:1px solid var(--line-strong);color:var(--on-band);min-height:44px;padding:0 18px;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase" style-hover="border-color:var(--on-band)">Sign out</button>
+  </div>
+</section>
+
+<section data-screen-label="Wholesale shop / Products" style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(16px,5vw,64px) clamp(56px,8vw,96px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+  <div style="flex:2.2 1 600px;min-width:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:40px 24px">
+    <sc-for list="{{ products }}" as="p" hint-placeholder-count="6">
+      <article style="display:flex;flex-direction:column;gap:14px">
+        <div style="position:relative;aspect-ratio:4/5;background-color:var(--canvas-sunk);background-image:{{ p.bg }};background-size:cover;background-position:center" role="img" aria-label="{{ p.alt }}">
+          <span class="ba-label" style="position:absolute;top:12px;left:12px;background:var(--band);color:var(--on-band);padding:6px 10px">Pack of 6</span>
+          <sc-if value="{{ p.soon }}" hint-placeholder-val="{{ false }}"><span class="ba-label" style="position:absolute;top:12px;right:12px;background:var(--canvas);padding:6px 10px">Coming soon</span></sc-if>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--line);padding-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+            <h2 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ p.name }}</h2>
+            <p style="font:600 17px/26px var(--font-sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ p.packPrice }}</p>
+          </div>
+          <p style="font-size:14px;line-height:22px;color:var(--ink-muted);font-variant-numeric:tabular-nums">{{ p.detail }}</p>
+        </div>
+        <sc-if value="{{ p.soon }}" hint-placeholder-val="{{ true }}"><p style="min-height:54px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted)">Not available to order yet</p></sc-if>
+        <sc-if value="{{ p.orderable }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line-strong)">
+          <button onClick="{{ p.dec }}" aria-label="{{ p.decLabel }}" style="width:52px;height:52px;background:none;border:0;cursor:pointer;font:600 20px/1 var(--font-sans);color:var(--ink)">−</button>
+          <span style="font:600 13px/16px var(--font-sans);letter-spacing:.12em;text-transform:uppercase;font-variant-numeric:tabular-nums">{{ p.qtyLabel }}</span>
+          <button onClick="{{ p.inc }}" aria-label="{{ p.incLabel }}" style="width:52px;height:52px;background:none;border:0;cursor:pointer;font:600 20px/1 var(--font-sans);color:var(--ink)">+</button>
+        </div>
+        </sc-if>
+      </article>
+    </sc-for>
+  </div>
+
+  <aside style="flex:1 1 300px;position:sticky;top:140px;display:flex;flex-direction:column;gap:18px;background:var(--canvas-sunk);padding:28px">
+    <p class="ba-label">Your order</p>
+    <sc-if value="{{ hasLines }}" hint-placeholder-val="{{ false }}">
+      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--line)">
+        <sc-for list="{{ lines }}" as="l" hint-placeholder-count="2">
+          <li style="display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:22px"><span>{{ l.name }} <span style="color:var(--ink-muted)">× {{ l.packs }}</span></span><span style="font-variant-numeric:tabular-nums;white-space:nowrap">{{ l.total }}</span></li>
+        </sc-for>
+      </ul>
+    </sc-if>
+    <sc-if value="{{ noLines }}" hint-placeholder-val="{{ true }}"><p style="font-size:15px;line-height:24px;color:var(--ink-muted)">Add packs to start an order.</p></sc-if>
+    <div style="display:flex;justify-content:space-between;gap:12px;font-size:15px;line-height:22px;color:var(--ink-muted)"><span>Units</span><span style="font-variant-numeric:tabular-nums">{{ totalUnits }}</span></div>
+    <div style="display:flex;justify-content:space-between;gap:12px;font-size:15px;line-height:22px;color:var(--ink-muted)"><span>Retail value</span><span style="font-variant-numeric:tabular-nums">{{ retailTotal }}</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:2px solid var(--ink);padding-top:14px"><span class="ba-label">Wholesale total</span><span style="font:800 28px/1 var(--font-display);font-variant-numeric:tabular-nums">{{ total }}</span></div>
+    <sc-if value="{{ hasTbc }}" hint-placeholder-val="{{ false }}"><p style="font-size:14px;line-height:22px;color:var(--ink-muted)">Some items don’t have a price yet. We’ll confirm them before you’re charged.</p></sc-if>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" disabled="{{ noLines }}" on-click="{{ checkout }}" hint-size="100%,56px">{{ checkoutLabel }}</x-import>
+    <p style="font-size:14px;line-height:22px;color:var(--ink-muted)">Shipping and payment terms are confirmed with your wholesale account.</p>
+  </aside>
+</section>
+</sc-if>
+
+<dc-import name="StoreFooter" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Retail price per unit. Wholesale = 50% of retail, sold in packs of 6. Set retail: null until priced.
+const PRODUCTS = [
+  { id: 'clay', name: 'Hair Clay', size: '1.0 fl oz', img: 'assets/photos/clay-card.png', retail: 28, soon: true },
+  { id: 'cream', name: 'Cream', size: '1.0 fl oz', img: 'assets/photos/cream-card.png', retail: 28, soon: true },
+  { id: 'salt', name: 'Sea Salt Spray', size: '', img: 'assets/photos/salt-card.png', retail: 22, soon: true },
+  { id: 'shampoo', name: 'Shampoo', size: '300ml', img: 'assets/photos/shampoo-card.png', retail: 28, soon: true },
+  { id: 'cond', name: 'Conditioner', size: '300ml', img: 'assets/photos/conditioner-card.png', retail: 28, soon: true },
+  { id: 'aftershave', name: 'Aftershave', size: '120ml', img: 'assets/photos/aftershave-card.png', retail: 26, soon: true },
+  { id: 'refuge', name: 'Refuge', size: '30ml extrait de parfum', img: 'assets/photos/refuge-card.png', retail: 159, soon: true },
+];
+const PACK = 6, DISCOUNT = 0.5, KEY = 'ba-wholesale-session';
+const money = n => '$' + (Number.isInteger(n) ? n : n.toFixed(2));
+
+class Component extends DCLogic {
+  state = { email: null, checked: false, packs: {}, sent: false };
+  componentDidMount() {
+    let email = null;
+    try { email = sessionStorage.getItem(KEY); } catch (e) {}
+    this.setState({ email, checked: true });
+  }
+  renderVals() {
+    const { email, checked, packs } = this.state;
+    const unit = p => (p.retail ? p.retail * DISCOUNT : null);
+    const lines = PRODUCTS.filter(p => packs[p.id]).map(p => ({ name: p.name, packs: packs[p.id], total: unit(p) ? money(unit(p) * PACK * packs[p.id]) : 'TBC' }));
+    const sum = f => PRODUCTS.reduce((n, p) => n + (packs[p.id] && p.retail ? f(p) * PACK * packs[p.id] : 0), 0);
+    return {
+      locked: checked && !email, unlocked: !checked || !!email, email: email || '',
+      signOut: () => { try { sessionStorage.removeItem(KEY); } catch (e) {} location.href = 'Wholesale.dc.html'; },
+      products: PRODUCTS.map(p => {
+        const n = packs[p.id] || 0, u = unit(p);
+        const set = v => this.setState(s => ({ packs: { ...s.packs, [p.id]: Math.max(0, v) }, sent: false }));
+        return { name: p.name, alt: 'Broken Arrow Grooming ' + p.name, bg: 'url("' + p.img + '")', soon: !!p.soon, orderable: !p.soon,
+          packPrice: u ? money(u * PACK) : 'Price TBC',
+          detail: (p.size ? p.size + ' · ' : '') + (u ? money(u) + '/unit · retail ' + money(p.retail) : 'Retail price not set yet'),
+          qtyLabel: n ? n + (n === 1 ? ' pack · ' : ' packs · ') + n * PACK + ' units' : 'Add pack',
+          inc: () => set(n + 1), dec: () => set(n - 1), incLabel: 'Add a pack of 6 ' + p.name, decLabel: 'Remove a pack of 6 ' + p.name };
+      }),
+      lines, hasLines: lines.length > 0, noLines: lines.length === 0,
+      hasTbc: PRODUCTS.some(p => packs[p.id] && !p.retail),
+      totalPacks: PRODUCTS.reduce((n, p) => n + (packs[p.id] || 0), 0),
+      totalUnits: String(PRODUCTS.reduce((n, p) => n + (packs[p.id] || 0) * PACK, 0)),
+      retailTotal: money(sum(p => p.retail)), total: money(sum(unit)),
+      checkoutLabel: this.state.sent ? 'ORDER SENT' : 'CHECK OUT',
+      checkout: () => this.setState({ sent: true }),
+    };
+  }
+}
+</script>
+</body>
+</html>

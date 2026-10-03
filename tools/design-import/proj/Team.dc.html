@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>The Team · Broken Arrow Barbershop, Orem</title>
+<meta name="description" content="Meet the barbers at Broken Arrow Barbershop in Orem, Utah: Bryton, Connor and Elise. See who fits your hair and book with them.">
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" active="team" hint-size="100%,121px"></dc-import>
+
+<section data-screen-label="Team / Hero" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px 48px;align-items:flex-end">
+    <div style="flex:2 1 520px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">The team · Orem, Utah</p>
+      <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(48px,7vw,96px),11vw);letter-spacing:-.045em;line-height:.92">Three barbers</h1>
+    </div>
+    <div style="flex:1 1 320px;max-width:460px;display:flex;flex-direction:column;gap:16px">
+      <p style="font-size:clamp(17px,1.6vw,20px);line-height:1.7;opacity:.85;text-wrap:pretty">Each of us has the kind of hair we like working on most. Pick by who fits your hair, or book whoever has the time that works.</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Team / Barbers" style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px)">
+  <div data-m-three="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px">
+    <sc-for list="{{ barbers }}" as="b" hint-placeholder-count="3">
+      <article style="display:flex;flex-direction:column;gap:16px">
+        <a href="{{ b.page }}" aria-label="{{ b.pageLabel }}" style="position:relative;display:flex;align-items:flex-end;aspect-ratio:4/5;background-color:var(--canvas-sunk);background-image:{{ b.bg }};background-size:cover;background-position:center;padding:16px;text-decoration:none">
+          <sc-if value="{{ b.noPhoto }}" hint-placeholder-val="{{ false }}"><p class="ba-label">{{ b.photoLabel }}</p></sc-if>
+        </a>
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--ink);padding-top:16px">
+          <h2 style="font:800 clamp(32px,3.4vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase">{{ b.name }}</h2>
+          <p class="ba-label">{{ b.role }}</p>
+          <p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">{{ b.line }}</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center">
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="{{ b.book }}" hint-size="200px,56px">{{ b.bookLabel }}</x-import>
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="{{ b.page }}" hint-size="160px,44px">{{ b.seeLabel }}</x-import>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Team / Not sure" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:640px">
+      <h2 class="ba-display" style="font-size:clamp(32px,4.4vw,56px)">Not sure who to book?</h2>
+      <p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">Book whoever has a time that works. Every barber here can cut your hair and will tell you if someone else suits it better.</p>
+      <p style="font-size:15px;line-height:24px;color:var(--ink-muted);text-wrap:pretty">Connor and Elise both trained under Bryton at Paul Mitchell The School Provo before joining the shop. <a href="Blog%20-%20Our%20Story.dc.html">Read how Broken Arrow came together →</a></p>
+    </div>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services" hint-size="170px,56px">BOOK NOW</x-import>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const B = [
+  ['Bryton', 'Owner', 'Classic cuts, big changes and thinning hair.', 'Barber%20-%20Bryton.dc.html', 'https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services', 'assets/photos/bryton-main.jpg'],
+  ['Connor', 'Barber', 'Medium to longer hair. Utah County local.', 'Barber%20-%20Connor.dc.html', 'https://book.squareup.com/appointments/cnl05yngyr8vhx/location/LFBJAQ8MMHY0Z/services', 'assets/photos/connor-team.jpg'],
+  ['Elise', 'Barber', 'Curly hair, medium-length and flow cuts.', 'Barber%20-%20Elise.dc.html', 'https://book.squareup.com/appointments/wkoxhle5mmhzak/location/LFBJAQ8MMHY0Z/services', 'assets/photos/elise-profile.jpg'],
+];
+class Component extends DCLogic {
+  renderVals() {
+    return { barbers: B.map(([name, role, line, page, book, photo]) => ({
+      name, role, line, page, book, bg: photo ? 'url("' + photo + '")' : 'none', noPhoto: !photo,
+      photoLabel: 'Photo: ' + name + ' at the chair', pageLabel: name + '’s page',
+      bookLabel: 'BOOK WITH ' + name.toUpperCase(), seeLabel: 'SEE ' + name.toUpperCase() + '’S PAGE',
+    })) };
+  }
+}
+</script>
+</body>
+</html>

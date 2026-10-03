@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Broken Arrow Barbershop · Orem, Utah</title>
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" active="home" cart-count="{{ cartCount }}" hint-size="100%,72px"></dc-import>
+
+<!-- HERO -->
+<section data-screen-label="Home / Hero" style="position:relative;background:var(--band);min-height:clamp(600px,88vh,880px);display:flex;align-items:flex-end;overflow:hidden">
+  <img src="assets/photos/shop-interior.jpg" alt="Inside Broken Arrow Barbershop: green walls, cognac barber chairs, wood floor" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;filter:saturate(.85) brightness(.8)">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,23,26,0) 20%,rgba(22,23,26,.55) 55%,#16171a 100%)"></div>
+  <a data-m-badge="" href="Free Haircut.dc.html" style="position:absolute;top:0;right:0;z-index:2;display:flex;flex-direction:column;gap:4px;max-width:{{ fhMax }};padding:{{ fhPad }};background:var(--band);border:1px solid transparent;color:var(--on-band);text-decoration:none;transition:border-color 150ms ease" style-hover="border-color:var(--on-band)">
+    <span class="ba-label" style="color:var(--on-band);opacity:.78;font-size:11px;letter-spacing:.16em">Filmed for YouTube</span>
+    <span style="font:800 {{ fhFont }} var(--font-display);letter-spacing:-.01em;text-transform:uppercase">Apply for a free haircut →</span>
+  </a>
+  <div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:{{ heroPadTop }} clamp(16px,5vw,64px) clamp(72px,11vw,150px);display:flex;flex-direction:column;gap:28px">
+    <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(56px,10vw,120px),11vw);line-height:.88;letter-spacing:-.045em;max-width:9ch">Your hair done right.</h1>
+    <p style="max-width:560px;color:var(--on-band);font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">PERSONALIZED CUTS. NO- ONE- SIZE -FITS -ALL BARBERING</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ book }}" dc-props="{{ bigBtn }}" hint-size="260px,68px">BOOK NOW</x-import>
+      <sc-if value="{{ avail.shop.show }}" hint-placeholder-val="{{ false }}">
+      <a href="{{ avail.shop.url }}" data-availability="shop" aria-label="{{ avail.shop.aria }}" style="margin-left:{{ availMl }};display:flex;align-items:center;gap:12px;min-height:56px;padding:0 {{ availPad }};border:2px solid var(--line-strong);text-decoration:none;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--on-band);transition:border-color 150ms ease,background-color 150ms ease" style-hover="color:var(--on-band);border-color:var(--on-band)">
+        <span style="opacity:.78;white-space:nowrap">Next opening</span>
+        <span style="width:1px;height:20px;background:var(--line-strong)"></span>
+        <span style="font-variant-numeric:tabular-nums">{{ avail.shop.label }}</span>
+      </a>
+      </sc-if>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px 32px;border-top:1px solid var(--line-strong);padding-top:20px;margin-top:12px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Daily Herald Readers' Choice · Best Barbershop in Utah Valley · 2023, 2024, 2026</p>
+      <p class="ba-label" style="color:var(--on-band)">{{ todayLine }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" data-screen-label="Home / Reviews" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,5vw,64px) clamp(8px,1.5vw,16px);display:flex;flex-direction:column;gap:clamp(48px,6vw,72px)">
+    <div style="display:flex;flex-wrap:wrap;gap:40px 48px;align-items:flex-end;justify-content:space-between">
+      <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:12px">
+        <p class="ba-label" style="color:var(--ink-muted)">Serving Utah Valley since 2022</p>
+        <div style="display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 20px">
+          <p class="ba-display" style="font-size:clamp(88px,11vw,144px);line-height:.85;letter-spacing:-.05em;font-variant-numeric:tabular-nums">5.0</p>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <p aria-label="5 out of 5 stars" style="font-size:24px;letter-spacing:.18em;line-height:1">★★★★★</p>
+            <p class="ba-label">On Google</p>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:10px;border-left:2px solid var(--ink);padding-left:clamp(20px,3vw,40px)">
+        <h2 class="ba-display" style="font-size:clamp(32px,3.6vw,44px);max-width:14ch">Voted Best Barbershop in Utah County</h2>
+        <p class="ba-label" style="color:var(--ink-muted)">Daily Herald — Best of Utah Valley</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:24px">
+        <figure style="position:relative;background:var(--band);color:var(--on-band);border:1px solid var(--band);padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:24px">
+          <span aria-hidden="true" style="position:absolute;top:clamp(8px,1vw,16px);right:clamp(20px,2.4vw,32px);font:800 120px/1 var(--font-display);color:var(--line-strong)">“</span>
+          <p aria-label="5 out of 5 stars" style="font-size:16px;letter-spacing:.2em;color:var(--on-band)">★★★★★</p>
+          <blockquote style="margin:0;flex:1;font:500 clamp(19px,1.7vw,22px)/1.5 var(--font-sans);letter-spacing:-.01em;text-wrap:pretty;max-width:34ch;color:var(--on-band)">“Cut my hair exactly how I wanted. Super friendly, and the vibe was stellar. Best haircut I've had.”</blockquote>
+          <figcaption style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid var(--line-strong);padding-top:18px">
+            <span style="font:800 20px/24px var(--font-display);letter-spacing:-.01em;text-transform:uppercase;color:var(--on-band)">Brigham</span>
+            <span class="ba-label" style="color:var(--on-band);opacity:.78">Google Review</span>
+          </figcaption>
+        </figure>
+        <figure style="position:relative;background:var(--band);color:var(--on-band);border:1px solid var(--band);padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:24px">
+          <span aria-hidden="true" style="position:absolute;top:clamp(8px,1vw,16px);right:clamp(20px,2.4vw,32px);font:800 120px/1 var(--font-display);color:var(--line-strong)">“</span>
+          <p aria-label="5 out of 5 stars" style="font-size:16px;letter-spacing:.2em;color:var(--on-band)">★★★★★</p>
+          <blockquote style="margin:0;flex:1;font:500 clamp(19px,1.7vw,22px)/1.5 var(--font-sans);letter-spacing:-.01em;text-wrap:pretty;max-width:34ch;color:var(--on-band)">“I don't usually go to barbershops so I was a little hesitant, but they made me feel great and did everything I asked them to do.”</blockquote>
+          <figcaption style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid var(--line-strong);padding-top:18px">
+            <span style="font:800 20px/24px var(--font-display);letter-spacing:-.01em;text-transform:uppercase;color:var(--on-band)">Jerryck</span>
+            <span class="ba-label" style="color:var(--on-band);opacity:.78">Google Review</span>
+          </figcaption>
+        </figure>
+        <figure style="position:relative;background:var(--band);color:var(--on-band);border:1px solid var(--band);padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:24px">
+          <span aria-hidden="true" style="position:absolute;top:clamp(8px,1vw,16px);right:clamp(20px,2.4vw,32px);font:800 120px/1 var(--font-display);color:var(--line-strong)">“</span>
+          <p aria-label="5 out of 5 stars" style="font-size:16px;letter-spacing:.2em;color:var(--on-band)">★★★★★</p>
+          <blockquote style="margin:0;flex:1;font:500 clamp(19px,1.7vw,22px)/1.5 var(--font-sans);letter-spacing:-.01em;text-wrap:pretty;max-width:34ch;color:var(--on-band)">“What an amazing place. Hands down, the best barber shop in Orem.”</blockquote>
+          <figcaption style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid var(--line-strong);padding-top:18px">
+            <span style="font:800 20px/24px var(--font-display);letter-spacing:-.01em;text-transform:uppercase;color:var(--on-band)">Jed</span>
+            <span class="ba-label" style="color:var(--on-band);opacity:.78">Google Review</span>
+          </figcaption>
+        </figure>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:32px;background:var(--green);color:var(--on-band);padding:clamp(28px,4vw,48px)">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:560px">
+        <span class="ba-label" style="color:var(--on-band);opacity:.78">Free haircut · Filmed for YouTube</span>
+        <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(36px,4.6vw,56px);max-width:16ch">Apply for a free haircut</h2>
+        <p style="font-size:17px;line-height:28px;color:var(--on-band);opacity:.85;text-wrap:pretty">We film transformation haircuts for our YouTube channel. If you’re picked, your cut is free and it goes on the channel. Tell us about your hair and what you want changed.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px 32px;align-items:center">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="secondary" tone="dark" href="Free%20Haircut.dc.html" hint-size="220px,56px">APPLY NOW</x-import>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SERVICES -->
+<section id="services" data-screen-label="Home / 01 Services" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label">01 / Services</p>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <h2 class="ba-display" style="font-size:clamp(44px,6.2vw,72px);max-width:16ch">Not sure what you want?</h2>
+        <p style="max-width:680px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">Book a Haircut and tell your barber what's bugging you about your hair now. Figuring out the rest is our job. Or <a href="Service%20Quiz.dc.html">answer four quick questions</a> and we’ll tell you which one to book.</p>
+      </div>
+    </div>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.ServiceList" items="{{ services }}" hint-size="100%,300px"></x-import>
+  </div>
+</section>
+
+<!-- 02 HAIR REPLACEMENT -->
+<section id="hair" data-screen-label="Home / 02 Hair replacement" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,80px);align-items:center">
+    <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label">02 / Non-surgical hair replacement</p>
+      <h2 class="ba-display" style="font-size:clamp(40px,5vw,60px);max-width:14ch">Natural-looking hair systems, cut specifically for you.</h2>
+      <p style="max-width:520px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">For men experiencing thinning hair, receding hairlines, or hair loss. Each system is color-matched, fitted, cut, and blended into your existing hair.</p>
+      <p style="font:800 clamp(24px,2.6vw,32px)/1.1 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">As low as $5.07 a day.</p>
+      <p style="font-size:15px;line-height:24px;color:var(--ink-muted)">Skip the energy drinks. Get a non-surgical hair system. Starts with a free consultation.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;padding-top:8px">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/2J5WIMODVBVMZAOQKH2UIMHU" hint-size="260px,56px">BOOK A CONSULTATION</x-import>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="Hair%20Replacement.dc.html" hint-size="160px,44px">LEARN MORE →</x-import>
+      </div>
+    </div>
+    <figure style="flex:1 1 440px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+        <div style="position:relative;aspect-ratio:4/5;background:var(--canvas-sunk)"><img src="assets/photos/hs-client1-before.png" alt="Client before his hair system, bald on top with a marked hairline" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"><p class="ba-label" style="position:absolute;left:0;bottom:0;margin:0;padding:10px 14px;background:var(--band);color:var(--on-band)">Before</p></div>
+        <div style="position:relative;aspect-ratio:4/5;background:var(--canvas-sunk)"><img src="assets/photos/hs-client1-after.png" alt="Same client after, full hair system cut into a textured quiff" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"><p class="ba-label" style="position:absolute;left:0;bottom:0;margin:0;padding:10px 14px;background:var(--band);color:var(--on-band)">After</p></div>
+      </div>
+      <figcaption style="font-size:14px;line-height:22px;color:var(--ink-muted)">Full hair system, color-matched and cut in.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 03 THE WORK -->
+<section id="work" data-screen-label="Home / 03 The work" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <p class="ba-label" style="color:var(--on-band);opacity:.78">03 / The work</p>
+        <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(44px,6.2vw,72px)">The work</h2>
+      </div>
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" tone="dark" href="#" hint-size="200px,44px">MORE ON INSTAGRAM</x-import>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(max(160px,calc((100% - 64px)/3)),1fr));gap:clamp(12px,2vw,32px)">
+      <figure style="display:flex;flex-direction:column;gap:12px">
+        <img src="assets/photos/cut-curly-taper.webp" alt="Curly haircut with a taper" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block">
+        <figcaption style="font-size:14px;line-height:22px;color:var(--on-band);opacity:.78">Curly top kept long, tapered at the sides.</figcaption>
+      </figure>
+      <figure style="display:flex;flex-direction:column;gap:12px">
+        <img src="assets/photos/cut-slick-back.webp" alt="Slicked-back haircut, side view" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block">
+        <figcaption style="font-size:14px;line-height:22px;color:var(--on-band);opacity:.78">Slicked back, scissor-cut through the top.</figcaption>
+      </figure>
+      <figure style="display:flex;flex-direction:column;gap:12px">
+        <img src="assets/photos/cut-textured-flow.webp" alt="Textured flow haircut" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block">
+        <figcaption style="font-size:14px;line-height:22px;color:var(--on-band);opacity:.78">Grown-out flow, shaped and thinned.</figcaption>
+      </figure>
+      <figure style="display:flex;flex-direction:column;gap:12px">
+        <img src="assets/photos/cut-side-part.webp" alt="Medium-length side part" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block">
+        <figcaption style="font-size:14px;line-height:22px;color:var(--on-band);opacity:.78">Medium length, side part, clean neckline.</figcaption>
+      </figure>
+      <figure style="display:flex;flex-direction:column;gap:12px">
+        <img src="assets/photos/barber-at-work.webp" alt="Barber blow-drying a client's hair" style="width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 30%;display:block">
+        <figcaption style="font-size:14px;line-height:22px;color:var(--on-band);opacity:.78">Blow-drying to set the shape before styling.</figcaption>
+      </figure>
+      <figure style="display:flex;flex-direction:column;gap:12px">
+        <img src="assets/photos/before-after-flow.webp" alt="Before and after: long hair cut into a textured flow" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block">
+        <figcaption style="font-size:14px;line-height:22px;color:var(--on-band);opacity:.78">Before and after: long hair cut into a textured flow.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 04 THE TEAM -->
+<section id="team" data-screen-label="Home / 04 The team" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 32px">
+      <p class="ba-label" style="flex:1 1 240px">04 / The team</p>
+      <div style="flex:2 1 520px;display:flex;flex-direction:column;gap:24px">
+        <h2 class="ba-display" style="font-size:clamp(44px,6.2vw,72px)">Three barbers</h2>
+        <p style="max-width:680px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">Each of us has the kind of hair we like working on most. Pick by who fits your hair, or book whoever has the time that works.</p>
+      </div>
+    </div>
+    <div data-m-three="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px">
+      <article style="display:flex;flex-direction:column;gap:16px">
+        <div role="img" aria-label="Bryton fitting a hair system on a client at Broken Arrow Barbershop" style="aspect-ratio:4/5;background-color:var(--canvas-sunk);background-image:url('assets/photos/bryton-main.jpg');background-size:cover;background-position:center 30%"></div>
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--ink);padding-top:16px">
+          <h3 style="font:800 clamp(32px,3.4vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase">Bryton</h3>
+          <p class="ba-label">Owner</p>
+          <p style="font-size:17px;line-height:28px;color:var(--ink-muted)">Classic cuts, big changes and thinning hair.</p>
+        </div>
+        <sc-if value="{{ avail.bryton.show }}" hint-placeholder-val="{{ false }}">
+        <a href="{{ avail.bryton.url }}" data-availability="bryton" aria-label="{{ avail.bryton.aria }}" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;min-height:56px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase" style-hover="color:var(--green)">
+          <span><span style="color:var(--ink-muted)">Next opening: </span><span style="font-variant-numeric:tabular-nums">{{ avail.bryton.label }}</span></span>
+          <span>Book with Bryton</span>
+        </a>
+        </sc-if>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="Barber%20-%20Bryton.dc.html" hint-size="190px,44px">SEE BRYTON'S PAGE</x-import>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:16px">
+        <img src="assets/photos/connor-card.jpg" alt="Connor cutting a client’s hair with a comb at Broken Arrow Barbershop" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--ink);padding-top:16px">
+          <h3 style="font:800 clamp(32px,3.4vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase">Connor</h3>
+          <p class="ba-label">Barber</p>
+          <p style="font-size:17px;line-height:28px;color:var(--ink-muted)">Medium to longer hair. Utah County local.</p>
+        </div>
+        <sc-if value="{{ avail.connor.show }}" hint-placeholder-val="{{ false }}">
+        <a href="{{ avail.connor.url }}" data-availability="connor" aria-label="{{ avail.connor.aria }}" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;min-height:56px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase" style-hover="color:var(--green)">
+          <span><span style="color:var(--ink-muted)">Next opening: </span><span style="font-variant-numeric:tabular-nums">{{ avail.connor.label }}</span></span>
+          <span>Book with Connor</span>
+        </a>
+        </sc-if>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="Barber%20-%20Connor.dc.html" hint-size="190px,44px">SEE CONNOR'S PAGE</x-import>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:16px">
+        <a href="Barber%20-%20Elise.dc.html" aria-label="Elise’s page" style="display:block;aspect-ratio:4/5;background-color:var(--canvas-sunk);background-image:url('assets/photos/elise-profile.jpg');background-size:cover;background-position:center"></a>
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--ink);padding-top:16px">
+          <h3 style="font:800 clamp(32px,3.4vw,40px)/1 var(--font-display);letter-spacing:-.03em;text-transform:uppercase">Elise</h3>
+          <p class="ba-label">Barber</p>
+          <p style="font-size:17px;line-height:28px;color:var(--ink-muted)">Curly hair, medium-length and flow cuts.</p>
+        </div>
+        <sc-if value="{{ avail.elise.show }}" hint-placeholder-val="{{ false }}">
+        <a href="{{ avail.elise.url }}" data-availability="elise" aria-label="{{ avail.elise.aria }}" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;min-height:56px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase" style-hover="color:var(--green)">
+          <span><span style="color:var(--ink-muted)">Next opening: </span><span style="font-variant-numeric:tabular-nums">{{ avail.elise.label }}</span></span>
+          <span>Book with Elise</span>
+        </a>
+        </sc-if>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="Barber%20-%20Elise.dc.html" hint-size="190px,44px">SEE ELISE'S PAGE</x-import>
+      </article>
+    </div>
+    <div style="display:flex">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="{{ book }}" hint-size="170px,56px">BOOK NOW</x-import>
+    </div>
+  </div>
+</section>
+
+<!-- 05 GROOMING -->
+<section data-screen-label="Home / 05 Grooming" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+    <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label">05 / Broken Arrow Grooming · <span style="color:var(--green)">Coming soon</span></p>
+      <h2 class="ba-display" style="font-size:clamp(44px,6.2vw,72px)">Matte clay</h2>
+      <p style="max-width:520px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">Our first product. The clay we style with in the shop, now in a jar for home. Buy it online, or pick it up at your next appointment.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="secondary" href="Product%20-%20Matte%20Clay.dc.html" hint-size="200px,56px">SHOP MATTE CLAY</x-import>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="Shop.dc.html" hint-size="150px,44px">SEE THE SHOP</x-import>
+      </div>
+    </div>
+    <a href="Product%20-%20Matte%20Clay.dc.html" style="position:relative;overflow:hidden;flex:1 1 420px;aspect-ratio:1/1;background:var(--canvas-sunk);display:flex;flex-direction:column;justify-content:space-between;padding:20px;text-decoration:none">
+      <img src="assets/photos/clay-scene.png" alt="Broken Arrow Grooming matte clay jar with its box" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    </a>
+  </div>
+</section>
+
+<!-- 06 VISIT -->
+<section id="visit" data-screen-label="Home / 06 Visit" style="background:var(--canvas);border-top:1px solid var(--line)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-wrap:wrap;gap:24px 32px">
+      <p class="ba-label" style="flex:1 1 240px">06 / Visit</p>
+      <div style="flex:2 1 520px;display:flex;flex-direction:column;gap:24px">
+        <h2 class="ba-display" style="font-size:clamp(44px,6.2vw,72px)">Finding the shop</h2>
+        <p style="max-width:680px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">We're in Suite 12 at 375 E 800 S. The shop is tough to find the first time, so please arrive 5–10 minutes early.</p>
+      </div>
+    </div>
+    <div data-m-stack="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:48px 32px">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+          <figure style="display:flex;flex-direction:column;gap:10px"><img src="assets/photos/building-2-entrance.jpg" alt="Glass door marked Building 2, Suite 8–15, beside the 375 address numbers" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:62% 60%"><figcaption style="font-size:14px;line-height:22px;color:var(--ink-muted)">1 / Go in the door marked Building 2, next to the 375 on the wall.</figcaption></figure>
+          <figure style="display:flex;flex-direction:column;gap:10px"><img src="assets/photos/suite-12-door.jpg" alt="Hallway inside Building 2 with the open door to Suite 12 on the right" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:70% 50%"><figcaption style="font-size:14px;line-height:22px;color:var(--ink-muted)">2 / Inside, Suite 12 is on the right, next to Suite 11.</figcaption></figure>
+        </div>
+        <p style="font-size:17px;line-height:28px">375 E 800 S, Suite 12<br>Orem, UT 84097</p>
+        <div style="display:flex;flex-wrap:wrap;gap:24px">
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="https://maps.google.com/?q=375+E+800+S+Suite+12+Orem+UT+84097" hint-size="160px,44px">GET DIRECTIONS</x-import>
+          <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="tel:+18017091280" hint-size="160px,44px">CALL THE SHOP</x-import>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <p class="ba-label">Hours</p>
+        <div style="border-top:2px solid var(--ink)">
+          <sc-for list="{{ hours }}" as="h" hint-placeholder-count="7">
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:28px;font-variant-numeric:tabular-nums;font-weight:{{ h.weight }}">
+              <span>{{ h.day }}</span><span>{{ h.time }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <p style="font-size:14px;line-height:22px;color:var(--ink-muted)">These are our regular hours, and we keep to them. We're a small shop, so on holidays or when several of us are away, hours may change. The booking page always shows our real availability.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <p class="ba-label">Before you come in</p>
+        <div style="border-top:2px solid var(--ink);display:flex;flex-direction:column">
+          <div style="padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px">
+            <h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Walk-ins: by appointment or luck.</h3>
+            <p style="font-size:17px;line-height:28px;color:var(--ink-muted)">Walk-ins are welcome when we have an opening, but we're usually booked. Booking online is the best way to get a spot.</p>
+          </div>
+          <div style="padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px">
+            <h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">No cancellation fees</h3>
+            <p style="font-size:17px;line-height:28px;color:var(--ink-muted)">Just let us know if you can't make it, so someone else can have the spot.</p>
+          </div>
+          <div style="padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px">
+            <h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Men's haircuts</h3>
+            <p style="font-size:17px;line-height:28px;color:var(--ink-muted)">We focus on men's haircuts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 JOURNAL -->
+<section data-screen-label="Home / 07 Journal" style="background:var(--canvas);border-top:1px solid var(--line)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <p class="ba-label">07 / Journal</p>
+        <h2 class="ba-display" style="font-size:clamp(44px,6.2vw,72px)">From the chair</h2>
+      </div>
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" href="Journal.dc.html" hint-size="180px,44px">ALL ARTICLES</x-import>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px">
+      <a href="Journal.dc.html" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:var(--ink)">
+        <img src="assets/photos/cut-curly-taper.webp" alt="" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block">
+        <p class="ba-label">Haircut guides · 5 min</p>
+        <h3 style="font:800 24px/28px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Taper or fade: what's the difference?</h3>
+      </a>
+      <a href="Journal.dc.html" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:var(--ink)">
+        <div role="img" aria-label="Bryton fitting a hair system on a client" style="width:100%;aspect-ratio:3/2;background-color:var(--canvas-sunk);background-image:url('assets/photos/bryton-hair-system.png');background-size:cover;background-position:center 30%"></div>
+        <p class="ba-label">Hair systems · 7 min</p>
+        <h3 style="font:800 24px/28px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">What a hair system actually is</h3>
+      </a>
+      <a href="Journal.dc.html" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:var(--ink)">
+        <img src="assets/photos/before-after-flow.webp" alt="" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block">
+        <p class="ba-label">Transformations · Video</p>
+        <h3 style="font:800 24px/28px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">Grown out to shaped: a filmed cut</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK BAND -->
+<section data-screen-label="Home / Book band" style="background:var(--band);color:var(--on-band);border-bottom:1px solid var(--line-strong)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(48px,7vw,88px);max-width:8ch">Book a haircut.</h2>
+      <p style="font-size:clamp(17px,1.6vw,20px);line-height:1.7;opacity:.78">Pick your barber, service and time. The booking page shows real availability.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center">
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" tone="dark" href="tel:+18017091280" hint-size="160px,44px">CALL THE SHOP</x-import>
+      <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="{{ book }}" hint-size="170px,56px">BOOK NOW</x-import>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" show-award="{{ false }}" hint-size="100%,360px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  // Live availability from the Cloudflare Worker (no Square credentials in the browser).
+  state = { availability: {}, w: typeof window !== 'undefined' ? window.innerWidth : 1440 };
+  componentDidMount() { this.goHash(); window.addEventListener('hashchange', this.goHash); this.loadAvailability(); this.onR = () => this.setState({ w: window.innerWidth }); window.addEventListener('resize', this.onR); }
+  goHash = () => { const id = decodeURIComponent((location.hash || '').slice(1)); if (!id) return; let n = 0; const t = () => { const el = document.getElementById(id); const hd = document.querySelector('header[data-hdr="site"]'); if (el) { window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - (hd ? hd.offsetHeight : 0)); if (n++ < 6) setTimeout(t, 250); } else if (n++ < 20) setTimeout(t, 150); }; setTimeout(t, 50); };
+  componentWillUnmount() { window.removeEventListener('hashchange', this.goHash); this.dead = true; if (this.ctrl) this.ctrl.abort(); window.removeEventListener('resize', this.onR); }
+  async loadAvailability() {
+    const ctrl = this.ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 3000);
+    try {
+      const res = await fetch('https://barberavalibility.webberbryton.workers.dev/availability', { signal: ctrl.signal, headers: { Accept: 'application/json' } });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      clearTimeout(timer);
+      if (this.dead) return;
+      const clean = (s) => {
+        if (!s || typeof s.label !== 'string' || !s.label.trim() || typeof s.bookUrl !== 'string') return null;
+        try { const u = new URL(s.bookUrl); if (u.protocol !== 'https:') return null; } catch (e) { return null; }
+        return { label: s.label.trim(), url: s.bookUrl, barber: typeof s.barber === 'string' ? s.barber.trim() : '' };
+      };
+      const pb = (data && data.perBarber) || {};
+      this.setState({ availability: { shop: clean(data && data.next), bryton: clean(pb.Bryton), connor: clean(pb.Connor), elise: clean(pb.Elise) } });
+    } catch (e) {
+      clearTimeout(timer);
+      if (!this.dead) this.setState({ availability: {} });
+    }
+  }
+  renderVals() {
+    const book = 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services';
+    const urls = {
+      shop: book,
+      bryton: 'https://book.squareup.com/appointments/vmqe6cigusj6yl/location/LFBJAQ8MMHY0Z/services',
+      connor: 'https://book.squareup.com/appointments/cnl05yngyr8vhx/location/LFBJAQ8MMHY0Z/services',
+      elise: 'https://book.squareup.com/appointments/wkoxhle5mmhzak/location/LFBJAQ8MMHY0Z/services',
+    };
+    const hours = [
+      ['Tuesday', '10 AM – 6 PM', 2, '6 PM'], ['Wednesday', '10 AM – 7:30 PM', 3, '7:30 PM'], ['Thursday', '10 AM – 7:30 PM', 4, '7:30 PM'],
+      ['Friday', '10 AM – 7:30 PM', 5, '7:30 PM'], ['Saturday', '10 AM – 5:30 PM', 6, '5:30 PM'], ['Sunday', 'Closed', 0], ['Monday', 'Closed', 1],
+    ];
+    const d = new Date().getDay();
+    const t = hours.find(h => h[2] === d);
+    const a = this.state.availability;
+    const mk = (k, who) => {
+      const s = a[k];
+      if (!s) return { show: false, label: '', url: urls[k], aria: '' };
+      const label = k === 'shop' && s.barber ? s.label + ' with ' + s.barber : s.label;
+      return { show: true, label, url: s.url, aria: 'Next opening' + (who ? ' with ' + who : '') + ': ' + label + '. Opens booking.' };
+    };
+    return {
+      book,
+      bigBtn: { style: { minHeight: 68, padding: '0 56px', fontSize: 15, ...(this.state.w < 640 ? { width: '100%' } : {}) } },
+      fhMax: this.state.w < 640 ? '200px' : '220px', fhPad: this.state.w < 640 ? '10px 14px' : '12px 16px', fhFont: this.state.w < 640 ? '14px/17px' : '15px/18px',
+      heroPadTop: this.state.w < 640 ? '120px' : 'clamp(48px,8vw,96px)',
+      availMl: this.state.w < 640 ? '0' : 'auto', availPad: this.state.w < 640 ? '16px' : '24px',
+      avail: { shop: mk('shop'), bryton: mk('bryton', 'Bryton'), connor: mk('connor', 'Connor'), elise: mk('elise', 'Elise') },
+      cartCount: 0,
+      todayLine: t && t[3] ? 'Open today until ' + t[3] : 'Closed today · Book online any time',
+      hours: hours.map(h => ({ day: h[0], time: h[1], weight: h[2] === d ? 600 : 400 })),
+      services: [
+        { name: 'Haircut + Beard', price: '$65', description: 'Refresh your current style with our Classic Haircut, plus a beard trim and shaping for a clean, balanced look. Includes a hair wash, haircut, beard trim, neck shave, and hot towel.', bookHref: 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/SMNS7RO5ETWVT5AYBLLPYKLR' },
+        { name: 'Signature Haircut', price: '$65', description: 'Our most personalized haircut experience, with extra time to discuss your goals and refine the details. Includes a hair wash, haircut, neck shave, and hot towel. Recommended for your first visit, a change in style, or long scissor haircuts.', bookHref: 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/COXNLW42DT56FAK7ZESHNUVQ' },
+        { name: 'Classic Haircut', price: '$40', description: 'Refresh your current style with a haircut focused on maintaining its shape and cleaning up grown-out length. Includes a hair wash, haircut, neck shave, and hot towel.', bookHref: 'https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services/7T6J5FCSOTULAKKXBJQXL2H5' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

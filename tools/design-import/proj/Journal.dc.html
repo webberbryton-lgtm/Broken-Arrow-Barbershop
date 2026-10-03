@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Journal · Broken Arrow Barbershop</title>
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" active="journal" hint-size="100%,92px"></dc-import>
+
+<section data-screen-label="Journal / Header" style="background:var(--canvas)">
+  <div data-m-stackrow="" style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px) 40px;display:flex;flex-wrap:wrap;gap:24px 32px">
+    <p class="ba-label" style="flex:1 1 240px">Journal</p>
+    <div style="flex:2 1 520px;display:flex;flex-direction:column;gap:24px">
+      <h1 class="ba-display" style="font-size:min(clamp(56px,8vw,96px),11vw);letter-spacing:-.045em">From the chair</h1>
+      <p style="max-width:680px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;text-wrap:pretty">Haircut guides, hair system questions answered, filmed cuts and shop news. Written by the barbers who do the work.</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Journal / Featured" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,5vw,64px) 64px">
+    <a href="Blog%20-%20Best%20of%20Utah%20Valley%202026.dc.html" style="display:flex;flex-wrap:wrap;gap:32px 48px;align-items:center;text-decoration:none;color:var(--ink);border-top:2px solid var(--ink);padding-top:32px">
+      <img src="assets/photos/shop-interior.jpg" alt="Broken Arrow Barbershop in Orem, Utah" style="flex:1.3 1 440px;width:100%;min-width:0;aspect-ratio:16/10;object-fit:cover;display:block">
+      <div style="flex:1 1 340px;display:flex;flex-direction:column;gap:18px">
+        <p class="ba-label">Featured · Shop news · 2026 Best of Utah Valley</p>
+        <h2 class="ba-display" style="font-size:clamp(36px,4.4vw,56px)">Broken Arrow named a 2026 Best of Utah Valley barbershop</h2>
+        <p style="font-size:17px;line-height:28px;color:var(--ink-muted);max-width:480px">Daily Herald Readers' Choice. Our third time being recognized, a few months into our new Orem location.</p>
+        <p class="ba-label" style="text-decoration:underline;text-decoration-color:var(--green);text-decoration-thickness:2px;text-underline-offset:6px">Read the story</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section data-screen-label="Journal / Posts" style="background:var(--canvas)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,5vw,64px) clamp(48px,8vw,96px);display:flex;flex-direction:column;gap:40px">
+    <div role="tablist" style="display:flex;flex-wrap:wrap;gap:4px 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px 0">
+      <sc-for list="{{ topics }}" as="t" hint-placeholder-count="6">
+        <button role="tab" aria-selected="{{ t.selected }}" onClick="{{ t.pick }}" style="background:none;border:0;border-bottom:2px solid {{ t.border }};padding:0;min-height:44px;cursor:pointer;font:600 13px/16px var(--font-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink)" style-hover="color:var(--green)">{{ t.label }}</button>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:56px 32px">
+      <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
+        <a href="{{ p.href }}" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:var(--ink)">
+          <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ false }}">
+            <div role="img" aria-label="{{ p.alt }}" style="width:100%;aspect-ratio:3/2;background-color:var(--canvas-sunk);background-image:{{ p.bg }};background-size:cover;background-position:center"></div>
+          </sc-if>
+          <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ true }}">
+            <div style="width:100%;aspect-ratio:3/2;background:var(--canvas-sunk);display:flex;align-items:flex-end;padding:14px"><p class="ba-label" style="color:var(--ink-muted)">{{ p.photo }}</p></div>
+          </sc-if>
+          <p class="ba-label">{{ p.meta }}</p>
+          <h3 style="font:800 24px/28px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ p.title }}</h3>
+          <p style="font-size:17px;line-height:28px;color:var(--ink-muted)">{{ p.dek }}</p>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Journal / Book band" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(48px,7vw,88px);max-width:8ch">Book a haircut.</h2>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="https://book.squareup.com/appointments/a9bstwwcb18jn4/location/LFBJAQ8MMHY0Z/services" hint-size="170px,56px">BOOK NOW</x-import>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,360px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { topic: 'all' };
+  renderVals() {
+    const posts = [
+      ['guides', 'Haircut guides', '4 min', 'Why your haircut looks bulky, and what can help', 'Puffy sides and a wide shape usually come down to the cut, or the length.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Bulky%20Haircut.dc.html'],
+      ['guides', 'Haircut guides', '3 min', 'Looking for a scissor haircut in Orem? Here’s what to book', 'Why we recommend the Signature Haircut for scissor cuts, and what to tell your barber.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Scissor%20Haircut%20Orem.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'What is a scissor cut, and who is it for?', 'Scissors vs clippers, who a scissor cut suits, and what to book.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Scissor%20Cut.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'Why longer men’s hair still needs regular haircuts', 'What a regular cut does for long hair and how often to come in.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Longer%20Hair%20Haircuts.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'Signs it’s time to change your hairstyle', 'Eight signs your haircut isn’t working anymore, and how to make the change.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Time%20to%20Change%20Your%20Hairstyle.dc.html'],
+      ['guides', 'Haircut guides', '5 min', 'How to choose a haircut that fits your daily routine', 'Morning time, hats, workouts, your job and how often you want to come in.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Haircut%20for%20Your%20Routine.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'What to book when you want a completely new hairstyle', 'Which service to book, what to bring, and what to expect with a big change.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20New%20Hairstyle.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'Middle-part haircuts in Orem, Utah', 'Middle parts at every length, and how to find where your hair wants to part.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Middle%20Part%20Orem.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'Modern mullet haircuts in Orem, Utah', 'How the modern mullet differs from the ’80s version, and how to wear it.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Modern%20Mullet%20Orem.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'Low taper haircuts in Orem, Utah', 'What a low taper is, how it differs from a fade, and who it suits.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Low%20Taper%20Orem.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'Curtains and the middle part', 'How curtains frame the face, and why your part doesn’t need to be perfectly centered.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Curtains%20Middle%20Part.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'Textured fringe haircuts in Orem', 'Who it suits, why most go wrong, and how to style it.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Textured%20Fringe%20Orem.dc.html'],
+      ['guides', 'Haircut guides', '5 min', 'Haircuts for receding hairlines in Orem', 'How we choose the right shape, what we avoid, and how clients style it.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Receding%20Hairline%20Haircuts.dc.html'],
+      ['guides', 'Haircut guides', '5 min', 'Men’s long haircuts in Orem', 'Keeping your length without losing shape, and when to book the Signature.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Long%20Haircuts%20Orem.dc.html'],
+      ['news', 'Shop guide', '5 min', 'Inside Broken Arrow Barbershop in Orem: what to expect', 'The shop, the atmosphere, where to park and how booking works.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Inside%20the%20Shop.dc.html'],
+      ['news', 'Shop guide', '4 min', 'Looking for a new barber in Orem? Meet the team', 'Bryton, Connor and Elise: what each does best and who to book.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Meet%20the%20Team.dc.html'],
+      ['guides', 'Haircut guides', '4 min', 'Classic vs Signature Haircut at Broken Arrow: which should you choose?', 'Prices, appointment lengths, what’s included and who each suits.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Classic%20vs%20Signature.dc.html'],
+      ['guides', 'Haircut guides', '5 min', 'Wedding and groom haircuts: plan it before the week of', 'Why not to get your first cut the day before, when to book, and which service to choose.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Wedding%20Haircut.dc.html'],
+      ['guides', 'Haircut guides', '5 min', 'Why your haircut needs more than 15 minutes', 'Most shops rush a 30-minute appointment. Here’s what the Signature Haircut does with the extra time.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Signature%20Haircut.dc.html'],
+      ['guides', 'Haircut guides', '5 min', 'Haircut names are terrible. Bring a photo.', 'Why “a trim” or “a fade” means something different to everyone, and why a picture fixes it.', 'assets/photos/cut-side-part.webp', '', 'Local%20Guide%20-%20Haircut%20Names.dc.html'],
+      ['guides', 'Haircut guides', '9 min', 'How to find the perfect hairstyle for your face, hair type and lifestyle', 'Face shape, hair type, reference photos, the consultation, and how much styling you’ll really do.', 'assets/photos/guide-discuss.jpg', '', 'Local%20Guide%20-%20Find%20Your%20Hairstyle.dc.html'],
+      ['systems', 'Hair systems', '8 min', 'Looking for the Toupee Queen in Utah? Men’s Hair Systems in Orem', 'Men’s hair systems in Utah County, designed around the finished haircut.', 'assets/photos/hs-client2-after.png', '', 'Local%20Guide%20-%20Toupee%20Queen%20Utah.dc.html'],
+      ['systems', 'Hair systems', '6 min', 'Toupee vs hair system: what’s the difference?', 'Why old toupees looked fake, what a modern men’s hair system is, and what it costs in Orem.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Toupee%20vs%20Hair%20System.dc.html'],
+      ['guides', 'Local guide', '5 min', 'How to choose the right barbershop in Orem', 'What to look for, what to ask, and the red flags to avoid.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Choose%20a%20Barbershop%20Orem.dc.html'],
+      ['guides', 'Local guide', '5 min', 'Men’s haircuts in Orem, Utah', 'Fades, tapers, scissor cuts, longer styles and beard trims, with prices and how to pick.', 'assets/photos/bryton-cut-slick.jpg', '', 'Local%20Guide%20-%20Mens%20Haircuts%20Orem.dc.html'],
+      ['guides', 'Local guide', '4 min', 'A barber near BYU and UVU', 'How far we are from campus, when we’re open late, and who to book.', 'assets/photos/shop-wide.webp', '', 'Local%20Guide%20-%20Barber%20Near%20BYU%20and%20UVU.dc.html'],
+      ['guides', 'Haircut guides', '5 min', 'Fade haircuts in Orem: which one to ask for', 'Taper, low, mid, high and skin fades, and which suits your hair.', 'assets/photos/bryton-cut-fade-beard.jpg', '', 'Local%20Guide%20-%20Fade%20Haircut%20Orem.dc.html'],
+      ['systems', 'Hair systems', '6 min', 'Non-surgical hair replacement in Utah: what it is and what it costs', 'Non-surgical hair replacement, real prices, and how long a system lasts.', 'assets/photos/hs-client1-after.png', '', 'Local%20Guide%20-%20Hair%20System%20Utah.dc.html'],
+      ['guides', 'Haircut guides', '5 min', 'Haircuts for thinning hair and receding hairlines', 'What to ask for, what to avoid, and when a haircut isn’t enough.', 'assets/photos/bryton-cut-pomp-beard.jpg', '', 'Local%20Guide%20-%20Thinning%20Hair.dc.html'],
+      ['news', 'Shop news', '4 min', 'Award-winning barbering in Orem, Utah', 'Our Daily Herald awards, who gives them, and what our clients say.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Award%20Winning%20Barbershop.dc.html'],
+      ['news', 'Shop news', '4 min', 'Why we’re making our own products', 'Nothing on the shelf was good enough, so we’re building a complete line, tested in the chair.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Why%20We%20Make%20Our%20Own%20Products.dc.html'],
+      ['news', 'Shop news', '4 min', 'Why the same barber every time matters', 'We aren’t a chain. Why a small shop and a barber who knows your hair make a better haircut.', 'assets/photos/connor-wide.jpg', '', 'Local%20Guide%20-%20Same%20Barber%20Every%20Time.dc.html'],
+      ['news', 'Our story', '8 min', 'The story of Broken Arrow: from Payson to Orem', 'How a small shop in Payson became the Orem shop, and how Bryton, Connor and Elise came together.', 'assets/photos/payson-storefront.png', '', 'Blog%20-%20Our%20Story.dc.html'],
+      ['guides', 'Shop guide', '6 min', 'Looking for a barber in Orem, Utah? Meet Broken Arrow', 'Who we are, what we offer, the barbers, and what to expect at your first appointment.', 'assets/photos/barber-at-work.webp', '', 'Blog%20-%20Barber%20in%20Orem%20Utah.dc.html'],
+      ['guides', 'Haircut guides', '5 min', 'Taper or fade: what\'s the difference?', 'A taper shortens gradually toward the neckline. A fade goes down to skin. How to tell which one you want.', 'assets/photos/cut-curly-taper.webp', '', 'Local%20Guide%20-%20Taper%20vs%20Fade.dc.html'],
+      ['systems', 'Hair systems', '7 min', 'What a hair system actually is', 'The base, the hair, how it\'s attached, and what the first year looks like.', 'assets/photos/bryton-hair-system.png', '', 'Local%20Guide%20-%20What%20Is%20a%20Hair%20System.dc.html'],
+      ['howto', 'Product how-tos', '5 min', 'Why your hair falls flat after you style it', 'The cut, the prep and the product, and a five-step routine that holds.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Hair%20Falls%20Flat.dc.html'],
+      ['howto', 'Product how-tos', '3 min', 'How much matte clay to use', 'Less than you think. A fingertip, dry hair, back to front.', 'assets/photos/connor-wide.jpg', '', 'Local%20Guide%20-%20Matte%20Clay%20How%20To.dc.html'],
+      ['guides', 'Haircut guides', '6 min', 'What to tell your barber', 'Photos help. So does saying what you don\'t like about your hair now.', 'assets/photos/connor-card.jpg', '', 'Local%20Guide%20-%20What%20to%20Tell%20Your%20Barber.dc.html'],
+      ['systems', 'Hair systems', '4 min', 'Doing your own maintenance at home', 'What it involves, how long it takes, and when to come in instead.', 'assets/photos/wash-rinse.jpg', '', 'Local%20Guide%20-%20Hair%20System%20Maintenance.dc.html'],
+      ['guides', 'Haircut guides', '6 min', 'Growing your hair out: how shaping appointments help', 'Getting through the awkward stages, what to keep trimming, and longer styles to grow into.', 'assets/photos/shop-interior.jpg', '', 'Local%20Guide%20-%20Growing%20Hair%20Out.dc.html'],
+    ];
+    const topics = [['all', 'All'], ['guides', 'Haircut guides'], ['systems', 'Hair systems'], ['transformations', 'Transformations'], ['howto', 'Product how-tos'], ['news', 'Shop news']];
+    const t = this.state.topic;
+    return {
+      topics: topics.map(([id, label]) => ({ label, selected: id === t, border: id === t ? 'var(--green)' : 'transparent', pick: () => this.setState({ topic: id }) })),
+      posts: posts.filter(p => t === 'all' || p[0] === t).map(p => ({ meta: p[1] + ' · ' + p[2], title: p[3], dek: p[4], bg: p[5] ? 'url("' + p[5] + '")' : 'none', alt: p[3], hasImg: !!p[5], noImg: !p[5], photo: p[6] || '', href: p[7] || '#' })),
+    };
+  }
+}
+</script>
+</body>
+</html>

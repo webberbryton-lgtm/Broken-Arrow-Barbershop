@@ -1,0 +1,10 @@
+node_modules/
+package-lock.json
+theme/
+rendered/
+preview/
+shots/
+dctpl.json
+__pycache__/
+proj/assets/photos/
+proj/_ds/*/fonts/

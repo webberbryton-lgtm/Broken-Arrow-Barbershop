@@ -1,0 +1,23 @@
+{%- comment -%}
+  Email signup that goes straight into Shopify's customer list with marketing consent.
+  Usage: {% render 'email-signup', tag: 'grooming-notify', button: 'Notify me' %}
+  Tags used on the site:
+    grooming-notify  → shop "More on the way" / "Get notified" (Shop page)
+    newsletter       → footer signup
+{%- endcomment -%}
+
+{%- assign tag = tag | default: 'newsletter' -%}
+{%- assign button = button | default: 'Sign up' -%}
+
+{%- form 'customer', class: 'ba-signup', id: 'signup-{{ tag }}' -%}
+  {%- if form.posted_successfully? -%}
+    <p class="ba-label" role="status">Thanks. We’ll email you when it’s in.</p>
+  {%- else -%}
+    {{ form.errors | default_errors }}
+    <input type="hidden" name="contact[tags]" value="newsletter,{{ tag }}">
+    <input type="hidden" name="contact[accepts_marketing]" value="true">
+    <label class="ba-field-label" for="signup-email-{{ tag }}">Email</label>
+    <input id="signup-email-{{ tag }}" type="email" name="contact[email]" autocomplete="email" required>
+    <button class="ba-btn" type="submit">{{ button }}</button>
+  {%- endif -%}
+{%- endform -%}

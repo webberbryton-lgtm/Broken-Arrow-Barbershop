@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Barber Education · Courses and Classes · Broken Arrow, Orem</title>
+<meta name="description" content="Online barbering courses and hands-on classes from Broken Arrow Education, built by experienced barbers and educators in Orem, Utah.">
+<link rel="stylesheet" href="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/styles.css">
+<script src="_ds/broken-arrow-design-system-2-3f23b63e-0e93-429d-8b89-f18cee7a4a7d/_ds_bundle.js"></script>
+<link rel="stylesheet" href="mobile.css">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}body{margin:0;overflow-x:clip;background:var(--canvas);color:var(--ink);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul{margin:0}
+a{color:var(--ink);text-decoration-color:var(--green);text-underline-offset:4px}
+a:hover{color:var(--green)}
+</style>
+</helmet>
+
+<dc-import name="SiteHeader" active="education" hint-size="100%,92px"></dc-import>
+
+<section data-screen-label="Education / Hero" style="background:var(--band);color:var(--on-band)">
+  <div data-m-edhero="" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,80px);align-items:center">
+    <div style="flex:1.2 1 460px;display:flex;flex-direction:column;gap:24px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Broken Arrow Education</p>
+      <h1 class="ba-display" style="color:var(--on-band);font-size:min(clamp(52px,8vw,104px),11vw);letter-spacing:-.045em;max-width:11ch">Learn how we cut.</h1>
+      <p style="max-width:560px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;opacity:.85;text-wrap:pretty">Learn from Broken Arrow Education. Built by experienced barbers and educators, our online courses and hands-on classes teach the techniques, systems, and skills we use behind the chair every day.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="#notify" hint-size="240px,56px">GET NOTIFIED</x-import>
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" variant="text" tone="dark" href="#classes" hint-size="200px,44px">IN-PERSON CLASSES</x-import>
+      </div>
+    </div>
+    <div role="img" aria-label="Bryton teaching a class of barbers, notes and a slide on word of mouth behind him" style="flex:1 1 380px;aspect-ratio:3/2;background-color:#222326;background-image:url('assets/photos/bryton-class-1.jpg');background-size:cover;background-position:center"></div>
+  </div>
+</section>
+
+<section data-screen-label="Education / What you'll learn" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-wrap:wrap;gap:24px 32px;align-items:flex-end">
+    <div style="flex:2 1 480px;display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label">01 / What you’ll learn</p>
+      <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px);max-width:14ch">What we teach</h2>
+    </div>
+    <p style="flex:1 1 320px;font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">The same techniques and systems we use behind the chair every day, broken down so you can use them in your own chair.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 32px;border-top:2px solid var(--ink)">
+    <sc-for list="{{ topics }}" as="t" hint-placeholder-count="8">
+      <div style="display:flex;flex-direction:column;gap:8px;padding:24px 0;border-bottom:1px solid var(--line)">
+        <p class="ba-label" style="color:var(--ink-muted)">{{ t.n }}</p>
+        <h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ t.t }}</h3>
+        <p style="font-size:15px;line-height:24px;color:var(--ink-muted);text-wrap:pretty">{{ t.b }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Education / Who it's for" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+    <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">02 / Who it’s for</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,5vw,64px);max-width:10ch">Wherever you are in your career</h2>
+    </div>
+    <ul style="flex:2 1 520px;max-width:760px;list-style:none;padding:0;display:flex;flex-direction:column;border-top:2px solid var(--on-band)">
+      <sc-for list="{{ who }}" as="w" hint-placeholder-count="4">
+        <li style="display:flex;flex-direction:column;gap:6px;padding:22px 0;border-bottom:1px solid var(--line-strong)"><p style="font:800 22px/1.15 var(--font-display);letter-spacing:-.02em;text-transform:uppercase;color:var(--on-band)">{{ w.t }}</p><p style="font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">{{ w.b }}</p></li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<section data-screen-label="Education / Formats" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <p class="ba-label">03 / Two ways to learn</p>
+    <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px)">Online or in the shop</h2>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:16px">
+    <div style="flex:1 1 340px;display:flex;flex-direction:column;background:var(--canvas-raised);border:1px solid var(--line)">
+      <div style="padding:24px;background:var(--band);color:var(--on-band)"><p class="ba-label" style="color:var(--on-band);opacity:.78">Online courses</p><p class="ba-display" style="color:var(--on-band);font-size:clamp(28px,3vw,40px)">At your own pace</p></div>
+      <div style="padding:14px 24px;border-top:1px solid var(--line);font-size:17px;line-height:26px">Watch from anywhere, any time</div>
+      <div style="padding:14px 24px;border-top:1px solid var(--line);font-size:17px;line-height:26px">Close-up, step-by-step technique</div>
+      <div style="padding:14px 24px;border-top:1px solid var(--line);font-size:17px;line-height:26px">Rewatch as often as you need</div>
+      <div style="padding:20px 24px;border-top:1px solid var(--line);margin-top:auto"><a href="#courses" class="ba-label">See courses →</a></div>
+    </div>
+    <div style="flex:1 1 340px;display:flex;flex-direction:column;background:var(--canvas-raised);border:1px solid var(--line)">
+      <div style="padding:24px;background:var(--band);color:var(--on-band)"><p class="ba-label" style="color:var(--on-band);opacity:.78">In-person classes</p><p class="ba-display" style="color:var(--on-band);font-size:clamp(28px,3vw,40px)">Hands-on in Orem</p></div>
+      <div style="padding:14px 24px;border-top:1px solid var(--line);font-size:17px;line-height:26px">Small groups at the shop</div>
+      <div style="padding:14px 24px;border-top:1px solid var(--line);font-size:17px;line-height:26px">Watch a live demo, then cut</div>
+      <div style="padding:14px 24px;border-top:1px solid var(--line);font-size:17px;line-height:26px">Feedback from our educators as you work</div>
+      <div style="padding:20px 24px;border-top:1px solid var(--line);margin-top:auto"><a href="#classes" class="ba-label">See classes →</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="courses" data-screen-label="Education / Courses" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-direction:column;gap:32px">
+  <div style="display:flex;flex-wrap:wrap;gap:24px 32px;align-items:flex-end">
+    <div style="flex:2 1 480px;display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label">04 / Online courses</p>
+      <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px)">Coming soon</h2>
+    </div>
+    <p style="flex:1 1 320px;font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">Learn at your own pace. The first courses are in the works. Sign up below to hear when they launch.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px">
+    <sc-for list="{{ courses }}" as="c" hint-placeholder-count="3">
+      <div style="display:flex;flex-direction:column;background:var(--canvas-raised);border:1px solid var(--line)">
+        <div style="aspect-ratio:16/10;background:var(--canvas-sunk);display:flex;align-items:flex-end;padding:14px"><p class="ba-label" style="color:var(--ink-muted)">Course image</p></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding:20px">
+          <p class="ba-label" style="color:var(--green)">Coming soon</p>
+          <h3 style="font:800 22px/26px var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ c.t }}</h3>
+          <p style="font-size:15px;line-height:24px;color:var(--ink-muted);text-wrap:pretty">{{ c.b }}</p>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="classes" data-screen-label="Education / Classes" style="background:var(--canvas-sunk)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px 48px">
+    <div style="flex:1 1 260px;display:flex;flex-direction:column;gap:16px">
+      <p class="ba-label">05 / In-person classes</p>
+      <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px);max-width:10ch">At the shop in Orem</h2>
+    </div>
+    <div style="flex:2 1 520px;max-width:760px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:12px;background:var(--canvas);border:1px solid var(--line);padding:28px">
+        <p class="ba-label">Upcoming classes</p>
+        <p style="font:800 clamp(24px,2.6vw,32px)/1.1 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">No classes scheduled yet</p>
+        <p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">Small, hands-on classes at Broken Arrow in Orem. Dates, topics and prices will be posted here first. Sign up to get notified.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Education / Private training" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px;border-bottom:1px solid var(--line)">
+  <div style="flex:1 1 480px;display:flex;flex-direction:column;gap:16px;max-width:680px">
+    <p class="ba-label">06 / Private and shop training</p>
+    <h2 class="ba-display" style="font-size:clamp(40px,5vw,64px)">Training for your team</h2>
+    <p style="font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">Interested in a private class for yourself or training for your shop? Get in touch and tell us what you’re looking for.</p>
+  </div>
+  <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" href="Contact.dc.html" hint-size="200px,56px">CONTACT US</x-import>
+</section>
+
+<section data-screen-label="Education / FAQ" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px 32px">
+  <div style="flex:1 1 240px;display:flex;flex-direction:column;gap:16px"><p class="ba-label">Questions</p><h2 class="ba-display" style="font-size:clamp(40px,5vw,60px)">FAQ</h2></div>
+  <div style="flex:2 1 520px;display:flex;flex-direction:column;border-top:2px solid var(--ink)">
+    <sc-for list="{{ faq }}" as="q" hint-placeholder-count="5">
+      <details style="border-bottom:1px solid var(--line)">
+        <summary style="list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;padding:20px 0;font:800 clamp(18px,2vw,22px)/1.2 var(--font-display);letter-spacing:-.02em;text-transform:uppercase">{{ q.q }}<span aria-hidden="true" style="font:600 22px/1 var(--font-sans)">+</span></summary>
+        <p style="padding:0 0 24px;max-width:640px;font-size:17px;line-height:28px;color:var(--ink-muted);text-wrap:pretty">{{ q.a }}</p>
+      </details>
+    </sc-for>
+  </div>
+</section>
+
+<section id="notify" data-screen-label="Education / Notify" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:16px;max-width:560px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Be the first to know</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,5.6vw,72px)">Get notified</h2>
+      <p style="font-size:17px;line-height:28px;opacity:.85">We’ll email you when courses launch and class dates are set.</p>
+    </div>
+    <sc-if value="{{ done }}" hint-placeholder-val="{{ false }}"><p class="ba-label" style="color:var(--on-band)">You’re on the list.</p></sc-if>
+    <sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submit }}" noValidate="{{ true }}" style="flex:1 1 380px;max-width:520px;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start">
+        <input type="email" aria-label="Email" placeholder="Email address" value="{{ email }}" onChange="{{ onEmail }}" style="flex:1 1 240px;min-height:56px;padding:0 16px;background:var(--canvas);color:var(--ink);border:1px solid var(--line-strong);border-radius:2px;font:400 17px/24px var(--font-sans)">
+        <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" type="submit" tone="dark" hint-size="160px,56px">NOTIFY ME</x-import>
+        <sc-if value="{{ err }}" hint-placeholder-val="{{ false }}"><p style="flex:1 1 100%;font-size:15px;line-height:24px;color:var(--on-band)">{{ err }}</p></sc-if>
+      </form>
+    </sc-if>
+  </div>
+</section>
+
+<section data-screen-label="Education / Apprenticeship" style="background:var(--band);color:var(--on-band)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:640px">
+      <p class="ba-label" style="color:var(--on-band);opacity:.78">Apprenticeship · No current openings</p>
+      <h2 class="ba-display" style="color:var(--on-band);font-size:clamp(40px,5.6vw,72px)">Train to hire. Hire to train.</h2>
+      <p style="font-size:17px;line-height:28px;opacity:.85;text-wrap:pretty">We train a few apprentices toward their Utah barber license, with the goal of joining our team. Apply now and we’ll reach out when a spot opens.</p>
+    </div>
+    <x-import component-from-global-scope="BrokenArrowDesignSystem_3f23b6.Button" tone="dark" href="Apprenticeship.dc.html" hint-size="240px,56px">ABOUT THE APPRENTICESHIP</x-import>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { email: '', err: '', done: false };
+  submit = e => { e.preventDefault(); if (!/^\S+@\S+\.\S+$/.test(this.state.email)) return this.setState({ err: 'Add an email address like name@example.com.' }); this.setState({ done: true }); /* TODO: Shopify email-signup, tag education-notify */ };
+  renderVals() {
+    return {
+      topics: [
+        ['Consultations', 'Reading head shape, growth patterns and hairline, and recommending a cut with confidence.'],
+        ['Fades and tapers', 'Clean blends at every height, from a subtle taper to a skin fade.'],
+        ['Scissor work', 'Scissor-over-comb, texturizing and shaping longer men’s hair.'],
+        ['Textured and modern cuts', 'Crops, flow cuts and textured styles that grow out well.'],
+        ['Curly hair', 'Cutting with the curl pattern, not against it.'],
+        ['Beard work', 'Shaping and lining beards so they match the haircut.'],
+        ['Hair systems', 'Color matching, fitting, cutting in and maintaining non-surgical hair replacement.'],
+        ['Building your book', 'Photos, content and client relationships that bring people back.'],
+      ].map(([t, b], i) => ({ n: String(i + 1).padStart(2, '0'), t, b })),
+      who: [
+        ['Barber students', 'Get ahead of what school covers, with real shop technique.'],
+        ['Newly licensed barbers', 'Build speed, consistency and confidence behind the chair.'],
+        ['Experienced barbers', 'Add new skills, including hair systems, to what you already offer.'],
+        ['Shop owners', 'Train your team on shared systems and standards.'],
+      ].map(([t, b]) => ({ t, b })),
+      faq: [
+        ['Do I need a license to take a course?', 'Details coming soon.'],
+        ['Are online courses self-paced?', 'Yes. Watch any time and rewatch as often as you like.'],
+        ['Where are in-person classes held?', 'At Broken Arrow Barbershop, 375 E 800 S, Suite 12, Orem, Utah.'],
+        ['How big are in-person classes?', 'We keep classes small so everyone gets hands-on time. Exact sizes will be listed with each class.'],
+        ['How much do courses and classes cost?', 'Prices will be posted with each course and class. Sign up to be notified.'],
+      ].map(([q, a]) => ({ q, a })),
+      courses: [
+        ['Course title', 'What the course covers and who it’s for. Details coming soon.'],
+        ['Course title', 'What the course covers and who it’s for. Details coming soon.'],
+        ['Course title', 'What the course covers and who it’s for. Details coming soon.'],
+      ].map(([t, b]) => ({ t, b })),
+      email: this.state.email, err: this.state.err, done: this.state.done, notDone: !this.state.done,
+      onEmail: e => this.setState({ email: e.target.value, err: '' }), submit: this.submit,
+    };
+  }
+}
+</script>
+</body>
+</html>
