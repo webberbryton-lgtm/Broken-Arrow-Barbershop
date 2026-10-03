@@ -10,8 +10,9 @@ The Horizon templates (cart, collection, search, blog, account and so on) still 
 
 ## 1. Pages
 
-In **Online Store → Pages**, create one page per row below. Set the handle under *Search engine listing*, then pick
-the template under *Theme template*. The page body can stay empty: the content comes from the theme.
+All pages below already exist in **Online Store → Pages** with these handles and templates. They're hidden for now, so
+when you publish this theme, set each page to *Visible*. The page body stays empty: the content comes from the theme. If
+you ever recreate a page, set the handle under *Search engine listing* and pick the template under *Theme template*.
 
 | Page | Handle | Template |
 |---|---|---|
@@ -89,18 +90,22 @@ The home page uses `templates/index.json` automatically.
 
 ## 2. Matte clay product
 
-Create a product with the handle `matte-clay` and assign the template `matte-clay`. Give it three variants in this
-order: 1 jar, 2 jars, The daily kit. For "Subscribe and save", add a selling plan group with three plans in this
-order: every 30, 60 and 90 days. Until the product exists, the page shows the design prices and "Add to cart" does
-nothing.
+The product `matte-clay` exists as a **draft**, with the `matte-clay` template and three variants: 1 jar $28, 2 jars
+$50.40 (compare at $56) and The daily kit $71.40 (compare at $84). Inventory isn't tracked. To finish it:
+
+- Add the product photos and set it to **Active** when you publish the theme.
+- For "Subscribe and save", install Shopify's free **Shopify Subscriptions** app. Add a plan to this product that
+  delivers every 30, 60 and 90 days, in that order, at 15% off. The theme picks up the first subscription plan group
+  automatically. Until a plan exists, a subscriber is charged the one-time price.
 
 ## 3. Wholesale
 
-- **Customer accounts:** in **Settings → Customer accounts**, use classic customer accounts. The wholesale sign-in and
-  application forms are Shopify customer forms.
-- **Applications:** a new account gets the tag `wholesale-pending`. To approve it, change the tag to `wholesale`.
-- **Wholesale shop:** create a collection with the handle `wholesale`. Products tagged `wholesale-live` can be ordered.
-  The pack size and discount are set in the theme editor on the Wholesale Shop section.
+- **Sign-in:** the wholesale page works with Shopify's new customer accounts. Stockists sign in with their email and a
+  one-time code, then land on the wholesale shop.
+- **Applications:** an application saves the applicant as a customer tagged `wholesale-pending` and emails the full
+  answers to the shop. To approve someone, change the tag to `wholesale` in **Customers**.
+- **Wholesale shop:** products in the `wholesale` collection are listed there. Products tagged `wholesale-live` can be
+  ordered. The pack size and discount are set in the theme editor on the Wholesale Shop section.
 
 ## 4. Forms and outside services, kept from the design
 
