@@ -111,6 +111,8 @@ $50.40 (compare at $56) and The daily kit $71.40 (compare at $84). Inventory isn
   segment **Wholesale accounts** (customers tagged `wholesale`), so retail customers can't use it. The pack size and
   the percentage shown are set on the Wholesale Shop section in the theme editor; keep the percentage in step with
   the discount.
+- **Packs in the cart:** for wholesale accounts, the cart keeps every quantity a multiple of 6. Raising a quantity
+  rounds up to the next pack and lowering it rounds down (`assets/ba-wholesale-packs.js`).
 
 ## 4. Forms and outside services, kept from the design
 

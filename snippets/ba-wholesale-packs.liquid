@@ -1,0 +1,7 @@
+{%- comment -%}
+  Wholesale accounts (customers tagged "wholesale") can only buy in packs. Keep data-pack in step with the
+  Wholesale Shop section's pack size. The WHOLESALE50 discount also needs at least 6 items.
+{%- endcomment -%}
+{%- if customer and customer.tags contains 'wholesale' -%}
+  <script src="{{ 'ba-wholesale-packs.js' | asset_url }}" data-pack="6" defer></script>
+{%- endif -%}
