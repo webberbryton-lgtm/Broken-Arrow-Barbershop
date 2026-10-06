@@ -1,9 +1,69 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "layout": "ba-store",
   "sections": {
     "main": {
       "type": "ba-shop",
-      "settings": {}
+      "settings": {
+        "t_broken_arrow_grooming_first_": "Broken Arrow Grooming · First product",
+        "t_the_clay_we_use_in_the_chair": "The clay we use in the chair.",
+        "t_matte_clay_firm_hold_no_shin": "Matte clay. Firm hold, no shine, washes out clean. Coming soon to order online or pick up at the shop.",
+        "t_see_the_clay": "SEE THE CLAY",
+        "t_developed_and_used_at_broken": "Developed and used at Broken Arrow Barbershop, Orem, Utah",
+        "t_the_lineup": "The lineup",
+        "t_five_products_released_one_a": "",
+        "t_not_sure_which": "Not sure which?",
+        "t_take_the_30_second_quiz": "Take the 30-second quiz →",
+        "t_all": "All",
+        "t_grooming": "Grooming",
+        "t_out_of_stock": "Out of stock",
+        "t_grooming_2": "Grooming",
+        "t_matte_clay": "Matte clay",
+        "t_28": "$28",
+        "t_firm_hold_no_shine_what_we_s": "Firm hold, no shine. What we style with in the shop.",
+        "t_out_of_stock_2": "Out of stock",
+        "t_grooming_3": "Grooming",
+        "t_styling_cream": "Styling cream",
+        "t_28_2": "$28",
+        "t_light_hold_with_a_natural_fi": "Light hold with a natural finish, for longer and textured hair.",
+        "t_out_of_stock_3": "Out of stock",
+        "t_grooming_4": "Grooming",
+        "t_sea_salt_spray": "Sea salt spray",
+        "t_22": "$22",
+        "t_pre_styler_for_texture_and_v": "Pre-styler for texture and volume before blow-drying.",
+        "t_out_of_stock_4": "Out of stock",
+        "t_grooming_5": "Grooming",
+        "t_shampoo": "Shampoo",
+        "t_28_3": "$28",
+        "t_daily_shampoo_for_men_s_hair": "Daily shampoo for men’s hair.",
+        "t_out_of_stock_5": "Out of stock",
+        "t_grooming_6": "Grooming",
+        "t_conditioner": "Conditioner",
+        "t_28_4": "$28",
+        "t_daily_conditioner_to_pair_wi": "Daily conditioner to pair with the shampoo.",
+        "t_out_of_stock_6": "Out of stock",
+        "t_grooming_7": "Grooming",
+        "t_aftershave": "Aftershave",
+        "t_26": "$26",
+        "t_soothes_and_refreshes_after_": "Soothes and refreshes after a shave. All skin types. 120ml.",
+        "t_out_of_stock_7": "Out of stock",
+        "t_grooming_8": "Grooming",
+        "t_refuge": "Refuge",
+        "t_159": "$159",
+        "t_extrait_de_parfum_30ml": "Extrait de parfum, 30ml.",
+        "t_developed_by_barbers": "Developed by barbers",
+        "t_tested_on_clients_before_it_": "Tested on clients before it’s sold.",
+        "t_every_broken_arrow_grooming_": "Every Broken Arrow Grooming product is used in our Orem shop first. If it doesn’t work in the chair, we don’t sell it.",
+        "t_visit_the_barbershop": "VISIT THE BARBERSHOP →"
+      }
     }
   },
   "order": [

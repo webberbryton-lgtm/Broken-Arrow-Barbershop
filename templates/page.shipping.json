@@ -1,9 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "layout": "ba",
   "sections": {
     "main": {
       "type": "ba-shipping",
-      "settings": {}
+      "settings": {
+        "t_help": "Help",
+        "t_shipping": "Shipping",
+        "t_last_updated_september_26_20": "Last updated September 26, 2026",
+        "t_broken_arrow_grooming_ships_": "Broken Arrow Grooming ships from our shop in Orem, Utah, to addresses in the United States.",
+        "t_processing_time": "Processing time",
+        "t_orders_ship_within_2_busines": "Orders typically ship within 2 business days.",
+        "t_where_we_ship": "Where we ship",
+        "t_we_currently_ship_within_the": "We currently ship within the United States only.",
+        "t_local_pickup": "Local pickup",
+        "t_choose_local_pickup_at_check": "Choose local pickup at checkout and pick your order up free at the shop in Orem during open hours.",
+        "t_tracking": "Tracking",
+        "t_you_ll_get_an_email_with_tra": "You’ll get an email with tracking information as soon as your order ships.",
+        "t_contact_us": "Contact us",
+        "t_broken_arrow_barbershop_375_": "Broken Arrow Barbershop · 375 E 800 S, Suite 12, Orem, UT 84097",
+        "t_801_709_1280": "(801) 709-1280",
+        "t_brokenarrowbarbershoporem_gm": "brokenarrowbarbershoporem@gmail.com"
+      }
     }
   },
   "order": [
